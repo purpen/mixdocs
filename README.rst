@@ -11,7 +11,7 @@ Installation from PyPI is fairly straightforward:
 
 1. Install the package:
 
-    $ pip install sphinx_bootstrap_theme
+    `$ pip install sphinx_bootstrap_theme`
 
 2. Edit the 'conf.py' configuration file to point to bootstrap theme:
 
