@@ -11,9 +11,10 @@ MixPus API 文档
    :maxdepth: 2
 
    开放平台文档说明 <intro>
+   商品模块API <products>
    订单模块 <orders>
    用户模块 <users>
-   商品模块 <products>
+
 
 
 
@@ -22,12 +23,13 @@ MixPus API 文档
 .. toctree::
    :maxdepth: 2
 
+   常见问题 <faq>
    版本历史 <history>
    未来新功能 <todos>
 
 
 索引与搜索
-==================
+-------------
 
 * :ref:`genindex`
 * :ref:`modindex`
