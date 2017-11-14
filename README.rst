@@ -9,21 +9,22 @@ sphinx-bootstrap-theme
 ------------------------
 Installation from PyPI is fairly straightforward:
 
-    1. Install the package:
+1. Install the package:
 
-        $ pip install sphinx_bootstrap_theme
+    $ pip install sphinx_bootstrap_theme
 
-    2. Edit the 'conf.py' configuration file to point to bootstrap theme:
+2. Edit the 'conf.py' configuration file to point to bootstrap theme:
 
-    .. code-block:: python
-        # At the top
-        import sphix_bootstrap_theme
+.. code-block:: python
 
-        # ...
+    # At the top
+    import sphix_bootstrap_theme
 
-        # Activate the theme.
-        html_theme = 'bootstrap'
-        html_theme_path = sphinx_bootstrap_theme.get_html_theme_path()
+    # ...
+
+    # Activate the theme.
+    html_theme = 'bootstrap'
+    html_theme_path = sphinx_bootstrap_theme.get_html_theme_path()
 
 
 Sphinx参考资料
