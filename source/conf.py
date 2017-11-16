@@ -97,7 +97,7 @@ html_theme_options = {
     'navbar_title': "MixDocs",
 
     # Tab name for entire site. (Default: "Site")
-    'navbar_site_name': "Site",
+    'navbar_site_name': "API文档",
 
     # A list of tuples containing pages or urls to link to.
     # Valid tuples should be in the following forms:
@@ -172,6 +172,7 @@ html_static_path = ['_static']
 html_sidebars = {
     '**': [
         'localtoc.html',
+        'relations.html',
         'sourcelink.html',
         'searchbox.html',
     ]

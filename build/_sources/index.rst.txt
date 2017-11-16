@@ -11,7 +11,7 @@ MixPus API 文档
    :maxdepth: 2
 
    开放平台文档说明 <intro>
-   商品模块API <products>
+   products/index.rst
    订单模块 <orders>
    用户模块 <users>
 
