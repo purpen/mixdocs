@@ -3,7 +3,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="zh_CN">
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    <title>商品相关模块 &#8212; mixdocs 0.1.0 文档</title>
+    <title>商品API模块 &#8212; mixdocs 0.1.0 文档</title>
     <link rel="stylesheet" href="../_static/bootstrap-sphinx.css" type="text/css" />
     <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
     <link rel="stylesheet" href="../_static/mixpus.css" type="text/css" />
@@ -47,7 +47,7 @@
           <span class="icon-bar"></span>
         </button>
         <a class="navbar-brand" href="../index.html">
-          MixDocs</a>
+          eLingDocs</a>
         <span class="navbar-text navbar-version pull-left"><b>0.1.0</b></span>
       </div>
 
@@ -66,29 +66,31 @@
       aria-labelledby="dLabelGlobalToc"><ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="../intro.html">开放平台文档说明</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="../intro.html#id2">开发入门</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../intro.html#id3">开发帮助文档</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../intro.html#id4">公共返回状态码说明</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../intro.html#id3">系统级请求参数</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../intro.html#id4">开发帮助文档</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../intro.html#id5">公共返回状态码说明</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../intro.html#oauth2-0">OAuth2.0协议介绍</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../intro.html#id5">参考资料链接</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../intro.html#id6">参考资料链接</a></li>
 </ul>
 </li>
-<li class="toctree-l1 current"><a class="current reference internal" href="#">商品相关模块</a><ul>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">商品API模块</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="products.html">商品模块</a></li>
 <li class="toctree-l2"><a class="reference internal" href="category.html">分类模块</a></li>
 <li class="toctree-l2"><a class="reference internal" href="brands.html">供应商/品牌模块</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="../orders.html">订单模块</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="../orders.html#introduction-and-demos">Introduction and Demos</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../orders.html#installation">Installation</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../orders.html#customization">Customization</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../orders.html#code-documentation">Code Documentation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../orders/index.html">销售API模块</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../orders/orders.html">订单API列表</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../orders/carts.html">购物车模块</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="../users.html">用户模块</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="../users.html#id2">新增用户</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../users.html#id3">用户登录</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../users.html#id4">用户注册</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../users/index.html">用户API模块</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../users/users.html">用户模块</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../users/auth.html">用户认证模块</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../warehouses/index.html">采购仓储API模块</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../warehouses/purchase.html">采购API模块</a></li>
 </ul>
 </li>
 </ul>
@@ -112,7 +114,7 @@
   <ul class="dropdown-menu localtoc"
       role="menu"
       aria-labelledby="dLabelLocalToc"><ul>
-<li><a class="reference internal" href="#">商品相关模块</a></li>
+<li><a class="reference internal" href="#">商品API模块</a></li>
 </ul>
 </ul>
 </li>
@@ -142,7 +144,7 @@
   <div class="row">
       <div class="col-md-3">
         <div id="sidebar" class="bs-sidenav" role="complementary"><ul>
-<li><a class="reference internal" href="#">商品相关模块</a></li>
+<li><a class="reference internal" href="#">商品API模块</a></li>
 </ul>
 
 
@@ -171,12 +173,17 @@
       </div>
     <div class="col-md-9 content">
       
-  <div class="section" id="id1">
-<h1>商品相关模块<a class="headerlink" href="#id1" title="永久链接至标题">¶</a></h1>
+  <div class="section" id="api">
+<h1>商品API模块<a class="headerlink" href="#api" title="永久链接至标题">¶</a></h1>
 <div class="toctree-wrapper compound">
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="products.html">商品模块</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="products.html#id2">商品列表</a></li>
+<li class="toctree-l2"><a class="reference internal" href="products.html#id2">分类的商品列表</a></li>
+<li class="toctree-l2"><a class="reference internal" href="products.html#id6">品牌的商品列表</a></li>
+<li class="toctree-l2"><a class="reference internal" href="products.html#id10">商品详情</a></li>
+<li class="toctree-l2"><a class="reference internal" href="products.html#id13">新增商品 &lt;未开通&gt;</a></li>
+<li class="toctree-l2"><a class="reference internal" href="products.html#id14">更新商品 &lt;未开通&gt;</a></li>
+<li class="toctree-l2"><a class="reference internal" href="products.html#id15">删除商品 &lt;未开通&gt;</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="category.html">分类模块</a><ul>
@@ -188,6 +195,10 @@
 </li>
 <li class="toctree-l1"><a class="reference internal" href="brands.html">供应商/品牌模块</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="brands.html#id2">品牌列表</a></li>
+<li class="toctree-l2"><a class="reference internal" href="brands.html#id6">品牌详情</a></li>
+<li class="toctree-l2"><a class="reference internal" href="brands.html#id9">新增品牌</a></li>
+<li class="toctree-l2"><a class="reference internal" href="brands.html#id14">更新品牌</a></li>
+<li class="toctree-l2"><a class="reference internal" href="brands.html#id19">删除品牌</a></li>
 </ul>
 </li>
 </ul>

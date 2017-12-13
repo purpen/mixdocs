@@ -3,7 +3,7 @@
    You can adapt this file completely to your liking, but it should at least
    contain the root `toctree` directive.
 
-MixPus API 文档
+eLingShop API 文档
 ===================================
 **注意：** 部分接口需要登录后才能显示
 
@@ -12,10 +12,9 @@ MixPus API 文档
 
    开放平台文档说明 <intro>
    products/index.rst
-   订单模块 <orders>
-   用户模块 <users>
-
-
+   orders/index.rst
+   users/index.rst
+   warehouses/index.rst
 
 
 开发版本

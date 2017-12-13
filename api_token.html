@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>MixPu API 文档 - 获取API签名示例</title>
+    <link rel="stylesheet" href="build/_static/bootstrap-sphinx.css" type="text/css" />
+    <link rel="stylesheet" href="build/_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="build/_static/mixpus.css" type="text/css" />
+
+    <script type="text/javascript" src="build/_static/jquery.js"></script>
+    <script type="text/javascript" src="jquery.crypt.js"></script>
+    <script type="text/javascript">
+        function random_str(len) {
+            len = len || 32;
+            /**** 默认去掉了容易混淆的字符oOLl,9gq,Vv,Uu,I1 ****/
+            var $chars = 'ABCDEFGHJKMNPQRSTWXYZabcdefhijkmnprstwxyz2345678';
+            var max_pos = $chars.length;
+            var pwd = '';
+            for (i = 0; i < len; i++) {
+                pwd += $chars.charAt(Math.floor(Math.random() * max_pos));
+            }
+            return pwd;
+        }
+
+        $(function () {
+            var app_secret = 'f9c2b9a3cf13bed9d55049b5726a609737ad519e';
+            $('.btn.gen-sign').click(function () {
+                var app_key = $('input[name=app_key]').val();
+                var timestamp = new Date().getTime();
+                var nonce_str = random_str(9);
+
+                var args_ary = [
+                    'app_key='+app_key, 'timestamp='+timestamp, 'nonce_str='+nonce_str
+                ];
+                var phrase = args_ary.sort().join('')+app_secret;
+                var sign = $().crypt({method: "sha1", source: phrase });
+
+                $('#sign-result').html(
+                    '<p>app_key: ' + app_key +
+                    '</p><p>timestamp: ' + timestamp +
+                    '</p><p>nonce_str: ' + nonce_str +
+                    '</p><p>sign_str: ' + phrase +
+                    '</p><p>sign: <b>'+ sign +'</b> </p>'
+                );
+            });
+        });
+
+    </script>
+</head>
+
+<body>
+
+<div class="container">
+    <div class="col-md-8">
+        <form id="api-sign-form" method="post" class="form-horizontal">
+            <h3>获取API签名</h3>
+            <div class="form-group">
+                <label class="form-l">Api Key</label>
+                <input type="text" name="app_key" class="form-control" />
+            </div>
+            <div class="form-group">
+                <label class="btn btn-success gen-sign">Submit</label>
+            </div>
+        </form>
+
+        <div id="sign-result">
+
+        </div>
+    </div>
+    <div class="col-md-4">
+
+    </div>
+
+</div>
+
+</body>
+</html>

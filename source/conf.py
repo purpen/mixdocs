@@ -94,7 +94,7 @@ html_theme_path = sphinx_bootstrap_theme.get_html_theme_path()
 #
 html_theme_options = {
     # Navigation bar title. (Default: ``project`` value)
-    'navbar_title': "MixDocs",
+    'navbar_title': "eLingDocs",
 
     # Tab name for entire site. (Default: "Site")
     'navbar_site_name': "API文档",
