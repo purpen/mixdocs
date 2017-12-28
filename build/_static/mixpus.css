@@ -54,3 +54,7 @@ a:focus {
 footer {
   font-size: 11px;
 }
+
+.bs-sidenav {
+    margin-top: 20px;
+}

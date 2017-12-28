@@ -62,9 +62,9 @@ JSON数据格式:
     :language: javascript
 
 
-商品详情
+商品基本信息
 ----------------
-获取商品的详细信息
+获取商品的详细基本信息
 
 接口说明
 ~~~~~~~~~~~~~~
@@ -93,6 +93,119 @@ JSON数据格式:
         "s_width": 0,
         "sale_price": 60
       },
+      "status": {
+        "code": 200,
+        "message": "Ok all right."
+      },
+      "success": true
+    }
+
+请求 ``失败`` 返回结果：
+
+.. code-block:: javascript
+
+    {
+        "status": {
+            "code": 404,
+            "message": "No result matched."
+        },
+        "success": false
+    }
+
+
+
+商品详情内容
+----------------
+获取商品的详细内容
+
+接口说明
+~~~~~~~~~~~~~~
+
+* API接口请求地址：``/products/<rid>/detail``
+* API接口请求方法：``GET``
+
+返回示例
+~~~~~~~~~~~~~~~~
+
+JSON数据格式:
+
+请求 **正确** 返回结果：
+
+.. code-block:: javascript
+
+    {
+      "data": {
+        "content": "这是净化器，编辑更新",
+        "tags": "净化器，智能"
+      },
+      "status": {
+        "code": 200,
+        "message": "Ok all right."
+      },
+      "success": true
+    }
+
+请求 ``失败`` 返回结果：
+
+.. code-block:: javascript
+
+    {
+        "status": {
+            "code": 404,
+            "message": "No result matched."
+        },
+        "success": false
+    }
+
+
+商品SKU列表
+----------------
+获取商品的SKU列表
+
+接口说明
+~~~~~~~~~~~~~~
+
+* API接口请求地址：``/products/<rid>/skus``
+* API接口请求方法：``GET``
+
+返回示例
+~~~~~~~~~~~~~~~~
+
+JSON数据格式:
+
+请求 **正确** 返回结果：
+
+.. code-block:: javascript
+
+    {
+      "data": [
+        {
+          "cost_price": "24.00",
+          "cover": "/static/img/mic_logo180x180.jpg",
+          "mode": "iPhoneX 黑色",
+          "id_code": "",
+          "product_name": "iPhoneX 手机壳",
+          "rid": "117280530556",
+          "s_color": "黑色",
+          "s_model": "iPhoneX",
+          "s_weight": "0.00",
+          "sale_price": "69.00",
+          "stock_count": 10
+        },
+        {
+          "cost_price": "24.00",
+          "cover": "/static/img/mic_logo180x180.jpg",
+          "mode": "iPhoneX 白色",
+          "id_code": "",
+          "product_name": "iPhoneX 手机壳",
+          "rid": "117280969019",
+          "s_color": "白色",
+          "s_model": "iPhoneX",
+          "s_weight": "0.00",
+          "sale_price": "69.00",
+          "stock_count": 10
+        }
+      ],
       "status": {
         "code": 200,
         "message": "Ok all right."

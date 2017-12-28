@@ -11,10 +11,13 @@ eLingShop API 文档
    :maxdepth: 2
 
    开放平台文档说明 <intro>
-   products/index.rst
    orders/index.rst
-   users/index.rst
+   products/index.rst
+   customers/index.rst
    warehouses/index.rst
+   shopes/index.rst
+   users/index.rst
+
 
 
 开发版本
