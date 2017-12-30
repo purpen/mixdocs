@@ -8,3 +8,4 @@
 
     orders.rst
     carts.rst
+    addresses.rst

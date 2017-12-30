@@ -58,3 +58,6 @@ footer {
 .bs-sidenav {
     margin-top: 20px;
 }
+.container .content {
+    margin-bottom: 80px;
+}
