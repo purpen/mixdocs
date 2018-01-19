@@ -17,6 +17,7 @@ eLingShop API 文档
    warehouses/index.rst
    shopes/index.rst
    users/index.rst
+   公用接口模块 <common>
    系统相关配置文档 <setting>
 
 
