@@ -26,6 +26,10 @@ Installation from PyPI is fairly straightforward:
     html_theme = 'bootstrap'
     html_theme_path = sphinx_bootstrap_theme.get_html_theme_path()
 
+3. 测试环境启动服务：
+
+    `python3 -m http.server 9527`
+
 
 Sphinx参考资料
 ---------------
