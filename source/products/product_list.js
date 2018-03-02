@@ -10,22 +10,26 @@
         "id_code": null,
         "name": "铠甲",
         "rid": "117210230003",
+        "price": 0,
         "s_height": 0,
         "s_length": 0,
         "s_weight": 0,
         "s_width": 0,
-        "sale_price": 60
+        "sale_price": 60,
+        "sticked": null
       },
       {
         "cover": "http://xxx/_uploads/photos/171010/fe7380064e18135.jpg",
         "id_code": null,
         "name": "速腾套装",
         "rid": "117210372661",
+        "price": 0,
         "s_height": 0,
         "s_length": 0,
         "s_weight": 0,
         "s_width": 0,
-        "sale_price": 0
+        "sale_price": 0,
+        "sticked": null
       },
     ]
   },

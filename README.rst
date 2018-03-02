@@ -30,6 +30,12 @@ Installation from PyPI is fairly straightforward:
 
     `python3 -m http.server 9527`
 
+4. 编译文档
+
+    `sphinx-build -b html source build`
+
+
+
 
 Sphinx参考资料
 ---------------
