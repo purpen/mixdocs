@@ -146,20 +146,26 @@
 <li><a class="reference internal" href="#id5">返回示例</a></li>
 </ul>
 </li>
-<li><a class="reference internal" href="#id6">红包详情</a><ul>
+<li><a class="reference internal" href="#id6">用户红包列表</a><ul>
 <li><a class="reference internal" href="#id7">接口说明</a></li>
-<li><a class="reference internal" href="#id8">返回示例</a></li>
+<li><a class="reference internal" href="#id8">请求参数</a></li>
+<li><a class="reference internal" href="#id9">返回示例</a></li>
 </ul>
 </li>
-<li><a class="reference internal" href="#id9">新增红包</a><ul>
-<li><a class="reference internal" href="#id10">接口说明</a></li>
-<li><a class="reference internal" href="#id11">请求参数</a></li>
+<li><a class="reference internal" href="#id10">红包详情</a><ul>
+<li><a class="reference internal" href="#id11">接口说明</a></li>
 <li><a class="reference internal" href="#id12">返回示例</a></li>
 </ul>
 </li>
-<li><a class="reference internal" href="#id13">禁用红包</a><ul>
+<li><a class="reference internal" href="#id13">新增红包</a><ul>
 <li><a class="reference internal" href="#id14">接口说明</a></li>
-<li><a class="reference internal" href="#id15">返回示例</a></li>
+<li><a class="reference internal" href="#id15">请求参数</a></li>
+<li><a class="reference internal" href="#id16">返回示例</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#id17">禁用红包</a><ul>
+<li><a class="reference internal" href="#id18">接口说明</a></li>
+<li><a class="reference internal" href="#id19">返回示例</a></li>
 </ul>
 </li>
 </ul>
@@ -200,20 +206,26 @@
 <li><a class="reference internal" href="#id5">返回示例</a></li>
 </ul>
 </li>
-<li><a class="reference internal" href="#id6">红包详情</a><ul>
+<li><a class="reference internal" href="#id6">用户红包列表</a><ul>
 <li><a class="reference internal" href="#id7">接口说明</a></li>
-<li><a class="reference internal" href="#id8">返回示例</a></li>
+<li><a class="reference internal" href="#id8">请求参数</a></li>
+<li><a class="reference internal" href="#id9">返回示例</a></li>
 </ul>
 </li>
-<li><a class="reference internal" href="#id9">新增红包</a><ul>
-<li><a class="reference internal" href="#id10">接口说明</a></li>
-<li><a class="reference internal" href="#id11">请求参数</a></li>
+<li><a class="reference internal" href="#id10">红包详情</a><ul>
+<li><a class="reference internal" href="#id11">接口说明</a></li>
 <li><a class="reference internal" href="#id12">返回示例</a></li>
 </ul>
 </li>
-<li><a class="reference internal" href="#id13">禁用红包</a><ul>
+<li><a class="reference internal" href="#id13">新增红包</a><ul>
 <li><a class="reference internal" href="#id14">接口说明</a></li>
-<li><a class="reference internal" href="#id15">返回示例</a></li>
+<li><a class="reference internal" href="#id15">请求参数</a></li>
+<li><a class="reference internal" href="#id16">返回示例</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#id17">禁用红包</a><ul>
+<li><a class="reference internal" href="#id18">接口说明</a></li>
+<li><a class="reference internal" href="#id19">返回示例</a></li>
 </ul>
 </li>
 </ul>
@@ -264,9 +276,9 @@
 <colgroup>
 <col width="15%" />
 <col width="11%" />
-<col width="13%" />
+<col width="12%" />
 <col width="11%" />
-<col width="50%" />
+<col width="51%" />
 </colgroup>
 <thead valign="bottom">
 <tr class="row-odd"><th class="head">名称</th>
@@ -288,6 +300,12 @@
 <td>可选</td>
 <td>10</td>
 <td>每页数量</td>
+</tr>
+<tr class="row-even"><td>status</td>
+<td>String</td>
+<td>可选</td>
+<td>N01</td>
+<td>N01: 未使用;N02: 已使用; N03: 已过期</td>
 </tr>
 </tbody>
 </table>
@@ -337,17 +355,111 @@
 </div>
 </div>
 <div class="section" id="id6">
-<h2>红包详情<a class="headerlink" href="#id6" title="永久链接至标题">¶</a></h2>
-<p>获取红包的详细信息</p>
+<h2>用户红包列表<a class="headerlink" href="#id6" title="永久链接至标题">¶</a></h2>
+<p>获取用户红包列表</p>
 <div class="section" id="id7">
 <h3>接口说明<a class="headerlink" href="#id7" title="永久链接至标题">¶</a></h3>
+<ul class="simple">
+<li>API接口请求地址：<code class="docutils literal"><span class="pre">/market/user_bonus</span></code></li>
+<li>API接口请求方法：<code class="docutils literal"><span class="pre">GET</span></code></li>
+</ul>
+</div>
+<div class="section" id="id8">
+<h3>请求参数<a class="headerlink" href="#id8" title="永久链接至标题">¶</a></h3>
+<table border="1" class="docutils">
+<colgroup>
+<col width="15%" />
+<col width="11%" />
+<col width="12%" />
+<col width="11%" />
+<col width="51%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">名称</th>
+<th class="head">类型</th>
+<th class="head">是否必须</th>
+<th class="head">默认值</th>
+<th class="head">描述说明</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>page</td>
+<td>Number</td>
+<td>可选</td>
+<td>1</td>
+<td>当前页码</td>
+</tr>
+<tr class="row-odd"><td>per_page</td>
+<td>Number</td>
+<td>可选</td>
+<td>10</td>
+<td>每页数量</td>
+</tr>
+<tr class="row-even"><td>status</td>
+<td>String</td>
+<td>可选</td>
+<td>N01</td>
+<td>N01: 未使用;N02: 已使用; N03: 已过期</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="id9">
+<h3>返回示例<a class="headerlink" href="#id9" title="永久链接至标题">¶</a></h3>
+<p>JSON数据格式:</p>
+<div class="highlight-javascript"><div class="highlight"><pre><span></span><span class="p">{</span>
+    <span class="s2">&quot;data&quot;</span><span class="o">:</span> <span class="p">{</span>
+        <span class="s2">&quot;bonus_list&quot;</span><span class="o">:</span> <span class="p">[</span>
+            <span class="p">{</span>
+                <span class="s2">&quot;amount&quot;</span><span class="o">:</span> <span class="mi">2</span><span class="p">,</span>
+                <span class="s2">&quot;code&quot;</span><span class="o">:</span> <span class="s2">&quot;BXPIDWAOGMS&quot;</span><span class="p">,</span>
+                <span class="s2">&quot;created_at&quot;</span><span class="o">:</span> <span class="mi">1520181397</span><span class="p">,</span>
+                <span class="s2">&quot;expired_at&quot;</span><span class="o">:</span> <span class="mi">1520784000</span><span class="p">,</span>
+                <span class="s2">&quot;is_used&quot;</span><span class="o">:</span> <span class="kc">false</span><span class="p">,</span>
+                <span class="s2">&quot;limit_products&quot;</span><span class="o">:</span> <span class="s2">&quot;&quot;</span><span class="p">,</span>
+                <span class="s2">&quot;min_amount&quot;</span><span class="o">:</span> <span class="mi">0</span><span class="p">,</span>
+                <span class="s2">&quot;status&quot;</span><span class="o">:</span> <span class="mi">0</span><span class="p">,</span>
+                <span class="s2">&quot;xname&quot;</span><span class="o">:</span> <span class="s2">&quot;&quot;</span>
+            <span class="p">},</span>
+            <span class="p">{</span>
+                <span class="s2">&quot;amount&quot;</span><span class="o">:</span> <span class="mi">2</span><span class="p">,</span>
+                <span class="s2">&quot;code&quot;</span><span class="o">:</span> <span class="s2">&quot;BEVTGKODUNM&quot;</span><span class="p">,</span>
+                <span class="s2">&quot;created_at&quot;</span><span class="o">:</span> <span class="mi">1520181397</span><span class="p">,</span>
+                <span class="s2">&quot;expired_at&quot;</span><span class="o">:</span> <span class="mi">1520784000</span><span class="p">,</span>
+                <span class="s2">&quot;is_used&quot;</span><span class="o">:</span> <span class="kc">false</span><span class="p">,</span>
+                <span class="s2">&quot;limit_products&quot;</span><span class="o">:</span> <span class="s2">&quot;&quot;</span><span class="p">,</span>
+                <span class="s2">&quot;min_amount&quot;</span><span class="o">:</span> <span class="mi">0</span><span class="p">,</span>
+                <span class="s2">&quot;status&quot;</span><span class="o">:</span> <span class="mi">0</span><span class="p">,</span>
+                <span class="s2">&quot;xname&quot;</span><span class="o">:</span> <span class="s2">&quot;&quot;</span>
+            <span class="p">}</span>
+            <span class="p">...</span>
+        <span class="p">],</span>
+        <span class="s2">&quot;count&quot;</span><span class="o">:</span> <span class="mi">6</span><span class="p">,</span>
+        <span class="s2">&quot;next&quot;</span><span class="o">:</span> <span class="kc">null</span><span class="p">,</span>
+        <span class="s2">&quot;prev&quot;</span><span class="o">:</span> <span class="kc">null</span>
+    <span class="p">},</span>
+    <span class="s2">&quot;status&quot;</span><span class="o">:</span> <span class="p">{</span>
+        <span class="s2">&quot;code&quot;</span><span class="o">:</span> <span class="mi">200</span><span class="p">,</span>
+        <span class="s2">&quot;message&quot;</span><span class="o">:</span> <span class="s2">&quot;Ok all right.&quot;</span>
+    <span class="p">},</span>
+    <span class="s2">&quot;success&quot;</span><span class="o">:</span> <span class="kc">true</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="id10">
+<h2>红包详情<a class="headerlink" href="#id10" title="永久链接至标题">¶</a></h2>
+<p>获取红包的详细信息</p>
+<div class="section" id="id11">
+<h3>接口说明<a class="headerlink" href="#id11" title="永久链接至标题">¶</a></h3>
 <ul class="simple">
 <li>API接口请求地址：<code class="docutils literal"><span class="pre">/market/bonus/&lt;rid&gt;</span></code></li>
 <li>API接口请求方法：<code class="docutils literal"><span class="pre">GET</span></code></li>
 </ul>
 </div>
-<div class="section" id="id8">
-<h3>返回示例<a class="headerlink" href="#id8" title="永久链接至标题">¶</a></h3>
+<div class="section" id="id12">
+<h3>返回示例<a class="headerlink" href="#id12" title="永久链接至标题">¶</a></h3>
 <p>JSON数据格式:</p>
 <p>请求 <strong>正确</strong> 返回结果：</p>
 <div class="highlight-javascript"><div class="highlight"><pre><span></span><span class="p">{</span>
@@ -374,17 +486,17 @@
 </div>
 </div>
 </div>
-<div class="section" id="id9">
-<h2>新增红包<a class="headerlink" href="#id9" title="永久链接至标题">¶</a></h2>
-<div class="section" id="id10">
-<h3>接口说明<a class="headerlink" href="#id10" title="永久链接至标题">¶</a></h3>
+<div class="section" id="id13">
+<h2>新增红包<a class="headerlink" href="#id13" title="永久链接至标题">¶</a></h2>
+<div class="section" id="id14">
+<h3>接口说明<a class="headerlink" href="#id14" title="永久链接至标题">¶</a></h3>
 <ul class="simple">
 <li>API接口请求地址：<code class="docutils literal"><span class="pre">/market/bonus/create</span></code></li>
 <li>API接口请求方法：<code class="docutils literal"><span class="pre">POST</span></code></li>
 </ul>
 </div>
-<div class="section" id="id11">
-<h3>请求参数<a class="headerlink" href="#id11" title="永久链接至标题">¶</a></h3>
+<div class="section" id="id15">
+<h3>请求参数<a class="headerlink" href="#id15" title="永久链接至标题">¶</a></h3>
 <table border="1" class="docutils">
 <colgroup>
 <col width="19%" />
@@ -450,8 +562,8 @@
 </pre></div>
 </div>
 </div>
-<div class="section" id="id12">
-<h3>返回示例<a class="headerlink" href="#id12" title="永久链接至标题">¶</a></h3>
+<div class="section" id="id16">
+<h3>返回示例<a class="headerlink" href="#id16" title="永久链接至标题">¶</a></h3>
 <p>JSON数据格式:</p>
 <div class="highlight-javascript"><div class="highlight"><pre><span></span><span class="p">{</span>
     <span class="s2">&quot;data&quot;</span><span class="o">:</span> <span class="p">{</span>
@@ -477,17 +589,17 @@
 </div>
 </div>
 </div>
-<div class="section" id="id13">
-<h2>禁用红包<a class="headerlink" href="#id13" title="永久链接至标题">¶</a></h2>
-<div class="section" id="id14">
-<h3>接口说明<a class="headerlink" href="#id14" title="永久链接至标题">¶</a></h3>
+<div class="section" id="id17">
+<h2>禁用红包<a class="headerlink" href="#id17" title="永久链接至标题">¶</a></h2>
+<div class="section" id="id18">
+<h3>接口说明<a class="headerlink" href="#id18" title="永久链接至标题">¶</a></h3>
 <ul class="simple">
 <li>API接口请求地址：<code class="docutils literal"><span class="pre">/market/brand/&lt;rid&gt;/disabled</span></code></li>
 <li>API接口请求方法：<code class="docutils literal"><span class="pre">POST</span></code></li>
 </ul>
 </div>
-<div class="section" id="id15">
-<h3>返回示例<a class="headerlink" href="#id15" title="永久链接至标题">¶</a></h3>
+<div class="section" id="id19">
+<h3>返回示例<a class="headerlink" href="#id19" title="永久链接至标题">¶</a></h3>
 <p>JSON数据格式:</p>
 <div class="highlight-javascript"><div class="highlight"><pre><span></span><span class="p">{</span>
   <span class="s2">&quot;status&quot;</span><span class="o">:</span> <span class="p">{</span>
