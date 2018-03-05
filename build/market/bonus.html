@@ -163,9 +163,15 @@
 <li><a class="reference internal" href="#id16">返回示例</a></li>
 </ul>
 </li>
-<li><a class="reference internal" href="#id17">禁用红包</a><ul>
+<li><a class="reference internal" href="#id17">颁发红包</a><ul>
 <li><a class="reference internal" href="#id18">接口说明</a></li>
-<li><a class="reference internal" href="#id19">返回示例</a></li>
+<li><a class="reference internal" href="#id19">请求参数</a></li>
+<li><a class="reference internal" href="#id20">返回示例</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#id21">禁用红包</a><ul>
+<li><a class="reference internal" href="#id22">接口说明</a></li>
+<li><a class="reference internal" href="#id23">返回示例</a></li>
 </ul>
 </li>
 </ul>
@@ -223,9 +229,15 @@
 <li><a class="reference internal" href="#id16">返回示例</a></li>
 </ul>
 </li>
-<li><a class="reference internal" href="#id17">禁用红包</a><ul>
+<li><a class="reference internal" href="#id17">颁发红包</a><ul>
 <li><a class="reference internal" href="#id18">接口说明</a></li>
-<li><a class="reference internal" href="#id19">返回示例</a></li>
+<li><a class="reference internal" href="#id19">请求参数</a></li>
+<li><a class="reference internal" href="#id20">返回示例</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#id21">禁用红包</a><ul>
+<li><a class="reference internal" href="#id22">接口说明</a></li>
+<li><a class="reference internal" href="#id23">返回示例</a></li>
 </ul>
 </li>
 </ul>
@@ -590,16 +602,82 @@
 </div>
 </div>
 <div class="section" id="id17">
-<h2>禁用红包<a class="headerlink" href="#id17" title="永久链接至标题">¶</a></h2>
+<h2>颁发红包<a class="headerlink" href="#id17" title="永久链接至标题">¶</a></h2>
 <div class="section" id="id18">
 <h3>接口说明<a class="headerlink" href="#id18" title="永久链接至标题">¶</a></h3>
 <ul class="simple">
-<li>API接口请求地址：<code class="docutils literal"><span class="pre">/market/brand/&lt;rid&gt;/disabled</span></code></li>
+<li>API接口请求地址：<code class="docutils literal"><span class="pre">/market/bonus/grant</span></code></li>
 <li>API接口请求方法：<code class="docutils literal"><span class="pre">POST</span></code></li>
 </ul>
 </div>
 <div class="section" id="id19">
-<h3>返回示例<a class="headerlink" href="#id19" title="永久链接至标题">¶</a></h3>
+<h3>请求参数<a class="headerlink" href="#id19" title="永久链接至标题">¶</a></h3>
+<table border="1" class="docutils">
+<colgroup>
+<col width="20%" />
+<col width="11%" />
+<col width="12%" />
+<col width="11%" />
+<col width="47%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">名称</th>
+<th class="head">类型</th>
+<th class="head">是否必须</th>
+<th class="head">默认值</th>
+<th class="head">描述说明</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>rid</td>
+<td>String</td>
+<td>可选</td>
+<td>&#160;</td>
+<td>备注</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="id20">
+<h3>返回示例<a class="headerlink" href="#id20" title="永久链接至标题">¶</a></h3>
+<p>JSON数据格式:</p>
+<div class="highlight-javascript"><div class="highlight"><pre><span></span><span class="p">{</span>
+    <span class="s2">&quot;data&quot;</span><span class="o">:</span> <span class="p">{</span>
+        <span class="s2">&quot;amount&quot;</span><span class="o">:</span> <span class="mi">2</span><span class="p">,</span>
+        <span class="s2">&quot;code&quot;</span><span class="o">:</span> <span class="s2">&quot;BMVYCZETFUJ&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;created_at&quot;</span><span class="o">:</span> <span class="mi">1520181397</span><span class="p">,</span>
+        <span class="s2">&quot;expired_at&quot;</span><span class="o">:</span> <span class="mi">1520784000</span><span class="p">,</span>
+        <span class="s2">&quot;is_used&quot;</span><span class="o">:</span> <span class="kc">false</span><span class="p">,</span>
+        <span class="s2">&quot;limit_products&quot;</span><span class="o">:</span> <span class="s2">&quot;&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;min_amount&quot;</span><span class="o">:</span> <span class="mi">0</span><span class="p">,</span>
+        <span class="s2">&quot;reach_amount&quot;</span><span class="o">:</span> <span class="kc">null</span><span class="p">,</span>
+        <span class="s2">&quot;status&quot;</span><span class="o">:</span> <span class="mi">2</span><span class="p">,</span>
+        <span class="s2">&quot;status_label&quot;</span><span class="o">:</span> <span class="s2">&quot;通用红包&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;type&quot;</span><span class="o">:</span> <span class="kc">null</span><span class="p">,</span>
+        <span class="s2">&quot;user_id&quot;</span><span class="o">:</span> <span class="mi">2</span><span class="p">,</span>
+        <span class="s2">&quot;xname&quot;</span><span class="o">:</span> <span class="s2">&quot;&quot;</span>
+    <span class="p">},</span>
+    <span class="s2">&quot;status&quot;</span><span class="o">:</span> <span class="p">{</span>
+        <span class="s2">&quot;code&quot;</span><span class="o">:</span> <span class="mi">200</span><span class="p">,</span>
+        <span class="s2">&quot;message&quot;</span><span class="o">:</span> <span class="s2">&quot;Ok all right.&quot;</span>
+    <span class="p">},</span>
+    <span class="s2">&quot;success&quot;</span><span class="o">:</span> <span class="kc">true</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="id21">
+<h2>禁用红包<a class="headerlink" href="#id21" title="永久链接至标题">¶</a></h2>
+<div class="section" id="id22">
+<h3>接口说明<a class="headerlink" href="#id22" title="永久链接至标题">¶</a></h3>
+<ul class="simple">
+<li>API接口请求地址：<code class="docutils literal"><span class="pre">/market/bonus/&lt;rid&gt;/disabled</span></code></li>
+<li>API接口请求方法：<code class="docutils literal"><span class="pre">POST</span></code></li>
+</ul>
+</div>
+<div class="section" id="id23">
+<h3>返回示例<a class="headerlink" href="#id23" title="永久链接至标题">¶</a></h3>
 <p>JSON数据格式:</p>
 <div class="highlight-javascript"><div class="highlight"><pre><span></span><span class="p">{</span>
   <span class="s2">&quot;status&quot;</span><span class="o">:</span> <span class="p">{</span>

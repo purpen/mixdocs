@@ -160,13 +160,63 @@ JSON数据格式:
         "success": true
     }
 
+
+颁发红包
+-------------
+
+接口说明
+~~~~~~~~~~~~~
+
+* API接口请求地址：``/market/bonus/grant``
+* API接口请求方法：``POST``
+
+请求参数
+~~~~~~~~~~~~~~~
+
+===============  ========  =========  ========  ====================================
+名称              类型      是否必须    默认值     描述说明
+===============  ========  =========  ========  ====================================
+rid              String     可选                  备注
+===============  ========  =========  ========  ====================================
+
+返回示例
+~~~~~~~~~~~~~~~~
+
+JSON数据格式:
+
+.. code-block:: javascript
+
+    {
+        "data": {
+            "amount": 2,
+            "code": "BMVYCZETFUJ",
+            "created_at": 1520181397,
+            "expired_at": 1520784000,
+            "is_used": false,
+            "limit_products": "",
+            "min_amount": 0,
+            "reach_amount": null,
+            "status": 2,
+            "status_label": "通用红包",
+            "type": null,
+            "user_id": 2,
+            "xname": ""
+        },
+        "status": {
+            "code": 200,
+            "message": "Ok all right."
+        },
+        "success": true
+    }
+
+
 禁用红包
 -------------
 
 接口说明
 ~~~~~~~~~~~~~
 
-* API接口请求地址：``/market/brand/<rid>/disabled``
+* API接口请求地址：``/market/bonus/<rid>/disabled``
 * API接口请求方法：``POST``
 
 返回示例
