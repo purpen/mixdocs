@@ -59,8 +59,10 @@ JSON数据格式:
             "expired_at": 1520784000,
             "is_used": false,
             "limit_products": "",
+            "reach_amount": 0,
             "min_amount": 0,
             "status": 0,
+            "type": 2,
             "xname": ""
         },
         "status": {
@@ -114,8 +116,10 @@ JSON数据格式:
             "expired_at": 0,
             "is_used": false,
             "limit_products": null,
+            "reach_amount": 0,
             "min_amount": 0,
             "status": 0,
+            "type": 2,
             "xname": "FB"
         },
         "status": {
