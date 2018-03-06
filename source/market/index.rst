@@ -6,4 +6,4 @@
 .. toctree::
     :maxdepth: 2
 
-    bonus.rst
+    coupons.rst
