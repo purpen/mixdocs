@@ -65,6 +65,37 @@ JSON数据格式:
         "success": false
     }
 
+获取购物车商品数
+----------------
+获取购物车商品数目
+
+接口说明
+~~~~~~~~~~~~~~
+
+* API接口请求地址：``/cart/item_count``
+* API接口请求方法：``GET``
+* API接口用户授权：``token``
+
+返回示例
+~~~~~~~~~~~~~~~~
+
+JSON数据格式:
+
+请求 **正确** 返回结果：
+
+.. code-block:: javascript
+
+    {
+        "data": {
+            "item_count": 2
+        },
+        "status": {
+            "code": 200,
+            "message": "Ok all right."
+        },
+        "success": true
+    }
+
 
 加入购物车
 ----------------

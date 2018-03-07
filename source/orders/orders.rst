@@ -339,11 +339,25 @@ JSON数据格式:
 .. code-block:: javascript
 
     {
-      "status": {
-        "code": 200,
-        "message": "Ok all right."
-      },
-      "success": true
+        "data": {
+            "order": {
+                "buyer_name": "小帅",
+                "buyer_phone": "18610320751",
+                "buyer_province": "北京市",
+                "buyer_remark": "",
+                ...
+                "rid": "D18030120453196",
+                "status": -1,
+                "store_name": "D3IN微商城(小程序)",
+                "total_amount": 149,
+                "total_quantity": 1
+            }
+        },
+        "status": {
+            "code": 200,
+            "message": "Ok all right."
+        },
+        "success": true
     }
 
 取消订单状态
@@ -374,10 +388,24 @@ JSON数据格式:
 .. code-block:: javascript
 
     {
-      "status": {
-        "code": 200,
-        "message": "Ok all right."
-      },
-      "success": true
+        "data": {
+            "order": {
+                "buyer_name": "小帅",
+                "buyer_phone": "18610320751",
+                "buyer_province": "北京市",
+                "buyer_remark": "",
+                ...
+                "rid": "D18030120453196",
+                "status": -1,
+                "store_name": "D3IN微商城(小程序)",
+                "total_amount": 149,
+                "total_quantity": 1
+            }
+        },
+        "status": {
+            "code": 200,
+            "message": "Ok all right."
+        },
+        "success": true
     }
 
