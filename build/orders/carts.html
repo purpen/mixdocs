@@ -47,7 +47,7 @@
           <span class="icon-bar"></span>
         </button>
         <a class="navbar-brand" href="../index.html">
-          eLingDocs</a>
+          moebeast</a>
         <span class="navbar-text navbar-version pull-left"><b>0.1.0</b></span>
       </div>
 
@@ -284,33 +284,38 @@
 <p>JSON数据格式:</p>
 <p>请求 <strong>正确</strong> 返回结果：</p>
 <div class="highlight-javascript"><div class="highlight"><pre><span></span><span class="p">{</span>
-  <span class="s2">&quot;data&quot;</span><span class="o">:</span> <span class="p">[</span>
-    <span class="p">{</span>
-      <span class="s2">&quot;option&quot;</span><span class="o">:</span> <span class="kc">null</span><span class="p">,</span>
-      <span class="s2">&quot;product&quot;</span><span class="o">:</span> <span class="p">{</span>
-        <span class="s2">&quot;cost_price&quot;</span><span class="o">:</span> <span class="s2">&quot;24.00&quot;</span><span class="p">,</span>
-        <span class="s2">&quot;cover&quot;</span><span class="o">:</span> <span class="s2">&quot;/static/img/mic_logo180x180.jpg&quot;</span><span class="p">,</span>
-        <span class="s2">&quot;id_code&quot;</span><span class="o">:</span> <span class="s2">&quot;&quot;</span><span class="p">,</span>
-        <span class="s2">&quot;mode&quot;</span><span class="o">:</span> <span class="s2">&quot;iPhoneX 黑色&quot;</span><span class="p">,</span>
-        <span class="s2">&quot;product_name&quot;</span><span class="o">:</span> <span class="s2">&quot;iPhoneX 手机壳&quot;</span><span class="p">,</span>
-        <span class="s2">&quot;rid&quot;</span><span class="o">:</span> <span class="s2">&quot;117280530556&quot;</span><span class="p">,</span>
-        <span class="s2">&quot;s_color&quot;</span><span class="o">:</span> <span class="s2">&quot;黑色&quot;</span><span class="p">,</span>
-        <span class="s2">&quot;s_model&quot;</span><span class="o">:</span> <span class="s2">&quot;iPhoneX&quot;</span><span class="p">,</span>
-        <span class="s2">&quot;s_weight&quot;</span><span class="o">:</span> <span class="s2">&quot;0.00&quot;</span><span class="p">,</span>
-        <span class="s2">&quot;sale_price&quot;</span><span class="o">:</span> <span class="s2">&quot;69.00&quot;</span><span class="p">,</span>
-        <span class="s2">&quot;stock_count&quot;</span><span class="o">:</span> <span class="mi">10</span>
-      <span class="p">},</span>
-      <span class="s2">&quot;quantity&quot;</span><span class="o">:</span> <span class="mi">2</span><span class="p">,</span>
-      <span class="s2">&quot;rid&quot;</span><span class="o">:</span> <span class="s2">&quot;117280530556&quot;</span><span class="p">,</span>
-      <span class="s2">&quot;user_id&quot;</span><span class="o">:</span> <span class="mi">1</span>
-    <span class="p">}</span>
-    <span class="p">...</span>
-  <span class="p">],</span>
-  <span class="s2">&quot;status&quot;</span><span class="o">:</span> <span class="p">{</span>
-    <span class="s2">&quot;code&quot;</span><span class="o">:</span> <span class="mi">200</span><span class="p">,</span>
-    <span class="s2">&quot;message&quot;</span><span class="o">:</span> <span class="s2">&quot;Ok all right.&quot;</span>
-  <span class="p">},</span>
-  <span class="s2">&quot;success&quot;</span><span class="o">:</span> <span class="kc">true</span>
+    <span class="s2">&quot;data&quot;</span><span class="o">:</span> <span class="p">{</span>
+        <span class="s2">&quot;item_count&quot;</span><span class="o">:</span> <span class="mi">2</span><span class="p">,</span>
+        <span class="s2">&quot;items&quot;</span><span class="o">:</span> <span class="p">[</span>
+            <span class="p">{</span>
+                <span class="s2">&quot;option&quot;</span><span class="o">:</span> <span class="s2">&quot;&quot;</span><span class="p">,</span>
+                <span class="s2">&quot;product&quot;</span><span class="o">:</span> <span class="p">{</span>
+                    <span class="s2">&quot;cost_price&quot;</span><span class="o">:</span> <span class="s2">&quot;189.00&quot;</span><span class="p">,</span>
+                    <span class="s2">&quot;cover&quot;</span><span class="o">:</span> <span class="s2">&quot;http://127.0.0.1:9000/_uploads/photos/180128/494e473ec90dffd.jpeg&quot;</span><span class="p">,</span>
+                    <span class="s2">&quot;id_code&quot;</span><span class="o">:</span> <span class="s2">&quot;&quot;</span><span class="p">,</span>
+                    <span class="s2">&quot;mode&quot;</span><span class="o">:</span> <span class="s2">&quot;白色&quot;</span><span class="p">,</span>
+                    <span class="s2">&quot;price&quot;</span><span class="o">:</span> <span class="s2">&quot;None&quot;</span><span class="p">,</span>
+                    <span class="s2">&quot;product_name&quot;</span><span class="o">:</span> <span class="s2">&quot;素士智能声波牙刷&quot;</span><span class="p">,</span>
+                    <span class="s2">&quot;rid&quot;</span><span class="o">:</span> <span class="s2">&quot;118280601730&quot;</span><span class="p">,</span>
+                    <span class="s2">&quot;s_color&quot;</span><span class="o">:</span> <span class="s2">&quot;白色&quot;</span><span class="p">,</span>
+                    <span class="s2">&quot;s_model&quot;</span><span class="o">:</span> <span class="s2">&quot;&quot;</span><span class="p">,</span>
+                    <span class="s2">&quot;s_weight&quot;</span><span class="o">:</span> <span class="s2">&quot;20.00&quot;</span><span class="p">,</span>
+                    <span class="s2">&quot;sale_price&quot;</span><span class="o">:</span> <span class="s2">&quot;269.00&quot;</span><span class="p">,</span>
+                    <span class="s2">&quot;stock_count&quot;</span><span class="o">:</span> <span class="mi">10</span>
+                <span class="p">},</span>
+                <span class="s2">&quot;quantity&quot;</span><span class="o">:</span> <span class="mi">1</span><span class="p">,</span>
+                <span class="s2">&quot;rid&quot;</span><span class="o">:</span> <span class="s2">&quot;118280601730&quot;</span><span class="p">,</span>
+                <span class="s2">&quot;user_id&quot;</span><span class="o">:</span> <span class="mi">2</span>
+            <span class="p">},</span>
+            <span class="p">...</span>
+        <span class="p">],</span>
+        <span class="s2">&quot;total_quantity&quot;</span><span class="o">:</span> <span class="mi">2</span>
+    <span class="p">},</span>
+    <span class="s2">&quot;status&quot;</span><span class="o">:</span> <span class="p">{</span>
+        <span class="s2">&quot;code&quot;</span><span class="o">:</span> <span class="mi">200</span><span class="p">,</span>
+        <span class="s2">&quot;message&quot;</span><span class="o">:</span> <span class="s2">&quot;Ok all right.&quot;</span>
+    <span class="p">},</span>
+    <span class="s2">&quot;success&quot;</span><span class="o">:</span> <span class="kc">true</span>
 <span class="p">}</span>
 </pre></div>
 </div>
@@ -411,30 +416,34 @@
 <p>JSON数据格式:</p>
 <p>请求 <strong>正确</strong> 返回结果：</p>
 <div class="highlight-javascript"><div class="highlight"><pre><span></span><span class="p">{</span>
-  <span class="s2">&quot;data&quot;</span><span class="o">:</span> <span class="p">{</span>
-    <span class="s2">&quot;option&quot;</span><span class="o">:</span> <span class="kc">null</span><span class="p">,</span>
-    <span class="s2">&quot;product&quot;</span><span class="o">:</span> <span class="p">{</span>
-      <span class="s2">&quot;cost_price&quot;</span><span class="o">:</span> <span class="s2">&quot;24.00&quot;</span><span class="p">,</span>
-      <span class="s2">&quot;cover&quot;</span><span class="o">:</span> <span class="s2">&quot;/static/img/mic_logo180x180.jpg&quot;</span><span class="p">,</span>
-      <span class="s2">&quot;id_code&quot;</span><span class="o">:</span> <span class="s2">&quot;&quot;</span><span class="p">,</span>
-      <span class="s2">&quot;mode&quot;</span><span class="o">:</span> <span class="s2">&quot;iPhoneX 白色&quot;</span><span class="p">,</span>
-      <span class="s2">&quot;product_name&quot;</span><span class="o">:</span> <span class="s2">&quot;iPhoneX 手机壳&quot;</span><span class="p">,</span>
-      <span class="s2">&quot;rid&quot;</span><span class="o">:</span> <span class="s2">&quot;117280969019&quot;</span><span class="p">,</span>
-      <span class="s2">&quot;s_color&quot;</span><span class="o">:</span> <span class="s2">&quot;白色&quot;</span><span class="p">,</span>
-      <span class="s2">&quot;s_model&quot;</span><span class="o">:</span> <span class="s2">&quot;iPhoneX&quot;</span><span class="p">,</span>
-      <span class="s2">&quot;s_weight&quot;</span><span class="o">:</span> <span class="s2">&quot;0.00&quot;</span><span class="p">,</span>
-      <span class="s2">&quot;sale_price&quot;</span><span class="o">:</span> <span class="s2">&quot;69.00&quot;</span><span class="p">,</span>
-      <span class="s2">&quot;stock_count&quot;</span><span class="o">:</span> <span class="mi">10</span>
+    <span class="s2">&quot;data&quot;</span><span class="o">:</span> <span class="p">{</span>
+        <span class="s2">&quot;cart&quot;</span><span class="o">:</span> <span class="p">{</span>
+            <span class="s2">&quot;option&quot;</span><span class="o">:</span> <span class="kc">null</span><span class="p">,</span>
+            <span class="s2">&quot;product&quot;</span><span class="o">:</span> <span class="p">{</span>
+                <span class="s2">&quot;cost_price&quot;</span><span class="o">:</span> <span class="s2">&quot;24.00&quot;</span><span class="p">,</span>
+                <span class="s2">&quot;cover&quot;</span><span class="o">:</span> <span class="s2">&quot;http://xxx/_uploads/photos/180202/f51932c571ba21f.jpg&quot;</span><span class="p">,</span>
+                <span class="s2">&quot;id_code&quot;</span><span class="o">:</span> <span class="s2">&quot;&quot;</span><span class="p">,</span>
+                <span class="s2">&quot;mode&quot;</span><span class="o">:</span> <span class="s2">&quot;棕色&quot;</span><span class="p">,</span>
+                <span class="s2">&quot;price&quot;</span><span class="o">:</span> <span class="s2">&quot;68.00&quot;</span><span class="p">,</span>
+                <span class="s2">&quot;product_name&quot;</span><span class="o">:</span> <span class="s2">&quot;数据大仙&quot;</span><span class="p">,</span>
+                <span class="s2">&quot;rid&quot;</span><span class="o">:</span> <span class="s2">&quot;118020098269&quot;</span><span class="p">,</span>
+                <span class="s2">&quot;s_color&quot;</span><span class="o">:</span> <span class="s2">&quot;棕色&quot;</span><span class="p">,</span>
+                <span class="s2">&quot;s_model&quot;</span><span class="o">:</span> <span class="s2">&quot;&quot;</span><span class="p">,</span>
+                <span class="s2">&quot;s_weight&quot;</span><span class="o">:</span> <span class="s2">&quot;0.00&quot;</span><span class="p">,</span>
+                <span class="s2">&quot;sale_price&quot;</span><span class="o">:</span> <span class="s2">&quot;0.00&quot;</span><span class="p">,</span>
+                <span class="s2">&quot;stock_count&quot;</span><span class="o">:</span> <span class="mi">0</span>
+            <span class="p">},</span>
+            <span class="s2">&quot;quantity&quot;</span><span class="o">:</span> <span class="mi">2</span><span class="p">,</span>
+            <span class="s2">&quot;rid&quot;</span><span class="o">:</span> <span class="s2">&quot;118020098269&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;user_id&quot;</span><span class="o">:</span> <span class="mi">2</span>
+        <span class="p">},</span>
+        <span class="s2">&quot;item_count&quot;</span><span class="o">:</span> <span class="mi">3</span>
     <span class="p">},</span>
-    <span class="s2">&quot;quantity&quot;</span><span class="o">:</span> <span class="mi">1</span><span class="p">,</span>
-    <span class="s2">&quot;rid&quot;</span><span class="o">:</span> <span class="s2">&quot;117280969019&quot;</span><span class="p">,</span>
-    <span class="s2">&quot;user_id&quot;</span><span class="o">:</span> <span class="mi">1</span>
-  <span class="p">},</span>
-  <span class="s2">&quot;status&quot;</span><span class="o">:</span> <span class="p">{</span>
-    <span class="s2">&quot;code&quot;</span><span class="o">:</span> <span class="mi">201</span><span class="p">,</span>
-    <span class="s2">&quot;message&quot;</span><span class="o">:</span> <span class="s2">&quot;All created.&quot;</span>
-  <span class="p">},</span>
-  <span class="s2">&quot;success&quot;</span><span class="o">:</span> <span class="kc">true</span>
+    <span class="s2">&quot;status&quot;</span><span class="o">:</span> <span class="p">{</span>
+        <span class="s2">&quot;code&quot;</span><span class="o">:</span> <span class="mi">201</span><span class="p">,</span>
+        <span class="s2">&quot;message&quot;</span><span class="o">:</span> <span class="s2">&quot;All created.&quot;</span>
+    <span class="p">},</span>
+    <span class="s2">&quot;success&quot;</span><span class="o">:</span> <span class="kc">true</span>
 <span class="p">}</span>
 </pre></div>
 </div>
@@ -561,11 +570,14 @@
 <p>JSON数据格式:</p>
 <p>请求 <strong>正确</strong> 返回结果：</p>
 <div class="highlight-javascript"><div class="highlight"><pre><span></span><span class="p">{</span>
-  <span class="s2">&quot;status&quot;</span><span class="o">:</span> <span class="p">{</span>
-    <span class="s2">&quot;code&quot;</span><span class="o">:</span> <span class="mi">204</span><span class="p">,</span>
-    <span class="s2">&quot;message&quot;</span><span class="o">:</span> <span class="s2">&quot;All deleted.&quot;</span>
-  <span class="p">},</span>
-  <span class="s2">&quot;success&quot;</span><span class="o">:</span> <span class="kc">true</span>
+    <span class="s2">&quot;data&quot;</span><span class="o">:</span> <span class="p">{</span>
+        <span class="s2">&quot;item_count&quot;</span><span class="o">:</span> <span class="mi">2</span>
+    <span class="p">},</span>
+    <span class="s2">&quot;status&quot;</span><span class="o">:</span> <span class="p">{</span>
+        <span class="s2">&quot;code&quot;</span><span class="o">:</span> <span class="mi">204</span><span class="p">,</span>
+        <span class="s2">&quot;message&quot;</span><span class="o">:</span> <span class="s2">&quot;All deleted.&quot;</span>
+    <span class="p">},</span>
+    <span class="s2">&quot;success&quot;</span><span class="o">:</span> <span class="kc">true</span>
 <span class="p">}</span>
 </pre></div>
 </div>
@@ -597,11 +609,14 @@
 <p>JSON数据格式:</p>
 <p>请求 <strong>正确</strong> 返回结果：</p>
 <div class="highlight-javascript"><div class="highlight"><pre><span></span><span class="p">{</span>
-  <span class="s2">&quot;status&quot;</span><span class="o">:</span> <span class="p">{</span>
-    <span class="s2">&quot;code&quot;</span><span class="o">:</span> <span class="mi">204</span><span class="p">,</span>
-    <span class="s2">&quot;message&quot;</span><span class="o">:</span> <span class="s2">&quot;All deleted.&quot;</span>
-  <span class="p">},</span>
-  <span class="s2">&quot;success&quot;</span><span class="o">:</span> <span class="kc">true</span>
+    <span class="s2">&quot;data&quot;</span><span class="o">:</span> <span class="p">{</span>
+        <span class="s2">&quot;item_count&quot;</span><span class="o">:</span> <span class="mi">0</span>
+    <span class="p">},</span>
+    <span class="s2">&quot;status&quot;</span><span class="o">:</span> <span class="p">{</span>
+        <span class="s2">&quot;code&quot;</span><span class="o">:</span> <span class="mi">204</span><span class="p">,</span>
+        <span class="s2">&quot;message&quot;</span><span class="o">:</span> <span class="s2">&quot;All deleted.&quot;</span>
+    <span class="p">},</span>
+    <span class="s2">&quot;success&quot;</span><span class="o">:</span> <span class="kc">true</span>
 <span class="p">}</span>
 </pre></div>
 </div>
@@ -626,7 +641,7 @@
 </div>
 <footer class="footer">
     <div class="container">
-        <p>© Copyright 2018 eLingDocs.com.</p>
+        <p>© Copyright 2018 moebeast.com.</p>
         <p>Created using <a href="http://sphinx.pocoo.org/" target="_blank">Sphinx</a>.</p>
     </div>
 </footer>

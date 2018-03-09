@@ -17,9 +17,6 @@
 # add these directories to sys.path here. If the directory is relative to the
 # documentation root, use os.path.abspath to make it absolute, like shown here.
 #
-import os
-import sys
-sys.path.insert(0, os.path.abspath('/Users/xiaoyi/Project/micku/app/api_1_0'))
 
 import sphinx_bootstrap_theme
 
@@ -94,7 +91,7 @@ html_theme_path = sphinx_bootstrap_theme.get_html_theme_path()
 #
 html_theme_options = {
     # Navigation bar title. (Default: ``project`` value)
-    'navbar_title': "eLingDocs",
+    'navbar_title': "moebeast",
 
     # Tab name for entire site. (Default: "Site")
     'navbar_site_name': "API文档",

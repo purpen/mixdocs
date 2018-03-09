@@ -3,7 +3,7 @@
    You can adapt this file completely to your liking, but it should at least
    contain the root `toctree` directive.
 
-eLingShop API 文档
+moebeast api 文档
 ===================================
 **注意：** 部分接口需要登录后才能显示
 
