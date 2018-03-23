@@ -9,3 +9,4 @@
     products.rst
     category.rst
     brands.rst
+    assets.rst

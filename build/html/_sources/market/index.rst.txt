@@ -6,4 +6,5 @@
 .. toctree::
     :maxdepth: 2
 
+    banners.rst
     coupons.rst

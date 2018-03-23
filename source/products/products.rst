@@ -410,16 +410,152 @@ JSON数据格式:
     }
 
 
-新增商品 <未开通>
+新增商品
 ------------------
+新增商品信息
+
+接口说明
+~~~~~~~~~~~~~~
+
+* API接口请求地址：``/products``
+* API接口请求方法：``POST``
+* API接口用户授权：``token``
+
+请求参数
+~~~~~~~~~~~~~~~
+
+=====================  ==========  =========  ==========  =============================
+名称                    类型        是否必须     默认值       描述说明
+=====================  ==========  =========  ==========  =============================
+name                   String      必需                     商品名称
+cover_id               Integer     必需                     封面图ID
+category_id            Integer     可选                     分类ID
+brand_id               Integer     可选                     品牌ID
+id_code                String      可选                     69码
+cost_price             Float       可选                     成本价
+price                  Float       必需                     销售价
+sale_price             Float       可选                     促销价
+description            String      可选                     描述
+features               String      可选                     宣传语或优势亮点
+sticked                Bool        可选          False      是否推荐
+status                 Bool        可选          True       上架或下架
+s_weight               Float       可选                     重量
+s_length               Float       可选                     长
+s_width                Float       可选                     宽
+s_height               Float       可选                     高
+=====================  ==========  =========  ==========  =============================
+
+请求示例
+~~~~~~~~~~~~~~~
+
+.. code-block:: javascript
+
+    {"name": "新产品05", "brand_id": 1, "category_id": 2, "cover_id": 22, "cost_price": 23.00, "price": 45.00, "sale_price": 43, "description": "新潮产品描述","features": "最具创新力", "sticked": 0  }
+
+返回示例
+~~~~~~~~~~~~~~~~
+
+JSON数据格式:
+
+.. code-block:: javascript
+
+    {
+        "data": {
+            "cover": "http://xxxx/photos/180224/c833237a728a1ed.jpg",
+            "description": "新潮产品描述",
+            "features": "最具创新力",
+            "id_code": null,
+            "name": "新产品05",
+            "price": 45,
+            "rid": "8478210953",
+            "s_height": 0,
+            "s_length": 0,
+            "s_weight": 0,
+            "s_width": 0,
+            "sale_price": 43,
+            "sticked": false
+        },
+        "status": {
+            "code": 201,
+            "message": "All created."
+        },
+        "success": true
+    }
 
 
-更新商品 <未开通>
+更新商品
 ------------------
+更新商品信息
+
+接口说明
+~~~~~~~~~~~~~~
+
+* API接口请求地址：``/products/<rid>``
+* API接口请求方法：``PUT``
+* API接口用户授权：``token``
+
+请求参数
+~~~~~~~~~~~~~~~
+
+** 同上新增参数要求 **
+
+返回示例
+~~~~~~~~~~~~~~~~
+
+JSON数据格式:
+
+.. code-block:: javascript
+
+    {
+        "data": {
+            "cover": "http://xxxx/_uploads/photos/180224/c833237a728a1ed.jpg",
+            "description": "新潮产品999描述07",
+            "features": "最具创新99力",
+            "id_code": null,
+            "name": "新产品0007",
+            "price": 45,
+            "rid": "8245178063",
+            "s_height": 0,
+            "s_length": 0,
+            "s_weight": 0,
+            "s_width": 0,
+            "sale_price": 43,
+            "sticked": false
+        },
+        "status": {
+            "code": 201,
+            "message": "All created."
+        },
+        "success": true
+    }
 
 
-删除商品 <未开通>
+删除商品
 ------------------
+删除某商品及sku信息
+
+接口说明
+~~~~~~~~~~~~~~
+
+* API接口请求地址：``/products/<rid>``
+* API接口请求方法：``DELETE``
+* API接口用户授权：``token``
+
+返回示例
+~~~~~~~~~~~~~~~~
+
+JSON数据格式:
+
+.. code-block:: javascript
+
+    {
+        "status": {
+            "code": 200,
+            "message": "Ok all right."
+        },
+        "success": true
+    }
+
 
 收藏列表
 ----------------
