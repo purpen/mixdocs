@@ -254,15 +254,52 @@ JSON数据格式:
 .. code-block:: javascript
 
     {
-      "data": {
-        "content": "这是净化器，编辑更新",
-        "tags": "净化器，智能"
-      },
-      "status": {
-        "code": 200,
-        "message": "Ok all right."
-      },
-      "success": true
+        "data": {
+            "content": [
+                {
+                    "content": "湿度理工哈个阿里戈中国结",
+                    "type": "text"
+                },
+                {
+                    "content": "http://xxx/_uploads/photos/180202/ccab9ae0ab96840.jpg",
+                    "type": "image"
+                },
+                {
+                    "content": "http://xxx/_uploads/photos/180202/f51932c571ba21f.jpg",
+                    "type": "image"
+                },
+                {
+                    "content": "http://xxx/_uploads/photos/180202/f51932c571ba21f.jpg",
+                    "type": "image"
+                },
+                {
+                    "content": "最具推荐的奇石文化",
+                    "type": "text"
+                }
+            ],
+            "images": [
+                {
+                    "created_at": 1517503809,
+                    "filename": "炮兵系列-RCL-G100数据线800x800-1.jpg",
+                    "filepath": "180202/f51932c571ba21f.jpg",
+                    "id": 12,
+                    "view_url": "http://xxx/_uploads/photos/180202/f51932c571ba21f.jpg"
+                },
+                {
+                    "created_at": 1517503810,
+                    "filename": "炮兵系列-RCL-G100数据线800x800-6.jpg",
+                    "filepath": "180202/a6ca6a209d29c8d.jpg",
+                    "id": 17,
+                    "view_url": "http://xxx/_uploads/photos/180202/a6ca6a209d29c8d.jpg"
+                }
+            ],
+            "tags": "设计,骑士，文化"
+        },
+        "status": {
+            "code": 200,
+            "message": "Ok all right."
+        },
+        "success": true
     }
 
 请求 ``失败`` 返回结果：
