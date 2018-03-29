@@ -188,7 +188,7 @@ JSON数据格式:
 名称                    类型        是否必须    默认值        描述说明
 =====================  ==========  =========  ==========  =============================
 first_name              String      必需                     姓
-last_name               String      必需                     名
+last_name               String      可选                     名
 phone                   String      可选                     电话
 mobile                  String      必需                     手机号码
 province_id             Number      必需                     省市
