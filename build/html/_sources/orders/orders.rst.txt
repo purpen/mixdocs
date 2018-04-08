@@ -35,8 +35,6 @@ JSON数据格式:
 .. literalinclude:: order_list.js
 
 
-
-
 订单详情
 =============
 单个订单详情信息
