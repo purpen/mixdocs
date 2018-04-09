@@ -129,8 +129,11 @@ freight                Integer     可选          0          邮费
 invoice_type           Integer     可选          1          发票类型
 invoice_info           String      可选          {}
 buyer_remark           String      可选                     买家备注
-from_client            String      可选                     来源客户端
-affiliate_code         String      可选                     促销优惠码
+from_client            String      可选                     来源客户端，1、小程序；2、H5 3、App 4、TV 5、POS 6、PAD
+affiliate_code         String      可选                     推广码
+coupon_code            String      可选                     优惠券码
+customer_code          String      可选                     分销商代码
+sync_pay               Integer     可选                     是否同步返回支付参数
 =====================  ==========  =========  ==========  =============================
 
 **订单明细参数:**
@@ -150,10 +153,10 @@ warehouse_id           Number      可选                    发货的仓库ID
 
 .. code-block:: javascript
 
-    {"freight":0,"invoice_type":1,"invoice_info":{},"store_id":1,"address_rid": "5748231905",
+    {"freight":0,"invoice_type":1,"invoice_info":{},"address_rid": "5748231905",
     "items": [{"rid":"117280530556","quantity":1,"deal_price":23, "discount_amount":0,
     "warehouse_id":0}],"outside_target_id":132234,"buyer_remark":"","from_client":1,
-    "affiliate_code":"mix001"}
+    "affiliate_code":"mix001","affiliate_code":"mix001","sync_pay":1}
 
 返回示例
 ~~~~~~~~~~~~~~~~
@@ -163,38 +166,60 @@ JSON数据格式:
 .. code-block:: javascript
 
     {
-      "data": {
-        "buyer_address": "751设计广场",
-        "buyer_city": "北京市",
-        "buyer_country": "中国",
-        "buyer_name": "田小北",
-        "buyer_phone": "18610230451",
-        "buyer_province": "北京",
-        "buyer_remark": "",
-        "buyer_tel": "01084599328",
-        "buyer_zipcode": "100015",
-        "created_at": 1514898101,
-        "discount_amount": 0,
-        "express_at": 0,
-        "express_name": "",
-        "express_no": null,
-        "freight": 0,
-        "outside_target_id": "132234",
-        "pay_amount": 23,
-        "received_at": 0,
-        "remark": null,
-        "rid": "D201801029560287431",
-        "ship_mode": 1,
-        "status": 1,
-        "store_name": "D3IN(JD)",
-        "total_amount": 23,
-        "total_quantity": 1
-      },
-      "status": {
-        "code": 201,
-        "message": "All created."
-      },
-      "success": true
+        "data": {
+            "order": {
+                "buyer_address": "xomge",
+                "buyer_city": "顺义区",
+                "buyer_country": "中国",
+                "buyer_name": "tian",
+                "buyer_phone": "18610320751",
+                "buyer_province": "北京",
+                "buyer_remark": "快递发乎",
+                "buyer_tel": "18610320751",
+                "buyer_zipcode": "",
+                "created_at": 1523267509,
+                "discount_amount": 5,
+                "express_at": 0,
+                "express_name": "",
+                "express_no": null,
+                "freight": 10,
+                "items": [
+                    {
+                        "cost_price": "23.00",
+                        "cover": "http://xxx/_uploads/photos/180302/496886303714e7e.jpg",
+                        "deal_price": 78,
+                        "discount_amount": 5,
+                        "id_code": "",
+                        "mode": "深红色",
+                        "price": "45.00",
+                        "product_name": "测试供应商方式",
+                        "quantity": 1,
+                        "rid": "118130473518",
+                        "s_color": "深红色",
+                        "s_model": "",
+                        "s_weight": "0.00",
+                        "sale_price": "0.00",
+                        "stock_count": 4
+                    }
+                ],
+                "outside_target_id": "132234",
+                "pay_amount": 83,
+                "received_at": 0,
+                "remark": null,
+                "rid": "D18040997285314",
+                "ship_mode": 1,
+                "status": 1,
+                "store_name": "D3IN未来店(小程序)",
+                "total_amount": 78,
+                "total_quantity": 1
+            },
+            "pay_params": {}
+        },
+        "status": {
+            "code": 201,
+            "message": "All created."
+        },
+        "success": true
     }
 
 返回错误格式：
