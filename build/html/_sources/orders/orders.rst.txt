@@ -122,8 +122,8 @@ JSON数据格式:
 =====================  ==========  =========  ==========  =============================
 名称                    类型        是否必须     默认值       描述说明
 =====================  ==========  =========  ==========  =============================
-store_id               Integer     必需                     所属店铺
 address_rid            String      必需                     收货地址ID
+ship_mode              Integer     可选           1         1、快递方式；2、自提方式；
 outside_target_id      String      可选
 freight                Integer     可选          0          邮费
 invoice_type           Integer     可选          1          发票类型
@@ -184,6 +184,7 @@ JSON数据格式:
         "received_at": 0,
         "remark": null,
         "rid": "D201801029560287431",
+        "ship_mode": 1,
         "status": 1,
         "store_name": "D3IN(JD)",
         "total_amount": 23,

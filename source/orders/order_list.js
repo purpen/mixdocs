@@ -32,6 +32,7 @@
         "received_at": 0,
         "remark": null,
         "rid": "D201801029560287431",
+        "ship_mode": 1,
         "status": 1,
         "store_name": "D3IN(JD)",
         "total_amount": 23,
@@ -72,6 +73,7 @@
         "received_at": 0,
         "remark": "",
         "rid": "C17280018997",
+        "ship_mode": 1,
         "status": 5,
         "store_name": "D3IN(JD)",
         "total_amount": 207,
@@ -86,3 +88,5 @@
   },
   "success": true
 }
+
+
