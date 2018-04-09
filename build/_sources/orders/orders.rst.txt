@@ -213,7 +213,16 @@ JSON数据格式:
                 "total_amount": 78,
                 "total_quantity": 1
             },
-            "pay_params": {}
+            "pay_params": {
+                "appId": "wx11363b7f6f****ac8",
+                "code_url": "weixin://wxpay/bizpayurl?pr=jKmv7J3",
+                "nonceStr": "zGDhaNmaN6LVVohjTZhwUXSxKKDAkMVt",
+                "package": "prepay_id=wx100027305593446cd7271ce00685789643",
+                "pay_sign": "4BF3410EBC0***537F0E82C9C302F404",
+                "prepay_id": "wx100027305593446cd***1ce00685789643",
+                "signType": "MD5",
+                "timeStamp": 1523291250
+            }
         },
         "status": {
             "code": 201,
