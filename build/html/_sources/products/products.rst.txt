@@ -429,7 +429,7 @@ JSON数据格式:
 名称          类型      是否必须    默认值     描述说明
 ===========  ========  =========  ========  ====================================
 rid          String    必须                  sku id
-store_rid    String    可选                  店铺编号
+store_rid    String    可选                  店铺编号,逗号隔开，可以批量获取
 ===========  ========  =========  ========  ====================================
 
 返回示例
@@ -438,6 +438,8 @@ store_rid    String    可选                  店铺编号
 JSON数据格式:
 
 请求 **正确** 返回结果：
+
+``注意`` 单一结果格式
 
 .. code-block:: javascript
 
@@ -484,6 +486,76 @@ JSON数据格式:
         "success": true
     }
 
+``注意`` 批量结果格式
+
+.. code-block:: javascript
+
+    {
+        "data": {
+            "8320517984": {
+                "colors": [],
+                "items": [
+                    {
+                        "cover": "xxx/_uploads/photos/180302/496886303714e7e.jpg",
+                        "mode": "",
+                        "price": "45.00",
+                        "product_name": "新产品07",
+                        "rid": "118100775815",
+                        "s_color": "",
+                        "s_model": "",
+                        "s_weight": "0.00",
+                        "sale_price": "43.00",
+                        "stock_count": 4
+                    }
+                ],
+                "modes": []
+            },
+            "8806471923": {
+                "colors": [
+                    {
+                        "name": "蓝色",
+                        "valid": true
+                    },
+                    {
+                        "name": "绿色",
+                        "valid": true
+                    }
+                ],
+                "items": [
+                    {
+                        "cover": "http://xxx/_uploads/photos/180202/a653192ecd0ec6f.jpg",
+                        "mode": "蓝色",
+                        "price": "45.00",
+                        "product_name": "新产品07",
+                        "rid": "118280229131",
+                        "s_color": "蓝色",
+                        "s_model": "",
+                        "s_weight": "0.00",
+                        "sale_price": "3.00",
+                        "stock_count": 100
+                    },
+                    {
+                        "cover": "http://xxx/_uploads/photos/180202/fe572a90b3c6228.jpg",
+                        "mode": "绿色",
+                        "price": "45.00",
+                        "product_name": "新产品07",
+                        "rid": "118280080780",
+                        "s_color": "绿色",
+                        "s_model": "",
+                        "s_weight": "0.00",
+                        "sale_price": "23.00",
+                        "stock_count": 500
+                    }
+                ],
+                "modes": []
+            }
+        },
+        "status": {
+            "code": 200,
+            "message": "Ok all right."
+        },
+        "success": true
+    }
 
 请求 ``失败`` 返回结果：
 

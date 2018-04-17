@@ -1209,7 +1209,7 @@
 <td>String</td>
 <td>可选</td>
 <td>&#160;</td>
-<td>店铺编号</td>
+<td>店铺编号,逗号隔开，可以批量获取</td>
 </tr>
 </tbody>
 </table>
@@ -1218,6 +1218,7 @@
 <h3>返回示例<a class="headerlink" href="#id38" title="永久链接至标题">¶</a></h3>
 <p>JSON数据格式:</p>
 <p>请求 <strong>正确</strong> 返回结果：</p>
+<p><code class="docutils literal"><span class="pre">注意</span></code> 单一结果格式</p>
 <div class="highlight-javascript"><div class="highlight"><pre><span></span><span class="p">{</span>
     <span class="s2">&quot;data&quot;</span><span class="o">:</span> <span class="p">{</span>
         <span class="s2">&quot;colors&quot;</span><span class="o">:</span> <span class="p">[</span>
@@ -1253,6 +1254,75 @@
             <span class="p">}</span>
         <span class="p">],</span>
         <span class="s2">&quot;modes&quot;</span><span class="o">:</span> <span class="p">[]</span>
+    <span class="p">},</span>
+    <span class="s2">&quot;status&quot;</span><span class="o">:</span> <span class="p">{</span>
+        <span class="s2">&quot;code&quot;</span><span class="o">:</span> <span class="mi">200</span><span class="p">,</span>
+        <span class="s2">&quot;message&quot;</span><span class="o">:</span> <span class="s2">&quot;Ok all right.&quot;</span>
+    <span class="p">},</span>
+    <span class="s2">&quot;success&quot;</span><span class="o">:</span> <span class="kc">true</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<p><code class="docutils literal"><span class="pre">注意</span></code> 批量结果格式</p>
+<div class="highlight-javascript"><div class="highlight"><pre><span></span><span class="p">{</span>
+    <span class="s2">&quot;data&quot;</span><span class="o">:</span> <span class="p">{</span>
+        <span class="s2">&quot;8320517984&quot;</span><span class="o">:</span> <span class="p">{</span>
+            <span class="s2">&quot;colors&quot;</span><span class="o">:</span> <span class="p">[],</span>
+            <span class="s2">&quot;items&quot;</span><span class="o">:</span> <span class="p">[</span>
+                <span class="p">{</span>
+                    <span class="s2">&quot;cover&quot;</span><span class="o">:</span> <span class="s2">&quot;xxx/_uploads/photos/180302/496886303714e7e.jpg&quot;</span><span class="p">,</span>
+                    <span class="s2">&quot;mode&quot;</span><span class="o">:</span> <span class="s2">&quot;&quot;</span><span class="p">,</span>
+                    <span class="s2">&quot;price&quot;</span><span class="o">:</span> <span class="s2">&quot;45.00&quot;</span><span class="p">,</span>
+                    <span class="s2">&quot;product_name&quot;</span><span class="o">:</span> <span class="s2">&quot;新产品07&quot;</span><span class="p">,</span>
+                    <span class="s2">&quot;rid&quot;</span><span class="o">:</span> <span class="s2">&quot;118100775815&quot;</span><span class="p">,</span>
+                    <span class="s2">&quot;s_color&quot;</span><span class="o">:</span> <span class="s2">&quot;&quot;</span><span class="p">,</span>
+                    <span class="s2">&quot;s_model&quot;</span><span class="o">:</span> <span class="s2">&quot;&quot;</span><span class="p">,</span>
+                    <span class="s2">&quot;s_weight&quot;</span><span class="o">:</span> <span class="s2">&quot;0.00&quot;</span><span class="p">,</span>
+                    <span class="s2">&quot;sale_price&quot;</span><span class="o">:</span> <span class="s2">&quot;43.00&quot;</span><span class="p">,</span>
+                    <span class="s2">&quot;stock_count&quot;</span><span class="o">:</span> <span class="mi">4</span>
+                <span class="p">}</span>
+            <span class="p">],</span>
+            <span class="s2">&quot;modes&quot;</span><span class="o">:</span> <span class="p">[]</span>
+        <span class="p">},</span>
+        <span class="s2">&quot;8806471923&quot;</span><span class="o">:</span> <span class="p">{</span>
+            <span class="s2">&quot;colors&quot;</span><span class="o">:</span> <span class="p">[</span>
+                <span class="p">{</span>
+                    <span class="s2">&quot;name&quot;</span><span class="o">:</span> <span class="s2">&quot;蓝色&quot;</span><span class="p">,</span>
+                    <span class="s2">&quot;valid&quot;</span><span class="o">:</span> <span class="kc">true</span>
+                <span class="p">},</span>
+                <span class="p">{</span>
+                    <span class="s2">&quot;name&quot;</span><span class="o">:</span> <span class="s2">&quot;绿色&quot;</span><span class="p">,</span>
+                    <span class="s2">&quot;valid&quot;</span><span class="o">:</span> <span class="kc">true</span>
+                <span class="p">}</span>
+            <span class="p">],</span>
+            <span class="s2">&quot;items&quot;</span><span class="o">:</span> <span class="p">[</span>
+                <span class="p">{</span>
+                    <span class="s2">&quot;cover&quot;</span><span class="o">:</span> <span class="s2">&quot;http://xxx/_uploads/photos/180202/a653192ecd0ec6f.jpg&quot;</span><span class="p">,</span>
+                    <span class="s2">&quot;mode&quot;</span><span class="o">:</span> <span class="s2">&quot;蓝色&quot;</span><span class="p">,</span>
+                    <span class="s2">&quot;price&quot;</span><span class="o">:</span> <span class="s2">&quot;45.00&quot;</span><span class="p">,</span>
+                    <span class="s2">&quot;product_name&quot;</span><span class="o">:</span> <span class="s2">&quot;新产品07&quot;</span><span class="p">,</span>
+                    <span class="s2">&quot;rid&quot;</span><span class="o">:</span> <span class="s2">&quot;118280229131&quot;</span><span class="p">,</span>
+                    <span class="s2">&quot;s_color&quot;</span><span class="o">:</span> <span class="s2">&quot;蓝色&quot;</span><span class="p">,</span>
+                    <span class="s2">&quot;s_model&quot;</span><span class="o">:</span> <span class="s2">&quot;&quot;</span><span class="p">,</span>
+                    <span class="s2">&quot;s_weight&quot;</span><span class="o">:</span> <span class="s2">&quot;0.00&quot;</span><span class="p">,</span>
+                    <span class="s2">&quot;sale_price&quot;</span><span class="o">:</span> <span class="s2">&quot;3.00&quot;</span><span class="p">,</span>
+                    <span class="s2">&quot;stock_count&quot;</span><span class="o">:</span> <span class="mi">100</span>
+                <span class="p">},</span>
+                <span class="p">{</span>
+                    <span class="s2">&quot;cover&quot;</span><span class="o">:</span> <span class="s2">&quot;http://xxx/_uploads/photos/180202/fe572a90b3c6228.jpg&quot;</span><span class="p">,</span>
+                    <span class="s2">&quot;mode&quot;</span><span class="o">:</span> <span class="s2">&quot;绿色&quot;</span><span class="p">,</span>
+                    <span class="s2">&quot;price&quot;</span><span class="o">:</span> <span class="s2">&quot;45.00&quot;</span><span class="p">,</span>
+                    <span class="s2">&quot;product_name&quot;</span><span class="o">:</span> <span class="s2">&quot;新产品07&quot;</span><span class="p">,</span>
+                    <span class="s2">&quot;rid&quot;</span><span class="o">:</span> <span class="s2">&quot;118280080780&quot;</span><span class="p">,</span>
+                    <span class="s2">&quot;s_color&quot;</span><span class="o">:</span> <span class="s2">&quot;绿色&quot;</span><span class="p">,</span>
+                    <span class="s2">&quot;s_model&quot;</span><span class="o">:</span> <span class="s2">&quot;&quot;</span><span class="p">,</span>
+                    <span class="s2">&quot;s_weight&quot;</span><span class="o">:</span> <span class="s2">&quot;0.00&quot;</span><span class="p">,</span>
+                    <span class="s2">&quot;sale_price&quot;</span><span class="o">:</span> <span class="s2">&quot;23.00&quot;</span><span class="p">,</span>
+                    <span class="s2">&quot;stock_count&quot;</span><span class="o">:</span> <span class="mi">500</span>
+                <span class="p">}</span>
+            <span class="p">],</span>
+            <span class="s2">&quot;modes&quot;</span><span class="o">:</span> <span class="p">[]</span>
+        <span class="p">}</span>
     <span class="p">},</span>
     <span class="s2">&quot;status&quot;</span><span class="o">:</span> <span class="p">{</span>
         <span class="s2">&quot;code&quot;</span><span class="o">:</span> <span class="mi">200</span><span class="p">,</span>
