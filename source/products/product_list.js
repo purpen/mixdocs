@@ -1,8 +1,8 @@
 {
   "data": {
     "count": 54,
-    "next": "http://xxx/api/v1.0/products?page=2",
-    "prev": null,
+    "next": true,
+    "prev": false,
     "products": [
       {
         "cover": "http://xxx/_uploads/photos/171010/22f8415ad675f22.jpeg",

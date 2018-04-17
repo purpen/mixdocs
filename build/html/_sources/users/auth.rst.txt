@@ -33,15 +33,16 @@ JSON数据格式
 正确结果格式::
 
     {
-      "data": {
-        "expiration": 7200,
-        "token": "eyJhbGciOiJIUzI1NJpZtZS5HkISmEqq113c7nyp_hdIo-mU"
-      },
-      "status": {
-        "code": 200,
-        "message": "Ok all right."
-      },
-      "success": true
+        "data": {
+            "created_at": 1523607872,
+            "expiration": 2592000,
+            "token": "eyJhbGciOiJIUzI1NiL7Pxx5kfO-3vXsulI5K49K91z6chFdZvHFMt98"
+        },
+        "status": {
+            "code": 200,
+            "message": "Ok all right."
+        },
+        "success": true
     }
 
 错误结果格式::
@@ -50,6 +51,111 @@ JSON数据格式
       "status": {
         "code": 400,
         "message": "Email or Password is error!"
+      },
+      "success": false
+    }
+
+商家登录后台
+-------------
+``注意`` 此接口不支持签名验证
+
+
+接口说明
+~~~~~~~~~~~~~~
+
+* API接口请求地址：``/auth/business_login``
+* API接口请求方法：``POST``
+
+
+请求参数
+~~~~~~~~~~~~~~~
+
+=============  ========  =========  ========  ====================================
+名称            类型      是否必须    默认值     描述说明
+=============  ========  =========  ========  ====================================
+email           String    必须                 登录账号
+password        String    必须                 登录密码
+=============  ========  =========  ========  ====================================
+
+返回示例
+~~~~~~~~~~~~~~~~
+``注意`` 登录成功后，返回的token请妥善保存，以后需要登录访问的接口，请务必带上token参数。
+
+JSON数据格式
+
+正确结果格式::
+
+    {
+        "data": {
+            "created_at": 1523927428,
+            "expiration": 2592000,
+            "store_rid": "Q4209136",
+            "token": "eyJhbGciOiJIUzI1NiIsIPuVGBJ7bUPTJklWBJZOdZXKzCVCfxQxHlhA"
+        },
+        "status": {
+            "code": 200,
+            "message": "Ok all right."
+        },
+        "success": true
+    }
+
+错误结果格式::
+
+    {
+      "status": {
+        "code": 400,
+        "message": "Email or Password is error!"
+      },
+      "success": false
+    }
+
+商家换取授权Token
+-------------------
+``注意`` 此接口不支持签名验证
+
+
+接口说明
+~~~~~~~~~~~~~~
+
+* API接口请求地址：``/auth/exchange_token``
+* API接口请求方法：``POST``
+* API接口用户授权：``token``
+
+
+请求参数
+~~~~~~~~~~~~~~~
+
+=============  ========  =========  ========  ====================================
+名称            类型      是否必须    默认值     描述说明
+=============  ========  =========  ========  ====================================
+store_rid       String    必须                 登录账号
+=============  ========  =========  ========  ====================================
+
+返回示例
+~~~~~~~~~~~~~~~~
+``注意`` 成功返回后，返回的key/access_token请妥善保存至本地，丢失或过期后需再次登录换取。
+
+
+正确结果格式::
+
+    {
+        "data": {
+            "access_token": "7e209cac2ed0fe7329ad02b29fac4eea3aae77fe",
+            "app_key": "8rhJWHgT9NsKuOeRip3t"
+        },
+        "status": {
+            "code": 200,
+            "message": "Ok all right."
+        },
+        "success": true
+    }
+
+错误结果格式::
+
+    {
+      "status": {
+        "code": 403,
+        "message": "店铺未设置授权信息!"
       },
       "success": false
     }
