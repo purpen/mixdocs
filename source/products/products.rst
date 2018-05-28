@@ -201,6 +201,8 @@ JSON数据格式:
 ===========  ========  =========  ========  ====================================
 rid          String    必须                   店铺Id
 cid          Number    可选                   分类Id
+status       Integer   可选                   商品状态，1: 在售；-1：下架的
+type         Integer   可选                   商品类别，1：自营商品；2：分销商品
 page         Number    可选         1         当前页码
 per_page     Number    可选         10        每页数量
 ===========  ========  =========  ========  ====================================
@@ -210,8 +212,61 @@ per_page     Number    可选         10        每页数量
 
 JSON数据格式:
 
-.. literalinclude:: product_list.js
-    :language: javascript
+.. code-block:: javascript
+
+    {
+        "data": {
+            "count": 10,
+            "next": false,
+            "prev": false,
+            "products": [
+                {
+                    "cover": "http://xxx/_uploads/photos/180328/635419b82c5c66d.jpg",
+                    "description": "",
+                    "features": "",
+                    "id_code": null,
+                    "is_distributed": false,
+                    "name": "测试库存变化",
+                    "price": 78,
+                    "rid": "118230338355",
+                    "s_height": 0,
+                    "s_length": 0,
+                    "s_weight": 0,
+                    "s_width": 0,
+                    "sale_price": 0,
+                    "status": true,
+                    "sticked": true,
+                    "stock_count": 68,
+                    "store_id": 1
+                },
+                ...
+                {
+                    "cover": "http://xxx/_uploads/photos/180128/494e473ec90dffd.jpeg",
+                    "description": "原创设计\r\n小米生态链出品\r\n米椒有售",
+                    "features": null,
+                    "id_code": null,
+                    "is_distributed": false,
+                    "name": "素士智能声波牙刷",
+                    "price": 0,
+                    "rid": "118280311037",
+                    "s_height": 3,
+                    "s_length": 20,
+                    "s_weight": 20,
+                    "s_width": 3,
+                    "sale_price": 269,
+                    "status": true,
+                    "sticked": null,
+                    "stock_count": 11,
+                    "store_id": 1
+                }
+            ]
+        },
+        "status": {
+            "code": 200,
+            "message": "Ok all right."
+        },
+        "success": true
+    }
 
 
 商品基本信息
