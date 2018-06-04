@@ -654,18 +654,42 @@ description            String      可选                     描述
 features               String      可选                     宣传语或优势亮点
 sticked                Bool        可选          False      是否推荐
 status                 Bool        可选          True       上架或下架
+is_distributed         Bool        可选          False      是否分销
 s_weight               Float       可选                     重量
 s_length               Float       可选                     长
 s_width                Float       可选                     宽
 s_height               Float       可选                     高
+skus                   Array       必需                     商品sku信息
 =====================  ==========  =========  ==========  =============================
 
+商品sku请求参数
+~~~~~~~~~~~~~~~
+=====================  ==========  =========  ==========  =============================
+名称                    类型        是否必须     默认值       描述说明
+=====================  ==========  =========  ==========  =============================
+id_code                String      可选                     商品69码
+s_model                String      可选                     型号
+s_color                String      可选                     颜色
+s_weight               Float       可选                     重量
+cost_price             Float       可选                     成本价
+price                  Float       必需                     销售价
+sale_price             Float       可选                     促销价
+commission_price       Float       可选                     佣金
+stock_quantity         Integer     可选                     库存数
+remark                 String      可选                     备注
+=====================  ==========  =========  ==========  =============================
 请求示例
 ~~~~~~~~~~~~~~~
 
 .. code-block:: javascript
 
-    {"name": "新产品05", "brand_id": 1, "category_id": 2, "cover_id": 22, "cost_price": 23.00, "price": 45.00, "sale_price": 43, "description": "新潮产品描述","features": "最具创新力", "sticked": 0  }
+    {"name": "新产品05", "brand_id": 1, "category_id": 2, "cover_id": 22, "cost_price": 23.00, "price": 45.00, "sale_price": 43, "description": "新潮产品描述","features": "最具创新力", "sticked": 0, "is_distributed": true,
+     "skus": [
+        {"id_code": "6948451231567", "s_model": "iphone6", "s_color": "白色", "s_weight": 1.2, "cost_price": 3500, "price": 4000, "sale_price": 3700, "stock_quantity": 12, "remark": "商品sku1的备注信息", "commission_price": 23},
+        ...
+        {"id_code": "6948451564461", "s_model": "iphone7", "s_color": "黑色", "s_weight": 1.4, "cost_price": 5500, "price": 7000, "sale_price": 6000, "stock_quantity": 42, "remark": "商品sku2的备注信息", "commission_price": 34}
+      ]
+    }
 
 返回示例
 ~~~~~~~~~~~~~~~~
@@ -680,6 +704,7 @@ JSON数据格式:
             "description": "新潮产品描述",
             "features": "最具创新力",
             "id_code": null,
+            "is_distributed": true,
             "name": "新产品05",
             "price": 45,
             "rid": "8478210953",
@@ -727,6 +752,7 @@ JSON数据格式:
             "description": "新潮产品999描述07",
             "features": "最具创新99力",
             "id_code": null,
+            "is_distributed": false,
             "name": "新产品0007",
             "price": 45,
             "rid": "8245178063",
@@ -837,7 +863,7 @@ JSON数据格式:
 接口说明
 ~~~~~~~~~~~~~~
 
-* API接口请求地址：``/wishlist/addto``
+* API接口请求地址：``/wishlist``
 * API接口请求方法：``POST``
 * API接口用户授权：``token``
 
@@ -874,8 +900,8 @@ JSON数据格式:
 接口说明
 ~~~~~~~~~~~~~~
 
-* API接口请求地址：``/wishlist/remove``
-* API接口请求方法：``POST``
+* API接口请求地址：``/wishlist``
+* API接口请求方法：``DELETE``
 * API接口用户授权：``token``
 
 请求参数
@@ -903,3 +929,92 @@ JSON数据格式:
         },
         "success": true
     }
+
+商品喜欢
+----------------
+添加用户商品喜欢
+
+接口说明
+~~~~~~~~~~~~~~
+
+* API接口请求地址：``/userlike``
+* API接口请求方法：``POST``
+* API接口用户授权：``token``
+
+请求参数
+~~~~~~~~~~~~~~~
+
+===========  ========  =========  ========  ====================================
+名称          类型      是否必须    默认值     描述说明
+===========  ========  =========  ========  ====================================
+rid          String    必须                  商品编号
+===========  ========  =========  ========  ====================================
+
+返回示例
+~~~~~~~~~~~~~~~~
+
+JSON数据格式:
+
+请求 **正确** 返回结果：
+
+.. code-block:: javascript
+
+    {
+        "status": {
+            "code": 201,
+            "message": "All created."
+        },
+        "success": true
+    }
+
+请求 ``失败`` 返回结果：
+
+.. code-block:: javascript
+
+    {
+        "status": {
+            "code": 403,
+            "message": "不能重复操作!"
+        },
+        "success": false
+    }
+
+
+取消商品喜欢
+----------------
+取消用户商品喜欢
+
+接口说明
+~~~~~~~~~~~~~~
+
+* API接口请求地址：``/userlike``
+* API接口请求方法：``DELETE``
+* API接口用户授权：``token``
+
+请求参数
+~~~~~~~~~~~~~~~
+
+===========  ========  =========  ========  ====================================
+名称          类型      是否必须    默认值     描述说明
+===========  ========  =========  ========  ====================================
+rid          String    必须                  商品编号
+===========  ========  =========  ========  ====================================
+
+返回示例
+~~~~~~~~~~~~~~~~
+
+JSON数据格式:
+
+请求 **正确** 返回结果：
+
+.. code-block:: javascript
+
+    {
+        "status": {
+            "code": 204,
+            "message": "All deleted."
+        },
+        "success": true
+    }
+
+
