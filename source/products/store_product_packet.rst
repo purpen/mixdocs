@@ -52,9 +52,9 @@ JSON数据格式:
     }
 
 
-修改商品组
+更新商品组
 ----------------
-修改店铺中商品组名
+更新店铺中商品组名
 
 接口说明
 ~~~~~~~~~~~~~~
@@ -192,6 +192,74 @@ JSON数据格式:
                 {
                     "name": "女士",
                     "product_packet_id": 4
+                }
+            ]
+        },
+        "status": {
+            "code": 200,
+            "message": "Ok all right."
+        },
+        "success": true
+    }
+
+
+获取商品组中的商品
+----------------
+获取店铺某个商品组中所有的商品
+
+接口说明
+~~~~~~~~~~~~~~
+
+* API接口请求地址：``/product_packet/<int:product_packet_id>/products``
+* API接口请求方法：``GET``
+* API接口用户授权：``token``
+
+请求参数
+~~~~~~~~~~~~~~~
+
+=====================  ==========  =========  ==========  =============================
+名称                    类型        是否必须     默认值       描述说明
+=====================  ==========  =========  ==========  =============================
+product_packet_id      Integer      必须                   商品组ID
+page                   Number       可选         1         当前页码
+per_page               Number       可选         10        每页数量
+status                 Integer      可选         0         商品状态 0:全部, 1:上架, 2:下架
+=====================  ==========  =========  ==========  =============================
+
+返回示例
+~~~~~~~~~~~~~~~~
+
+JSON数据格式:
+
+请求 **正确** 返回结果：
+
+.. code-block:: javascript
+
+    {
+        "data": {
+            "count": 1,
+            "next": false,
+            "prev": false,
+            "products": [
+                {
+                    "commission_price": 23,
+                    "commission_rate": 0.01,
+                    "cost_price": "1234.00",
+                    "cover": "http://127.0.0.1:9000/_uploads/photos/180529/fac7a2591ef0b48.jpg",
+                    "description": "A-商品1描述",
+                    "features": "是否钢板",
+                    "id_code": null,
+                    "is_distributed": true,
+                    "name": "A-商品1",
+                    "price": 2345,
+                    "rid": "118290990628",
+                    "s_height": 0,
+                    "s_length": 0,
+                    "s_weight": 0,
+                    "s_width": 0,
+                    "sale_price": 0,
+                    "sticked": true,
+                    "stock_count": 211
                 }
             ]
         },
