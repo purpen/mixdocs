@@ -85,7 +85,9 @@
 <li class="toctree-l2"><a class="reference internal" href="../products/products.html">商品模块</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../products/category.html">分类模块</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../products/brands.html">供应商/品牌模块</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../products/distributions.html">分销模块</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../products/wish.html">心愿清单模块</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../products/store_product_packet.html">店铺商品组模块</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../products/assets.html">附件模块</a></li>
 </ul>
 </li>
@@ -325,7 +327,7 @@
 </table>
 <p>参考示例：</p>
 <ul class="simple">
-<li>小程序接口请求参数传递：<code class="docutils literal notranslate"><span class="pre">/cart?open_id=123231231</span></code></li>
+<li>小程序接口请求参数传递：<code class="docutils literal"><span class="pre">/cart?open_id=123231231</span></code></li>
 </ul>
 </div>
 <div class="section" id="id5">
@@ -420,7 +422,7 @@
 </table>
 <p>参考示例：</p>
 <ul class="simple">
-<li>小程序接口请求参数传递：<code class="docutils literal notranslate"><span class="pre">/cart/item_count?open_id=123231231</span></code></li>
+<li>小程序接口请求参数传递：<code class="docutils literal"><span class="pre">/cart/item_count?open_id=123231231</span></code></li>
 </ul>
 </div>
 <div class="section" id="id9">
@@ -439,8 +441,8 @@
 <span class="p">}</span>
 </pre></div>
 </div>
-<p>请求 <code class="docutils literal notranslate"><span class="pre">失败</span></code> 返回结果：</p>
-<div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="p">{</span>
+<p>请求 <code class="docutils literal"><span class="pre">失败</span></code> 返回结果：</p>
+<div class="highlight-javascript"><div class="highlight"><pre><span></span><span class="p">{</span>
     <span class="s2">&quot;status&quot;</span><span class="o">:</span> <span class="p">{</span>
         <span class="s2">&quot;code&quot;</span><span class="o">:</span> <span class="mi">404</span><span class="p">,</span>
         <span class="s2">&quot;message&quot;</span><span class="o">:</span> <span class="s2">&quot;Not Found&quot;</span>
@@ -508,7 +510,7 @@
 </tbody>
 </table>
 <p>参考示例：</p>
-<div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="p">{</span>
+<div class="highlight-javascript"><div class="highlight"><pre><span></span><span class="p">{</span>
     <span class="s2">&quot;open_id&quot;</span><span class="o">:</span><span class="s2">&quot;12312321343&quot;</span><span class="p">,</span>
     <span class="s2">&quot;rid&quot;</span><span class="o">:</span><span class="s2">&quot;12&quot;</span><span class="p">,</span>
     <span class="s2">&quot;quantity&quot;</span><span class="o">:</span><span class="mi">3</span><span class="p">,</span>
@@ -630,7 +632,7 @@
 </tbody>
 </table>
 <p>参考示例：</p>
-<div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="p">{</span>
+<div class="highlight-javascript"><div class="highlight"><pre><span></span><span class="p">{</span>
     <span class="s2">&quot;open_id&quot;</span><span class="o">:</span><span class="s2">&quot;12312321343&quot;</span><span class="p">,</span>
     <span class="s2">&quot;rid&quot;</span><span class="o">:</span><span class="s2">&quot;12&quot;</span><span class="p">,</span>
     <span class="s2">&quot;quantity&quot;</span><span class="o">:</span><span class="mi">3</span><span class="p">,</span>
@@ -730,7 +732,7 @@
 </tbody>
 </table>
 <p>参考示例：</p>
-<div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="p">{</span>
+<div class="highlight-javascript"><div class="highlight"><pre><span></span><span class="p">{</span>
     <span class="s2">&quot;open_id&quot;</span><span class="o">:</span><span class="s2">&quot;12312321343&quot;</span>
 <span class="p">}</span>
 </pre></div>
@@ -803,7 +805,7 @@
 </tbody>
 </table>
 <p>参考示例：</p>
-<div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="p">{</span>
+<div class="highlight-javascript"><div class="highlight"><pre><span></span><span class="p">{</span>
     <span class="s2">&quot;open_id&quot;</span><span class="o">:</span><span class="s2">&quot;12312321343&quot;</span>
 <span class="p">}</span>
 </pre></div>
