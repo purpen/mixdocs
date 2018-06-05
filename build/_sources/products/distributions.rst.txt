@@ -30,66 +30,37 @@ qk           String    可选                   筛选条件
 
 JSON数据格式:
 
-请求 **正确** 返回结果：
+.. literalinclude:: distribution_product_list.js
+    :language: javascript
 
-.. code-block:: javascript
 
-    {
-        "data": {
-            "count": 2,
-            "next": false,
-            "prev": false,
-            "products": [
-                {
-                    "commission_price": 99,
-                    "commission_rate": 4.22,
-                    "cost_price": "1234.00",
-                    "cover": "http://127.0.0.1:9000/_uploads/photos/180529/fac7a2591ef0b48.jpg",
-                    "description": "商品1描述",
-                    "features": "商品特点",
-                    "id_code": null,
-                    "is_distributed": true,
-                    "is_proprietary": false,
-                    "name": "商品1名称",
-                    "price": 2345,
-                    "rid": "118290990628",
-                    "s_height": 0,
-                    "s_length": 0,
-                    "s_weight": 0,
-                    "s_width": 0,
-                    "sale_price": 0,
-                    "sticked": true,
-                    "stock_count": 211
-                },
-                {
-                    "commission_price": 89,
-                    "commission_rate": 15.84,
-                    "cost_price": "235.00",
-                    "cover": "http://127.0.0.1:9000/_uploads/photos/180530/72de0b9ca1ae5a3.jpg",
-                    "description": "",
-                    "features": "",
-                    "id_code": null,
-                    "is_distributed": true,
-                    "is_proprietary": true,
-                    "name": "B-女装1",
-                    "price": 562,
-                    "rid": "118300122486",
-                    "s_height": 0,
-                    "s_length": 0,
-                    "s_weight": 0,
-                    "s_width": 0,
-                    "sale_price": 0,
-                    "sticked": false,
-                    "stock_count": 101
-                }
-            ]
-        },
-        "status": {
-            "code": 200,
-            "message": "Ok all right."
-        },
-        "success": true
-    }
+我的分销商品
+----------------
+获取品牌馆所有分销的商品
+
+接口说明
+~~~~~~~~~~~~~~
+
+* API接口请求地址：``/fx_distribute``
+* API接口请求方法：``GET``
+
+请求参数
+~~~~~~~~~~~~~~~
+===========  ========  =========  ========  ====================================
+名称          类型      是否必须    默认值     描述说明
+===========  ========  =========  ========  ====================================
+page         Number    可选         1         当前页码
+per_page     Number    可选         10        每页数量
+status       String    可选         1         商品状态 0: 全部  1: 上架  2: 下架
+===========  ========  =========  ========  ====================================
+
+返回示例
+~~~~~~~~~~~~~~~~
+
+JSON数据格式:
+
+.. literalinclude:: distribution_product_list.js
+    :language: javascript
 
 
 立即分销/放入仓库
@@ -182,7 +153,7 @@ JSON数据格式:
 
 查看详情
 ----------------
-查询店铺商品详情
+查看店铺商品详情
 
 接口说明
 ~~~~~~~~~~~~~~

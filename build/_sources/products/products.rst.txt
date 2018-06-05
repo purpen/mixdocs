@@ -678,12 +678,13 @@ commission_price       Float       可选                     佣金
 stock_quantity         Integer     可选                     库存数
 remark                 String      可选                     备注
 =====================  ==========  =========  ==========  =============================
+
 请求示例
 ~~~~~~~~~~~~~~~
 
 .. code-block:: javascript
 
-    {"name": "新产品05", "brand_id": 1, "category_id": 2, "cover_id": 22, "cost_price": 23.00, "price": 45.00, "sale_price": 43, "description": "新潮产品描述","features": "最具创新力", "sticked": 0, "is_distributed": true,
+    {"name": "新产品05", "brand_id": 1, "category_id": 2, "cover_id": 22, "cost_price": 23.00, "price": 45.00, "sale_price": 43, "description": "新潮产品描述","features": "最具创新力", "sticked": false, "is_distributed": true,
      "skus": [
         {"id_code": "6948451231567", "s_model": "iphone6", "s_color": "白色", "s_weight": 1.2, "cost_price": 3500, "price": 4000, "sale_price": 3700, "stock_quantity": 12, "remark": "商品sku1的备注信息", "commission_price": 23},
         ...
@@ -713,7 +714,8 @@ JSON数据格式:
             "s_weight": 0,
             "s_width": 0,
             "sale_price": 43,
-            "sticked": false
+            "sticked": false,
+            "is_distributed": true
         },
         "status": {
             "code": 201,
@@ -744,6 +746,8 @@ JSON数据格式:
 
 JSON数据格式:
 
+请求 **正确** 返回结果：
+
 .. code-block:: javascript
 
     {
@@ -761,13 +765,26 @@ JSON数据格式:
             "s_weight": 0,
             "s_width": 0,
             "sale_price": 43,
-            "sticked": false
+            "sticked": true,
+            "is_distributed": false
         },
         "status": {
             "code": 201,
             "message": "All created."
         },
         "success": true
+    }
+
+请求 ``失败`` 返回结果：
+
+.. code-block:: javascript
+
+    {
+        "status": {
+            "code": 400,
+            "message": "分销商品, 佣金必须设置!"
+        },
+        "success": false
     }
 
 
@@ -787,6 +804,8 @@ JSON数据格式:
 
 JSON数据格式:
 
+请求 **正确** 返回结果：
+
 .. code-block:: javascript
 
     {
@@ -795,6 +814,18 @@ JSON数据格式:
             "message": "Ok all right."
         },
         "success": true
+    }
+
+请求 ``失败`` 返回结果：
+
+.. code-block:: javascript
+
+    {
+        "status": {
+            "code": 403,
+            "message": "商品已被分销，不能删除商品!"
+        },
+        "success": false
     }
 
 
