@@ -5,22 +5,28 @@
     "prev": false,
     "products": [
       {
-        "cover": "http://xxx/_uploads/photos/171010/22f8415ad675f22.jpeg",
-        "description": "这是描述",
-        "id_code": null,
-        "name": "铠甲",
-        "rid": "117210230003",
-        "price": 0,
-        "s_height": 0,
-        "s_length": 0,
-        "s_weight": 0,
-        "s_width": 0,
-        "sale_price": 60,
-        "sticked": null
+        "cost_price": "采购价",
+        "cover": "封面图片链接地址",
+        "description": "描述",
+        "features": "商品推荐语",
+        "id_code": "商品的69码",
+        "name": "商品名",
+        "rid": "商品编号",
+        "price": "零售价",
+        "s_height": "高度",
+        "s_length": "长度",
+        "s_weight": "重量",
+        "s_width": "宽度",
+        "sale_price": "促销价",
+        "sticked": "是否推荐",
+        "stock_count": "库存数"
       },
       {
+        "cost_price": "2399",
         "cover": "http://xxx/_uploads/photos/171010/fe7380064e18135.jpg",
-        "id_code": null,
+        "description": "这是描述",
+        "features": "这是商品推荐语",
+        "id_code": "6915545123548",
         "name": "速腾套装",
         "rid": "117210372661",
         "price": 0,
@@ -29,7 +35,8 @@
         "s_weight": 0,
         "s_width": 0,
         "sale_price": 0,
-        "sticked": null
+        "sticked": null,
+        "stock_count": 35
       },
     ]
   },
