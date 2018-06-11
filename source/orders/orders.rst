@@ -336,11 +336,15 @@ JSON数据格式:
 .. code-block:: javascript
 
     {
-      "status": {
-        "code": 200,
-        "message": "Ok all right."
-      },
-      "success": true
+        "data": {
+            "is_paid": true,
+            "rid": "D18061015836402"
+        },
+        "status": {
+            "code": 200,
+            "message": "Ok all right."
+        },
+        "success": true
     }
 
 查询订单支付状态
@@ -472,6 +476,615 @@ JSON数据格式:
                 "total_amount": 149,
                 "total_quantity": 1
             }
+        },
+        "status": {
+            "code": 200,
+            "message": "Ok all right."
+        },
+        "success": true
+    }
+
+
+待发货订单状态
+================
+更新订单为待发货状态
+
+接口说明
+~~~~~~~~~~~~~~
+
+* API接口请求地址：``/orders/up_pending_shipment_status``
+* API接口请求方法：``POST``
+* API接口用户授权：``token``
+
+请求参数
+~~~~~~~~~~~~~~~
+
+=====================  ==========  =========  ==========  =============================
+名称                    类型        是否必须     默认值       描述说明
+=====================  ==========  =========  ==========  =============================
+rid                    String      必需                    订单号
+=====================  ==========  =========  ==========  =============================
+
+返回示例
+~~~~~~~~~~~~~~~~
+
+JSON数据格式:
+
+.. code-block:: javascript
+
+    {
+        "data": {
+            "order": {
+                "buyer_address": "大街",
+                "buyer_city": "北京",
+                "buyer_country": "中国",
+                "buyer_name": "田帅",
+                "buyer_phone": "13278989898",
+                "buyer_province": "北京",
+                "buyer_remark": null,
+                "buyer_tel": null,
+                "buyer_zipcode": null,
+                "created_at": 1528620141,
+                "customer_order_id": null,
+                "discount_amount": 0,
+                "express_at": 0,
+                "express_name": "",
+                "express_no": null,
+                "freight": 0,
+                "items": [
+                    {
+                        "cost_price": "1.00",
+                        "cover": "http://0.0.0.0:9000/_uploads/photos/1",
+                        "deal_price": 999.1,
+                        "discount_amount": 0,
+                        "id_code": "1",
+                        "mode": "1 1",
+                        "price": "1.00",
+                        "product_name": "摩托",
+                        "quantity": 3,
+                        "rid": "1",
+                        "s_color": "1",
+                        "s_model": "1",
+                        "s_weight": "1.00",
+                        "sale_price": "1.00",
+                        "stock_count": 11089
+                    },
+
+                ],
+                "outside_target_id": "D18061015836402",
+                "pay_amount": 3996.4,
+                "received_at": 0,
+                "remark": null,
+                "rid": "D18061015836402",
+                "ship_mode": 1,
+                "status": 10,
+                "store_name": "第一家(None)",
+                "total_amount": 3996.4,
+                "total_quantity": 4
+            },
+            "rid": "D18061015836402"
+        },
+        "status": {
+            "code": 200,
+            "message": "Ok all right."
+        },
+        "success": true
+    }
+
+
+配货中订单状态
+================
+更新订单为配货中状态
+
+接口说明
+~~~~~~~~~~~~~~
+
+* API接口请求地址：``/orders/up_distribution_status``
+* API接口请求方法：``POST``
+* API接口用户授权：``token``
+
+请求参数
+~~~~~~~~~~~~~~~
+
+=====================  ==========  =========  ==========  =============================
+名称                    类型        是否必须     默认值       描述说明
+=====================  ==========  =========  ==========  =============================
+rid                    String      必需                    订单号
+=====================  ==========  =========  ==========  =============================
+
+返回示例
+~~~~~~~~~~~~~~~~
+
+JSON数据格式:
+
+.. code-block:: javascript
+
+    {
+        "data": {
+            "order": {
+                "buyer_address": "大街",
+                "buyer_city": "北京",
+                "buyer_country": "中国",
+                "buyer_name": "田帅",
+                "buyer_phone": "13278989898",
+                "buyer_province": "北京",
+                "buyer_remark": null,
+                "buyer_tel": null,
+                "buyer_zipcode": null,
+                "created_at": 1528620141,
+                "customer_order_id": null,
+                "discount_amount": 0,
+                "express_at": 0,
+                "express_name": "",
+                "express_no": null,
+                "freight": 0,
+                "items": [
+                    {
+                        "cost_price": "1.00",
+                        "cover": "http://0.0.0.0:9000/_uploads/photos/1",
+                        "deal_price": 999.1,
+                        "discount_amount": 0,
+                        "id_code": "1",
+                        "mode": "1 1",
+                        "price": "1.00",
+                        "product_name": "摩托",
+                        "quantity": 3,
+                        "rid": "1",
+                        "s_color": "1",
+                        "s_model": "1",
+                        "s_weight": "1.00",
+                        "sale_price": "1.00",
+                        "stock_count": 11089
+                    },
+
+                ],
+                "outside_target_id": "D18061015836402",
+                "pay_amount": 3996.4,
+                "received_at": 0,
+                "remark": null,
+                "rid": "D18061015836402",
+                "ship_mode": 1,
+                "status": 12,
+                "store_name": "第一家(None)",
+                "total_amount": 3996.4,
+                "total_quantity": 4
+            },
+            "rid": "D18061015836402"
+        },
+        "status": {
+            "code": 200,
+            "message": "Ok all right."
+        },
+        "success": true
+    }
+
+
+待打印订单状态
+================
+更新订单为待打印状态
+
+接口说明
+~~~~~~~~~~~~~~
+
+* API接口请求地址：``/orders/up_pending_print_status``
+* API接口请求方法：``POST``
+* API接口用户授权：``token``
+
+请求参数
+~~~~~~~~~~~~~~~
+
+=====================  ==========  =========  ==========  =============================
+名称                    类型        是否必须     默认值       描述说明
+=====================  ==========  =========  ==========  =============================
+rid                    String      必需                    订单号
+=====================  ==========  =========  ==========  =============================
+
+返回示例
+~~~~~~~~~~~~~~~~
+
+JSON数据格式:
+
+.. code-block:: javascript
+
+    {
+        "data": {
+            "order": {
+                "buyer_address": "大街",
+                "buyer_city": "北京",
+                "buyer_country": "中国",
+                "buyer_name": "田帅",
+                "buyer_phone": "13278989898",
+                "buyer_province": "北京",
+                "buyer_remark": null,
+                "buyer_tel": null,
+                "buyer_zipcode": null,
+                "created_at": 1528620141,
+                "customer_order_id": null,
+                "discount_amount": 0,
+                "express_at": 0,
+                "express_name": "",
+                "express_no": null,
+                "freight": 0,
+                "items": [
+                    {
+                        "cost_price": "1.00",
+                        "cover": "http://0.0.0.0:9000/_uploads/photos/1",
+                        "deal_price": 999.1,
+                        "discount_amount": 0,
+                        "id_code": "1",
+                        "mode": "1 1",
+                        "price": "1.00",
+                        "product_name": "摩托",
+                        "quantity": 3,
+                        "rid": "1",
+                        "s_color": "1",
+                        "s_model": "1",
+                        "s_weight": "1.00",
+                        "sale_price": "1.00",
+                        "stock_count": 11089
+                    },
+
+                ],
+                "outside_target_id": "D18061015836402",
+                "pay_amount": 3996.4,
+                "received_at": 0,
+                "remark": null,
+                "rid": "D18061015836402",
+                "ship_mode": 1,
+                "status": 13,
+                "store_name": "第一家(None)",
+                "total_amount": 3996.4,
+                "total_quantity": 4
+            },
+            "rid": "D18061015836402"
+        },
+        "status": {
+            "code": 200,
+            "message": "Ok all right."
+        },
+        "success": true
+    }
+
+
+已发货订单状态
+================
+更新订单为已发货状态
+
+接口说明
+~~~~~~~~~~~~~~
+
+* API接口请求地址：``/orders/up_shipped_status``
+* API接口请求方法：``POST``
+* API接口用户授权：``token``
+
+请求参数
+~~~~~~~~~~~~~~~
+
+=====================  ==========  =========  ==========  =============================
+名称                    类型        是否必须     默认值       描述说明
+=====================  ==========  =========  ==========  =============================
+rid                    String      必需                    订单号
+=====================  ==========  =========  ==========  =============================
+
+返回示例
+~~~~~~~~~~~~~~~~
+
+JSON数据格式:
+
+.. code-block:: javascript
+
+    {
+        "data": {
+            "order": {
+                "buyer_address": "大街",
+                "buyer_city": "北京",
+                "buyer_country": "中国",
+                "buyer_name": "田帅",
+                "buyer_phone": "13278989898",
+                "buyer_province": "北京",
+                "buyer_remark": null,
+                "buyer_tel": null,
+                "buyer_zipcode": null,
+                "created_at": 1528620141,
+                "customer_order_id": null,
+                "discount_amount": 0,
+                "express_at": 0,
+                "express_name": "",
+                "express_no": null,
+                "freight": 0,
+                "items": [
+                    {
+                        "cost_price": "1.00",
+                        "cover": "http://0.0.0.0:9000/_uploads/photos/1",
+                        "deal_price": 999.1,
+                        "discount_amount": 0,
+                        "id_code": "1",
+                        "mode": "1 1",
+                        "price": "1.00",
+                        "product_name": "摩托",
+                        "quantity": 3,
+                        "rid": "1",
+                        "s_color": "1",
+                        "s_model": "1",
+                        "s_weight": "1.00",
+                        "sale_price": "1.00",
+                        "stock_count": 11089
+                    },
+
+                ],
+                "outside_target_id": "D18061015836402",
+                "pay_amount": 3996.4,
+                "received_at": 0,
+                "remark": null,
+                "rid": "D18061015836402",
+                "ship_mode": 1,
+                "status": 16,
+                "store_name": "第一家(None)",
+                "total_amount": 3996.4,
+                "total_quantity": 4
+            },
+            "rid": "D18061015836402"
+        },
+        "status": {
+            "code": 200,
+            "message": "Ok all right."
+        },
+        "success": true
+    }
+
+
+待评分订单状态
+================
+更新订单为待评分状态
+
+接口说明
+~~~~~~~~~~~~~~
+
+* API接口请求地址：``/orders/up_pending_rating_status``
+* API接口请求方法：``POST``
+* API接口用户授权：``token``
+
+请求参数
+~~~~~~~~~~~~~~~
+
+=====================  ==========  =========  ==========  =============================
+名称                    类型        是否必须     默认值       描述说明
+=====================  ==========  =========  ==========  =============================
+rid                    String      必需                    订单号
+=====================  ==========  =========  ==========  =============================
+
+返回示例
+~~~~~~~~~~~~~~~~
+
+JSON数据格式:
+
+.. code-block:: javascript
+
+    {
+        "data": {
+            "order": {
+                "buyer_address": "大街",
+                "buyer_city": "北京",
+                "buyer_country": "中国",
+                "buyer_name": "田帅",
+                "buyer_phone": "13278989898",
+                "buyer_province": "北京",
+                "buyer_remark": null,
+                "buyer_tel": null,
+                "buyer_zipcode": null,
+                "created_at": 1528620141,
+                "customer_order_id": null,
+                "discount_amount": 0,
+                "express_at": 0,
+                "express_name": "",
+                "express_no": null,
+                "freight": 0,
+                "items": [
+                    {
+                        "cost_price": "1.00",
+                        "cover": "http://0.0.0.0:9000/_uploads/photos/1",
+                        "deal_price": 999.1,
+                        "discount_amount": 0,
+                        "id_code": "1",
+                        "mode": "1 1",
+                        "price": "1.00",
+                        "product_name": "摩托",
+                        "quantity": 3,
+                        "rid": "1",
+                        "s_color": "1",
+                        "s_model": "1",
+                        "s_weight": "1.00",
+                        "sale_price": "1.00",
+                        "stock_count": 11089
+                    },
+
+                ],
+                "outside_target_id": "D18061015836402",
+                "pay_amount": 3996.4,
+                "received_at": 0,
+                "remark": null,
+                "rid": "D18061015836402",
+                "ship_mode": 1,
+                "status": 40,
+                "store_name": "第一家(None)",
+                "total_amount": 3996.4,
+                "total_quantity": 4
+            },
+            "rid": "D18061015836402"
+        },
+        "status": {
+            "code": 200,
+            "message": "Ok all right."
+        },
+        "success": true
+    }
+
+
+评分完成订单状态
+================
+更新订单为评分完成状态
+
+接口说明
+~~~~~~~~~~~~~~
+
+* API接口请求地址：``/orders/up_rated_status``
+* API接口请求方法：``POST``
+* API接口用户授权：``token``
+
+请求参数
+~~~~~~~~~~~~~~~
+
+=====================  ==========  =========  ==========  =============================
+名称                    类型        是否必须     默认值       描述说明
+=====================  ==========  =========  ==========  =============================
+rid                    String      必需                    订单号
+=====================  ==========  =========  ==========  =============================
+
+返回示例
+~~~~~~~~~~~~~~~~
+
+JSON数据格式:
+
+.. code-block:: javascript
+
+    {
+        "data": {
+            "order": {
+                "buyer_address": "大街",
+                "buyer_city": "北京",
+                "buyer_country": "中国",
+                "buyer_name": "田帅",
+                "buyer_phone": "13278989898",
+                "buyer_province": "北京",
+                "buyer_remark": null,
+                "buyer_tel": null,
+                "buyer_zipcode": null,
+                "created_at": 1528620141,
+                "customer_order_id": null,
+                "discount_amount": 0,
+                "express_at": 0,
+                "express_name": "",
+                "express_no": null,
+                "freight": 0,
+                "items": [
+                    {
+                        "cost_price": "1.00",
+                        "cover": "http://0.0.0.0:9000/_uploads/photos/1",
+                        "deal_price": 999.1,
+                        "discount_amount": 0,
+                        "id_code": "1",
+                        "mode": "1 1",
+                        "price": "1.00",
+                        "product_name": "摩托",
+                        "quantity": 3,
+                        "rid": "1",
+                        "s_color": "1",
+                        "s_model": "1",
+                        "s_weight": "1.00",
+                        "sale_price": "1.00",
+                        "stock_count": 11089
+                    },
+
+                ],
+                "outside_target_id": "D18061015836402",
+                "pay_amount": 3996.4,
+                "received_at": 0,
+                "remark": null,
+                "rid": "D18061015836402",
+                "ship_mode": 1,
+                "status": 45,
+                "store_name": "第一家(None)",
+                "total_amount": 3996.4,
+                "total_quantity": 4
+            },
+            "rid": "D18061015836402"
+        },
+        "status": {
+            "code": 200,
+            "message": "Ok all right."
+        },
+        "success": true
+    }
+
+
+已完成订单状态
+================
+更新订单为已完成状态
+
+接口说明
+~~~~~~~~~~~~~~
+
+* API接口请求地址：``/orders/up_finished_status``
+* API接口请求方法：``POST``
+* API接口用户授权：``token``
+
+请求参数
+~~~~~~~~~~~~~~~
+
+=====================  ==========  =========  ==========  =============================
+名称                    类型        是否必须     默认值       描述说明
+=====================  ==========  =========  ==========  =============================
+rid                    String      必需                    订单号
+=====================  ==========  =========  ==========  =============================
+
+返回示例
+~~~~~~~~~~~~~~~~
+
+JSON数据格式:
+
+.. code-block:: javascript
+
+    {
+        "data": {
+            "order": {
+                "buyer_address": "大街",
+                "buyer_city": "北京",
+                "buyer_country": "中国",
+                "buyer_name": "田帅",
+                "buyer_phone": "13278989898",
+                "buyer_province": "北京",
+                "buyer_remark": null,
+                "buyer_tel": null,
+                "buyer_zipcode": null,
+                "created_at": 1528620141,
+                "customer_order_id": null,
+                "discount_amount": 0,
+                "express_at": 0,
+                "express_name": "",
+                "express_no": null,
+                "freight": 0,
+                "items": [
+                    {
+                        "cost_price": "1.00",
+                        "cover": "http://0.0.0.0:9000/_uploads/photos/1",
+                        "deal_price": 999.1,
+                        "discount_amount": 0,
+                        "id_code": "1",
+                        "mode": "1 1",
+                        "price": "1.00",
+                        "product_name": "摩托",
+                        "quantity": 3,
+                        "rid": "1",
+                        "s_color": "1",
+                        "s_model": "1",
+                        "s_weight": "1.00",
+                        "sale_price": "1.00",
+                        "stock_count": 11089
+                    },
+
+                ],
+                "outside_target_id": "D18061015836402",
+                "pay_amount": 3996.4,
+                "received_at": 0,
+                "remark": null,
+                "rid": "D18061015836402",
+                "ship_mode": 1,
+                "status": 30,
+                "store_name": "第一家(None)",
+                "total_amount": 3996.4,
+                "total_quantity": 4
+            },
+            "rid": "D18061015836402"
         },
         "status": {
             "code": 200,

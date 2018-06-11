@@ -199,6 +199,8 @@ street_address          String      必需                     详细街道
 street_address_two      String      可选
 zipcode                 Number      可选                     邮编
 is_default              Bool        可选        False        是否默认地址
+is_overseas             Bool        可选        False        是否海外地址
+user_custom_id          Integer     可选                     海关信息id
 =====================  ==========  =========  ==========  =============================
 
 
@@ -219,6 +221,7 @@ JSON数据格式:
         "full_address": "北京顺义区光明街道",
         "full_name": "田帅",
         "is_default": true,
+        "is_overseas": false,
         "last_name": "帅",
         "mobile": "18610230451",
         "phone": "01084599328",
@@ -282,6 +285,7 @@ JSON数据格式:
         "full_address": "北京顺义区光明街道",
         "full_name": "田小北",
         "is_default": true,
+        "is_overseas": false,
         "last_name": "小北",
         "mobile": "18610230451",
         "phone": "01084599328",
@@ -611,5 +615,198 @@ JSON数据格式:
         "message": "Ok all right."
       },
       "success": true
+    }
+
+
+验证用户海关信息是否存在
+----------------
+验证用户海关信息是否存在
+
+接口说明
+~~~~~~~~~~~~~~
+
+* API接口请求地址：``/address/exists_custom``
+* API接口请求方法：``GET``
+* API接口用户授权：``token``
+
+
+返回示例
+~~~~~~~~~~~~~~~~
+
+JSON数据格式:
+
+请求 **正确** 返回结果：
+
+.. code-block:: javascript
+
+    {
+        "data": {
+            "exists": true
+        },
+        "status": {
+            "code": 200,
+            "message": "Ok all right."
+        },
+        "success": true
+    }
+
+
+新增地址海关信息
+----------------
+某用户新增地址海关信息
+
+接口说明
+~~~~~~~~~~~~~~
+
+* API接口请求地址：``/address/custom``
+* API接口请求方法：``POST``
+* API接口用户授权：``token``
+
+
+请求参数
+~~~~~~~~~~~~~~~
+
+=====================  ==========  =========  ==========  =============================
+名称                    类型        是否必须    默认值        描述说明
+=====================  ==========  =========  ==========  =============================
+id_card                 String      必需                     身份证号
+id_card_front           Integer     必需                     身份证正面照片图片资源id
+id_card_back            Integer     必需                     身份证背面照片图片资源id
+=====================  ==========  =========  ==========  =============================
+
+返回示例
+~~~~~~~~~~~~~~~~
+
+JSON数据格式:
+
+请求 **正确** 返回结果：
+
+.. code-block:: javascript
+
+    {
+        "data": {
+            "id_card": "13278989898",
+            "id_card_back": 2,
+            "id_card_front": 1,
+            "user_id": 1
+        },
+        "status": {
+            "code": 201,
+            "message": "All created."
+        },
+        "success": true
+    }
+
+
+请求 **失败** 返回结果：
+
+.. code-block:: javascript
+
+    {
+        "status": {
+            "code": 400,
+            "message": "Create failed!"
+        },
+        "success": false
+    }
+
+
+更新地址海关信息
+----------------
+某用户更新地址海关信息
+
+接口说明
+~~~~~~~~~~~~~~
+
+* API接口请求地址：``/address/custom``
+* API接口请求方法：``PUT``
+* API接口用户授权：``token``
+
+
+请求参数
+~~~~~~~~~~~~~~~
+
+=====================  ==========  =========  ==========  =============================
+名称                    类型        是否必须    默认值        描述说明
+=====================  ==========  =========  ==========  =============================
+id_card                 String      必需                     身份证号
+id_card_front           Integer     必需                     身份证正面照片图片资源id
+id_card_back            Integer     必需                     身份证背面照片图片资源id
+=====================  ==========  =========  ==========  =============================
+
+返回示例
+~~~~~~~~~~~~~~~~
+
+JSON数据格式:
+
+请求 **正确** 返回结果：
+
+.. code-block:: javascript
+
+    {
+        "data": {
+            "id_card": "13278989898",
+            "id_card_back": 2,
+            "id_card_front": 1,
+            "user_id": 1
+        },
+        "status": {
+            "code": 201,
+            "message": "All created."
+        },
+        "success": true
+    }
+
+请求 **失败** 返回结果：
+
+.. code-block:: javascript
+
+    {
+        "status": {
+            "code": 404,
+            "message": "Not Found"
+        },
+        "success": false
+    }
+
+
+删除地址海关信息
+----------------
+某用户删除地址海关信息
+
+接口说明
+~~~~~~~~~~~~~~
+
+* API接口请求地址：``/address/custom``
+* API接口请求方法：``DELETE``
+* API接口用户授权：``token``
+
+返回示例
+~~~~~~~~~~~~~~~~
+
+JSON数据格式:
+
+请求 **正确** 返回结果：
+
+.. code-block:: javascript
+
+    {
+        "status": {
+            "code": 200,
+            "message": "Ok all right."
+        },
+        "success": true
+    }
+
+请求 **失败** 返回结果：
+
+.. code-block:: javascript
+
+    {
+        "status": {
+            "code": 404,
+            "message": "Not Found"
+        },
+        "success": false
     }
 

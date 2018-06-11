@@ -11,3 +11,5 @@
     carts.rst
     addresses.rst
     stats.rst
+    comment.rst
+    logistics.rst
