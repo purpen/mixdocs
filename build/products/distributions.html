@@ -405,6 +405,7 @@
         <span class="s2">&quot;features&quot;</span><span class="o">:</span> <span class="s2">&quot;商品推荐语&quot;</span><span class="p">,</span>
         <span class="s2">&quot;id_code&quot;</span><span class="o">:</span> <span class="s2">&quot;商品的69码&quot;</span><span class="p">,</span>
         <span class="s2">&quot;is_distributed&quot;</span><span class="o">:</span> <span class="s2">&quot;是否分销商品&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;is_sold_out&quot;</span><span class="o">:</span> <span class="s2">&quot;是否已售罄&quot;</span><span class="p">,</span>
         <span class="s2">&quot;is_proprietary&quot;</span><span class="o">:</span> <span class="s2">&quot;是否自营商品&quot;</span><span class="p">,</span>
         <span class="s2">&quot;name&quot;</span><span class="o">:</span> <span class="s2">&quot;商品名&quot;</span><span class="p">,</span>
         <span class="s2">&quot;rid&quot;</span><span class="o">:</span> <span class="s2">&quot;商品编号&quot;</span><span class="p">,</span>
@@ -414,6 +415,7 @@
         <span class="s2">&quot;s_weight&quot;</span><span class="o">:</span> <span class="s2">&quot;重量&quot;</span><span class="p">,</span>
         <span class="s2">&quot;s_width&quot;</span><span class="o">:</span> <span class="s2">&quot;宽度&quot;</span><span class="p">,</span>
         <span class="s2">&quot;sale_price&quot;</span><span class="o">:</span> <span class="s2">&quot;促销价&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;status&quot;</span><span class="o">:</span> <span class="s2">&quot;商品状态: 0=仓库中, 1=出售中, 2=下架中&quot;</span><span class="p">,</span>
         <span class="s2">&quot;sticked&quot;</span><span class="o">:</span> <span class="s2">&quot;是否推荐&quot;</span><span class="p">,</span>
         <span class="s2">&quot;stock_count&quot;</span><span class="o">:</span> <span class="s2">&quot;库存数&quot;</span>
       <span class="p">},</span>
@@ -425,6 +427,7 @@
         <span class="s2">&quot;description&quot;</span><span class="o">:</span> <span class="s2">&quot;描述&quot;</span><span class="p">,</span>
         <span class="s2">&quot;id_code&quot;</span><span class="o">:</span> <span class="kc">null</span><span class="p">,</span>
         <span class="s2">&quot;is_distributed&quot;</span><span class="o">:</span> <span class="kc">true</span><span class="p">,</span>
+        <span class="s2">&quot;is_sold_out&quot;</span><span class="o">:</span> <span class="kc">false</span><span class="p">,</span>
         <span class="s2">&quot;is_proprietary&quot;</span><span class="o">:</span> <span class="kc">false</span><span class="p">,</span>
         <span class="s2">&quot;name&quot;</span><span class="o">:</span> <span class="s2">&quot;速腾套装&quot;</span><span class="p">,</span>
         <span class="s2">&quot;rid&quot;</span><span class="o">:</span> <span class="s2">&quot;117210372661&quot;</span><span class="p">,</span>
@@ -434,6 +437,7 @@
         <span class="s2">&quot;s_weight&quot;</span><span class="o">:</span> <span class="mi">0</span><span class="p">,</span>
         <span class="s2">&quot;s_width&quot;</span><span class="o">:</span> <span class="mi">0</span><span class="p">,</span>
         <span class="s2">&quot;sale_price&quot;</span><span class="o">:</span> <span class="mi">200</span><span class="p">,</span>
+        <span class="s2">&quot;status&quot;</span><span class="o">:</span> <span class="mi">1</span><span class="p">,</span>
         <span class="s2">&quot;sticked&quot;</span><span class="o">:</span> <span class="kc">null</span><span class="p">,</span>
         <span class="s2">&quot;stock_count&quot;</span><span class="o">:</span> <span class="mi">35</span>
       <span class="p">},</span>
@@ -511,6 +515,7 @@
         <span class="s2">&quot;features&quot;</span><span class="o">:</span> <span class="s2">&quot;商品推荐语&quot;</span><span class="p">,</span>
         <span class="s2">&quot;id_code&quot;</span><span class="o">:</span> <span class="s2">&quot;商品的69码&quot;</span><span class="p">,</span>
         <span class="s2">&quot;is_distributed&quot;</span><span class="o">:</span> <span class="s2">&quot;是否分销商品&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;is_sold_out&quot;</span><span class="o">:</span> <span class="s2">&quot;是否已售罄&quot;</span><span class="p">,</span>
         <span class="s2">&quot;is_proprietary&quot;</span><span class="o">:</span> <span class="s2">&quot;是否自营商品&quot;</span><span class="p">,</span>
         <span class="s2">&quot;name&quot;</span><span class="o">:</span> <span class="s2">&quot;商品名&quot;</span><span class="p">,</span>
         <span class="s2">&quot;rid&quot;</span><span class="o">:</span> <span class="s2">&quot;商品编号&quot;</span><span class="p">,</span>
@@ -520,6 +525,7 @@
         <span class="s2">&quot;s_weight&quot;</span><span class="o">:</span> <span class="s2">&quot;重量&quot;</span><span class="p">,</span>
         <span class="s2">&quot;s_width&quot;</span><span class="o">:</span> <span class="s2">&quot;宽度&quot;</span><span class="p">,</span>
         <span class="s2">&quot;sale_price&quot;</span><span class="o">:</span> <span class="s2">&quot;促销价&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;status&quot;</span><span class="o">:</span> <span class="s2">&quot;商品状态: 0=仓库中, 1=出售中, 2=下架中&quot;</span><span class="p">,</span>
         <span class="s2">&quot;sticked&quot;</span><span class="o">:</span> <span class="s2">&quot;是否推荐&quot;</span><span class="p">,</span>
         <span class="s2">&quot;stock_count&quot;</span><span class="o">:</span> <span class="s2">&quot;库存数&quot;</span>
       <span class="p">},</span>
@@ -531,6 +537,7 @@
         <span class="s2">&quot;description&quot;</span><span class="o">:</span> <span class="s2">&quot;描述&quot;</span><span class="p">,</span>
         <span class="s2">&quot;id_code&quot;</span><span class="o">:</span> <span class="kc">null</span><span class="p">,</span>
         <span class="s2">&quot;is_distributed&quot;</span><span class="o">:</span> <span class="kc">true</span><span class="p">,</span>
+        <span class="s2">&quot;is_sold_out&quot;</span><span class="o">:</span> <span class="kc">false</span><span class="p">,</span>
         <span class="s2">&quot;is_proprietary&quot;</span><span class="o">:</span> <span class="kc">false</span><span class="p">,</span>
         <span class="s2">&quot;name&quot;</span><span class="o">:</span> <span class="s2">&quot;速腾套装&quot;</span><span class="p">,</span>
         <span class="s2">&quot;rid&quot;</span><span class="o">:</span> <span class="s2">&quot;117210372661&quot;</span><span class="p">,</span>
@@ -540,6 +547,7 @@
         <span class="s2">&quot;s_weight&quot;</span><span class="o">:</span> <span class="mi">0</span><span class="p">,</span>
         <span class="s2">&quot;s_width&quot;</span><span class="o">:</span> <span class="mi">0</span><span class="p">,</span>
         <span class="s2">&quot;sale_price&quot;</span><span class="o">:</span> <span class="mi">200</span><span class="p">,</span>
+        <span class="s2">&quot;status&quot;</span><span class="o">:</span> <span class="mi">1</span><span class="p">,</span>
         <span class="s2">&quot;sticked&quot;</span><span class="o">:</span> <span class="kc">null</span><span class="p">,</span>
         <span class="s2">&quot;stock_count&quot;</span><span class="o">:</span> <span class="mi">35</span>
       <span class="p">},</span>
@@ -617,6 +625,7 @@
         <span class="s2">&quot;features&quot;</span><span class="o">:</span> <span class="s2">&quot;商品推荐语&quot;</span><span class="p">,</span>
         <span class="s2">&quot;id_code&quot;</span><span class="o">:</span> <span class="s2">&quot;商品的69码&quot;</span><span class="p">,</span>
         <span class="s2">&quot;is_distributed&quot;</span><span class="o">:</span> <span class="s2">&quot;是否分销商品&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;is_sold_out&quot;</span><span class="o">:</span> <span class="s2">&quot;是否已售罄&quot;</span><span class="p">,</span>
         <span class="s2">&quot;is_proprietary&quot;</span><span class="o">:</span> <span class="s2">&quot;是否自营商品&quot;</span><span class="p">,</span>
         <span class="s2">&quot;name&quot;</span><span class="o">:</span> <span class="s2">&quot;商品名&quot;</span><span class="p">,</span>
         <span class="s2">&quot;rid&quot;</span><span class="o">:</span> <span class="s2">&quot;商品编号&quot;</span><span class="p">,</span>
@@ -626,6 +635,7 @@
         <span class="s2">&quot;s_weight&quot;</span><span class="o">:</span> <span class="s2">&quot;重量&quot;</span><span class="p">,</span>
         <span class="s2">&quot;s_width&quot;</span><span class="o">:</span> <span class="s2">&quot;宽度&quot;</span><span class="p">,</span>
         <span class="s2">&quot;sale_price&quot;</span><span class="o">:</span> <span class="s2">&quot;促销价&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;status&quot;</span><span class="o">:</span> <span class="s2">&quot;商品状态: 0=仓库中, 1=出售中, 2=下架中&quot;</span><span class="p">,</span>
         <span class="s2">&quot;sticked&quot;</span><span class="o">:</span> <span class="s2">&quot;是否推荐&quot;</span><span class="p">,</span>
         <span class="s2">&quot;stock_count&quot;</span><span class="o">:</span> <span class="s2">&quot;库存数&quot;</span>
       <span class="p">},</span>
@@ -637,6 +647,7 @@
         <span class="s2">&quot;description&quot;</span><span class="o">:</span> <span class="s2">&quot;描述&quot;</span><span class="p">,</span>
         <span class="s2">&quot;id_code&quot;</span><span class="o">:</span> <span class="kc">null</span><span class="p">,</span>
         <span class="s2">&quot;is_distributed&quot;</span><span class="o">:</span> <span class="kc">true</span><span class="p">,</span>
+        <span class="s2">&quot;is_sold_out&quot;</span><span class="o">:</span> <span class="kc">false</span><span class="p">,</span>
         <span class="s2">&quot;is_proprietary&quot;</span><span class="o">:</span> <span class="kc">false</span><span class="p">,</span>
         <span class="s2">&quot;name&quot;</span><span class="o">:</span> <span class="s2">&quot;速腾套装&quot;</span><span class="p">,</span>
         <span class="s2">&quot;rid&quot;</span><span class="o">:</span> <span class="s2">&quot;117210372661&quot;</span><span class="p">,</span>
@@ -646,6 +657,7 @@
         <span class="s2">&quot;s_weight&quot;</span><span class="o">:</span> <span class="mi">0</span><span class="p">,</span>
         <span class="s2">&quot;s_width&quot;</span><span class="o">:</span> <span class="mi">0</span><span class="p">,</span>
         <span class="s2">&quot;sale_price&quot;</span><span class="o">:</span> <span class="mi">200</span><span class="p">,</span>
+        <span class="s2">&quot;status&quot;</span><span class="o">:</span> <span class="mi">1</span><span class="p">,</span>
         <span class="s2">&quot;sticked&quot;</span><span class="o">:</span> <span class="kc">null</span><span class="p">,</span>
         <span class="s2">&quot;stock_count&quot;</span><span class="o">:</span> <span class="mi">35</span>
       <span class="p">},</span>
@@ -723,6 +735,7 @@
         <span class="s2">&quot;features&quot;</span><span class="o">:</span> <span class="s2">&quot;商品推荐语&quot;</span><span class="p">,</span>
         <span class="s2">&quot;id_code&quot;</span><span class="o">:</span> <span class="s2">&quot;商品的69码&quot;</span><span class="p">,</span>
         <span class="s2">&quot;is_distributed&quot;</span><span class="o">:</span> <span class="s2">&quot;是否分销商品&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;is_sold_out&quot;</span><span class="o">:</span> <span class="s2">&quot;是否已售罄&quot;</span><span class="p">,</span>
         <span class="s2">&quot;is_proprietary&quot;</span><span class="o">:</span> <span class="s2">&quot;是否自营商品&quot;</span><span class="p">,</span>
         <span class="s2">&quot;name&quot;</span><span class="o">:</span> <span class="s2">&quot;商品名&quot;</span><span class="p">,</span>
         <span class="s2">&quot;rid&quot;</span><span class="o">:</span> <span class="s2">&quot;商品编号&quot;</span><span class="p">,</span>
@@ -732,6 +745,7 @@
         <span class="s2">&quot;s_weight&quot;</span><span class="o">:</span> <span class="s2">&quot;重量&quot;</span><span class="p">,</span>
         <span class="s2">&quot;s_width&quot;</span><span class="o">:</span> <span class="s2">&quot;宽度&quot;</span><span class="p">,</span>
         <span class="s2">&quot;sale_price&quot;</span><span class="o">:</span> <span class="s2">&quot;促销价&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;status&quot;</span><span class="o">:</span> <span class="s2">&quot;商品状态: 0=仓库中, 1=出售中, 2=下架中&quot;</span><span class="p">,</span>
         <span class="s2">&quot;sticked&quot;</span><span class="o">:</span> <span class="s2">&quot;是否推荐&quot;</span><span class="p">,</span>
         <span class="s2">&quot;stock_count&quot;</span><span class="o">:</span> <span class="s2">&quot;库存数&quot;</span>
       <span class="p">},</span>
@@ -743,6 +757,7 @@
         <span class="s2">&quot;description&quot;</span><span class="o">:</span> <span class="s2">&quot;描述&quot;</span><span class="p">,</span>
         <span class="s2">&quot;id_code&quot;</span><span class="o">:</span> <span class="kc">null</span><span class="p">,</span>
         <span class="s2">&quot;is_distributed&quot;</span><span class="o">:</span> <span class="kc">true</span><span class="p">,</span>
+        <span class="s2">&quot;is_sold_out&quot;</span><span class="o">:</span> <span class="kc">false</span><span class="p">,</span>
         <span class="s2">&quot;is_proprietary&quot;</span><span class="o">:</span> <span class="kc">false</span><span class="p">,</span>
         <span class="s2">&quot;name&quot;</span><span class="o">:</span> <span class="s2">&quot;速腾套装&quot;</span><span class="p">,</span>
         <span class="s2">&quot;rid&quot;</span><span class="o">:</span> <span class="s2">&quot;117210372661&quot;</span><span class="p">,</span>
@@ -752,6 +767,7 @@
         <span class="s2">&quot;s_weight&quot;</span><span class="o">:</span> <span class="mi">0</span><span class="p">,</span>
         <span class="s2">&quot;s_width&quot;</span><span class="o">:</span> <span class="mi">0</span><span class="p">,</span>
         <span class="s2">&quot;sale_price&quot;</span><span class="o">:</span> <span class="mi">200</span><span class="p">,</span>
+        <span class="s2">&quot;status&quot;</span><span class="o">:</span> <span class="mi">1</span><span class="p">,</span>
         <span class="s2">&quot;sticked&quot;</span><span class="o">:</span> <span class="kc">null</span><span class="p">,</span>
         <span class="s2">&quot;stock_count&quot;</span><span class="o">:</span> <span class="mi">35</span>
       <span class="p">},</span>
@@ -841,6 +857,7 @@
         <span class="s2">&quot;features&quot;</span><span class="o">:</span> <span class="s2">&quot;商品推荐语&quot;</span><span class="p">,</span>
         <span class="s2">&quot;id_code&quot;</span><span class="o">:</span> <span class="s2">&quot;商品的69码&quot;</span><span class="p">,</span>
         <span class="s2">&quot;is_distributed&quot;</span><span class="o">:</span> <span class="s2">&quot;是否分销商品&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;is_sold_out&quot;</span><span class="o">:</span> <span class="s2">&quot;是否已售罄&quot;</span><span class="p">,</span>
         <span class="s2">&quot;is_proprietary&quot;</span><span class="o">:</span> <span class="s2">&quot;是否自营商品&quot;</span><span class="p">,</span>
         <span class="s2">&quot;name&quot;</span><span class="o">:</span> <span class="s2">&quot;商品名&quot;</span><span class="p">,</span>
         <span class="s2">&quot;rid&quot;</span><span class="o">:</span> <span class="s2">&quot;商品编号&quot;</span><span class="p">,</span>
@@ -850,6 +867,7 @@
         <span class="s2">&quot;s_weight&quot;</span><span class="o">:</span> <span class="s2">&quot;重量&quot;</span><span class="p">,</span>
         <span class="s2">&quot;s_width&quot;</span><span class="o">:</span> <span class="s2">&quot;宽度&quot;</span><span class="p">,</span>
         <span class="s2">&quot;sale_price&quot;</span><span class="o">:</span> <span class="s2">&quot;促销价&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;status&quot;</span><span class="o">:</span> <span class="s2">&quot;商品状态: 0=仓库中, 1=出售中, 2=下架中&quot;</span><span class="p">,</span>
         <span class="s2">&quot;sticked&quot;</span><span class="o">:</span> <span class="s2">&quot;是否推荐&quot;</span><span class="p">,</span>
         <span class="s2">&quot;stock_count&quot;</span><span class="o">:</span> <span class="s2">&quot;库存数&quot;</span>
       <span class="p">},</span>
@@ -861,6 +879,7 @@
         <span class="s2">&quot;description&quot;</span><span class="o">:</span> <span class="s2">&quot;描述&quot;</span><span class="p">,</span>
         <span class="s2">&quot;id_code&quot;</span><span class="o">:</span> <span class="kc">null</span><span class="p">,</span>
         <span class="s2">&quot;is_distributed&quot;</span><span class="o">:</span> <span class="kc">true</span><span class="p">,</span>
+        <span class="s2">&quot;is_sold_out&quot;</span><span class="o">:</span> <span class="kc">false</span><span class="p">,</span>
         <span class="s2">&quot;is_proprietary&quot;</span><span class="o">:</span> <span class="kc">false</span><span class="p">,</span>
         <span class="s2">&quot;name&quot;</span><span class="o">:</span> <span class="s2">&quot;速腾套装&quot;</span><span class="p">,</span>
         <span class="s2">&quot;rid&quot;</span><span class="o">:</span> <span class="s2">&quot;117210372661&quot;</span><span class="p">,</span>
@@ -870,6 +889,7 @@
         <span class="s2">&quot;s_weight&quot;</span><span class="o">:</span> <span class="mi">0</span><span class="p">,</span>
         <span class="s2">&quot;s_width&quot;</span><span class="o">:</span> <span class="mi">0</span><span class="p">,</span>
         <span class="s2">&quot;sale_price&quot;</span><span class="o">:</span> <span class="mi">200</span><span class="p">,</span>
+        <span class="s2">&quot;status&quot;</span><span class="o">:</span> <span class="mi">1</span><span class="p">,</span>
         <span class="s2">&quot;sticked&quot;</span><span class="o">:</span> <span class="kc">null</span><span class="p">,</span>
         <span class="s2">&quot;stock_count&quot;</span><span class="o">:</span> <span class="mi">35</span>
       <span class="p">},</span>
