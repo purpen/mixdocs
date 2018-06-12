@@ -9,7 +9,7 @@
     products.rst
     category.rst
     brands.rst
+    store_product_packet.rst
     distributions.rst
     wish.rst
-    store_product_packet.rst
     assets.rst

@@ -20,7 +20,7 @@
     <link rel="index" title="索引" href="../genindex.html" />
     <link rel="search" title="搜索" href="../search.html" />
     <link rel="next" title="心愿清单模块" href="wish.html" />
-    <link rel="prev" title="供应商/品牌模块" href="brands.html" />
+    <link rel="prev" title="店铺商品组模块" href="store_product_packet.html" />
 <meta charset='utf-8'>
 <meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'>
 <meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1'>
@@ -76,9 +76,9 @@
 <li class="toctree-l2"><a class="reference internal" href="products.html">商品模块</a></li>
 <li class="toctree-l2"><a class="reference internal" href="category.html">分类模块</a></li>
 <li class="toctree-l2"><a class="reference internal" href="brands.html">供应商/品牌模块</a></li>
+<li class="toctree-l2"><a class="reference internal" href="store_product_packet.html">店铺商品组模块</a></li>
 <li class="toctree-l2 current"><a class="current reference internal" href="#">分销模块</a></li>
 <li class="toctree-l2"><a class="reference internal" href="wish.html">心愿清单模块</a></li>
-<li class="toctree-l2"><a class="reference internal" href="store_product_packet.html">店铺商品组模块</a></li>
 <li class="toctree-l2"><a class="reference internal" href="assets.html">附件模块</a></li>
 </ul>
 </li>
@@ -148,34 +148,52 @@
 <li><a class="reference internal" href="#id5">返回示例</a></li>
 </ul>
 </li>
-<li><a class="reference internal" href="#id6">我的分销商品</a><ul>
+<li><a class="reference internal" href="#id6">热门单品</a><ul>
 <li><a class="reference internal" href="#id7">接口说明</a></li>
 <li><a class="reference internal" href="#id8">请求参数</a></li>
 <li><a class="reference internal" href="#id9">返回示例</a></li>
 </ul>
 </li>
-<li><a class="reference internal" href="#id10">立即分销/放入仓库</a><ul>
+<li><a class="reference internal" href="#id10">官方推荐</a><ul>
 <li><a class="reference internal" href="#id11">接口说明</a></li>
 <li><a class="reference internal" href="#id12">请求参数</a></li>
 <li><a class="reference internal" href="#id13">返回示例</a></li>
 </ul>
 </li>
-<li><a class="reference internal" href="#id14">取消分销</a><ul>
+<li><a class="reference internal" href="#id14">新品首发</a><ul>
 <li><a class="reference internal" href="#id15">接口说明</a></li>
 <li><a class="reference internal" href="#id16">请求参数</a></li>
 <li><a class="reference internal" href="#id17">返回示例</a></li>
 </ul>
 </li>
-<li><a class="reference internal" href="#id18">查看详情</a><ul>
+<li><a class="reference internal" href="#id18">我的分销商品</a><ul>
 <li><a class="reference internal" href="#id19">接口说明</a></li>
 <li><a class="reference internal" href="#id20">请求参数</a></li>
 <li><a class="reference internal" href="#id21">返回示例</a></li>
 </ul>
 </li>
-<li><a class="reference internal" href="#id22">更新上架状态</a><ul>
+<li><a class="reference internal" href="#id22">立即分销/放入仓库</a><ul>
 <li><a class="reference internal" href="#id23">接口说明</a></li>
 <li><a class="reference internal" href="#id24">请求参数</a></li>
 <li><a class="reference internal" href="#id25">返回示例</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#id26">删除分销</a><ul>
+<li><a class="reference internal" href="#id27">接口说明</a></li>
+<li><a class="reference internal" href="#id28">请求参数</a></li>
+<li><a class="reference internal" href="#id29">返回示例</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#id30">查看详情</a><ul>
+<li><a class="reference internal" href="#id31">接口说明</a></li>
+<li><a class="reference internal" href="#id32">请求参数</a></li>
+<li><a class="reference internal" href="#id33">返回示例</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#id34">仓库商品上架</a><ul>
+<li><a class="reference internal" href="#id35">接口说明</a></li>
+<li><a class="reference internal" href="#id36">请求参数</a></li>
+<li><a class="reference internal" href="#id37">返回示例</a></li>
 </ul>
 </li>
 </ul>
@@ -216,34 +234,52 @@
 <li><a class="reference internal" href="#id5">返回示例</a></li>
 </ul>
 </li>
-<li><a class="reference internal" href="#id6">我的分销商品</a><ul>
+<li><a class="reference internal" href="#id6">热门单品</a><ul>
 <li><a class="reference internal" href="#id7">接口说明</a></li>
 <li><a class="reference internal" href="#id8">请求参数</a></li>
 <li><a class="reference internal" href="#id9">返回示例</a></li>
 </ul>
 </li>
-<li><a class="reference internal" href="#id10">立即分销/放入仓库</a><ul>
+<li><a class="reference internal" href="#id10">官方推荐</a><ul>
 <li><a class="reference internal" href="#id11">接口说明</a></li>
 <li><a class="reference internal" href="#id12">请求参数</a></li>
 <li><a class="reference internal" href="#id13">返回示例</a></li>
 </ul>
 </li>
-<li><a class="reference internal" href="#id14">取消分销</a><ul>
+<li><a class="reference internal" href="#id14">新品首发</a><ul>
 <li><a class="reference internal" href="#id15">接口说明</a></li>
 <li><a class="reference internal" href="#id16">请求参数</a></li>
 <li><a class="reference internal" href="#id17">返回示例</a></li>
 </ul>
 </li>
-<li><a class="reference internal" href="#id18">查看详情</a><ul>
+<li><a class="reference internal" href="#id18">我的分销商品</a><ul>
 <li><a class="reference internal" href="#id19">接口说明</a></li>
 <li><a class="reference internal" href="#id20">请求参数</a></li>
 <li><a class="reference internal" href="#id21">返回示例</a></li>
 </ul>
 </li>
-<li><a class="reference internal" href="#id22">更新上架状态</a><ul>
+<li><a class="reference internal" href="#id22">立即分销/放入仓库</a><ul>
 <li><a class="reference internal" href="#id23">接口说明</a></li>
 <li><a class="reference internal" href="#id24">请求参数</a></li>
 <li><a class="reference internal" href="#id25">返回示例</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#id26">删除分销</a><ul>
+<li><a class="reference internal" href="#id27">接口说明</a></li>
+<li><a class="reference internal" href="#id28">请求参数</a></li>
+<li><a class="reference internal" href="#id29">返回示例</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#id30">查看详情</a><ul>
+<li><a class="reference internal" href="#id31">接口说明</a></li>
+<li><a class="reference internal" href="#id32">请求参数</a></li>
+<li><a class="reference internal" href="#id33">返回示例</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#id34">仓库商品上架</a><ul>
+<li><a class="reference internal" href="#id35">接口说明</a></li>
+<li><a class="reference internal" href="#id36">请求参数</a></li>
+<li><a class="reference internal" href="#id37">返回示例</a></li>
 </ul>
 </li>
 </ul>
@@ -253,7 +289,7 @@
 
 <ul class="nav nav-list">
   <li>
-    <a href="brands.html" title="Previous Chapter: 供应商/品牌模块"><span class="glyphicon glyphicon-chevron-left visible-sm"></span><span class="hidden-sm hidden-tablet">&raquo; 供应商/品牌模块</span>
+    <a href="store_product_packet.html" title="Previous Chapter: 店铺商品组模块"><span class="glyphicon glyphicon-chevron-left visible-sm"></span><span class="hidden-sm hidden-tablet">&raquo; 店铺商品组模块</span>
     </a>
   </li>
   <li>
@@ -403,13 +439,18 @@
 </div>
 </div>
 <div class="section" id="id6">
-<h2>我的分销商品<a class="headerlink" href="#id6" title="永久链接至标题">¶</a></h2>
-<p>获取品牌馆所有分销的商品</p>
+<h2>热门单品<a class="headerlink" href="#id6" title="永久链接至标题">¶</a></h2>
+<p>获取分销中心最受欢迎的商品</p>
 <div class="section" id="id7">
 <h3>接口说明<a class="headerlink" href="#id7" title="永久链接至标题">¶</a></h3>
 <ul class="simple">
+<<<<<<< HEAD
 <li>API接口请求地址：<code class="docutils literal notranslate"><span class="pre">/fx_distribute</span></code></li>
 <li>API接口请求方法：<code class="docutils literal notranslate"><span class="pre">GET</span></code></li>
+=======
+<li>API接口请求地址：<code class="docutils literal"><span class="pre">/fx_distribute/hot</span></code></li>
+<li>API接口请求方法：<code class="docutils literal"><span class="pre">GET</span></code></li>
+>>>>>>> origin/pql
 </ul>
 </div>
 <div class="section" id="id8">
@@ -443,7 +484,331 @@
 <td>10</td>
 <td>每页数量</td>
 </tr>
-<tr class="row-even"><td>status</td>
+</tbody>
+</table>
+</div>
+<div class="section" id="id9">
+<h3>返回示例<a class="headerlink" href="#id9" title="永久链接至标题">¶</a></h3>
+<p>JSON数据格式:</p>
+<div class="highlight-javascript"><div class="highlight"><pre><span></span><span class="p">{</span>
+  <span class="s2">&quot;data&quot;</span><span class="o">:</span> <span class="p">{</span>
+    <span class="s2">&quot;count&quot;</span><span class="o">:</span> <span class="mi">54</span><span class="p">,</span>
+    <span class="s2">&quot;next&quot;</span><span class="o">:</span> <span class="kc">true</span><span class="p">,</span>
+    <span class="s2">&quot;prev&quot;</span><span class="o">:</span> <span class="kc">false</span><span class="p">,</span>
+    <span class="s2">&quot;products&quot;</span><span class="o">:</span> <span class="p">[</span>
+      <span class="p">{</span>
+        <span class="s2">&quot;commission_price&quot;</span><span class="o">:</span> <span class="s2">&quot;佣金&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;commission_rate&quot;</span><span class="o">:</span> <span class="s2">&quot;佣金比&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;cost_price&quot;</span><span class="o">:</span> <span class="s2">&quot;采购价&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;cover&quot;</span><span class="o">:</span> <span class="s2">&quot;封面图片链接地址&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;description&quot;</span><span class="o">:</span> <span class="s2">&quot;描述&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;features&quot;</span><span class="o">:</span> <span class="s2">&quot;商品推荐语&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;id_code&quot;</span><span class="o">:</span> <span class="s2">&quot;商品的69码&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;is_distributed&quot;</span><span class="o">:</span> <span class="s2">&quot;是否分销商品&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;is_proprietary&quot;</span><span class="o">:</span> <span class="s2">&quot;是否自营商品&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;name&quot;</span><span class="o">:</span> <span class="s2">&quot;商品名&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;rid&quot;</span><span class="o">:</span> <span class="s2">&quot;商品编号&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;price&quot;</span><span class="o">:</span> <span class="s2">&quot;零售价&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;s_height&quot;</span><span class="o">:</span> <span class="s2">&quot;高度&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;s_length&quot;</span><span class="o">:</span> <span class="s2">&quot;长度&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;s_weight&quot;</span><span class="o">:</span> <span class="s2">&quot;重量&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;s_width&quot;</span><span class="o">:</span> <span class="s2">&quot;宽度&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;sale_price&quot;</span><span class="o">:</span> <span class="s2">&quot;促销价&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;sticked&quot;</span><span class="o">:</span> <span class="s2">&quot;是否推荐&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;stock_count&quot;</span><span class="o">:</span> <span class="s2">&quot;库存数&quot;</span>
+      <span class="p">},</span>
+      <span class="p">{</span>
+        <span class="s2">&quot;commission_price&quot;</span><span class="o">:</span> <span class="mi">28</span><span class="p">,</span>
+        <span class="s2">&quot;commission_rate&quot;</span><span class="o">:</span> <span class="mf">14.00</span><span class="p">,</span>
+        <span class="s2">&quot;cost_price&quot;</span><span class="o">:</span> <span class="s2">&quot;采购价&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;cover&quot;</span><span class="o">:</span> <span class="s2">&quot;http://xxx/_uploads/photos/171010/fe7380064e18135.jpg&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;description&quot;</span><span class="o">:</span> <span class="s2">&quot;描述&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;id_code&quot;</span><span class="o">:</span> <span class="kc">null</span><span class="p">,</span>
+        <span class="s2">&quot;is_distributed&quot;</span><span class="o">:</span> <span class="kc">true</span><span class="p">,</span>
+        <span class="s2">&quot;is_proprietary&quot;</span><span class="o">:</span> <span class="kc">false</span><span class="p">,</span>
+        <span class="s2">&quot;name&quot;</span><span class="o">:</span> <span class="s2">&quot;速腾套装&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;rid&quot;</span><span class="o">:</span> <span class="s2">&quot;117210372661&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;price&quot;</span><span class="o">:</span> <span class="mi">0</span><span class="p">,</span>
+        <span class="s2">&quot;s_height&quot;</span><span class="o">:</span> <span class="mi">0</span><span class="p">,</span>
+        <span class="s2">&quot;s_length&quot;</span><span class="o">:</span> <span class="mi">0</span><span class="p">,</span>
+        <span class="s2">&quot;s_weight&quot;</span><span class="o">:</span> <span class="mi">0</span><span class="p">,</span>
+        <span class="s2">&quot;s_width&quot;</span><span class="o">:</span> <span class="mi">0</span><span class="p">,</span>
+        <span class="s2">&quot;sale_price&quot;</span><span class="o">:</span> <span class="mi">200</span><span class="p">,</span>
+        <span class="s2">&quot;sticked&quot;</span><span class="o">:</span> <span class="kc">null</span><span class="p">,</span>
+        <span class="s2">&quot;stock_count&quot;</span><span class="o">:</span> <span class="mi">35</span>
+      <span class="p">},</span>
+    <span class="p">]</span>
+  <span class="p">},</span>
+  <span class="s2">&quot;status&quot;</span><span class="o">:</span> <span class="p">{</span>
+    <span class="s2">&quot;code&quot;</span><span class="o">:</span> <span class="mi">200</span><span class="p">,</span>
+    <span class="s2">&quot;message&quot;</span><span class="o">:</span> <span class="s2">&quot;Ok all right.&quot;</span>
+  <span class="p">},</span>
+  <span class="s2">&quot;success&quot;</span><span class="o">:</span> <span class="kc">true</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="id10">
+<h2>官方推荐<a class="headerlink" href="#id10" title="永久链接至标题">¶</a></h2>
+<p>获取分销中心推荐的商品</p>
+<div class="section" id="id11">
+<h3>接口说明<a class="headerlink" href="#id11" title="永久链接至标题">¶</a></h3>
+<ul class="simple">
+<li>API接口请求地址：<code class="docutils literal"><span class="pre">/fx_distribute/hot</span></code></li>
+<li>API接口请求方法：<code class="docutils literal"><span class="pre">GET</span></code></li>
+</ul>
+</div>
+<div class="section" id="id12">
+<h3>请求参数<a class="headerlink" href="#id12" title="永久链接至标题">¶</a></h3>
+<table border="1" class="docutils">
+<colgroup>
+<col width="15%" />
+<col width="11%" />
+<col width="13%" />
+<col width="11%" />
+<col width="50%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">名称</th>
+<th class="head">类型</th>
+<th class="head">是否必须</th>
+<th class="head">默认值</th>
+<th class="head">描述说明</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>page</td>
+<td>Number</td>
+<td>可选</td>
+<td>1</td>
+<td>当前页码</td>
+</tr>
+<tr class="row-odd"><td>per_page</td>
+<td>Number</td>
+<td>可选</td>
+<td>10</td>
+<td>每页数量</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="id13">
+<h3>返回示例<a class="headerlink" href="#id13" title="永久链接至标题">¶</a></h3>
+<p>JSON数据格式:</p>
+<div class="highlight-javascript"><div class="highlight"><pre><span></span><span class="p">{</span>
+  <span class="s2">&quot;data&quot;</span><span class="o">:</span> <span class="p">{</span>
+    <span class="s2">&quot;count&quot;</span><span class="o">:</span> <span class="mi">54</span><span class="p">,</span>
+    <span class="s2">&quot;next&quot;</span><span class="o">:</span> <span class="kc">true</span><span class="p">,</span>
+    <span class="s2">&quot;prev&quot;</span><span class="o">:</span> <span class="kc">false</span><span class="p">,</span>
+    <span class="s2">&quot;products&quot;</span><span class="o">:</span> <span class="p">[</span>
+      <span class="p">{</span>
+        <span class="s2">&quot;commission_price&quot;</span><span class="o">:</span> <span class="s2">&quot;佣金&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;commission_rate&quot;</span><span class="o">:</span> <span class="s2">&quot;佣金比&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;cost_price&quot;</span><span class="o">:</span> <span class="s2">&quot;采购价&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;cover&quot;</span><span class="o">:</span> <span class="s2">&quot;封面图片链接地址&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;description&quot;</span><span class="o">:</span> <span class="s2">&quot;描述&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;features&quot;</span><span class="o">:</span> <span class="s2">&quot;商品推荐语&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;id_code&quot;</span><span class="o">:</span> <span class="s2">&quot;商品的69码&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;is_distributed&quot;</span><span class="o">:</span> <span class="s2">&quot;是否分销商品&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;is_proprietary&quot;</span><span class="o">:</span> <span class="s2">&quot;是否自营商品&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;name&quot;</span><span class="o">:</span> <span class="s2">&quot;商品名&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;rid&quot;</span><span class="o">:</span> <span class="s2">&quot;商品编号&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;price&quot;</span><span class="o">:</span> <span class="s2">&quot;零售价&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;s_height&quot;</span><span class="o">:</span> <span class="s2">&quot;高度&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;s_length&quot;</span><span class="o">:</span> <span class="s2">&quot;长度&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;s_weight&quot;</span><span class="o">:</span> <span class="s2">&quot;重量&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;s_width&quot;</span><span class="o">:</span> <span class="s2">&quot;宽度&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;sale_price&quot;</span><span class="o">:</span> <span class="s2">&quot;促销价&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;sticked&quot;</span><span class="o">:</span> <span class="s2">&quot;是否推荐&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;stock_count&quot;</span><span class="o">:</span> <span class="s2">&quot;库存数&quot;</span>
+      <span class="p">},</span>
+      <span class="p">{</span>
+        <span class="s2">&quot;commission_price&quot;</span><span class="o">:</span> <span class="mi">28</span><span class="p">,</span>
+        <span class="s2">&quot;commission_rate&quot;</span><span class="o">:</span> <span class="mf">14.00</span><span class="p">,</span>
+        <span class="s2">&quot;cost_price&quot;</span><span class="o">:</span> <span class="s2">&quot;采购价&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;cover&quot;</span><span class="o">:</span> <span class="s2">&quot;http://xxx/_uploads/photos/171010/fe7380064e18135.jpg&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;description&quot;</span><span class="o">:</span> <span class="s2">&quot;描述&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;id_code&quot;</span><span class="o">:</span> <span class="kc">null</span><span class="p">,</span>
+        <span class="s2">&quot;is_distributed&quot;</span><span class="o">:</span> <span class="kc">true</span><span class="p">,</span>
+        <span class="s2">&quot;is_proprietary&quot;</span><span class="o">:</span> <span class="kc">false</span><span class="p">,</span>
+        <span class="s2">&quot;name&quot;</span><span class="o">:</span> <span class="s2">&quot;速腾套装&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;rid&quot;</span><span class="o">:</span> <span class="s2">&quot;117210372661&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;price&quot;</span><span class="o">:</span> <span class="mi">0</span><span class="p">,</span>
+        <span class="s2">&quot;s_height&quot;</span><span class="o">:</span> <span class="mi">0</span><span class="p">,</span>
+        <span class="s2">&quot;s_length&quot;</span><span class="o">:</span> <span class="mi">0</span><span class="p">,</span>
+        <span class="s2">&quot;s_weight&quot;</span><span class="o">:</span> <span class="mi">0</span><span class="p">,</span>
+        <span class="s2">&quot;s_width&quot;</span><span class="o">:</span> <span class="mi">0</span><span class="p">,</span>
+        <span class="s2">&quot;sale_price&quot;</span><span class="o">:</span> <span class="mi">200</span><span class="p">,</span>
+        <span class="s2">&quot;sticked&quot;</span><span class="o">:</span> <span class="kc">null</span><span class="p">,</span>
+        <span class="s2">&quot;stock_count&quot;</span><span class="o">:</span> <span class="mi">35</span>
+      <span class="p">},</span>
+    <span class="p">]</span>
+  <span class="p">},</span>
+  <span class="s2">&quot;status&quot;</span><span class="o">:</span> <span class="p">{</span>
+    <span class="s2">&quot;code&quot;</span><span class="o">:</span> <span class="mi">200</span><span class="p">,</span>
+    <span class="s2">&quot;message&quot;</span><span class="o">:</span> <span class="s2">&quot;Ok all right.&quot;</span>
+  <span class="p">},</span>
+  <span class="s2">&quot;success&quot;</span><span class="o">:</span> <span class="kc">true</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="id14">
+<h2>新品首发<a class="headerlink" href="#id14" title="永久链接至标题">¶</a></h2>
+<p>获取分销中心最新推出的商品</p>
+<div class="section" id="id15">
+<h3>接口说明<a class="headerlink" href="#id15" title="永久链接至标题">¶</a></h3>
+<ul class="simple">
+<li>API接口请求地址：<code class="docutils literal"><span class="pre">/fx_distribute/new</span></code></li>
+<li>API接口请求方法：<code class="docutils literal"><span class="pre">GET</span></code></li>
+</ul>
+</div>
+<div class="section" id="id16">
+<h3>请求参数<a class="headerlink" href="#id16" title="永久链接至标题">¶</a></h3>
+<table border="1" class="docutils">
+<colgroup>
+<col width="15%" />
+<col width="11%" />
+<col width="13%" />
+<col width="11%" />
+<col width="50%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">名称</th>
+<th class="head">类型</th>
+<th class="head">是否必须</th>
+<th class="head">默认值</th>
+<th class="head">描述说明</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>page</td>
+<td>Number</td>
+<td>可选</td>
+<td>1</td>
+<td>当前页码</td>
+</tr>
+<tr class="row-odd"><td>per_page</td>
+<td>Number</td>
+<td>可选</td>
+<td>10</td>
+<td>每页数量</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="id17">
+<h3>返回示例<a class="headerlink" href="#id17" title="永久链接至标题">¶</a></h3>
+<p>JSON数据格式:</p>
+<div class="highlight-javascript"><div class="highlight"><pre><span></span><span class="p">{</span>
+  <span class="s2">&quot;data&quot;</span><span class="o">:</span> <span class="p">{</span>
+    <span class="s2">&quot;count&quot;</span><span class="o">:</span> <span class="mi">54</span><span class="p">,</span>
+    <span class="s2">&quot;next&quot;</span><span class="o">:</span> <span class="kc">true</span><span class="p">,</span>
+    <span class="s2">&quot;prev&quot;</span><span class="o">:</span> <span class="kc">false</span><span class="p">,</span>
+    <span class="s2">&quot;products&quot;</span><span class="o">:</span> <span class="p">[</span>
+      <span class="p">{</span>
+        <span class="s2">&quot;commission_price&quot;</span><span class="o">:</span> <span class="s2">&quot;佣金&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;commission_rate&quot;</span><span class="o">:</span> <span class="s2">&quot;佣金比&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;cost_price&quot;</span><span class="o">:</span> <span class="s2">&quot;采购价&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;cover&quot;</span><span class="o">:</span> <span class="s2">&quot;封面图片链接地址&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;description&quot;</span><span class="o">:</span> <span class="s2">&quot;描述&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;features&quot;</span><span class="o">:</span> <span class="s2">&quot;商品推荐语&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;id_code&quot;</span><span class="o">:</span> <span class="s2">&quot;商品的69码&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;is_distributed&quot;</span><span class="o">:</span> <span class="s2">&quot;是否分销商品&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;is_proprietary&quot;</span><span class="o">:</span> <span class="s2">&quot;是否自营商品&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;name&quot;</span><span class="o">:</span> <span class="s2">&quot;商品名&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;rid&quot;</span><span class="o">:</span> <span class="s2">&quot;商品编号&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;price&quot;</span><span class="o">:</span> <span class="s2">&quot;零售价&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;s_height&quot;</span><span class="o">:</span> <span class="s2">&quot;高度&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;s_length&quot;</span><span class="o">:</span> <span class="s2">&quot;长度&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;s_weight&quot;</span><span class="o">:</span> <span class="s2">&quot;重量&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;s_width&quot;</span><span class="o">:</span> <span class="s2">&quot;宽度&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;sale_price&quot;</span><span class="o">:</span> <span class="s2">&quot;促销价&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;sticked&quot;</span><span class="o">:</span> <span class="s2">&quot;是否推荐&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;stock_count&quot;</span><span class="o">:</span> <span class="s2">&quot;库存数&quot;</span>
+      <span class="p">},</span>
+      <span class="p">{</span>
+        <span class="s2">&quot;commission_price&quot;</span><span class="o">:</span> <span class="mi">28</span><span class="p">,</span>
+        <span class="s2">&quot;commission_rate&quot;</span><span class="o">:</span> <span class="mf">14.00</span><span class="p">,</span>
+        <span class="s2">&quot;cost_price&quot;</span><span class="o">:</span> <span class="s2">&quot;采购价&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;cover&quot;</span><span class="o">:</span> <span class="s2">&quot;http://xxx/_uploads/photos/171010/fe7380064e18135.jpg&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;description&quot;</span><span class="o">:</span> <span class="s2">&quot;描述&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;id_code&quot;</span><span class="o">:</span> <span class="kc">null</span><span class="p">,</span>
+        <span class="s2">&quot;is_distributed&quot;</span><span class="o">:</span> <span class="kc">true</span><span class="p">,</span>
+        <span class="s2">&quot;is_proprietary&quot;</span><span class="o">:</span> <span class="kc">false</span><span class="p">,</span>
+        <span class="s2">&quot;name&quot;</span><span class="o">:</span> <span class="s2">&quot;速腾套装&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;rid&quot;</span><span class="o">:</span> <span class="s2">&quot;117210372661&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;price&quot;</span><span class="o">:</span> <span class="mi">0</span><span class="p">,</span>
+        <span class="s2">&quot;s_height&quot;</span><span class="o">:</span> <span class="mi">0</span><span class="p">,</span>
+        <span class="s2">&quot;s_length&quot;</span><span class="o">:</span> <span class="mi">0</span><span class="p">,</span>
+        <span class="s2">&quot;s_weight&quot;</span><span class="o">:</span> <span class="mi">0</span><span class="p">,</span>
+        <span class="s2">&quot;s_width&quot;</span><span class="o">:</span> <span class="mi">0</span><span class="p">,</span>
+        <span class="s2">&quot;sale_price&quot;</span><span class="o">:</span> <span class="mi">200</span><span class="p">,</span>
+        <span class="s2">&quot;sticked&quot;</span><span class="o">:</span> <span class="kc">null</span><span class="p">,</span>
+        <span class="s2">&quot;stock_count&quot;</span><span class="o">:</span> <span class="mi">35</span>
+      <span class="p">},</span>
+    <span class="p">]</span>
+  <span class="p">},</span>
+  <span class="s2">&quot;status&quot;</span><span class="o">:</span> <span class="p">{</span>
+    <span class="s2">&quot;code&quot;</span><span class="o">:</span> <span class="mi">200</span><span class="p">,</span>
+    <span class="s2">&quot;message&quot;</span><span class="o">:</span> <span class="s2">&quot;Ok all right.&quot;</span>
+  <span class="p">},</span>
+  <span class="s2">&quot;success&quot;</span><span class="o">:</span> <span class="kc">true</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="id18">
+<h2>我的分销商品<a class="headerlink" href="#id18" title="永久链接至标题">¶</a></h2>
+<p>获取品牌馆所有分销的商品</p>
+<div class="section" id="id19">
+<h3>接口说明<a class="headerlink" href="#id19" title="永久链接至标题">¶</a></h3>
+<ul class="simple">
+<li>API接口请求地址：<code class="docutils literal"><span class="pre">/fx_distribute</span></code></li>
+<li>API接口请求方法：<code class="docutils literal"><span class="pre">GET</span></code></li>
+</ul>
+</div>
+<div class="section" id="id20">
+<h3>请求参数<a class="headerlink" href="#id20" title="永久链接至标题">¶</a></h3>
+<table border="1" class="docutils">
+<colgroup>
+<col width="15%" />
+<col width="11%" />
+<col width="13%" />
+<col width="11%" />
+<col width="50%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">名称</th>
+<th class="head">类型</th>
+<th class="head">是否必须</th>
+<th class="head">默认值</th>
+<th class="head">描述说明</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>sid</td>
+<td>String</td>
+<td>可选</td>
+<td>&#160;</td>
+<td>店铺编号</td>
+</tr>
+<tr class="row-odd"><td>page</td>
+<td>Number</td>
+<td>可选</td>
+<td>1</td>
+<td>当前页码</td>
+</tr>
+<tr class="row-even"><td>per_page</td>
+<td>Number</td>
+<td>可选</td>
+<td>10</td>
+<td>每页数量</td>
+</tr>
+<tr class="row-odd"><td>status</td>
 <td>String</td>
 <td>可选</td>
 <td>1</td>
@@ -452,8 +817,8 @@
 </tbody>
 </table>
 </div>
-<div class="section" id="id9">
-<h3>返回示例<a class="headerlink" href="#id9" title="永久链接至标题">¶</a></h3>
+<div class="section" id="id21">
+<h3>返回示例<a class="headerlink" href="#id21" title="永久链接至标题">¶</a></h3>
 <p>JSON数据格式:</p>
 <div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="p">{</span>
   <span class="s2">&quot;data&quot;</span><span class="o">:</span> <span class="p">{</span>
@@ -514,26 +879,26 @@
 </div>
 </div>
 </div>
-<div class="section" id="id10">
-<h2>立即分销/放入仓库<a class="headerlink" href="#id10" title="永久链接至标题">¶</a></h2>
+<div class="section" id="id22">
+<h2>立即分销/放入仓库<a class="headerlink" href="#id22" title="永久链接至标题">¶</a></h2>
 <p>将分销池中的商品加入到自己店铺中</p>
-<div class="section" id="id11">
-<h3>接口说明<a class="headerlink" href="#id11" title="永久链接至标题">¶</a></h3>
+<div class="section" id="id23">
+<h3>接口说明<a class="headerlink" href="#id23" title="永久链接至标题">¶</a></h3>
 <ul class="simple">
 <li>API接口请求地址：<code class="docutils literal notranslate"><span class="pre">/fx_distribute</span></code></li>
 <li>API接口请求方法：<code class="docutils literal notranslate"><span class="pre">POST</span></code></li>
 <li>API接口用户授权：<code class="docutils literal notranslate"><span class="pre">token</span></code></li>
 </ul>
 </div>
-<div class="section" id="id12">
-<h3>请求参数<a class="headerlink" href="#id12" title="永久链接至标题">¶</a></h3>
+<div class="section" id="id24">
+<h3>请求参数<a class="headerlink" href="#id24" title="永久链接至标题">¶</a></h3>
 <table border="1" class="docutils">
 <colgroup>
-<col width="26%" />
+<col width="25%" />
 <col width="12%" />
 <col width="11%" />
 <col width="12%" />
-<col width="39%" />
+<col width="41%" />
 </colgroup>
 <thead valign="bottom">
 <tr class="row-odd"><th class="head">名称</th>
@@ -544,29 +909,41 @@
 </tr>
 </thead>
 <tbody valign="top">
-<tr class="row-even"><td>rid</td>
+<tr class="row-even"><td>sid</td>
+<td>String</td>
+<td>可选</td>
+<td>&#160;</td>
+<td>店铺编号</td>
+</tr>
+<tr class="row-odd"><td>rid</td>
 <td>String</td>
 <td>必须</td>
 <td>&#160;</td>
 <td>商品编号</td>
 </tr>
-<tr class="row-odd"><td>product_packet_id</td>
+<tr class="row-even"><td>product_packet_id</td>
 <td>Integer</td>
 <td>可选</td>
 <td>0</td>
 <td>商品组ID</td>
 </tr>
-<tr class="row-even"><td>status</td>
+<tr class="row-odd"><td>status</td>
 <td>bool</td>
 <td>必须</td>
 <td>&#160;</td>
-<td>商品状态, true=上架  false=下架</td>
+<td>商品状态 true:上架中; false:仓库中</td>
+</tr>
+<tr class="row-even"><td>stick_text</td>
+<td>String</td>
+<td>可选</td>
+<td>&#160;</td>
+<td>推荐语</td>
 </tr>
 </tbody>
 </table>
 </div>
-<div class="section" id="id13">
-<h3>返回示例<a class="headerlink" href="#id13" title="永久链接至标题">¶</a></h3>
+<div class="section" id="id25">
+<h3>返回示例<a class="headerlink" href="#id25" title="永久链接至标题">¶</a></h3>
 <p>JSON数据格式:</p>
 <p>请求 <strong>正确</strong> 返回结果：</p>
 <div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="p">{</span>
@@ -590,19 +967,25 @@
 </div>
 </div>
 </div>
-<div class="section" id="id14">
-<h2>取消分销<a class="headerlink" href="#id14" title="永久链接至标题">¶</a></h2>
-<p>店铺取消分销该商品</p>
-<div class="section" id="id15">
-<h3>接口说明<a class="headerlink" href="#id15" title="永久链接至标题">¶</a></h3>
+<div class="section" id="id26">
+<h2>删除分销<a class="headerlink" href="#id26" title="永久链接至标题">¶</a></h2>
+<p>店铺不再分销该商品</p>
+<div class="section" id="id27">
+<h3>接口说明<a class="headerlink" href="#id27" title="永久链接至标题">¶</a></h3>
 <ul class="simple">
+<<<<<<< HEAD
 <li>API接口请求地址：<code class="docutils literal notranslate"><span class="pre">/fx_distribute</span></code></li>
 <li>API接口请求方法：<code class="docutils literal notranslate"><span class="pre">DELETE</span></code></li>
 <li>API接口用户授权：<code class="docutils literal notranslate"><span class="pre">token</span></code></li>
+=======
+<li>API接口请求地址：<code class="docutils literal"><span class="pre">/fx_distribute/&lt;rid&gt;</span></code></li>
+<li>API接口请求方法：<code class="docutils literal"><span class="pre">DELETE</span></code></li>
+<li>API接口用户授权：<code class="docutils literal"><span class="pre">token</span></code></li>
+>>>>>>> origin/pql
 </ul>
 </div>
-<div class="section" id="id16">
-<h3>请求参数<a class="headerlink" href="#id16" title="永久链接至标题">¶</a></h3>
+<div class="section" id="id28">
+<h3>请求参数<a class="headerlink" href="#id28" title="永久链接至标题">¶</a></h3>
 <table border="1" class="docutils">
 <colgroup>
 <col width="15%" />
@@ -620,7 +1003,13 @@
 </tr>
 </thead>
 <tbody valign="top">
-<tr class="row-even"><td>rid</td>
+<tr class="row-even"><td>sid</td>
+<td>String</td>
+<td>可选</td>
+<td>&#160;</td>
+<td>店铺编号</td>
+</tr>
+<tr class="row-odd"><td>rid</td>
 <td>String</td>
 <td>必须</td>
 <td>&#160;</td>
@@ -629,8 +1018,8 @@
 </tbody>
 </table>
 </div>
-<div class="section" id="id17">
-<h3>返回示例<a class="headerlink" href="#id17" title="永久链接至标题">¶</a></h3>
+<div class="section" id="id29">
+<h3>返回示例<a class="headerlink" href="#id29" title="永久链接至标题">¶</a></h3>
 <p>JSON数据格式:</p>
 <p>请求 <strong>正确</strong> 返回结果：</p>
 <div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="p">{</span>
@@ -644,19 +1033,19 @@
 </div>
 </div>
 </div>
-<div class="section" id="id18">
-<h2>查看详情<a class="headerlink" href="#id18" title="永久链接至标题">¶</a></h2>
-<p>查看店铺商品详情</p>
-<div class="section" id="id19">
-<h3>接口说明<a class="headerlink" href="#id19" title="永久链接至标题">¶</a></h3>
+<div class="section" id="id30">
+<h2>查看详情<a class="headerlink" href="#id30" title="永久链接至标题">¶</a></h2>
+<p>查看店铺分销商品详情</p>
+<div class="section" id="id31">
+<h3>接口说明<a class="headerlink" href="#id31" title="永久链接至标题">¶</a></h3>
 <ul class="simple">
 <li>API接口请求地址：<code class="docutils literal notranslate"><span class="pre">/fx_distribute/&lt;string:rid&gt;/detail</span></code></li>
 <li>API接口请求方法：<code class="docutils literal notranslate"><span class="pre">GET</span></code></li>
 <li>API接口用户授权：<code class="docutils literal notranslate"><span class="pre">token</span></code></li>
 </ul>
 </div>
-<div class="section" id="id20">
-<h3>请求参数<a class="headerlink" href="#id20" title="永久链接至标题">¶</a></h3>
+<div class="section" id="id32">
+<h3>请求参数<a class="headerlink" href="#id32" title="永久链接至标题">¶</a></h3>
 <table border="1" class="docutils">
 <colgroup>
 <col width="15%" />
@@ -674,7 +1063,13 @@
 </tr>
 </thead>
 <tbody valign="top">
-<tr class="row-even"><td>rid</td>
+<tr class="row-even"><td>sid</td>
+<td>String</td>
+<td>可选</td>
+<td>&#160;</td>
+<td>店铺编号</td>
+</tr>
+<tr class="row-odd"><td>rid</td>
 <td>String</td>
 <td>必须</td>
 <td>&#160;</td>
@@ -683,8 +1078,8 @@
 </tbody>
 </table>
 </div>
-<div class="section" id="id21">
-<h3>返回示例<a class="headerlink" href="#id21" title="永久链接至标题">¶</a></h3>
+<div class="section" id="id33">
+<h3>返回示例<a class="headerlink" href="#id33" title="永久链接至标题">¶</a></h3>
 <p>JSON数据格式:</p>
 <p>请求 <strong>正确</strong> 返回结果：</p>
 <div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="p">{</span>
@@ -754,26 +1149,32 @@
 </div>
 </div>
 </div>
-<div class="section" id="id22">
-<h2>更新上架状态<a class="headerlink" href="#id22" title="永久链接至标题">¶</a></h2>
-<p>更新店铺中商品的上架状态</p>
-<div class="section" id="id23">
-<h3>接口说明<a class="headerlink" href="#id23" title="永久链接至标题">¶</a></h3>
+<div class="section" id="id34">
+<h2>仓库商品上架<a class="headerlink" href="#id34" title="永久链接至标题">¶</a></h2>
+<p>店铺仓库中商品上架</p>
+<div class="section" id="id35">
+<h3>接口说明<a class="headerlink" href="#id35" title="永久链接至标题">¶</a></h3>
 <ul class="simple">
+<<<<<<< HEAD
 <li>API接口请求地址：<code class="docutils literal notranslate"><span class="pre">/fx_distribute/status</span></code></li>
 <li>API接口请求方法：<code class="docutils literal notranslate"><span class="pre">PUT</span></code></li>
 <li>API接口用户授权：<code class="docutils literal notranslate"><span class="pre">token</span></code></li>
+=======
+<li>API接口请求地址：<code class="docutils literal"><span class="pre">/fx_distribute/&lt;rid&gt;/shelves</span></code></li>
+<li>API接口请求方法：<code class="docutils literal"><span class="pre">PUT</span></code></li>
+<li>API接口用户授权：<code class="docutils literal"><span class="pre">token</span></code></li>
+>>>>>>> origin/pql
 </ul>
 </div>
-<div class="section" id="id24">
-<h3>请求参数<a class="headerlink" href="#id24" title="永久链接至标题">¶</a></h3>
+<div class="section" id="id36">
+<h3>请求参数<a class="headerlink" href="#id36" title="永久链接至标题">¶</a></h3>
 <table border="1" class="docutils">
 <colgroup>
-<col width="26%" />
-<col width="12%" />
+<col width="27%" />
+<col width="13%" />
 <col width="11%" />
-<col width="12%" />
-<col width="39%" />
+<col width="13%" />
+<col width="37%" />
 </colgroup>
 <thead valign="bottom">
 <tr class="row-odd"><th class="head">名称</th>
@@ -784,23 +1185,35 @@
 </tr>
 </thead>
 <tbody valign="top">
-<tr class="row-even"><td>rid</td>
+<tr class="row-even"><td>sid</td>
+<td>String</td>
+<td>可选</td>
+<td>&#160;</td>
+<td>店铺编号</td>
+</tr>
+<tr class="row-odd"><td>rid</td>
 <td>String</td>
 <td>必须</td>
 <td>&#160;</td>
 <td>商品编号</td>
 </tr>
-<tr class="row-odd"><td>status</td>
+<tr class="row-even"><td>product_packet_id</td>
+<td>Integer</td>
+<td>&#160;</td>
+<td>&#160;</td>
+<td>商品组编号</td>
+</tr>
+<tr class="row-odd"><td>stick_text</td>
 <td>String</td>
 <td>必须</td>
 <td>&#160;</td>
-<td>商品状态, true:上架  false:下架</td>
+<td>推荐语</td>
 </tr>
 </tbody>
 </table>
 </div>
-<div class="section" id="id25">
-<h3>返回示例<a class="headerlink" href="#id25" title="永久链接至标题">¶</a></h3>
+<div class="section" id="id37">
+<h3>返回示例<a class="headerlink" href="#id37" title="永久链接至标题">¶</a></h3>
 <p>JSON数据格式:</p>
 <p>请求 <strong>正确</strong> 返回结果：</p>
 <div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="p">{</span>
@@ -816,7 +1229,7 @@
 <div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="p">{</span>
     <span class="s2">&quot;status&quot;</span><span class="o">:</span> <span class="p">{</span>
         <span class="s2">&quot;code&quot;</span><span class="o">:</span> <span class="mi">400</span><span class="p">,</span>
-        <span class="s2">&quot;message&quot;</span><span class="o">:</span> <span class="s2">&quot;此商品你无权操作!&quot;</span>
+        <span class="s2">&quot;message&quot;</span><span class="o">:</span> <span class="s2">&quot;您没有分销该商品的权限!&quot;</span>
     <span class="p">},</span>
     <span class="s2">&quot;success&quot;</span><span class="o">:</span> <span class="kc">false</span>
 <span class="p">}</span>

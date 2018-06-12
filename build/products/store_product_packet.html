@@ -19,8 +19,8 @@
     <script type="text/javascript" src="../_static/bootstrap-sphinx.js"></script>
     <link rel="index" title="索引" href="../genindex.html" />
     <link rel="search" title="搜索" href="../search.html" />
-    <link rel="next" title="附件模块" href="assets.html" />
-    <link rel="prev" title="心愿清单模块" href="wish.html" />
+    <link rel="next" title="分销模块" href="distributions.html" />
+    <link rel="prev" title="供应商/品牌模块" href="brands.html" />
 <meta charset='utf-8'>
 <meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'>
 <meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1'>
@@ -76,9 +76,9 @@
 <li class="toctree-l2"><a class="reference internal" href="products.html">商品模块</a></li>
 <li class="toctree-l2"><a class="reference internal" href="category.html">分类模块</a></li>
 <li class="toctree-l2"><a class="reference internal" href="brands.html">供应商/品牌模块</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">店铺商品组模块</a></li>
 <li class="toctree-l2"><a class="reference internal" href="distributions.html">分销模块</a></li>
 <li class="toctree-l2"><a class="reference internal" href="wish.html">心愿清单模块</a></li>
-<li class="toctree-l2 current"><a class="current reference internal" href="#">店铺商品组模块</a></li>
 <li class="toctree-l2"><a class="reference internal" href="assets.html">附件模块</a></li>
 </ul>
 </li>
@@ -172,6 +172,12 @@
 <li><a class="reference internal" href="#id21">返回示例</a></li>
 </ul>
 </li>
+<li><a class="reference internal" href="#id22">商品更改商品组</a><ul>
+<li><a class="reference internal" href="#id23">接口说明</a></li>
+<li><a class="reference internal" href="#id24">请求参数</a></li>
+<li><a class="reference internal" href="#id25">返回示例</a></li>
+</ul>
+</li>
 </ul>
 </li>
 </ul>
@@ -234,6 +240,12 @@
 <li><a class="reference internal" href="#id21">返回示例</a></li>
 </ul>
 </li>
+<li><a class="reference internal" href="#id22">商品更改商品组</a><ul>
+<li><a class="reference internal" href="#id23">接口说明</a></li>
+<li><a class="reference internal" href="#id24">请求参数</a></li>
+<li><a class="reference internal" href="#id25">返回示例</a></li>
+</ul>
+</li>
 </ul>
 </li>
 </ul>
@@ -241,11 +253,11 @@
 
 <ul class="nav nav-list">
   <li>
-    <a href="wish.html" title="Previous Chapter: 心愿清单模块"><span class="glyphicon glyphicon-chevron-left visible-sm"></span><span class="hidden-sm hidden-tablet">&raquo; 心愿清单模块</span>
+    <a href="brands.html" title="Previous Chapter: 供应商/品牌模块"><span class="glyphicon glyphicon-chevron-left visible-sm"></span><span class="hidden-sm hidden-tablet">&raquo; 供应商/品牌模块</span>
     </a>
   </li>
   <li>
-    <a href="assets.html" title="Next Chapter: 附件模块"><span class="glyphicon glyphicon-chevron-right visible-sm"></span><span class="hidden-sm hidden-tablet">&raquo; 附件模块</span>
+    <a href="distributions.html" title="Next Chapter: 分销模块"><span class="glyphicon glyphicon-chevron-right visible-sm"></span><span class="hidden-sm hidden-tablet">&raquo; 分销模块</span>
     </a>
   </li>
 </ul>
@@ -272,9 +284,15 @@
 <div class="section" id="id3">
 <h3>接口说明<a class="headerlink" href="#id3" title="永久链接至标题">¶</a></h3>
 <ul class="simple">
+<<<<<<< HEAD
 <li>API接口请求地址：<code class="docutils literal notranslate"><span class="pre">/product_packet</span></code></li>
 <li>API接口请求方法：<code class="docutils literal notranslate"><span class="pre">POST</span></code></li>
 <li>API接口用户授权：<code class="docutils literal notranslate"><span class="pre">token</span></code></li>
+=======
+<li>API接口请求地址：<code class="docutils literal"><span class="pre">/product_packets</span></code></li>
+<li>API接口请求方法：<code class="docutils literal"><span class="pre">POST</span></code></li>
+<li>API接口用户授权：<code class="docutils literal"><span class="pre">token</span></code></li>
+>>>>>>> origin/pql
 </ul>
 </div>
 <div class="section" id="id4">
@@ -296,7 +314,13 @@
 </tr>
 </thead>
 <tbody valign="top">
-<tr class="row-even"><td>name</td>
+<tr class="row-even"><td>sid</td>
+<td>String</td>
+<td>可选</td>
+<td>&#160;</td>
+<td>店铺编号</td>
+</tr>
+<tr class="row-odd"><td>name</td>
 <td>String</td>
 <td>必须</td>
 <td>&#160;</td>
@@ -336,9 +360,15 @@
 <div class="section" id="id7">
 <h3>接口说明<a class="headerlink" href="#id7" title="永久链接至标题">¶</a></h3>
 <ul class="simple">
+<<<<<<< HEAD
 <li>API接口请求地址：<code class="docutils literal notranslate"><span class="pre">/product_packet</span></code></li>
 <li>API接口请求方法：<code class="docutils literal notranslate"><span class="pre">PUT</span></code></li>
 <li>API接口用户授权：<code class="docutils literal notranslate"><span class="pre">token</span></code></li>
+=======
+<li>API接口请求地址：<code class="docutils literal"><span class="pre">/product_packets/&lt;product_packet_id&gt;</span></code></li>
+<li>API接口请求方法：<code class="docutils literal"><span class="pre">PUT</span></code></li>
+<li>API接口用户授权：<code class="docutils literal"><span class="pre">token</span></code></li>
+>>>>>>> origin/pql
 </ul>
 </div>
 <div class="section" id="id8">
@@ -360,13 +390,19 @@
 </tr>
 </thead>
 <tbody valign="top">
-<tr class="row-even"><td>product_packet_id</td>
+<tr class="row-even"><td>sid</td>
+<td>String</td>
+<td>可选</td>
+<td>&#160;</td>
+<td>店铺编号</td>
+</tr>
+<tr class="row-odd"><td>product_packet_id</td>
 <td>Integer</td>
 <td>必须</td>
 <td>&#160;</td>
 <td>商品组ID</td>
 </tr>
-<tr class="row-odd"><td>name</td>
+<tr class="row-even"><td>name</td>
 <td>String</td>
 <td>必须</td>
 <td>&#160;</td>
@@ -406,9 +442,15 @@
 <div class="section" id="id11">
 <h3>接口说明<a class="headerlink" href="#id11" title="永久链接至标题">¶</a></h3>
 <ul class="simple">
+<<<<<<< HEAD
 <li>API接口请求地址：<code class="docutils literal notranslate"><span class="pre">/product_packet</span></code></li>
 <li>API接口请求方法：<code class="docutils literal notranslate"><span class="pre">DELETE</span></code></li>
 <li>API接口用户授权：<code class="docutils literal notranslate"><span class="pre">token</span></code></li>
+=======
+<li>API接口请求地址：<code class="docutils literal"><span class="pre">/product_packets/&lt;product_packet_id&gt;</span></code></li>
+<li>API接口请求方法：<code class="docutils literal"><span class="pre">DELETE</span></code></li>
+<li>API接口用户授权：<code class="docutils literal"><span class="pre">token</span></code></li>
+>>>>>>> origin/pql
 </ul>
 </div>
 <div class="section" id="id12">
@@ -430,7 +472,13 @@
 </tr>
 </thead>
 <tbody valign="top">
-<tr class="row-even"><td>product_packet_id</td>
+<tr class="row-even"><td>sid</td>
+<td>String</td>
+<td>可选</td>
+<td>&#160;</td>
+<td>店铺编号</td>
+</tr>
+<tr class="row-odd"><td>product_packet_id</td>
 <td>Integer</td>
 <td>必须</td>
 <td>&#160;</td>
@@ -455,7 +503,7 @@
 <p>请求 <code class="docutils literal notranslate"><span class="pre">失败</span></code> 返回结果：</p>
 <div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="p">{</span>
     <span class="s2">&quot;status&quot;</span><span class="o">:</span> <span class="p">{</span>
-        <span class="s2">&quot;code&quot;</span><span class="o">:</span> <span class="mi">404</span><span class="p">,</span>
+        <span class="s2">&quot;code&quot;</span><span class="o">:</span> <span class="mi">400</span><span class="p">,</span>
         <span class="s2">&quot;message&quot;</span><span class="o">:</span> <span class="s2">&quot;商品组已添加商品, 请先移除商品!&quot;</span>
     <span class="p">},</span>
     <span class="s2">&quot;success&quot;</span><span class="o">:</span> <span class="kc">false</span>
@@ -470,9 +518,15 @@
 <div class="section" id="id15">
 <h3>接口说明<a class="headerlink" href="#id15" title="永久链接至标题">¶</a></h3>
 <ul class="simple">
+<<<<<<< HEAD
 <li>API接口请求地址：<code class="docutils literal notranslate"><span class="pre">/store/product_packets</span></code></li>
 <li>API接口请求方法：<code class="docutils literal notranslate"><span class="pre">GET</span></code></li>
 <li>API接口用户授权：<code class="docutils literal notranslate"><span class="pre">token</span></code></li>
+=======
+<li>API接口请求地址：<code class="docutils literal"><span class="pre">/product_packets</span></code></li>
+<li>API接口请求方法：<code class="docutils literal"><span class="pre">GET</span></code></li>
+<li>API接口用户授权：<code class="docutils literal"><span class="pre">token</span></code></li>
+>>>>>>> origin/pql
 </ul>
 </div>
 <div class="section" id="id16">
@@ -494,11 +548,11 @@
 </tr>
 </thead>
 <tbody valign="top">
-<tr class="row-even"><td>product_packet_id</td>
-<td>Integer</td>
-<td>必须</td>
+<tr class="row-even"><td>sid</td>
+<td>String</td>
+<td>可选</td>
 <td>&#160;</td>
-<td>商品组ID</td>
+<td>店铺编号</td>
 </tr>
 </tbody>
 </table>
@@ -509,16 +563,20 @@
 <p>请求 <strong>正确</strong> 返回结果：</p>
 <div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="p">{</span>
     <span class="s2">&quot;data&quot;</span><span class="o">:</span> <span class="p">{</span>
-        <span class="s2">&quot;product_packets&quot;</span><span class="o">:</span> <span class="p">[</span>
+        <span class="s2">&quot;packets&quot;</span><span class="o">:</span> <span class="p">[</span>
             <span class="p">{</span>
+                <span class="s2">&quot;count&quot;</span><span class="o">:</span> <span class="mi">2</span><span class="p">,</span>
                 <span class="s2">&quot;name&quot;</span><span class="o">:</span> <span class="s2">&quot;男士&quot;</span><span class="p">,</span>
                 <span class="s2">&quot;product_packet_id&quot;</span><span class="o">:</span> <span class="mi">3</span>
             <span class="p">},</span>
             <span class="p">{</span>
+                <span class="s2">&quot;count&quot;</span><span class="o">:</span> <span class="mi">4</span><span class="p">,</span>
                 <span class="s2">&quot;name&quot;</span><span class="o">:</span> <span class="s2">&quot;女士&quot;</span><span class="p">,</span>
                 <span class="s2">&quot;product_packet_id&quot;</span><span class="o">:</span> <span class="mi">4</span>
             <span class="p">}</span>
-        <span class="p">]</span>
+        <span class="p">],</span>
+        <span class="s2">&quot;packets_count&quot;</span><span class="o">:</span> <span class="mi">2</span><span class="p">,</span>
+        <span class="s2">&quot;products_count&quot;</span><span class="o">:</span> <span class="mi">6</span>
     <span class="p">},</span>
     <span class="s2">&quot;status&quot;</span><span class="o">:</span> <span class="p">{</span>
         <span class="s2">&quot;code&quot;</span><span class="o">:</span> <span class="mi">200</span><span class="p">,</span>
@@ -536,20 +594,26 @@
 <div class="section" id="id19">
 <h3>接口说明<a class="headerlink" href="#id19" title="永久链接至标题">¶</a></h3>
 <ul class="simple">
+<<<<<<< HEAD
 <li>API接口请求地址：<code class="docutils literal notranslate"><span class="pre">/product_packet/&lt;int:product_packet_id&gt;/products</span></code></li>
 <li>API接口请求方法：<code class="docutils literal notranslate"><span class="pre">GET</span></code></li>
 <li>API接口用户授权：<code class="docutils literal notranslate"><span class="pre">token</span></code></li>
+=======
+<li>API接口请求地址：<code class="docutils literal"><span class="pre">/product_packets/&lt;int:product_packet_id&gt;/products</span></code></li>
+<li>API接口请求方法：<code class="docutils literal"><span class="pre">GET</span></code></li>
+<li>API接口用户授权：<code class="docutils literal"><span class="pre">token</span></code></li>
+>>>>>>> origin/pql
 </ul>
 </div>
 <div class="section" id="id20">
 <h3>请求参数<a class="headerlink" href="#id20" title="永久链接至标题">¶</a></h3>
 <table border="1" class="docutils">
 <colgroup>
-<col width="26%" />
+<col width="24%" />
 <col width="12%" />
-<col width="11%" />
+<col width="10%" />
 <col width="12%" />
-<col width="39%" />
+<col width="42%" />
 </colgroup>
 <thead valign="bottom">
 <tr class="row-odd"><th class="head">名称</th>
@@ -560,29 +624,35 @@
 </tr>
 </thead>
 <tbody valign="top">
-<tr class="row-even"><td>product_packet_id</td>
+<tr class="row-even"><td>sid</td>
+<td>String</td>
+<td>可选</td>
+<td>&#160;</td>
+<td>店铺编号</td>
+</tr>
+<tr class="row-odd"><td>product_packet_id</td>
 <td>Integer</td>
 <td>必须</td>
 <td>&#160;</td>
 <td>商品组ID</td>
 </tr>
-<tr class="row-odd"><td>page</td>
+<tr class="row-even"><td>page</td>
 <td>Number</td>
 <td>可选</td>
 <td>1</td>
 <td>当前页码</td>
 </tr>
-<tr class="row-even"><td>per_page</td>
+<tr class="row-odd"><td>per_page</td>
 <td>Number</td>
 <td>可选</td>
 <td>10</td>
 <td>每页数量</td>
 </tr>
-<tr class="row-odd"><td>status</td>
+<tr class="row-even"><td>status</td>
 <td>Integer</td>
 <td>可选</td>
-<td>0</td>
-<td>商品状态 0:全部, 1:上架, 2:下架</td>
+<td>1</td>
+<td>商品状态 1:出售中,2:下架中,3:已售罄</td>
 </tr>
 </tbody>
 </table>
@@ -603,7 +673,7 @@
                 <span class="s2">&quot;cost_price&quot;</span><span class="o">:</span> <span class="s2">&quot;1234.00&quot;</span><span class="p">,</span>
                 <span class="s2">&quot;cover&quot;</span><span class="o">:</span> <span class="s2">&quot;http://127.0.0.1:9000/_uploads/photos/180529/fac7a2591ef0b48.jpg&quot;</span><span class="p">,</span>
                 <span class="s2">&quot;description&quot;</span><span class="o">:</span> <span class="s2">&quot;A-商品1描述&quot;</span><span class="p">,</span>
-                <span class="s2">&quot;features&quot;</span><span class="o">:</span> <span class="s2">&quot;是否钢板&quot;</span><span class="p">,</span>
+                <span class="s2">&quot;features&quot;</span><span class="o">:</span> <span class="s2">&quot;商品推荐语&quot;</span><span class="p">,</span>
                 <span class="s2">&quot;id_code&quot;</span><span class="o">:</span> <span class="kc">null</span><span class="p">,</span>
                 <span class="s2">&quot;is_distributed&quot;</span><span class="o">:</span> <span class="kc">true</span><span class="p">,</span>
                 <span class="s2">&quot;name&quot;</span><span class="o">:</span> <span class="s2">&quot;A-商品1&quot;</span><span class="p">,</span>
@@ -615,10 +685,76 @@
                 <span class="s2">&quot;s_width&quot;</span><span class="o">:</span> <span class="mi">0</span><span class="p">,</span>
                 <span class="s2">&quot;sale_price&quot;</span><span class="o">:</span> <span class="mi">0</span><span class="p">,</span>
                 <span class="s2">&quot;sticked&quot;</span><span class="o">:</span> <span class="kc">true</span><span class="p">,</span>
-                <span class="s2">&quot;stock_count&quot;</span><span class="o">:</span> <span class="mi">211</span>
+                <span class="s2">&quot;stock_count&quot;</span><span class="o">:</span> <span class="mi">21</span>
             <span class="p">}</span>
         <span class="p">]</span>
     <span class="p">},</span>
+    <span class="s2">&quot;status&quot;</span><span class="o">:</span> <span class="p">{</span>
+        <span class="s2">&quot;code&quot;</span><span class="o">:</span> <span class="mi">200</span><span class="p">,</span>
+        <span class="s2">&quot;message&quot;</span><span class="o">:</span> <span class="s2">&quot;Ok all right.&quot;</span>
+    <span class="p">},</span>
+    <span class="s2">&quot;success&quot;</span><span class="o">:</span> <span class="kc">true</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="id22">
+<h2>商品更改商品组<a class="headerlink" href="#id22" title="永久链接至标题">¶</a></h2>
+<p>修改商品所在的商品组</p>
+<div class="section" id="id23">
+<h3>接口说明<a class="headerlink" href="#id23" title="永久链接至标题">¶</a></h3>
+<ul class="simple">
+<li>API接口请求地址：<code class="docutils literal"><span class="pre">/fx_distribute/&lt;string:rid&gt;/packet</span></code></li>
+<li>API接口请求方法：<code class="docutils literal"><span class="pre">PUT</span></code></li>
+<li>API接口用户授权：<code class="docutils literal"><span class="pre">token</span></code></li>
+</ul>
+</div>
+<div class="section" id="id24">
+<h3>请求参数<a class="headerlink" href="#id24" title="永久链接至标题">¶</a></h3>
+<table border="1" class="docutils">
+<colgroup>
+<col width="27%" />
+<col width="13%" />
+<col width="11%" />
+<col width="13%" />
+<col width="37%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">名称</th>
+<th class="head">类型</th>
+<th class="head">是否必须</th>
+<th class="head">默认值</th>
+<th class="head">描述说明</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>sid</td>
+<td>String</td>
+<td>可选</td>
+<td>&#160;</td>
+<td>店铺编号</td>
+</tr>
+<tr class="row-odd"><td>rid</td>
+<td>String</td>
+<td>必须</td>
+<td>&#160;</td>
+<td>商品编号</td>
+</tr>
+<tr class="row-even"><td>product_packet_id</td>
+<td>Integer</td>
+<td>必须</td>
+<td>&#160;</td>
+<td>商品组ID</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="id25">
+<h3>返回示例<a class="headerlink" href="#id25" title="永久链接至标题">¶</a></h3>
+<p>JSON数据格式:</p>
+<p>请求 <strong>正确</strong> 返回结果：</p>
+<div class="highlight-javascript"><div class="highlight"><pre><span></span><span class="p">{</span>
     <span class="s2">&quot;status&quot;</span><span class="o">:</span> <span class="p">{</span>
         <span class="s2">&quot;code&quot;</span><span class="o">:</span> <span class="mi">200</span><span class="p">,</span>
         <span class="s2">&quot;message&quot;</span><span class="o">:</span> <span class="s2">&quot;Ok all right.&quot;</span>
