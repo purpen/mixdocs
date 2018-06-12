@@ -7,7 +7,7 @@
         "id": 1,
         "name": "家居",
         "pid": 0,
-        "sort_order": 1,
+        "sort_order": 4,
         "status": 1
       },
       {
