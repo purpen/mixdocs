@@ -79,15 +79,17 @@
 <li class="toctree-l2"><a class="reference internal" href="carts.html">购物车模块</a></li>
 <li class="toctree-l2"><a class="reference internal" href="addresses.html">收货地址模块</a></li>
 <li class="toctree-l2"><a class="reference internal" href="stats.html">统计模块</a></li>
+<li class="toctree-l2"><a class="reference internal" href="comment.html">订单评价模块</a></li>
+<li class="toctree-l2"><a class="reference internal" href="logistics.html">物流运费模块</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="../products/index.html">商品API模块</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="../products/products.html">商品模块</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../products/category.html">分类模块</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../products/brands.html">供应商/品牌模块</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../products/store_product_packet.html">店铺商品组模块</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../products/distributions.html">分销模块</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../products/wish.html">心愿清单模块</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../products/store_product_packet.html">店铺商品组模块</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../products/assets.html">附件模块</a></li>
 </ul>
 </li>
@@ -223,6 +225,13 @@
 <li class="toctree-l2"><a class="reference internal" href="orders.html#id24">查询订单支付状态</a></li>
 <li class="toctree-l2"><a class="reference internal" href="orders.html#id28">签收订单状态</a></li>
 <li class="toctree-l2"><a class="reference internal" href="orders.html#id32">取消订单状态</a></li>
+<li class="toctree-l2"><a class="reference internal" href="orders.html#id36">待发货订单状态</a></li>
+<li class="toctree-l2"><a class="reference internal" href="orders.html#id40">配货中订单状态</a></li>
+<li class="toctree-l2"><a class="reference internal" href="orders.html#id44">待打印订单状态</a></li>
+<li class="toctree-l2"><a class="reference internal" href="orders.html#id48">已发货订单状态</a></li>
+<li class="toctree-l2"><a class="reference internal" href="orders.html#id52">待评分订单状态</a></li>
+<li class="toctree-l2"><a class="reference internal" href="orders.html#id56">评分完成订单状态</a></li>
+<li class="toctree-l2"><a class="reference internal" href="orders.html#id60">已完成订单状态</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="customer_orders.html">分销商订单模块</a><ul>
@@ -251,10 +260,36 @@
 <li class="toctree-l2"><a class="reference internal" href="addresses.html#id31">全部城市列表</a></li>
 <li class="toctree-l2"><a class="reference internal" href="addresses.html#id34">全部区镇列表</a></li>
 <li class="toctree-l2"><a class="reference internal" href="addresses.html#id37">全部村域列表</a></li>
+<li class="toctree-l2"><a class="reference internal" href="addresses.html#id40">验证用户海关信息是否存在</a></li>
+<li class="toctree-l2"><a class="reference internal" href="addresses.html#id43">新增地址海关信息</a></li>
+<li class="toctree-l2"><a class="reference internal" href="addresses.html#id47">更新地址海关信息</a></li>
+<li class="toctree-l2"><a class="reference internal" href="addresses.html#id51">删除地址海关信息</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="stats.html">统计模块</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="stats.html#id2">销售额汇总信息</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="comment.html">订单评价模块</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="comment.html#id2">订单评价管理列表</a></li>
+<li class="toctree-l2"><a class="reference internal" href="comment.html#id5">订单商品评价列表</a></li>
+<li class="toctree-l2"><a class="reference internal" href="comment.html#id9">添加商品评价</a></li>
+<li class="toctree-l2"><a class="reference internal" href="comment.html#id13">删除订单商品评价</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="logistics.html">物流运费模块</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="logistics.html#id2">获取快递鸟物流公司编码列表</a></li>
+<li class="toctree-l2"><a class="reference internal" href="logistics.html#id5">获取物流信息</a></li>
+<li class="toctree-l2"><a class="reference internal" href="logistics.html#id9">添加物流公司信息</a></li>
+<li class="toctree-l2"><a class="reference internal" href="logistics.html#id13">修改物流公司信息</a></li>
+<li class="toctree-l2"><a class="reference internal" href="logistics.html#id17">查询物流公司列表</a></li>
+<li class="toctree-l2"><a class="reference internal" href="logistics.html#id20">删除物流公司信息</a></li>
+<li class="toctree-l2"><a class="reference internal" href="logistics.html#id24">设置默认物流公司</a></li>
+<li class="toctree-l2"><a class="reference internal" href="logistics.html#id28">添加运费模板信息</a></li>
+<li class="toctree-l2"><a class="reference internal" href="logistics.html#id32">修改运费模板信息</a></li>
+<li class="toctree-l2"><a class="reference internal" href="logistics.html#id36">查询运费模板信息</a></li>
+<li class="toctree-l2"><a class="reference internal" href="logistics.html#id39">删除运费模板信息</a></li>
+<li class="toctree-l2"><a class="reference internal" href="logistics.html#id43">设置默认运费模板</a></li>
 </ul>
 </li>
 </ul>
