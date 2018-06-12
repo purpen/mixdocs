@@ -18,6 +18,7 @@
         "s_weight": "重量",
         "s_width": "宽度",
         "sale_price": "促销价",
+        "status": "商品状态: 0=仓库中, 1=出售中, 2=下架中",
         "sticked": "是否推荐",
         "stock_count": "库存数"
       },
@@ -35,6 +36,7 @@
         "s_weight": 0,
         "s_width": 0,
         "sale_price": 0,
+        "status": 1,
         "sticked": null,
         "stock_count": 35
       },
