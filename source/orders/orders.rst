@@ -4,9 +4,9 @@
 全渠道订单同步接口
 
 
-订单列表
-=======================
-获取全部或某个状态下订单列表
+用户查看订单列表
+============================
+用户获取全部或某个状态下订单列表
 
 
 接口说明
@@ -22,7 +22,8 @@
 ===========  ========  =========  ========  ====================================
 名称          类型      是否必须    默认值     描述说明
 ===========  ========  =========  ========  ====================================
-status       Number    可选                   订单状态
+status	     Number	   可选	 	             订单状态 1、待发货 2、待收货 3、待评价
+no_pay       Number    可选                   未付款  0、未付款
 page         Number    可选         1         当前页码
 per_page     Number    可选         10        每页数量
 ===========  ========  =========  ========  ====================================
@@ -33,6 +34,142 @@ per_page     Number    可选         10        每页数量
 JSON数据格式:
 
 .. literalinclude:: order_list.js
+
+
+返回错误格式：
+
+.. code-block:: javascript
+
+    {
+        "status": {
+            "code": 400,
+            "message": "订单状态错误"
+        },
+        "success": false
+    }
+
+
+商家订单列表
+=======================
+商家获取全部或某个状态下订单列表
+
+
+接口说明
+~~~~~~~~~~~~~~
+
+* API接口请求地址：``/master/orders``
+* API接口请求方法：``GET``
+* API接口用户授权：``token``
+
+请求参数
+~~~~~~~~~~~~~~~
+
+===========  ========  =========  ========  ==============================================
+名称          类型      是否必须    默认值     描述说明
+===========  ========  =========  ========  ==============================================
+status	     Number	   可选	 	             订单状态 1、待发货 2、已发货 3、已完成 4、已取消
+no_pay       Number    可选                   未付款  0、未付款
+page         Number    可选         1         当前页码
+per_page     Number    可选         10        每页数量
+===========  ========  =========  ========  ==============================================
+
+返回示例
+~~~~~~~~~~~~~~~~
+
+JSON数据格式:
+
+.. code-block:: javascript
+
+    {
+        "data": {
+            "count": 2,
+            "next": "http://0.0.0.0:9000/api/v1.0/orders?status=2&page=2",
+            "orders": [
+                {
+                    "buyer_address": "朝阳区",
+                    "buyer_city": "北京",
+                    "buyer_country": "中国",
+                    "buyer_name": "田帅",
+                    "buyer_phone": "13278989898",
+                    "buyer_province": "北京",
+                    "buyer_remark": null,
+                    "buyer_tel": null,
+                    "buyer_zipcode": null,
+                    "created_at": 1528620896,
+                    "customer_order_id": null,
+                    "discount_amount": 0,
+                    "express_at": 0,
+                    "express_name": "",
+                    "express_no": null,
+                    "freight": 0,
+                    "items": [
+                        {
+                            "cost_price": "1.00",
+                            "cover": "http://0.0.0.0:9000/_uploads/photos/1",
+                            "deal_price": 999.1,
+                            "discount_amount": 0,
+                            "id_code": "1",
+                            "mode": "1 1",
+                            "price": "1.00",
+                            "product_name": "摩托",
+                            "quantity": 3,
+                            "rid": "1",
+                            "s_color": "1",
+                            "s_model": "1",
+                            "s_weight": "1.00",
+                            "sale_price": "1.00",
+                            "stock_count": 11089
+                        },
+                        {
+                            "cost_price": "2.00",
+                            "cover": "http://0.0.0.0:9000/_uploads/photos/1",
+                            "deal_price": 999.1,
+                            "discount_amount": 0,
+                            "id_code": "1",
+                            "mode": "2 2",
+                            "price": "2.00",
+                            "product_name": "汽车",
+                            "quantity": 1,
+                            "rid": "2",
+                            "s_color": "2",
+                            "s_model": "2",
+                            "s_weight": "2.00",
+                            "sale_price": "2.00",
+                            "stock_count": 22106
+                        }
+                    ],
+                    "outside_target_id": "D18061062954387",
+                    "pay_amount": 3996.4,
+                    "received_at": 0,
+                    "remark": null,
+                    "rid": "D18061062954387",
+                    "ship_mode": 1,
+                    "status": 40,
+                    "store_name": "第一家(None)",
+                    "total_amount": 3996.4,
+                    "total_quantity": 4
+                }
+            ],
+            "prev": null
+        },
+        "status": {
+            "code": 200,
+            "message": "Ok all right."
+        },
+        "success": true
+    }
+
+返回错误格式：
+
+.. code-block:: javascript
+
+    {
+        "status": {
+            "code": 400,
+            "message": "订单状态错误"
+        },
+        "success": false
+    }
 
 
 订单详情
@@ -46,6 +183,14 @@ JSON数据格式:
 * API接口请求方法：``GET``
 * API接口用户授权：``token``
 
+请求参数
+~~~~~~~~~~~~~~~
+
+===========  ========  =========  ========  ==============================================
+名称          类型      是否必须    默认值     描述说明
+===========  ========  =========  ========  ==============================================
+rid          String    必填                  订单编号
+===========  ========  =========  ========  ==============================================
 
 返回示例
 ~~~~~~~~~~~~~~~~

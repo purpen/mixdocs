@@ -25,25 +25,25 @@ JSON数据格式:
 
     {
         "data": {
-            # 今日
+            // 今日
             "today": {
                 "sale_amount": 1000,
                 "order_quantity": 100,
-                "day_yoy": -0.12  # 日同比
+                "day_yoy": -0.12  // 日同比
             },
 
-            # 7日
+            // 7日
             "seven_days": {
                 "sale_amount": 1000,
                 "order_quantity": 100,
-                "week_yoy": 0.12  # 周同比
+                "week_yoy": 0.12  // 周同比
             },
 
-            # 30天
+            // 30天
             "thirty_days": {
                 "sale_amount": 1000,
                 "order_quantity": 100,
-                "month_yoy": 0.12  # 月同比
+                "month_yoy": 0.12  // 月同比
             }
         },
         "status": {
