@@ -313,9 +313,9 @@ JSON数据格式:
             "area_codes": [
                 {
                     "areacode": "+853",
-                    "en_name": "中国台湾",
+                    "en_name": "macao",
                     "id": 3,
-                    "name": "中国台湾"
+                    "name": "中国澳门"
                 }
             ],
             "count": 3,
