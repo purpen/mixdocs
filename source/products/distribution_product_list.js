@@ -13,6 +13,7 @@
         "features": "商品推荐语",
         "id_code": "商品的69码",
         "is_distributed": "是否分销商品",
+        "is_sold_out": "是否已售罄",
         "is_proprietary": "是否自营商品",
         "name": "商品名",
         "rid": "商品编号",
@@ -22,6 +23,7 @@
         "s_weight": "重量",
         "s_width": "宽度",
         "sale_price": "促销价",
+        "status": "商品状态: 0=仓库中, 1=出售中, 2=下架中",
         "sticked": "是否推荐",
         "stock_count": "库存数"
       },
@@ -33,6 +35,7 @@
         "description": "描述",
         "id_code": null,
         "is_distributed": true,
+        "is_sold_out": false,
         "is_proprietary": false,
         "name": "速腾套装",
         "rid": "117210372661",
@@ -42,6 +45,7 @@
         "s_weight": 0,
         "s_width": 0,
         "sale_price": 200,
+        "status": 1,
         "sticked": null,
         "stock_count": 35
       },
