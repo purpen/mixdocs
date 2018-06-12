@@ -2,13 +2,21 @@
 
 <html xmlns="http://www.w3.org/1999/xhtml" lang="zh_CN">
   <head>
-    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <title>订单模块 &#8212; mixdocs 0.1.0 文档</title>
     <link rel="stylesheet" href="../_static/bootstrap-sphinx.css" type="text/css" />
     <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
     <link rel="stylesheet" href="../_static/mixpus.css" type="text/css" />
-    <script type="text/javascript" src="../_static/documentation_options.js"></script>
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '../',
+        VERSION:     '0.1.0',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true,
+        SOURCELINK_SUFFIX: '.txt'
+      };
+    </script>
     <script type="text/javascript" src="../_static/jquery.js"></script>
     <script type="text/javascript" src="../_static/underscore.js"></script>
     <script type="text/javascript" src="../_static/doctools.js"></script>
@@ -26,7 +34,8 @@
 <meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1'>
 <meta name="apple-mobile-web-app-capable" content="yes">
 
-  </head><body>
+  </head>
+  <body>
 
   <div id="navbar" class="navbar navbar-inverse navbar-default navbar-fixed-top">
     <div class="container">
@@ -70,15 +79,17 @@
 <li class="toctree-l2"><a class="reference internal" href="carts.html">购物车模块</a></li>
 <li class="toctree-l2"><a class="reference internal" href="addresses.html">收货地址模块</a></li>
 <li class="toctree-l2"><a class="reference internal" href="stats.html">统计模块</a></li>
+<li class="toctree-l2"><a class="reference internal" href="comment.html">订单评价模块</a></li>
+<li class="toctree-l2"><a class="reference internal" href="logistics.html">物流运费模块</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="../products/index.html">商品API模块</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="../products/products.html">商品模块</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../products/category.html">分类模块</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../products/brands.html">供应商/品牌模块</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../products/store_product_packet.html">店铺商品组模块</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../products/distributions.html">分销模块</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../products/wish.html">心愿清单模块</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../products/store_product_packet.html">店铺商品组模块</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../products/assets.html">附件模块</a></li>
 </ul>
 </li>
@@ -401,9 +412,9 @@
 <div class="section" id="id3">
 <h3>接口说明<a class="headerlink" href="#id3" title="永久链接至标题">¶</a></h3>
 <ul class="simple">
-<li>API接口请求地址：<code class="docutils literal notranslate"><span class="pre">/orders</span></code></li>
-<li>API接口请求方法：<code class="docutils literal notranslate"><span class="pre">GET</span></code></li>
-<li>API接口用户授权：<code class="docutils literal notranslate"><span class="pre">token</span></code></li>
+<li>API接口请求地址：<code class="docutils literal"><span class="pre">/orders</span></code></li>
+<li>API接口请求方法：<code class="docutils literal"><span class="pre">GET</span></code></li>
+<li>API接口用户授权：<code class="docutils literal"><span class="pre">token</span></code></li>
 </ul>
 </div>
 <div class="section" id="id4">
@@ -449,7 +460,7 @@
 <div class="section" id="id5">
 <h3>返回示例<a class="headerlink" href="#id5" title="永久链接至标题">¶</a></h3>
 <p>JSON数据格式:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="p">{</span>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="p">{</span>
   <span class="s2">&quot;data&quot;</span><span class="p">:</span> <span class="p">{</span>
     <span class="s2">&quot;count&quot;</span><span class="p">:</span> <span class="mi">2</span><span class="p">,</span>
     <span class="s2">&quot;next&quot;</span><span class="p">:</span> <span class="n">null</span><span class="p">,</span>
@@ -551,15 +562,15 @@
 <div class="section" id="id7">
 <h3>接口说明<a class="headerlink" href="#id7" title="永久链接至标题">¶</a></h3>
 <ul class="simple">
-<li>API接口请求地址：<code class="docutils literal notranslate"><span class="pre">/orders/&lt;rid&gt;</span></code></li>
-<li>API接口请求方法：<code class="docutils literal notranslate"><span class="pre">GET</span></code></li>
-<li>API接口用户授权：<code class="docutils literal notranslate"><span class="pre">token</span></code></li>
+<li>API接口请求地址：<code class="docutils literal"><span class="pre">/orders/&lt;rid&gt;</span></code></li>
+<li>API接口请求方法：<code class="docutils literal"><span class="pre">GET</span></code></li>
+<li>API接口用户授权：<code class="docutils literal"><span class="pre">token</span></code></li>
 </ul>
 </div>
 <div class="section" id="id8">
 <h3>返回示例<a class="headerlink" href="#id8" title="永久链接至标题">¶</a></h3>
 <p>JSON数据格式:</p>
-<div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="p">{</span>
+<div class="highlight-javascript"><div class="highlight"><pre><span></span><span class="p">{</span>
   <span class="s2">&quot;data&quot;</span><span class="o">:</span> <span class="p">{</span>
     <span class="s2">&quot;buyer_address&quot;</span><span class="o">:</span> <span class="s2">&quot;蛇经二路&quot;</span><span class="p">,</span>
     <span class="s2">&quot;buyer_city&quot;</span><span class="o">:</span> <span class="s2">&quot;北京&quot;</span><span class="p">,</span>
@@ -595,7 +606,7 @@
 </pre></div>
 </div>
 <p>返回错误格式：</p>
-<div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="p">{</span>
+<div class="highlight-javascript"><div class="highlight"><pre><span></span><span class="p">{</span>
   <span class="s2">&quot;status&quot;</span><span class="o">:</span> <span class="p">{</span>
     <span class="s2">&quot;code&quot;</span><span class="o">:</span> <span class="mi">404</span><span class="p">,</span>
     <span class="s2">&quot;message&quot;</span><span class="o">:</span> <span class="s2">&quot;Not Found&quot;</span>
@@ -612,9 +623,9 @@
 <div class="section" id="id10">
 <h3>接口说明<a class="headerlink" href="#id10" title="永久链接至标题">¶</a></h3>
 <ul class="simple">
-<li>API接口请求地址：<code class="docutils literal notranslate"><span class="pre">/orders/create</span></code></li>
-<li>API接口请求方法：<code class="docutils literal notranslate"><span class="pre">POST</span></code></li>
-<li>API接口用户授权：<code class="docutils literal notranslate"><span class="pre">token</span></code></li>
+<li>API接口请求地址：<code class="docutils literal"><span class="pre">/orders/create</span></code></li>
+<li>API接口请求方法：<code class="docutils literal"><span class="pre">POST</span></code></li>
+<li>API接口用户授权：<code class="docutils literal"><span class="pre">token</span></code></li>
 </ul>
 </div>
 <div class="section" id="id11">
@@ -768,7 +779,7 @@
 </tbody>
 </table>
 <p>参考示例：</p>
-<div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="p">{</span><span class="s2">&quot;freight&quot;</span><span class="o">:</span><span class="mi">0</span><span class="p">,</span><span class="s2">&quot;invoice_type&quot;</span><span class="o">:</span><span class="mi">1</span><span class="p">,</span><span class="s2">&quot;invoice_info&quot;</span><span class="o">:</span><span class="p">{},</span><span class="s2">&quot;address_rid&quot;</span><span class="o">:</span> <span class="s2">&quot;5748231905&quot;</span><span class="p">,</span>
+<div class="highlight-javascript"><div class="highlight"><pre><span></span><span class="p">{</span><span class="s2">&quot;freight&quot;</span><span class="o">:</span><span class="mi">0</span><span class="p">,</span><span class="s2">&quot;invoice_type&quot;</span><span class="o">:</span><span class="mi">1</span><span class="p">,</span><span class="s2">&quot;invoice_info&quot;</span><span class="o">:</span><span class="p">{},</span><span class="s2">&quot;address_rid&quot;</span><span class="o">:</span> <span class="s2">&quot;5748231905&quot;</span><span class="p">,</span>
 <span class="s2">&quot;items&quot;</span><span class="o">:</span> <span class="p">[{</span><span class="s2">&quot;rid&quot;</span><span class="o">:</span><span class="s2">&quot;117280530556&quot;</span><span class="p">,</span><span class="s2">&quot;quantity&quot;</span><span class="o">:</span><span class="mi">1</span><span class="p">,</span><span class="s2">&quot;deal_price&quot;</span><span class="o">:</span><span class="mi">23</span><span class="p">,</span> <span class="s2">&quot;discount_amount&quot;</span><span class="o">:</span><span class="mi">0</span><span class="p">,</span>
 <span class="s2">&quot;warehouse_id&quot;</span><span class="o">:</span><span class="mi">0</span><span class="p">}],</span><span class="s2">&quot;outside_target_id&quot;</span><span class="o">:</span><span class="mi">132234</span><span class="p">,</span><span class="s2">&quot;buyer_remark&quot;</span><span class="o">:</span><span class="s2">&quot;&quot;</span><span class="p">,</span><span class="s2">&quot;from_client&quot;</span><span class="o">:</span><span class="mi">1</span><span class="p">,</span>
 <span class="s2">&quot;affiliate_code&quot;</span><span class="o">:</span><span class="s2">&quot;mix001&quot;</span><span class="p">,</span><span class="s2">&quot;affiliate_code&quot;</span><span class="o">:</span><span class="s2">&quot;mix001&quot;</span><span class="p">,</span><span class="s2">&quot;sync_pay&quot;</span><span class="o">:</span><span class="mi">1</span><span class="p">}</span>
@@ -778,7 +789,7 @@
 <div class="section" id="id12">
 <h3>返回示例<a class="headerlink" href="#id12" title="永久链接至标题">¶</a></h3>
 <p>JSON数据格式:</p>
-<div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="p">{</span>
+<div class="highlight-javascript"><div class="highlight"><pre><span></span><span class="p">{</span>
     <span class="s2">&quot;data&quot;</span><span class="o">:</span> <span class="p">{</span>
         <span class="s2">&quot;order&quot;</span><span class="o">:</span> <span class="p">{</span>
             <span class="s2">&quot;buyer_address&quot;</span><span class="o">:</span> <span class="s2">&quot;xomge&quot;</span><span class="p">,</span>
@@ -846,7 +857,7 @@
 </pre></div>
 </div>
 <p>返回错误格式：</p>
-<div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="p">{</span>
+<div class="highlight-javascript"><div class="highlight"><pre><span></span><span class="p">{</span>
   <span class="s2">&quot;status&quot;</span><span class="o">:</span> <span class="p">{</span>
     <span class="s2">&quot;code&quot;</span><span class="o">:</span> <span class="mi">404</span><span class="p">,</span>
     <span class="s2">&quot;message&quot;</span><span class="o">:</span> <span class="s2">&quot;Not Found&quot;</span>
@@ -863,15 +874,15 @@
 <div class="section" id="id14">
 <h3>接口说明<a class="headerlink" href="#id14" title="永久链接至标题">¶</a></h3>
 <ul class="simple">
-<li>API接口请求地址：<code class="docutils literal notranslate"><span class="pre">/orders/freight</span></code></li>
-<li>API接口请求方法：<code class="docutils literal notranslate"><span class="pre">GET</span></code></li>
-<li>API接口用户授权：<code class="docutils literal notranslate"><span class="pre">token</span></code></li>
+<li>API接口请求地址：<code class="docutils literal"><span class="pre">/orders/freight</span></code></li>
+<li>API接口请求方法：<code class="docutils literal"><span class="pre">GET</span></code></li>
+<li>API接口用户授权：<code class="docutils literal"><span class="pre">token</span></code></li>
 </ul>
 </div>
 <div class="section" id="id15">
 <h3>返回示例<a class="headerlink" href="#id15" title="永久链接至标题">¶</a></h3>
 <p>JSON数据格式:</p>
-<div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="p">{</span>
+<div class="highlight-javascript"><div class="highlight"><pre><span></span><span class="p">{</span>
   <span class="s2">&quot;data&quot;</span><span class="o">:</span> <span class="p">{</span>
     <span class="s2">&quot;freight&quot;</span><span class="o">:</span> <span class="mi">0</span>
   <span class="p">},</span>
@@ -891,9 +902,9 @@
 <div class="section" id="id17">
 <h3>接口说明<a class="headerlink" href="#id17" title="永久链接至标题">¶</a></h3>
 <ul class="simple">
-<li>API接口请求地址：<code class="docutils literal notranslate"><span class="pre">/orders/&lt;string:rid&gt;/seller_remark</span></code></li>
-<li>API接口请求方法：<code class="docutils literal notranslate"><span class="pre">PUT</span></code></li>
-<li>API接口用户授权：<code class="docutils literal notranslate"><span class="pre">token</span></code></li>
+<li>API接口请求地址：<code class="docutils literal"><span class="pre">/orders/&lt;string:rid&gt;/seller_remark</span></code></li>
+<li>API接口请求方法：<code class="docutils literal"><span class="pre">PUT</span></code></li>
+<li>API接口用户授权：<code class="docutils literal"><span class="pre">token</span></code></li>
 </ul>
 </div>
 <div class="section" id="id18">
@@ -927,7 +938,7 @@
 <div class="section" id="id19">
 <h3>返回示例<a class="headerlink" href="#id19" title="永久链接至标题">¶</a></h3>
 <p>JSON数据格式:</p>
-<div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="p">{</span>
+<div class="highlight-javascript"><div class="highlight"><pre><span></span><span class="p">{</span>
   <span class="s2">&quot;status&quot;</span><span class="o">:</span> <span class="p">{</span>
     <span class="s2">&quot;code&quot;</span><span class="o">:</span> <span class="mi">200</span><span class="p">,</span>
     <span class="s2">&quot;message&quot;</span><span class="o">:</span> <span class="s2">&quot;Ok all right.&quot;</span>
@@ -944,9 +955,9 @@
 <div class="section" id="id21">
 <h3>接口说明<a class="headerlink" href="#id21" title="永久链接至标题">¶</a></h3>
 <ul class="simple">
-<li>API接口请求地址：<code class="docutils literal notranslate"><span class="pre">/orders/up_paid_status</span></code></li>
-<li>API接口请求方法：<code class="docutils literal notranslate"><span class="pre">POST</span></code></li>
-<li>API接口用户授权：<code class="docutils literal notranslate"><span class="pre">token</span></code></li>
+<li>API接口请求地址：<code class="docutils literal"><span class="pre">/orders/up_paid_status</span></code></li>
+<li>API接口请求方法：<code class="docutils literal"><span class="pre">POST</span></code></li>
+<li>API接口用户授权：<code class="docutils literal"><span class="pre">token</span></code></li>
 </ul>
 </div>
 <div class="section" id="id22">
@@ -980,7 +991,7 @@
 <div class="section" id="id23">
 <h3>返回示例<a class="headerlink" href="#id23" title="永久链接至标题">¶</a></h3>
 <p>JSON数据格式:</p>
-<div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="p">{</span>
+<div class="highlight-javascript"><div class="highlight"><pre><span></span><span class="p">{</span>
     <span class="s2">&quot;data&quot;</span><span class="o">:</span> <span class="p">{</span>
         <span class="s2">&quot;is_paid&quot;</span><span class="o">:</span> <span class="kc">true</span><span class="p">,</span>
         <span class="s2">&quot;rid&quot;</span><span class="o">:</span> <span class="s2">&quot;D18061015836402&quot;</span>
@@ -1001,9 +1012,9 @@
 <div class="section" id="id25">
 <h3>接口说明<a class="headerlink" href="#id25" title="永久链接至标题">¶</a></h3>
 <ul class="simple">
-<li>API接口请求地址：<code class="docutils literal notranslate"><span class="pre">/orders/check_order_paid</span></code></li>
-<li>API接口请求方法：<code class="docutils literal notranslate"><span class="pre">POST</span></code></li>
-<li>API接口用户授权：<code class="docutils literal notranslate"><span class="pre">token</span></code></li>
+<li>API接口请求地址：<code class="docutils literal"><span class="pre">/orders/check_order_paid</span></code></li>
+<li>API接口请求方法：<code class="docutils literal"><span class="pre">POST</span></code></li>
+<li>API接口用户授权：<code class="docutils literal"><span class="pre">token</span></code></li>
 </ul>
 </div>
 <div class="section" id="id26">
@@ -1037,7 +1048,7 @@
 <div class="section" id="id27">
 <h3>返回示例<a class="headerlink" href="#id27" title="永久链接至标题">¶</a></h3>
 <p>JSON数据格式:</p>
-<div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="p">{</span>
+<div class="highlight-javascript"><div class="highlight"><pre><span></span><span class="p">{</span>
     <span class="s2">&quot;data&quot;</span><span class="o">:</span> <span class="p">{</span>
         <span class="s2">&quot;paid&quot;</span><span class="o">:</span> <span class="kc">true</span><span class="p">,</span>
         <span class="s2">&quot;rid&quot;</span><span class="o">:</span> <span class="s2">&quot;D18041051390827&quot;</span>
@@ -1058,9 +1069,9 @@
 <div class="section" id="id29">
 <h3>接口说明<a class="headerlink" href="#id29" title="永久链接至标题">¶</a></h3>
 <ul class="simple">
-<li>API接口请求地址：<code class="docutils literal notranslate"><span class="pre">/orders/signed</span></code></li>
-<li>API接口请求方法：<code class="docutils literal notranslate"><span class="pre">POST</span></code></li>
-<li>API接口用户授权：<code class="docutils literal notranslate"><span class="pre">token</span></code></li>
+<li>API接口请求地址：<code class="docutils literal"><span class="pre">/orders/signed</span></code></li>
+<li>API接口请求方法：<code class="docutils literal"><span class="pre">POST</span></code></li>
+<li>API接口用户授权：<code class="docutils literal"><span class="pre">token</span></code></li>
 </ul>
 </div>
 <div class="section" id="id30">
@@ -1094,7 +1105,7 @@
 <div class="section" id="id31">
 <h3>返回示例<a class="headerlink" href="#id31" title="永久链接至标题">¶</a></h3>
 <p>JSON数据格式:</p>
-<div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="p">{</span>
+<div class="highlight-javascript"><div class="highlight"><pre><span></span><span class="p">{</span>
     <span class="s2">&quot;data&quot;</span><span class="o">:</span> <span class="p">{</span>
         <span class="s2">&quot;order&quot;</span><span class="o">:</span> <span class="p">{</span>
             <span class="s2">&quot;buyer_name&quot;</span><span class="o">:</span> <span class="s2">&quot;小帅&quot;</span><span class="p">,</span>
@@ -1125,9 +1136,9 @@
 <div class="section" id="id33">
 <h3>接口说明<a class="headerlink" href="#id33" title="永久链接至标题">¶</a></h3>
 <ul class="simple">
-<li>API接口请求地址：<code class="docutils literal notranslate"><span class="pre">/orders/cancel</span></code></li>
-<li>API接口请求方法：<code class="docutils literal notranslate"><span class="pre">POST</span></code></li>
-<li>API接口用户授权：<code class="docutils literal notranslate"><span class="pre">token</span></code></li>
+<li>API接口请求地址：<code class="docutils literal"><span class="pre">/orders/cancel</span></code></li>
+<li>API接口请求方法：<code class="docutils literal"><span class="pre">POST</span></code></li>
+<li>API接口用户授权：<code class="docutils literal"><span class="pre">token</span></code></li>
 </ul>
 </div>
 <div class="section" id="id34">
@@ -1161,7 +1172,7 @@
 <div class="section" id="id35">
 <h3>返回示例<a class="headerlink" href="#id35" title="永久链接至标题">¶</a></h3>
 <p>JSON数据格式:</p>
-<div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="p">{</span>
+<div class="highlight-javascript"><div class="highlight"><pre><span></span><span class="p">{</span>
     <span class="s2">&quot;data&quot;</span><span class="o">:</span> <span class="p">{</span>
         <span class="s2">&quot;order&quot;</span><span class="o">:</span> <span class="p">{</span>
             <span class="s2">&quot;buyer_name&quot;</span><span class="o">:</span> <span class="s2">&quot;小帅&quot;</span><span class="p">,</span>
@@ -1192,9 +1203,9 @@
 <div class="section" id="id37">
 <h3>接口说明<a class="headerlink" href="#id37" title="永久链接至标题">¶</a></h3>
 <ul class="simple">
-<li>API接口请求地址：<code class="docutils literal notranslate"><span class="pre">/orders/up_pending_shipment_status</span></code></li>
-<li>API接口请求方法：<code class="docutils literal notranslate"><span class="pre">POST</span></code></li>
-<li>API接口用户授权：<code class="docutils literal notranslate"><span class="pre">token</span></code></li>
+<li>API接口请求地址：<code class="docutils literal"><span class="pre">/orders/up_pending_shipment_status</span></code></li>
+<li>API接口请求方法：<code class="docutils literal"><span class="pre">POST</span></code></li>
+<li>API接口用户授权：<code class="docutils literal"><span class="pre">token</span></code></li>
 </ul>
 </div>
 <div class="section" id="id38">
@@ -1228,7 +1239,7 @@
 <div class="section" id="id39">
 <h3>返回示例<a class="headerlink" href="#id39" title="永久链接至标题">¶</a></h3>
 <p>JSON数据格式:</p>
-<div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="p">{</span>
+<div class="highlight-javascript"><div class="highlight"><pre><span></span><span class="p">{</span>
     <span class="s2">&quot;data&quot;</span><span class="o">:</span> <span class="p">{</span>
         <span class="s2">&quot;order&quot;</span><span class="o">:</span> <span class="p">{</span>
             <span class="s2">&quot;buyer_address&quot;</span><span class="o">:</span> <span class="s2">&quot;大街&quot;</span><span class="p">,</span>
@@ -1296,9 +1307,9 @@
 <div class="section" id="id41">
 <h3>接口说明<a class="headerlink" href="#id41" title="永久链接至标题">¶</a></h3>
 <ul class="simple">
-<li>API接口请求地址：<code class="docutils literal notranslate"><span class="pre">/orders/up_distribution_status</span></code></li>
-<li>API接口请求方法：<code class="docutils literal notranslate"><span class="pre">POST</span></code></li>
-<li>API接口用户授权：<code class="docutils literal notranslate"><span class="pre">token</span></code></li>
+<li>API接口请求地址：<code class="docutils literal"><span class="pre">/orders/up_distribution_status</span></code></li>
+<li>API接口请求方法：<code class="docutils literal"><span class="pre">POST</span></code></li>
+<li>API接口用户授权：<code class="docutils literal"><span class="pre">token</span></code></li>
 </ul>
 </div>
 <div class="section" id="id42">
@@ -1332,7 +1343,7 @@
 <div class="section" id="id43">
 <h3>返回示例<a class="headerlink" href="#id43" title="永久链接至标题">¶</a></h3>
 <p>JSON数据格式:</p>
-<div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="p">{</span>
+<div class="highlight-javascript"><div class="highlight"><pre><span></span><span class="p">{</span>
     <span class="s2">&quot;data&quot;</span><span class="o">:</span> <span class="p">{</span>
         <span class="s2">&quot;order&quot;</span><span class="o">:</span> <span class="p">{</span>
             <span class="s2">&quot;buyer_address&quot;</span><span class="o">:</span> <span class="s2">&quot;大街&quot;</span><span class="p">,</span>
@@ -1400,9 +1411,9 @@
 <div class="section" id="id45">
 <h3>接口说明<a class="headerlink" href="#id45" title="永久链接至标题">¶</a></h3>
 <ul class="simple">
-<li>API接口请求地址：<code class="docutils literal notranslate"><span class="pre">/orders/up_pending_print_status</span></code></li>
-<li>API接口请求方法：<code class="docutils literal notranslate"><span class="pre">POST</span></code></li>
-<li>API接口用户授权：<code class="docutils literal notranslate"><span class="pre">token</span></code></li>
+<li>API接口请求地址：<code class="docutils literal"><span class="pre">/orders/up_pending_print_status</span></code></li>
+<li>API接口请求方法：<code class="docutils literal"><span class="pre">POST</span></code></li>
+<li>API接口用户授权：<code class="docutils literal"><span class="pre">token</span></code></li>
 </ul>
 </div>
 <div class="section" id="id46">
@@ -1436,7 +1447,7 @@
 <div class="section" id="id47">
 <h3>返回示例<a class="headerlink" href="#id47" title="永久链接至标题">¶</a></h3>
 <p>JSON数据格式:</p>
-<div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="p">{</span>
+<div class="highlight-javascript"><div class="highlight"><pre><span></span><span class="p">{</span>
     <span class="s2">&quot;data&quot;</span><span class="o">:</span> <span class="p">{</span>
         <span class="s2">&quot;order&quot;</span><span class="o">:</span> <span class="p">{</span>
             <span class="s2">&quot;buyer_address&quot;</span><span class="o">:</span> <span class="s2">&quot;大街&quot;</span><span class="p">,</span>
@@ -1504,9 +1515,9 @@
 <div class="section" id="id49">
 <h3>接口说明<a class="headerlink" href="#id49" title="永久链接至标题">¶</a></h3>
 <ul class="simple">
-<li>API接口请求地址：<code class="docutils literal notranslate"><span class="pre">/orders/up_shipped_status</span></code></li>
-<li>API接口请求方法：<code class="docutils literal notranslate"><span class="pre">POST</span></code></li>
-<li>API接口用户授权：<code class="docutils literal notranslate"><span class="pre">token</span></code></li>
+<li>API接口请求地址：<code class="docutils literal"><span class="pre">/orders/up_shipped_status</span></code></li>
+<li>API接口请求方法：<code class="docutils literal"><span class="pre">POST</span></code></li>
+<li>API接口用户授权：<code class="docutils literal"><span class="pre">token</span></code></li>
 </ul>
 </div>
 <div class="section" id="id50">
@@ -1540,7 +1551,7 @@
 <div class="section" id="id51">
 <h3>返回示例<a class="headerlink" href="#id51" title="永久链接至标题">¶</a></h3>
 <p>JSON数据格式:</p>
-<div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="p">{</span>
+<div class="highlight-javascript"><div class="highlight"><pre><span></span><span class="p">{</span>
     <span class="s2">&quot;data&quot;</span><span class="o">:</span> <span class="p">{</span>
         <span class="s2">&quot;order&quot;</span><span class="o">:</span> <span class="p">{</span>
             <span class="s2">&quot;buyer_address&quot;</span><span class="o">:</span> <span class="s2">&quot;大街&quot;</span><span class="p">,</span>
@@ -1608,9 +1619,9 @@
 <div class="section" id="id53">
 <h3>接口说明<a class="headerlink" href="#id53" title="永久链接至标题">¶</a></h3>
 <ul class="simple">
-<li>API接口请求地址：<code class="docutils literal notranslate"><span class="pre">/orders/up_pending_rating_status</span></code></li>
-<li>API接口请求方法：<code class="docutils literal notranslate"><span class="pre">POST</span></code></li>
-<li>API接口用户授权：<code class="docutils literal notranslate"><span class="pre">token</span></code></li>
+<li>API接口请求地址：<code class="docutils literal"><span class="pre">/orders/up_pending_rating_status</span></code></li>
+<li>API接口请求方法：<code class="docutils literal"><span class="pre">POST</span></code></li>
+<li>API接口用户授权：<code class="docutils literal"><span class="pre">token</span></code></li>
 </ul>
 </div>
 <div class="section" id="id54">
@@ -1644,7 +1655,7 @@
 <div class="section" id="id55">
 <h3>返回示例<a class="headerlink" href="#id55" title="永久链接至标题">¶</a></h3>
 <p>JSON数据格式:</p>
-<div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="p">{</span>
+<div class="highlight-javascript"><div class="highlight"><pre><span></span><span class="p">{</span>
     <span class="s2">&quot;data&quot;</span><span class="o">:</span> <span class="p">{</span>
         <span class="s2">&quot;order&quot;</span><span class="o">:</span> <span class="p">{</span>
             <span class="s2">&quot;buyer_address&quot;</span><span class="o">:</span> <span class="s2">&quot;大街&quot;</span><span class="p">,</span>
@@ -1712,9 +1723,9 @@
 <div class="section" id="id57">
 <h3>接口说明<a class="headerlink" href="#id57" title="永久链接至标题">¶</a></h3>
 <ul class="simple">
-<li>API接口请求地址：<code class="docutils literal notranslate"><span class="pre">/orders/up_rated_status</span></code></li>
-<li>API接口请求方法：<code class="docutils literal notranslate"><span class="pre">POST</span></code></li>
-<li>API接口用户授权：<code class="docutils literal notranslate"><span class="pre">token</span></code></li>
+<li>API接口请求地址：<code class="docutils literal"><span class="pre">/orders/up_rated_status</span></code></li>
+<li>API接口请求方法：<code class="docutils literal"><span class="pre">POST</span></code></li>
+<li>API接口用户授权：<code class="docutils literal"><span class="pre">token</span></code></li>
 </ul>
 </div>
 <div class="section" id="id58">
@@ -1748,7 +1759,7 @@
 <div class="section" id="id59">
 <h3>返回示例<a class="headerlink" href="#id59" title="永久链接至标题">¶</a></h3>
 <p>JSON数据格式:</p>
-<div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="p">{</span>
+<div class="highlight-javascript"><div class="highlight"><pre><span></span><span class="p">{</span>
     <span class="s2">&quot;data&quot;</span><span class="o">:</span> <span class="p">{</span>
         <span class="s2">&quot;order&quot;</span><span class="o">:</span> <span class="p">{</span>
             <span class="s2">&quot;buyer_address&quot;</span><span class="o">:</span> <span class="s2">&quot;大街&quot;</span><span class="p">,</span>
@@ -1816,9 +1827,9 @@
 <div class="section" id="id61">
 <h3>接口说明<a class="headerlink" href="#id61" title="永久链接至标题">¶</a></h3>
 <ul class="simple">
-<li>API接口请求地址：<code class="docutils literal notranslate"><span class="pre">/orders/up_finished_status</span></code></li>
-<li>API接口请求方法：<code class="docutils literal notranslate"><span class="pre">POST</span></code></li>
-<li>API接口用户授权：<code class="docutils literal notranslate"><span class="pre">token</span></code></li>
+<li>API接口请求地址：<code class="docutils literal"><span class="pre">/orders/up_finished_status</span></code></li>
+<li>API接口请求方法：<code class="docutils literal"><span class="pre">POST</span></code></li>
+<li>API接口用户授权：<code class="docutils literal"><span class="pre">token</span></code></li>
 </ul>
 </div>
 <div class="section" id="id62">
@@ -1852,7 +1863,7 @@
 <div class="section" id="id63">
 <h3>返回示例<a class="headerlink" href="#id63" title="永久链接至标题">¶</a></h3>
 <p>JSON数据格式:</p>
-<div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="p">{</span>
+<div class="highlight-javascript"><div class="highlight"><pre><span></span><span class="p">{</span>
     <span class="s2">&quot;data&quot;</span><span class="o">:</span> <span class="p">{</span>
         <span class="s2">&quot;order&quot;</span><span class="o">:</span> <span class="p">{</span>
             <span class="s2">&quot;buyer_address&quot;</span><span class="o">:</span> <span class="s2">&quot;大街&quot;</span><span class="p">,</span>
