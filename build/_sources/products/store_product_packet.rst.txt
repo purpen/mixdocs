@@ -311,6 +311,13 @@ JSON数据格式:
 .. code-block:: javascript
 
     {
+        "data": {
+            "is_distributed": true,
+            "product_packet_id": 3,
+            "status": true,
+            "stick_text": "商品分销推荐语",
+            "store_id": 2
+        },
         "status": {
             "code": 200,
             "message": "Ok all right."
