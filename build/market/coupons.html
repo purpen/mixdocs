@@ -673,23 +673,35 @@
 <td>&#160;</td>
 <td>优惠券金额</td>
 </tr>
-<tr class="row-odd"><td>start_date</td>
-<td>String</td>
+<tr class="row-odd"><td>got_count</td>
+<td>Integer</td>
 <td>必填</td>
 <td>&#160;</td>
-<td>优惠券过期日期</td>
+<td>领取数量</td>
 </tr>
-<tr class="row-even"><td>end_date</td>
+<tr class="row-even"><td>start_date</td>
 <td>String</td>
-<td>必填</td>
+<td>可选</td>
 <td>&#160;</td>
-<td>优惠券过期日期</td>
+<td>优惠券开始日期</td>
+</tr>
+<tr class="row-odd"><td>end_date</td>
+<td>String</td>
+<td>可选</td>
+<td>&#160;</td>
+<td>优惠券结束日期</td>
+</tr>
+<tr class="row-even"><td>long_time</td>
+<td>Bool</td>
+<td>可选</td>
+<td>false</td>
+<td>是否长期有效</td>
 </tr>
 <tr class="row-odd"><td>type</td>
 <td>Integer</td>
 <td>可选</td>
 <td>1</td>
-<td>优惠券类型1、通用型；2、最低消费；3、满减</td>
+<td>优惠券类型 1、同享券 2、单享券</td>
 </tr>
 <tr class="row-even"><td>min_amount</td>
 <td>Number</td>
@@ -713,22 +725,25 @@
 <td>String</td>
 <td>可选</td>
 <td>&#160;</td>
-<td>商品SKU</td>
+<td>商品编号,多个以逗号分隔</td>
 </tr>
 <tr class="row-even"><td>status</td>
-<td>Bool</td>
+<td>Integer</td>
 <td>可选</td>
-<td>True</td>
+<td>1</td>
 <td>优惠券状态：-1: 禁用；1：正常；2：已结束</td>
 </tr>
 </tbody>
 </table>
 <div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="p">{</span>
-    <span class="s2">&quot;amount&quot;</span><span class="o">:</span> <span class="mf">2.00</span><span class="p">,</span>
+    <span class="s2">&quot;amount&quot;</span><span class="o">:</span> <span class="mi">2</span><span class="p">,</span>
     <span class="s2">&quot;name&quot;</span><span class="o">:</span> <span class="s2">&quot;FB&quot;</span><span class="p">,</span>
     <span class="s2">&quot;min_amount&quot;</span><span class="o">:</span> <span class="mf">30.00</span><span class="p">,</span>
     <span class="s2">&quot;start_date&quot;</span><span class="o">:</span> <span class="s2">&quot;2018-05-06&quot;</span><span class="p">,</span>
-    <span class="s2">&quot;end_date&quot;</span><span class="o">:</span> <span class="s2">&quot;2018-09-10&quot;</span>
+    <span class="s2">&quot;end_date&quot;</span><span class="o">:</span> <span class="s2">&quot;2018-09-10&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;product_rids&quot;</span><span class="o">:</span><span class="s2">&quot;1,2&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;type&quot;</span><span class="o">:</span><span class="mi">2</span><span class="p">,</span>
+    <span class="s2">&quot;count&quot;</span><span class="o">:</span><span class="mi">100</span>
 <span class="p">}</span>
 </pre></div>
 </div>
@@ -738,21 +753,42 @@
 <p>JSON数据格式:</p>
 <div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="p">{</span>
     <span class="s2">&quot;data&quot;</span><span class="o">:</span> <span class="p">{</span>
-        <span class="s2">&quot;amount&quot;</span><span class="o">:</span> <span class="mi">5</span><span class="p">,</span>
-        <span class="s2">&quot;code&quot;</span><span class="o">:</span> <span class="s2">&quot;UDNHISFAMRJ&quot;</span><span class="p">,</span>
-        <span class="s2">&quot;created_at&quot;</span><span class="o">:</span> <span class="mi">1520269560</span><span class="p">,</span>
-        <span class="s2">&quot;limit_products&quot;</span><span class="o">:</span> <span class="s2">&quot;&quot;</span><span class="p">,</span>
-        <span class="s2">&quot;min_amount&quot;</span><span class="o">:</span> <span class="mi">0</span><span class="p">,</span>
-        <span class="s2">&quot;name&quot;</span><span class="o">:</span> <span class="s2">&quot;满减活动&quot;</span><span class="p">,</span>
-        <span class="s2">&quot;reach_amount&quot;</span><span class="o">:</span> <span class="mi">100</span><span class="p">,</span>
-        <span class="s2">&quot;start_date&quot;</span><span class="o">:</span> <span class="mi">1520265600</span><span class="p">,</span>
-        <span class="s2">&quot;status&quot;</span><span class="o">:</span> <span class="mi">1</span><span class="p">,</span>
-        <span class="s2">&quot;type&quot;</span><span class="o">:</span> <span class="mi">2</span><span class="p">,</span>
-        <span class="s2">&quot;type_text&quot;</span><span class="o">:</span> <span class="s2">&quot;最低消费0.00元可用&quot;</span>
+        <span class="s2">&quot;amount&quot;</span><span class="o">:</span> <span class="mi">2</span><span class="p">,</span>  <span class="c1">// 面值</span>
+        <span class="s2">&quot;code&quot;</span><span class="o">:</span> <span class="s2">&quot;UHBITCVQLEZ&quot;</span><span class="p">,</span>  <span class="c1">// 优惠券编码</span>
+        <span class="s2">&quot;created_at&quot;</span><span class="o">:</span> <span class="mi">1528893582</span><span class="p">,</span>  <span class="c1">// 创建时间</span>
+        <span class="s2">&quot;end_date&quot;</span><span class="o">:</span> <span class="mi">1536508800</span><span class="p">,</span>  <span class="c1">// 结束时间</span>
+        <span class="s2">&quot;got_count&quot;</span><span class="o">:</span> <span class="mi">100</span><span class="p">,</span>  <span class="c1">// 领取数量</span>
+        <span class="s2">&quot;limit_products&quot;</span><span class="o">:</span> <span class="p">[</span>  <span class="c1">// 限制使用某些商品</span>
+            <span class="p">{</span>
+                <span class="s2">&quot;cost_price&quot;</span><span class="o">:</span> <span class="s2">&quot;1.00&quot;</span><span class="p">,</span>
+                <span class="s2">&quot;cover&quot;</span><span class="o">:</span> <span class="s2">&quot;http://0.0.0.0:9000/_uploads/photos/1&quot;</span><span class="p">,</span>
+                <span class="s2">&quot;description&quot;</span><span class="o">:</span> <span class="s2">&quot;1&quot;</span><span class="p">,</span>
+                <span class="s2">&quot;features&quot;</span><span class="o">:</span> <span class="s2">&quot;1&quot;</span><span class="p">,</span>
+                <span class="s2">&quot;id_code&quot;</span><span class="o">:</span> <span class="s2">&quot;1&quot;</span><span class="p">,</span>
+                <span class="s2">&quot;is_distributed&quot;</span><span class="o">:</span> <span class="kc">true</span><span class="p">,</span>
+                <span class="s2">&quot;name&quot;</span><span class="o">:</span> <span class="s2">&quot;摩托&quot;</span><span class="p">,</span>
+                <span class="s2">&quot;price&quot;</span><span class="o">:</span> <span class="mi">1</span><span class="p">,</span>
+                <span class="s2">&quot;published_at&quot;</span><span class="o">:</span> <span class="mi">1</span><span class="p">,</span>
+                <span class="s2">&quot;rid&quot;</span><span class="o">:</span> <span class="s2">&quot;1&quot;</span><span class="p">,</span>
+                <span class="s2">&quot;s_height&quot;</span><span class="o">:</span> <span class="mi">1</span><span class="p">,</span>
+                <span class="s2">&quot;s_length&quot;</span><span class="o">:</span> <span class="mi">1</span><span class="p">,</span>
+                <span class="s2">&quot;s_weight&quot;</span><span class="o">:</span> <span class="mi">1</span><span class="p">,</span>
+                <span class="s2">&quot;s_width&quot;</span><span class="o">:</span> <span class="mi">1</span><span class="p">,</span>
+                <span class="s2">&quot;sale_price&quot;</span><span class="o">:</span> <span class="mi">1</span><span class="p">,</span>
+                <span class="s2">&quot;sticked&quot;</span><span class="o">:</span> <span class="kc">true</span><span class="p">,</span>
+                <span class="s2">&quot;stock_count&quot;</span><span class="o">:</span> <span class="mi">11077</span>
+            <span class="p">},</span>
+        <span class="p">],</span>
+        <span class="s2">&quot;min_amount&quot;</span><span class="o">:</span> <span class="mi">30</span><span class="p">,</span>  <span class="c1">// 限制最低消费金额</span>
+        <span class="s2">&quot;name&quot;</span><span class="o">:</span> <span class="s2">&quot;FB&quot;</span><span class="p">,</span>  <span class="c1">// 优惠券名称</span>
+        <span class="s2">&quot;reach_amount&quot;</span><span class="o">:</span> <span class="mi">30</span><span class="p">,</span>  <span class="c1">// 满足金额</span>
+        <span class="s2">&quot;start_date&quot;</span><span class="o">:</span> <span class="mi">1525536000</span><span class="p">,</span>  <span class="c1">// 开始时间</span>
+        <span class="s2">&quot;status&quot;</span><span class="o">:</span> <span class="mi">1</span><span class="p">,</span>  <span class="c1">// 优惠券状态</span>
+        <span class="s2">&quot;type&quot;</span><span class="o">:</span> <span class="mi">2</span><span class="p">,</span>  <span class="c1">// 优惠券类型</span>
     <span class="p">},</span>
     <span class="s2">&quot;status&quot;</span><span class="o">:</span> <span class="p">{</span>
-        <span class="s2">&quot;code&quot;</span><span class="o">:</span> <span class="mi">200</span><span class="p">,</span>
-        <span class="s2">&quot;message&quot;</span><span class="o">:</span> <span class="s2">&quot;Ok all right.&quot;</span>
+        <span class="s2">&quot;code&quot;</span><span class="o">:</span> <span class="mi">201</span><span class="p">,</span>
+        <span class="s2">&quot;message&quot;</span><span class="o">:</span> <span class="s2">&quot;All created.&quot;</span>
     <span class="p">},</span>
     <span class="s2">&quot;success&quot;</span><span class="o">:</span> <span class="kc">true</span>
 <span class="p">}</span>

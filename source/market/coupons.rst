@@ -253,26 +253,30 @@ JSON数据格式:
 名称               类型       是否必须        默认值         描述说明
 ===============  ========  =============  ============  ============================================
 amount            Number     必填                        优惠券金额
-start_date        String     必填                        优惠券过期日期
-end_date          String     必填                        优惠券过期日期
-type              Integer    可选           1            优惠券类型1、通用型；2、最低消费；3、满减
+got_count         Integer    必填                        领取数量
+start_date        String     可选                        优惠券开始日期
+end_date          String     可选                        优惠券结束日期
+long_time         Bool       可选           false        是否长期有效
+type              Integer    可选           1            优惠券类型 1、同享券 2、单享券
 min_amount        Number     可选                        最低金额限制
 reach_amount      Number     可选                        满足金额
 name              String     可选                        优惠券名称
-product_rid       String     可选                        商品SKU
-status            Bool       可选           True         优惠券状态：-1: 禁用；1：正常；2：已结束
+product_rid       String     可选                        商品编号,多个以逗号分隔
+status            Integer    可选           1            优惠券状态：-1: 禁用；1：正常；2：已结束
 ===============  ========  =============  ============  ============================================
 
 .. code-block:: javascript
 
     {
-        "amount": 2.00,
+        "amount": 2,
         "name": "FB",
         "min_amount": 30.00,
         "start_date": "2018-05-06",
-        "end_date": "2018-09-10"
+        "end_date": "2018-09-10",
+        "product_rids":"1,2",
+        "type":2,
+        "count":100
     }
-
 
 返回示例
 ~~~~~~~~~~~~~~~~
@@ -283,21 +287,42 @@ JSON数据格式:
 
     {
         "data": {
-            "amount": 5,
-            "code": "UDNHISFAMRJ",
-            "created_at": 1520269560,
-            "limit_products": "",
-            "min_amount": 0,
-            "name": "满减活动",
-            "reach_amount": 100,
-            "start_date": 1520265600,
-            "status": 1,
-            "type": 2,
-            "type_text": "最低消费0.00元可用"
+            "amount": 2,  // 面值
+            "code": "UHBITCVQLEZ",  // 优惠券编码
+            "created_at": 1528893582,  // 创建时间
+            "end_date": 1536508800,  // 结束时间
+            "got_count": 100,  // 领取数量
+            "limit_products": [  // 限制使用某些商品
+                {
+                    "cost_price": "1.00",
+                    "cover": "http://0.0.0.0:9000/_uploads/photos/1",
+                    "description": "1",
+                    "features": "1",
+                    "id_code": "1",
+                    "is_distributed": true,
+                    "name": "摩托",
+                    "price": 1,
+                    "published_at": 1,
+                    "rid": "1",
+                    "s_height": 1,
+                    "s_length": 1,
+                    "s_weight": 1,
+                    "s_width": 1,
+                    "sale_price": 1,
+                    "sticked": true,
+                    "stock_count": 11077
+                },
+            ],
+            "min_amount": 30,  // 限制最低消费金额
+            "name": "FB",  // 优惠券名称
+            "reach_amount": 30,  // 满足金额
+            "start_date": 1525536000,  // 开始时间
+            "status": 1,  // 优惠券状态
+            "type": 2,  // 优惠券类型
         },
         "status": {
-            "code": 200,
-            "message": "Ok all right."
+            "code": 201,
+            "message": "All created."
         },
         "success": true
     }
