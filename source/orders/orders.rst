@@ -229,6 +229,8 @@ address_rid            String      必需                     收货地址ID
 ship_mode              Integer     可选           1         1、快递方式；2、自提方式；
 outside_target_id      String      可选
 freight                Integer     可选          0          邮费
+first_discount         Integer     可选          0          首单优惠金额
+reach_minus            Integer     可选          0          满减优惠金额
 invoice_type           Integer     可选          1          发票类型
 invoice_info           String      可选          {}
 buyer_remark           String      可选                     买家备注
@@ -248,7 +250,6 @@ items:
 rid                    String      必需                    sku
 quantity               Number      必需         1          购买数量
 deal_price             Float       必需                    交易价格
-discount_amount        Float       可选                    优惠金额
 warehouse_id           Number      可选                    发货的仓库ID
 =====================  ==========  =========  ==========  =============================
 
