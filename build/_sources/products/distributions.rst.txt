@@ -181,6 +181,13 @@ JSON数据格式:
 .. code-block:: javascript
 
     {
+        "data": {
+            "is_distributed": true,
+            "product_packet_id": 2,
+            "status": false,
+            "stick_text": "分销推荐语......",
+            "store_id": 2
+        },
         "status": {
             "code": 201,
             "message": "All created."
@@ -232,8 +239,8 @@ JSON数据格式:
 
     {
         "status": {
-            "code": 200,
-            "message": "Ok all right."
+            "code": 204,
+            "message": "All deleted."
         },
         "success": true
     }
