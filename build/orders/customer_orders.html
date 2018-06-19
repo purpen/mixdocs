@@ -293,6 +293,7 @@
         &quot;next&quot;: &quot;http://0.0.0.0:9000/api/v1.0/orders?status=2&amp;page=2&quot;,  // 下一页链接
         &quot;orders&quot;: [
             {
+                &quot;bonus_amount&quot;: 0,  // 红包金额
                 &quot;buyer_address&quot;: &quot;朝阳区&quot;,  // 买家地址
                 &quot;buyer_city&quot;: &quot;北京&quot;,  // 买家城市
                 &quot;buyer_country&quot;: &quot;中国&quot;,  // 买家国家
@@ -302,12 +303,14 @@
                 &quot;buyer_remark&quot;: null,  // 买家备注
                 &quot;buyer_tel&quot;: null,  // 买家电话
                 &quot;buyer_zipcode&quot;: null,  // 买家邮政编码
+                &quot;coupon_amount&quot;: 2,  // 优惠券金额
                 &quot;created_at&quot;: 1528620896,  // 订单时间
                 &quot;customer_order_id&quot;: null,  // 关联分销商订单编号
-                &quot;discount_amount&quot;: 0,  // 优惠金额
+                &quot;discount_amount&quot;: 0,  // 总优惠金额
                 &quot;express_at&quot;: 0,  // 发货时间
                 &quot;express_name&quot;: &quot;&quot;,  // 快递公司
                 &quot;express_no&quot;: null,  // 运单号
+                &quot;first_discount&quot;: 300,  // 首单优惠金额
                 &quot;freight&quot;: 0,  // 运费
                 &quot;items&quot;: [
                     {
@@ -327,35 +330,19 @@
                         &quot;sale_price&quot;: &quot;1.00&quot;,  // 促销价
                         &quot;stock_count&quot;: 11089  // 库存
                     },
-                    {
-                        &quot;cost_price&quot;: &quot;2.00&quot;,
-                        &quot;cover&quot;: &quot;http://0.0.0.0:9000/_uploads/photos/1&quot;,
-                        &quot;deal_price&quot;: 999.1,
-                        &quot;discount_amount&quot;: 0,
-                        &quot;id_code&quot;: &quot;1&quot;,
-                        &quot;mode&quot;: &quot;2 2&quot;,
-                        &quot;price&quot;: &quot;2.00&quot;,
-                        &quot;product_name&quot;: &quot;汽车&quot;,
-                        &quot;quantity&quot;: 1,
-                        &quot;rid&quot;: &quot;2&quot;,
-                        &quot;s_color&quot;: &quot;2&quot;,
-                        &quot;s_model&quot;: &quot;2&quot;,
-                        &quot;s_weight&quot;: &quot;2.00&quot;,
-                        &quot;sale_price&quot;: &quot;2.00&quot;,
-                        &quot;stock_count&quot;: 22106
-                    }
                 ],
                 &quot;outside_target_id&quot;: &quot;D18061062954387&quot;,  // 第三方平台订单编号
                 &quot;pay_amount&quot;: 3996.4,  // 支付金额
+                &quot;reach_minus&quot;: 0,  // 满减金额
                 &quot;received_at&quot;: 0,  // 收货时间
                 &quot;remark&quot;: null,  // 卖家备注
                 &quot;rid&quot;: &quot;D18061062954387&quot;,  // 订单编号
                 &quot;ship_mode&quot;: 1,  // 物流方式 1、快递；2、自提；
                 &quot;status&quot;: 40,  // 订单状态
                 &quot;store_name&quot;: &quot;第一家(None)&quot;,  // 店铺名称
-                &quot;total_amount&quot;: 3996.4,  // 总金额
+                &quot;total_amount&quot;: 3996.4,  // 订单总金额
                 &quot;total_quantity&quot;: 4  // 总数量
-            }
+            },
         ],
         &quot;prev&quot;: null  // 上一页链接
     },
