@@ -301,6 +301,16 @@ JSON数据格式:
 * API接口请求方法：``GET``
 * API接口用户授权：``token``
 
+请求参数
+~~~~~~~~~~~~~~~
+
+===========  ========  =========  ========  ====================================
+名称          类型      是否必须    默认值     描述说明
+===========  ========  =========  ========  ====================================
+page         Number    可选         1         当前页码
+per_page     Number    可选         10        每页数量
+===========  ========  =========  ========  ====================================
+
 返回示例
 ~~~~~~~~~~~~~~~~
 
@@ -484,7 +494,9 @@ first_amount           Numeric       可选          0           首费
 continuous_item        Integer       可选          1           续件
 continuous_weight      Numeric       可选          0           续费
 continuous_amount      Numeric       可选          0           续重
-place_ids              String        可选                      运送地区,多个地区逗号隔开
+min_days               Integer       可选          0           最少天数
+max_days               Integer       可选          0           最多天数
+place_oid              Array         可选          []          运送地区oid
 is_free                Bool          可选          False       是否包邮
 is_default             Bool          可选          False       是否默认
 =====================  ===========  ==========  ===========  ==============================
@@ -494,9 +506,18 @@ is_default             Bool          可选          False       是否默认
 .. code-block:: javascript
 
     {
-        "name":"模板一",
+        "name":"运费模板10",
         "express_id":4,
-        "place_ids":"1,2"
+        "pricing_method":1,
+        "first_item":1,
+        "first_amount":10,
+        "continuous_item":1,
+        "continuous_amount":10,
+        "min_days":3,
+        "max_days":5,
+        "is_free":true,
+        "is_default":true,
+        "place_oid":[1,2]
     }
 
 返回示例
@@ -510,35 +531,30 @@ JSON数据格式:
 
     {
         "data": {
-            "continuous_amount": 0,
-            "continuous_item": 1,
-            "continuous_weight": 0,
-            "created_at": 1528708060,
-            "express": "圆通",
-            "first_amount": 0,
-            "first_item": 1,
-            "first_weight": 0,
-            "id": 6,
-            "is_default": false,
-            "is_free": false,
-            "name": "模板一",
-            "place": [
+            "continuous_amount": 10,  // 续费
+            "continuous_item": 1,  // 续件
+            "continuous_weight": 0,  // 续重
+            "created_at": 1529389099,  // 创建时间
+            "express": "圆通",  // 物流公司
+            "first_amount": 10,  // 首费
+            "first_item": 1,  // 首件
+            "first_weight": 0,  // 首重
+            "is_default": true,  // 是否默认
+            "is_free": true,  // 是否免费
+            "max_days": 5,  // 最长时间
+            "min_days": 3,  // 最短时间
+            "name": "运费模板10",  // 模板名称
+            "places": [
                 {
-                    "name": "北京",
+                    "name": "北京",  // 运送地区
                     "oid": 1,
                     "pid": null,
                     "sort_by": 1,
                     "status": true
                 },
-                {
-                    "name": "天津",
-                    "oid": null,
-                    "pid": null,
-                    "sort_by": null,
-                    "status": null
-                }
             ],
-            "pricing_method": 1
+            "pricing_method": 1,  // 计费方式
+            "rid": "FTTILBOPGCQ"  // 模板rid
         },
         "status": {
             "code": 201,
@@ -565,9 +581,9 @@ JSON数据格式:
 =====================  ===========  ==========  ===========  ==============================
 名称                    类型          是否必须      默认值        描述说明
 =====================  ===========  ==========  ===========  ==============================
-rid                    Integer       必需                      模板id
-name                   String        可选                      模板名称
-express_id             Integer       可选                      物流公司id
+rid                    Integer       必需                      模板rid
+name                   String        必需                      模板名称
+express_id             Integer       必需                      物流公司id
 pricing_method         Integer       可选          1           计价方式 1、按件数 2、按重量
 first_item             Integer       可选          1           首件
 first_weight           Numeric       可选          0           首重
@@ -575,7 +591,9 @@ first_amount           Numeric       可选          0           首费
 continuous_item        Integer       可选          1           续件
 continuous_weight      Numeric       可选          0           续费
 continuous_amount      Numeric       可选          0           续重
-place_ids              String        可选                      运送地区,多个地区逗号隔开
+min_days               Integer       可选          0           最少天数
+max_days               Integer       可选          0           最多天数
+place_oid              Array         可选          []          运送地区oid
 is_free                Bool          可选          False       是否包邮
 is_default             Bool          可选          False       是否默认
 =====================  ===========  ==========  ===========  ==============================
@@ -592,28 +610,30 @@ JSON数据格式:
 
     {
         "data": {
-            "continuous_amount": 0,
-            "continuous_item": 1,
-            "continuous_weight": 0,
-            "created_at": 1528708416,
-            "express": "圆通",
-            "first_amount": 0,
-            "first_item": 1,
-            "first_weight": 0,
-            "id": 8,
-            "is_default": true,
-            "is_free": false,
-            "name": "模板一",
-            "place": [
+            "continuous_amount": 10,  // 续费
+            "continuous_item": 1,  // 续件
+            "continuous_weight": 0,  // 续重
+            "created_at": 1529389099,  // 创建时间
+            "express": "圆通",  // 物流公司
+            "first_amount": 10,  // 首费
+            "first_item": 1,  // 首件
+            "first_weight": 0,  // 首重
+            "is_default": true,  // 是否默认
+            "is_free": true,  // 是否免费
+            "max_days": 5,  // 最长时间
+            "min_days": 3,  // 最短时间
+            "name": "运费模板10",  // 模板名称
+            "places": [
                 {
-                    "name": "北京",
+                    "name": "北京",  // 运送地区
                     "oid": 1,
                     "pid": null,
                     "sort_by": 1,
                     "status": true
-                }
+                },
             ],
-            "pricing_method": 1
+            "pricing_method": 1,  // 计费方式
+            "rid": "FTTILBOPGCQ"  // 模板rid
         },
         "status": {
             "code": 201,
@@ -633,6 +653,16 @@ JSON数据格式:
 * API接口请求地址：``/logistics/freight_template``
 * API接口请求方法：``GET``
 * API接口用户授权：``token``
+
+请求参数
+~~~~~~~~~~~~~~~
+
+===========  ========  =========  ========  ====================================
+名称          类型      是否必须    默认值     描述说明
+===========  ========  =========  ========  ====================================
+page         Number    可选         1         当前页码
+per_page     Number    可选         10        每页数量
+===========  ========  =========  ========  ====================================
 
 
 返回示例
@@ -702,7 +732,7 @@ JSON数据格式:
 =====================  ===========  ==========  ===========  ==============================
 名称                    类型          是否必须      默认值        描述说明
 =====================  ===========  ==========  ===========  ==============================
-rid                    Integer       必需                      模板id
+rid                    Integer       必需                      模板rid
 =====================  ===========  ==========  ===========  ==============================
 
 返回示例
@@ -752,7 +782,7 @@ JSON数据格式:
 =====================  ===========  ==========  ===========  ==============================
 名称                    类型          是否必须      默认值        描述说明
 =====================  ===========  ==========  ===========  ==============================
-rid                    Integer       必需                      模板id
+rid                    Integer       必需                      模板rid
 =====================  ===========  ==========  ===========  ==============================
 
 返回示例

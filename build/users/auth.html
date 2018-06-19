@@ -87,6 +87,10 @@
 <li class="toctree-l2"><a class="reference internal" href="../products/products.html">商品模块</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../products/category.html">分类模块</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../products/brands.html">供应商/品牌模块</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../products/materials.html">商品材料模块</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../products/colors.html">商品颜色模块</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../products/models.html">商品规格模块</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../products/return_policies.html">商家退换货规则模块</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../products/store_product_packet.html">店铺商品组模块</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../products/distributions.html">分销模块</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../products/wish.html">心愿清单模块</a></li>
@@ -192,7 +196,8 @@
 <li><a class="reference internal" href="#id24">忘记密码</a></li>
 <li><a class="reference internal" href="#id25">获取手机号地区编码</a><ul>
 <li><a class="reference internal" href="#id26">接口说明</a></li>
-<li><a class="reference internal" href="#id27">返回示例</a></li>
+<li><a class="reference internal" href="#id27">请求参数</a></li>
+<li><a class="reference internal" href="#id28">返回示例</a></li>
 </ul>
 </li>
 </ul>
@@ -265,7 +270,8 @@
 <li><a class="reference internal" href="#id24">忘记密码</a></li>
 <li><a class="reference internal" href="#id25">获取手机号地区编码</a><ul>
 <li><a class="reference internal" href="#id26">接口说明</a></li>
-<li><a class="reference internal" href="#id27">返回示例</a></li>
+<li><a class="reference internal" href="#id27">请求参数</a></li>
+<li><a class="reference internal" href="#id28">返回示例</a></li>
 </ul>
 </li>
 </ul>
@@ -705,16 +711,58 @@
 </ul>
 </div>
 <div class="section" id="id27">
-<h3>返回示例<a class="headerlink" href="#id27" title="永久链接至标题">¶</a></h3>
+<h3>请求参数<a class="headerlink" href="#id27" title="永久链接至标题">¶</a></h3>
+<table border="1" class="docutils">
+<colgroup>
+<col width="15%" />
+<col width="11%" />
+<col width="12%" />
+<col width="11%" />
+<col width="51%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">名称</th>
+<th class="head">类型</th>
+<th class="head">是否必须</th>
+<th class="head">默认值</th>
+<th class="head">描述说明</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>page</td>
+<td>Number</td>
+<td>可选</td>
+<td>1</td>
+<td>当前页码</td>
+</tr>
+<tr class="row-odd"><td>per_page</td>
+<td>Number</td>
+<td>可选</td>
+<td>&#160;</td>
+<td>每页数量，默认全返回</td>
+</tr>
+<tr class="row-even"><td>status</td>
+<td>Integer</td>
+<td>可选</td>
+<td>2</td>
+<td>是否开通 0、不开通 1、开通 2、全部</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="id28">
+<h3>返回示例<a class="headerlink" href="#id28" title="永久链接至标题">¶</a></h3>
 <p>JSON数据格式:</p>
 <div class="highlight-javascript"><div class="highlight"><pre><span></span><span class="p">{</span>
     <span class="s2">&quot;data&quot;</span><span class="o">:</span> <span class="p">{</span>
         <span class="s2">&quot;area_codes&quot;</span><span class="o">:</span> <span class="p">[</span>
             <span class="p">{</span>
-                <span class="s2">&quot;areacode&quot;</span><span class="o">:</span> <span class="s2">&quot;+853&quot;</span><span class="p">,</span>
-                <span class="s2">&quot;en_name&quot;</span><span class="o">:</span> <span class="s2">&quot;macao&quot;</span><span class="p">,</span>
-                <span class="s2">&quot;id&quot;</span><span class="o">:</span> <span class="mi">3</span><span class="p">,</span>
-                <span class="s2">&quot;name&quot;</span><span class="o">:</span> <span class="s2">&quot;中国澳门&quot;</span>
+                <span class="s2">&quot;areacode&quot;</span><span class="o">:</span> <span class="s2">&quot;+853&quot;</span><span class="p">,</span>  <span class="c1">// 地区手机区号</span>
+                <span class="s2">&quot;en_name&quot;</span><span class="o">:</span> <span class="s2">&quot;macao&quot;</span><span class="p">,</span>  <span class="c1">// 地区英文名</span>
+                <span class="s2">&quot;id&quot;</span><span class="o">:</span> <span class="mi">3</span><span class="p">,</span>  <span class="c1">// 地区id</span>
+                <span class="s2">&quot;name&quot;</span><span class="o">:</span> <span class="s2">&quot;中国澳门&quot;</span><span class="p">,</span>  <span class="c1">// 地区名称</span>
+                <span class="s2">&quot;status&quot;</span><span class="o">:</span> <span class="kc">true</span>  <span class="c1">// 是否开通</span>
+
             <span class="p">}</span>
         <span class="p">],</span>
         <span class="s2">&quot;count&quot;</span><span class="o">:</span> <span class="mi">3</span><span class="p">,</span>

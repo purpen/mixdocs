@@ -87,6 +87,10 @@
 <li class="toctree-l2"><a class="reference internal" href="../products/products.html">商品模块</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../products/category.html">分类模块</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../products/brands.html">供应商/品牌模块</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../products/materials.html">商品材料模块</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../products/colors.html">商品颜色模块</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../products/models.html">商品规格模块</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../products/return_policies.html">商家退换货规则模块</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../products/store_product_packet.html">店铺商品组模块</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../products/distributions.html">分销模块</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../products/wish.html">心愿清单模块</a></li>
@@ -511,6 +515,7 @@
         &quot;next&quot;: &quot;http://0.0.0.0:9000/api/v1.0/orders?status=2&amp;page=2&quot;,  // 下一页链接
         &quot;orders&quot;: [
             {
+                &quot;bonus_amount&quot;: 0,  // 红包金额
                 &quot;buyer_address&quot;: &quot;朝阳区&quot;,  // 买家地址
                 &quot;buyer_city&quot;: &quot;北京&quot;,  // 买家城市
                 &quot;buyer_country&quot;: &quot;中国&quot;,  // 买家国家
@@ -520,12 +525,14 @@
                 &quot;buyer_remark&quot;: null,  // 买家备注
                 &quot;buyer_tel&quot;: null,  // 买家电话
                 &quot;buyer_zipcode&quot;: null,  // 买家邮政编码
+                &quot;coupon_amount&quot;: 2,  // 优惠券金额
                 &quot;created_at&quot;: 1528620896,  // 订单时间
                 &quot;customer_order_id&quot;: null,  // 关联分销商订单编号
-                &quot;discount_amount&quot;: 0,  // 优惠金额
+                &quot;discount_amount&quot;: 0,  // 总优惠金额
                 &quot;express_at&quot;: 0,  // 发货时间
                 &quot;express_name&quot;: &quot;&quot;,  // 快递公司
                 &quot;express_no&quot;: null,  // 运单号
+                &quot;first_discount&quot;: 300,  // 首单优惠金额
                 &quot;freight&quot;: 0,  // 运费
                 &quot;items&quot;: [
                     {
@@ -545,35 +552,19 @@
                         &quot;sale_price&quot;: &quot;1.00&quot;,  // 促销价
                         &quot;stock_count&quot;: 11089  // 库存
                     },
-                    {
-                        &quot;cost_price&quot;: &quot;2.00&quot;,
-                        &quot;cover&quot;: &quot;http://0.0.0.0:9000/_uploads/photos/1&quot;,
-                        &quot;deal_price&quot;: 999.1,
-                        &quot;discount_amount&quot;: 0,
-                        &quot;id_code&quot;: &quot;1&quot;,
-                        &quot;mode&quot;: &quot;2 2&quot;,
-                        &quot;price&quot;: &quot;2.00&quot;,
-                        &quot;product_name&quot;: &quot;汽车&quot;,
-                        &quot;quantity&quot;: 1,
-                        &quot;rid&quot;: &quot;2&quot;,
-                        &quot;s_color&quot;: &quot;2&quot;,
-                        &quot;s_model&quot;: &quot;2&quot;,
-                        &quot;s_weight&quot;: &quot;2.00&quot;,
-                        &quot;sale_price&quot;: &quot;2.00&quot;,
-                        &quot;stock_count&quot;: 22106
-                    }
                 ],
                 &quot;outside_target_id&quot;: &quot;D18061062954387&quot;,  // 第三方平台订单编号
                 &quot;pay_amount&quot;: 3996.4,  // 支付金额
+                &quot;reach_minus&quot;: 0,  // 满减金额
                 &quot;received_at&quot;: 0,  // 收货时间
                 &quot;remark&quot;: null,  // 卖家备注
                 &quot;rid&quot;: &quot;D18061062954387&quot;,  // 订单编号
                 &quot;ship_mode&quot;: 1,  // 物流方式 1、快递；2、自提；
                 &quot;status&quot;: 40,  // 订单状态
                 &quot;store_name&quot;: &quot;第一家(None)&quot;,  // 店铺名称
-                &quot;total_amount&quot;: 3996.4,  // 总金额
+                &quot;total_amount&quot;: 3996.4,  // 订单总金额
                 &quot;total_quantity&quot;: 4  // 总数量
-            }
+            },
         ],
         &quot;prev&quot;: null  // 上一页链接
     },
@@ -665,6 +656,7 @@
         &quot;next&quot;: &quot;http://0.0.0.0:9000/api/v1.0/orders?status=2&amp;page=2&quot;,  // 下一页链接
         &quot;orders&quot;: [
             {
+                &quot;bonus_amount&quot;: 0,  // 红包金额
                 &quot;buyer_address&quot;: &quot;朝阳区&quot;,  // 买家地址
                 &quot;buyer_city&quot;: &quot;北京&quot;,  // 买家城市
                 &quot;buyer_country&quot;: &quot;中国&quot;,  // 买家国家
@@ -674,12 +666,14 @@
                 &quot;buyer_remark&quot;: null,  // 买家备注
                 &quot;buyer_tel&quot;: null,  // 买家电话
                 &quot;buyer_zipcode&quot;: null,  // 买家邮政编码
+                &quot;coupon_amount&quot;: 2,  // 优惠券金额
                 &quot;created_at&quot;: 1528620896,  // 订单时间
                 &quot;customer_order_id&quot;: null,  // 关联分销商订单编号
-                &quot;discount_amount&quot;: 0,  // 优惠金额
+                &quot;discount_amount&quot;: 0,  // 总优惠金额
                 &quot;express_at&quot;: 0,  // 发货时间
                 &quot;express_name&quot;: &quot;&quot;,  // 快递公司
                 &quot;express_no&quot;: null,  // 运单号
+                &quot;first_discount&quot;: 300,  // 首单优惠金额
                 &quot;freight&quot;: 0,  // 运费
                 &quot;items&quot;: [
                     {
@@ -699,35 +693,19 @@
                         &quot;sale_price&quot;: &quot;1.00&quot;,  // 促销价
                         &quot;stock_count&quot;: 11089  // 库存
                     },
-                    {
-                        &quot;cost_price&quot;: &quot;2.00&quot;,
-                        &quot;cover&quot;: &quot;http://0.0.0.0:9000/_uploads/photos/1&quot;,
-                        &quot;deal_price&quot;: 999.1,
-                        &quot;discount_amount&quot;: 0,
-                        &quot;id_code&quot;: &quot;1&quot;,
-                        &quot;mode&quot;: &quot;2 2&quot;,
-                        &quot;price&quot;: &quot;2.00&quot;,
-                        &quot;product_name&quot;: &quot;汽车&quot;,
-                        &quot;quantity&quot;: 1,
-                        &quot;rid&quot;: &quot;2&quot;,
-                        &quot;s_color&quot;: &quot;2&quot;,
-                        &quot;s_model&quot;: &quot;2&quot;,
-                        &quot;s_weight&quot;: &quot;2.00&quot;,
-                        &quot;sale_price&quot;: &quot;2.00&quot;,
-                        &quot;stock_count&quot;: 22106
-                    }
                 ],
                 &quot;outside_target_id&quot;: &quot;D18061062954387&quot;,  // 第三方平台订单编号
                 &quot;pay_amount&quot;: 3996.4,  // 支付金额
+                &quot;reach_minus&quot;: 0,  // 满减金额
                 &quot;received_at&quot;: 0,  // 收货时间
                 &quot;remark&quot;: null,  // 卖家备注
                 &quot;rid&quot;: &quot;D18061062954387&quot;,  // 订单编号
                 &quot;ship_mode&quot;: 1,  // 物流方式 1、快递；2、自提；
                 &quot;status&quot;: 40,  // 订单状态
                 &quot;store_name&quot;: &quot;第一家(None)&quot;,  // 店铺名称
-                &quot;total_amount&quot;: 3996.4,  // 总金额
+                &quot;total_amount&quot;: 3996.4,  // 订单总金额
                 &quot;total_quantity&quot;: 4  // 总数量
-            }
+            },
         ],
         &quot;prev&quot;: null  // 上一页链接
     },
@@ -947,49 +925,55 @@
 <td>0</td>
 <td>满减优惠金额</td>
 </tr>
-<tr class="row-even"><td>invoice_type</td>
+<tr class="row-even"><td>bonus_amount</td>
+<td>Integer</td>
+<td>可选</td>
+<td>0</td>
+<td>红包优惠金额</td>
+</tr>
+<tr class="row-odd"><td>invoice_type</td>
 <td>Integer</td>
 <td>可选</td>
 <td>1</td>
 <td>发票类型</td>
 </tr>
-<tr class="row-odd"><td>invoice_info</td>
+<tr class="row-even"><td>invoice_info</td>
 <td>String</td>
 <td>可选</td>
 <td>{}</td>
 <td>&#160;</td>
 </tr>
-<tr class="row-even"><td>buyer_remark</td>
+<tr class="row-odd"><td>buyer_remark</td>
 <td>String</td>
 <td>可选</td>
 <td>&#160;</td>
 <td>买家备注</td>
 </tr>
-<tr class="row-odd"><td>from_client</td>
+<tr class="row-even"><td>from_client</td>
 <td>String</td>
 <td>可选</td>
 <td>&#160;</td>
 <td>来源客户端，1、小程序；2、H5 3、App 4、TV 5、POS 6、PAD</td>
 </tr>
-<tr class="row-even"><td>affiliate_code</td>
+<tr class="row-odd"><td>affiliate_code</td>
 <td>String</td>
 <td>可选</td>
 <td>&#160;</td>
 <td>推广码</td>
 </tr>
-<tr class="row-odd"><td>coupon_code</td>
+<tr class="row-even"><td>coupon_code</td>
 <td>String</td>
 <td>可选</td>
 <td>&#160;</td>
 <td>优惠券码</td>
 </tr>
-<tr class="row-even"><td>customer_code</td>
+<tr class="row-odd"><td>customer_code</td>
 <td>String</td>
 <td>可选</td>
 <td>&#160;</td>
 <td>分销商代码</td>
 </tr>
-<tr class="row-odd"><td>sync_pay</td>
+<tr class="row-even"><td>sync_pay</td>
 <td>Integer</td>
 <td>可选</td>
 <td>&#160;</td>
@@ -1057,10 +1041,13 @@
 </div>
 <div class="section" id="id17">
 <h3>返回示例<a class="headerlink" href="#id17" title="永久链接至标题">¶</a></h3>
+<p><code class="docutils literal"><span class="pre">规则1：</span></code> 订单总金额 = 商品1交易价格 * 数量 + 商品2交易价格 * 数量+。。。。</p>
+<p><code class="docutils literal"><span class="pre">规则2：</span></code> 支付金额 = 订单总金额 + 运费 - 首单优惠 - 满减 - 优惠券 - 红包</p>
 <p>JSON数据格式:</p>
 <div class="highlight-javascript"><div class="highlight"><pre><span></span><span class="p">{</span>
     <span class="s2">&quot;data&quot;</span><span class="o">:</span> <span class="p">{</span>
         <span class="s2">&quot;order&quot;</span><span class="o">:</span> <span class="p">{</span>
+            <span class="s2">&quot;bonus_amount&quot;</span><span class="o">:</span> <span class="mi">0</span><span class="p">,</span>  <span class="c1">// 红包金额</span>
             <span class="s2">&quot;buyer_address&quot;</span><span class="o">:</span> <span class="s2">&quot;朝阳区&quot;</span><span class="p">,</span>  <span class="c1">// 买家地址</span>
             <span class="s2">&quot;buyer_city&quot;</span><span class="o">:</span> <span class="s2">&quot;北京&quot;</span><span class="p">,</span>  <span class="c1">// 买家城市</span>
             <span class="s2">&quot;buyer_country&quot;</span><span class="o">:</span> <span class="s2">&quot;中国&quot;</span><span class="p">,</span>  <span class="c1">// 买家国家</span>
@@ -1070,12 +1057,14 @@
             <span class="s2">&quot;buyer_remark&quot;</span><span class="o">:</span> <span class="kc">null</span><span class="p">,</span>  <span class="c1">// 买家备注</span>
             <span class="s2">&quot;buyer_tel&quot;</span><span class="o">:</span> <span class="kc">null</span><span class="p">,</span>  <span class="c1">// 买家电话</span>
             <span class="s2">&quot;buyer_zipcode&quot;</span><span class="o">:</span> <span class="kc">null</span><span class="p">,</span>  <span class="c1">// 买家邮政编码</span>
+            <span class="s2">&quot;coupon_amount&quot;</span><span class="o">:</span> <span class="mi">2</span><span class="p">,</span>  <span class="c1">// 优惠券金额</span>
             <span class="s2">&quot;created_at&quot;</span><span class="o">:</span> <span class="mi">1528620896</span><span class="p">,</span>  <span class="c1">// 订单时间</span>
             <span class="s2">&quot;customer_order_id&quot;</span><span class="o">:</span> <span class="kc">null</span><span class="p">,</span>  <span class="c1">// 关联分销商订单编号</span>
-            <span class="s2">&quot;discount_amount&quot;</span><span class="o">:</span> <span class="mi">0</span><span class="p">,</span>  <span class="c1">// 优惠金额</span>
+            <span class="s2">&quot;discount_amount&quot;</span><span class="o">:</span> <span class="mi">0</span><span class="p">,</span>  <span class="c1">// 总优惠金额</span>
             <span class="s2">&quot;express_at&quot;</span><span class="o">:</span> <span class="mi">0</span><span class="p">,</span>  <span class="c1">// 发货时间</span>
             <span class="s2">&quot;express_name&quot;</span><span class="o">:</span> <span class="s2">&quot;&quot;</span><span class="p">,</span>  <span class="c1">// 快递公司</span>
             <span class="s2">&quot;express_no&quot;</span><span class="o">:</span> <span class="kc">null</span><span class="p">,</span>  <span class="c1">// 运单号</span>
+            <span class="s2">&quot;first_discount&quot;</span><span class="o">:</span> <span class="mi">300</span><span class="p">,</span>  <span class="c1">// 首单优惠金额</span>
             <span class="s2">&quot;freight&quot;</span><span class="o">:</span> <span class="mi">0</span><span class="p">,</span>  <span class="c1">// 运费</span>
             <span class="s2">&quot;items&quot;</span><span class="o">:</span> <span class="p">[</span>
                 <span class="p">{</span>
@@ -1095,33 +1084,17 @@
                     <span class="s2">&quot;sale_price&quot;</span><span class="o">:</span> <span class="s2">&quot;1.00&quot;</span><span class="p">,</span>  <span class="c1">// 促销价</span>
                     <span class="s2">&quot;stock_count&quot;</span><span class="o">:</span> <span class="mi">11089</span>  <span class="c1">// 库存</span>
                 <span class="p">},</span>
-                <span class="p">{</span>
-                    <span class="s2">&quot;cost_price&quot;</span><span class="o">:</span> <span class="s2">&quot;2.00&quot;</span><span class="p">,</span>
-                    <span class="s2">&quot;cover&quot;</span><span class="o">:</span> <span class="s2">&quot;http://0.0.0.0:9000/_uploads/photos/1&quot;</span><span class="p">,</span>
-                    <span class="s2">&quot;deal_price&quot;</span><span class="o">:</span> <span class="mf">999.1</span><span class="p">,</span>
-                    <span class="s2">&quot;discount_amount&quot;</span><span class="o">:</span> <span class="mi">0</span><span class="p">,</span>
-                    <span class="s2">&quot;id_code&quot;</span><span class="o">:</span> <span class="s2">&quot;1&quot;</span><span class="p">,</span>
-                    <span class="s2">&quot;mode&quot;</span><span class="o">:</span> <span class="s2">&quot;2 2&quot;</span><span class="p">,</span>
-                    <span class="s2">&quot;price&quot;</span><span class="o">:</span> <span class="s2">&quot;2.00&quot;</span><span class="p">,</span>
-                    <span class="s2">&quot;product_name&quot;</span><span class="o">:</span> <span class="s2">&quot;汽车&quot;</span><span class="p">,</span>
-                    <span class="s2">&quot;quantity&quot;</span><span class="o">:</span> <span class="mi">1</span><span class="p">,</span>
-                    <span class="s2">&quot;rid&quot;</span><span class="o">:</span> <span class="s2">&quot;2&quot;</span><span class="p">,</span>
-                    <span class="s2">&quot;s_color&quot;</span><span class="o">:</span> <span class="s2">&quot;2&quot;</span><span class="p">,</span>
-                    <span class="s2">&quot;s_model&quot;</span><span class="o">:</span> <span class="s2">&quot;2&quot;</span><span class="p">,</span>
-                    <span class="s2">&quot;s_weight&quot;</span><span class="o">:</span> <span class="s2">&quot;2.00&quot;</span><span class="p">,</span>
-                    <span class="s2">&quot;sale_price&quot;</span><span class="o">:</span> <span class="s2">&quot;2.00&quot;</span><span class="p">,</span>
-                    <span class="s2">&quot;stock_count&quot;</span><span class="o">:</span> <span class="mi">22106</span>
-                <span class="p">}</span>
             <span class="p">],</span>
             <span class="s2">&quot;outside_target_id&quot;</span><span class="o">:</span> <span class="s2">&quot;D18061062954387&quot;</span><span class="p">,</span>  <span class="c1">// 第三方平台订单编号</span>
             <span class="s2">&quot;pay_amount&quot;</span><span class="o">:</span> <span class="mf">3996.4</span><span class="p">,</span>  <span class="c1">// 支付金额</span>
+            <span class="s2">&quot;reach_minus&quot;</span><span class="o">:</span> <span class="mi">0</span><span class="p">,</span>  <span class="c1">// 满减金额</span>
             <span class="s2">&quot;received_at&quot;</span><span class="o">:</span> <span class="mi">0</span><span class="p">,</span>  <span class="c1">// 收货时间</span>
             <span class="s2">&quot;remark&quot;</span><span class="o">:</span> <span class="kc">null</span><span class="p">,</span>  <span class="c1">// 卖家备注</span>
             <span class="s2">&quot;rid&quot;</span><span class="o">:</span> <span class="s2">&quot;D18061062954387&quot;</span><span class="p">,</span>  <span class="c1">// 订单编号</span>
             <span class="s2">&quot;ship_mode&quot;</span><span class="o">:</span> <span class="mi">1</span><span class="p">,</span>  <span class="c1">// 物流方式 1、快递；2、自提；</span>
             <span class="s2">&quot;status&quot;</span><span class="o">:</span> <span class="mi">40</span><span class="p">,</span>  <span class="c1">// 订单状态</span>
             <span class="s2">&quot;store_name&quot;</span><span class="o">:</span> <span class="s2">&quot;第一家(None)&quot;</span><span class="p">,</span>  <span class="c1">// 店铺名称</span>
-            <span class="s2">&quot;total_amount&quot;</span><span class="o">:</span> <span class="mf">3996.4</span><span class="p">,</span>  <span class="c1">// 总金额</span>
+            <span class="s2">&quot;total_amount&quot;</span><span class="o">:</span> <span class="mf">3996.4</span><span class="p">,</span>  <span class="c1">// 订单总金额</span>
             <span class="s2">&quot;total_quantity&quot;</span><span class="o">:</span> <span class="mi">4</span>  <span class="c1">// 总数量</span>
         <span class="p">},</span>
         <span class="s2">&quot;pay_params&quot;</span><span class="o">:</span> <span class="p">{</span>

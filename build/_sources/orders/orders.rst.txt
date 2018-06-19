@@ -231,6 +231,7 @@ outside_target_id      String      可选
 freight                Integer     可选          0          邮费
 first_discount         Integer     可选          0          首单优惠金额
 reach_minus            Integer     可选          0          满减优惠金额
+bonus_amount           Integer     可选          0          红包优惠金额
 invoice_type           Integer     可选          1          发票类型
 invoice_info           String      可选          {}
 buyer_remark           String      可选                     买家备注
@@ -265,6 +266,10 @@ warehouse_id           Number      可选                    发货的仓库ID
 返回示例
 ~~~~~~~~~~~~~~~~
 
+``规则1：`` 订单总金额 = 商品1交易价格 * 数量 + 商品2交易价格 * 数量+。。。。
+
+``规则2：`` 支付金额 = 订单总金额 + 运费 - 首单优惠 - 满减 - 优惠券 - 红包
+
 JSON数据格式:
 
 .. code-block:: javascript
@@ -272,6 +277,7 @@ JSON数据格式:
     {
         "data": {
             "order": {
+                "bonus_amount": 0,  // 红包金额
                 "buyer_address": "朝阳区",  // 买家地址
                 "buyer_city": "北京",  // 买家城市
                 "buyer_country": "中国",  // 买家国家
@@ -281,12 +287,14 @@ JSON数据格式:
                 "buyer_remark": null,  // 买家备注
                 "buyer_tel": null,  // 买家电话
                 "buyer_zipcode": null,  // 买家邮政编码
+                "coupon_amount": 2,  // 优惠券金额
                 "created_at": 1528620896,  // 订单时间
                 "customer_order_id": null,  // 关联分销商订单编号
-                "discount_amount": 0,  // 优惠金额
+                "discount_amount": 0,  // 总优惠金额
                 "express_at": 0,  // 发货时间
                 "express_name": "",  // 快递公司
                 "express_no": null,  // 运单号
+                "first_discount": 300,  // 首单优惠金额
                 "freight": 0,  // 运费
                 "items": [
                     {
@@ -306,33 +314,17 @@ JSON数据格式:
                         "sale_price": "1.00",  // 促销价
                         "stock_count": 11089  // 库存
                     },
-                    {
-                        "cost_price": "2.00",
-                        "cover": "http://0.0.0.0:9000/_uploads/photos/1",
-                        "deal_price": 999.1,
-                        "discount_amount": 0,
-                        "id_code": "1",
-                        "mode": "2 2",
-                        "price": "2.00",
-                        "product_name": "汽车",
-                        "quantity": 1,
-                        "rid": "2",
-                        "s_color": "2",
-                        "s_model": "2",
-                        "s_weight": "2.00",
-                        "sale_price": "2.00",
-                        "stock_count": 22106
-                    }
                 ],
                 "outside_target_id": "D18061062954387",  // 第三方平台订单编号
                 "pay_amount": 3996.4,  // 支付金额
+                "reach_minus": 0,  // 满减金额
                 "received_at": 0,  // 收货时间
                 "remark": null,  // 卖家备注
                 "rid": "D18061062954387",  // 订单编号
                 "ship_mode": 1,  // 物流方式 1、快递；2、自提；
                 "status": 40,  // 订单状态
                 "store_name": "第一家(None)",  // 店铺名称
-                "total_amount": 3996.4,  // 总金额
+                "total_amount": 3996.4,  // 订单总金额
                 "total_quantity": 4  // 总数量
             },
             "pay_params": {
