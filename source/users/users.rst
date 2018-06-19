@@ -145,8 +145,8 @@ sale_platform            Array     可选                      上线平台名�
 link                     Array     可选                      上线平台链接
 product_category         String    必须                      商品所属类别
 customized               Bool      可选       False          是否提供定制化服务
-attachments              String    必须                      原创商品图片ID
-product_price            String    必须                      商品价格范围
+attachments              Array     必须                      原创商品图片ID
+product_price            Array     必须                      商品价格范围
 company_name             String    必须                      公司名称
 url                      String    可选                      公司网址
 company_qualification    String    必须                      公司资质
@@ -161,7 +161,7 @@ JSON数据格式:
 .. code-block:: javascript
 
     {
-        "user_type":3,"name":"毛爷爷","avatar_id":1,"id_card":"13082119921226801x","front_card_photo_id":1,"reverse_card_photo_id":1,"holding_card_photo_id":1,"areacode":"+86","mobile":"13001179400","wechat":"jksjk45","country_id":1,"province_id":1,"city_id":1,"area_id":2,"street_address":"中南海","own_brand":true,"customized":true,"product_category":"无人机","attachments":[1,2,3],"product_price":"22~99","email":"1346555456@qq.com", "sale_platform":["京东","淘宝","天猫"],"product_scope":1, "brand_name":"jkss ","company_name":"京东", "url":"https://www.jd.com","link":["https://www.taobao.com","https://www.jingdong.com","https://www.tianmao.com"]
+        "user_type":3,"name":"毛爷爷","avatar_id":1,"id_card":"13082119921226801x","front_card_photo_id":1,"reverse_card_photo_id":1,"holding_card_photo_id":1,"areacode":"+86","mobile":"13001179400","wechat":"jksjk45","country_id":1,"province_id":1,"city_id":1,"area_id":2,"street_address":"中南海","own_brand":true,"customized":true,"product_category":"无人机","attachments":[1,2,3],"product_price":[22,99],"email":"1346555456@qq.com", "sale_platform":["京东","淘宝","天猫"],"product_scope":1, "brand_name":"jkss ","company_name":"京东", "url":"https://www.jd.com","link":["https://www.taobao.com","https://www.jingdong.com","https://www.tianmao.com"]
     }
 
 返回示例
