@@ -78,12 +78,18 @@
 <li class="toctree-l2 current"><a class="current reference internal" href="#">分销商订单模块</a></li>
 <li class="toctree-l2"><a class="reference internal" href="carts.html">购物车模块</a></li>
 <li class="toctree-l2"><a class="reference internal" href="addresses.html">收货地址模块</a></li>
+<li class="toctree-l2"><a class="reference internal" href="stats.html">统计模块</a></li>
+<li class="toctree-l2"><a class="reference internal" href="comment.html">订单评价模块</a></li>
+<li class="toctree-l2"><a class="reference internal" href="logistics.html">物流运费模块</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="../products/index.html">商品API模块</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="../products/products.html">商品模块</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../products/category.html">分类模块</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../products/brands.html">供应商/品牌模块</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../products/store_product_packet.html">店铺商品组模块</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../products/distributions.html">分销模块</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../products/wish.html">心愿清单模块</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../products/assets.html">附件模块</a></li>
 </ul>
 </li>
@@ -98,11 +104,16 @@
 </li>
 <li class="toctree-l1"><a class="reference internal" href="../shopes/index.html">微商城API模块</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="../shopes/shopes.html">微商城模块</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../shopes/store.html">店铺模块</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="../market/index.html">营销API模块</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="../market/banners.html">营销工具/广告模块</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../market/coupons.html">营销工具/优惠券模块</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../stats/index.html">统计API模块</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../stats/report.html">报表模块</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="../users/index.html">用户API模块</a><ul>
@@ -222,11 +233,11 @@
 <p>全渠道订单同步接口</p>
 <div class="section" id="id2">
 <h2>分销商订单列表<a class="headerlink" href="#id2" title="永久链接至标题">¶</a></h2>
-<p>获取全部或某个状态下分销商订单列表</p>
+<p>商家获取全部或某个状态下分销订单列表</p>
 <div class="section" id="id3">
 <h3>接口说明<a class="headerlink" href="#id3" title="永久链接至标题">¶</a></h3>
 <ul class="simple">
-<li>API接口请求地址：<code class="docutils literal"><span class="pre">/customer/orders</span></code></li>
+<li>API接口请求地址：<code class="docutils literal"><span class="pre">/master/orders</span></code></li>
 <li>API接口请求方法：<code class="docutils literal"><span class="pre">GET</span></code></li>
 <li>API接口用户授权：<code class="docutils literal"><span class="pre">token</span></code></li>
 </ul>
@@ -235,11 +246,11 @@
 <h3>请求参数<a class="headerlink" href="#id4" title="永久链接至标题">¶</a></h3>
 <table border="1" class="docutils">
 <colgroup>
-<col width="15%" />
-<col width="11%" />
-<col width="13%" />
-<col width="11%" />
-<col width="50%" />
+<col width="16%" />
+<col width="8%" />
+<col width="10%" />
+<col width="10%" />
+<col width="56%" />
 </colgroup>
 <thead valign="bottom">
 <tr class="row-odd"><th class="head">名称</th>
@@ -250,25 +261,31 @@
 </tr>
 </thead>
 <tbody valign="top">
-<tr class="row-even"><td>code</td>
-<td>String</td>
+<tr class="row-even"><td>is_distributed</td>
+<td>Number</td>
 <td>必填</td>
 <td>&#160;</td>
-<td>分销商编号</td>
+<td>是否分销订单 1、分销订单</td>
 </tr>
 <tr class="row-odd"><td>status</td>
 <td>Number</td>
 <td>可选</td>
 <td>&#160;</td>
-<td>订单状态</td>
+<td>订单状态 1、待发货 2、已发货 3、已完成 4、已取消</td>
 </tr>
-<tr class="row-even"><td>page</td>
+<tr class="row-even"><td>no_pay</td>
+<td>Number</td>
+<td>可选</td>
+<td>&#160;</td>
+<td>未付款  0、未付款</td>
+</tr>
+<tr class="row-odd"><td>page</td>
 <td>Number</td>
 <td>可选</td>
 <td>1</td>
 <td>当前页码</td>
 </tr>
-<tr class="row-odd"><td>per_page</td>
+<tr class="row-even"><td>per_page</td>
 <td>Number</td>
 <td>可选</td>
 <td>10</td>
@@ -280,96 +297,84 @@
 <div class="section" id="id5">
 <h3>返回示例<a class="headerlink" href="#id5" title="永久链接至标题">¶</a></h3>
 <p>JSON数据格式:</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="p">{</span>
-  <span class="s2">&quot;data&quot;</span><span class="p">:</span> <span class="p">{</span>
-    <span class="s2">&quot;count&quot;</span><span class="p">:</span> <span class="mi">2</span><span class="p">,</span>
-    <span class="s2">&quot;next&quot;</span><span class="p">:</span> <span class="n">null</span><span class="p">,</span>
-    <span class="s2">&quot;orders&quot;</span><span class="p">:</span> <span class="p">[</span>
-      <span class="p">{</span>
-        <span class="s2">&quot;buyer_address&quot;</span><span class="p">:</span> <span class="s2">&quot;751设计广场&quot;</span><span class="p">,</span>
-        <span class="s2">&quot;buyer_city&quot;</span><span class="p">:</span> <span class="s2">&quot;北京市&quot;</span><span class="p">,</span>
-        <span class="s2">&quot;buyer_country&quot;</span><span class="p">:</span> <span class="s2">&quot;中国&quot;</span><span class="p">,</span>
-        <span class="s2">&quot;buyer_name&quot;</span><span class="p">:</span> <span class="s2">&quot;田小北&quot;</span><span class="p">,</span>
-        <span class="s2">&quot;buyer_phone&quot;</span><span class="p">:</span> <span class="s2">&quot;18610230451&quot;</span><span class="p">,</span>
-        <span class="s2">&quot;buyer_province&quot;</span><span class="p">:</span> <span class="s2">&quot;北京&quot;</span><span class="p">,</span>
-        <span class="s2">&quot;buyer_remark&quot;</span><span class="p">:</span> <span class="s2">&quot;&quot;</span><span class="p">,</span>
-        <span class="s2">&quot;buyer_tel&quot;</span><span class="p">:</span> <span class="s2">&quot;01084599328&quot;</span><span class="p">,</span>
-        <span class="s2">&quot;buyer_zipcode&quot;</span><span class="p">:</span> <span class="s2">&quot;100015&quot;</span><span class="p">,</span>
-        <span class="s2">&quot;created_at&quot;</span><span class="p">:</span> <span class="mi">1514898101</span><span class="p">,</span>
-        <span class="s2">&quot;discount_amount&quot;</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span>
-        <span class="s2">&quot;express_at&quot;</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span>
-        <span class="s2">&quot;express_name&quot;</span><span class="p">:</span> <span class="s2">&quot;&quot;</span><span class="p">,</span>
-        <span class="s2">&quot;express_no&quot;</span><span class="p">:</span> <span class="n">null</span><span class="p">,</span>
-        <span class="s2">&quot;freight&quot;</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span>
-        <span class="s2">&quot;items&quot;</span><span class="p">:</span> <span class="p">[</span>
-          <span class="p">{</span>
-            <span class="s2">&quot;deal_price&quot;</span><span class="p">:</span> <span class="mi">23</span><span class="p">,</span>
-            <span class="s2">&quot;discount_amount&quot;</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span>
-            <span class="s2">&quot;quantity&quot;</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span>
-            <span class="s2">&quot;rid&quot;</span><span class="p">:</span> <span class="s2">&quot;117280530556&quot;</span>
-          <span class="p">}</span>
-        <span class="p">],</span>
-        <span class="s2">&quot;outside_target_id&quot;</span><span class="p">:</span> <span class="s2">&quot;132234&quot;</span><span class="p">,</span>
-        <span class="s2">&quot;pay_amount&quot;</span><span class="p">:</span> <span class="mi">23</span><span class="p">,</span>
-        <span class="s2">&quot;received_at&quot;</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span>
-        <span class="s2">&quot;remark&quot;</span><span class="p">:</span> <span class="n">null</span><span class="p">,</span>
-        <span class="s2">&quot;rid&quot;</span><span class="p">:</span> <span class="s2">&quot;D201801029560287431&quot;</span><span class="p">,</span>
-        <span class="s2">&quot;ship_mode&quot;</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span>
-        <span class="s2">&quot;status&quot;</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span>
-        <span class="s2">&quot;store_name&quot;</span><span class="p">:</span> <span class="s2">&quot;D3IN(JD)&quot;</span><span class="p">,</span>
-        <span class="s2">&quot;total_amount&quot;</span><span class="p">:</span> <span class="mi">23</span><span class="p">,</span>
-        <span class="s2">&quot;total_quantity&quot;</span><span class="p">:</span> <span class="mi">1</span>
-      <span class="p">},</span>
-      <span class="p">{</span>
-        <span class="s2">&quot;buyer_address&quot;</span><span class="p">:</span> <span class="s2">&quot;酒仙桥路&quot;</span><span class="p">,</span>
-        <span class="s2">&quot;buyer_city&quot;</span><span class="p">:</span> <span class="s2">&quot;北京&quot;</span><span class="p">,</span>
-        <span class="s2">&quot;buyer_country&quot;</span><span class="p">:</span> <span class="s2">&quot;&quot;</span><span class="p">,</span>
-        <span class="s2">&quot;buyer_name&quot;</span><span class="p">:</span> <span class="s2">&quot;火鸟&quot;</span><span class="p">,</span>
-        <span class="s2">&quot;buyer_phone&quot;</span><span class="p">:</span> <span class="s2">&quot;13691279128&quot;</span><span class="p">,</span>
-        <span class="s2">&quot;buyer_province&quot;</span><span class="p">:</span> <span class="s2">&quot;北京&quot;</span><span class="p">,</span>
-        <span class="s2">&quot;buyer_remark&quot;</span><span class="p">:</span> <span class="s2">&quot;&quot;</span><span class="p">,</span>
-        <span class="s2">&quot;buyer_tel&quot;</span><span class="p">:</span> <span class="s2">&quot;&quot;</span><span class="p">,</span>
-        <span class="s2">&quot;buyer_zipcode&quot;</span><span class="p">:</span> <span class="s2">&quot;100015&quot;</span><span class="p">,</span>
-        <span class="s2">&quot;created_at&quot;</span><span class="p">:</span> <span class="mi">1514394106</span><span class="p">,</span>
-        <span class="s2">&quot;discount_amount&quot;</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span>
-        <span class="s2">&quot;express_at&quot;</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span>
-        <span class="s2">&quot;express_name&quot;</span><span class="p">:</span> <span class="s2">&quot;顺丰&quot;</span><span class="p">,</span>
-        <span class="s2">&quot;express_no&quot;</span><span class="p">:</span> <span class="n">null</span><span class="p">,</span>
-        <span class="s2">&quot;freight&quot;</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span>
-        <span class="s2">&quot;items&quot;</span><span class="p">:</span> <span class="p">[</span>
-          <span class="p">{</span>
-            <span class="s2">&quot;deal_price&quot;</span><span class="p">:</span> <span class="mi">69</span><span class="p">,</span>
-            <span class="s2">&quot;discount_amount&quot;</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span>
-            <span class="s2">&quot;quantity&quot;</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span>
-            <span class="s2">&quot;rid&quot;</span><span class="p">:</span> <span class="s2">&quot;117280530556&quot;</span>
-          <span class="p">},</span>
-          <span class="p">{</span>
-            <span class="s2">&quot;deal_price&quot;</span><span class="p">:</span> <span class="mi">69</span><span class="p">,</span>
-            <span class="s2">&quot;discount_amount&quot;</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span>
-            <span class="s2">&quot;quantity&quot;</span><span class="p">:</span> <span class="mi">2</span><span class="p">,</span>
-            <span class="s2">&quot;rid&quot;</span><span class="p">:</span> <span class="s2">&quot;117280969019&quot;</span>
-          <span class="p">}</span>
-        <span class="p">],</span>
-        <span class="s2">&quot;outside_target_id&quot;</span><span class="p">:</span> <span class="s2">&quot;C17280018997&quot;</span><span class="p">,</span>
-        <span class="s2">&quot;pay_amount&quot;</span><span class="p">:</span> <span class="mi">207</span><span class="p">,</span>
-        <span class="s2">&quot;received_at&quot;</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span>
-        <span class="s2">&quot;remark&quot;</span><span class="p">:</span> <span class="s2">&quot;&quot;</span><span class="p">,</span>
-        <span class="s2">&quot;rid&quot;</span><span class="p">:</span> <span class="s2">&quot;C17280018997&quot;</span><span class="p">,</span>
-        <span class="s2">&quot;ship_mode&quot;</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span>
-        <span class="s2">&quot;status&quot;</span><span class="p">:</span> <span class="mi">5</span><span class="p">,</span>
-        <span class="s2">&quot;store_name&quot;</span><span class="p">:</span> <span class="s2">&quot;D3IN(JD)&quot;</span><span class="p">,</span>
-        <span class="s2">&quot;total_amount&quot;</span><span class="p">:</span> <span class="mi">207</span><span class="p">,</span>
-        <span class="s2">&quot;total_quantity&quot;</span><span class="p">:</span> <span class="mi">3</span>
-      <span class="p">}</span>
-    <span class="p">],</span>
-    <span class="s2">&quot;prev&quot;</span><span class="p">:</span> <span class="n">null</span>
-  <span class="p">},</span>
-  <span class="s2">&quot;status&quot;</span><span class="p">:</span> <span class="p">{</span>
-    <span class="s2">&quot;code&quot;</span><span class="p">:</span> <span class="mi">200</span><span class="p">,</span>
-    <span class="s2">&quot;message&quot;</span><span class="p">:</span> <span class="s2">&quot;Ok all right.&quot;</span>
-  <span class="p">},</span>
-  <span class="s2">&quot;success&quot;</span><span class="p">:</span> <span class="n">true</span>
-<span class="p">}</span>
+<div class="highlight-default"><div class="highlight"><pre><span></span>{
+    &quot;data&quot;: {
+        &quot;count&quot;: 2,  // 总个数
+        &quot;next&quot;: &quot;http://0.0.0.0:9000/api/v1.0/orders?status=2&amp;page=2&quot;,  // 下一页链接
+        &quot;orders&quot;: [
+            {
+                &quot;buyer_address&quot;: &quot;朝阳区&quot;,  // 买家地址
+                &quot;buyer_city&quot;: &quot;北京&quot;,  // 买家城市
+                &quot;buyer_country&quot;: &quot;中国&quot;,  // 买家国家
+                &quot;buyer_name&quot;: &quot;田帅&quot;,  // 买家姓名
+                &quot;buyer_phone&quot;: &quot;13278989898&quot;,  // 买家手机
+                &quot;buyer_province&quot;: &quot;北京&quot;,  // 买家省
+                &quot;buyer_remark&quot;: null,  // 买家备注
+                &quot;buyer_tel&quot;: null,  // 买家电话
+                &quot;buyer_zipcode&quot;: null,  // 买家邮政编码
+                &quot;created_at&quot;: 1528620896,  // 订单时间
+                &quot;customer_order_id&quot;: null,  // 关联分销商订单编号
+                &quot;discount_amount&quot;: 0,  // 优惠金额
+                &quot;express_at&quot;: 0,  // 发货时间
+                &quot;express_name&quot;: &quot;&quot;,  // 快递公司
+                &quot;express_no&quot;: null,  // 运单号
+                &quot;freight&quot;: 0,  // 运费
+                &quot;items&quot;: [
+                    {
+                        &quot;cost_price&quot;: &quot;1.00&quot;,  // 采购价
+                        &quot;cover&quot;: &quot;http://0.0.0.0:9000/_uploads/photos/1&quot;,  // 商品图片
+                        &quot;deal_price&quot;: 999.1,  // 交易单价
+                        &quot;discount_amount&quot;: 0,  // 优惠金额
+                        &quot;id_code&quot;: &quot;1&quot;,  // 商品编码
+                        &quot;mode&quot;: &quot;1 1&quot;,  // 型号
+                        &quot;price&quot;: &quot;1.00&quot;,  // 零售价
+                        &quot;product_name&quot;: &quot;摩托&quot;,  // 商品名
+                        &quot;quantity&quot;: 3,  // 购买数量
+                        &quot;rid&quot;: &quot;1&quot;,  // sku_serial_no
+                        &quot;s_color&quot;: &quot;1&quot;,  // 颜色
+                        &quot;s_model&quot;: &quot;1&quot;,  // 型号
+                        &quot;s_weight&quot;: &quot;1.00&quot;,  // 重量
+                        &quot;sale_price&quot;: &quot;1.00&quot;,  // 促销价
+                        &quot;stock_count&quot;: 11089  // 库存
+                    },
+                    {
+                        &quot;cost_price&quot;: &quot;2.00&quot;,
+                        &quot;cover&quot;: &quot;http://0.0.0.0:9000/_uploads/photos/1&quot;,
+                        &quot;deal_price&quot;: 999.1,
+                        &quot;discount_amount&quot;: 0,
+                        &quot;id_code&quot;: &quot;1&quot;,
+                        &quot;mode&quot;: &quot;2 2&quot;,
+                        &quot;price&quot;: &quot;2.00&quot;,
+                        &quot;product_name&quot;: &quot;汽车&quot;,
+                        &quot;quantity&quot;: 1,
+                        &quot;rid&quot;: &quot;2&quot;,
+                        &quot;s_color&quot;: &quot;2&quot;,
+                        &quot;s_model&quot;: &quot;2&quot;,
+                        &quot;s_weight&quot;: &quot;2.00&quot;,
+                        &quot;sale_price&quot;: &quot;2.00&quot;,
+                        &quot;stock_count&quot;: 22106
+                    }
+                ],
+                &quot;outside_target_id&quot;: &quot;D18061062954387&quot;,  // 第三方平台订单编号
+                &quot;pay_amount&quot;: 3996.4,  // 支付金额
+                &quot;received_at&quot;: 0,  // 收货时间
+                &quot;remark&quot;: null,  // 卖家备注
+                &quot;rid&quot;: &quot;D18061062954387&quot;,  // 订单编号
+                &quot;ship_mode&quot;: 1,  // 物流方式 1、快递；2、自提；
+                &quot;status&quot;: 40,  // 订单状态
+                &quot;store_name&quot;: &quot;第一家(None)&quot;,  // 店铺名称
+                &quot;total_amount&quot;: 3996.4,  // 总金额
+                &quot;total_quantity&quot;: 4  // 总数量
+            }
+        ],
+        &quot;prev&quot;: null  // 上一页链接
+    },
+    &quot;status&quot;: {
+        &quot;code&quot;: 200,
+        &quot;message&quot;: &quot;Ok all right.&quot;
+    },
+    &quot;success&quot;: true
+}
 
 
 </pre></div>

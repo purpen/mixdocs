@@ -75,14 +75,22 @@
 </li>
 <li class="toctree-l1"><a class="reference internal" href="../orders/index.html">销售API模块</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="../orders/orders.html">订单模块</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../orders/customer_orders.html">分销商订单模块</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../orders/carts.html">购物车模块</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../orders/addresses.html">收货地址模块</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../orders/stats.html">统计模块</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../orders/comment.html">订单评价模块</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../orders/logistics.html">物流运费模块</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="../products/index.html">商品API模块</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="../products/products.html">商品模块</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../products/category.html">分类模块</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../products/brands.html">供应商/品牌模块</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../products/store_product_packet.html">店铺商品组模块</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../products/distributions.html">分销模块</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../products/wish.html">心愿清单模块</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../products/assets.html">附件模块</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="../customers/index.html">分销客户API模块</a><ul>
@@ -96,10 +104,16 @@
 </li>
 <li class="toctree-l1"><a class="reference internal" href="../shopes/index.html">微商城API模块</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="../shopes/shopes.html">微商城模块</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../shopes/store.html">店铺模块</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="../market/index.html">营销API模块</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../market/banners.html">营销工具/广告模块</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../market/coupons.html">营销工具/优惠券模块</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../stats/index.html">统计API模块</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../stats/report.html">报表模块</a></li>
 </ul>
 </li>
 <li class="toctree-l1 current"><a class="reference internal" href="index.html">用户API模块</a><ul class="current">
@@ -151,6 +165,60 @@
 <li><a class="reference internal" href="#id8">返回示例</a></li>
 </ul>
 </li>
+<li><a class="reference internal" href="#id9">商家实名认证</a><ul>
+<li><a class="reference internal" href="#id10">接口说明</a></li>
+<li><a class="reference internal" href="#id11">请求参数</a></li>
+<li><a class="reference internal" href="#id12">请求示例</a></li>
+<li><a class="reference internal" href="#id13">返回示例</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#id14">更新认证状态</a><ul>
+<li><a class="reference internal" href="#id15">接口说明</a></li>
+<li><a class="reference internal" href="#id16">请求参数</a></li>
+<li><a class="reference internal" href="#id17">返回示例</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#id18">签署合同</a><ul>
+<li><a class="reference internal" href="#id19">接口说明</a></li>
+<li><a class="reference internal" href="#id20">返回示例</a></li>
+<li><a class="reference internal" href="#id21">请求参数</a></li>
+<li><a class="reference internal" href="#id22">返回示例</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#id23">修改合同信息</a><ul>
+<li><a class="reference internal" href="#id24">接口说明</a></li>
+<li><a class="reference internal" href="#id25">请求示例</a></li>
+<li><a class="reference internal" href="#id26">返回示例</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#id27">获取合同信息</a><ul>
+<li><a class="reference internal" href="#id28">接口说明</a></li>
+<li><a class="reference internal" href="#id29">返回示例</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#id30">保存用户第三方登陆信息</a><ul>
+<li><a class="reference internal" href="#id31">接口说明</a></li>
+<li><a class="reference internal" href="#id32">请求参数</a></li>
+<li><a class="reference internal" href="#id33">请求示例</a></li>
+<li><a class="reference internal" href="#id34">返回示例</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#id35">获取用户设置信息</a><ul>
+<li><a class="reference internal" href="#id36">接口说明</a></li>
+<li><a class="reference internal" href="#id37">返回示例</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#id38">编辑个人资料</a><ul>
+<li><a class="reference internal" href="#id39">接口说明</a></li>
+<li><a class="reference internal" href="#id40">请求参数</a></li>
+<li><a class="reference internal" href="#id41">返回示例</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#id42">获取个人资料</a><ul>
+<li><a class="reference internal" href="#id43">接口说明</a></li>
+<li><a class="reference internal" href="#id44">返回示例</a></li>
+</ul>
+</li>
 </ul>
 </li>
 </ul>
@@ -192,6 +260,60 @@
 <li><a class="reference internal" href="#id6">接口说明</a></li>
 <li><a class="reference internal" href="#id7">请求参数</a></li>
 <li><a class="reference internal" href="#id8">返回示例</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#id9">商家实名认证</a><ul>
+<li><a class="reference internal" href="#id10">接口说明</a></li>
+<li><a class="reference internal" href="#id11">请求参数</a></li>
+<li><a class="reference internal" href="#id12">请求示例</a></li>
+<li><a class="reference internal" href="#id13">返回示例</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#id14">更新认证状态</a><ul>
+<li><a class="reference internal" href="#id15">接口说明</a></li>
+<li><a class="reference internal" href="#id16">请求参数</a></li>
+<li><a class="reference internal" href="#id17">返回示例</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#id18">签署合同</a><ul>
+<li><a class="reference internal" href="#id19">接口说明</a></li>
+<li><a class="reference internal" href="#id20">返回示例</a></li>
+<li><a class="reference internal" href="#id21">请求参数</a></li>
+<li><a class="reference internal" href="#id22">返回示例</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#id23">修改合同信息</a><ul>
+<li><a class="reference internal" href="#id24">接口说明</a></li>
+<li><a class="reference internal" href="#id25">请求示例</a></li>
+<li><a class="reference internal" href="#id26">返回示例</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#id27">获取合同信息</a><ul>
+<li><a class="reference internal" href="#id28">接口说明</a></li>
+<li><a class="reference internal" href="#id29">返回示例</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#id30">保存用户第三方登陆信息</a><ul>
+<li><a class="reference internal" href="#id31">接口说明</a></li>
+<li><a class="reference internal" href="#id32">请求参数</a></li>
+<li><a class="reference internal" href="#id33">请求示例</a></li>
+<li><a class="reference internal" href="#id34">返回示例</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#id35">获取用户设置信息</a><ul>
+<li><a class="reference internal" href="#id36">接口说明</a></li>
+<li><a class="reference internal" href="#id37">返回示例</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#id38">编辑个人资料</a><ul>
+<li><a class="reference internal" href="#id39">接口说明</a></li>
+<li><a class="reference internal" href="#id40">请求参数</a></li>
+<li><a class="reference internal" href="#id41">返回示例</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#id42">获取个人资料</a><ul>
+<li><a class="reference internal" href="#id43">接口说明</a></li>
+<li><a class="reference internal" href="#id44">返回示例</a></li>
 </ul>
 </li>
 </ul>
@@ -351,6 +473,910 @@
     <span class="s2">&quot;message&quot;</span><span class="p">:</span> <span class="s2">&quot;demo already existed!&quot;</span>
   <span class="p">},</span>
   <span class="s2">&quot;success&quot;</span><span class="p">:</span> <span class="n">false</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="id9">
+<h2>商家实名认证<a class="headerlink" href="#id9" title="永久链接至标题">¶</a></h2>
+<div class="section" id="id10">
+<h3>接口说明<a class="headerlink" href="#id10" title="永久链接至标题">¶</a></h3>
+<ul class="simple">
+<li>API接口请求地址：<code class="docutils literal"><span class="pre">/users/authenticate</span></code></li>
+<li>API接口请求方法：<code class="docutils literal"><span class="pre">POST</span></code></li>
+<li>API接口用户授权：<code class="docutils literal"><span class="pre">token</span></code></li>
+</ul>
+</div>
+<div class="section" id="id11">
+<h3>请求参数<a class="headerlink" href="#id11" title="永久链接至标题">¶</a></h3>
+<table border="1" class="docutils">
+<colgroup>
+<col width="12%" />
+<col width="6%" />
+<col width="5%" />
+<col width="6%" />
+<col width="70%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">名称</th>
+<th class="head">类型</th>
+<th class="head">是否必须</th>
+<th class="head">默认值</th>
+<th class="head">描述说明</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>name</td>
+<td>String</td>
+<td>必须</td>
+<td>&#160;</td>
+<td>姓名</td>
+</tr>
+<tr class="row-odd"><td>id_card</td>
+<td>String</td>
+<td>必须</td>
+<td>&#160;</td>
+<td>身份证号</td>
+</tr>
+<tr class="row-even"><td>front_card_photo_id</td>
+<td>Integer</td>
+<td>必须</td>
+<td>&#160;</td>
+<td>身份证正面照ID</td>
+</tr>
+<tr class="row-odd"><td>reverse_card_photo_id</td>
+<td>Integer</td>
+<td>必须</td>
+<td>&#160;</td>
+<td>身份证反面照ID</td>
+</tr>
+<tr class="row-even"><td>holding_card_photo_id</td>
+<td>Integer</td>
+<td>必须</td>
+<td>&#160;</td>
+<td>手持身份证正面照ID</td>
+</tr>
+<tr class="row-odd"><td>mobile</td>
+<td>String</td>
+<td>必须</td>
+<td>&#160;</td>
+<td>手机号</td>
+</tr>
+<tr class="row-even"><td>email</td>
+<td>String</td>
+<td>必须</td>
+<td>&#160;</td>
+<td>邮箱</td>
+</tr>
+<tr class="row-odd"><td>phone</td>
+<td>String</td>
+<td>可选</td>
+<td>&#160;</td>
+<td>固定电话</td>
+</tr>
+<tr class="row-even"><td>wechat</td>
+<td>String</td>
+<td>必须</td>
+<td>&#160;</td>
+<td>微信号</td>
+</tr>
+<tr class="row-odd"><td>qq</td>
+<td>String</td>
+<td>可选</td>
+<td>&#160;</td>
+<td>QQ号</td>
+</tr>
+<tr class="row-even"><td>country_id</td>
+<td>Integer</td>
+<td>必须</td>
+<td>&#160;</td>
+<td>国家ID</td>
+</tr>
+<tr class="row-odd"><td>province_id</td>
+<td>Integer</td>
+<td>必须</td>
+<td>&#160;</td>
+<td>省ID</td>
+</tr>
+<tr class="row-even"><td>city_id</td>
+<td>Integer</td>
+<td>必须</td>
+<td>&#160;</td>
+<td>市ID</td>
+</tr>
+<tr class="row-odd"><td>area_id</td>
+<td>Integer</td>
+<td>必须</td>
+<td>&#160;</td>
+<td>区域ID</td>
+</tr>
+<tr class="row-even"><td>street_address</td>
+<td>String</td>
+<td>必须</td>
+<td>&#160;</td>
+<td>详细地址</td>
+</tr>
+<tr class="row-odd"><td>urgent_contact_name</td>
+<td>String</td>
+<td>必须</td>
+<td>&#160;</td>
+<td>紧急联系人姓名</td>
+</tr>
+<tr class="row-even"><td>urgent_contact_mobile</td>
+<td>String</td>
+<td>必须</td>
+<td>&#160;</td>
+<td>紧急联系人电话</td>
+</tr>
+<tr class="row-odd"><td>user_type</td>
+<td>Integer</td>
+<td>可选</td>
+<td>1</td>
+<td>用户类型，1、个人；2、原创工作室；3、原创品牌公司</td>
+</tr>
+<tr class="row-even"><td>product_scope</td>
+<td>Integer</td>
+<td>可选</td>
+<td>1</td>
+<td>商品范畴，1、原创商品，由本人或团队独立思考设计；2、十年老件；3、授权贩售，由设计师或者设计师代理经销的商品；4、其他</td>
+</tr>
+<tr class="row-odd"><td>other_scope</td>
+<td>String</td>
+<td>可选</td>
+<td>&#160;</td>
+<td>其他范畴</td>
+</tr>
+<tr class="row-even"><td>own_brand</td>
+<td>Bool</td>
+<td>可选</td>
+<td>False</td>
+<td>是否拥有自己的品牌</td>
+</tr>
+<tr class="row-odd"><td>brand_name</td>
+<td>String</td>
+<td>可选</td>
+<td>&#160;</td>
+<td>品牌名称</td>
+</tr>
+<tr class="row-even"><td>sale_platform</td>
+<td>Array</td>
+<td>可选</td>
+<td>&#160;</td>
+<td>上线平台名称</td>
+</tr>
+<tr class="row-odd"><td>link</td>
+<td>Array</td>
+<td>可选</td>
+<td>&#160;</td>
+<td>上线平台链接</td>
+</tr>
+<tr class="row-even"><td>product_category</td>
+<td>String</td>
+<td>必须</td>
+<td>&#160;</td>
+<td>商品所属类别</td>
+</tr>
+<tr class="row-odd"><td>customized</td>
+<td>Bool</td>
+<td>可选</td>
+<td>False</td>
+<td>是否提供定制化服务</td>
+</tr>
+<tr class="row-even"><td>attachments</td>
+<td>String</td>
+<td>必须</td>
+<td>&#160;</td>
+<td>原创商品图片ID</td>
+</tr>
+<tr class="row-odd"><td>product_price</td>
+<td>String</td>
+<td>必须</td>
+<td>&#160;</td>
+<td>商品价格范围</td>
+</tr>
+<tr class="row-even"><td>company_name</td>
+<td>String</td>
+<td>必须</td>
+<td>&#160;</td>
+<td>公司名称</td>
+</tr>
+<tr class="row-odd"><td>url</td>
+<td>String</td>
+<td>可选</td>
+<td>&#160;</td>
+<td>公司网址</td>
+</tr>
+<tr class="row-even"><td>company_qualification</td>
+<td>String</td>
+<td>必须</td>
+<td>&#160;</td>
+<td>公司资质</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="id12">
+<h3>请求示例<a class="headerlink" href="#id12" title="永久链接至标题">¶</a></h3>
+<p>JSON数据格式:</p>
+<div class="highlight-javascript"><div class="highlight"><pre><span></span><span class="p">{</span>
+    <span class="s2">&quot;user_type&quot;</span><span class="o">:</span><span class="mi">3</span><span class="p">,</span><span class="s2">&quot;name&quot;</span><span class="o">:</span><span class="s2">&quot;毛爷爷&quot;</span><span class="p">,</span><span class="s2">&quot;avatar_id&quot;</span><span class="o">:</span><span class="mi">1</span><span class="p">,</span><span class="s2">&quot;id_card&quot;</span><span class="o">:</span><span class="s2">&quot;13082119921226801x&quot;</span><span class="p">,</span><span class="s2">&quot;front_card_photo_id&quot;</span><span class="o">:</span><span class="mi">1</span><span class="p">,</span><span class="s2">&quot;reverse_card_photo_id&quot;</span><span class="o">:</span><span class="mi">1</span><span class="p">,</span><span class="s2">&quot;holding_card_photo_id&quot;</span><span class="o">:</span><span class="mi">1</span><span class="p">,</span><span class="s2">&quot;areacode&quot;</span><span class="o">:</span><span class="s2">&quot;+86&quot;</span><span class="p">,</span><span class="s2">&quot;mobile&quot;</span><span class="o">:</span><span class="s2">&quot;13001179400&quot;</span><span class="p">,</span><span class="s2">&quot;wechat&quot;</span><span class="o">:</span><span class="s2">&quot;jksjk45&quot;</span><span class="p">,</span><span class="s2">&quot;country_id&quot;</span><span class="o">:</span><span class="mi">1</span><span class="p">,</span><span class="s2">&quot;province_id&quot;</span><span class="o">:</span><span class="mi">1</span><span class="p">,</span><span class="s2">&quot;city_id&quot;</span><span class="o">:</span><span class="mi">1</span><span class="p">,</span><span class="s2">&quot;area_id&quot;</span><span class="o">:</span><span class="mi">2</span><span class="p">,</span><span class="s2">&quot;street_address&quot;</span><span class="o">:</span><span class="s2">&quot;中南海&quot;</span><span class="p">,</span><span class="s2">&quot;own_brand&quot;</span><span class="o">:</span><span class="kc">true</span><span class="p">,</span><span class="s2">&quot;customized&quot;</span><span class="o">:</span><span class="kc">true</span><span class="p">,</span><span class="s2">&quot;product_category&quot;</span><span class="o">:</span><span class="s2">&quot;无人机&quot;</span><span class="p">,</span><span class="s2">&quot;attachments&quot;</span><span class="o">:</span><span class="p">[</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">],</span><span class="s2">&quot;product_price&quot;</span><span class="o">:</span><span class="s2">&quot;22~99&quot;</span><span class="p">,</span><span class="s2">&quot;email&quot;</span><span class="o">:</span><span class="s2">&quot;1346555456@qq.com&quot;</span><span class="p">,</span> <span class="s2">&quot;sale_platform&quot;</span><span class="o">:</span><span class="p">[</span><span class="s2">&quot;京东&quot;</span><span class="p">,</span><span class="s2">&quot;淘宝&quot;</span><span class="p">,</span><span class="s2">&quot;天猫&quot;</span><span class="p">],</span><span class="s2">&quot;product_scope&quot;</span><span class="o">:</span><span class="mi">1</span><span class="p">,</span> <span class="s2">&quot;brand_name&quot;</span><span class="o">:</span><span class="s2">&quot;jkss &quot;</span><span class="p">,</span><span class="s2">&quot;company_name&quot;</span><span class="o">:</span><span class="s2">&quot;京东&quot;</span><span class="p">,</span> <span class="s2">&quot;url&quot;</span><span class="o">:</span><span class="s2">&quot;https://www.jd.com&quot;</span><span class="p">,</span><span class="s2">&quot;link&quot;</span><span class="o">:</span><span class="p">[</span><span class="s2">&quot;https://www.taobao.com&quot;</span><span class="p">,</span><span class="s2">&quot;https://www.jingdong.com&quot;</span><span class="p">,</span><span class="s2">&quot;https://www.tianmao.com&quot;</span><span class="p">]</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="id13">
+<h3>返回示例<a class="headerlink" href="#id13" title="永久链接至标题">¶</a></h3>
+<p>JSON数据格式</p>
+<p>请求 <strong>正确</strong> 返回结果：</p>
+<div class="highlight-javascript"><div class="highlight"><pre><span></span><span class="p">{</span>
+    <span class="s2">&quot;status&quot;</span><span class="o">:</span> <span class="p">{</span>
+        <span class="s2">&quot;code&quot;</span><span class="o">:</span> <span class="mi">201</span><span class="p">,</span>
+        <span class="s2">&quot;message&quot;</span><span class="o">:</span> <span class="s2">&quot;All created.&quot;</span>
+    <span class="p">},</span>
+    <span class="s2">&quot;success&quot;</span><span class="o">:</span> <span class="kc">true</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<p>请求 <code class="docutils literal"><span class="pre">失败</span></code> 返回结果：</p>
+<div class="highlight-javascript"><div class="highlight"><pre><span></span><span class="p">{</span>
+    <span class="s2">&quot;status&quot;</span><span class="o">:</span> <span class="p">{</span>
+        <span class="s2">&quot;code&quot;</span><span class="o">:</span> <span class="mi">400</span><span class="p">,</span>
+        <span class="s2">&quot;message&quot;</span><span class="o">:</span> <span class="s2">&quot;Authenticate failed!&quot;</span>
+    <span class="p">},</span>
+    <span class="s2">&quot;success&quot;</span><span class="o">:</span> <span class="kc">false</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="id14">
+<h2>更新认证状态<a class="headerlink" href="#id14" title="永久链接至标题">¶</a></h2>
+<div class="section" id="id15">
+<h3>接口说明<a class="headerlink" href="#id15" title="永久链接至标题">¶</a></h3>
+<ul class="simple">
+<li>API接口请求地址：<code class="docutils literal"><span class="pre">/users/up_authenticate_status</span></code></li>
+<li>API接口请求方法：<code class="docutils literal"><span class="pre">PUT</span></code></li>
+<li>API接口用户授权：<code class="docutils literal"><span class="pre">token</span></code></li>
+</ul>
+</div>
+<div class="section" id="id16">
+<h3>请求参数<a class="headerlink" href="#id16" title="永久链接至标题">¶</a></h3>
+<table border="1" class="docutils">
+<colgroup>
+<col width="19%" />
+<col width="10%" />
+<col width="12%" />
+<col width="10%" />
+<col width="48%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">名称</th>
+<th class="head">类型</th>
+<th class="head">是否必须</th>
+<th class="head">默认值</th>
+<th class="head">描述说明</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>status</td>
+<td>Integer</td>
+<td>可选</td>
+<td>1</td>
+<td>认证状态：1、待审；-1：禁用；2、正常</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="id17">
+<h3>返回示例<a class="headerlink" href="#id17" title="永久链接至标题">¶</a></h3>
+<p>JSON数据格式:</p>
+<p>请求 <strong>正确</strong> 返回结果：</p>
+<div class="highlight-javascript"><div class="highlight"><pre><span></span><span class="p">{</span>
+    <span class="s2">&quot;status&quot;</span><span class="o">:</span> <span class="p">{</span>
+        <span class="s2">&quot;code&quot;</span><span class="o">:</span> <span class="mi">200</span><span class="p">,</span>
+        <span class="s2">&quot;message&quot;</span><span class="o">:</span> <span class="s2">&quot;Ok all right.&quot;</span>
+    <span class="p">},</span>
+    <span class="s2">&quot;success&quot;</span><span class="o">:</span> <span class="p">{</span>
+        <span class="s2">&quot;is_setting&quot;</span><span class="o">:</span> <span class="kc">true</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<p>请求 <code class="docutils literal"><span class="pre">失败</span></code> 返回结果：</p>
+<div class="highlight-javascript"><div class="highlight"><pre><span></span><span class="p">{</span>
+  <span class="s2">&quot;status&quot;</span><span class="o">:</span> <span class="p">{</span>
+    <span class="s2">&quot;code&quot;</span><span class="o">:</span> <span class="mi">404</span><span class="p">,</span>
+    <span class="s2">&quot;message&quot;</span><span class="o">:</span> <span class="s2">&quot;Not Found&quot;</span>
+  <span class="p">},</span>
+  <span class="s2">&quot;success&quot;</span><span class="o">:</span> <span class="kc">false</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="id18">
+<h2>签署合同<a class="headerlink" href="#id18" title="永久链接至标题">¶</a></h2>
+<div class="section" id="id19">
+<h3>接口说明<a class="headerlink" href="#id19" title="永久链接至标题">¶</a></h3>
+<ul class="simple">
+<li>API接口请求地址：<code class="docutils literal"><span class="pre">/users/contract</span></code></li>
+<li>API接口请求方法：<code class="docutils literal"><span class="pre">GET,POST</span></code></li>
+<li>API接口用户授权：<code class="docutils literal"><span class="pre">token</span></code></li>
+</ul>
+<p>API接口请求方法为 <code class="docutils literal"><span class="pre">GET</span></code> 时</p>
+</div>
+<div class="section" id="id20">
+<h3>返回示例<a class="headerlink" href="#id20" title="永久链接至标题">¶</a></h3>
+<p>JSON数据格式:</p>
+<p>请求 <strong>正确</strong> 返回结果：</p>
+<div class="highlight-javascript"><div class="highlight"><pre><span></span><span class="p">{</span>
+    <span class="s2">&quot;data&quot;</span><span class="o">:</span> <span class="p">{</span>
+        <span class="s2">&quot;account&quot;</span><span class="o">:</span> <span class="s2">&quot;6214865188793549&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;area&quot;</span><span class="o">:</span> <span class="s2">&quot;顺义区&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;bank_addr&quot;</span><span class="o">:</span> <span class="s2">&quot;朝阳区酒仙桥支行&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;bank_name&quot;</span><span class="o">:</span> <span class="s2">&quot;中国银行&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;brand_name&quot;</span><span class="o">:</span> <span class="s2">&quot;jkss &quot;</span><span class="p">,</span>
+        <span class="s2">&quot;city&quot;</span><span class="o">:</span> <span class="s2">&quot;北京&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;country&quot;</span><span class="o">:</span> <span class="s2">&quot;中国&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;current_time&quot;</span><span class="o">:</span> <span class="mi">1529128217</span><span class="p">,</span>
+        <span class="s2">&quot;expiration_time&quot;</span><span class="o">:</span> <span class="mi">1560664217</span><span class="p">,</span>
+        <span class="s2">&quot;id&quot;</span><span class="o">:</span> <span class="mi">27</span><span class="p">,</span>
+        <span class="s2">&quot;master_uid&quot;</span><span class="o">:</span> <span class="mi">2</span><span class="p">,</span>
+        <span class="s2">&quot;mobile&quot;</span><span class="o">:</span> <span class="s2">&quot;13001179400&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;name&quot;</span><span class="o">:</span> <span class="s2">&quot;毛爷爷&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;province&quot;</span><span class="o">:</span> <span class="s2">&quot;北京&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;street_address&quot;</span><span class="o">:</span> <span class="s2">&quot;中南海&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;username&quot;</span><span class="o">:</span> <span class="s2">&quot;雷军&quot;</span>
+    <span class="p">},</span>
+    <span class="s2">&quot;status&quot;</span><span class="o">:</span> <span class="p">{</span>
+        <span class="s2">&quot;code&quot;</span><span class="o">:</span> <span class="mi">201</span><span class="p">,</span>
+        <span class="s2">&quot;message&quot;</span><span class="o">:</span> <span class="s2">&quot;All created.&quot;</span>
+    <span class="p">},</span>
+    <span class="s2">&quot;success&quot;</span><span class="o">:</span> <span class="kc">true</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<p>请求 <code class="docutils literal"><span class="pre">失败</span></code> 返回结果：</p>
+<div class="highlight-javascript"><div class="highlight"><pre><span></span><span class="p">{</span>
+  <span class="s2">&quot;status&quot;</span><span class="o">:</span> <span class="p">{</span>
+    <span class="s2">&quot;code&quot;</span><span class="o">:</span> <span class="mi">404</span><span class="p">,</span>
+    <span class="s2">&quot;message&quot;</span><span class="o">:</span> <span class="s2">&quot;Not Found&quot;</span>
+  <span class="p">},</span>
+  <span class="s2">&quot;success&quot;</span><span class="o">:</span> <span class="kc">false</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<p>API接口请求方法为 <code class="docutils literal"><span class="pre">POST</span></code> 时</p>
+</div>
+<div class="section" id="id21">
+<h3>请求参数<a class="headerlink" href="#id21" title="永久链接至标题">¶</a></h3>
+<table border="1" class="docutils">
+<colgroup>
+<col width="20%" />
+<col width="11%" />
+<col width="12%" />
+<col width="11%" />
+<col width="47%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">名称</th>
+<th class="head">类型</th>
+<th class="head">是否必须</th>
+<th class="head">默认值</th>
+<th class="head">描述说明</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>bank_name</td>
+<td>String</td>
+<td>必须</td>
+<td>&#160;</td>
+<td>银行名称</td>
+</tr>
+<tr class="row-odd"><td>username</td>
+<td>String</td>
+<td>必须</td>
+<td>&#160;</td>
+<td>户名</td>
+</tr>
+<tr class="row-even"><td>bank_addr</td>
+<td>String</td>
+<td>必须</td>
+<td>&#160;</td>
+<td>开户行</td>
+</tr>
+<tr class="row-odd"><td>account</td>
+<td>String</td>
+<td>必须</td>
+<td>&#160;</td>
+<td>账号</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="id22">
+<h3>返回示例<a class="headerlink" href="#id22" title="永久链接至标题">¶</a></h3>
+<p>JSON数据格式:</p>
+<p>请求 <strong>正确</strong> 返回结果：</p>
+<div class="highlight-javascript"><div class="highlight"><pre><span></span><span class="p">{</span>
+    <span class="s2">&quot;data&quot;</span><span class="o">:</span> <span class="p">{</span>
+        <span class="s2">&quot;account&quot;</span><span class="o">:</span> <span class="s2">&quot;6214865188793549&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;area&quot;</span><span class="o">:</span> <span class="s2">&quot;杨镇地区&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;areacode&quot;</span><span class="o">:</span> <span class="s2">&quot;+86&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;bank_addr&quot;</span><span class="o">:</span> <span class="s2">&quot;朝阳区酒仙桥支行&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;bank_name&quot;</span><span class="o">:</span> <span class="s2">&quot;中国银行&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;brand_name&quot;</span><span class="o">:</span> <span class="s2">&quot;京东商城&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;city&quot;</span><span class="o">:</span> <span class="s2">&quot;北京&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;country&quot;</span><span class="o">:</span> <span class="s2">&quot;中国&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;current_time&quot;</span><span class="o">:</span> <span class="mi">1529150144</span><span class="p">,</span>
+        <span class="s2">&quot;expiration_time&quot;</span><span class="o">:</span> <span class="mi">1560686144</span><span class="p">,</span>
+        <span class="s2">&quot;id&quot;</span><span class="o">:</span> <span class="mi">27</span><span class="p">,</span>
+        <span class="s2">&quot;master_uid&quot;</span><span class="o">:</span> <span class="mi">2</span><span class="p">,</span>
+        <span class="s2">&quot;mobile&quot;</span><span class="o">:</span> <span class="s2">&quot;13004578966&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;name&quot;</span><span class="o">:</span> <span class="s2">&quot;马化腾&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;province&quot;</span><span class="o">:</span> <span class="s2">&quot;北京&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;street_address&quot;</span><span class="o">:</span> <span class="s2">&quot;中南海&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;username&quot;</span><span class="o">:</span> <span class="s2">&quot;雷军&quot;</span>
+    <span class="p">},</span>
+    <span class="s2">&quot;status&quot;</span><span class="o">:</span> <span class="p">{</span>
+        <span class="s2">&quot;code&quot;</span><span class="o">:</span> <span class="mi">201</span><span class="p">,</span>
+        <span class="s2">&quot;message&quot;</span><span class="o">:</span> <span class="s2">&quot;All created.&quot;</span>
+    <span class="p">},</span>
+    <span class="s2">&quot;success&quot;</span><span class="o">:</span> <span class="kc">true</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<p>请求 <code class="docutils literal"><span class="pre">失败</span></code> 返回结果：</p>
+<div class="highlight-javascript"><div class="highlight"><pre><span></span><span class="p">{</span>
+    <span class="s2">&quot;status&quot;</span><span class="o">:</span> <span class="p">{</span>
+        <span class="s2">&quot;code&quot;</span><span class="o">:</span> <span class="mi">400</span><span class="p">,</span>
+        <span class="s2">&quot;message&quot;</span><span class="o">:</span> <span class="s2">&quot;请输入开户银行&quot;</span>
+    <span class="p">},</span>
+    <span class="s2">&quot;success&quot;</span><span class="o">:</span> <span class="kc">false</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="id23">
+<h2>修改合同信息<a class="headerlink" href="#id23" title="永久链接至标题">¶</a></h2>
+<div class="section" id="id24">
+<h3>接口说明<a class="headerlink" href="#id24" title="永久链接至标题">¶</a></h3>
+<ul class="simple">
+<li>API接口请求地址：<code class="docutils literal"><span class="pre">/users/contract</span></code></li>
+<li>API接口请求方法：<code class="docutils literal"><span class="pre">PUT</span></code></li>
+<li>API接口用户授权：<code class="docutils literal"><span class="pre">token</span></code></li>
+</ul>
+</div>
+<div class="section" id="id25">
+<h3>请求示例<a class="headerlink" href="#id25" title="永久链接至标题">¶</a></h3>
+<p>JSON数据格式:</p>
+<div class="highlight-javascript"><div class="highlight"><pre><span></span><span class="p">{</span><span class="s2">&quot;brand_name&quot;</span><span class="o">:</span><span class="s2">&quot;小米之家&quot;</span><span class="p">,</span><span class="s2">&quot;country_id&quot;</span><span class="o">:</span><span class="mi">1</span><span class="p">,</span><span class="s2">&quot;province_id&quot;</span><span class="o">:</span><span class="mi">1</span><span class="p">,</span><span class="s2">&quot;city_id&quot;</span><span class="o">:</span><span class="mi">1</span><span class="p">,</span><span class="s2">&quot;area_id&quot;</span><span class="o">:</span><span class="mi">2</span><span class="p">,</span><span class="s2">&quot;street_address&quot;</span><span class="o">:</span><span class="s2">&quot;中南海&quot;</span><span class="p">,</span><span class="s2">&quot;name&quot;</span><span class="o">:</span><span class="s2">&quot;马化腾&quot;</span><span class="p">,</span><span class="s2">&quot;mobile&quot;</span><span class="o">:</span><span class="s2">&quot;13004578966&quot;</span><span class="p">,</span><span class="s2">&quot;email&quot;</span><span class="o">:</span><span class="s2">&quot;8888888@qq.com&quot;</span><span class="p">,</span><span class="s2">&quot;bank_name&quot;</span><span class="o">:</span><span class="s2">&quot;中国银行&quot;</span><span class="p">,</span> <span class="s2">&quot;username&quot;</span><span class="o">:</span><span class="s2">&quot;雷军&quot;</span><span class="p">,</span><span class="s2">&quot;bank_addr&quot;</span><span class="o">:</span><span class="s2">&quot;朝阳区酒仙桥支行&quot;</span><span class="p">,</span> <span class="s2">&quot;account&quot;</span><span class="o">:</span><span class="s2">&quot;6214865188793549&quot;</span><span class="p">}</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="id26">
+<h3>返回示例<a class="headerlink" href="#id26" title="永久链接至标题">¶</a></h3>
+<p>JSON数据格式:</p>
+<p>请求 <strong>正确</strong> 返回结果：</p>
+<div class="highlight-javascript"><div class="highlight"><pre><span></span><span class="p">{</span>
+    <span class="s2">&quot;data&quot;</span><span class="o">:</span> <span class="p">{</span>
+        <span class="s2">&quot;account&quot;</span><span class="o">:</span> <span class="s2">&quot;6214865188793549&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;area&quot;</span><span class="o">:</span> <span class="s2">&quot;顺义区&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;bank_addr&quot;</span><span class="o">:</span> <span class="s2">&quot;朝阳区酒仙桥支行&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;bank_name&quot;</span><span class="o">:</span> <span class="s2">&quot;中国银行&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;brand_name&quot;</span><span class="o">:</span> <span class="s2">&quot;小米之家&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;city&quot;</span><span class="o">:</span> <span class="s2">&quot;北京&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;country&quot;</span><span class="o">:</span> <span class="s2">&quot;中国&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;current_time&quot;</span><span class="o">:</span> <span class="mi">1529137673</span><span class="p">,</span>
+        <span class="s2">&quot;expiration_time&quot;</span><span class="o">:</span> <span class="mi">1560673673</span><span class="p">,</span>
+        <span class="s2">&quot;id&quot;</span><span class="o">:</span> <span class="mi">27</span><span class="p">,</span>
+        <span class="s2">&quot;master_uid&quot;</span><span class="o">:</span> <span class="mi">2</span><span class="p">,</span>
+        <span class="s2">&quot;mobile&quot;</span><span class="o">:</span> <span class="s2">&quot;13004578966&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;name&quot;</span><span class="o">:</span> <span class="s2">&quot;马化腾&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;province&quot;</span><span class="o">:</span> <span class="s2">&quot;北京&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;street_address&quot;</span><span class="o">:</span> <span class="s2">&quot;中南海&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;username&quot;</span><span class="o">:</span> <span class="s2">&quot;雷军&quot;</span>
+    <span class="p">},</span>
+    <span class="s2">&quot;status&quot;</span><span class="o">:</span> <span class="p">{</span>
+        <span class="s2">&quot;code&quot;</span><span class="o">:</span> <span class="mi">201</span><span class="p">,</span>
+        <span class="s2">&quot;message&quot;</span><span class="o">:</span> <span class="s2">&quot;All created.&quot;</span>
+    <span class="p">},</span>
+    <span class="s2">&quot;success&quot;</span><span class="o">:</span> <span class="kc">true</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<p>请求 <code class="docutils literal"><span class="pre">失败</span></code> 返回结果：</p>
+<div class="highlight-javascript"><div class="highlight"><pre><span></span><span class="p">{</span>
+    <span class="s2">&quot;status&quot;</span><span class="o">:</span> <span class="p">{</span>
+        <span class="s2">&quot;code&quot;</span><span class="o">:</span> <span class="mi">400</span><span class="p">,</span>
+        <span class="s2">&quot;message&quot;</span><span class="o">:</span> <span class="s2">&quot;Update failed!&quot;</span>
+    <span class="p">},</span>
+    <span class="s2">&quot;success&quot;</span><span class="o">:</span> <span class="kc">false</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="id27">
+<h2>获取合同信息<a class="headerlink" href="#id27" title="永久链接至标题">¶</a></h2>
+<div class="section" id="id28">
+<h3>接口说明<a class="headerlink" href="#id28" title="永久链接至标题">¶</a></h3>
+<ul class="simple">
+<li>API接口请求地址：<code class="docutils literal"><span class="pre">/users/get_contract</span></code></li>
+<li>API接口请求方法：<code class="docutils literal"><span class="pre">GET</span></code></li>
+<li>API接口用户授权：<code class="docutils literal"><span class="pre">token</span></code></li>
+</ul>
+</div>
+<div class="section" id="id29">
+<h3>返回示例<a class="headerlink" href="#id29" title="永久链接至标题">¶</a></h3>
+<p>JSON数据格式:</p>
+<p>请求 <strong>正确</strong> 返回结果：</p>
+<div class="highlight-javascript"><div class="highlight"><pre><span></span><span class="p">{</span>
+    <span class="s2">&quot;data&quot;</span><span class="o">:</span> <span class="p">{</span>
+        <span class="s2">&quot;account&quot;</span><span class="o">:</span> <span class="s2">&quot;6214865188793549&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;area&quot;</span><span class="o">:</span> <span class="s2">&quot;顺义区&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;bank_addr&quot;</span><span class="o">:</span> <span class="s2">&quot;朝阳区酒仙桥支行&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;bank_name&quot;</span><span class="o">:</span> <span class="s2">&quot;中国银行&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;brand_name&quot;</span><span class="o">:</span> <span class="s2">&quot;jkss &quot;</span><span class="p">,</span>
+        <span class="s2">&quot;city&quot;</span><span class="o">:</span> <span class="s2">&quot;北京&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;country&quot;</span><span class="o">:</span> <span class="s2">&quot;中国&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;current_time&quot;</span><span class="o">:</span> <span class="mi">1529128217</span><span class="p">,</span>
+        <span class="s2">&quot;expiration_time&quot;</span><span class="o">:</span> <span class="mi">1560664217</span><span class="p">,</span>
+        <span class="s2">&quot;id&quot;</span><span class="o">:</span> <span class="mi">27</span><span class="p">,</span>
+        <span class="s2">&quot;master_uid&quot;</span><span class="o">:</span> <span class="mi">2</span><span class="p">,</span>
+        <span class="s2">&quot;mobile&quot;</span><span class="o">:</span> <span class="s2">&quot;13001179400&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;name&quot;</span><span class="o">:</span> <span class="s2">&quot;毛爷爷&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;province&quot;</span><span class="o">:</span> <span class="s2">&quot;北京&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;street_address&quot;</span><span class="o">:</span> <span class="s2">&quot;中南海&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;username&quot;</span><span class="o">:</span> <span class="s2">&quot;雷军&quot;</span>
+    <span class="p">},</span>
+    <span class="s2">&quot;status&quot;</span><span class="o">:</span> <span class="p">{</span>
+        <span class="s2">&quot;code&quot;</span><span class="o">:</span> <span class="mi">201</span><span class="p">,</span>
+        <span class="s2">&quot;message&quot;</span><span class="o">:</span> <span class="s2">&quot;All created.&quot;</span>
+    <span class="p">},</span>
+    <span class="s2">&quot;success&quot;</span><span class="o">:</span> <span class="kc">true</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<p>请求 <code class="docutils literal"><span class="pre">失败</span></code> 返回结果：</p>
+<div class="highlight-javascript"><div class="highlight"><pre><span></span><span class="p">{</span>
+  <span class="s2">&quot;status&quot;</span><span class="o">:</span> <span class="p">{</span>
+    <span class="s2">&quot;code&quot;</span><span class="o">:</span> <span class="mi">404</span><span class="p">,</span>
+    <span class="s2">&quot;message&quot;</span><span class="o">:</span> <span class="s2">&quot;Not Found&quot;</span>
+  <span class="p">},</span>
+  <span class="s2">&quot;success&quot;</span><span class="o">:</span> <span class="kc">false</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="id30">
+<h2>保存用户第三方登陆信息<a class="headerlink" href="#id30" title="永久链接至标题">¶</a></h2>
+<div class="section" id="id31">
+<h3>接口说明<a class="headerlink" href="#id31" title="永久链接至标题">¶</a></h3>
+<ul class="simple">
+<li>API接口请求地址：<code class="docutils literal"><span class="pre">/users/save_user_info</span></code></li>
+<li>API接口请求方法：<code class="docutils literal"><span class="pre">POST</span></code></li>
+</ul>
+</div>
+<div class="section" id="id32">
+<h3>请求参数<a class="headerlink" href="#id32" title="永久链接至标题">¶</a></h3>
+<table border="1" class="docutils">
+<colgroup>
+<col width="20%" />
+<col width="11%" />
+<col width="12%" />
+<col width="11%" />
+<col width="47%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">名称</th>
+<th class="head">类型</th>
+<th class="head">是否必须</th>
+<th class="head">默认值</th>
+<th class="head">描述说明</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>openid</td>
+<td>String</td>
+<td>必须</td>
+<td>&#160;</td>
+<td>用户唯一标识</td>
+</tr>
+<tr class="row-odd"><td>nick_name</td>
+<td>String</td>
+<td>必须</td>
+<td>&#160;</td>
+<td>用户昵称</td>
+</tr>
+<tr class="row-even"><td>avatar</td>
+<td>String</td>
+<td>必须</td>
+<td>&#160;</td>
+<td>用户头像url</td>
+</tr>
+<tr class="row-odd"><td>gender</td>
+<td>Integer</td>
+<td>可选</td>
+<td>0</td>
+<td>性别</td>
+</tr>
+<tr class="row-even"><td>country</td>
+<td>String</td>
+<td>必须</td>
+<td>&#160;</td>
+<td>国家</td>
+</tr>
+<tr class="row-odd"><td>province</td>
+<td>String</td>
+<td>必须</td>
+<td>&#160;</td>
+<td>省</td>
+</tr>
+<tr class="row-even"><td>city</td>
+<td>String</td>
+<td>必须</td>
+<td>&#160;</td>
+<td>市</td>
+</tr>
+<tr class="row-odd"><td>type</td>
+<td>Integer</td>
+<td>可选</td>
+<td>1</td>
+<td>来源类型 1、微信</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="id33">
+<h3>请求示例<a class="headerlink" href="#id33" title="永久链接至标题">¶</a></h3>
+<p>JSON数据格式:</p>
+<div class="highlight-javascript"><div class="highlight"><pre><span></span><span class="p">{</span>
+    <span class="s2">&quot;openid&quot;</span><span class="o">:</span><span class="s2">&quot;jsdkj3j&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;nick_name&quot;</span><span class="o">:</span><span class="s2">&quot;taihuoniao&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;avatar&quot;</span><span class="o">:</span><span class="s2">&quot;weixin://wxpay/bizpayurl?pr=jKmv7J3&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;country&quot;</span><span class="o">:</span><span class="s2">&quot;zhongguo&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;province&quot;</span><span class="o">:</span><span class="s2">&quot;河北&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;city&quot;</span><span class="o">:</span><span class="s2">&quot;保定&quot;</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="id34">
+<h3>返回示例<a class="headerlink" href="#id34" title="永久链接至标题">¶</a></h3>
+<p>JSON数据格式:</p>
+<p>请求 <strong>正确</strong> 返回结果：</p>
+<div class="highlight-javascript"><div class="highlight"><pre><span></span><span class="p">{</span>
+    <span class="s2">&quot;status&quot;</span><span class="o">:</span> <span class="p">{</span>
+        <span class="s2">&quot;code&quot;</span><span class="o">:</span> <span class="mi">201</span><span class="p">,</span>
+        <span class="s2">&quot;message&quot;</span><span class="o">:</span> <span class="s2">&quot;All created.&quot;</span>
+    <span class="p">},</span>
+    <span class="s2">&quot;success&quot;</span><span class="o">:</span> <span class="kc">true</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<p>请求 <code class="docutils literal"><span class="pre">失败</span></code> 返回结果：</p>
+<div class="highlight-javascript"><div class="highlight"><pre><span></span><span class="p">{</span>
+  <span class="s2">&quot;status&quot;</span><span class="o">:</span> <span class="p">{</span>
+    <span class="s2">&quot;code&quot;</span><span class="o">:</span> <span class="mi">404</span><span class="p">,</span>
+    <span class="s2">&quot;message&quot;</span><span class="o">:</span> <span class="s2">&quot;Not Found&quot;</span>
+  <span class="p">},</span>
+  <span class="s2">&quot;success&quot;</span><span class="o">:</span> <span class="kc">false</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="id35">
+<h2>获取用户设置信息<a class="headerlink" href="#id35" title="永久链接至标题">¶</a></h2>
+<div class="section" id="id36">
+<h3>接口说明<a class="headerlink" href="#id36" title="永久链接至标题">¶</a></h3>
+<ul class="simple">
+<li>API接口请求地址：<code class="docutils literal"><span class="pre">/users/settings</span></code></li>
+<li>API接口请求方法：<code class="docutils literal"><span class="pre">GET</span></code></li>
+</ul>
+</div>
+<div class="section" id="id37">
+<h3>返回示例<a class="headerlink" href="#id37" title="永久链接至标题">¶</a></h3>
+<p>JSON数据格式:</p>
+<p>请求 <strong>正确</strong> 返回结果：</p>
+<div class="highlight-javascript"><div class="highlight"><pre><span></span><span class="p">{</span>
+    <span class="s2">&quot;data&quot;</span><span class="o">:</span> <span class="p">{</span>
+        <span class="s2">&quot;avatar&quot;</span><span class="o">:</span> <span class="s2">&quot;http://xxxx/photos/180224/c833237a728a1ed.jpg&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;nick_name&quot;</span><span class="o">:</span> <span class="s2">&quot;taihuoniao&quot;</span>
+    <span class="p">},</span>
+    <span class="s2">&quot;status&quot;</span><span class="o">:</span> <span class="p">{</span>
+        <span class="s2">&quot;code&quot;</span><span class="o">:</span> <span class="mi">200</span><span class="p">,</span>
+        <span class="s2">&quot;message&quot;</span><span class="o">:</span> <span class="s2">&quot;Ok all right.&quot;</span>
+    <span class="p">},</span>
+    <span class="s2">&quot;success&quot;</span><span class="o">:</span> <span class="kc">true</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<p>请求 <code class="docutils literal"><span class="pre">失败</span></code> 返回结果：</p>
+<div class="highlight-javascript"><div class="highlight"><pre><span></span><span class="p">{</span>
+  <span class="s2">&quot;status&quot;</span><span class="o">:</span> <span class="p">{</span>
+    <span class="s2">&quot;code&quot;</span><span class="o">:</span> <span class="mi">404</span><span class="p">,</span>
+    <span class="s2">&quot;message&quot;</span><span class="o">:</span> <span class="s2">&quot;Not Found&quot;</span>
+  <span class="p">},</span>
+  <span class="s2">&quot;success&quot;</span><span class="o">:</span> <span class="kc">false</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="id38">
+<h2>编辑个人资料<a class="headerlink" href="#id38" title="永久链接至标题">¶</a></h2>
+<div class="section" id="id39">
+<h3>接口说明<a class="headerlink" href="#id39" title="永久链接至标题">¶</a></h3>
+<ul class="simple">
+<li>API接口请求地址：<code class="docutils literal"><span class="pre">/users/info</span></code></li>
+<li>API接口请求方法：<code class="docutils literal"><span class="pre">PUT</span></code></li>
+</ul>
+</div>
+<div class="section" id="id40">
+<h3>请求参数<a class="headerlink" href="#id40" title="永久链接至标题">¶</a></h3>
+<table border="1" class="docutils">
+<colgroup>
+<col width="20%" />
+<col width="11%" />
+<col width="12%" />
+<col width="11%" />
+<col width="47%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">名称</th>
+<th class="head">类型</th>
+<th class="head">是否必须</th>
+<th class="head">默认值</th>
+<th class="head">描述说明</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>openid</td>
+<td>String</td>
+<td>必须</td>
+<td>&#160;</td>
+<td>用户唯标识</td>
+</tr>
+<tr class="row-odd"><td>nick_name</td>
+<td>String</td>
+<td>可选</td>
+<td>&#160;</td>
+<td>用户昵称</td>
+</tr>
+<tr class="row-even"><td>avatar</td>
+<td>String</td>
+<td>可选</td>
+<td>&#160;</td>
+<td>用户头像url</td>
+</tr>
+<tr class="row-odd"><td>gender</td>
+<td>Integer</td>
+<td>可选</td>
+<td>0</td>
+<td>性别</td>
+</tr>
+<tr class="row-even"><td>province</td>
+<td>String</td>
+<td>可选</td>
+<td>&#160;</td>
+<td>省</td>
+</tr>
+<tr class="row-odd"><td>city</td>
+<td>String</td>
+<td>可选</td>
+<td>&#160;</td>
+<td>市</td>
+</tr>
+<tr class="row-even"><td>type</td>
+<td>Integer</td>
+<td>可选</td>
+<td>1</td>
+<td>来源类型 1、微信</td>
+</tr>
+<tr class="row-odd"><td>email</td>
+<td>String</td>
+<td>可选</td>
+<td>&#160;</td>
+<td>邮箱</td>
+</tr>
+<tr class="row-even"><td>date</td>
+<td>String</td>
+<td>可选</td>
+<td>&#160;</td>
+<td>出生日期</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="id41">
+<h3>返回示例<a class="headerlink" href="#id41" title="永久链接至标题">¶</a></h3>
+<p>JSON数据格式:</p>
+<p>请求 <strong>正确</strong> 返回结果：</p>
+<div class="highlight-javascript"><div class="highlight"><pre><span></span><span class="p">{</span>
+    <span class="s2">&quot;data&quot;</span><span class="o">:</span> <span class="p">{</span>
+        <span class="s2">&quot;about_me&quot;</span><span class="o">:</span> <span class="s2">&quot;php是最好的语言&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;avatar&quot;</span><span class="o">:</span> <span class="s2">&quot;http://127.0.0.1:9000/_uploads/photos/222222/5d2812257b539aa.jpg&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;city&quot;</span><span class="o">:</span> <span class="s2">&quot;南京&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;date&quot;</span><span class="o">:</span> <span class="s2">&quot;1992年12月16日&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;email&quot;</span><span class="o">:</span> <span class="s2">&quot;zhizhuren@163.com&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;gender&quot;</span><span class="o">:</span> <span class="mi">1</span><span class="p">,</span>
+        <span class="s2">&quot;id&quot;</span><span class="o">:</span> <span class="mi">1</span><span class="p">,</span>
+        <span class="s2">&quot;master_uid&quot;</span><span class="o">:</span> <span class="mi">0</span><span class="p">,</span>
+        <span class="s2">&quot;nick_name&quot;</span><span class="o">:</span> <span class="s2">&quot;马化腾&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;openid&quot;</span><span class="o">:</span> <span class="s2">&quot;jsdkj3j&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;province&quot;</span><span class="o">:</span> <span class="s2">&quot;江苏&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;user_id&quot;</span><span class="o">:</span> <span class="mi">0</span><span class="p">,</span>
+        <span class="s2">&quot;wxapp_id&quot;</span><span class="o">:</span> <span class="s2">&quot;1&quot;</span>
+    <span class="p">},</span>
+    <span class="s2">&quot;status&quot;</span><span class="o">:</span> <span class="p">{</span>
+        <span class="s2">&quot;code&quot;</span><span class="o">:</span> <span class="mi">200</span><span class="p">,</span>
+        <span class="s2">&quot;message&quot;</span><span class="o">:</span> <span class="s2">&quot;Ok all right.&quot;</span>
+    <span class="p">},</span>
+    <span class="s2">&quot;success&quot;</span><span class="o">:</span> <span class="kc">true</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<p>请求 <code class="docutils literal"><span class="pre">失败</span></code> 返回结果：</p>
+<div class="highlight-javascript"><div class="highlight"><pre><span></span><span class="p">{</span>
+  <span class="s2">&quot;status&quot;</span><span class="o">:</span> <span class="p">{</span>
+    <span class="s2">&quot;code&quot;</span><span class="o">:</span> <span class="mi">404</span><span class="p">,</span>
+    <span class="s2">&quot;message&quot;</span><span class="o">:</span> <span class="s2">&quot;Not Found&quot;</span>
+  <span class="p">},</span>
+  <span class="s2">&quot;success&quot;</span><span class="o">:</span> <span class="kc">false</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="id42">
+<h2>获取个人资料<a class="headerlink" href="#id42" title="永久链接至标题">¶</a></h2>
+<div class="section" id="id43">
+<h3>接口说明<a class="headerlink" href="#id43" title="永久链接至标题">¶</a></h3>
+<ul class="simple">
+<li>API接口请求地址：<code class="docutils literal"><span class="pre">/users/info</span></code></li>
+<li>API接口请求方法：<code class="docutils literal"><span class="pre">GET</span></code></li>
+</ul>
+</div>
+<div class="section" id="id44">
+<h3>返回示例<a class="headerlink" href="#id44" title="永久链接至标题">¶</a></h3>
+<p>JSON数据格式:</p>
+<p>请求 <strong>正确</strong> 返回结果：</p>
+<div class="highlight-javascript"><div class="highlight"><pre><span></span><span class="p">{</span>
+    <span class="s2">&quot;data&quot;</span><span class="o">:</span> <span class="p">{</span>
+        <span class="s2">&quot;about_me&quot;</span><span class="o">:</span> <span class="s2">&quot;php是最好的语言&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;avatar&quot;</span><span class="o">:</span> <span class="s2">&quot;http://127.0.0.1:9000/_uploads/photos/222222/5d2812257b539aa.jpg&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;city&quot;</span><span class="o">:</span> <span class="s2">&quot;南京&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;date&quot;</span><span class="o">:</span> <span class="s2">&quot;1992年12月16日&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;email&quot;</span><span class="o">:</span> <span class="s2">&quot;zhizhuren@163.com&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;gender&quot;</span><span class="o">:</span> <span class="mi">1</span><span class="p">,</span>
+        <span class="s2">&quot;id&quot;</span><span class="o">:</span> <span class="mi">1</span><span class="p">,</span>
+        <span class="s2">&quot;master_uid&quot;</span><span class="o">:</span> <span class="mi">0</span><span class="p">,</span>
+        <span class="s2">&quot;nick_name&quot;</span><span class="o">:</span> <span class="s2">&quot;马化腾&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;openid&quot;</span><span class="o">:</span> <span class="s2">&quot;jsdkj3j&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;province&quot;</span><span class="o">:</span> <span class="s2">&quot;江苏&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;user_id&quot;</span><span class="o">:</span> <span class="mi">0</span><span class="p">,</span>
+        <span class="s2">&quot;wxapp_id&quot;</span><span class="o">:</span> <span class="s2">&quot;1&quot;</span>
+    <span class="p">},</span>
+    <span class="s2">&quot;status&quot;</span><span class="o">:</span> <span class="p">{</span>
+        <span class="s2">&quot;code&quot;</span><span class="o">:</span> <span class="mi">200</span><span class="p">,</span>
+        <span class="s2">&quot;message&quot;</span><span class="o">:</span> <span class="s2">&quot;Ok all right.&quot;</span>
+    <span class="p">},</span>
+    <span class="s2">&quot;success&quot;</span><span class="o">:</span> <span class="kc">true</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<p>请求 <code class="docutils literal"><span class="pre">失败</span></code> 返回结果：</p>
+<div class="highlight-javascript"><div class="highlight"><pre><span></span><span class="p">{</span>
+  <span class="s2">&quot;status&quot;</span><span class="o">:</span> <span class="p">{</span>
+    <span class="s2">&quot;code&quot;</span><span class="o">:</span> <span class="mi">404</span><span class="p">,</span>
+    <span class="s2">&quot;message&quot;</span><span class="o">:</span> <span class="s2">&quot;Not Found&quot;</span>
+  <span class="p">},</span>
+  <span class="s2">&quot;success&quot;</span><span class="o">:</span> <span class="kc">false</span>
 <span class="p">}</span>
 </pre></div>
 </div>

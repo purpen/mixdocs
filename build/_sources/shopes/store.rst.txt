@@ -30,7 +30,6 @@ current_city_id         Integer     必须         0            商家位置ID
 mobile                  String      必须                      手机号
 phone                   String      可选                      固定电话
 =====================  ==========  =========  ==========  =============================
-
 请求示例
 ~~~~~~~~~~~~~~~~
 
@@ -58,7 +57,6 @@ JSON数据格式
             "rid": "97183642"
         }
     }
-
 请求 ``失败`` 返回结果：
 
 .. code-block:: javascript
@@ -174,10 +172,7 @@ JSON数据格式
             "code": 400,
             "message": "Store is None"
         },
-
         "success": false
-    }
-
 获取公告信息
 -------------
 
@@ -187,7 +182,6 @@ JSON数据格式
 
 * API接口请求地址：``/store/announcement``
 * API接口请求方法：``GET``
-
 返回示例
 ~~~~~~~~~~~~~~~~
 
@@ -209,7 +203,6 @@ JSON数据格式
         },
         "success": true
     }
-
 请求 ``失败`` 返回结果：
 
 .. code-block:: javascript
@@ -263,7 +256,6 @@ JSON数据格式
             "status": 1
         }
     }
-
 请求 ``失败`` 返回结果：
 
 .. code-block:: javascript
@@ -315,7 +307,6 @@ JSON数据格式
             "status": 1
         }
     }
-
 请求 ``失败`` 返回结果：
 
 .. code-block:: javascript
@@ -353,9 +344,8 @@ JSON数据格式
         },
         "success": true
     }
-
 获取店铺基本信息
-------------------
+-------------
 
 
 接口说明
@@ -391,7 +381,6 @@ JSON数据格式
         },
         "success": true
     }
-
 请求 ``失败`` 返回结果：
 
 .. code-block:: javascript
@@ -403,7 +392,6 @@ JSON数据格式
         },
         "success": false
     }
-
 添加店铺访问者记录
 -----------------------
 
@@ -448,7 +436,6 @@ JSON数据格式
         },
         "success": true
     }
-
 请求 ``失败`` 返回结果：
 
 .. code-block:: javascript
@@ -460,7 +447,6 @@ JSON数据格式
         },
         "success": false
     }
-
 获取店铺访问者记录
 -----------------------
 
@@ -541,7 +527,6 @@ JSON数据格式
         },
         "success": true
     }
-
 请求 ``失败`` 返回结果：
 
 .. code-block:: javascript
@@ -553,7 +538,6 @@ JSON数据格式
         },
         "success": false
     }
-
 获取店铺详细信息
 -----------------------
 
@@ -596,7 +580,6 @@ JSON数据格式
         },
         "success": true
     }
-
 请求 ``失败`` 返回结果：
 
 .. code-block:: javascript
@@ -608,7 +591,6 @@ JSON数据格式
         },
         "success": false
     }
-
 添加店铺详品牌故事
 -----------------------
 
@@ -651,7 +633,6 @@ JSON数据格式
         },
         "success": true
     }
-
 请求 ``失败`` 返回结果：
 
 .. code-block:: javascript
@@ -663,8 +644,7 @@ JSON数据格式
         },
         "success": false
     }
-
-新店铺详品牌故事
+更新店铺详品牌故事
 -----------------------
 
 接口说明
@@ -705,7 +685,6 @@ JSON数据格式
         },
         "success": true
     }
-
 请求 ``失败`` 返回结果：
 
 .. code-block:: javascript
@@ -717,7 +696,6 @@ JSON数据格式
         },
         "success": false
     }
-
 删除店铺详品牌故事
 -----------------------
 
@@ -744,7 +722,6 @@ JSON数据格式
         },
         "success": true
     }
-
 请求 ``失败`` 返回结果：
 
 .. code-block:: javascript
