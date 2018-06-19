@@ -111,12 +111,14 @@ JSON数据格式
 * API接口请求地址：``/users/authenticate``
 * API接口请求方法：``POST``
 * API接口用户授权：``token``
+
 请求参数
 ~~~~~~~~~~~~~~~
 
 =====================  ==========  =========  ==========  =============================
 名称                    类型        是否必须     默认值       描述说明
 =====================  ==========  =========  ==========  =============================
+avatar_id                Integer   必须                      头像
 name                     String    必须                      姓名
 id_card                  String    必须                      身份证号
 front_card_photo_id      Integer   必须                      身份证正面照ID
@@ -161,6 +163,7 @@ JSON数据格式:
     {
         "user_type":3,"name":"毛爷爷","avatar_id":1,"id_card":"13082119921226801x","front_card_photo_id":1,"reverse_card_photo_id":1,"holding_card_photo_id":1,"areacode":"+86","mobile":"13001179400","wechat":"jksjk45","country_id":1,"province_id":1,"city_id":1,"area_id":2,"street_address":"中南海","own_brand":true,"customized":true,"product_category":"无人机","attachments":[1,2,3],"product_price":"22~99","email":"1346555456@qq.com", "sale_platform":["京东","淘宝","天猫"],"product_scope":1, "brand_name":"jkss ","company_name":"京东", "url":"https://www.jd.com","link":["https://www.taobao.com","https://www.jingdong.com","https://www.tianmao.com"]
     }
+
 返回示例
 ~~~~~~~~~~~~~~~~
 
@@ -177,6 +180,7 @@ JSON数据格式
         },
         "success": true
     }
+
 请求 ``失败`` 返回结果：
 
 .. code-block:: javascript
@@ -188,6 +192,7 @@ JSON数据格式
         },
         "success": false
     }
+
 更新认证状态
 -----------------
 
@@ -228,6 +233,7 @@ JSON数据格式:
             "is_setting": true
         }
     }
+
 请求 ``失败`` 返回结果：
 
 .. code-block:: javascript
@@ -286,6 +292,7 @@ JSON数据格式:
         },
         "success": true
     }
+
 请求 ``失败`` 返回结果：
 
 .. code-block:: javascript
@@ -297,6 +304,7 @@ JSON数据格式:
       },
       "success": false
     }
+
 API接口请求方法为 ``POST`` 时
 
 请求参数
@@ -310,6 +318,7 @@ username          String    必须                  户名
 bank_addr         String    必须                  开户行
 account           String    必须                  账号
 ===============  ========  =========  ========  ====================================
+
 返回示例
 ~~~~~~~~~~~~~~~~
 
@@ -345,6 +354,7 @@ JSON数据格式:
         },
         "success": true
     }
+
 请求 ``失败`` 返回结果：
 
 .. code-block:: javascript
@@ -410,6 +420,7 @@ JSON数据格式:
         },
         "success": true
     }
+
 请求 ``失败`` 返回结果：
 
 .. code-block:: javascript
@@ -421,6 +432,7 @@ JSON数据格式:
         },
         "success": false
     }
+
 获取合同信息
 -----------------
 
@@ -465,6 +477,7 @@ JSON数据格式:
         },
         "success": true
     }
+
 请求 ``失败`` 返回结果：
 
 .. code-block:: javascript
@@ -476,13 +489,14 @@ JSON数据格式:
       },
       "success": false
     }
+
 保存用户第三方登陆信息
 -------------------------
 
 接口说明
 ~~~~~~~~~~~~~~
 
-* API接口请求地址：``/users/save_user_info``
+* API接口请求地址：``/users/user_info``
 * API接口请求方法：``POST``
 
 请求参数
@@ -501,6 +515,7 @@ province         String     必须                 省
 city             String     必须                 市
 type             Integer    可选          1      来源类型 1、微信
 ===============  ========  =========  ========  ====================================
+
 请求示例
 ~~~~~~~~~~~~~~~~
 
@@ -512,10 +527,12 @@ JSON数据格式:
         "openid":"jsdkj3j",
         "nick_name":"taihuoniao",
         "avatar":"weixin://wxpay/bizpayurl?pr=jKmv7J3",
-        "country":"zhongguo",
+        "country":"中国",
         "province":"河北",
         "city":"保定"
+        "gender":0
     }
+
 返回示例
 ~~~~~~~~~~~~~~~~
 
@@ -532,6 +549,7 @@ JSON数据格式:
         },
         "success": true
     }
+
 请求 ``失败`` 返回结果：
 
 .. code-block:: javascript
@@ -543,6 +561,7 @@ JSON数据格式:
       },
       "success": false
     }
+
 获取用户设置信息
 -----------------
 
@@ -573,6 +592,7 @@ JSON数据格式:
         },
         "success": true
     }
+
 请求 ``失败`` 返回结果：
 
 .. code-block:: javascript
@@ -584,6 +604,7 @@ JSON数据格式:
       },
       "success": false
     }
+
 编辑个人资料
 -----------------
 
@@ -642,6 +663,7 @@ JSON数据格式:
         },
         "success": true
     }
+
 请求 ``失败`` 返回结果：
 
 .. code-block:: javascript
@@ -653,6 +675,7 @@ JSON数据格式:
       },
       "success": false
     }
+
 获取个人资料
 -----------------
 
@@ -693,6 +716,7 @@ JSON数据格式:
         },
         "success": true
     }
+
 请求 ``失败`` 返回结果：
 
 .. code-block:: javascript
