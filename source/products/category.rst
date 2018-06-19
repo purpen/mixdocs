@@ -71,6 +71,7 @@ JSON数据格式:
 
 * API接口请求地址：``/categories``
 * API接口请求方法：``POST``
+* API接口用户授权：``token``
 
 请求参数
 ~~~~~~~~~~~~~~~
@@ -131,6 +132,7 @@ JSON数据格式:
 
 * API接口请求地址：``/categories/<id>``
 * API接口请求方法：``PUT``
+* API接口用户授权：``token``
 
 请求参数
 ~~~~~~~~~~~~~~~
@@ -346,7 +348,6 @@ JSON数据格式:
 
 * API接口请求地址：``/official/categories/<id>``
 * API接口请求方法：``DELETE``
-* API接口用户授权：``token``
 
 请求参数
 ~~~~~~~~~~~~~~~
