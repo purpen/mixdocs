@@ -2,13 +2,126 @@
 店铺模块
 ================
 
-申请店铺
+基本信息设置
 -----------------------
 
 接口说明
 ~~~~~~~~~~~~~~
 
-* API接口请求地址：``/store/apply``
+* API接口请求地址：``/store/settings``
+* API接口请求方法：``POST``
+* API接口用户授权：``token``
+
+请求参数
+~~~~~~~~~~~~~~~
+
+=====================  ==========  =========  ==========  =============================
+名称                    类型        是否必须     默认值       描述说明
+=====================  ==========  =========  ==========  =============================
+categories              Array       必须                      产品分类ID
+country_id              Integer     必须                      国家ID
+delivery_province_id    Integer     必须                      发货省ID
+delivery_city_id        Integer     必须                      发货市ID
+current_city_id         Integer     必须                      商家位置ID
+areacode                String      必须                      区号
+mobile                  String      必须                      手机号
+phone                   String      可选                      固定电话
+=====================  ==========  =========  ==========  =============================
+
+请求示例
+~~~~~~~~~~~~~~~~
+
+JSON数据格式:
+
+.. code-block:: javascript
+
+    {"categories":[1,2,3],"country_id":1,"delivery_province_id":1,"delivery_city_id":1,"area_id":2,"current_city_id":1,"street_address":"中南海", "areacode":"+86","mobile":"15789456545", "phone":"0314-7894561"}
+
+返回示例
+~~~~~~~~~~~~~~~~
+
+JSON数据格式
+
+请求 **正确** 返回结果：
+
+.. code-block:: javascript
+
+    {
+        "data": {
+            "rid": "91957806"
+        },
+        "status": {
+            "code": 201,
+            "message": "All created."
+        },
+        "success": true
+    }
+
+请求 ``失败`` 返回结果：
+
+.. code-block:: javascript
+
+    {
+        "status": {
+            "code": 400,
+            "message": "请选择产品类别"
+        },
+        "success": false
+    }
+
+基本信息设置
+-----------------------
+
+接口说明
+~~~~~~~~~~~~~~
+
+* API接口请求地址：``/store/<string:rid>/settings``
+* API接口请求方法：``PUT``
+* API接口用户授权：``token``
+
+请求参数
+~~~~~~~~~~~~~~~
+``同上``
+
+返回示例
+~~~~~~~~~~~~~~~~
+
+JSON数据格式
+
+请求 **正确** 返回结果：
+
+.. code-block:: javascript
+
+    {
+        "data": {
+            "rid": "99627015"
+        },
+        "status": {
+            "code": 201,
+            "message": "All created."
+        },
+        "success": true
+    }
+
+请求 ``失败`` 返回结果：
+
+.. code-block:: javascript
+
+    {
+        "status": {
+            "code": 404,
+            "message": "Not Found"
+        },
+        "success": false
+    }
+
+店铺设置
+-----------------------
+
+接口说明
+~~~~~~~~~~~~~~
+
+* API接口请求地址：``/store/<string:rid>``
 * API接口请求方法：``POST``
 * API接口用户授权：``token``
 
@@ -22,23 +135,7 @@ name                    String      必须                      品牌馆名称
 logo_id                 Integer     必须                      品牌馆logoID
 bgcover_id              Integer     必须                      品牌馆背景图ID
 tag_line                String      必须                      宣传语
-categories              Array       可选                      产品分类ID
-country_id              Integer     必须         0            国家ID
-delivery_province_id    Integer     必须         0            发货省ID
-delivery_city_id        Integer     必须         0            发货市ID
-current_city_id         Integer     必须         0            商家位置ID
-mobile                  String      必须                      手机号
-phone                   String      可选                      固定电话
 =====================  ==========  =========  ==========  =============================
-
-请求示例
-~~~~~~~~~~~~~~~~
-
-JSON数据格式:
-
-.. code-block:: javascript
-
-    {"name":"小米之家", "logo_id":1 , "bgcover_id":1,"tag_line":"aaaa","country_id":1, "current_city_id":1,"delivery_province_id":1,"delivery_city_id":1, "mobile":"13567894536","categories":[2,3]}
 
 返回示例
 ~~~~~~~~~~~~~~~~
@@ -50,13 +147,35 @@ JSON数据格式
 .. code-block:: javascript
 
     {
+        "data": {
+            "area": "顺义区",
+            "areacode": "+86",
+            "bgcover": "http://0.0.0.0:9000/_uploads/photos/http://127.0.0.1:9000/_uploads/photos/222222/5d2812257b539bb.jpg",
+            "browse_number": 0,
+            "categories": [
+                "手机"
+            ],
+            "country_id": "中国",
+            "current_city_id": "北京",
+            "delivery_city_id": "北京",
+            "delivery_province_id": "北京",
+            "description": null,
+            "distribution_type": 0,
+            "fans_count": 0,
+            "logo": "http://0.0.0.0:9000/_uploads/photos/http://127.0.0.1:9000/_uploads/photos/222222/5d2812257b539aa.jpg",
+            "mobile": "15555555555",
+            "name": "太火鸟",
+            "phone": "0314-7894561",
+            "rid": "99627015",
+            "status": 1,
+            "tag_line": "我就独风景还是可故事",
+            "type": 1
+        },
         "status": {
             "code": 201,
             "message": "All created."
         },
-        "success": {
-            "rid": "97183642"
-        }
+        "success": true
     }
 
 请求 ``失败`` 返回结果：
@@ -65,11 +184,23 @@ JSON数据格式
 
     {
         "status": {
-            "code": 400,
-            "message": "Store is None"
+            "code": 404,
+            "message": "Not Found"
         },
         "success": false
     }
+
+修改店铺设置
+-----------------------
+
+接口说明
+~~~~~~~~~~~~~~
+
+* API接口请求地址：``/store/<string:rid>``
+* API接口请求方法：``PUT``
+* API接口用户授权：``token``
+
+``同上``
 
 关注店铺
 -----------------------

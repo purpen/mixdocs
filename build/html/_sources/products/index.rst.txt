@@ -9,6 +9,10 @@
     products.rst
     category.rst
     brands.rst
+    materials.rst
+    colors.rst
+    models.rst
+    return_policies.rst
     store_product_packet.rst
     distributions.rst
     wish.rst

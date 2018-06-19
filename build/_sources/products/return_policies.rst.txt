@@ -11,6 +11,7 @@
 
 * API接口请求地址：``/products/return_policies``
 * API接口请求方法：``GET``
+* API接口用户授权：``token``
 
 返回示例
 ~~~~~~~~~~~~~~~~
@@ -55,6 +56,7 @@ JSON数据格式:
 
 * API接口请求地址：``/products/return_policies``
 * API接口请求方法：``POST``
+* API接口用户授权：``token``
 
 请求参数
 ~~~~~~~~~~~~~~~
@@ -95,6 +97,7 @@ JSON数据格式:
 
 * API接口请求地址：``/products/return_policies/1``
 * API接口请求方法：``PUT``
+* API接口用户授权：``token``
 
 请求参数
 ~~~~~~~~~~~~~~~
@@ -135,6 +138,7 @@ JSON数据格式:
 
 * API接口请求地址：``/products/return_policies/1``
 * API接口请求方法：``DELETE``
+* API接口用户授权：``token``
 
 返回示例
 ~~~~~~~~~~~~~~~~

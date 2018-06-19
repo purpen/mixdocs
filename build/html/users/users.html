@@ -87,6 +87,10 @@
 <li class="toctree-l2"><a class="reference internal" href="../products/products.html">商品模块</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../products/category.html">分类模块</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../products/brands.html">供应商/品牌模块</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../products/materials.html">商品材料模块</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../products/colors.html">商品颜色模块</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../products/models.html">商品规格模块</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../products/return_policies.html">商家退换货规则模块</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../products/store_product_packet.html">店铺商品组模块</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../products/distributions.html">分销模块</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../products/wish.html">心愿清单模块</a></li>
@@ -507,187 +511,193 @@
 </tr>
 </thead>
 <tbody valign="top">
-<tr class="row-even"><td>name</td>
+<tr class="row-even"><td>avatar_id</td>
+<td>Integer</td>
+<td>必须</td>
+<td>&#160;</td>
+<td>头像</td>
+</tr>
+<tr class="row-odd"><td>name</td>
 <td>String</td>
 <td>必须</td>
 <td>&#160;</td>
 <td>姓名</td>
 </tr>
-<tr class="row-odd"><td>id_card</td>
+<tr class="row-even"><td>id_card</td>
 <td>String</td>
 <td>必须</td>
 <td>&#160;</td>
 <td>身份证号</td>
 </tr>
-<tr class="row-even"><td>front_card_photo_id</td>
+<tr class="row-odd"><td>front_card_photo_id</td>
 <td>Integer</td>
 <td>必须</td>
 <td>&#160;</td>
 <td>身份证正面照ID</td>
 </tr>
-<tr class="row-odd"><td>reverse_card_photo_id</td>
+<tr class="row-even"><td>reverse_card_photo_id</td>
 <td>Integer</td>
 <td>必须</td>
 <td>&#160;</td>
 <td>身份证反面照ID</td>
 </tr>
-<tr class="row-even"><td>holding_card_photo_id</td>
+<tr class="row-odd"><td>holding_card_photo_id</td>
 <td>Integer</td>
 <td>必须</td>
 <td>&#160;</td>
 <td>手持身份证正面照ID</td>
 </tr>
-<tr class="row-odd"><td>mobile</td>
+<tr class="row-even"><td>mobile</td>
 <td>String</td>
 <td>必须</td>
 <td>&#160;</td>
 <td>手机号</td>
 </tr>
-<tr class="row-even"><td>email</td>
+<tr class="row-odd"><td>email</td>
 <td>String</td>
 <td>必须</td>
 <td>&#160;</td>
 <td>邮箱</td>
 </tr>
-<tr class="row-odd"><td>phone</td>
+<tr class="row-even"><td>phone</td>
 <td>String</td>
 <td>可选</td>
 <td>&#160;</td>
 <td>固定电话</td>
 </tr>
-<tr class="row-even"><td>wechat</td>
+<tr class="row-odd"><td>wechat</td>
 <td>String</td>
 <td>必须</td>
 <td>&#160;</td>
 <td>微信号</td>
 </tr>
-<tr class="row-odd"><td>qq</td>
+<tr class="row-even"><td>qq</td>
 <td>String</td>
 <td>可选</td>
 <td>&#160;</td>
 <td>QQ号</td>
 </tr>
-<tr class="row-even"><td>country_id</td>
+<tr class="row-odd"><td>country_id</td>
 <td>Integer</td>
 <td>必须</td>
 <td>&#160;</td>
 <td>国家ID</td>
 </tr>
-<tr class="row-odd"><td>province_id</td>
+<tr class="row-even"><td>province_id</td>
 <td>Integer</td>
 <td>必须</td>
 <td>&#160;</td>
 <td>省ID</td>
 </tr>
-<tr class="row-even"><td>city_id</td>
+<tr class="row-odd"><td>city_id</td>
 <td>Integer</td>
 <td>必须</td>
 <td>&#160;</td>
 <td>市ID</td>
 </tr>
-<tr class="row-odd"><td>area_id</td>
+<tr class="row-even"><td>area_id</td>
 <td>Integer</td>
 <td>必须</td>
 <td>&#160;</td>
 <td>区域ID</td>
 </tr>
-<tr class="row-even"><td>street_address</td>
+<tr class="row-odd"><td>street_address</td>
 <td>String</td>
 <td>必须</td>
 <td>&#160;</td>
 <td>详细地址</td>
 </tr>
-<tr class="row-odd"><td>urgent_contact_name</td>
+<tr class="row-even"><td>urgent_contact_name</td>
 <td>String</td>
 <td>必须</td>
 <td>&#160;</td>
 <td>紧急联系人姓名</td>
 </tr>
-<tr class="row-even"><td>urgent_contact_mobile</td>
+<tr class="row-odd"><td>urgent_contact_mobile</td>
 <td>String</td>
 <td>必须</td>
 <td>&#160;</td>
 <td>紧急联系人电话</td>
 </tr>
-<tr class="row-odd"><td>user_type</td>
+<tr class="row-even"><td>user_type</td>
 <td>Integer</td>
 <td>可选</td>
 <td>1</td>
 <td>用户类型，1、个人；2、原创工作室；3、原创品牌公司</td>
 </tr>
-<tr class="row-even"><td>product_scope</td>
+<tr class="row-odd"><td>product_scope</td>
 <td>Integer</td>
 <td>可选</td>
 <td>1</td>
 <td>商品范畴，1、原创商品，由本人或团队独立思考设计；2、十年老件；3、授权贩售，由设计师或者设计师代理经销的商品；4、其他</td>
 </tr>
-<tr class="row-odd"><td>other_scope</td>
+<tr class="row-even"><td>other_scope</td>
 <td>String</td>
 <td>可选</td>
 <td>&#160;</td>
 <td>其他范畴</td>
 </tr>
-<tr class="row-even"><td>own_brand</td>
+<tr class="row-odd"><td>own_brand</td>
 <td>Bool</td>
 <td>可选</td>
 <td>False</td>
 <td>是否拥有自己的品牌</td>
 </tr>
-<tr class="row-odd"><td>brand_name</td>
+<tr class="row-even"><td>brand_name</td>
 <td>String</td>
 <td>可选</td>
 <td>&#160;</td>
 <td>品牌名称</td>
 </tr>
-<tr class="row-even"><td>sale_platform</td>
+<tr class="row-odd"><td>sale_platform</td>
 <td>Array</td>
 <td>可选</td>
 <td>&#160;</td>
 <td>上线平台名称</td>
 </tr>
-<tr class="row-odd"><td>link</td>
+<tr class="row-even"><td>link</td>
 <td>Array</td>
 <td>可选</td>
 <td>&#160;</td>
 <td>上线平台链接</td>
 </tr>
-<tr class="row-even"><td>product_category</td>
+<tr class="row-odd"><td>product_category</td>
 <td>String</td>
 <td>必须</td>
 <td>&#160;</td>
 <td>商品所属类别</td>
 </tr>
-<tr class="row-odd"><td>customized</td>
+<tr class="row-even"><td>customized</td>
 <td>Bool</td>
 <td>可选</td>
 <td>False</td>
 <td>是否提供定制化服务</td>
 </tr>
-<tr class="row-even"><td>attachments</td>
-<td>String</td>
+<tr class="row-odd"><td>attachments</td>
+<td>Array</td>
 <td>必须</td>
 <td>&#160;</td>
 <td>原创商品图片ID</td>
 </tr>
-<tr class="row-odd"><td>product_price</td>
-<td>String</td>
+<tr class="row-even"><td>product_price</td>
+<td>Array</td>
 <td>必须</td>
 <td>&#160;</td>
 <td>商品价格范围</td>
 </tr>
-<tr class="row-even"><td>company_name</td>
+<tr class="row-odd"><td>company_name</td>
 <td>String</td>
 <td>必须</td>
 <td>&#160;</td>
 <td>公司名称</td>
 </tr>
-<tr class="row-odd"><td>url</td>
+<tr class="row-even"><td>url</td>
 <td>String</td>
 <td>可选</td>
 <td>&#160;</td>
 <td>公司网址</td>
 </tr>
-<tr class="row-even"><td>company_qualification</td>
+<tr class="row-odd"><td>company_qualification</td>
 <td>String</td>
 <td>必须</td>
 <td>&#160;</td>
@@ -700,7 +710,7 @@
 <h3>请求示例<a class="headerlink" href="#id12" title="永久链接至标题">¶</a></h3>
 <p>JSON数据格式:</p>
 <div class="highlight-javascript"><div class="highlight"><pre><span></span><span class="p">{</span>
-    <span class="s2">&quot;user_type&quot;</span><span class="o">:</span><span class="mi">3</span><span class="p">,</span><span class="s2">&quot;name&quot;</span><span class="o">:</span><span class="s2">&quot;毛爷爷&quot;</span><span class="p">,</span><span class="s2">&quot;avatar_id&quot;</span><span class="o">:</span><span class="mi">1</span><span class="p">,</span><span class="s2">&quot;id_card&quot;</span><span class="o">:</span><span class="s2">&quot;13082119921226801x&quot;</span><span class="p">,</span><span class="s2">&quot;front_card_photo_id&quot;</span><span class="o">:</span><span class="mi">1</span><span class="p">,</span><span class="s2">&quot;reverse_card_photo_id&quot;</span><span class="o">:</span><span class="mi">1</span><span class="p">,</span><span class="s2">&quot;holding_card_photo_id&quot;</span><span class="o">:</span><span class="mi">1</span><span class="p">,</span><span class="s2">&quot;areacode&quot;</span><span class="o">:</span><span class="s2">&quot;+86&quot;</span><span class="p">,</span><span class="s2">&quot;mobile&quot;</span><span class="o">:</span><span class="s2">&quot;13001179400&quot;</span><span class="p">,</span><span class="s2">&quot;wechat&quot;</span><span class="o">:</span><span class="s2">&quot;jksjk45&quot;</span><span class="p">,</span><span class="s2">&quot;country_id&quot;</span><span class="o">:</span><span class="mi">1</span><span class="p">,</span><span class="s2">&quot;province_id&quot;</span><span class="o">:</span><span class="mi">1</span><span class="p">,</span><span class="s2">&quot;city_id&quot;</span><span class="o">:</span><span class="mi">1</span><span class="p">,</span><span class="s2">&quot;area_id&quot;</span><span class="o">:</span><span class="mi">2</span><span class="p">,</span><span class="s2">&quot;street_address&quot;</span><span class="o">:</span><span class="s2">&quot;中南海&quot;</span><span class="p">,</span><span class="s2">&quot;own_brand&quot;</span><span class="o">:</span><span class="kc">true</span><span class="p">,</span><span class="s2">&quot;customized&quot;</span><span class="o">:</span><span class="kc">true</span><span class="p">,</span><span class="s2">&quot;product_category&quot;</span><span class="o">:</span><span class="s2">&quot;无人机&quot;</span><span class="p">,</span><span class="s2">&quot;attachments&quot;</span><span class="o">:</span><span class="p">[</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">],</span><span class="s2">&quot;product_price&quot;</span><span class="o">:</span><span class="s2">&quot;22~99&quot;</span><span class="p">,</span><span class="s2">&quot;email&quot;</span><span class="o">:</span><span class="s2">&quot;1346555456@qq.com&quot;</span><span class="p">,</span> <span class="s2">&quot;sale_platform&quot;</span><span class="o">:</span><span class="p">[</span><span class="s2">&quot;京东&quot;</span><span class="p">,</span><span class="s2">&quot;淘宝&quot;</span><span class="p">,</span><span class="s2">&quot;天猫&quot;</span><span class="p">],</span><span class="s2">&quot;product_scope&quot;</span><span class="o">:</span><span class="mi">1</span><span class="p">,</span> <span class="s2">&quot;brand_name&quot;</span><span class="o">:</span><span class="s2">&quot;jkss &quot;</span><span class="p">,</span><span class="s2">&quot;company_name&quot;</span><span class="o">:</span><span class="s2">&quot;京东&quot;</span><span class="p">,</span> <span class="s2">&quot;url&quot;</span><span class="o">:</span><span class="s2">&quot;https://www.jd.com&quot;</span><span class="p">,</span><span class="s2">&quot;link&quot;</span><span class="o">:</span><span class="p">[</span><span class="s2">&quot;https://www.taobao.com&quot;</span><span class="p">,</span><span class="s2">&quot;https://www.jingdong.com&quot;</span><span class="p">,</span><span class="s2">&quot;https://www.tianmao.com&quot;</span><span class="p">]</span>
+    <span class="s2">&quot;user_type&quot;</span><span class="o">:</span><span class="mi">3</span><span class="p">,</span><span class="s2">&quot;name&quot;</span><span class="o">:</span><span class="s2">&quot;毛爷爷&quot;</span><span class="p">,</span><span class="s2">&quot;avatar_id&quot;</span><span class="o">:</span><span class="mi">1</span><span class="p">,</span><span class="s2">&quot;id_card&quot;</span><span class="o">:</span><span class="s2">&quot;13082119921226801x&quot;</span><span class="p">,</span><span class="s2">&quot;front_card_photo_id&quot;</span><span class="o">:</span><span class="mi">1</span><span class="p">,</span><span class="s2">&quot;reverse_card_photo_id&quot;</span><span class="o">:</span><span class="mi">1</span><span class="p">,</span><span class="s2">&quot;holding_card_photo_id&quot;</span><span class="o">:</span><span class="mi">1</span><span class="p">,</span><span class="s2">&quot;areacode&quot;</span><span class="o">:</span><span class="s2">&quot;+86&quot;</span><span class="p">,</span><span class="s2">&quot;mobile&quot;</span><span class="o">:</span><span class="s2">&quot;13001179400&quot;</span><span class="p">,</span><span class="s2">&quot;wechat&quot;</span><span class="o">:</span><span class="s2">&quot;jksjk45&quot;</span><span class="p">,</span><span class="s2">&quot;country_id&quot;</span><span class="o">:</span><span class="mi">1</span><span class="p">,</span><span class="s2">&quot;province_id&quot;</span><span class="o">:</span><span class="mi">1</span><span class="p">,</span><span class="s2">&quot;city_id&quot;</span><span class="o">:</span><span class="mi">1</span><span class="p">,</span><span class="s2">&quot;area_id&quot;</span><span class="o">:</span><span class="mi">2</span><span class="p">,</span><span class="s2">&quot;street_address&quot;</span><span class="o">:</span><span class="s2">&quot;中南海&quot;</span><span class="p">,</span><span class="s2">&quot;own_brand&quot;</span><span class="o">:</span><span class="kc">true</span><span class="p">,</span><span class="s2">&quot;customized&quot;</span><span class="o">:</span><span class="kc">true</span><span class="p">,</span><span class="s2">&quot;product_category&quot;</span><span class="o">:</span><span class="s2">&quot;无人机&quot;</span><span class="p">,</span><span class="s2">&quot;attachments&quot;</span><span class="o">:</span><span class="p">[</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">],</span><span class="s2">&quot;product_price&quot;</span><span class="o">:</span><span class="p">[</span><span class="mi">22</span><span class="p">,</span><span class="mi">99</span><span class="p">],</span><span class="s2">&quot;email&quot;</span><span class="o">:</span><span class="s2">&quot;1346555456@qq.com&quot;</span><span class="p">,</span> <span class="s2">&quot;sale_platform&quot;</span><span class="o">:</span><span class="p">[</span><span class="s2">&quot;京东&quot;</span><span class="p">,</span><span class="s2">&quot;淘宝&quot;</span><span class="p">,</span><span class="s2">&quot;天猫&quot;</span><span class="p">],</span><span class="s2">&quot;product_scope&quot;</span><span class="o">:</span><span class="mi">1</span><span class="p">,</span> <span class="s2">&quot;brand_name&quot;</span><span class="o">:</span><span class="s2">&quot;jkss &quot;</span><span class="p">,</span><span class="s2">&quot;company_name&quot;</span><span class="o">:</span><span class="s2">&quot;京东&quot;</span><span class="p">,</span> <span class="s2">&quot;url&quot;</span><span class="o">:</span><span class="s2">&quot;https://www.jd.com&quot;</span><span class="p">,</span><span class="s2">&quot;link&quot;</span><span class="o">:</span><span class="p">[</span><span class="s2">&quot;https://www.taobao.com&quot;</span><span class="p">,</span><span class="s2">&quot;https://www.jingdong.com&quot;</span><span class="p">,</span><span class="s2">&quot;https://www.tianmao.com&quot;</span><span class="p">]</span>
 <span class="p">}</span>
 </pre></div>
 </div>
@@ -1057,7 +1067,7 @@
 <div class="section" id="id31">
 <h3>接口说明<a class="headerlink" href="#id31" title="永久链接至标题">¶</a></h3>
 <ul class="simple">
-<li>API接口请求地址：<code class="docutils literal"><span class="pre">/users/save_user_info</span></code></li>
+<li>API接口请求地址：<code class="docutils literal"><span class="pre">/users/user_info</span></code></li>
 <li>API接口请求方法：<code class="docutils literal"><span class="pre">POST</span></code></li>
 </ul>
 </div>
@@ -1138,9 +1148,10 @@
     <span class="s2">&quot;openid&quot;</span><span class="o">:</span><span class="s2">&quot;jsdkj3j&quot;</span><span class="p">,</span>
     <span class="s2">&quot;nick_name&quot;</span><span class="o">:</span><span class="s2">&quot;taihuoniao&quot;</span><span class="p">,</span>
     <span class="s2">&quot;avatar&quot;</span><span class="o">:</span><span class="s2">&quot;weixin://wxpay/bizpayurl?pr=jKmv7J3&quot;</span><span class="p">,</span>
-    <span class="s2">&quot;country&quot;</span><span class="o">:</span><span class="s2">&quot;zhongguo&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;country&quot;</span><span class="o">:</span><span class="s2">&quot;中国&quot;</span><span class="p">,</span>
     <span class="s2">&quot;province&quot;</span><span class="o">:</span><span class="s2">&quot;河北&quot;</span><span class="p">,</span>
     <span class="s2">&quot;city&quot;</span><span class="o">:</span><span class="s2">&quot;保定&quot;</span>
+    <span class="s2">&quot;gender&quot;</span><span class="o">:</span><span class="mi">0</span>
 <span class="p">}</span>
 </pre></div>
 </div>
