@@ -193,6 +193,153 @@ JSON数据格式
         "success": false
     }
 
+获取认证信息
+-----------------
+
+接口说明
+~~~~~~~~~~~~~~
+
+* API接口请求地址：``/users/authenticate``
+* API接口请求方法：``GET``
+* API接口用户授权：``token``
+
+返回示例
+~~~~~~~~~~~~~~~~
+
+JSON数据格式
+
+请求 **正确** 返回结果：
+
+.. code-block:: javascript
+
+    {
+        "data": {
+            "account": null,
+            "area": null,
+            "areacode": "+86",
+            "attachments": [
+                {
+                    "created_at": null,
+                    "filename": "a",
+                    "filepath": "http://127.0.0.1:9000/_uploads/photos/222222/5d2812257b539aa.jpg",
+                    "id": 1,
+                    "view_url": "http://0.0.0.0:9000/_uploads/photos/http://127.0.0.1:9000/_uploads/photos/222222/5d2812257b539aa.jpg"
+                },
+                {
+                    "created_at": null,
+                    "filename": "e",
+                    "filepath": "http://127.0.0.1:9000/_uploads/photos/222222/5d2812257b539bb.jpg",
+                    "id": 2,
+                    "view_url": "http://0.0.0.0:9000/_uploads/photos/http://127.0.0.1:9000/_uploads/photos/222222/5d2812257b539bb.jpg"
+                },
+                {
+                    "created_at": null,
+                    "filename": "r",
+                    "filepath": "http://127.0.0.1:9000/_uploads/photos/222222/5d2812257b539oo.jpg",
+                    "id": 3,
+                    "view_url": "http://0.0.0.0:9000/_uploads/photos/http://127.0.0.1:9000/_uploads/photos/222222/5d2812257b539oo.jpg"
+                }
+            ],
+            "avatar": "http://0.0.0.0:9000/_uploads/photos/http://127.0.0.1:9000/_uploads/photos/222222/5d2812257b539aa.jpg",
+            "bank_addr": null,
+            "bank_name": null,
+            "brand_name": "jkss ",
+            "city": "北京",
+            "company_name": "京东",
+            "company_qualification": [],
+            "country": "中国",
+            "current_time": 1529477301,
+            "customized": true,
+            "email": "1346555456@qq.com",
+            "expiration_time": 1561013301,
+            "front_card_photo": "http://0.0.0.0:9000/_uploads/photos/http://127.0.0.1:9000/_uploads/photos/222222/5d2812257b539aa.jpg",
+            "holding_card_photo": "http://0.0.0.0:9000/_uploads/photos/http://127.0.0.1:9000/_uploads/photos/222222/5d2812257b539aa.jpg",
+            "id": 1,
+            "id_card": "13082119921226801x",
+            "link": "https://www.taobao.com,https://www.jingdong.com,https://www.tianmao.com",
+            "master_uid": 2,
+            "mobile": "13001179400",
+            "name": "毛爷爷",
+            "other_scope": null,
+            "own_brand": false,
+            "phone": null,
+            "product_category": "无人机",
+            "product_price": "22,99",
+            "product_scope": 1,
+            "province": "北京",
+            "qq": null,
+            "reverse_card_photo": "http://0.0.0.0:9000/_uploads/photos/http://127.0.0.1:9000/_uploads/photos/222222/5d2812257b539aa.jpg",
+            "sale_platform": "京东,淘宝,天猫",
+            "status": 1,
+            "street_address": "中南海",
+            "urgent_contact_mobile": "15879456532",
+            "urgent_contact_name": "普京",
+            "url": "https://www.jd.com",
+            "user_type": 2,
+            "username": null,
+            "wechat": "jksjk45"
+        },
+        "status": {
+            "code": 200,
+            "message": "Ok all right."
+        },
+        "success": true
+    }
+
+请求 ``失败`` 返回结果：
+
+.. code-block:: javascript
+
+    {
+      "status": {
+        "code": 404,
+        "message": "Not Found"
+      },
+      "success": false
+    }
+
+返回审核状态
+-----------------
+
+接口说明
+~~~~~~~~~~~~~~
+
+* API接口请求地址：``/users/get_authenticate_status``
+* API接口请求方法：``GET``
+* API接口用户授权：``token``
+
+返回示例
+~~~~~~~~~~~~~~~~
+
+JSON数据格式
+
+请求 **正确** 返回结果：
+
+.. code-block:: javascript
+
+    {
+        "data": {
+            "status": 1
+        },
+        "status": {
+            "code": 200,
+            "message": "Ok all right."
+        },
+        "success": true
+    }
+
+请求 ``失败`` 返回结果：
+
+.. code-block:: javascript
+
+    {
+      "status": {
+        "code": 404,
+        "message": "Not Found"
+      },
+      "success": false
+    }
+
 更新认证状态
 -----------------
 
@@ -508,11 +655,11 @@ JSON数据格式:
 ===============  ========  =========  ========  ====================================
 openid           String     必须                 用户唯一标识
 nick_name        String     必须                 用户昵称
-avatar           String     必须                 用户头像url
+avatar           String     可选                 用户头像url
 gender           Integer    可选          0      性别
-country          String     必须                 国家
-province         String     必须                 省
-city             String     必须                 市
+country          String     可选                 国家
+province         String     可选                 省
+city             String     可选                 市
 type             Integer    可选          1      来源类型 1、微信
 ===============  ========  =========  ========  ====================================
 
@@ -696,19 +843,21 @@ JSON数据格式:
 
     {
         "data": {
-            "about_me": "php是最好的语言",
-            "avatar": "http://127.0.0.1:9000/_uploads/photos/222222/5d2812257b539aa.jpg",
-            "city": "南京",
-            "date": "1992年12月16日",
-            "email": "zhizhuren@163.com",
-            "gender": 1,
-            "id": 1,
-            "master_uid": 0,
-            "nick_name": "马化腾",
-            "openid": "jsdkj3j",
-            "province": "江苏",
-            "user_id": 0,
-            "wxapp_id": "1"
+            "created_at": 1529067075,
+            "user_party": {
+                "about_me": null,
+                "avatar": "http://xxxx/photos/180224/c833237a728a1ed.jpg",
+                "city": "保定",
+                "date": "",
+                "email": null,
+                "gender": 0,
+                "id": 1,
+                "master_uid": 2,
+                "nick_name": "丁磊",
+                "openid": "jsdkj3j",
+                "province": "河北",
+                "wxapp_id": "1"
+            }
         },
         "status": {
             "code": 200,
