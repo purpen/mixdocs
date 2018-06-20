@@ -205,10 +205,10 @@ per_page     Number    可选         10        每页数量
 start_date   Integer   可选                   发布日期的开始时间戳
 end_date     Integer   可选                   发布日期的结束时间戳
 cid          Number    可选                   分类Id
-status       Integer   可选         1         商品状态, -1:全部; 0:仓库中; 1:出售中; 2:下架中; 3:已售罄
-type         Integer   可选                   商品类别,  0: 全部; 1：自营商品；2：分销商品
+status       Integer   可选         1         商品状态 0:仓库中; 1:出售中; 2:下架中; 3:已售罄
+type         Integer   可选                   商品类别 0: 全部; 1：自营商品；2：分销商品
 qk           String    可选                   搜索关键字
-stock        Integer   可选         0         商品库存,  0: 全部; 1: 数量不足
+stock        Integer   可选         0         商品库存 0: 全部; 1: 数量不足
 ===========  ========  =========  ========  ====================================
 
 返回示例
@@ -629,14 +629,96 @@ JSON数据格式:
     }
 
 
-新增商品
-------------------
-新增商品信息
+获取商品基本信息
+----------------------
+获取商品发布第一步数据
 
 接口说明
 ~~~~~~~~~~~~~~
 
-* API接口请求地址：``/products``
+* API接口请求地址：``/products/<rid>/publish1``
+* API接口请求方法：``GET``
+* API接口用户授权：``token``
+
+请求参数
+~~~~~~~~~~~~~~~
+
+=====================  ==========  =========  ==========  =============================
+名称                    类型        是否必须     默认值       描述说明
+=====================  ==========  =========  ==========  =============================
+rid                    String      必须                    商品编号
+=====================  ==========  =========  ==========  =============================
+
+返回示例
+~~~~~~~~~~~~~~~~
+
+JSON数据格式:
+
+.. code-block:: javascript
+
+    {
+        "data": {
+            "asset_ids": [
+                {
+                    "created_at": 1527587113,
+                    "filename": "m.jpg",
+                    "filepath": "180529/e5a6b51ad55208d.jpg",
+                    "id": 5,
+                    "view_url": "http://127.0.0.1:9000/_uploads/photos/180529/e5a6b51ad55208d.jpg"
+                }
+            ],
+            "content": "图文详情",
+            "cover": "http://127.0.0.1:9000/_uploads/photos/180529/4158809a4303eab.jpg",
+            "custom_details": "可以刻名字,生辰八字",
+            "features": "商品推荐语",
+            "id_code": "10086",
+            "is_custom_made": true,
+            "is_custom_service": true,
+            "is_distributed": false,
+            "is_free_postage": false,
+            "is_made_holiday": false,
+            "keywords": "苹果,手机,电脑",
+            "labels": [
+                {
+                    "id": 2,
+                    "name": "环保有机",
+                    "sort_order": 1
+                },
+                {
+                    "id": 3,
+                    "name": "手工制作",
+                    "sort_order": 1
+                },
+                {
+                    "id": 4,
+                    "name": "原创礼品",
+                    "sort_order": 1
+                }
+            ],
+            "made_cycle": 5,
+            "name": "商品名",
+            "published_at": 0,
+            "rid": "8520961834",
+            "status": 0,
+            "sticked": false,
+            "stock_count": null
+        },
+        "status": {
+            "code": 201,
+            "message": "All created."
+        },
+        "success": true
+    }
+
+
+发布商品第一步
+------------------
+发布商品基本信息
+
+接口说明
+~~~~~~~~~~~~~~
+
+* API接口请求地址：``/products/publish1``
 * API接口请求方法：``POST``
 * API接口用户授权：``token``
 
@@ -646,41 +728,22 @@ JSON数据格式:
 =====================  ==========  =========  ==========  =============================
 名称                    类型        是否必须     默认值       描述说明
 =====================  ==========  =========  ==========  =============================
+sid                    String      可选                     店铺编号
+category_id            Integer     必须                     分类ID
 name                   String      必需                     商品名称
+id_code                String      可选                     商品编码
 cover_id               Integer     必需                     封面图ID
-category_id            Integer     可选                     分类ID
-brand_id               Integer     可选                     品牌ID
-id_code                String      可选                     69码
-cost_price             Float       可选                     成本价
-price                  Float       必需                     销售价
-sale_price             Float       可选                     促销价
-description            String      可选                     描述
-features               String      可选                     宣传语或优势亮点
-sticked                Bool        可选          False      是否推荐
-status                 Bool        可选          True       上架或下架
-is_distributed         Bool        可选          False      是否分销
-s_weight               Float       可选                     重量
-s_length               Float       可选                     长
-s_width                Float       可选                     宽
-s_height               Float       可选                     高
-skus                   Array       必需                     商品sku信息
-=====================  ==========  =========  ==========  =============================
-
-商品sku请求参数
-~~~~~~~~~~~~~~~
-=====================  ==========  =========  ==========  =============================
-名称                    类型        是否必须     默认值       描述说明
-=====================  ==========  =========  ==========  =============================
-id_code                String      可选                     商品69码
-s_model                String      可选                     型号
-s_color                String      可选                     颜色
-s_weight               Float       可选                     重量
-cost_price             Float       可选                     成本价
-price                  Float       必需                     销售价
-sale_price             Float       可选                     促销价
-commission_price       Float       可选                     佣金
-stock_quantity         Integer     可选                     库存数
-remark                 String      可选                     备注
+asset_ids              String      可选                     商品图片
+material_id            Integer     必须                     材质
+features               String      必须                     宣传语或优势亮点
+content                String      必须                     图文详情
+keywords               Array       可选                     商品关键词
+is_custom_service      Bool        可选                     是否定制化服务
+custom_details         String      可选                     定制详情
+labels                 String      必填                     商品标签
+is_custom_made         Bool        必填                     是否接单定制
+made_cycle             Integer     可选                     制作周期
+is_made_holiday        Bool        可选                     制作周期是否包含节假日
 =====================  ==========  =========  ==========  =============================
 
 请求示例
@@ -688,12 +751,22 @@ remark                 String      可选                     备注
 
 .. code-block:: javascript
 
-    {"name": "新产品05", "brand_id": 1, "category_id": 2, "cover_id": 22, "cost_price": 23.00, "price": 45.00, "sale_price": 43, "description": "新潮产品描述","features": "最具创新力", "sticked": false, "is_distributed": true,
-     "skus": [
-        {"id_code": "6948451231567", "s_model": "iphone6", "s_color": "白色", "s_weight": 1.2, "cost_price": 3500, "price": 4000, "sale_price": 3700, "stock_quantity": 12, "remark": "商品sku1的备注信息", "commission_price": 23},
-        ...
-        {"id_code": "6948451564461", "s_model": "iphone7", "s_color": "黑色", "s_weight": 1.4, "cost_price": 5500, "price": 7000, "sale_price": 6000, "stock_quantity": 42, "remark": "商品sku2的备注信息", "commission_price": 34}
-      ]
+    {
+        "category_id": 9,
+        "name": "商品名",
+        "id_code": "10086",
+        "cover_id": 6,
+        "asset_ids": "7,8,9",
+        "material_id": 1,
+        "features": "商品推荐语",
+        "content": "图文详情",
+        "keywords": ["苹果", "手机", "电脑"],
+        "is_custom_service": true,
+        "custom_details": "可以刻名字,生辰八字",
+        "labels": "2,3,4",
+        "is_custom_made": true,
+        "made_cycle": 5,
+        "is_made_holiday": false
     }
 
 返回示例
@@ -705,21 +778,50 @@ JSON数据格式:
 
     {
         "data": {
-            "cover": "http://xxxx/photos/180224/c833237a728a1ed.jpg",
-            "description": "新潮产品描述",
-            "features": "最具创新力",
-            "id_code": null,
-            "is_distributed": true,
-            "name": "新产品05",
-            "price": 45,
-            "rid": "8478210953",
-            "s_height": 0,
-            "s_length": 0,
-            "s_weight": 0,
-            "s_width": 0,
-            "sale_price": 43,
+            "asset_ids": [
+                {
+                    "created_at": 1527587113,
+                    "filename": "m.jpg",
+                    "filepath": "180529/e5a6b51ad55208d.jpg",
+                    "id": 5,
+                    "view_url": "http://127.0.0.1:9000/_uploads/photos/180529/e5a6b51ad55208d.jpg"
+                }
+            ],
+            "content": "图文详情",
+            "cover": "http://127.0.0.1:9000/_uploads/photos/180529/4158809a4303eab.jpg",
+            "custom_details": "可以刻名字,生辰八字",
+            "features": "商品推荐语",
+            "id_code": "10086",
+            "is_custom_made": true,
+            "is_custom_service": true,
+            "is_distributed": false,
+            "is_free_postage": false,
+            "is_made_holiday": false,
+            "keywords": "苹果,手机,电脑",
+            "labels": [
+                {
+                    "id": 2,
+                    "name": "环保有机",
+                    "sort_order": 1
+                },
+                {
+                    "id": 3,
+                    "name": "手工制作",
+                    "sort_order": 1
+                },
+                {
+                    "id": 4,
+                    "name": "原创礼品",
+                    "sort_order": 1
+                }
+            ],
+            "made_cycle": 5,
+            "name": "商品名",
+            "published_at": 0,
+            "rid": "8520961834",
+            "status": 0,
             "sticked": false,
-            "is_distributed": true
+            "stock_count": null
         },
         "status": {
             "code": 201,
@@ -729,21 +831,26 @@ JSON数据格式:
     }
 
 
-更新商品
+更新商品第一步
 ------------------
-更新商品信息
+更新商品基本信息
 
 接口说明
 ~~~~~~~~~~~~~~
 
-* API接口请求地址：``/products/<rid>``
+* API接口请求地址：``/products/publish1?rid=8984507632``
 * API接口请求方法：``PUT``
 * API接口用户授权：``token``
 
 请求参数
 ~~~~~~~~~~~~~~~
 
-** 同上新增参数要求 **
+** 除同上新增参数要求, 增加查询字符串rid **
+=====================  ==========  =========  ==========  =============================
+名称                    类型        是否必须     默认值       描述说明
+=====================  ==========  =========  ==========  =============================
+rid                     String     必须                     商品编号
+=====================  ==========  =========  ==========  =============================
 
 返回示例
 ~~~~~~~~~~~~~~~~
@@ -756,21 +863,50 @@ JSON数据格式:
 
     {
         "data": {
-            "cover": "http://xxxx/_uploads/photos/180224/c833237a728a1ed.jpg",
-            "description": "新潮产品999描述07",
-            "features": "最具创新99力",
-            "id_code": null,
+            "asset_ids": [
+                {
+                    "created_at": 1527587113,
+                    "filename": "m.jpg",
+                    "filepath": "180529/e5a6b51ad55208d.jpg",
+                    "id": 5,
+                    "view_url": "http://127.0.0.1:9000/_uploads/photos/180529/e5a6b51ad55208d.jpg"
+                }
+            ],
+            "content": "新图文详情",
+            "cover": "http://127.0.0.1:9000/_uploads/photos/180529/4158809a4303eab.jpg",
+            "custom_details": "可以刻名字,生辰八字",
+            "features": "新商品推荐语",
+            "id_code": "10086",
+            "is_custom_made": true,
+            "is_custom_service": true,
             "is_distributed": false,
-            "name": "新产品0007",
-            "price": 45,
-            "rid": "8245178063",
-            "s_height": 0,
-            "s_length": 0,
-            "s_weight": 0,
-            "s_width": 0,
-            "sale_price": 43,
-            "sticked": true,
-            "is_distributed": false
+            "is_free_postage": false,
+            "is_made_holiday": false,
+            "keywords": "苹果,手机,电脑",
+            "labels": [
+                {
+                    "id": 2,
+                    "name": "环保有机",
+                    "sort_order": 1
+                },
+                {
+                    "id": 3,
+                    "name": "手工制作",
+                    "sort_order": 1
+                },
+                {
+                    "id": 4,
+                    "name": "原创礼品",
+                    "sort_order": 1
+                }
+            ],
+            "made_cycle": 5,
+            "name": "新商品名",
+            "published_at": 0,
+            "rid": "8520961834",
+            "status": 0,
+            "sticked": false,
+            "stock_count": null
         },
         "status": {
             "code": 201,
@@ -779,18 +915,249 @@ JSON数据格式:
         "success": true
     }
 
-请求 ``失败`` 返回结果：
+
+获取商品详细信息
+----------------------
+获取商品发布第二步数据
+
+接口说明
+~~~~~~~~~~~~~~
+
+* API接口请求地址：``/products/<rid>/publish2``
+* API接口请求方法：``GET``
+* API接口用户授权：``token``
+
+请求参数
+~~~~~~~~~~~~~~~
+
+=====================  ==========  =========  ==========  =============================
+名称                    类型        是否必须     默认值       描述说明
+=====================  ==========  =========  ==========  =============================
+rid                    String      必须                    商品编号
+=====================  ==========  =========  ==========  =============================
+
+返回示例
+~~~~~~~~~~~~~~~~
+
+JSON数据格式:
 
 .. code-block:: javascript
 
     {
-        "status": {
-            "code": 400,
-            "message": "分销商品, 佣金必须设置!"
+        "data": {
+            "freight_template_id": 2,
+            "product_return_policy": "退换货规则, 不能小于20个字符.",
+            "skus": [
+                {
+                    "commission_price": 23.33,
+                    "cover": "http://127.0.0.1:9000/_uploads/photos/180529/e5a6b51ad55208d.jpg",
+                    "id_code": null,
+                    "mode": "大 白色1",
+                    "price": 1234.5,
+                    "product_name": "B-修改商品第一步1",
+                    "rid": "8624130758",
+                    "s_color": "白色1",
+                    "s_model": "大",
+                    "s_weight": 2.5,
+                    "sale_price": 2345,
+                    "stock_count": 5
+                },
+                {
+                    "commission_price": 77.66,
+                    "cover": "http://127.0.0.1:9000/_uploads/photos/180529/4158809a4303eab.jpg",
+                    "id_code": null,
+                    "mode": "中 黑色1",
+                    "price": 2345.6,
+                    "product_name": "B-修改商品第一步1",
+                    "rid": "8165279083",
+                    "s_color": "黑色1",
+                    "s_model": "中",
+                    "s_weight": 2.5,
+                    "sale_price": 3456,
+                    "stock_count": 15
+                },
+                {
+                    "commission_price": 88.66,
+                    "cover": "http://127.0.0.1:9000/_uploads/photos/180529/925ebbac8f1c78a.jpg",
+                    "id_code": null,
+                    "mode": "小 蓝色1",
+                    "price": 3456.7,
+                    "product_name": "B-修改商品第一步1",
+                    "rid": "8823067419",
+                    "s_color": "蓝色1",
+                    "s_model": "小",
+                    "s_weight": 2.5,
+                    "sale_price": 4567,
+                    "stock_count": 25
+                },
+                {
+                    "commission_price": 55.55,
+                    "cover": "http://127.0.0.1:9000/_uploads/photos/180529/925ebbac8f1c78a.jpg",
+                    "id_code": null,
+                    "mode": "小 蓝色1",
+                    "price": 3456.7,
+                    "product_name": "B-修改商品第一步1",
+                    "rid": "8056431928",
+                    "s_color": "蓝色1",
+                    "s_model": "小",
+                    "s_weight": 2.5,
+                    "sale_price": 4567,
+                    "stock_count": 25
+                }
+            ],
+            "stock_count": 70
         },
-        "success": false
+        "status": {
+            "code": 200,
+            "message": "Ok all right."
+        },
+        "success": true
     }
 
+
+发布商品第二步
+------------------
+发布商品详细信息
+
+接口说明
+~~~~~~~~~~~~~~
+
+* API接口请求地址：``/products/publish2``
+* API接口请求方法：``POST``
+* API接口用户授权：``token``
+
+请求参数
+~~~~~~~~~~~~~~~
+
+商品sku请求参数
+~~~~~~~~~~~~~~~
+=====================  ==========  =========  ==========  =============================
+名称                    类型        是否必须     默认值       描述说明
+=====================  ==========  =========  ==========  =============================
+sid                    String      可选                     店铺编号
+rid                    String      必须                     商品编号
+freight_template_id    Integer     必须                     运费模板
+product_return_policy  String      必须                     退换货规则
+is_distributed         Bool        必须                     商品是否分销
+status                 Integer     必须                     商品状态 0: 放入仓库 1: 立即发布
+skus                   Array       必须                     商品sku信息
+
+sku参数信息
+sku_rid                String      可选                     sku编号,新增时为null
+cover_id               Integer     可选                     封面图ID
+s_color                String      可选                     颜色
+s_model                String      可选                     型号
+s_weight               Float       必需                     重量
+stock_quantity         Integer     必须                     数量
+price                  Float       必需                     销售价
+sale_price             Float       可选                     促销价
+commission_rate        Float       可选                     佣金比率
+=====================  ==========  =========  ==========  =============================
+
+请求示例
+~~~~~~~~~~~~~~~
+
+.. code-block:: javascript
+
+    {
+        "sid": "1234567891",
+        "rid" : "8390824751",
+        "freight_template_id": 1,
+        "product_return_policy": "退换货规则",
+        "status": 0,
+        "is_distributed": true,
+        "skus": [
+            {
+                "sku_rid": null,
+                "cover_id":  6,
+                "s_color": "黑色",
+                "s_model": "中",
+                "price": 2345.6,
+                "sale_price": 3456,
+                "s_weight": 2.5,
+                "stock_quantity": 15,
+                "commission_rate": 2.5
+            },
+            {
+                "sku_rid": null,
+                "cover_id":  7,
+                "s_color": "蓝色",
+                "s_model": "小",
+                "price": 3456.7,
+                "sale_price": 4567,
+                "s_weight": 2.5,
+                "stock_quantity": 25,
+                "commission_rate": 3.5
+            }
+        ]
+    }
+
+返回示例
+~~~~~~~~~~~~~~~~
+
+JSON数据格式:
+
+.. code-block:: javascript
+
+    {
+        "data": {
+            "freight_template_id": 2,
+            "product_return_policy": "退换货规则, 不能小于20个字符.",
+            "skus": [
+                {
+                    "commission_price": 88.66,
+                    "cover": "http://127.0.0.1:9000/_uploads/photos/180529/925ebbac8f1c78a.jpg",
+                    "id_code": null,
+                    "mode": "小 黑色",
+                    "price": 2345.6,
+                    "product_name": "商品名"
+                    "rid": "8823067419",
+                    "s_color": "黑色",
+                    "s_model": "小",
+                    "s_weight": 2.5,
+                    "sale_price": 3456,
+                    "stock_count": 15
+                },
+                {
+                    "commission_price": 55.55,
+                    "cover": "http://127.0.0.1:9000/_uploads/photos/180529/925ebbac8f1c78a.jpg",
+                    "id_code": null,
+                    "mode": "小 蓝色",
+                    "price": 3456.7,
+                    "product_name": "商品名",
+                    "rid": "8056431928",
+                    "s_color": "蓝色",
+                    "s_model": "小",
+                    "s_weight": 2.5,
+                    "sale_price": 4567,
+                    "stock_count": 25
+                }
+            ],
+            "stock_count": 70
+        },
+        "status": {
+            "code": 200,
+            "message": "Ok all right."
+        },
+        "success": true
+    }
+
+
+更新商品第二步
+------------------
+更新商品详细信息
+
+接口说明
+~~~~~~~~~~~~~~
+
+* API接口请求地址：``/products/publish2``
+* API接口请求方法：``PUT``
+* API接口用户授权：``token``
+
+请求参数
+~~~~~~~~~~~~~~~
+
+** 同上新增商品第二步参数要求, 注意: 如果是修改sku,参数sku_rid为获取到的值 **
 
 删除商品
 ------------------
