@@ -706,20 +706,20 @@ JSON数据格式
 
     {
         "data": {
-            "avatar": "http://0.0.0.0:9000/_uploads/photos/s",
-            "city": "北京",
-            "country": "中国",
-            "create_at": 1528361662,
-            "logo": "http://0.0.0.0:9000/_uploads/photos/s",
-            "name": "aaaaaaa",
+            "avatar": "http://0.0.0.0:9000/_uploads/photos/http://127.0.0.1:9000/_uploads/photos/222222/5d2812257b539aa.jpg",
+            "city_name": "北京",
+            "country_name": "中国",
+            "created_at": 1529143434,
+            "is_settings": true,
+            "logo": "http://0.0.0.0:9000/_uploads/photos/http://127.0.0.1:9000/_uploads/photos/222222/5d2812257b539oo.jpg",
+            "name": "毛爷爷",
             "store_detail": {
-                "content": "睡觉几点考试会计国家；商家；时路口高速开了说",
-                "created_at": 1528425254,
-                "id": 2,
-                "store_rid": "95637824"
+                "content": " 雨过天晴！",
+                "id": 1,
+                "store_rid": "99627015"
             },
-            "store_name": "hhh",
-            "tag_line": "aaaa"
+            "store_name": "唯品会",
+            "tag_line": "六月的雨"
         },
         "status": {
             "code": 200,

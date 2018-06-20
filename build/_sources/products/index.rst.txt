@@ -12,6 +12,7 @@
     materials.rst
     colors.rst
     models.rst
+    labels.rst
     return_policies.rst
     store_product_packet.rst
     distributions.rst

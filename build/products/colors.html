@@ -90,6 +90,7 @@
 <li class="toctree-l2"><a class="reference internal" href="materials.html">商品材料模块</a></li>
 <li class="toctree-l2 current"><a class="current reference internal" href="#">商品颜色模块</a></li>
 <li class="toctree-l2"><a class="reference internal" href="models.html">商品规格模块</a></li>
+<li class="toctree-l2"><a class="reference internal" href="labels.html">商品材质模块</a></li>
 <li class="toctree-l2"><a class="reference internal" href="return_policies.html">商家退换货规则模块</a></li>
 <li class="toctree-l2"><a class="reference internal" href="store_product_packet.html">店铺商品组模块</a></li>
 <li class="toctree-l2"><a class="reference internal" href="distributions.html">分销模块</a></li>
@@ -314,16 +315,18 @@
     <span class="s2">&quot;data&quot;</span><span class="o">:</span> <span class="p">{</span>
         <span class="s2">&quot;colors&quot;</span><span class="o">:</span> <span class="p">[</span>
             <span class="p">{</span>
-                <span class="s2">&quot;id&quot;</span><span class="o">:</span> <span class="mi">2</span><span class="p">,</span>
-                <span class="s2">&quot;is_official&quot;</span><span class="o">:</span> <span class="kc">true</span><span class="p">,</span>
-                <span class="s2">&quot;name&quot;</span><span class="o">:</span> <span class="s2">&quot;黑色&quot;</span><span class="p">,</span>
-                <span class="s2">&quot;sort_order&quot;</span><span class="o">:</span> <span class="mi">2</span>
-            <span class="p">},</span>
-            <span class="p">{</span>
                 <span class="s2">&quot;id&quot;</span><span class="o">:</span> <span class="mi">1</span><span class="p">,</span>
                 <span class="s2">&quot;is_official&quot;</span><span class="o">:</span> <span class="kc">true</span><span class="p">,</span>
                 <span class="s2">&quot;name&quot;</span><span class="o">:</span> <span class="s2">&quot;白色&quot;</span><span class="p">,</span>
-                <span class="s2">&quot;sort_order&quot;</span><span class="o">:</span> <span class="mi">1</span>
+                <span class="s2">&quot;rgb&quot;</span><span class="o">:</span> <span class="s2">&quot;#FFFFFF&quot;</span><span class="p">,</span>
+                <span class="s2">&quot;sort_order&quot;</span><span class="o">:</span> <span class="mi">16</span>
+            <span class="p">},</span>
+            <span class="p">{</span>
+                <span class="s2">&quot;id&quot;</span><span class="o">:</span> <span class="mi">2</span><span class="p">,</span>
+                <span class="s2">&quot;is_official&quot;</span><span class="o">:</span> <span class="kc">true</span><span class="p">,</span>
+                <span class="s2">&quot;name&quot;</span><span class="o">:</span> <span class="s2">&quot;黑色&quot;</span><span class="p">,</span>
+                <span class="s2">&quot;rgb&quot;</span><span class="o">:</span> <span class="s2">&quot;#000102&quot;</span><span class="p">,</span>
+                <span class="s2">&quot;sort_order&quot;</span><span class="o">:</span> <span class="mi">15</span>
             <span class="p">}</span>
         <span class="p">]</span>
     <span class="p">},</span>
@@ -350,11 +353,11 @@
 <h3>请求参数<a class="headerlink" href="#id7" title="永久链接至标题">¶</a></h3>
 <table border="1" class="docutils">
 <colgroup>
-<col width="18%" />
+<col width="16%" />
+<col width="10%" />
 <col width="11%" />
-<col width="12%" />
-<col width="11%" />
-<col width="49%" />
+<col width="10%" />
+<col width="53%" />
 </colgroup>
 <thead valign="bottom">
 <tr class="row-odd"><th class="head">名称</th>
@@ -371,7 +374,13 @@
 <td>&#160;</td>
 <td>颜色名称</td>
 </tr>
-<tr class="row-odd"><td>sort_order</td>
+<tr class="row-odd"><td>rgb</td>
+<td>String</td>
+<td>必填</td>
+<td>&#160;</td>
+<td>颜色rgb值, 正常以#开头,可以自定义特殊颜色</td>
+</tr>
+<tr class="row-even"><td>sort_order</td>
 <td>Number</td>
 <td>可选</td>
 <td>0</td>
@@ -388,6 +397,7 @@
         <span class="s2">&quot;id&quot;</span><span class="o">:</span> <span class="mi">3</span><span class="p">,</span>
         <span class="s2">&quot;is_official&quot;</span><span class="o">:</span> <span class="kc">true</span><span class="p">,</span>
         <span class="s2">&quot;name&quot;</span><span class="o">:</span> <span class="s2">&quot;蓝色&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;rgb&quot;</span><span class="o">:</span> <span class="s2">&quot;#2F8BBC&quot;</span><span class="p">,</span>
         <span class="s2">&quot;sort_order&quot;</span><span class="o">:</span> <span class="mi">3</span>
     <span class="p">},</span>
     <span class="s2">&quot;status&quot;</span><span class="o">:</span> <span class="p">{</span>
@@ -413,11 +423,11 @@
 <h3>请求参数<a class="headerlink" href="#id11" title="永久链接至标题">¶</a></h3>
 <table border="1" class="docutils">
 <colgroup>
-<col width="18%" />
+<col width="16%" />
+<col width="10%" />
 <col width="11%" />
-<col width="12%" />
-<col width="11%" />
-<col width="49%" />
+<col width="10%" />
+<col width="53%" />
 </colgroup>
 <thead valign="bottom">
 <tr class="row-odd"><th class="head">名称</th>
@@ -434,7 +444,13 @@
 <td>&#160;</td>
 <td>颜色名称</td>
 </tr>
-<tr class="row-odd"><td>sort_order</td>
+<tr class="row-odd"><td>rgb</td>
+<td>String</td>
+<td>必填</td>
+<td>&#160;</td>
+<td>颜色rgb值, 正常以#开头,可以自定义特殊颜色</td>
+</tr>
+<tr class="row-even"><td>sort_order</td>
 <td>Number</td>
 <td>可选</td>
 <td>0</td>
@@ -451,6 +467,7 @@
         <span class="s2">&quot;id&quot;</span><span class="o">:</span> <span class="mi">3</span><span class="p">,</span>
         <span class="s2">&quot;is_official&quot;</span><span class="o">:</span> <span class="kc">true</span><span class="p">,</span>
         <span class="s2">&quot;name&quot;</span><span class="o">:</span> <span class="s2">&quot;绿色&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;rgb&quot;</span><span class="o">:</span> <span class="s2">&quot;#2F8BBC&quot;</span><span class="p">,</span>
         <span class="s2">&quot;sort_order&quot;</span><span class="o">:</span> <span class="mi">4</span>
     <span class="p">},</span>
     <span class="s2">&quot;status&quot;</span><span class="o">:</span> <span class="p">{</span>
@@ -504,8 +521,9 @@
         <span class="s2">&quot;colors&quot;</span><span class="o">:</span> <span class="p">[</span>
             <span class="p">{</span>
                 <span class="s2">&quot;id&quot;</span><span class="o">:</span> <span class="mi">2</span><span class="p">,</span>
-                <span class="s2">&quot;is_official&quot;</span><span class="o">:</span> <span class="kc">false</span><span class="p">,</span>
+                <span class="s2">&quot;is_official&quot;</span><span class="o">:</span> <span class="kc">true</span><span class="p">,</span>
                 <span class="s2">&quot;name&quot;</span><span class="o">:</span> <span class="s2">&quot;黑色&quot;</span><span class="p">,</span>
+                <span class="s2">&quot;rgb&quot;</span><span class="o">:</span> <span class="kc">null</span><span class="p">,</span>
                 <span class="s2">&quot;sort_order&quot;</span><span class="o">:</span> <span class="mi">2</span>
             <span class="p">},</span>
             <span class="p">{</span>
@@ -578,6 +596,7 @@
         <span class="s2">&quot;id&quot;</span><span class="o">:</span> <span class="mi">6</span><span class="p">,</span>
         <span class="s2">&quot;is_official&quot;</span><span class="o">:</span> <span class="kc">false</span><span class="p">,</span>
         <span class="s2">&quot;name&quot;</span><span class="o">:</span> <span class="s2">&quot;银色&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;rgb&quot;</span><span class="o">:</span> <span class="kc">null</span><span class="p">,</span>
         <span class="s2">&quot;sort_order&quot;</span><span class="o">:</span> <span class="mi">0</span>
     <span class="p">},</span>
     <span class="s2">&quot;status&quot;</span><span class="o">:</span> <span class="p">{</span>
