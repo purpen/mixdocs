@@ -23,16 +23,18 @@ JSON数据格式:
         "data": {
             "colors": [
                 {
-                    "id": 2,
-                    "is_official": true,
-                    "name": "黑色",
-                    "sort_order": 2
-                },
-                {
                     "id": 1,
                     "is_official": true,
                     "name": "白色",
-                    "sort_order": 1
+                    "rgb": "#FFFFFF",
+                    "sort_order": 16
+                },
+                {
+                    "id": 2,
+                    "is_official": true,
+                    "name": "黑色",
+                    "rgb": "#000102",
+                    "sort_order": 15
                 }
             ]
         },
@@ -60,6 +62,7 @@ JSON数据格式:
 名称            类型      是否必须    默认值     描述说明
 =============  ========  =========  ========  ====================================
 name           String    必填                  颜色名称
+rgb            String    必填                  颜色rgb值, 正常以#开头,可以自定义特殊颜色
 sort_order     Number    可选        0         排序，数字越大越靠前
 =============  ========  =========  ========  ====================================
 
@@ -75,6 +78,7 @@ JSON数据格式:
             "id": 3,
             "is_official": true,
             "name": "蓝色",
+            "rgb": "#2F8BBC",
             "sort_order": 3
         },
         "status": {
@@ -101,6 +105,7 @@ JSON数据格式:
 名称            类型      是否必须    默认值     描述说明
 =============  ========  =========  ========  ====================================
 name           String    必填                  颜色名称
+rgb            String    必填                  颜色rgb值, 正常以#开头,可以自定义特殊颜色
 sort_order     Number    可选        0         排序，数字越大越靠前
 =============  ========  =========  ========  ====================================
 
@@ -116,6 +121,7 @@ JSON数据格式:
             "id": 3,
             "is_official": true,
             "name": "绿色",
+            "rgb": "#2F8BBC",
             "sort_order": 4
         },
         "status": {
@@ -173,8 +179,9 @@ JSON数据格式:
             "colors": [
                 {
                     "id": 2,
-                    "is_official": false,
+                    "is_official": true,
                     "name": "黑色",
+                    "rgb": null,
                     "sort_order": 2
                 },
                 {
@@ -225,6 +232,7 @@ JSON数据格式:
             "id": 6,
             "is_official": false,
             "name": "银色",
+            "rgb": null,
             "sort_order": 0
         },
         "status": {
