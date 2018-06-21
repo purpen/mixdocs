@@ -535,6 +535,68 @@ JSON数据格式
         "success": false
     }
 
+获取店铺信息
+------------------
+
+
+接口说明
+~~~~~~~~~~~~~~
+
+* API接口请求地址：``/store/info``
+* API接口请求方法：``GET``
+
+返回示例
+~~~~~~~~~~~~~~~~
+
+JSON数据格式
+
+请求 **正确** 返回结果：
+
+.. code-block:: javascript
+
+    {
+        "data": {
+            "area": "顺义区",
+            "areacode": "+86",
+            "bgcover": "http://0.0.0.0:9000/_uploads/photos/http://127.0.0.1:9000/_uploads/photos/222222/5d2812257b539bb.jpg",
+            "browse_number": 0,
+            "categories": [],
+            "country_id": "中国",
+            "created_at": 1529143434,
+            "current_city_id": "北京",
+            "delivery_city_id": "北京",
+            "delivery_province_id": "北京",
+            "description": null,
+            "distribution_type": 0,
+            "fans_count": 0,
+            "logo": "http://0.0.0.0:9000/_uploads/photos/http://127.0.0.1:9000/_uploads/photos/222222/5d2812257b539oo.jpg",
+            "mobile": "15555555555",
+            "name": "唯品会",
+            "phone": "0314-7894561",
+            "rid": "99627015",
+            "status": 1,
+            "tag_line": "六月的雨",
+            "type": 1
+        },
+        "status": {
+            "code": 200,
+            "message": "Ok all right."
+        },
+        "success": true
+    }
+
+请求 ``失败`` 返回结果：
+
+.. code-block:: javascript
+
+    {
+        "status": {
+            "code": 404,
+            "message": "Not Found"
+        },
+        "success": false
+    }
+
 添加店铺访问者记录
 -----------------------
 
