@@ -128,22 +128,33 @@ JSON数据格式:
             "next": false,
             "paginated_products": [
                 {
-                    "cover": "xxxx/_uploads/photos/180202/82200e8db7bb80d.jpg",
-                    "description": "数据线",
-                    "id_code": null,
-                    "name": "数据大仙",
-                    "price": 68,
-                    "rid": "118020994530",
-                    "s_height": 0,
-                    "s_length": 0,
-                    "s_weight": 0,
-                    "s_width": 0,
-                    "sale_price": 60,
-                    "sticked": false
+                    "commission_price": 30,
+                    "commission_rate": 5.3,
+                    "cover": "http://xxx/_uploads/photos/171010/fe7380064e18135.jpg",
+                    "custom_details": "定制详情",
+                    "features": "这是商品推荐语",
+                    "id_code": "6915545123548",
+                    "is_custom_made": true,
+                    "is_custom_service": true,
+                    "is_distributed": true,
+                    "is_free_postage": false,
+                    "is_made_holiday": true,
+                    "like_count": 333,
+                    "made_cycle": 5,
+                    "max_price": 1888,
+                    "max_sale_price": 1699,
+                    "min_price": 1388,
+                    "min_sale_price": 1299,
+                    "name": "速腾套装",
+                    "published_at": 1546121488,
+                    "rid": "117210372661",
+                    "status": 1,
+                    "sticked": null,
+                    "stock_count": 35
                 }
             ],
             "prev": false,
-            "qk": "数据线",
+            "qk": "套装",
             "total_count": 1
         },
         "status": {
@@ -197,80 +208,27 @@ JSON数据格式:
 请求参数
 ~~~~~~~~~~~~~~~
 
-===========  ========  =========  ========  ====================================
-名称          类型      是否必须    默认值     描述说明
-===========  ========  =========  ========  ====================================
-page         Number    可选         1         当前页码
-per_page     Number    可选         10        每页数量
-start_date   Integer   可选                   发布日期的开始时间戳
-end_date     Integer   可选                   发布日期的结束时间戳
-cid          Number    可选                   分类Id
-status       Integer   可选         1         商品状态 0:仓库中; 1:出售中; 2:下架中; 3:已售罄
-type         Integer   可选                   商品类别 0: 全部; 1：自营商品；2：分销商品
-qk           String    可选                   搜索关键字
-stock        Integer   可选         0         商品库存 0: 全部; 1: 数量不足
-===========  ========  =========  ========  ====================================
+=====================  ==========  =========  ==========  =============================
+名称                    类型        是否必须     默认值       描述说明
+=====================  ==========  =========  ==========  =============================
+page                    Number      可选         1         当前页码
+per_page                Number      可选         10        每页数量
+start_date              Integer     可选                   发布日期的开始时间戳
+end_date                Integer     可选                   发布日期的结束时间戳
+cid                     Number      可选                   分类Id
+status                  Integer     可选         1         商品状态 0:仓库中; 1:出售中; 2:下架中; 3:已售罄
+is_distributed          Integer     可选                   商品类别 0: 全部; 1：自营商品；2：分销商品
+qk                      String      可选                   搜索关键字
+out_of_stock            Integer     可选         0         商品库存 0: 全部; 1: 数量不足
+=====================  ==========  =========  ==========  =============================
 
 返回示例
 ~~~~~~~~~~~~~~~~
 
 JSON数据格式:
 
-.. code-block:: javascript
-
-    {
-        "data": {
-            "count": 10,
-            "next": false,
-            "prev": false,
-            "products": [
-                {
-                    "cover": "http://xxx/_uploads/photos/180328/635419b82c5c66d.jpg",
-                    "description": "",
-                    "features": "",
-                    "id_code": null,
-                    "is_distributed": false,
-                    "name": "测试库存变化",
-                    "price": 78,
-                    "rid": "118230338355",
-                    "s_height": 0,
-                    "s_length": 0,
-                    "s_weight": 0,
-                    "s_width": 0,
-                    "sale_price": 0,
-                    "status": true,
-                    "sticked": true,
-                    "stock_count": 68,
-                    "store_id": 1
-                },
-                ...
-                {
-                    "cover": "http://xxx/_uploads/photos/180128/494e473ec90dffd.jpeg",
-                    "description": "原创设计\r\n小米生态链出品\r\n米椒有售",
-                    "features": null,
-                    "id_code": null,
-                    "is_distributed": false,
-                    "name": "素士智能声波牙刷",
-                    "price": 0,
-                    "rid": "118280311037",
-                    "s_height": 3,
-                    "s_length": 20,
-                    "s_weight": 20,
-                    "s_width": 3,
-                    "sale_price": 269,
-                    "status": true,
-                    "sticked": null,
-                    "stock_count": 11,
-                    "store_id": 1
-                }
-            ]
-        },
-        "status": {
-            "code": 200,
-            "message": "Ok all right."
-        },
-        "success": true
-    }
+.. literalinclude:: product_list.js
+    :language: javascript
 
 
 商品基本信息
@@ -730,17 +688,16 @@ JSON数据格式:
 =====================  ==========  =========  ==========  =============================
 sid                    String      可选                     店铺编号
 category_id            Integer     必须                     分类ID
-name                   String      必需                     商品名称
+name                   String      必须                     商品名称
 id_code                String      可选                     商品编码
-cover_id               Integer     必需                     封面图ID
-asset_ids              String      可选                     商品图片
+asset_ids              Array       必须                     商品图片
 material_id            Integer     必须                     材质
 features               String      必须                     宣传语或优势亮点
 content                String      必须                     图文详情
 keywords               Array       可选                     商品关键词
 is_custom_service      Bool        可选                     是否定制化服务
 custom_details         String      可选                     定制详情
-labels                 String      必填                     商品标签
+labels                 Array       必填                     商品标签
 is_custom_made         Bool        必填                     是否接单定制
 made_cycle             Integer     可选                     制作周期
 is_made_holiday        Bool        可选                     制作周期是否包含节假日
@@ -755,15 +712,14 @@ is_made_holiday        Bool        可选                     制作周期是否
         "category_id": 9,
         "name": "商品名",
         "id_code": "10086",
-        "cover_id": 6,
-        "asset_ids": "7,8,9",
+        "asset_ids": [7,8,9],
         "material_id": 1,
         "features": "商品推荐语",
         "content": "图文详情",
         "keywords": ["苹果", "手机", "电脑"],
         "is_custom_service": true,
         "custom_details": "可以刻名字,生辰八字",
-        "labels": "2,3,4",
+        "labels": [2,3,4],
         "is_custom_made": true,
         "made_cycle": 5,
         "is_made_holiday": false
@@ -1449,13 +1405,8 @@ JSON数据格式:
 =====================  ==========  =========  ==========  =============================
 rid                    String       必须                   商品编号
 skus                   Array        必须                   商品sku信息
-=====================  ==========  =========  ==========  =============================
 
-商品sku请求参数
-~~~~~~~~~~~~~~~
-=====================  ==========  =========  ==========  =============================
-名称                    类型        是否必须     默认值       描述说明
-=====================  ==========  =========  ==========  =============================
+sku参数信息
 sid                    String      必须                    商品sku编号
 commission_price       Float       必须                    佣金
 =====================  ==========  =========  ==========  =============================

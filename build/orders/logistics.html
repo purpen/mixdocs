@@ -1208,14 +1208,8 @@
 </tbody>
 </table>
 <p>参考示例：</p>
-<<<<<<< HEAD
 <div class="highlight-javascript"><div class="highlight"><pre><span></span><span class="p">{</span>
-    <span class="s2">&quot;name&quot;</span><span class="o">:</span><span class="s2">&quot;运费模板10&quot;</span><span class="p">,</span>
-    <span class="s2">&quot;express_id&quot;</span><span class="o">:</span><span class="mi">4</span><span class="p">,</span>
-=======
-<div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="p">{</span>
     <span class="s2">&quot;name&quot;</span><span class="o">:</span><span class="s2">&quot;运费模板2&quot;</span><span class="p">,</span>
->>>>>>> origin/ljy
     <span class="s2">&quot;pricing_method&quot;</span><span class="o">:</span><span class="mi">1</span><span class="p">,</span>
     <span class="s2">&quot;default_items&quot;</span><span class="o">:</span><span class="p">[</span>
         <span class="p">{</span>
@@ -1517,7 +1511,7 @@
 </tbody>
 </table>
 <p>参考示例：</p>
-<div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="p">{</span>
+<div class="highlight-javascript"><div class="highlight"><pre><span></span><span class="p">{</span>
     <span class="s2">&quot;name&quot;</span><span class="o">:</span> <span class="s2">&quot;运费模板2&quot;</span><span class="p">,</span>
     <span class="s2">&quot;pricing_method&quot;</span><span class="o">:</span> <span class="mi">1</span><span class="p">,</span>
     <span class="s2">&quot;rid&quot;</span><span class="o">:</span> <span class="s2">&quot;Ft250134987&quot;</span><span class="p">,</span>
@@ -1817,97 +1811,6 @@
 </div>
 </div>
 </div>
-<<<<<<< HEAD
-<div class="section" id="id45">
-<h2>设置默认运费模板<a class="headerlink" href="#id45" title="永久链接至标题">¶</a></h2>
-<p>某商家设置默认运费模板</p>
-<div class="section" id="id46">
-<h3>接口说明<a class="headerlink" href="#id46" title="永久链接至标题">¶</a></h3>
-<ul class="simple">
-<li>API接口请求地址：<code class="docutils literal"><span class="pre">/logistics/freight_template/set_default</span></code></li>
-<li>API接口请求方法：<code class="docutils literal"><span class="pre">PUT</span></code></li>
-<li>API接口用户授权：<code class="docutils literal"><span class="pre">token</span></code></li>
-</ul>
-</div>
-<div class="section" id="id47">
-<h3>请求参数<a class="headerlink" href="#id47" title="永久链接至标题">¶</a></h3>
-<table border="1" class="docutils">
-<colgroup>
-<col width="25%" />
-<col width="13%" />
-<col width="12%" />
-<col width="13%" />
-<col width="36%" />
-</colgroup>
-<thead valign="bottom">
-<tr class="row-odd"><th class="head">名称</th>
-<th class="head">类型</th>
-<th class="head">是否必须</th>
-<th class="head">默认值</th>
-<th class="head">描述说明</th>
-</tr>
-</thead>
-<tbody valign="top">
-<tr class="row-even"><td>rid</td>
-<td>Integer</td>
-<td>必需</td>
-<td>&#160;</td>
-<td>模板rid</td>
-</tr>
-</tbody>
-</table>
-</div>
-<div class="section" id="id48">
-<h3>返回示例<a class="headerlink" href="#id48" title="永久链接至标题">¶</a></h3>
-<p>JSON数据格式:</p>
-<p>请求 <strong>正确</strong> 返回结果：</p>
-<div class="highlight-javascript"><div class="highlight"><pre><span></span><span class="p">{</span>
-    <span class="s2">&quot;data&quot;</span><span class="o">:</span> <span class="p">{</span>
-        <span class="s2">&quot;continuous_amount&quot;</span><span class="o">:</span> <span class="mi">0</span><span class="p">,</span>
-        <span class="s2">&quot;continuous_item&quot;</span><span class="o">:</span> <span class="mi">1</span><span class="p">,</span>
-        <span class="s2">&quot;continuous_weight&quot;</span><span class="o">:</span> <span class="mi">0</span><span class="p">,</span>
-        <span class="s2">&quot;created_at&quot;</span><span class="o">:</span> <span class="mi">1528708389</span><span class="p">,</span>
-        <span class="s2">&quot;express&quot;</span><span class="o">:</span> <span class="s2">&quot;圆通&quot;</span><span class="p">,</span>
-        <span class="s2">&quot;first_amount&quot;</span><span class="o">:</span> <span class="mi">0</span><span class="p">,</span>
-        <span class="s2">&quot;first_item&quot;</span><span class="o">:</span> <span class="mi">1</span><span class="p">,</span>
-        <span class="s2">&quot;first_weight&quot;</span><span class="o">:</span> <span class="mi">0</span><span class="p">,</span>
-        <span class="s2">&quot;id&quot;</span><span class="o">:</span> <span class="mi">7</span><span class="p">,</span>
-        <span class="s2">&quot;is_default&quot;</span><span class="o">:</span> <span class="kc">true</span><span class="p">,</span>
-        <span class="s2">&quot;is_free&quot;</span><span class="o">:</span> <span class="kc">false</span><span class="p">,</span>
-        <span class="s2">&quot;name&quot;</span><span class="o">:</span> <span class="s2">&quot;模板一&quot;</span><span class="p">,</span>
-        <span class="s2">&quot;place&quot;</span><span class="o">:</span> <span class="p">[</span>
-            <span class="p">{</span>
-                <span class="s2">&quot;name&quot;</span><span class="o">:</span> <span class="s2">&quot;北京&quot;</span><span class="p">,</span>
-                <span class="s2">&quot;oid&quot;</span><span class="o">:</span> <span class="mi">1</span><span class="p">,</span>
-                <span class="s2">&quot;pid&quot;</span><span class="o">:</span> <span class="kc">null</span><span class="p">,</span>
-                <span class="s2">&quot;sort_by&quot;</span><span class="o">:</span> <span class="mi">1</span><span class="p">,</span>
-                <span class="s2">&quot;status&quot;</span><span class="o">:</span> <span class="kc">true</span>
-            <span class="p">}</span>
-        <span class="p">],</span>
-        <span class="s2">&quot;pricing_method&quot;</span><span class="o">:</span> <span class="mi">1</span>
-    <span class="p">},</span>
-    <span class="s2">&quot;status&quot;</span><span class="o">:</span> <span class="p">{</span>
-        <span class="s2">&quot;code&quot;</span><span class="o">:</span> <span class="mi">200</span><span class="p">,</span>
-        <span class="s2">&quot;message&quot;</span><span class="o">:</span> <span class="s2">&quot;Ok all right.&quot;</span>
-    <span class="p">},</span>
-    <span class="s2">&quot;success&quot;</span><span class="o">:</span> <span class="kc">true</span>
-<span class="p">}</span>
-</pre></div>
-</div>
-<p>返回错误格式：</p>
-<div class="highlight-javascript"><div class="highlight"><pre><span></span><span class="p">{</span>
-  <span class="s2">&quot;status&quot;</span><span class="o">:</span> <span class="p">{</span>
-    <span class="s2">&quot;code&quot;</span><span class="o">:</span> <span class="mi">404</span><span class="p">,</span>
-    <span class="s2">&quot;message&quot;</span><span class="o">:</span> <span class="s2">&quot;Not Found&quot;</span>
-  <span class="p">},</span>
-  <span class="s2">&quot;success&quot;</span><span class="o">:</span> <span class="kc">false</span>
-<span class="p">}</span>
-</pre></div>
-</div>
-</div>
-</div>
-=======
->>>>>>> origin/ljy
 </div>
 
 
