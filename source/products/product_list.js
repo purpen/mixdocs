@@ -5,6 +5,8 @@
     "prev": false,
     "products": [
       {
+        "commission_price": "分销佣金",
+        "commission_rate": "佣金比率",
         "cover": "封面图片链接地址",
         "custom_details": "定制详情",
         "features": "商品推荐语",
@@ -14,7 +16,12 @@
         "is_distributed": "是否分销",
         "is_free_postage": "是否包邮",
         "is_made_holiday": "制作周期是否包含节假日",
+        "like_count": "商品被喜欢数",
         "made_cycle": "制作周期,天数",
+        "max_price": "最大售价",
+        "max_sale_price": "最大促销价",
+        "min_price": "最小售价",
+        "min_sale_price": "最小促销价",
         "name": "商品名",
         "published_at": "商品发布时间",
         "rid": "商品编号",
@@ -23,6 +30,8 @@
         "stock_count": "库存数"
       },
       {
+        "commission_price": 30,
+        "commission_rate": 5.3,
         "cover": "http://xxx/_uploads/photos/171010/fe7380064e18135.jpg",
         "custom_details": "定制详情",
         "features": "这是商品推荐语",
@@ -32,7 +41,12 @@
         "is_distributed": true,
         "is_free_postage": false,
         "is_made_holiday": true,
+        "like_count": 333,
         "made_cycle": 5,
+        "max_price": 1888,
+        "max_sale_price": 1699,
+        "min_price": 1388,
+        "min_sale_price": 1299,
         "name": "速腾套装",
         "published_at": 1546121488,
         "rid": "117210372661",

@@ -27,14 +27,28 @@ JSON数据格式:
                     "is_official": true,
                     "name": "白色",
                     "rgb": "#FFFFFF",
-                    "sort_order": 16
+                    "sort_order": 116
                 },
                 {
                     "id": 2,
                     "is_official": true,
                     "name": "黑色",
                     "rgb": "#000102",
-                    "sort_order": 15
+                    "sort_order": 115
+                },
+                {
+                    "id": 15,
+                    "is_official": true,
+                    "name": "透明",
+                    "rgb": "transparent",
+                    "sort_order": 102
+                },
+                {
+                    "id": 16,
+                    "is_official": true,
+                    "name": "多色",
+                    "rgb": "multiple",
+                    "sort_order": 101
                 }
             ]
         },
