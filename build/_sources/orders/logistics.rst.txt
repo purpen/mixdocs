@@ -482,12 +482,23 @@ JSON数据格式:
 请求参数
 ~~~~~~~~~~~~~~~
 
+**运费模板基本参数:**
+
 =====================  ===========  ==========  ===========  ==============================
 名称                    类型          是否必须      默认值        描述说明
 =====================  ===========  ==========  ===========  ==============================
 name                   String        必需                      模板名称
-express_id             Integer       必需                      物流公司id
 pricing_method         Integer       可选          1           计价方式 1、按件数 2、按重量
+default_items          Array         可选          []          物流公司默认信息
+=====================  ===========  ==========  ===========  ==============================
+
+**物流公司默认信息:**
+
+=====================  ===========  ==========  ===========  ==============================
+名称                    类型          是否必须      默认值        描述说明
+=====================  ===========  ==========  ===========  ==============================
+default_items:
+express_code           String        必须                      物流公司code
 first_item             Integer       可选          1           首件
 first_weight           Numeric       可选          0           首重
 first_amount           Numeric       可选          0           首费
@@ -496,9 +507,22 @@ continuous_weight      Numeric       可选          0           续费
 continuous_amount      Numeric       可选          0           续重
 min_days               Integer       可选          0           最少天数
 max_days               Integer       可选          0           最多天数
-place_oid              Array         可选          []          运送地区oid
-is_free                Bool          可选          False       是否包邮
-is_default             Bool          可选          False       是否默认
+place_items            Array         可选          []          指定城市设置
+=====================  ===========  ==========  ===========  ==============================
+
+**指定城市设置:**
+
+=====================  ===========  ==========  ===========  ==============================
+名称                    类型          是否必须      默认值        描述说明
+=====================  ===========  ==========  ===========  ==============================
+place_items:
+first_item             Integer       可选          1           首件
+first_weight           Numeric       可选          0           首重
+first_amount           Numeric       可选          0           首费
+continuous_item        Integer       可选          1           续件
+continuous_weight      Numeric       可选          0           续费
+continuous_amount      Numeric       可选          0           续重
+place_oid              Array         可选          []          运送地区oid,元素为Integer
 =====================  ===========  ==========  ===========  ==============================
 
 参考示例：
@@ -506,18 +530,54 @@ is_default             Bool          可选          False       是否默认
 .. code-block:: javascript
 
     {
-        "name":"运费模板10",
-        "express_id":4,
+        "name":"运费模板2",
         "pricing_method":1,
-        "first_item":1,
-        "first_amount":10,
-        "continuous_item":1,
-        "continuous_amount":10,
-        "min_days":3,
-        "max_days":5,
-        "is_free":true,
-        "is_default":true,
-        "place_oid":[1,2]
+        "default_items":[
+            {
+                "express_code":"YTO",
+                "min_days":3,
+                "max_days":5,
+                "first_item":1,
+                "first_amount":10,
+                "continuous_item":1,
+                "continuous_amount":20,
+                "place_items":[
+                    {
+                        "first_item":1,
+                        "first_amount":10,
+                        "continuous_item":1,
+                        "continuous_amount":20,
+                        "place_oid":[1,2]
+                    },
+                    {
+                        "first_item":2,
+                        "first_amount":20,
+                        "continuous_item":1,
+                        "continuous_amount":20,
+                        "place_oid":[3]
+                    }
+                ]
+            },
+            {
+                "express_code":"EMS",
+                "min_days":3,
+                "max_days":5,
+                "first_item":1,
+                "first_amount":10,
+                "continuous_item":1,
+                "continuous_amount":20,
+                "place_items":[
+                    {
+                        "first_item":1,
+                        "first_amount":10,
+                        "continuous_item":1,
+                        "continuous_amount":20,
+                        "place_oid":[1]
+                    }
+                ]
+            }
+
+        ]
     }
 
 返回示例
@@ -531,30 +591,77 @@ JSON数据格式:
 
     {
         "data": {
-            "continuous_amount": 10,  // 续费
-            "continuous_item": 1,  // 续件
-            "continuous_weight": 0,  // 续重
-            "created_at": 1529389099,  // 创建时间
-            "express": "圆通",  // 物流公司
-            "first_amount": 10,  // 首费
-            "first_item": 1,  // 首件
-            "first_weight": 0,  // 首重
-            "is_default": true,  // 是否默认
-            "is_free": true,  // 是否免费
-            "max_days": 5,  // 最长时间
-            "min_days": 3,  // 最短时间
-            "name": "运费模板10",  // 模板名称
-            "places": [
+            "name": "运费模板2",  // 模板名称
+            "pricing_method": 1,  // 计价方式
+            "rid": "Ft250134987",  // 模板rid
+            "items": [
                 {
-                    "name": "北京",  // 运送地区
-                    "oid": 1,
-                    "pid": null,
-                    "sort_by": 1,
-                    "status": true
+                    "continuous_amount": 20,  // 续费
+                    "continuous_item": 1,  // 续件
+                    "continuous_weight": 0,  // 续重
+                    "created_at": 1529733954,  // 创建时间
+                    "express": {
+                        "express_code": "YTO",  // 物流公司id
+                        "express_name": "圆通"  // 物流公司名
+                    },
+                    "first_amount": 10,  // 首费
+                    "first_item": 1,  // 首件
+                    "first_weight": 0,  // 首费
+                    "is_default": false,  // 是否为默认
+                    "max_days": 5,  // 最多天数
+                    "min_days": 3,  // 最少天数
+                    "place": [
+                        {
+                            "place_name": "北京",  // 城市名
+                            "place_oid": 1  // 城市oid
+                        },
+                        {
+                            "place_name": "天津",
+                            "place_oid": 2
+                        }
+                    ],
+                    "rid": "Fi325716098",  // 模板明细rid
+                    "updated_at": 1529733954  // 更新时间
                 },
-            ],
-            "pricing_method": 1,  // 计费方式
-            "rid": "FTTILBOPGCQ"  // 模板rid
+                {
+                    "continuous_amount": 20,
+                    "continuous_item": 1,
+                    "continuous_weight": 0,
+                    "created_at": 1529733954,
+                    "express": {
+                        "express_code": "YTO",
+                        "express_name": "圆通"
+                    },
+                    "first_amount": 10,
+                    "first_item": 1,
+                    "first_weight": 0,
+                    "is_default": true,
+                    "max_days": 5,
+                    "min_days": 3,
+                    "place": [],
+                    "rid": "Fi123498507",
+                    "updated_at": 1529733954
+                },
+                {
+                    "continuous_amount": 20,
+                    "continuous_item": 1,
+                    "continuous_weight": 0,
+                    "created_at": 1529733954,
+                    "express": {
+                        "express_code": "EMS",
+                        "express_name": "EMS"
+                    },
+                    "first_amount": 10,
+                    "first_item": 1,
+                    "first_weight": 0,
+                    "is_default": true,
+                    "max_days": 5,
+                    "min_days": 3,
+                    "place": [],
+                    "rid": "Fi103695248",
+                    "updated_at": 1529733954
+                }
+            ]
         },
         "status": {
             "code": 201,
@@ -578,13 +685,27 @@ JSON数据格式:
 请求参数
 ~~~~~~~~~~~~~~~
 
+**运费模板基本参数:**
+
 =====================  ===========  ==========  ===========  ==============================
 名称                    类型          是否必须      默认值        描述说明
 =====================  ===========  ==========  ===========  ==============================
-rid                    Integer       必需                      模板rid
-name                   String        必需                      模板名称
-express_id             Integer       必需                      物流公司id
+rid                    String        必需                      模板rid
+name                   String        可选                      模板名称
 pricing_method         Integer       可选          1           计价方式 1、按件数 2、按重量
+items                  Array         可选          []          物流公司默认信息
+del_rids               Array         可选          []          被删除的item的rid
+=====================  ===========  ==========  ===========  ==============================
+
+**物流公司默认信息:**
+
+=====================  ===========  ==========  ===========  ==============================
+名称                    类型          是否必须      默认值        描述说明
+=====================  ===========  ==========  ===========  ==============================
+items:
+rid                    String        必需                      模板rid
+express_code           String        必须                      物流公司code
+is_default             Bool          必须          False       是否默认
 first_item             Integer       可选          1           首件
 first_weight           Numeric       可选          0           首重
 first_amount           Numeric       可选          0           首费
@@ -594,9 +715,58 @@ continuous_amount      Numeric       可选          0           续重
 min_days               Integer       可选          0           最少天数
 max_days               Integer       可选          0           最多天数
 place_oid              Array         可选          []          运送地区oid
-is_free                Bool          可选          False       是否包邮
-is_default             Bool          可选          False       是否默认
 =====================  ===========  ==========  ===========  ==============================
+
+参考示例：
+
+.. code-block:: javascript
+
+    {
+        "name": "运费模板2",
+        "pricing_method": 1,
+        "rid": "Ft250134987",
+        "del_rids":[
+            "Fi285619473"
+            ],
+        "items": [
+            {
+                "express_code": "YTO",
+                "continuous_amount": 20,
+                "continuous_item": 1,
+                "first_amount": 10,
+                "first_item": 1,
+                "is_default": false,
+                "max_days": 5,
+                "min_days": 3,
+                "place_oid": [1,2,3],
+                "rid": "Fi325716098"
+            },
+            {
+                "express_code": "YTO",
+                "continuous_amount": 200,
+                "continuous_item": 1,
+                "first_amount": 100,
+                "first_item": 1,
+                "is_default": true,
+                "max_days": 5,
+                "min_days": 3,
+                "place_oid": [],
+                "rid": "Fi123498507"
+            },
+            {
+                "express_code": "EMS",
+                "continuous_amount": 20,
+                "continuous_item": 1,
+                "first_amount": 10,
+                "first_item": 1,
+                "is_default": false,
+                "max_days": 5,
+                "min_days": 3,
+                "place_oid": [2],
+                "rid": "0"
+            }
+        ]
+    }
 
 
 返回示例
@@ -610,30 +780,77 @@ JSON数据格式:
 
     {
         "data": {
-            "continuous_amount": 10,  // 续费
-            "continuous_item": 1,  // 续件
-            "continuous_weight": 0,  // 续重
-            "created_at": 1529389099,  // 创建时间
-            "express": "圆通",  // 物流公司
-            "first_amount": 10,  // 首费
-            "first_item": 1,  // 首件
-            "first_weight": 0,  // 首重
-            "is_default": true,  // 是否默认
-            "is_free": true,  // 是否免费
-            "max_days": 5,  // 最长时间
-            "min_days": 3,  // 最短时间
-            "name": "运费模板10",  // 模板名称
-            "places": [
+            "name": "运费模板2",  // 模板名称
+            "pricing_method": 1,  // 计价方式
+            "rid": "Ft250134987",  // 模板rid
+            "items": [
                 {
-                    "name": "北京",  // 运送地区
-                    "oid": 1,
-                    "pid": null,
-                    "sort_by": 1,
-                    "status": true
+                    "continuous_amount": 20,  // 续费
+                    "continuous_item": 1,  // 续件
+                    "continuous_weight": 0,  // 续重
+                    "created_at": 1529733954,  // 创建时间
+                    "express": {
+                        "express_code": "YTO",  // 物流公司id
+                        "express_name": "圆通"  // 物流公司名
+                    },
+                    "first_amount": 10,  // 首费
+                    "first_item": 1,  // 首件
+                    "first_weight": 0,  // 首费
+                    "is_default": false,  // 是否为默认
+                    "max_days": 5,  // 最多天数
+                    "min_days": 3,  // 最少天数
+                    "place": [
+                        {
+                            "place_name": "北京",  // 城市名
+                            "place_oid": 1  // 城市oid
+                        },
+                        {
+                            "place_name": "天津",
+                            "place_oid": 2
+                        }
+                    ],
+                    "rid": "Fi325716098",  // 模板明细rid
+                    "updated_at": 1529733954  // 更新时间
                 },
-            ],
-            "pricing_method": 1,  // 计费方式
-            "rid": "FTTILBOPGCQ"  // 模板rid
+                {
+                    "continuous_amount": 20,
+                    "continuous_item": 1,
+                    "continuous_weight": 0,
+                    "created_at": 1529733954,
+                    "express": {
+                        "express_code": "YTO",
+                        "express_name": "圆通"
+                    },
+                    "first_amount": 10,
+                    "first_item": 1,
+                    "first_weight": 0,
+                    "is_default": true,
+                    "max_days": 5,
+                    "min_days": 3,
+                    "place": [],
+                    "rid": "Fi123498507",
+                    "updated_at": 1529733954
+                },
+                {
+                    "continuous_amount": 20,
+                    "continuous_item": 1,
+                    "continuous_weight": 0,
+                    "created_at": 1529733954,
+                    "express": {
+                        "express_code": "EMS",
+                        "express_name": "EMS"
+                    },
+                    "first_amount": 10,
+                    "first_item": 1,
+                    "first_weight": 0,
+                    "is_default": true,
+                    "max_days": 5,
+                    "min_days": 3,
+                    "place": [],
+                    "rid": "Fi103695248",
+                    "updated_at": 1529733954
+                }
+            ]
         },
         "status": {
             "code": 201,
@@ -641,6 +858,7 @@ JSON数据格式:
         },
         "success": true
     }
+
 
 
 查询运费模板信息
@@ -674,35 +892,42 @@ JSON数据格式:
 
 .. code-block:: javascript
 
-
     {
         "data": {
-            "count": 8,
+            "count": 11,
+            "name": "运费模板2",  // 模板名
+            "pricing_method": 1,  // 计价方式
+            "rid": "Ft235081764",  // 模板rid
             "freight_template": [
                 {
-                    "continuous_amount": 0,
-                    "continuous_item": 1,
-                    "continuous_weight": 0,
-                    "created_at": 1528708416,
-                    "express": "圆通",
-                    "first_amount": 0,
-                    "first_item": 1,
-                    "first_weight": 0,
-                    "id": 8,
-                    "is_default": true,
-                    "is_free": false,
-                    "name": "模板一",
-                    "place": [
+                    "items": [
                         {
-                            "name": "北京",
-                            "oid": 1,
-                            "pid": null,
-                            "sort_by": 1,
-                            "status": true
+                            "continuous_amount": 20,  // 续费
+                            "continuous_item": 1,  // 续件
+                            "continuous_weight": 0,  // 续重
+                            "created_at": 1529733923,  // 创建时间
+                            "express": {
+                                "express_code": "YTO",  // 物流公司code
+                                "express_name": "圆通"  //  物流公司名
+                            },
+                            "first_amount": 10,  //  首费
+                            "first_item": 1,  //  首件
+                            "first_weight": 0,  // 首重
+                            "is_default": false,  // 是否默认
+                            "max_days": 5,  // 最大天数
+                            "min_days": 3,  // 最小天数
+                            "place": [
+                                {
+                                    "place_name": "北京",  // 城市名
+                                    "place_oid": 1  // 城市oid
+                                }
+                            ],
+                            "rid": "Fi890237651",  // item_rid
+                            "updated_at": 1529733923  // 更新时间
                         }
                     ],
-                    "pricing_method": 1
-                }
+
+                },
             ],
             "next": "http://0.0.0.0:9000/api/v1.0/logistics/freight_template?page=2",
             "prev": null
@@ -713,7 +938,6 @@ JSON数据格式:
         },
         "success": true
     }
-
 
 删除运费模板信息
 ----------------
@@ -764,78 +988,4 @@ JSON数据格式:
       "success": false
     }
 
-
-设置默认运费模板
-----------------
-某商家设置默认运费模板
-
-接口说明
-~~~~~~~~~~~~~~
-
-* API接口请求地址：``/logistics/freight_template/set_default``
-* API接口请求方法：``PUT``
-* API接口用户授权：``token``
-
-请求参数
-~~~~~~~~~~~~~~~
-
-=====================  ===========  ==========  ===========  ==============================
-名称                    类型          是否必须      默认值        描述说明
-=====================  ===========  ==========  ===========  ==============================
-rid                    Integer       必需                      模板rid
-=====================  ===========  ==========  ===========  ==============================
-
-返回示例
-~~~~~~~~~~~~~~~~
-
-JSON数据格式:
-
-请求 **正确** 返回结果：
-
-.. code-block:: javascript
-
-    {
-        "data": {
-            "continuous_amount": 0,
-            "continuous_item": 1,
-            "continuous_weight": 0,
-            "created_at": 1528708389,
-            "express": "圆通",
-            "first_amount": 0,
-            "first_item": 1,
-            "first_weight": 0,
-            "id": 7,
-            "is_default": true,
-            "is_free": false,
-            "name": "模板一",
-            "place": [
-                {
-                    "name": "北京",
-                    "oid": 1,
-                    "pid": null,
-                    "sort_by": 1,
-                    "status": true
-                }
-            ],
-            "pricing_method": 1
-        },
-        "status": {
-            "code": 200,
-            "message": "Ok all right."
-        },
-        "success": true
-    }
-
-
-返回错误格式：
-
-.. code-block:: javascript
-
-    {
-      "status": {
-        "code": 404,
-        "message": "Not Found"
-      },
-      "success": false
-    }
 
