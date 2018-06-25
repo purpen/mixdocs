@@ -22,12 +22,16 @@
         "max_sale_price": "最大促销价",
         "min_price": "最小售价",
         "min_sale_price": "最小促销价",
+        "modes": [
+            "商品型号1",
+            "商品型号2"
+        ],
         "name": "商品名",
         "published_at": "商品发布时间",
         "rid": "商品编号",
         "status": "商品状态: 0=仓库中, 1=出售中, 2=下架中",
         "sticked": "是否推荐",
-        "stock_count": "库存数"
+        "total_stock": "库存数"
       },
       {
         "commission_price": 30,
@@ -47,12 +51,16 @@
         "max_sale_price": 1699,
         "min_price": 1388,
         "min_sale_price": 1299,
+        "modes": [
+            "大 白色",
+            "小 黑色"
+        ],
         "name": "速腾套装",
         "published_at": 1546121488,
         "rid": "117210372661",
         "status": 1,
         "sticked": null,
-        "stock_count": 35
+        "total_stock": 35
       },
     ]
   },
