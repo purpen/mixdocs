@@ -451,6 +451,106 @@ JSON数据格式
     }
 
 
+更新休馆设置
+-----------------------
+
+接口说明
+~~~~~~~~~~~~~~
+
+* API接口请求地址：``/store/update_closed``
+* API接口请求方法：``POST``
+* API接口用户授权：``token``
+
+请求参数
+~~~~~~~~~~~~~~~
+
+===========  ========  =========  ========  ====================================
+名称          类型      是否必须    默认值     描述说明
+===========  ========  =========  ========  ====================================
+begin_date    String    可选                   休馆开始时间
+end_date      String    可选                   休馆结束时间
+===========  ========  =========  ========  ====================================
+
+返回示例
+~~~~~~~~~~~~~~~~
+
+JSON数据格式
+
+请求 **正确** 返回结果：
+
+.. code-block:: javascript
+
+    {
+        "data": {
+            "areacode": "+86",
+            "begin_date": "2018-06-26",
+            "bgcover": {
+                "created_at": null,
+                "filename": "e",
+                "filepath": "http://127.0.0.1:9000/_uploads/photos/222222/5d2812257b539bb.jpg",
+                "id": 2,
+                "type": null,
+                "view_url": "http://0.0.0.0:9000/_uploads/photos/http://127.0.0.1:9000/_uploads/photos/222222/5d2812257b539bb.jpg"
+            },
+            "browse_number": 0,
+            "categories": [],
+            "city": "北京",
+            "city_id": 1,
+            "country": "中国",
+            "country_id": 1,
+            "created_at": 1529143434,
+            "delivery_city": "北京",
+            "delivery_city_id": 1,
+            "delivery_country ": "中国",
+            "delivery_country_id": 1,
+            "delivery_province": "北京",
+            "delivery_province_id": 1,
+            "description": null,
+            "detail": {
+                "content": "要下雨了",
+                "id": 1,
+                "store_rid": "99627015"
+            },
+            "distribution_type": 0,
+            "end_date": "2018-06-26",
+            "fans_count": 0,
+            "logo": {
+                "created_at": null,
+                "filename": "a",
+                "filepath": "http://127.0.0.1:9000/_uploads/photos/222222/5d2812257b539aa.jpg",
+                "id": 1,
+                "type": null,
+                "view_url": "http://0.0.0.0:9000/_uploads/photos/http://127.0.0.1:9000/_uploads/photos/222222/5d2812257b539aa.jpg"
+            },
+            "mobile": "15555555555",
+            "name": "嘎哈很多",
+            "phone": "0314-7894561",
+            "province": "北京",
+            "province_id": 1,
+            "rid": "99627015",
+            "status": 1,
+            "tag_line": "处处蚊子咬",
+            "type": 1
+        },
+        "status": {
+            "code": 200,
+            "message": "Ok all right."
+        },
+        "success": true
+    }
+
+请求 ``失败`` 返回结果：
+
+.. code-block:: javascript
+
+    {
+        "status": {
+            "code": 404,
+            "message": "Not Found"
+        },
+        "success": false
+    }
+
 关注店铺
 -----------------------
 
