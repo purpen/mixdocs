@@ -68,6 +68,7 @@ JSON数据格式:
                 {
                     "id": 24,  // 活动id
                     "end_date": 1530547200,  // 结束时间
+                    "created_at": 1530001603,  // 创建时间
                     "name": "优惠活动2",  // 活动名称
                     "start_date": 1528560000,  // 开始时间
                     "surplus_days": 7,  // 剩余天数
@@ -81,7 +82,8 @@ JSON数据格式:
                             "days": 7,  // 有效天数
                             "min_amount": 90,  // 限制金额
                             "pickup_count": 0,  // 领取数量
-                            "surplus_count": 1000,  // 使用数量
+                            "surplus_count": 1000,  // 剩余数量
+                            "use_count": 0,  // 使用数量
                             "type": 2,  // 类型
                             "type_text": "部分商品可用"
                         }
