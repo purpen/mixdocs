@@ -87,6 +87,11 @@
 <li class="toctree-l2"><a class="reference internal" href="../products/products.html">商品模块</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../products/category.html">分类模块</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../products/brands.html">供应商/品牌模块</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../products/materials.html">商品材料模块</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../products/colors.html">商品颜色模块</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../products/models.html">商品规格模块</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../products/labels.html">商品材质模块</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../products/return_policies.html">商家退换货规则模块</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../products/store_product_packet.html">店铺商品组模块</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../products/distributions.html">分销模块</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../products/wish.html">心愿清单模块</a></li>
@@ -104,6 +109,7 @@
 </li>
 <li class="toctree-l1"><a class="reference internal" href="../shopes/index.html">微商城API模块</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="../shopes/shopes.html">微商城模块</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../shopes/store.html">店铺模块</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="../market/index.html">营销API模块</a><ul>
@@ -278,35 +284,35 @@
 <h3>返回示例<a class="headerlink" href="#id4" title="永久链接至标题">¶</a></h3>
 <p>JSON数据格式:</p>
 <p>请求 <strong>正确</strong> 返回结果：</p>
-<div class="highlight-javascript"><div class="highlight"><pre><span></span>{
-    &quot;data&quot;: {
-        # 今日
-        &quot;today&quot;: {
-            &quot;sale_amount&quot;: 1000,
-            &quot;order_quantity&quot;: 100,
-            &quot;day_yoy&quot;: -0.12  # 日同比
-        },
+<div class="highlight-javascript"><div class="highlight"><pre><span></span><span class="p">{</span>
+    <span class="s2">&quot;data&quot;</span><span class="o">:</span> <span class="p">{</span>
+        <span class="c1">// 今日</span>
+        <span class="s2">&quot;today&quot;</span><span class="o">:</span> <span class="p">{</span>
+            <span class="s2">&quot;sale_amount&quot;</span><span class="o">:</span> <span class="mi">1000</span><span class="p">,</span>
+            <span class="s2">&quot;order_quantity&quot;</span><span class="o">:</span> <span class="mi">100</span><span class="p">,</span>
+            <span class="s2">&quot;day_yoy&quot;</span><span class="o">:</span> <span class="o">-</span><span class="mf">0.12</span>  <span class="c1">// 日同比</span>
+        <span class="p">},</span>
 
-        # 7日
-        &quot;seven_days&quot;: {
-            &quot;sale_amount&quot;: 1000,
-            &quot;order_quantity&quot;: 100,
-            &quot;week_yoy&quot;: 0.12  # 周同比
-        },
+        <span class="c1">// 7日</span>
+        <span class="s2">&quot;seven_days&quot;</span><span class="o">:</span> <span class="p">{</span>
+            <span class="s2">&quot;sale_amount&quot;</span><span class="o">:</span> <span class="mi">1000</span><span class="p">,</span>
+            <span class="s2">&quot;order_quantity&quot;</span><span class="o">:</span> <span class="mi">100</span><span class="p">,</span>
+            <span class="s2">&quot;week_yoy&quot;</span><span class="o">:</span> <span class="mf">0.12</span>  <span class="c1">// 周同比</span>
+        <span class="p">},</span>
 
-        # 30天
-        &quot;thirty_days&quot;: {
-            &quot;sale_amount&quot;: 1000,
-            &quot;order_quantity&quot;: 100,
-            &quot;month_yoy&quot;: 0.12  # 月同比
-        }
-    },
-    &quot;status&quot;: {
-        &quot;code&quot;: 200,
-        &quot;message&quot;: &quot;Ok all right.&quot;
-      },
-      &quot;success&quot;: true
-}
+        <span class="c1">// 30天</span>
+        <span class="s2">&quot;thirty_days&quot;</span><span class="o">:</span> <span class="p">{</span>
+            <span class="s2">&quot;sale_amount&quot;</span><span class="o">:</span> <span class="mi">1000</span><span class="p">,</span>
+            <span class="s2">&quot;order_quantity&quot;</span><span class="o">:</span> <span class="mi">100</span><span class="p">,</span>
+            <span class="s2">&quot;month_yoy&quot;</span><span class="o">:</span> <span class="mf">0.12</span>  <span class="c1">// 月同比</span>
+        <span class="p">}</span>
+    <span class="p">},</span>
+    <span class="s2">&quot;status&quot;</span><span class="o">:</span> <span class="p">{</span>
+        <span class="s2">&quot;code&quot;</span><span class="o">:</span> <span class="mi">200</span><span class="p">,</span>
+        <span class="s2">&quot;message&quot;</span><span class="o">:</span> <span class="s2">&quot;Ok all right.&quot;</span>
+      <span class="p">},</span>
+      <span class="s2">&quot;success&quot;</span><span class="o">:</span> <span class="kc">true</span>
+<span class="p">}</span>
 </pre></div>
 </div>
 <div class="section" id="id5">

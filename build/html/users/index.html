@@ -28,7 +28,7 @@
     <link rel="index" title="索引" href="../genindex.html" />
     <link rel="search" title="搜索" href="../search.html" />
     <link rel="next" title="用户模块" href="users.html" />
-    <link rel="prev" title="营销工具/优惠券模块" href="../market/coupons.html" />
+    <link rel="prev" title="报表模块" href="../stats/report.html" />
 <meta charset='utf-8'>
 <meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'>
 <meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1'>
@@ -78,12 +78,23 @@
 <li class="toctree-l2"><a class="reference internal" href="../orders/customer_orders.html">分销商订单模块</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../orders/carts.html">购物车模块</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../orders/addresses.html">收货地址模块</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../orders/stats.html">统计模块</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../orders/comment.html">订单评价模块</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../orders/logistics.html">物流运费模块</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="../products/index.html">商品API模块</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="../products/products.html">商品模块</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../products/category.html">分类模块</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../products/brands.html">供应商/品牌模块</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../products/materials.html">商品材料模块</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../products/colors.html">商品颜色模块</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../products/models.html">商品规格模块</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../products/labels.html">商品材质模块</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../products/return_policies.html">商家退换货规则模块</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../products/store_product_packet.html">店铺商品组模块</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../products/distributions.html">分销模块</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../products/wish.html">心愿清单模块</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../products/assets.html">附件模块</a></li>
 </ul>
 </li>
@@ -98,11 +109,16 @@
 </li>
 <li class="toctree-l1"><a class="reference internal" href="../shopes/index.html">微商城API模块</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="../shopes/shopes.html">微商城模块</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../shopes/store.html">店铺模块</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="../market/index.html">营销API模块</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="../market/banners.html">营销工具/广告模块</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../market/coupons.html">营销工具/优惠券模块</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../stats/index.html">统计API模块</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../stats/report.html">报表模块</a></li>
 </ul>
 </li>
 <li class="toctree-l1 current"><a class="current reference internal" href="#">用户API模块</a><ul>
@@ -178,7 +194,7 @@
 
 <ul class="nav nav-list">
   <li>
-    <a href="../market/coupons.html" title="Previous Chapter: 营销工具/优惠券模块"><span class="glyphicon glyphicon-chevron-left visible-sm"></span><span class="hidden-sm hidden-tablet">&raquo; 营销工具/优惠券模块</span>
+    <a href="../stats/report.html" title="Previous Chapter: 报表模块"><span class="glyphicon glyphicon-chevron-left visible-sm"></span><span class="hidden-sm hidden-tablet">&raquo; 报表模块</span>
     </a>
   </li>
   <li>
@@ -208,6 +224,17 @@
 <li class="toctree-l1"><a class="reference internal" href="users.html">用户模块</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="users.html#id2">用户资料</a></li>
 <li class="toctree-l2"><a class="reference internal" href="users.html#id5">更新用户信息</a></li>
+<li class="toctree-l2"><a class="reference internal" href="users.html#id9">商家实名认证</a></li>
+<li class="toctree-l2"><a class="reference internal" href="users.html#id14">获取认证信息</a></li>
+<li class="toctree-l2"><a class="reference internal" href="users.html#id17">返回审核状态</a></li>
+<li class="toctree-l2"><a class="reference internal" href="users.html#id20">更新认证状态</a></li>
+<li class="toctree-l2"><a class="reference internal" href="users.html#id24">签署合同</a></li>
+<li class="toctree-l2"><a class="reference internal" href="users.html#id29">修改合同信息</a></li>
+<li class="toctree-l2"><a class="reference internal" href="users.html#id33">获取合同信息</a></li>
+<li class="toctree-l2"><a class="reference internal" href="users.html#id36">保存用户第三方登陆信息</a></li>
+<li class="toctree-l2"><a class="reference internal" href="users.html#id41">获取用户设置信息</a></li>
+<li class="toctree-l2"><a class="reference internal" href="users.html#id44">编辑个人资料</a></li>
+<li class="toctree-l2"><a class="reference internal" href="users.html#id48">获取个人资料</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="auth.html">用户认证模块</a><ul>
@@ -218,6 +245,7 @@
 <li class="toctree-l2"><a class="reference internal" href="auth.html#id17">获取Token</a></li>
 <li class="toctree-l2"><a class="reference internal" href="auth.html#id21">用户退出</a></li>
 <li class="toctree-l2"><a class="reference internal" href="auth.html#id24">忘记密码</a></li>
+<li class="toctree-l2"><a class="reference internal" href="auth.html#id25">获取手机号地区编码</a></li>
 </ul>
 </li>
 </ul>
