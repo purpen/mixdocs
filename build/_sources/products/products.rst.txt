@@ -22,7 +22,7 @@
 cid          Number    可选                   分类Id
 page         Number    可选         1         当前页码
 per_page     Number    可选         10        每页数量
-status       Integer   可选         1         商品状态  0=仓库中, 1=出售中,  2=下架中, 3=已售罄
+status       Number    可选         1         商品状态  0=仓库中, 1=出售中,  2=下架中, 3=已售罄
 ===========  ========  =========  ========  ====================================
 
 返回示例
@@ -213,13 +213,13 @@ JSON数据格式:
 =====================  ==========  =========  ==========  =============================
 page                    Number      可选         1         当前页码
 per_page                Number      可选         10        每页数量
-start_date              Integer     可选                   发布日期的开始时间戳
-end_date                Integer     可选                   发布日期的结束时间戳
+start_date              Number      可选                   发布日期的开始时间戳
+end_date                Number      可选                   发布日期的结束时间戳
 cid                     Number      可选                   分类Id
-status                  Integer     可选         1         商品状态 0:仓库中; 1:出售中; 2:下架中; 3:已售罄
-is_distributed          Integer     可选                   商品类别 0: 全部; 1：自营商品；2：分销商品
+status                  Number      可选         1         商品状态 0:仓库中; 1:出售中; 2:下架中; 3:已售罄
+is_distributed          Number      可选                   商品类别 0: 全部; 1：自营商品；2：分销商品
 qk                      String      可选                   搜索关键字
-out_of_stock            Integer     可选         0         商品库存 0: 全部; 1: 数量不足
+out_of_stock            Number      可选         0         商品库存 0: 全部; 1: 数量不足
 =====================  ==========  =========  ==========  =============================
 
 返回示例
@@ -252,15 +252,30 @@ JSON数据格式:
 
     {
       "data": {
-        "cover": "http://xxx/_uploads/photos/171010/22f8415ad675f22.jpeg",
-        "id_code": null,
-        "name": "铠甲",
-        "rid": "117210230003",
-        "s_height": 0,
-        "s_length": 0,
-        "s_weight": 0,
-        "s_width": 0,
-        "sale_price": 60
+        "brand": null,
+        "commission_price": 30,
+        "commission_rate": 5.3,
+        "cover": "http://xxx/_uploads/photos/171010/fe7380064e18135.jpg",
+        "custom_details": "定制详情",
+        "features": "这是商品推荐语",
+        "id_code": "6915545123548",
+        "is_custom_made": true,
+        "is_custom_service": true,
+        "is_distributed": true,
+        "is_free_postage": false,
+        "is_made_holiday": true,
+        "like_count": 333,
+        "made_cycle": 5,
+        "max_price": 1888,
+        "max_sale_price": 1699,
+        "min_price": 1388,
+        "min_sale_price": 1299,
+        "name": "速腾套装",
+        "published_at": 1546121488,
+        "rid": "117210372661",
+        "status": 1,
+        "sticked": null,
+        "total_stock": 35
       },
       "status": {
         "code": 200,
@@ -304,45 +319,27 @@ JSON数据格式:
 
     {
         "data": {
-            "content": [
-                {
-                    "content": "湿度理工哈个阿里戈中国结",
-                    "type": "text"
-                },
-                {
-                    "content": "http://xxx/_uploads/photos/180202/ccab9ae0ab96840.jpg",
-                    "type": "image"
-                },
-                {
-                    "content": "http://xxx/_uploads/photos/180202/f51932c571ba21f.jpg",
-                    "type": "image"
-                },
-                {
-                    "content": "http://xxx/_uploads/photos/180202/f51932c571ba21f.jpg",
-                    "type": "image"
-                },
-                {
-                    "content": "最具推荐的奇石文化",
-                    "type": "text"
-                }
-            ],
+            "content": "产品内容详情",
             "images": [
                 {
-                    "created_at": 1517503809,
-                    "filename": "炮兵系列-RCL-G100数据线800x800-1.jpg",
-                    "filepath": "180202/f51932c571ba21f.jpg",
-                    "id": 12,
-                    "view_url": "http://xxx/_uploads/photos/180202/f51932c571ba21f.jpg"
+                    "created_at": 1527587113,
+                    "filename": "m.jpg",
+                    "filepath": "180529/e5a6b51ad55208d.jpg",
+                    "id": 5,
+                    "type": 1,
+                    "view_url": "http://127.0.0.1:9000/_uploads/photos/180529/e5a6b51ad55208d.jpg"
                 },
                 {
-                    "created_at": 1517503810,
-                    "filename": "炮兵系列-RCL-G100数据线800x800-6.jpg",
-                    "filepath": "180202/a6ca6a209d29c8d.jpg",
-                    "id": 17,
-                    "view_url": "http://xxx/_uploads/photos/180202/a6ca6a209d29c8d.jpg"
+                    "created_at": 1527587113,
+                    "filename": "l.jpg",
+                    "filepath": "180529/4158809a4303eab.jpg",
+                    "id": 6,
+                    "type": 1,
+                    "view_url": "http://127.0.0.1:9000/_uploads/photos/180529/4158809a4303eab.jpg"
                 }
             ],
-            "tags": "设计,骑士，文化"
+            "keywords": "苹果,明星,博客,象棋",
+            "product_return_policy": "除定制化、一次性使用商品，特殊订单项目外，如果由于个人原因您对购买的礼品不满意，在乐喜您可以在收到订单后隔日起算享受7天内退货或更换礼品服务。礼品寄出和退回运费将由消费者自行负担，请保持礼品及包裝完整寄回，经过创作人确认无误后，即可退换货。"
         },
         "status": {
             "code": 200,
@@ -394,26 +391,63 @@ JSON数据格式:
 .. code-block:: javascript
 
     {
-      "data": [
-        {
-          "cost_price": "24.00",
-          "cover": "http://xxx/_uploads/photos/171228/67a86ca36b30ec7.jpg",
-          "id_code": "",
-          "mode": "iPhone8 红色",
-          "product_name": "iPhoneX 手机壳",
-          "rid": "118040911719",
-          "s_color": "红色",
-          "s_model": "iPhone8",
-          "s_weight": "0.00",
-          "sale_price": "69.00",
-          "stock_count": 0
-        }
-      ],
-      "status": {
-        "code": 200,
-        "message": "Ok all right."
-      },
-      "success": true
+        "data": {
+            "colors": [
+                {
+                    "name": "白色",
+                    "valid": true
+                },
+                {
+                    "name": "黑色",
+                    "valid": true
+                }
+            ],
+            "items": [
+                {
+                    "commission_price": 18.52,
+                    "commission_rate": 1.5,
+                    "cover": "http://127.0.0.1:9000/_uploads/photos/180529/e5a6b51ad55208d.jpg",
+                    "mode": "大 白色",
+                    "price": "1234.50",
+                    "product_name": "B-新增商品第一步3",
+                    "rid": "8194832760",
+                    "s_color": "白色",
+                    "s_model": "大",
+                    "s_weight": "2.50",
+                    "sale_price": "2345.00",
+                    "stock_count": 5
+                },
+                {
+                    "commission_price": 120.98,
+                    "commission_rate": 3.5,
+                    "cover": "http://127.0.0.1:9000/_uploads/photos/180529/925ebbac8f1c78a.jpg",
+                    "mode": "小 白色",
+                    "price": "3456.70",
+                    "product_name": "B-新增商品第一步3",
+                    "rid": "8730816945",
+                    "s_color": "蓝色",
+                    "s_model": "小",
+                    "s_weight": "2.50",
+                    "sale_price": "4567.00",
+                    "stock_count": 25
+                }
+            ],
+            "modes": [
+                {
+                    "name": "大",
+                    "valid": true
+                },
+                {
+                    "name": "小",
+                    "valid": true
+                }
+            ]
+        },
+        "status": {
+            "code": 200,
+            "message": "Ok all right."
+        },
+        "success": true
     }
 
 请求 ``失败`` 返回结果：
@@ -436,7 +470,7 @@ JSON数据格式:
 接口说明
 ~~~~~~~~~~~~~~
 
-* API接口请求地址：``/products/skus``
+* API接口请求地址：``/products/many_skus``
 * API接口请求方法：``GET``
 
 请求参数
@@ -687,11 +721,11 @@ JSON数据格式:
 名称                    类型        是否必须     默认值       描述说明
 =====================  ==========  =========  ==========  =============================
 sid                    String      可选                     店铺编号
-category_id            Integer     必须                     分类ID
+category_id            Number      必须                     分类ID
 name                   String      必须                     商品名称
 id_code                String      可选                     商品编码
 asset_ids              Array       必须                     商品图片
-material_id            Integer     必须                     材质
+material_id            Number      必须                     材质
 features               String      必须                     宣传语或优势亮点
 content                String      必须                     图文详情
 keywords               Array       可选                     商品关键词
@@ -699,7 +733,7 @@ is_custom_service      Bool        可选                     是否定制化服
 custom_details         String      可选                     定制详情
 labels                 Array       必填                     商品标签
 is_custom_made         Bool        必填                     是否接单定制
-made_cycle             Integer     可选                     制作周期
+made_cycle             Number      可选                     制作周期
 is_made_holiday        Bool        可选                     制作周期是否包含节假日
 =====================  ==========  =========  ==========  =============================
 
@@ -740,6 +774,8 @@ JSON数据格式:
                     "filename": "m.jpg",
                     "filepath": "180529/e5a6b51ad55208d.jpg",
                     "id": 5,
+                    "type": 1,
+                    "type类型说明": "1=图片, 2=视频, 3=文本, 4=音频, 5=其它",
                     "view_url": "http://127.0.0.1:9000/_uploads/photos/180529/e5a6b51ad55208d.jpg"
                 }
             ],
@@ -826,6 +862,8 @@ JSON数据格式:
                     "filename": "m.jpg",
                     "filepath": "180529/e5a6b51ad55208d.jpg",
                     "id": 5,
+                    "type": 1,
+                    "type类型说明": "1=图片, 2=视频, 3=文本, 4=音频, 5=其它",
                     "view_url": "http://127.0.0.1:9000/_uploads/photos/180529/e5a6b51ad55208d.jpg"
                 }
             ],
@@ -907,6 +945,7 @@ JSON数据格式:
             "skus": [
                 {
                     "commission_price": 23.33,
+                    "commission_rate": 1.89,
                     "cover": "http://127.0.0.1:9000/_uploads/photos/180529/e5a6b51ad55208d.jpg",
                     "id_code": null,
                     "mode": "大 白色1",
@@ -921,6 +960,7 @@ JSON数据格式:
                 },
                 {
                     "commission_price": 77.66,
+                    "commission_rate": 3.31,
                     "cover": "http://127.0.0.1:9000/_uploads/photos/180529/4158809a4303eab.jpg",
                     "id_code": null,
                     "mode": "中 黑色1",
@@ -935,6 +975,7 @@ JSON数据格式:
                 },
                 {
                     "commission_price": 88.66,
+                    "commission_rate": 2.57,
                     "cover": "http://127.0.0.1:9000/_uploads/photos/180529/925ebbac8f1c78a.jpg",
                     "id_code": null,
                     "mode": "小 蓝色1",
@@ -949,6 +990,7 @@ JSON数据格式:
                 },
                 {
                     "commission_price": 55.55,
+                    "commission_rate": 1.61,
                     "cover": "http://127.0.0.1:9000/_uploads/photos/180529/925ebbac8f1c78a.jpg",
                     "id_code": null,
                     "mode": "小 蓝色1",
@@ -972,43 +1014,41 @@ JSON数据格式:
     }
 
 
-发布商品第二步
-------------------
+发布商品第二步, 放入仓库
+--------------------------
 发布商品详细信息
 
 接口说明
 ~~~~~~~~~~~~~~
 
-* API接口请求地址：``/products/publish2``
+* API接口请求地址：``/products/publish2/warehouse``
 * API接口请求方法：``POST``
 * API接口用户授权：``token``
 
 请求参数
 ~~~~~~~~~~~~~~~
 
-商品sku请求参数
-~~~~~~~~~~~~~~~
 =====================  ==========  =========  ==========  =============================
 名称                    类型        是否必须     默认值       描述说明
 =====================  ==========  =========  ==========  =============================
 sid                    String      可选                     店铺编号
 rid                    String      必须                     商品编号
-freight_template_id    Integer     必须                     运费模板
+freight_template_id    Number      必须                     运费模板
 product_return_policy  String      必须                     退换货规则
 is_distributed         Bool        必须                     商品是否分销
-status                 Integer     必须                     商品状态 0: 放入仓库 1: 立即发布
+status                 Number      必须                     商品状态 0: 放入仓库 1: 立即发布
 skus                   Array       必须                     商品sku信息
 
 sku参数信息
 sku_rid                String      可选                     sku编号,新增时为null
-cover_id               Integer     可选                     封面图ID
+cover_id               Number      可选                     封面图ID
 s_color                String      可选                     颜色
 s_model                String      可选                     型号
-s_weight               Float       必需                     重量
-stock_quantity         Integer     必须                     数量
-price                  Float       必需                     销售价
-sale_price             Float       可选                     促销价
-commission_rate        Float       可选                     佣金比率
+s_weight               Number      必需                     重量
+stock_quantity         Number      必须                     数量
+price                  Number      必需                     销售价
+sale_price             Number      可选                     促销价
+commission_rate        Number      可选                     佣金比率
 =====================  ==========  =========  ==========  =============================
 
 请求示例
@@ -1062,7 +1102,7 @@ JSON数据格式:
             "product_return_policy": "退换货规则, 不能小于20个字符.",
             "skus": [
                 {
-                    "commission_price": 88.66,
+                    "commission_rate": 2.34,
                     "cover": "http://127.0.0.1:9000/_uploads/photos/180529/925ebbac8f1c78a.jpg",
                     "id_code": null,
                     "mode": "小 黑色",
@@ -1076,7 +1116,7 @@ JSON数据格式:
                     "stock_count": 15
                 },
                 {
-                    "commission_price": 55.55,
+                    "commission_rate": 5.55,
                     "cover": "http://127.0.0.1:9000/_uploads/photos/180529/925ebbac8f1c78a.jpg",
                     "id_code": null,
                     "mode": "小 蓝色",
@@ -1099,6 +1139,27 @@ JSON数据格式:
         "success": true
     }
 
+
+发布商品第二步, 发布
+-----------------------
+发布商品详细信息
+
+接口说明
+~~~~~~~~~~~~~~
+
+* API接口请求地址：``/products/publish2/publish``
+* API接口请求方法：``POST``
+* API接口用户授权：``token``
+
+请求参数
+~~~~~~~~~~~~~~~
+
+** 同上新增商品第二步, 放入仓库 **
+
+返回示例
+~~~~~~~~~~~~~~~
+
+** 同上新增商品第二步, 放入仓库 **
 
 更新商品第二步
 ------------------
@@ -1408,7 +1469,7 @@ skus                   Array        必须                   商品sku信息
 
 sku参数信息
 sid                    String      必须                    商品sku编号
-commission_price       Float       必须                    佣金
+commission_price       Number      必须                    佣金
 =====================  ==========  =========  ==========  =============================
 
 请求示例
@@ -1460,7 +1521,7 @@ JSON数据格式:
 名称                    类型        是否必须     默认值       描述说明
 =====================  ==========  =========  ==========  =============================
 rid                    String       必须                   商品Id, 逗号隔开，可以批量修改
-status                 Integer      必须                   商品状态, 1: 上架  2: 下架
+status                 Number       必须                   商品状态, 1: 上架  2: 下架
 =====================  ==========  =========  ==========  =============================
 
 返回示例
