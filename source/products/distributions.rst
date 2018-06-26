@@ -69,7 +69,7 @@ JSON数据格式:
 接口说明
 ~~~~~~~~~~~~~~
 
-* API接口请求地址：``/fx_distribute/hot``
+* API接口请求地址：``/fx_distribute/sticked``
 * API接口请求方法：``GET``
 
 请求参数
@@ -97,7 +97,7 @@ JSON数据格式:
 接口说明
 ~~~~~~~~~~~~~~
 
-* API接口请求地址：``/fx_distribute/new``
+* API接口请求地址：``/fx_distribute/latest``
 * API接口请求方法：``GET``
 
 请求参数
@@ -136,7 +136,7 @@ JSON数据格式:
 sid          String    可选                   店铺编号
 page         Number    可选         1         当前页码
 per_page     Number    可选         10        每页数量
-status       String    可选         1         商品状态 0: 全部  1: 上架  2: 下架
+status       String    可选         1         商品状态 0: 全部  1: 上架中  2: 仓库中
 ===========  ========  =========  ========  ====================================
 
 返回示例
@@ -166,7 +166,7 @@ JSON数据格式:
 =====================  ==========  =========  ==========  =============================
 sid                    String       可选                   店铺编号
 rid                    String       必须                   商品编号
-product_packet_id      Integer      可选          0        商品组ID
+product_packet_id      Number       可选          0        商品组ID
 status                 bool         必须                   商品状态 true:上架中; false:仓库中
 stick_text             String       可选                   推荐语
 =====================  ==========  =========  ==========  =============================
@@ -361,7 +361,7 @@ JSON数据格式:
 =====================  ==========  =========  ==========  =============================
 sid                    String      可选                    店铺编号
 rid                    String      必须                    商品编号
-product_packet_id      Integer                            商品组编号
+product_packet_id      Number                              商品组编号
 stick_text             String      必须                    推荐语
 =====================  ==========  =========  ==========  =============================
 
