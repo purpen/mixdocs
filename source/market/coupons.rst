@@ -132,6 +132,7 @@ JSON数据格式:
     {
         "data": {
             "name": "优惠活动2",  // 活动名称
+            "activity_id": 2,  // 活动id
             "start_date": 1528560000  // 开始时间
             "activity_status": 1,  // 活动状态 1，进行中 2，待生效 3，已结束
             "created_at": 1530001603,  // 创建时间
@@ -490,6 +491,7 @@ JSON数据格式:
             "name": "优惠活动2",  //  活动名称
             "start_date": 1530201600  // 活动开始时间
             "end_date": 1530547200,  // 活动结束时间
+            "activity_id": 2,  // 活动id
             "items": [
                 {
                     "amount": 1,  // 优惠金额
@@ -578,6 +580,7 @@ JSON数据格式:
             "name": "满减活动2",  // 活动名称
             "start_date": 1530201600  // 活动开始时间
             "end_date": 1530547200,  // 活动结束时间
+            "activity_id": 2,  // 活动id
             "items": [
                 {
                     "amount": 1,  // 优惠金额
@@ -673,6 +676,7 @@ JSON数据格式:
             "name": "满减活动2",  // 活动名称
             "start_date": 1530201600  // 活动开始时间
             "end_date": 1530547200,  // 活动结束时间
+            "activity_id": 2,  // 活动id
             "items": [
                 {
                     "amount": 1,  // 优惠金额
@@ -774,6 +778,7 @@ JSON数据格式:
             "name": "优惠活动2",  //  活动名称
             "start_date": 1530201600  // 活动开始时间
             "end_date": 1530547200,  // 活动结束时间
+            "activity_id": 2,  // 活动id
             "items": [
                 {
                     "amount": 1,  // 优惠金额
