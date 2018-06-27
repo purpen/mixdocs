@@ -190,11 +190,20 @@ JSON数据格式:
             "packets": [
                 {
                     "count": 2,
+                    "images": [
+                        "http://127.0.0.1:9000/_uploads/photos/180529/fac7a2591ef0b48.jpg",
+                        "http://127.0.0.1:9000/_uploads/photos/180529/ef6dd0101d95c1c.jpg"
+                    ],
                     "name": "男士",
                     "product_packet_id": 3
                 },
                 {
                     "count": 4,
+                    "images": [
+                        "http://127.0.0.1:9000/_uploads/photos/180529/fac7a2591ef0b48.jpg",
+                        "http://127.0.0.1:9000/_uploads/photos/180529/ef6dd0101d95c1c.jpg",
+                        "http://127.0.0.1:9000/_uploads/photos/180529/ef7a25911d8735c.jpg"
+                    ],
                     "name": "女士",
                     "product_packet_id": 4
                 }
