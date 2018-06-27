@@ -607,7 +607,7 @@ JSON数据格式:
 ~~~~~~~~~~~~~
 
 * API接口请求地址：``/market/full_reduction/update``
-* API接口请求方法：``POST``
+* API接口请求方法：``PUT``
 * API接口用户授权：token
 
 请求参数
@@ -702,7 +702,7 @@ JSON数据格式:
 ~~~~~~~~~~~~~
 
 * API接口请求地址：``/market/coupons/update``
-* API接口请求方法：``POST``
+* API接口请求方法：``PUT``
 * API接口用户授权：token
 
 请求参数
