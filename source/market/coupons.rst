@@ -963,6 +963,106 @@ JSON数据格式:
     }
 
 
+用户使用优惠券
+---------------------
+
+接口说明
+~~~~~~~~~~~~~
+
+* API接口请求地址：``/market/coupons/use``
+* API接口请求方法：``POST``
+* API接口用户授权：``token``
+
+请求参数
+~~~~~~~~~~~~~~~
+
+===============  ========  =========  ========  ====================================
+名称              类型      是否必须    默认值     描述说明
+===============  ========  =========  ========  ====================================
+rid              String     必填                  优惠券code
+master_uid       Integer    必填                  商家ID
+product_rids     Array      必填                  商品编号列表
+total_amount  	 Number	    必填	 	             总金额
+===============  ========  =========  ========  ====================================
+
+**参考示例**
+
+.. code-block:: javascript
+
+    {
+        "rid":"UOWASNJZDFB",
+        "total_amount":"2000",
+        "master_uid":2,
+        "product_rids":["1"]
+    }
+
+返回示例
+~~~~~~~~~~~~~~~~
+
+JSON数据格式:
+
+.. code-block:: javascript
+
+    {
+        "data": {
+            "coupon_amount": 12,  // 优惠金额
+            "coupon_rid": "UOWASNJZDFB",
+            "pay_amount": 1988  // 支付金额
+        },
+        "status": {
+            "code": 200,
+            "message": "Ok all right."
+        },
+        "success": true
+    }
 
 
 
+用户使用满减活动
+---------------------
+
+接口说明
+~~~~~~~~~~~~~
+
+* API接口请求地址：``/market/full_reduction/use``
+* API接口请求方法：``POST``
+* API接口用户授权：``token``
+
+请求参数
+~~~~~~~~~~~~~~~
+
+===============  ========  =========  ========  ====================================
+名称              类型      是否必须    默认值     描述说明
+===============  ========  =========  ========  ====================================
+master_uid       Integer    必填                  商家ID
+total_amount  	 Number	    必填	 	             总金额
+===============  ========  =========  ========  ====================================
+
+**参考示例**
+
+.. code-block:: javascript
+
+    {
+        "total_amount":"2000",
+        "master_uid":2
+    }
+
+返回示例
+~~~~~~~~~~~~~~~~
+
+JSON数据格式:
+
+.. code-block:: javascript
+
+    {
+        "data": {
+            "coupon_amount": 2,  // 优惠金额
+            "pay_amount": 1998,  // 支付金额
+            "reach_amount": 30  // 满足金额
+        },
+        "status": {
+            "code": 200,
+            "message": "Ok all right."
+        },
+        "success": true
+    }
