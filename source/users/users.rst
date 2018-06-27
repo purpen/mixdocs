@@ -132,8 +132,8 @@ wechat                   String    必须                      微信号
 qq                       String    可选                      QQ号
 country_id               Integer   必须                      国家ID
 province_id              Integer   必须                      省ID
-city_id                  Integer   必须                      市ID
-area_id                  Integer   必须                      区域ID
+city_id                  Integer   可选                      市ID
+area_id                  Integer   可选                      区域ID
 street_address           String    必须                      详细地址
 urgent_contact_name      String    必须                      紧急联系人姓名
 urgent_contact_mobile    String    必须                      紧急联系人电话
@@ -397,66 +397,16 @@ JSON数据格式:
       "success": false
     }
 
-签署合同
+签署或修改合同
 -----------------
 
 接口说明
 ~~~~~~~~~~~~~~
 
 * API接口请求地址：``/users/contract``
-* API接口请求方法：``GET,POST``
+* API接口请求方法：``POST``
 * API接口用户授权：``token``
 
-API接口请求方法为 ``GET`` 时
-
-返回示例
-~~~~~~~~~~~~~~~~
-
-JSON数据格式:
-
-请求 **正确** 返回结果：
-
-.. code-block:: javascript
-
-    {
-        "data": {
-            "account": "6214865188793549",
-            "area": "顺义区",
-            "bank_addr": "朝阳区酒仙桥支行",
-            "bank_name": "中国银行",
-            "brand_name": "jkss ",
-            "city": "北京",
-            "country": "中国",
-            "current_time": 1529128217,
-            "expiration_time": 1560664217,
-            "id": 27,
-            "master_uid": 2,
-            "mobile": "13001179400",
-            "name": "毛爷爷",
-            "province": "北京",
-            "street_address": "中南海",
-            "username": "雷军"
-        },
-        "status": {
-            "code": 201,
-            "message": "All created."
-        },
-        "success": true
-    }
-
-请求 ``失败`` 返回结果：
-
-.. code-block:: javascript
-
-    {
-      "status": {
-        "code": 404,
-        "message": "Not Found"
-      },
-      "success": false
-    }
-
-API接口请求方法为 ``POST`` 时
 
 请求参数
 ~~~~~~~~~~~~~~~
@@ -464,6 +414,15 @@ API接口请求方法为 ``POST`` 时
 ===============  ========  =========  ========  ====================================
 名称              类型      是否必须    默认值     描述说明
 ===============  ========  =========  ========  ====================================
+brand_name        String    必须                  乙方
+country_id        Integer   必须                  国家ID
+province_id       Integer   必须                  省ID
+city_id           Integer   可选                  市ID
+area_id           Integer   可选                  区域ID
+street_address    String    必须                  详细地址
+name              String    必须                  联系人
+mobile            String    必须                  手机号
+email             String    必须                  邮箱
 bank_name         String    必须                  银行名称
 username          String    必须                  户名
 bank_addr         String    必须                  开户行
@@ -518,71 +477,6 @@ JSON数据格式:
         "success": false
     }
 
-修改合同信息
------------------
-
-接口说明
-~~~~~~~~~~~~~~
-
-* API接口请求地址：``/users/contract``
-* API接口请求方法：``PUT``
-* API接口用户授权：``token``
-
-请求示例
-~~~~~~~~~~~~~~~~
-
-JSON数据格式:
-
-.. code-block:: javascript
-
-    {"brand_name":"小米之家","country_id":1,"province_id":1,"city_id":1,"area_id":2,"street_address":"中南海","name":"马化腾","mobile":"13004578966","email":"8888888@qq.com","bank_name":"中国银行", "username":"雷军","bank_addr":"朝阳区酒仙桥支行", "account":"6214865188793549"}
-
-返回示例
-~~~~~~~~~~~~~~~~
-
-JSON数据格式:
-
-请求 **正确** 返回结果：
-
-.. code-block:: javascript
-
-    {
-        "data": {
-            "account": "6214865188793549",
-            "area": "顺义区",
-            "bank_addr": "朝阳区酒仙桥支行",
-            "bank_name": "中国银行",
-            "brand_name": "小米之家",
-            "city": "北京",
-            "country": "中国",
-            "current_time": 1529137673,
-            "expiration_time": 1560673673,
-            "id": 27,
-            "master_uid": 2,
-            "mobile": "13004578966",
-            "name": "马化腾",
-            "province": "北京",
-            "street_address": "中南海",
-            "username": "雷军"
-        },
-        "status": {
-            "code": 201,
-            "message": "All created."
-        },
-        "success": true
-    }
-
-请求 ``失败`` 返回结果：
-
-.. code-block:: javascript
-
-    {
-        "status": {
-            "code": 400,
-            "message": "Update failed!"
-        },
-        "success": false
-    }
 
 获取合同信息
 -----------------
@@ -590,7 +484,7 @@ JSON数据格式:
 接口说明
 ~~~~~~~~~~~~~~
 
-* API接口请求地址：``/users/get_contract``
+* API接口请求地址：``/users/contract``
 * API接口请求方法：``GET``
 * API接口用户授权：``token``
 
@@ -641,121 +535,6 @@ JSON数据格式:
       "success": false
     }
 
-保存用户第三方登陆信息
--------------------------
-
-接口说明
-~~~~~~~~~~~~~~
-
-* API接口请求地址：``/users/user_info``
-* API接口请求方法：``POST``
-
-请求参数
-~~~~~~~~~~~~~~~
-
-
-===============  ========  =========  ========  ====================================
-名称              类型      是否必须    默认值     描述说明
-===============  ========  =========  ========  ====================================
-openid           String     必须                 用户唯一标识
-nick_name        String     必须                 用户昵称
-avatar           String     可选                 用户头像url
-gender           Integer    可选          0      性别
-country          String     可选                 国家
-province         String     可选                 省
-city             String     可选                 市
-type             Integer    可选          1      来源类型 1、微信
-===============  ========  =========  ========  ====================================
-
-请求示例
-~~~~~~~~~~~~~~~~
-
-JSON数据格式:
-
-.. code-block:: javascript
-
-    {
-        "openid":"jsdkj3j",
-        "nick_name":"taihuoniao",
-        "avatar":"weixin://wxpay/bizpayurl?pr=jKmv7J3",
-        "country":"中国",
-        "province":"河北",
-        "city":"保定"
-        "gender":0
-    }
-
-返回示例
-~~~~~~~~~~~~~~~~
-
-JSON数据格式:
-
-请求 **正确** 返回结果：
-
-.. code-block:: javascript
-
-    {
-        "status": {
-            "code": 201,
-            "message": "All created."
-        },
-        "success": true
-    }
-
-请求 ``失败`` 返回结果：
-
-.. code-block:: javascript
-
-    {
-      "status": {
-        "code": 404,
-        "message": "Not Found"
-      },
-      "success": false
-    }
-
-获取用户设置信息
------------------
-
-接口说明
-~~~~~~~~~~~~~~
-
-
-* API接口请求地址：``/users/settings``
-* API接口请求方法：``GET``
-
-返回示例
-~~~~~~~~~~~~~~~~
-
-JSON数据格式:
-
-请求 **正确** 返回结果：
-
-.. code-block:: javascript
-
-    {
-        "data": {
-            "avatar": "http://xxxx/photos/180224/c833237a728a1ed.jpg",
-            "nick_name": "taihuoniao"
-        },
-        "status": {
-            "code": 200,
-            "message": "Ok all right."
-        },
-        "success": true
-    }
-
-请求 ``失败`` 返回结果：
-
-.. code-block:: javascript
-
-    {
-      "status": {
-        "code": 404,
-        "message": "Not Found"
-      },
-      "success": false
-    }
-
 编辑个人资料
 -----------------
 
@@ -774,10 +553,11 @@ JSON数据格式:
 ===============  ========  =========  ========  ====================================
 openid           String     必须                 用户唯标识
 nick_name        String     可选                 用户昵称
-avatar           String     可选                 用户头像url
+avatar_id        Integer    可选                 用户头像ID
+about_me         String     可选                 个人介绍
 gender           Integer    可选          0      性别
-province         String     可选                 省
-city             String     可选                 市
+province_id      Integer    可选                 省ID
+city_id          Integer    可选                 市ID
 type             Integer    可选          1      来源类型 1、微信
 email            String     可选                 邮箱
 date             String     可选                 出生日期
@@ -794,19 +574,21 @@ JSON数据格式:
 
     {
         "data": {
-            "about_me": "php是最好的语言",
-            "avatar": "http://127.0.0.1:9000/_uploads/photos/222222/5d2812257b539aa.jpg",
-            "city": "南京",
-            "date": "1992年12月16日",
-            "email": "zhizhuren@163.com",
-            "gender": 1,
-            "id": 1,
-            "master_uid": 0,
-            "nick_name": "马化腾",
-            "openid": "jsdkj3j",
-            "province": "江苏",
-            "user_id": 0,
-            "wxapp_id": "1"
+            "created_at": 1529067075,
+            "user_party": {
+                "about_me": null,
+                "avatar": "http://xxxx/photos/180224/c833237a728a1ed.jpg",
+                "city": "保定",
+                "date": "",
+                "email": null,
+                "gender": 0,
+                "id": 1,
+                "master_uid": 2,
+                "nick_name": "丁磊",
+                "openid": "jsdkj3j",
+                "province": "河北",
+                "wxapp_id": "1"
+            }
         },
         "status": {
             "code": 200,
@@ -814,6 +596,7 @@ JSON数据格式:
         },
         "success": true
     }
+
 
 请求 ``失败`` 返回结果：
 
