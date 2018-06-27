@@ -808,7 +808,7 @@ JSON数据格式:
 ~~~~~~~~~~~~~
 
 * API接口请求地址：``/market/activity/delete``
-* API接口请求方法：``POST``
+* API接口请求方法：``GET``
 * API接口用户授权：token
 
 请求参数
