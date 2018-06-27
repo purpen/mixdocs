@@ -452,7 +452,7 @@ coupon_items      Array      必填                        优惠券信息列表
 ===============  ========  =============  ============  ============================================
 coupon_items:
 amount            Number     必填                        优惠券金额
-got_count         Integer    必填                        领取数量
+got_count         Integer    必填                        总数量
 min_amount        Number     必填                        最低金额限制
 days              Integer    必填                        有效天数
 product_rid       Array      可选                        优惠商品列表
@@ -727,7 +727,7 @@ delete_codes      Array      可选                        删除的优惠券的
 amount_items:
 code              String     必须                        优惠券code,新增填'0'
 amount            Number     必填                        优惠券金额
-got_count         Integer    必填                        领取数量
+got_count         Integer    必填                        总数量
 min_amount        Number     必填                        最低金额限制
 days              Integer    必填                        有效天数
 product_rid       Array      可选                        优惠商品列表
@@ -856,7 +856,7 @@ JSON数据格式:
 ===============  ========  =========  ========  ====================================
 名称              类型      是否必须    默认值     描述说明
 ===============  ========  =========  ========  ====================================
-rid              String     可选                  备注
+rid              String     必填                 优惠券code
 ===============  ========  =========  ========  ====================================
 
 返回示例
@@ -868,21 +868,32 @@ JSON数据格式:
 
     {
         "data": {
-            "amount": 5,
-            "code": "UDNHISFAMRJ",
-            "created_at": 1520269560,
-            "limit_products": "",
-            "min_amount": 0,
-            "name": "满减活动",
-            "reach_amount": 100,
-            "start_date": 1520265600,
-            "status": 1,
-            "type": 2,
-            "type_text": "部分商品可用"
+            "coupon": {
+                "amount": 12,  // 优惠券金额
+                "code": "UOWASNJZDFB",  // 优惠券code
+                "count": 9000,  // 优惠券总数量
+                "created_at": 1530081557,  // 优惠券创建时间
+                "days": 7,  // 优惠券有效期
+                "min_amount": 200,  // 优惠券限制金额
+                "products": [
+                    {
+                        "name": "摩托",
+                        "rid": "1"
+                    }
+                ],
+                "type": 2,  // 优惠券类型
+                "type_text": "部分商品可用"
+            },
+            "end_at": 1530692898,  // 优惠券到期时间
+            "get_at": 1530088098,  // 领取时间
+            "is_expired": false,  // 是否过期
+            "is_used": false,  // 是否使用
+            "order_rid": null,  // 在哪个订单上使用
+            "used_at": 0  // 使用时间
         },
         "status": {
-            "code": 200,
-            "message": "Ok all right."
+            "code": 201,
+            "message": "All created."
         },
         "success": true
     }
