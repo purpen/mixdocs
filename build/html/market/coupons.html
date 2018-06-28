@@ -87,6 +87,11 @@
 <li class="toctree-l2"><a class="reference internal" href="../products/products.html">商品模块</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../products/category.html">分类模块</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../products/brands.html">供应商/品牌模块</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../products/materials.html">商品材料模块</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../products/colors.html">商品颜色模块</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../products/models.html">商品规格模块</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../products/labels.html">商品材质模块</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../products/return_policies.html">商家退换货规则模块</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../products/store_product_packet.html">店铺商品组模块</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../products/distributions.html">分销模块</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../products/wish.html">心愿清单模块</a></li>
@@ -160,55 +165,79 @@
 <li><a class="reference internal" href="#id5">返回示例</a></li>
 </ul>
 </li>
-<li><a class="reference internal" href="#id6">正在活动中的优惠券列表</a><ul>
+<li><a class="reference internal" href="#id6">优惠活动列表</a><ul>
 <li><a class="reference internal" href="#id7">接口说明</a></li>
-<li><a class="reference internal" href="#id8">返回示例</a></li>
+<li><a class="reference internal" href="#id8">请求参数</a></li>
+<li><a class="reference internal" href="#id9">返回示例</a></li>
 </ul>
 </li>
-<li><a class="reference internal" href="#id9">用户优惠券列表</a><ul>
-<li><a class="reference internal" href="#id10">接口说明</a></li>
-<li><a class="reference internal" href="#id11">请求参数</a></li>
-<li><a class="reference internal" href="#id12">返回示例</a></li>
+<li><a class="reference internal" href="#id10">优惠活动详情列表</a><ul>
+<li><a class="reference internal" href="#id11">接口说明</a></li>
+<li><a class="reference internal" href="#id12">请求参数</a></li>
+<li><a class="reference internal" href="#id13">返回示例</a></li>
 </ul>
 </li>
-<li><a class="reference internal" href="#id13">符合条件的优惠券列表</a><ul>
-<li><a class="reference internal" href="#id14">接口说明</a></li>
-<li><a class="reference internal" href="#id15">请求参数</a></li>
+<li><a class="reference internal" href="#id14">正在活动中的优惠券列表</a><ul>
+<li><a class="reference internal" href="#id15">接口说明</a></li>
 <li><a class="reference internal" href="#id16">返回示例</a></li>
 </ul>
 </li>
-<li><a class="reference internal" href="#id17">符合条件的满减活动</a><ul>
+<li><a class="reference internal" href="#id17">用户优惠券列表</a><ul>
 <li><a class="reference internal" href="#id18">接口说明</a></li>
 <li><a class="reference internal" href="#id19">请求参数</a></li>
 <li><a class="reference internal" href="#id20">返回示例</a></li>
 </ul>
 </li>
-<li><a class="reference internal" href="#id21">优惠券详情</a><ul>
+<li><a class="reference internal" href="#id21">符合条件的优惠券列表</a><ul>
 <li><a class="reference internal" href="#id22">接口说明</a></li>
-<li><a class="reference internal" href="#id23">返回示例</a></li>
+<li><a class="reference internal" href="#id23">请求参数</a></li>
+<li><a class="reference internal" href="#id24">返回示例</a></li>
 </ul>
 </li>
-<li><a class="reference internal" href="#id24">新增优惠券</a><ul>
-<li><a class="reference internal" href="#id25">接口说明</a></li>
-<li><a class="reference internal" href="#id26">请求参数</a></li>
-<li><a class="reference internal" href="#id27">返回示例</a></li>
+<li><a class="reference internal" href="#id25">符合条件的满减活动</a><ul>
+<li><a class="reference internal" href="#id26">接口说明</a></li>
+<li><a class="reference internal" href="#id27">请求参数</a></li>
+<li><a class="reference internal" href="#id28">返回示例</a></li>
 </ul>
 </li>
-<li><a class="reference internal" href="#id28">领取优惠券</a><ul>
-<li><a class="reference internal" href="#id29">接口说明</a></li>
-<li><a class="reference internal" href="#id30">请求参数</a></li>
+<li><a class="reference internal" href="#id29">优惠券详情</a><ul>
+<li><a class="reference internal" href="#id30">接口说明</a></li>
 <li><a class="reference internal" href="#id31">返回示例</a></li>
 </ul>
 </li>
-<li><a class="reference internal" href="#id32">禁用优惠券</a><ul>
+<li><a class="reference internal" href="#id32">新增优惠券</a><ul>
 <li><a class="reference internal" href="#id33">接口说明</a></li>
-<li><a class="reference internal" href="#id34">返回示例</a></li>
+<li><a class="reference internal" href="#id34">请求参数</a></li>
+<li><a class="reference internal" href="#id35">返回示例</a></li>
 </ul>
 </li>
-<li><a class="reference internal" href="#id35">新用户72小时内首单9折</a><ul>
-<li><a class="reference internal" href="#id36">接口说明</a></li>
-<li><a class="reference internal" href="#id37">请求参数</a></li>
-<li><a class="reference internal" href="#id38">返回示例</a></li>
+<li><a class="reference internal" href="#id36">新增满减活动</a><ul>
+<li><a class="reference internal" href="#id37">接口说明</a></li>
+<li><a class="reference internal" href="#id38">请求参数</a></li>
+<li><a class="reference internal" href="#id39">返回示例</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#id40">新增满减活动</a><ul>
+<li><a class="reference internal" href="#id41">接口说明</a></li>
+<li><a class="reference internal" href="#id42">请求参数</a></li>
+<li><a class="reference internal" href="#id43">返回示例</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#id44">领取优惠券</a><ul>
+<li><a class="reference internal" href="#id45">接口说明</a></li>
+<li><a class="reference internal" href="#id46">请求参数</a></li>
+<li><a class="reference internal" href="#id47">返回示例</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#id48">禁用优惠券</a><ul>
+<li><a class="reference internal" href="#id49">接口说明</a></li>
+<li><a class="reference internal" href="#id50">返回示例</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#id51">新用户72小时内首单9折</a><ul>
+<li><a class="reference internal" href="#id52">接口说明</a></li>
+<li><a class="reference internal" href="#id53">请求参数</a></li>
+<li><a class="reference internal" href="#id54">返回示例</a></li>
 </ul>
 </li>
 </ul>
@@ -249,55 +278,79 @@
 <li><a class="reference internal" href="#id5">返回示例</a></li>
 </ul>
 </li>
-<li><a class="reference internal" href="#id6">正在活动中的优惠券列表</a><ul>
+<li><a class="reference internal" href="#id6">优惠活动列表</a><ul>
 <li><a class="reference internal" href="#id7">接口说明</a></li>
-<li><a class="reference internal" href="#id8">返回示例</a></li>
+<li><a class="reference internal" href="#id8">请求参数</a></li>
+<li><a class="reference internal" href="#id9">返回示例</a></li>
 </ul>
 </li>
-<li><a class="reference internal" href="#id9">用户优惠券列表</a><ul>
-<li><a class="reference internal" href="#id10">接口说明</a></li>
-<li><a class="reference internal" href="#id11">请求参数</a></li>
-<li><a class="reference internal" href="#id12">返回示例</a></li>
+<li><a class="reference internal" href="#id10">优惠活动详情列表</a><ul>
+<li><a class="reference internal" href="#id11">接口说明</a></li>
+<li><a class="reference internal" href="#id12">请求参数</a></li>
+<li><a class="reference internal" href="#id13">返回示例</a></li>
 </ul>
 </li>
-<li><a class="reference internal" href="#id13">符合条件的优惠券列表</a><ul>
-<li><a class="reference internal" href="#id14">接口说明</a></li>
-<li><a class="reference internal" href="#id15">请求参数</a></li>
+<li><a class="reference internal" href="#id14">正在活动中的优惠券列表</a><ul>
+<li><a class="reference internal" href="#id15">接口说明</a></li>
 <li><a class="reference internal" href="#id16">返回示例</a></li>
 </ul>
 </li>
-<li><a class="reference internal" href="#id17">符合条件的满减活动</a><ul>
+<li><a class="reference internal" href="#id17">用户优惠券列表</a><ul>
 <li><a class="reference internal" href="#id18">接口说明</a></li>
 <li><a class="reference internal" href="#id19">请求参数</a></li>
 <li><a class="reference internal" href="#id20">返回示例</a></li>
 </ul>
 </li>
-<li><a class="reference internal" href="#id21">优惠券详情</a><ul>
+<li><a class="reference internal" href="#id21">符合条件的优惠券列表</a><ul>
 <li><a class="reference internal" href="#id22">接口说明</a></li>
-<li><a class="reference internal" href="#id23">返回示例</a></li>
+<li><a class="reference internal" href="#id23">请求参数</a></li>
+<li><a class="reference internal" href="#id24">返回示例</a></li>
 </ul>
 </li>
-<li><a class="reference internal" href="#id24">新增优惠券</a><ul>
-<li><a class="reference internal" href="#id25">接口说明</a></li>
-<li><a class="reference internal" href="#id26">请求参数</a></li>
-<li><a class="reference internal" href="#id27">返回示例</a></li>
+<li><a class="reference internal" href="#id25">符合条件的满减活动</a><ul>
+<li><a class="reference internal" href="#id26">接口说明</a></li>
+<li><a class="reference internal" href="#id27">请求参数</a></li>
+<li><a class="reference internal" href="#id28">返回示例</a></li>
 </ul>
 </li>
-<li><a class="reference internal" href="#id28">领取优惠券</a><ul>
-<li><a class="reference internal" href="#id29">接口说明</a></li>
-<li><a class="reference internal" href="#id30">请求参数</a></li>
+<li><a class="reference internal" href="#id29">优惠券详情</a><ul>
+<li><a class="reference internal" href="#id30">接口说明</a></li>
 <li><a class="reference internal" href="#id31">返回示例</a></li>
 </ul>
 </li>
-<li><a class="reference internal" href="#id32">禁用优惠券</a><ul>
+<li><a class="reference internal" href="#id32">新增优惠券</a><ul>
 <li><a class="reference internal" href="#id33">接口说明</a></li>
-<li><a class="reference internal" href="#id34">返回示例</a></li>
+<li><a class="reference internal" href="#id34">请求参数</a></li>
+<li><a class="reference internal" href="#id35">返回示例</a></li>
 </ul>
 </li>
-<li><a class="reference internal" href="#id35">新用户72小时内首单9折</a><ul>
-<li><a class="reference internal" href="#id36">接口说明</a></li>
-<li><a class="reference internal" href="#id37">请求参数</a></li>
-<li><a class="reference internal" href="#id38">返回示例</a></li>
+<li><a class="reference internal" href="#id36">新增满减活动</a><ul>
+<li><a class="reference internal" href="#id37">接口说明</a></li>
+<li><a class="reference internal" href="#id38">请求参数</a></li>
+<li><a class="reference internal" href="#id39">返回示例</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#id40">新增满减活动</a><ul>
+<li><a class="reference internal" href="#id41">接口说明</a></li>
+<li><a class="reference internal" href="#id42">请求参数</a></li>
+<li><a class="reference internal" href="#id43">返回示例</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#id44">领取优惠券</a><ul>
+<li><a class="reference internal" href="#id45">接口说明</a></li>
+<li><a class="reference internal" href="#id46">请求参数</a></li>
+<li><a class="reference internal" href="#id47">返回示例</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#id48">禁用优惠券</a><ul>
+<li><a class="reference internal" href="#id49">接口说明</a></li>
+<li><a class="reference internal" href="#id50">返回示例</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#id51">新用户72小时内首单9折</a><ul>
+<li><a class="reference internal" href="#id52">接口说明</a></li>
+<li><a class="reference internal" href="#id53">请求参数</a></li>
+<li><a class="reference internal" href="#id54">返回示例</a></li>
 </ul>
 </li>
 </ul>
@@ -425,18 +478,186 @@
 </div>
 </div>
 <div class="section" id="id6">
-<h2>正在活动中的优惠券列表<a class="headerlink" href="#id6" title="永久链接至标题">¶</a></h2>
-<p>获取活动中优惠券列表</p>
+<h2>优惠活动列表<a class="headerlink" href="#id6" title="永久链接至标题">¶</a></h2>
+<p>获取优惠活动列表</p>
 <div class="section" id="id7">
 <h3>接口说明<a class="headerlink" href="#id7" title="永久链接至标题">¶</a></h3>
+<ul class="simple">
+<li>API接口请求地址：<code class="docutils literal"><span class="pre">/market/activities</span></code></li>
+<li>API接口请求方法：<code class="docutils literal"><span class="pre">GET</span></code></li>
+</ul>
+</div>
+<div class="section" id="id8">
+<h3>请求参数<a class="headerlink" href="#id8" title="永久链接至标题">¶</a></h3>
+<table border="1" class="docutils">
+<colgroup>
+<col width="18%" />
+<col width="10%" />
+<col width="11%" />
+<col width="10%" />
+<col width="51%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">名称</th>
+<th class="head">类型</th>
+<th class="head">是否必须</th>
+<th class="head">默认值</th>
+<th class="head">描述说明</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>page</td>
+<td>Number</td>
+<td>可选</td>
+<td>1</td>
+<td>当前页码</td>
+</tr>
+<tr class="row-odd"><td>per_page</td>
+<td>Number</td>
+<td>可选</td>
+<td>10</td>
+<td>每页数量</td>
+</tr>
+<tr class="row-even"><td>status</td>
+<td>String</td>
+<td>可选</td>
+<td>1</td>
+<td>活动状态 1: 进行中；2：待生效；3：已结束</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="id9">
+<h3>返回示例<a class="headerlink" href="#id9" title="永久链接至标题">¶</a></h3>
+<p>JSON数据格式:</p>
+<div class="highlight-javascript"><div class="highlight"><pre><span></span><span class="p">{</span>
+    <span class="s2">&quot;data&quot;</span><span class="o">:</span> <span class="p">{</span>
+        <span class="s2">&quot;activities&quot;</span><span class="o">:</span> <span class="p">[</span>
+            <span class="p">{</span>
+                <span class="s2">&quot;id&quot;</span><span class="o">:</span> <span class="mi">24</span><span class="p">,</span>  <span class="c1">// 活动id</span>
+                <span class="s2">&quot;end_date&quot;</span><span class="o">:</span> <span class="mi">1530547200</span><span class="p">,</span>  <span class="c1">// 结束时间</span>
+                <span class="s2">&quot;created_at&quot;</span><span class="o">:</span> <span class="mi">1530001603</span><span class="p">,</span>  <span class="c1">// 创建时间</span>
+                <span class="s2">&quot;name&quot;</span><span class="o">:</span> <span class="s2">&quot;优惠活动2&quot;</span><span class="p">,</span>  <span class="c1">// 活动名称</span>
+                <span class="s2">&quot;start_date&quot;</span><span class="o">:</span> <span class="mi">1528560000</span><span class="p">,</span>  <span class="c1">// 开始时间</span>
+                <span class="s2">&quot;surplus_days&quot;</span><span class="o">:</span> <span class="mi">7</span><span class="p">,</span>  <span class="c1">// 剩余天数</span>
+                <span class="s2">&quot;total_quantity&quot;</span><span class="o">:</span> <span class="mi">2000</span><span class="p">,</span>  <span class="c1">// 总数量</span>
+                <span class="s2">&quot;type&quot;</span><span class="o">:</span> <span class="mi">2</span>  <span class="c1">// 类型</span>
+                <span class="s2">&quot;coupon_items&quot;</span><span class="o">:</span> <span class="p">[</span>
+                    <span class="p">{</span>
+                        <span class="s2">&quot;amount&quot;</span><span class="o">:</span> <span class="mi">1</span><span class="p">,</span>  <span class="c1">// 面值</span>
+                        <span class="s2">&quot;code&quot;</span><span class="o">:</span> <span class="s2">&quot;USNAKJEQROH&quot;</span><span class="p">,</span>  <span class="c1">// 优惠券代码</span>
+                        <span class="s2">&quot;created_at&quot;</span><span class="o">:</span> <span class="mi">1530001603</span><span class="p">,</span>  <span class="c1">// 创建时间</span>
+                        <span class="s2">&quot;days&quot;</span><span class="o">:</span> <span class="mi">7</span><span class="p">,</span>  <span class="c1">// 有效天数</span>
+                        <span class="s2">&quot;min_amount&quot;</span><span class="o">:</span> <span class="mi">90</span><span class="p">,</span>  <span class="c1">// 限制金额</span>
+                        <span class="s2">&quot;pickup_count&quot;</span><span class="o">:</span> <span class="mi">0</span><span class="p">,</span>  <span class="c1">// 领取数量</span>
+                        <span class="s2">&quot;surplus_count&quot;</span><span class="o">:</span> <span class="mi">1000</span><span class="p">,</span>  <span class="c1">// 剩余数量</span>
+                        <span class="s2">&quot;use_count&quot;</span><span class="o">:</span> <span class="mi">0</span><span class="p">,</span>  <span class="c1">// 使用数量</span>
+                        <span class="s2">&quot;type&quot;</span><span class="o">:</span> <span class="mi">2</span><span class="p">,</span>  <span class="c1">// 类型</span>
+                        <span class="s2">&quot;type_text&quot;</span><span class="o">:</span> <span class="s2">&quot;部分商品可用&quot;</span>
+                    <span class="p">}</span>
+                <span class="p">]</span>
+            <span class="p">}</span>
+        <span class="p">],</span>
+        <span class="s2">&quot;count&quot;</span><span class="o">:</span> <span class="mi">3</span><span class="p">,</span>
+        <span class="s2">&quot;next&quot;</span><span class="o">:</span> <span class="s2">&quot;http://0.0.0.0:9000/api/v1.0/market/activities?page=2&amp;status=1&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;prev&quot;</span><span class="o">:</span> <span class="kc">null</span>
+    <span class="p">},</span>
+    <span class="s2">&quot;status&quot;</span><span class="o">:</span> <span class="p">{</span>
+        <span class="s2">&quot;code&quot;</span><span class="o">:</span> <span class="mi">200</span><span class="p">,</span>
+        <span class="s2">&quot;message&quot;</span><span class="o">:</span> <span class="s2">&quot;Ok all right.&quot;</span>
+    <span class="p">},</span>
+    <span class="s2">&quot;success&quot;</span><span class="o">:</span> <span class="kc">true</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="id10">
+<h2>优惠活动详情列表<a class="headerlink" href="#id10" title="永久链接至标题">¶</a></h2>
+<p>获取优惠活动详情列表</p>
+<div class="section" id="id11">
+<h3>接口说明<a class="headerlink" href="#id11" title="永久链接至标题">¶</a></h3>
+<ul class="simple">
+<li>API接口请求地址：<code class="docutils literal"><span class="pre">/market/activities_item</span></code></li>
+<li>API接口请求方法：<code class="docutils literal"><span class="pre">GET</span></code></li>
+</ul>
+</div>
+<div class="section" id="id12">
+<h3>请求参数<a class="headerlink" href="#id12" title="永久链接至标题">¶</a></h3>
+<table border="1" class="docutils">
+<colgroup>
+<col width="20%" />
+<col width="11%" />
+<col width="12%" />
+<col width="11%" />
+<col width="47%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">名称</th>
+<th class="head">类型</th>
+<th class="head">是否必须</th>
+<th class="head">默认值</th>
+<th class="head">描述说明</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>id</td>
+<td>Number</td>
+<td>必填</td>
+<td>&#160;</td>
+<td>优惠活动详情</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="id13">
+<h3>返回示例<a class="headerlink" href="#id13" title="永久链接至标题">¶</a></h3>
+<p>JSON数据格式:</p>
+<div class="highlight-javascript"><div class="highlight"><pre><span></span><span class="p">{</span>
+    <span class="s2">&quot;data&quot;</span><span class="o">:</span> <span class="p">{</span>
+        <span class="s2">&quot;name&quot;</span><span class="o">:</span> <span class="s2">&quot;优惠活动2&quot;</span><span class="p">,</span>  <span class="c1">// 活动名称</span>
+        <span class="s2">&quot;start_date&quot;</span><span class="o">:</span> <span class="mi">1528560000</span>  <span class="c1">// 开始时间</span>
+        <span class="s2">&quot;activity_status&quot;</span><span class="o">:</span> <span class="mi">1</span><span class="p">,</span>  <span class="c1">// 活动状态 1，进行中 2，待生效 3，已结束</span>
+        <span class="s2">&quot;created_at&quot;</span><span class="o">:</span> <span class="mi">1530001603</span><span class="p">,</span>  <span class="c1">// 创建时间</span>
+        <span class="s2">&quot;end_date&quot;</span><span class="o">:</span> <span class="mi">1530547200</span><span class="p">,</span>  <span class="c1">// 结束时间</span>
+        <span class="s2">&quot;items&quot;</span><span class="o">:</span> <span class="p">[</span>
+            <span class="p">{</span>
+                <span class="s2">&quot;amount&quot;</span><span class="o">:</span> <span class="mi">1</span><span class="p">,</span>  <span class="c1">// 金额</span>
+                <span class="s2">&quot;code&quot;</span><span class="o">:</span> <span class="s2">&quot;USNAKJEQROH&quot;</span><span class="p">,</span>  <span class="c1">// 优惠券code</span>
+                <span class="s2">&quot;created_at&quot;</span><span class="o">:</span> <span class="mi">1530001603</span><span class="p">,</span>  <span class="c1">// 创建时间</span>
+                <span class="s2">&quot;days&quot;</span><span class="o">:</span> <span class="mi">7</span><span class="p">,</span>  <span class="c1">// 有效期</span>
+                <span class="s2">&quot;min_amount&quot;</span><span class="o">:</span> <span class="mi">90</span><span class="p">,</span>  <span class="c1">// 限制金额</span>
+                <span class="s2">&quot;pickup_count&quot;</span><span class="o">:</span> <span class="mi">0</span><span class="p">,</span>  <span class="c1">// 领取数量</span>
+                <span class="s2">&quot;surplus_count&quot;</span><span class="o">:</span> <span class="mi">1000</span><span class="p">,</span>  <span class="c1">// 剩余数量</span>
+                <span class="s2">&quot;type&quot;</span><span class="o">:</span> <span class="mi">2</span><span class="p">,</span>  <span class="c1">// 类型</span>
+                <span class="s2">&quot;type_text&quot;</span><span class="o">:</span> <span class="s2">&quot;部分商品可用&quot;</span><span class="p">,</span>
+                <span class="s2">&quot;use_count&quot;</span><span class="o">:</span> <span class="mi">0</span>  <span class="c1">// 使用数量</span>
+            <span class="p">}</span>
+        <span class="p">]</span>
+    <span class="p">},</span>
+    <span class="s2">&quot;status&quot;</span><span class="o">:</span> <span class="p">{</span>
+        <span class="s2">&quot;code&quot;</span><span class="o">:</span> <span class="mi">200</span><span class="p">,</span>
+        <span class="s2">&quot;message&quot;</span><span class="o">:</span> <span class="s2">&quot;Ok all right.&quot;</span>
+    <span class="p">},</span>
+    <span class="s2">&quot;success&quot;</span><span class="o">:</span> <span class="kc">true</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="id14">
+<h2>正在活动中的优惠券列表<a class="headerlink" href="#id14" title="永久链接至标题">¶</a></h2>
+<p>获取活动中优惠券列表</p>
+<div class="section" id="id15">
+<h3>接口说明<a class="headerlink" href="#id15" title="永久链接至标题">¶</a></h3>
 <ul class="simple">
 <li>API接口请求地址：<code class="docutils literal"><span class="pre">/market/coupons/activity</span></code></li>
 <li>API接口请求方法：<code class="docutils literal"><span class="pre">POST</span></code></li>
 <li>API接口用户授权：<code class="docutils literal"><span class="pre">token</span></code></li>
 </ul>
 </div>
-<div class="section" id="id8">
-<h3>返回示例<a class="headerlink" href="#id8" title="永久链接至标题">¶</a></h3>
+<div class="section" id="id16">
+<h3>返回示例<a class="headerlink" href="#id16" title="永久链接至标题">¶</a></h3>
 <p>JSON数据格式:</p>
 <div class="highlight-javascript"><div class="highlight"><pre><span></span><span class="p">{</span>
     <span class="s2">&quot;data&quot;</span><span class="o">:</span> <span class="p">{</span>
@@ -471,19 +692,19 @@
 </div>
 </div>
 </div>
-<div class="section" id="id9">
-<h2>用户优惠券列表<a class="headerlink" href="#id9" title="永久链接至标题">¶</a></h2>
+<div class="section" id="id17">
+<h2>用户优惠券列表<a class="headerlink" href="#id17" title="永久链接至标题">¶</a></h2>
 <p>获取用户优惠券列表</p>
-<div class="section" id="id10">
-<h3>接口说明<a class="headerlink" href="#id10" title="永久链接至标题">¶</a></h3>
+<div class="section" id="id18">
+<h3>接口说明<a class="headerlink" href="#id18" title="永久链接至标题">¶</a></h3>
 <ul class="simple">
 <li>API接口请求地址：<code class="docutils literal"><span class="pre">/market/user_coupons</span></code></li>
 <li>API接口请求方法：<code class="docutils literal"><span class="pre">POST</span></code></li>
 <li>API接口用户授权：<code class="docutils literal"><span class="pre">token</span></code></li>
 </ul>
 </div>
-<div class="section" id="id11">
-<h3>请求参数<a class="headerlink" href="#id11" title="永久链接至标题">¶</a></h3>
+<div class="section" id="id19">
+<h3>请求参数<a class="headerlink" href="#id19" title="永久链接至标题">¶</a></h3>
 <table border="1" class="docutils">
 <colgroup>
 <col width="15%" />
@@ -522,8 +743,8 @@
 </tbody>
 </table>
 </div>
-<div class="section" id="id12">
-<h3>返回示例<a class="headerlink" href="#id12" title="永久链接至标题">¶</a></h3>
+<div class="section" id="id20">
+<h3>返回示例<a class="headerlink" href="#id20" title="永久链接至标题">¶</a></h3>
 <p>JSON数据格式:</p>
 <div class="highlight-javascript"><div class="highlight"><pre><span></span><span class="p">{</span>
     <span class="s2">&quot;data&quot;</span><span class="o">:</span> <span class="p">{</span>
@@ -562,19 +783,19 @@
 </div>
 </div>
 </div>
-<div class="section" id="id13">
-<h2>符合条件的优惠券列表<a class="headerlink" href="#id13" title="永久链接至标题">¶</a></h2>
+<div class="section" id="id21">
+<h2>符合条件的优惠券列表<a class="headerlink" href="#id21" title="永久链接至标题">¶</a></h2>
 <p>符合某条件的优惠券列表</p>
-<div class="section" id="id14">
-<h3>接口说明<a class="headerlink" href="#id14" title="永久链接至标题">¶</a></h3>
+<div class="section" id="id22">
+<h3>接口说明<a class="headerlink" href="#id22" title="永久链接至标题">¶</a></h3>
 <ul class="simple">
 <li>API接口请求地址：<code class="docutils literal"><span class="pre">/market/coupons/available</span></code></li>
 <li>API接口请求方法：<code class="docutils literal"><span class="pre">POST</span></code></li>
 <li>API接口用户授权：<code class="docutils literal"><span class="pre">token</span></code></li>
 </ul>
 </div>
-<div class="section" id="id15">
-<h3>请求参数<a class="headerlink" href="#id15" title="永久链接至标题">¶</a></h3>
+<div class="section" id="id23">
+<h3>请求参数<a class="headerlink" href="#id23" title="永久链接至标题">¶</a></h3>
 <table border="1" class="docutils">
 <colgroup>
 <col width="16%" />
@@ -607,8 +828,8 @@
 </tbody>
 </table>
 </div>
-<div class="section" id="id16">
-<h3>返回示例<a class="headerlink" href="#id16" title="永久链接至标题">¶</a></h3>
+<div class="section" id="id24">
+<h3>返回示例<a class="headerlink" href="#id24" title="永久链接至标题">¶</a></h3>
 <p><code class="docutils literal"><span class="pre">注意</span></code> 返回结果有max标识，则为系统自动匹配优惠最大金额.</p>
 <p>JSON数据格式:</p>
 <div class="highlight-javascript"><div class="highlight"><pre><span></span><span class="p">{</span>
@@ -641,19 +862,19 @@
 </div>
 </div>
 </div>
-<div class="section" id="id17">
-<h2>符合条件的满减活动<a class="headerlink" href="#id17" title="永久链接至标题">¶</a></h2>
+<div class="section" id="id25">
+<h2>符合条件的满减活动<a class="headerlink" href="#id25" title="永久链接至标题">¶</a></h2>
 <p>符合某条件的满减活动</p>
-<div class="section" id="id18">
-<h3>接口说明<a class="headerlink" href="#id18" title="永久链接至标题">¶</a></h3>
+<div class="section" id="id26">
+<h3>接口说明<a class="headerlink" href="#id26" title="永久链接至标题">¶</a></h3>
 <ul class="simple">
 <li>API接口请求地址：<code class="docutils literal"><span class="pre">/market/coupons/full_reduction</span></code></li>
 <li>API接口请求方法：<code class="docutils literal"><span class="pre">POST</span></code></li>
 <li>API接口用户授权：<code class="docutils literal"><span class="pre">token</span></code></li>
 </ul>
 </div>
-<div class="section" id="id19">
-<h3>请求参数<a class="headerlink" href="#id19" title="永久链接至标题">¶</a></h3>
+<div class="section" id="id27">
+<h3>请求参数<a class="headerlink" href="#id27" title="永久链接至标题">¶</a></h3>
 <table border="1" class="docutils">
 <colgroup>
 <col width="16%" />
@@ -680,8 +901,8 @@
 </tbody>
 </table>
 </div>
-<div class="section" id="id20">
-<h3>返回示例<a class="headerlink" href="#id20" title="永久链接至标题">¶</a></h3>
+<div class="section" id="id28">
+<h3>返回示例<a class="headerlink" href="#id28" title="永久链接至标题">¶</a></h3>
 <p>JSON数据格式:</p>
 <div class="highlight-javascript"><div class="highlight"><pre><span></span><span class="p">{</span>
     <span class="s2">&quot;data&quot;</span><span class="o">:</span> <span class="p">{</span>
@@ -709,18 +930,18 @@
 </div>
 </div>
 </div>
-<div class="section" id="id21">
-<h2>优惠券详情<a class="headerlink" href="#id21" title="永久链接至标题">¶</a></h2>
+<div class="section" id="id29">
+<h2>优惠券详情<a class="headerlink" href="#id29" title="永久链接至标题">¶</a></h2>
 <p>获取优惠券的详细信息</p>
-<div class="section" id="id22">
-<h3>接口说明<a class="headerlink" href="#id22" title="永久链接至标题">¶</a></h3>
+<div class="section" id="id30">
+<h3>接口说明<a class="headerlink" href="#id30" title="永久链接至标题">¶</a></h3>
 <ul class="simple">
 <li>API接口请求地址：<code class="docutils literal"><span class="pre">/market/coupons/&lt;rid&gt;</span></code></li>
 <li>API接口请求方法：<code class="docutils literal"><span class="pre">GET</span></code></li>
 </ul>
 </div>
-<div class="section" id="id23">
-<h3>返回示例<a class="headerlink" href="#id23" title="永久链接至标题">¶</a></h3>
+<div class="section" id="id31">
+<h3>返回示例<a class="headerlink" href="#id31" title="永久链接至标题">¶</a></h3>
 <p>JSON数据格式:</p>
 <p>请求 <strong>正确</strong> 返回结果：</p>
 <div class="highlight-javascript"><div class="highlight"><pre><span></span><span class="p">{</span>
@@ -747,17 +968,18 @@
 </div>
 </div>
 </div>
-<div class="section" id="id24">
-<h2>新增优惠券<a class="headerlink" href="#id24" title="永久链接至标题">¶</a></h2>
-<div class="section" id="id25">
-<h3>接口说明<a class="headerlink" href="#id25" title="永久链接至标题">¶</a></h3>
+<div class="section" id="id32">
+<h2>新增优惠券<a class="headerlink" href="#id32" title="永久链接至标题">¶</a></h2>
+<div class="section" id="id33">
+<h3>接口说明<a class="headerlink" href="#id33" title="永久链接至标题">¶</a></h3>
 <ul class="simple">
 <li>API接口请求地址：<code class="docutils literal"><span class="pre">/market/coupons/create</span></code></li>
 <li>API接口请求方法：<code class="docutils literal"><span class="pre">POST</span></code></li>
+<li>API接口用户授权：token</li>
 </ul>
 </div>
-<div class="section" id="id26">
-<h3>请求参数<a class="headerlink" href="#id26" title="永久链接至标题">¶</a></h3>
+<div class="section" id="id34">
+<h3>请求参数<a class="headerlink" href="#id34" title="永久链接至标题">¶</a></h3>
 <table border="1" class="docutils">
 <colgroup>
 <col width="16%" />
@@ -779,7 +1001,57 @@
 <td>String</td>
 <td>必填</td>
 <td>&#160;</td>
-<td>优惠券名称</td>
+<td>活动名称</td>
+</tr>
+<tr class="row-odd"><td>start_date</td>
+<td>String</td>
+<td>必填</td>
+<td>&#160;</td>
+<td>活动开始日期</td>
+</tr>
+<tr class="row-even"><td>end_date</td>
+<td>String</td>
+<td>必填</td>
+<td>&#160;</td>
+<td>活动结束日期</td>
+</tr>
+<tr class="row-odd"><td>coupon_type</td>
+<td>Integer</td>
+<td>必填</td>
+<td>1</td>
+<td>优惠券类型 1、同享券 2、单享券</td>
+</tr>
+<tr class="row-even"><td>coupon_items</td>
+<td>Array</td>
+<td>必填</td>
+<td>&#160;</td>
+<td>优惠券信息列表</td>
+</tr>
+</tbody>
+</table>
+<p><strong>优惠券信息列表:</strong></p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="16%" />
+<col width="9%" />
+<col width="14%" />
+<col width="13%" />
+<col width="48%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">名称</th>
+<th class="head">类型</th>
+<th class="head">是否必须</th>
+<th class="head">默认值</th>
+<th class="head">描述说明</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>coupon_items:</td>
+<td>&#160;</td>
+<td>&#160;</td>
+<td>&#160;</td>
+<td>&#160;</td>
 </tr>
 <tr class="row-odd"><td>amount</td>
 <td>Number</td>
@@ -793,113 +1065,72 @@
 <td>&#160;</td>
 <td>领取数量</td>
 </tr>
-<tr class="row-odd"><td>start_date</td>
-<td>String</td>
-<td>可选</td>
-<td>&#160;</td>
-<td>优惠券开始日期</td>
-</tr>
-<tr class="row-even"><td>end_date</td>
-<td>String</td>
-<td>可选</td>
-<td>&#160;</td>
-<td>优惠券结束日期</td>
-</tr>
-<tr class="row-odd"><td>long_time</td>
-<td>Bool</td>
-<td>可选</td>
-<td>false</td>
-<td>是否长期有效</td>
-</tr>
-<tr class="row-even"><td>type</td>
-<td>Integer</td>
-<td>可选</td>
-<td>1</td>
-<td>优惠券类型 1、同享券 2、单享券 3、满减活动</td>
-</tr>
 <tr class="row-odd"><td>min_amount</td>
 <td>Number</td>
-<td>可选</td>
+<td>必填</td>
 <td>&#160;</td>
-<td>最低金额限制，单享、同享填写</td>
+<td>最低金额限制</td>
 </tr>
-<tr class="row-even"><td>reach_amount</td>
-<td>Number</td>
-<td>可选</td>
-<td>&#160;</td>
-<td>满足金额 满减填写</td>
-</tr>
-<tr class="row-odd"><td>name</td>
-<td>String</td>
-<td>可选</td>
-<td>&#160;</td>
-<td>优惠券名称</td>
-</tr>
-<tr class="row-even"><td>product_rid</td>
-<td>String</td>
-<td>可选</td>
-<td>&#160;</td>
-<td>商品编号,多个以逗号分隔</td>
-</tr>
-<tr class="row-odd"><td>status</td>
+<tr class="row-even"><td>days</td>
 <td>Integer</td>
+<td>必填</td>
+<td>&#160;</td>
+<td>有效天数</td>
+</tr>
+<tr class="row-odd"><td>product_rid</td>
+<td>Array</td>
 <td>可选</td>
-<td>1</td>
-<td>优惠券状态：-1: 禁用；1：正常；2：已结束</td>
+<td>&#160;</td>
+<td>优惠商品列表</td>
 </tr>
 </tbody>
 </table>
+<p><strong>参考示例</strong></p>
 <div class="highlight-javascript"><div class="highlight"><pre><span></span><span class="p">{</span>
-    <span class="s2">&quot;amount&quot;</span><span class="o">:</span> <span class="mi">2</span><span class="p">,</span>
-    <span class="s2">&quot;name&quot;</span><span class="o">:</span> <span class="s2">&quot;FB&quot;</span><span class="p">,</span>
-    <span class="s2">&quot;min_amount&quot;</span><span class="o">:</span> <span class="mf">30.00</span><span class="p">,</span>
-    <span class="s2">&quot;start_date&quot;</span><span class="o">:</span> <span class="s2">&quot;2018-05-06&quot;</span><span class="p">,</span>
-    <span class="s2">&quot;end_date&quot;</span><span class="o">:</span> <span class="s2">&quot;2018-09-10&quot;</span><span class="p">,</span>
-    <span class="s2">&quot;product_rids&quot;</span><span class="o">:</span><span class="s2">&quot;1,2&quot;</span><span class="p">,</span>
-    <span class="s2">&quot;type&quot;</span><span class="o">:</span><span class="mi">2</span><span class="p">,</span>
-    <span class="s2">&quot;count&quot;</span><span class="o">:</span><span class="mi">100</span>
+    <span class="s2">&quot;name&quot;</span><span class="o">:</span><span class="s2">&quot;优惠活动2&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;start_date&quot;</span><span class="o">:</span><span class="s2">&quot;2018-06-29&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;end_date&quot;</span><span class="o">:</span><span class="s2">&quot;2018-07-03&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;coupon_type&quot;</span><span class="o">:</span><span class="mi">2</span><span class="p">,</span>
+    <span class="s2">&quot;coupon_items&quot;</span><span class="o">:</span><span class="p">[</span>
+        <span class="p">{</span>
+            <span class="s2">&quot;amount&quot;</span><span class="o">:</span><span class="mi">1</span><span class="p">,</span>
+            <span class="s2">&quot;min_amount&quot;</span><span class="o">:</span><span class="mi">90</span><span class="p">,</span>
+            <span class="s2">&quot;got_count&quot;</span><span class="o">:</span><span class="mi">1000</span><span class="p">,</span>
+            <span class="s2">&quot;days&quot;</span><span class="o">:</span><span class="mi">7</span><span class="p">,</span>
+            <span class="s2">&quot;product_rids&quot;</span><span class="o">:</span><span class="p">[</span><span class="s2">&quot;1&quot;</span><span class="p">,</span><span class="s2">&quot;2&quot;</span><span class="p">]</span>
+        <span class="p">},</span>
+    <span class="p">]</span>
 <span class="p">}</span>
 </pre></div>
 </div>
 </div>
-<div class="section" id="id27">
-<h3>返回示例<a class="headerlink" href="#id27" title="永久链接至标题">¶</a></h3>
+<div class="section" id="id35">
+<h3>返回示例<a class="headerlink" href="#id35" title="永久链接至标题">¶</a></h3>
 <p>JSON数据格式:</p>
 <div class="highlight-javascript"><div class="highlight"><pre><span></span><span class="p">{</span>
     <span class="s2">&quot;data&quot;</span><span class="o">:</span> <span class="p">{</span>
-        <span class="s2">&quot;amount&quot;</span><span class="o">:</span> <span class="mi">2</span><span class="p">,</span>  <span class="c1">// 面值</span>
-        <span class="s2">&quot;code&quot;</span><span class="o">:</span> <span class="s2">&quot;UHBITCVQLEZ&quot;</span><span class="p">,</span>  <span class="c1">// 优惠券编码</span>
-        <span class="s2">&quot;created_at&quot;</span><span class="o">:</span> <span class="mi">1528893582</span><span class="p">,</span>  <span class="c1">// 创建时间</span>
-        <span class="s2">&quot;end_date&quot;</span><span class="o">:</span> <span class="mi">1536508800</span><span class="p">,</span>  <span class="c1">// 结束时间</span>
-        <span class="s2">&quot;got_count&quot;</span><span class="o">:</span> <span class="mi">100</span><span class="p">,</span>  <span class="c1">// 领取数量</span>
-        <span class="s2">&quot;limit_products&quot;</span><span class="o">:</span> <span class="p">[</span>  <span class="c1">// 限制使用某些商品</span>
+        <span class="s2">&quot;created_at&quot;</span><span class="o">:</span> <span class="mi">1529998307</span><span class="p">,</span>  <span class="c1">// 创建时间</span>
+        <span class="s2">&quot;name&quot;</span><span class="o">:</span> <span class="s2">&quot;优惠活动2&quot;</span><span class="p">,</span>  <span class="c1">//  活动名称</span>
+        <span class="s2">&quot;start_date&quot;</span><span class="o">:</span> <span class="mi">1530201600</span>  <span class="c1">// 活动开始时间</span>
+        <span class="s2">&quot;end_date&quot;</span><span class="o">:</span> <span class="mi">1530547200</span><span class="p">,</span>  <span class="c1">// 活动结束时间</span>
+        <span class="s2">&quot;items&quot;</span><span class="o">:</span> <span class="p">[</span>
             <span class="p">{</span>
-                <span class="s2">&quot;cost_price&quot;</span><span class="o">:</span> <span class="s2">&quot;1.00&quot;</span><span class="p">,</span>
-                <span class="s2">&quot;cover&quot;</span><span class="o">:</span> <span class="s2">&quot;http://0.0.0.0:9000/_uploads/photos/1&quot;</span><span class="p">,</span>
-                <span class="s2">&quot;description&quot;</span><span class="o">:</span> <span class="s2">&quot;1&quot;</span><span class="p">,</span>
-                <span class="s2">&quot;features&quot;</span><span class="o">:</span> <span class="s2">&quot;1&quot;</span><span class="p">,</span>
-                <span class="s2">&quot;id_code&quot;</span><span class="o">:</span> <span class="s2">&quot;1&quot;</span><span class="p">,</span>
-                <span class="s2">&quot;is_distributed&quot;</span><span class="o">:</span> <span class="kc">true</span><span class="p">,</span>
-                <span class="s2">&quot;name&quot;</span><span class="o">:</span> <span class="s2">&quot;摩托&quot;</span><span class="p">,</span>
-                <span class="s2">&quot;price&quot;</span><span class="o">:</span> <span class="mi">1</span><span class="p">,</span>
-                <span class="s2">&quot;published_at&quot;</span><span class="o">:</span> <span class="mi">1</span><span class="p">,</span>
-                <span class="s2">&quot;rid&quot;</span><span class="o">:</span> <span class="s2">&quot;1&quot;</span><span class="p">,</span>
-                <span class="s2">&quot;s_height&quot;</span><span class="o">:</span> <span class="mi">1</span><span class="p">,</span>
-                <span class="s2">&quot;s_length&quot;</span><span class="o">:</span> <span class="mi">1</span><span class="p">,</span>
-                <span class="s2">&quot;s_weight&quot;</span><span class="o">:</span> <span class="mi">1</span><span class="p">,</span>
-                <span class="s2">&quot;s_width&quot;</span><span class="o">:</span> <span class="mi">1</span><span class="p">,</span>
-                <span class="s2">&quot;sale_price&quot;</span><span class="o">:</span> <span class="mi">1</span><span class="p">,</span>
-                <span class="s2">&quot;sticked&quot;</span><span class="o">:</span> <span class="kc">true</span><span class="p">,</span>
-                <span class="s2">&quot;stock_count&quot;</span><span class="o">:</span> <span class="mi">11077</span>
-            <span class="p">},</span>
+                <span class="s2">&quot;amount&quot;</span><span class="o">:</span> <span class="mi">1</span><span class="p">,</span>  <span class="c1">// 优惠金额</span>
+                <span class="s2">&quot;code&quot;</span><span class="o">:</span> <span class="s2">&quot;UVGKCSLIMOA&quot;</span><span class="p">,</span>  <span class="c1">// 优惠券code</span>
+                <span class="s2">&quot;count&quot;</span><span class="o">:</span> <span class="mi">1000</span><span class="p">,</span>  <span class="c1">// 优惠券数量</span>
+                <span class="s2">&quot;created_at&quot;</span><span class="o">:</span> <span class="mi">1529998307</span><span class="p">,</span>  <span class="c1">// 创建时间</span>
+                <span class="s2">&quot;days&quot;</span><span class="o">:</span> <span class="mi">7</span><span class="p">,</span>  <span class="c1">// 有效天数</span>
+                <span class="s2">&quot;min_amount&quot;</span><span class="o">:</span> <span class="mi">90</span><span class="p">,</span>  <span class="c1">// 限制最小金额</span>
+                <span class="s2">&quot;products&quot;</span><span class="o">:</span> <span class="p">[</span>
+                    <span class="p">{</span>
+                        <span class="s2">&quot;name&quot;</span><span class="o">:</span> <span class="s2">&quot;摩托&quot;</span><span class="p">,</span>  <span class="c1">// 优惠商品</span>
+                        <span class="s2">&quot;rid&quot;</span><span class="o">:</span> <span class="s2">&quot;1&quot;</span>  <span class="c1">// 商品rid</span>
+                    <span class="p">}</span>
+                <span class="p">],</span>
+                <span class="s2">&quot;type&quot;</span><span class="o">:</span> <span class="mi">2</span><span class="p">,</span>  <span class="c1">// 优惠券类型</span>
+                <span class="s2">&quot;type_text&quot;</span><span class="o">:</span> <span class="s2">&quot;部分商品可用&quot;</span>
+            <span class="p">}</span>
         <span class="p">],</span>
-        <span class="s2">&quot;min_amount&quot;</span><span class="o">:</span> <span class="mi">30</span><span class="p">,</span>  <span class="c1">// 限制最低消费金额</span>
-        <span class="s2">&quot;name&quot;</span><span class="o">:</span> <span class="s2">&quot;FB&quot;</span><span class="p">,</span>  <span class="c1">// 优惠券名称</span>
-        <span class="s2">&quot;reach_amount&quot;</span><span class="o">:</span> <span class="mi">30</span><span class="p">,</span>  <span class="c1">// 满足金额</span>
-        <span class="s2">&quot;start_date&quot;</span><span class="o">:</span> <span class="mi">1525536000</span><span class="p">,</span>  <span class="c1">// 开始时间</span>
-        <span class="s2">&quot;status&quot;</span><span class="o">:</span> <span class="mi">1</span><span class="p">,</span>  <span class="c1">// 优惠券状态</span>
-        <span class="s2">&quot;type&quot;</span><span class="o">:</span> <span class="mi">2</span><span class="p">,</span>  <span class="c1">// 优惠券类型</span>
-        <span class="s2">&quot;type_text&quot;</span><span class="o">:</span> <span class="s2">&quot;部分商品可用&quot;</span>  <span class="c1">// 描述</span>
     <span class="p">},</span>
     <span class="s2">&quot;status&quot;</span><span class="o">:</span> <span class="p">{</span>
         <span class="s2">&quot;code&quot;</span><span class="o">:</span> <span class="mi">201</span><span class="p">,</span>
@@ -911,18 +1142,319 @@
 </div>
 </div>
 </div>
-<div class="section" id="id28">
-<h2>领取优惠券<a class="headerlink" href="#id28" title="永久链接至标题">¶</a></h2>
-<div class="section" id="id29">
-<h3>接口说明<a class="headerlink" href="#id29" title="永久链接至标题">¶</a></h3>
+<div class="section" id="id36">
+<h2>新增满减活动<a class="headerlink" href="#id36" title="永久链接至标题">¶</a></h2>
+<div class="section" id="id37">
+<h3>接口说明<a class="headerlink" href="#id37" title="永久链接至标题">¶</a></h3>
+<ul class="simple">
+<li>API接口请求地址：<code class="docutils literal"><span class="pre">/market/full_reduction/create</span></code></li>
+<li>API接口请求方法：<code class="docutils literal"><span class="pre">POST</span></code></li>
+<li>API接口用户授权：token</li>
+</ul>
+</div>
+<div class="section" id="id38">
+<h3>请求参数<a class="headerlink" href="#id38" title="永久链接至标题">¶</a></h3>
+<table border="1" class="docutils">
+<colgroup>
+<col width="16%" />
+<col width="9%" />
+<col width="14%" />
+<col width="13%" />
+<col width="48%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">名称</th>
+<th class="head">类型</th>
+<th class="head">是否必须</th>
+<th class="head">默认值</th>
+<th class="head">描述说明</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>name</td>
+<td>String</td>
+<td>必填</td>
+<td>&#160;</td>
+<td>活动名称</td>
+</tr>
+<tr class="row-odd"><td>start_date</td>
+<td>String</td>
+<td>必填</td>
+<td>&#160;</td>
+<td>活动开始日期</td>
+</tr>
+<tr class="row-even"><td>end_date</td>
+<td>String</td>
+<td>必填</td>
+<td>&#160;</td>
+<td>活动结束日期</td>
+</tr>
+<tr class="row-odd"><td>amount_items</td>
+<td>Array</td>
+<td>必填</td>
+<td>&#160;</td>
+<td>满减活动阶梯阶梯</td>
+</tr>
+</tbody>
+</table>
+<p><strong>优惠券信息列表:</strong></p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="16%" />
+<col width="9%" />
+<col width="14%" />
+<col width="13%" />
+<col width="48%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">名称</th>
+<th class="head">类型</th>
+<th class="head">是否必须</th>
+<th class="head">默认值</th>
+<th class="head">描述说明</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>amount_items:</td>
+<td>&#160;</td>
+<td>&#160;</td>
+<td>&#160;</td>
+<td>&#160;</td>
+</tr>
+<tr class="row-odd"><td>amount</td>
+<td>Number</td>
+<td>必填</td>
+<td>&#160;</td>
+<td>优惠券金额</td>
+</tr>
+<tr class="row-even"><td>reach_amount</td>
+<td>Number</td>
+<td>必填</td>
+<td>&#160;</td>
+<td>满足金额</td>
+</tr>
+</tbody>
+</table>
+<p><strong>参考示例</strong></p>
+<div class="highlight-javascript"><div class="highlight"><pre><span></span><span class="p">{</span>
+    <span class="s2">&quot;name&quot;</span><span class="o">:</span><span class="s2">&quot;满减活动2&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;start_date&quot;</span><span class="o">:</span><span class="s2">&quot;2018-06-29&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;end_date&quot;</span><span class="o">:</span><span class="s2">&quot;2018-07-03&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;amount_items&quot;</span><span class="o">:</span><span class="p">[</span>
+        <span class="p">{</span>
+            <span class="s2">&quot;amount&quot;</span><span class="o">:</span><span class="mi">1</span><span class="p">,</span>
+            <span class="s2">&quot;reach_amount&quot;</span><span class="o">:</span><span class="mi">10</span>
+        <span class="p">}</span>
+    <span class="p">]</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="id39">
+<h3>返回示例<a class="headerlink" href="#id39" title="永久链接至标题">¶</a></h3>
+<p>JSON数据格式:</p>
+<div class="highlight-javascript"><div class="highlight"><pre><span></span><span class="p">{</span>
+    <span class="s2">&quot;data&quot;</span><span class="o">:</span> <span class="p">{</span>
+        <span class="s2">&quot;created_at&quot;</span><span class="o">:</span> <span class="mi">1529994132</span><span class="p">,</span>  <span class="c1">// 创建时间</span>
+        <span class="s2">&quot;name&quot;</span><span class="o">:</span> <span class="s2">&quot;满减活动2&quot;</span><span class="p">,</span>  <span class="c1">// 活动名称</span>
+        <span class="s2">&quot;start_date&quot;</span><span class="o">:</span> <span class="mi">1530201600</span>  <span class="c1">// 活动开始时间</span>
+        <span class="s2">&quot;end_date&quot;</span><span class="o">:</span> <span class="mi">1530547200</span><span class="p">,</span>  <span class="c1">// 活动结束时间</span>
+        <span class="s2">&quot;items&quot;</span><span class="o">:</span> <span class="p">[</span>
+            <span class="p">{</span>
+                <span class="s2">&quot;amount&quot;</span><span class="o">:</span> <span class="mi">1</span><span class="p">,</span>  <span class="c1">// 优惠金额</span>
+                <span class="s2">&quot;code&quot;</span><span class="o">:</span> <span class="s2">&quot;URONCLZBYXT&quot;</span><span class="p">,</span>  <span class="c1">// 优惠券名称</span>
+                <span class="s2">&quot;reach_amount&quot;</span><span class="o">:</span> <span class="mi">10</span><span class="p">,</span>  <span class="c1">// 满减金额</span>
+                <span class="s2">&quot;type&quot;</span><span class="o">:</span> <span class="mi">3</span><span class="p">,</span>  <span class="c1">// 优惠券类型</span>
+                <span class="s2">&quot;type_text&quot;</span><span class="o">:</span> <span class="s2">&quot;消费满10.00元可减1.00元&quot;</span>
+            <span class="p">}</span>
+        <span class="p">]</span>
+    <span class="p">},</span>
+    <span class="s2">&quot;status&quot;</span><span class="o">:</span> <span class="p">{</span>
+        <span class="s2">&quot;code&quot;</span><span class="o">:</span> <span class="mi">201</span><span class="p">,</span>
+        <span class="s2">&quot;message&quot;</span><span class="o">:</span> <span class="s2">&quot;All created.&quot;</span>
+    <span class="p">},</span>
+    <span class="s2">&quot;success&quot;</span><span class="o">:</span> <span class="kc">true</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="id40">
+<h2>新增满减活动<a class="headerlink" href="#id40" title="永久链接至标题">¶</a></h2>
+<div class="section" id="id41">
+<h3>接口说明<a class="headerlink" href="#id41" title="永久链接至标题">¶</a></h3>
+<ul class="simple">
+<li>API接口请求地址：<code class="docutils literal"><span class="pre">/market/full_reduction/update</span></code></li>
+<li>API接口请求方法：<code class="docutils literal"><span class="pre">POST</span></code></li>
+<li>API接口用户授权：token</li>
+</ul>
+</div>
+<div class="section" id="id42">
+<h3>请求参数<a class="headerlink" href="#id42" title="永久链接至标题">¶</a></h3>
+<table border="1" class="docutils">
+<colgroup>
+<col width="16%" />
+<col width="9%" />
+<col width="14%" />
+<col width="13%" />
+<col width="48%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">名称</th>
+<th class="head">类型</th>
+<th class="head">是否必须</th>
+<th class="head">默认值</th>
+<th class="head">描述说明</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>activity_id</td>
+<td>Integer</td>
+<td>必填</td>
+<td>&#160;</td>
+<td>&#160;</td>
+</tr>
+<tr class="row-odd"><td>name</td>
+<td>String</td>
+<td>可选</td>
+<td>&#160;</td>
+<td>活动名称</td>
+</tr>
+<tr class="row-even"><td>start_date</td>
+<td>String</td>
+<td>可选</td>
+<td>&#160;</td>
+<td>活动开始日期</td>
+</tr>
+<tr class="row-odd"><td>end_date</td>
+<td>String</td>
+<td>可选</td>
+<td>&#160;</td>
+<td>活动结束日期</td>
+</tr>
+<tr class="row-even"><td>amount_items</td>
+<td>Array</td>
+<td>可选</td>
+<td>&#160;</td>
+<td>满减活动阶梯阶梯</td>
+</tr>
+<tr class="row-odd"><td>delete_codes</td>
+<td>Array</td>
+<td>可选</td>
+<td>&#160;</td>
+<td>删除的优惠券的code</td>
+</tr>
+</tbody>
+</table>
+<p><strong>优惠券信息列表:</strong></p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="16%" />
+<col width="9%" />
+<col width="14%" />
+<col width="13%" />
+<col width="48%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">名称</th>
+<th class="head">类型</th>
+<th class="head">是否必须</th>
+<th class="head">默认值</th>
+<th class="head">描述说明</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>amount_items:</td>
+<td>&#160;</td>
+<td>&#160;</td>
+<td>&#160;</td>
+<td>&#160;</td>
+</tr>
+<tr class="row-odd"><td>code</td>
+<td>String</td>
+<td>必须</td>
+<td>&#160;</td>
+<td>优惠券code,新增填‘0’</td>
+</tr>
+<tr class="row-even"><td>amount</td>
+<td>Number</td>
+<td>必填</td>
+<td>&#160;</td>
+<td>优惠券金额</td>
+</tr>
+<tr class="row-odd"><td>reach_amount</td>
+<td>Number</td>
+<td>必填</td>
+<td>&#160;</td>
+<td>满足金额</td>
+</tr>
+</tbody>
+</table>
+<p><strong>参考示例</strong></p>
+<div class="highlight-javascript"><div class="highlight"><pre><span></span><span class="p">{</span>
+    <span class="s2">&quot;activity_id&quot;</span><span class="o">:</span><span class="mi">28</span><span class="p">,</span>
+    <span class="s2">&quot;name&quot;</span><span class="o">:</span><span class="s2">&quot;满减活动122&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;start_date&quot;</span><span class="o">:</span><span class="s2">&quot;2018-05-10&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;delete_codes&quot;</span><span class="o">:</span><span class="p">[</span>
+        <span class="s2">&quot;UKADNHQYICL&quot;</span>
+        <span class="p">],</span>
+    <span class="s2">&quot;amount_items&quot;</span><span class="o">:</span><span class="p">[</span>
+        <span class="p">{</span>
+            <span class="s2">&quot;code&quot;</span><span class="o">:</span><span class="s2">&quot;UVPAEYSMLTB&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;amount&quot;</span><span class="o">:</span><span class="mi">100</span><span class="p">,</span>
+            <span class="s2">&quot;reach_amount&quot;</span><span class="o">:</span><span class="mi">10000</span>
+        <span class="p">},</span>
+        <span class="p">{</span>
+            <span class="s2">&quot;code&quot;</span><span class="o">:</span><span class="s2">&quot;0&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;amount&quot;</span><span class="o">:</span><span class="mi">12</span><span class="p">,</span>
+            <span class="s2">&quot;reach_amount&quot;</span><span class="o">:</span><span class="mi">120</span>
+        <span class="p">}</span>
+    <span class="p">]</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="id43">
+<h3>返回示例<a class="headerlink" href="#id43" title="永久链接至标题">¶</a></h3>
+<p>JSON数据格式:</p>
+<div class="highlight-javascript"><div class="highlight"><pre><span></span><span class="p">{</span>
+    <span class="s2">&quot;data&quot;</span><span class="o">:</span> <span class="p">{</span>
+        <span class="s2">&quot;created_at&quot;</span><span class="o">:</span> <span class="mi">1529994132</span><span class="p">,</span>  <span class="c1">// 创建时间</span>
+        <span class="s2">&quot;name&quot;</span><span class="o">:</span> <span class="s2">&quot;满减活动2&quot;</span><span class="p">,</span>  <span class="c1">// 活动名称</span>
+        <span class="s2">&quot;start_date&quot;</span><span class="o">:</span> <span class="mi">1530201600</span>  <span class="c1">// 活动开始时间</span>
+        <span class="s2">&quot;end_date&quot;</span><span class="o">:</span> <span class="mi">1530547200</span><span class="p">,</span>  <span class="c1">// 活动结束时间</span>
+        <span class="s2">&quot;items&quot;</span><span class="o">:</span> <span class="p">[</span>
+            <span class="p">{</span>
+                <span class="s2">&quot;amount&quot;</span><span class="o">:</span> <span class="mi">1</span><span class="p">,</span>  <span class="c1">// 优惠金额</span>
+                <span class="s2">&quot;code&quot;</span><span class="o">:</span> <span class="s2">&quot;URONCLZBYXT&quot;</span><span class="p">,</span>  <span class="c1">// 优惠券名称</span>
+                <span class="s2">&quot;reach_amount&quot;</span><span class="o">:</span> <span class="mi">10</span><span class="p">,</span>  <span class="c1">// 满减金额</span>
+                <span class="s2">&quot;type&quot;</span><span class="o">:</span> <span class="mi">3</span><span class="p">,</span>  <span class="c1">// 优惠券类型</span>
+                <span class="s2">&quot;type_text&quot;</span><span class="o">:</span> <span class="s2">&quot;消费满10.00元可减1.00元&quot;</span>
+            <span class="p">}</span>
+        <span class="p">]</span>
+    <span class="p">},</span>
+    <span class="s2">&quot;status&quot;</span><span class="o">:</span> <span class="p">{</span>
+        <span class="s2">&quot;code&quot;</span><span class="o">:</span> <span class="mi">201</span><span class="p">,</span>
+        <span class="s2">&quot;message&quot;</span><span class="o">:</span> <span class="s2">&quot;All created.&quot;</span>
+    <span class="p">},</span>
+    <span class="s2">&quot;success&quot;</span><span class="o">:</span> <span class="kc">true</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="id44">
+<h2>领取优惠券<a class="headerlink" href="#id44" title="永久链接至标题">¶</a></h2>
+<div class="section" id="id45">
+<h3>接口说明<a class="headerlink" href="#id45" title="永久链接至标题">¶</a></h3>
 <ul class="simple">
 <li>API接口请求地址：<code class="docutils literal"><span class="pre">/market/coupons/grant</span></code></li>
 <li>API接口请求方法：<code class="docutils literal"><span class="pre">POST</span></code></li>
 <li>API接口用户授权：<code class="docutils literal"><span class="pre">token</span></code></li>
 </ul>
 </div>
-<div class="section" id="id30">
-<h3>请求参数<a class="headerlink" href="#id30" title="永久链接至标题">¶</a></h3>
+<div class="section" id="id46">
+<h3>请求参数<a class="headerlink" href="#id46" title="永久链接至标题">¶</a></h3>
 <table border="1" class="docutils">
 <colgroup>
 <col width="20%" />
@@ -949,8 +1481,8 @@
 </tbody>
 </table>
 </div>
-<div class="section" id="id31">
-<h3>返回示例<a class="headerlink" href="#id31" title="永久链接至标题">¶</a></h3>
+<div class="section" id="id47">
+<h3>返回示例<a class="headerlink" href="#id47" title="永久链接至标题">¶</a></h3>
 <p>JSON数据格式:</p>
 <div class="highlight-javascript"><div class="highlight"><pre><span></span><span class="p">{</span>
     <span class="s2">&quot;data&quot;</span><span class="o">:</span> <span class="p">{</span>
@@ -976,18 +1508,18 @@
 </div>
 </div>
 </div>
-<div class="section" id="id32">
-<h2>禁用优惠券<a class="headerlink" href="#id32" title="永久链接至标题">¶</a></h2>
-<div class="section" id="id33">
-<h3>接口说明<a class="headerlink" href="#id33" title="永久链接至标题">¶</a></h3>
+<div class="section" id="id48">
+<h2>禁用优惠券<a class="headerlink" href="#id48" title="永久链接至标题">¶</a></h2>
+<div class="section" id="id49">
+<h3>接口说明<a class="headerlink" href="#id49" title="永久链接至标题">¶</a></h3>
 <ul class="simple">
 <li>API接口请求地址：<code class="docutils literal"><span class="pre">/market/coupons/&lt;rid&gt;/disabled</span></code></li>
 <li>API接口请求方法：<code class="docutils literal"><span class="pre">POST</span></code></li>
 <li>API接口用户授权：<code class="docutils literal"><span class="pre">token</span></code></li>
 </ul>
 </div>
-<div class="section" id="id34">
-<h3>返回示例<a class="headerlink" href="#id34" title="永久链接至标题">¶</a></h3>
+<div class="section" id="id50">
+<h3>返回示例<a class="headerlink" href="#id50" title="永久链接至标题">¶</a></h3>
 <p>JSON数据格式:</p>
 <div class="highlight-javascript"><div class="highlight"><pre><span></span><span class="p">{</span>
   <span class="s2">&quot;status&quot;</span><span class="o">:</span> <span class="p">{</span>
@@ -1000,18 +1532,18 @@
 </div>
 </div>
 </div>
-<div class="section" id="id35">
-<h2>新用户72小时内首单9折<a class="headerlink" href="#id35" title="永久链接至标题">¶</a></h2>
-<div class="section" id="id36">
-<h3>接口说明<a class="headerlink" href="#id36" title="永久链接至标题">¶</a></h3>
+<div class="section" id="id51">
+<h2>新用户72小时内首单9折<a class="headerlink" href="#id51" title="永久链接至标题">¶</a></h2>
+<div class="section" id="id52">
+<h3>接口说明<a class="headerlink" href="#id52" title="永久链接至标题">¶</a></h3>
 <ul class="simple">
 <li>API接口请求地址：<code class="docutils literal"><span class="pre">/market/coupons/new_user_discount</span></code></li>
 <li>API接口请求方法：<code class="docutils literal"><span class="pre">POST</span></code></li>
 <li>API接口用户授权：<code class="docutils literal"><span class="pre">token</span></code></li>
 </ul>
 </div>
-<div class="section" id="id37">
-<h3>请求参数<a class="headerlink" href="#id37" title="永久链接至标题">¶</a></h3>
+<div class="section" id="id53">
+<h3>请求参数<a class="headerlink" href="#id53" title="永久链接至标题">¶</a></h3>
 <table border="1" class="docutils">
 <colgroup>
 <col width="20%" />
@@ -1038,8 +1570,8 @@
 </tbody>
 </table>
 </div>
-<div class="section" id="id38">
-<h3>返回示例<a class="headerlink" href="#id38" title="永久链接至标题">¶</a></h3>
+<div class="section" id="id54">
+<h3>返回示例<a class="headerlink" href="#id54" title="永久链接至标题">¶</a></h3>
 <p>JSON数据格式:</p>
 <div class="highlight-javascript"><div class="highlight"><pre><span></span><span class="p">{</span>
     <span class="s2">&quot;data&quot;</span><span class="o">:</span> <span class="p">{</span>

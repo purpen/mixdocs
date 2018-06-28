@@ -591,47 +591,50 @@ JSON数据格式:
 
     {
         "data": {
-            "name": "运费模板2",  // 运费模板
-            "pricing_method": 1,  // 计价方式
-            "rid": "Ft610472358",  // 模板rid
+            "name": "运费模板3",  // 运费模板Id
+            "pricing_method": 1,  // 计费方式
+            "rid": "Ft726918503",  // 模板rid
+            "update_at": 1528707342, //最后修改时间
             "items": [
                 {
+                    "continuous_amount": 20,  // 续费
+                    "continuous_item": 1,  // 续件
+                    "continuous_weight": 0,  // 续重
                     "express_code": "YTO",  // 物流公司code
                     "express_id": 4,  // 物流公司id
-                    "express_name": "圆通"  // 物流公司名
-                    "express_item": [
+                    "express_name": "圆通",  // 物流公司名
+                    "first_amount": 10,  // 首费
+                    "first_item": 1,  // 首件
+                    "first_weight": 0,  // 首重
+                    "is_default": true,  // 是否默认
+                    "max_days": 5,  // 最长天数
+                    "min_days": 3,  // 最小天数
+                    "places_items": [
                         {
-                            "continuous_amount": 20,  // 续费
-                            "continuous_item": 1,  // 续件
-                            "continuous_weight": 0,  // 续重
-                            "created_at": 1529908138,  // 创建时间
-                            "express": {
-                                "express_code": "YTO",  // 物流公司code
-                                "express_id": 4,  //物流公司id
-                                "express_name": "圆通"  // 物流公司名
-                            },
-                            "first_amount": 10,  // 首费
-                            "first_item": 1,  // 首件
-                            "first_weight": 0,  // 首重
-                            "is_default": false,  // 是否默认
-                            "max_days": 5,  // 最大天数
-                            "min_days": 3,  // 最小天数
-                            "place": [
+                            "continuous_amount": 20,
+                            "continuous_item": 1,
+                            "continuous_weight": 0,
+                            "first_amount": 10,
+                            "first_item": 1,
+                            "first_weight": 0,
+                            "is_default": false,
+                            "places": [
                                 {
-                                    "place_name": "北京",  // 地址
-                                    "place_oid": 1  // 地址oid
+                                    "place_name": "北京",
+                                    "place_oid": 1
                                 },
                                 {
                                     "place_name": "天津",
                                     "place_oid": 2
                                 }
                             ],
-                            "rid": "Fi196384075",  // item_rid
-                            "updated_at": 1529908138  // 更新时间
-                        }
-                    ]
-                }
-            ]
+                            "rid": "Fi153042768"  // item_rid
+                        },
+                    ],
+                    "rid": "Fi618937502"  // item_rid
+                },
+            ],
+
         },
         "status": {
             "code": 201,
@@ -748,49 +751,52 @@ JSON数据格式:
 
 .. code-block:: javascript
 
-     {
+    {
         "data": {
-            "name": "运费模板2",  // 运费模板
-            "pricing_method": 1,  // 计价方式
-            "rid": "Ft610472358",  // 模板rid
+            "name": "运费模板3",  // 运费模板Id
+            "pricing_method": 1,  // 计费方式
+            "rid": "Ft726918503",  // 模板rid
+            "update_at": 1528707342, //最后修改时间
             "items": [
                 {
+                    "continuous_amount": 20,  // 续费
+                    "continuous_item": 1,  // 续件
+                    "continuous_weight": 0,  // 续重
                     "express_code": "YTO",  // 物流公司code
                     "express_id": 4,  // 物流公司id
-                    "express_name": "圆通"  // 物流公司名
-                    "express_item": [
+                    "express_name": "圆通",  // 物流公司名
+                    "first_amount": 10,  // 首费
+                    "first_item": 1,  // 首件
+                    "first_weight": 0,  // 首重
+                    "is_default": true,  // 是否默认
+                    "max_days": 5,  // 最长天数
+                    "min_days": 3,  // 最小天数
+                    "places_items": [
                         {
-                            "continuous_amount": 20,  // 续费
-                            "continuous_item": 1,  // 续件
-                            "continuous_weight": 0,  // 续重
-                            "created_at": 1529908138,  // 创建时间
-                            "express": {
-                                "express_code": "YTO",  // 物流公司code
-                                "express_id": 4,  //物流公司id
-                                "express_name": "圆通"  // 物流公司名
-                            },
-                            "first_amount": 10,  // 首费
-                            "first_item": 1,  // 首件
-                            "first_weight": 0,  // 首重
-                            "is_default": false,  // 是否默认
-                            "max_days": 5,  // 最大天数
-                            "min_days": 3,  // 最小天数
-                            "place": [
+                            "continuous_amount": 20,
+                            "continuous_item": 1,
+                            "continuous_weight": 0,
+                            "first_amount": 10,
+                            "first_item": 1,
+                            "first_weight": 0,
+                            "is_default": false,
+                            "places": [
                                 {
-                                    "place_name": "北京",  // 地址
-                                    "place_oid": 1  // 地址oid
+                                    "place_name": "北京",
+                                    "place_oid": 1
                                 },
                                 {
                                     "place_name": "天津",
                                     "place_oid": 2
                                 }
                             ],
-                            "rid": "Fi196384075",  // item_rid
-                            "updated_at": 1529908138  // 更新时间
-                        }
-                    ]
-                }
-            ]
+                            "rid": "Fi153042768"  // item_rid
+                        },
+                    ],
+                    "rid": "Fi618937502"  // item_rid
+                },
+            ],
+
         },
         "status": {
             "code": 201,
@@ -833,50 +839,59 @@ JSON数据格式:
 
     {
         "data": {
-            "count": 11,
-            "name": "运费模板2",  // 模板名
-            "pricing_method": 1,  // 计价方式
-            "rid": "Ft235081764",  // 模板rid
+            "count": 14,
             "freight_template": [
                 {
                     "items": [
-                        {
-                    "express_code": "YTO",  // 物流公司code
-                    "express_id": 4,  // 物流公司id
-                    "express_name": "圆通"  // 物流公司名
-                    "express_item": [
-                        {
-                            "continuous_amount": 20,  // 续费
-                            "continuous_item": 1,  // 续件
-                            "continuous_weight": 0,  // 续重
-                            "created_at": 1529908138,  // 创建时间
-                            "express": {
+                        "name": "运费模板3",  // 运费模板Id
+                        "pricing_method": 1,  // 计费方式
+                        "rid": "Ft726918503",  // 模板rid
+                        "update_at": 1528707342, //最后修改时间
+                        "items": [
+                            {
+                                "continuous_amount": 20,  // 续费
+                                "continuous_item": 1,  // 续件
+                                "continuous_weight": 0,  // 续重
                                 "express_code": "YTO",  // 物流公司code
-                                "express_id": 4,  //物流公司id
-                                "express_name": "圆通"  // 物流公司名
+                                "express_id": 4,  // 物流公司id
+                                "express_name": "圆通",  // 物流公司名
+                                "first_amount": 10,  // 首费
+                                "first_item": 1,  // 首件
+                                "first_weight": 0,  // 首重
+                                "is_default": true,  // 是否默认
+                                "max_days": 5,  // 最长天数
+                                "min_days": 3,  // 最小天数
+                                "places_items": [
+                                    {
+                                        "continuous_amount": 20,
+                                        "continuous_item": 1,
+                                        "continuous_weight": 0,
+                                        "first_amount": 10,
+                                        "first_item": 1,
+                                        "first_weight": 0,
+                                        "is_default": false,
+                                        "places": [
+                                            {
+                                                "place_name": "北京",
+                                                "place_oid": 1
+                                            },
+                                            {
+                                                "place_name": "天津",
+                                                "place_oid": 2
+                                            }
+                                        ],
+                                        "rid": "Fi153042768"  // item_rid
+                                    },
+                                ],
+                                "rid": "Fi618937502"  // item_rid
                             },
-                            "first_amount": 10,  // 首费
-                            "first_item": 1,  // 首件
-                            "first_weight": 0,  // 首重
-                            "is_default": false,  // 是否默认
-                            "max_days": 5,  // 最大天数
-                            "min_days": 3,  // 最小天数
-                            "place": [
-                                {
-                                    "place_name": "北京",  // 地址
-                                    "place_oid": 1  // 地址oid
-                                },
-                                {
-                                    "place_name": "天津",
-                                    "place_oid": 2
-                                }
-                            ],
-                            "rid": "Fi196384075",  // item_rid
-                            "updated_at": 1529908138  // 更新时间
-                        }
+                        ],
                     ],
-
-                },
+                    "name": "运费模板2",
+                    "pricing_method": 1,
+                    "rid": "Ft290486375",
+                    "update_at": 1529927222
+                }
             ],
             "next": "http://0.0.0.0:9000/api/v1.0/logistics/freight_template?page=2",
             "prev": null

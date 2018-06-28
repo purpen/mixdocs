@@ -120,6 +120,7 @@ JSON数据格式
 =====================  ==========  =========  ==========  =============================
 avatar_id                Integer   必须                      头像
 name                     String    必须                      姓名
+user_identity            Integer   可选           1          用户身份, 1、独立设计师；2、艺术家；3、手做人；4、业余设计师(原创设计达人)
 id_card                  String    必须                      身份证号
 front_card_photo_id      Integer   必须                      身份证正面照ID
 reverse_card_photo_id    Integer   必须                      身份证反面照ID
@@ -139,17 +140,20 @@ urgent_contact_mobile    String    必须                      紧急联系人�
 user_type                Integer   可选           1          用户类型，1、个人；2、原创工作室；3、原创品牌公司
 product_scope            Integer   可选           1          商品范畴，1、原创商品，由本人或团队独立思考设计；2、十年老件；3、授权贩售，由设计师或者设计师代理经销的商品；4、其他
 other_scope              String    可选                      其他范畴
-own_brand                Bool      可选       False          是否拥有自己的品牌
-brand_name               String    可选                      品牌名称
+brand_name               String    必须                      品牌名称
 sale_platform            Array     可选                      上线平台名称
 link                     Array     可选                      上线平台链接
 product_category         String    必须                      商品所属类别
-customized               Bool      可选       False          是否提供定制化服务
+patent                   Bool      可选       False          品牌商品是否有专利
+patent_file              Array     可选                      专利文件ID
+packaging                Bool      可选       False          是否提供包装
+packaging_file           Array     可选                      包装文件ID
+customized               Bool      可选       False          商品是否提供定制化服务
 attachments              Array     必须                      原创商品图片ID
 product_price            Array     必须                      商品价格范围
 company_name             String    必须                      公司名称
 url                      String    可选                      公司网址
-company_qualification    String    必须                      公司资质
+company_qualification    Array     必须                      公司资质ID
 =====================  ==========  =========  ==========  =============================
 
 
@@ -161,7 +165,7 @@ JSON数据格式:
 .. code-block:: javascript
 
     {
-        "user_type":3,"name":"毛爷爷","avatar_id":1,"id_card":"13082119921226801x","front_card_photo_id":1,"reverse_card_photo_id":1,"holding_card_photo_id":1,"areacode":"+86","mobile":"13001179400","wechat":"jksjk45","country_id":1,"province_id":1,"city_id":1,"area_id":2,"street_address":"中南海","own_brand":true,"customized":true,"product_category":"无人机","attachments":[1,2,3],"product_price":[22,99],"email":"1346555456@qq.com", "sale_platform":["京东","淘宝","天猫"],"product_scope":1, "brand_name":"jkss ","company_name":"京东", "url":"https://www.jd.com","link":["https://www.taobao.com","https://www.jingdong.com","https://www.tianmao.com"]
+    "user_type":3,"name":"毛爷爷","avatar_id":1,"user_identity":1,"id_card":"13082119921226801x","front_card_photo_id":1,"reverse_card_photo_id":2,"holding_card_photo_id":3,"areacode":"+86","mobile":"13001179400","wechat":"jksjk45","country_id":1,"province_id":1,"city_id":1,"area_id":2,"street_address":"中南海","product_category":"无人机","attachments":[1,2,3,4,5],"product_price":[22,99],"email":"1346555456@qq.com", "sale_platform":["京东","淘宝","天猫"],"product_scope":1, "brand_name":"jkss ","company_name":"京东", "url":"https://www.jd.com","link":["https://www.taobao.com","https://www.jingdong.com","https://www.tianmao.com"],"urgent_contact_name":"普京","urgent_contact_mobile":"15879456532","patent":true,"patent_file":[1,2],"packaging":true,"packaging_file":[2,3],"company_qualification":[1,2]
     }
 
 返回示例
