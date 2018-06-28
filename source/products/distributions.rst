@@ -30,7 +30,7 @@ qk           String    可选                   筛选条件
 
 JSON数据格式:
 
-.. literalinclude:: distribution_product_list.js
+.. literalinclude:: product_list.js
     :language: javascript
 
 
@@ -58,7 +58,7 @@ per_page     Number    可选         10        每页数量
 
 JSON数据格式:
 
-.. literalinclude:: distribution_product_list.js
+.. literalinclude:: product_list.js
     :language: javascript
 
 
@@ -86,7 +86,7 @@ per_page     Number    可选         10        每页数量
 
 JSON数据格式:
 
-.. literalinclude:: distribution_product_list.js
+.. literalinclude:: product_list.js
     :language: javascript
 
 
@@ -114,37 +114,7 @@ per_page     Number    可选         10        每页数量
 
 JSON数据格式:
 
-.. literalinclude:: distribution_product_list.js
-    :language: javascript
-
-
-我的分销商品
-----------------
-获取品牌馆所有分销的商品
-
-接口说明
-~~~~~~~~~~~~~~
-
-* API接口请求地址：``/fx_distribute``
-* API接口请求方法：``GET``
-
-请求参数
-~~~~~~~~~~~~~~~
-===========  ========  =========  ========  ====================================
-名称          类型      是否必须    默认值     描述说明
-===========  ========  =========  ========  ====================================
-sid          String    可选                   店铺编号
-page         Number    可选         1         当前页码
-per_page     Number    可选         10        每页数量
-status       String    可选         1         商品状态 0: 全部  1: 上架中  2: 仓库中
-===========  ========  =========  ========  ====================================
-
-返回示例
-~~~~~~~~~~~~~~~~
-
-JSON数据格式:
-
-.. literalinclude:: distribution_product_list.js
+.. literalinclude:: product_list.js
     :language: javascript
 
 
@@ -155,7 +125,7 @@ JSON数据格式:
 接口说明
 ~~~~~~~~~~~~~~
 
-* API接口请求地址：``/fx_distribute/rid/warehouse``
+* API接口请求地址：``/fx_distribute/<rid>/warehouse``
 * API接口请求方法：``POST``
 * API接口用户授权：``token``
 
@@ -182,26 +152,13 @@ JSON数据格式:
             "is_distributed": true,
             "product_packet_id": 0,
             "status": false,
-            "stick_text": "",
-            "store_id": 2
+            "stick_text": ""
         },
         "status": {
             "code": 201,
             "message": "All created."
         },
         "success": true
-    }
-
-请求 ``失败`` 返回结果：
-
-.. code-block:: javascript
-
-    {
-        "status": {
-            "code": 403,
-            "message": "您的店铺已经分销过该商品！"
-        },
-        "success": false
     }
 
 
@@ -212,7 +169,7 @@ JSON数据格式:
 接口说明
 ~~~~~~~~~~~~~~
 
-* API接口请求地址：``/fx_distribute/rid/publish``
+* API接口请求地址：``/fx_distribute/<rid>/publish``
 * API接口请求方法：``POST``
 * API接口用户授权：``token``
 
@@ -241,8 +198,7 @@ JSON数据格式:
             "is_distributed": true,
             "product_packet_id": 2,
             "status": false,
-            "stick_text": "分销推荐语......",
-            "store_id": 2
+            "stick_text": "分销推荐语......"
         },
         "status": {
             "code": 201,
@@ -264,6 +220,63 @@ JSON数据格式:
     }
 
 
+我的分销
+----------------
+获取商家自己分销的商品
+
+接口说明
+~~~~~~~~~~~~~~
+
+* API接口请求地址：``/fx_distribute/proprietary``
+* API接口请求方法：``GET``
+
+请求参数
+~~~~~~~~~~~~~~~
+===========  ========  =========  ========  ====================================
+名称          类型      是否必须    默认值     描述说明
+===========  ========  =========  ========  ====================================
+sid          String    可选                   店铺编号
+page         Number    可选         1         当前页码
+per_page     Number    可选         10        每页数量
+===========  ========  =========  ========  ====================================
+
+返回示例
+~~~~~~~~~~~~~~~~
+
+JSON数据格式:
+
+.. literalinclude:: product_list.js
+    :language: javascript
+
+仓库分销商品
+----------------
+获取品牌馆所有加入仓库的分销商品
+
+接口说明
+~~~~~~~~~~~~~~
+
+* API接口请求地址：``/fx_distribute/warehouse``
+* API接口请求方法：``GET``
+
+请求参数
+~~~~~~~~~~~~~~~
+===========  ========  =========  ========  ====================================
+名称          类型      是否必须    默认值     描述说明
+===========  ========  =========  ========  ====================================
+sid          String    可选                   店铺编号
+page         Number    可选         1         当前页码
+per_page     Number    可选         10        每页数量
+status       String    可选         1         商品状态 0: 全部  1: 可出售  2: 已失效
+===========  ========  =========  ========  ====================================
+
+返回示例
+~~~~~~~~~~~~~~~~
+
+JSON数据格式:
+
+.. literalinclude:: product_list.js
+    :language: javascript
+
 删除分销
 ----------------
 店铺不再分销该商品
@@ -271,7 +284,7 @@ JSON数据格式:
 接口说明
 ~~~~~~~~~~~~~~
 
-* API接口请求地址：``/fx_distribute/<rid>``
+* API接口请求地址：``/fx_distribute/remove``
 * API接口请求方法：``DELETE``
 * API接口用户授权：``token``
 
@@ -281,7 +294,7 @@ JSON数据格式:
 名称          类型      是否必须    默认值     描述说明
 ===========  ========  =========  ========  ====================================
 sid          String    可选                  店铺编号
-rid          String    必须                  商品编号
+rid          String    必须                  商品编号, 如批量删除，请逗号隔开
 ===========  ========  =========  ========  ====================================
 
 返回示例
@@ -456,9 +469,150 @@ JSON数据格式:
     {
         "status": {
             "code": 400,
-            "message": "您没有分销该商品的权限!"
+            "message": "不能分销该商品!"
         },
         "success": false
+    }
+
+
+店铺商品组
+----------------
+获取店铺中所有的商品组
+
+接口说明
+~~~~~~~~~~~~~~
+
+* API接口请求地址：``/product_packets``
+* API接口请求方法：``GET``
+* API接口用户授权：``token``
+
+请求参数
+~~~~~~~~~~~~~~~
+
+=====================  ==========  =========  ==========  =============================
+名称                    类型        是否必须     默认值       描述说明
+=====================  ==========  =========  ==========  =============================
+sid                    String       可选                   店铺编号
+=====================  ==========  =========  ==========  =============================
+
+返回示例
+~~~~~~~~~~~~~~~~
+
+JSON数据格式:
+
+请求 **正确** 返回结果：
+
+.. code-block:: javascript
+
+    {
+        "data": {
+            "packets": [
+                {
+                    "count": 2,
+                    "images": [
+                        "http://127.0.0.1:9000/_uploads/photos/180529/fac7a2591ef0b48.jpg",
+                        "http://127.0.0.1:9000/_uploads/photos/180529/ef6dd0101d95c1c.jpg"
+                    ],
+                    "name": "男士",
+                    "product_packet_id": 3
+                },
+                {
+                    "count": 4,
+                    "images": [
+                        "http://127.0.0.1:9000/_uploads/photos/180529/fac7a2591ef0b48.jpg",
+                        "http://127.0.0.1:9000/_uploads/photos/180529/ef6dd0101d95c1c.jpg",
+                        "http://127.0.0.1:9000/_uploads/photos/180529/ef7a25911d8735c.jpg"
+                    ],
+                    "name": "女士",
+                    "product_packet_id": 4
+                }
+            ],
+            "packets_count": 2,
+            "products_count": 6
+        },
+        "status": {
+            "code": 200,
+            "message": "Ok all right."
+        },
+        "success": true
+    }
+
+商品组分销商品列表
+--------------------
+获取店铺某个商品组中所有分销商品
+
+接口说明
+~~~~~~~~~~~~~~
+
+* API接口请求地址：``/product_packets/<int:product_packet_id>/products``
+* API接口请求方法：``GET``
+* API接口用户授权：``token``
+
+请求参数
+~~~~~~~~~~~~~~~
+
+=====================  ==========  =========  ==========  =============================
+名称                    类型        是否必须     默认值       描述说明
+=====================  ==========  =========  ==========  =============================
+sid                    String       可选                   店铺编号
+product_packet_id      Number       必须                   商品组ID
+page                   Number       可选         1         当前页码
+per_page               Number       可选         10        每页数量
+status                 Number       可选         1         商品状态 1:出售中,2:下架中,3:已售罄
+=====================  ==========  =========  ==========  =============================
+
+返回示例
+~~~~~~~~~~~~~~~~
+
+JSON数据格式:
+
+.. literalinclude:: product_list.js
+    :language: javascript
+
+商品更改商品组
+--------------------
+修改商品所在的商品组
+
+接口说明
+~~~~~~~~~~~~~~
+
+* API接口请求地址：``/fx_distribute/<string:rid>/packet``
+* API接口请求方法：``PUT``
+* API接口用户授权：``token``
+
+请求参数
+~~~~~~~~~~~~~~~
+
+=====================  ==========  =========  ==========  =============================
+名称                    类型        是否必须     默认值       描述说明
+=====================  ==========  =========  ==========  =============================
+sid                    String       可选                   店铺编号
+rid                    String       必须                   商品编号
+product_packet_id      Number       必须                   商品组ID
+=====================  ==========  =========  ==========  =============================
+
+返回示例
+~~~~~~~~~~~~~~~~
+
+JSON数据格式:
+
+请求 **正确** 返回结果：
+
+.. code-block:: javascript
+
+    {
+        "data": {
+            "is_distributed": true,
+            "product_packet_id": 3,
+            "status": true,
+            "stick_text": "商品分销推荐语",
+            "store_id": 2
+        },
+        "status": {
+            "code": 200,
+            "message": "Ok all right."
+        },
+        "success": true
     }
 
 
