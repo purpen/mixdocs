@@ -191,6 +191,7 @@ first_name              String      必需                     姓
 last_name               String      可选                     名
 phone                   String      可选                     电话
 mobile                  String      必需                     手机号码
+country_id              Number      可选        1            国家
 province_id             Number      必需                     省市
 city_id                 Number      必需                     城区
 town_id                 Number      可选                     镇/地区

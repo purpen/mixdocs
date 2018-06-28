@@ -1033,7 +1033,7 @@ JSON数据格式:
 =====================  ==========  =========  ==========  =============================
 sid                    String      可选                     店铺编号
 rid                    String      必须                     商品编号
-freight_template_id    Number      必须                     运费模板
+fid                    String      必须                     运费模板编号
 product_return_policy  String      必须                     退换货规则
 is_distributed         Bool        必须                     商品是否分销
 status                 Number      必须                     商品状态 0: 放入仓库 1: 立即发布
