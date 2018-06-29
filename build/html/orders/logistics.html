@@ -90,9 +90,9 @@
 <li class="toctree-l2"><a class="reference internal" href="../products/materials.html">商品材料模块</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../products/colors.html">商品颜色模块</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../products/models.html">商品规格模块</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../products/labels.html">商品材质模块</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../products/labels.html">标签模块</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../products/return_policies.html">商家退换货规则模块</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../products/store_product_packet.html">店铺商品组模块</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../products/store_product_packet.html">商品组模块</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../products/distributions.html">分销模块</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../products/wish.html">心愿清单模块</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../products/assets.html">附件模块</a></li>
@@ -188,40 +188,64 @@
 <li><a class="reference internal" href="#id20">返回示例</a></li>
 </ul>
 </li>
-<li><a class="reference internal" href="#id21">删除物流公司信息</a><ul>
+<li><a class="reference internal" href="#id21">查询物流公司详情</a><ul>
 <li><a class="reference internal" href="#id22">接口说明</a></li>
 <li><a class="reference internal" href="#id23">请求参数</a></li>
 <li><a class="reference internal" href="#id24">返回示例</a></li>
 </ul>
 </li>
-<li><a class="reference internal" href="#id25">设置默认物流公司</a><ul>
+<li><a class="reference internal" href="#id25">删除物流公司信息</a><ul>
 <li><a class="reference internal" href="#id26">接口说明</a></li>
 <li><a class="reference internal" href="#id27">请求参数</a></li>
 <li><a class="reference internal" href="#id28">返回示例</a></li>
 </ul>
 </li>
-<li><a class="reference internal" href="#id29">添加运费模板信息</a><ul>
+<li><a class="reference internal" href="#id29">设置默认物流公司</a><ul>
 <li><a class="reference internal" href="#id30">接口说明</a></li>
 <li><a class="reference internal" href="#id31">请求参数</a></li>
 <li><a class="reference internal" href="#id32">返回示例</a></li>
 </ul>
 </li>
-<li><a class="reference internal" href="#id33">修改运费模板信息</a><ul>
+<li><a class="reference internal" href="#id33">添加运费模板信息</a><ul>
 <li><a class="reference internal" href="#id34">接口说明</a></li>
 <li><a class="reference internal" href="#id35">请求参数</a></li>
 <li><a class="reference internal" href="#id36">返回示例</a></li>
 </ul>
 </li>
-<li><a class="reference internal" href="#id37">查询运费模板信息</a><ul>
+<li><a class="reference internal" href="#id37">复制运费模板信息</a><ul>
 <li><a class="reference internal" href="#id38">接口说明</a></li>
 <li><a class="reference internal" href="#id39">请求参数</a></li>
 <li><a class="reference internal" href="#id40">返回示例</a></li>
 </ul>
 </li>
-<li><a class="reference internal" href="#id41">删除运费模板信息</a><ul>
+<li><a class="reference internal" href="#id41">修改运费模板信息</a><ul>
 <li><a class="reference internal" href="#id42">接口说明</a></li>
 <li><a class="reference internal" href="#id43">请求参数</a></li>
 <li><a class="reference internal" href="#id44">返回示例</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#id45">查询运费模板信息列表</a><ul>
+<li><a class="reference internal" href="#id46">接口说明</a></li>
+<li><a class="reference internal" href="#id47">请求参数</a></li>
+<li><a class="reference internal" href="#id48">返回示例</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#id49">查询运费模板详情</a><ul>
+<li><a class="reference internal" href="#id50">接口说明</a></li>
+<li><a class="reference internal" href="#id51">请求参数</a></li>
+<li><a class="reference internal" href="#id52">返回示例</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#id53">删除运费模板信息</a><ul>
+<li><a class="reference internal" href="#id54">接口说明</a></li>
+<li><a class="reference internal" href="#id55">请求参数</a></li>
+<li><a class="reference internal" href="#id56">返回示例</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#id57">计算运费</a><ul>
+<li><a class="reference internal" href="#id58">接口说明</a></li>
+<li><a class="reference internal" href="#id59">请求参数</a></li>
+<li><a class="reference internal" href="#id60">返回示例</a></li>
 </ul>
 </li>
 </ul>
@@ -285,40 +309,64 @@
 <li><a class="reference internal" href="#id20">返回示例</a></li>
 </ul>
 </li>
-<li><a class="reference internal" href="#id21">删除物流公司信息</a><ul>
+<li><a class="reference internal" href="#id21">查询物流公司详情</a><ul>
 <li><a class="reference internal" href="#id22">接口说明</a></li>
 <li><a class="reference internal" href="#id23">请求参数</a></li>
 <li><a class="reference internal" href="#id24">返回示例</a></li>
 </ul>
 </li>
-<li><a class="reference internal" href="#id25">设置默认物流公司</a><ul>
+<li><a class="reference internal" href="#id25">删除物流公司信息</a><ul>
 <li><a class="reference internal" href="#id26">接口说明</a></li>
 <li><a class="reference internal" href="#id27">请求参数</a></li>
 <li><a class="reference internal" href="#id28">返回示例</a></li>
 </ul>
 </li>
-<li><a class="reference internal" href="#id29">添加运费模板信息</a><ul>
+<li><a class="reference internal" href="#id29">设置默认物流公司</a><ul>
 <li><a class="reference internal" href="#id30">接口说明</a></li>
 <li><a class="reference internal" href="#id31">请求参数</a></li>
 <li><a class="reference internal" href="#id32">返回示例</a></li>
 </ul>
 </li>
-<li><a class="reference internal" href="#id33">修改运费模板信息</a><ul>
+<li><a class="reference internal" href="#id33">添加运费模板信息</a><ul>
 <li><a class="reference internal" href="#id34">接口说明</a></li>
 <li><a class="reference internal" href="#id35">请求参数</a></li>
 <li><a class="reference internal" href="#id36">返回示例</a></li>
 </ul>
 </li>
-<li><a class="reference internal" href="#id37">查询运费模板信息</a><ul>
+<li><a class="reference internal" href="#id37">复制运费模板信息</a><ul>
 <li><a class="reference internal" href="#id38">接口说明</a></li>
 <li><a class="reference internal" href="#id39">请求参数</a></li>
 <li><a class="reference internal" href="#id40">返回示例</a></li>
 </ul>
 </li>
-<li><a class="reference internal" href="#id41">删除运费模板信息</a><ul>
+<li><a class="reference internal" href="#id41">修改运费模板信息</a><ul>
 <li><a class="reference internal" href="#id42">接口说明</a></li>
 <li><a class="reference internal" href="#id43">请求参数</a></li>
 <li><a class="reference internal" href="#id44">返回示例</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#id45">查询运费模板信息列表</a><ul>
+<li><a class="reference internal" href="#id46">接口说明</a></li>
+<li><a class="reference internal" href="#id47">请求参数</a></li>
+<li><a class="reference internal" href="#id48">返回示例</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#id49">查询运费模板详情</a><ul>
+<li><a class="reference internal" href="#id50">接口说明</a></li>
+<li><a class="reference internal" href="#id51">请求参数</a></li>
+<li><a class="reference internal" href="#id52">返回示例</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#id53">删除运费模板信息</a><ul>
+<li><a class="reference internal" href="#id54">接口说明</a></li>
+<li><a class="reference internal" href="#id55">请求参数</a></li>
+<li><a class="reference internal" href="#id56">返回示例</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#id57">计算运费</a><ul>
+<li><a class="reference internal" href="#id58">接口说明</a></li>
+<li><a class="reference internal" href="#id59">请求参数</a></li>
+<li><a class="reference internal" href="#id60">返回示例</a></li>
 </ul>
 </li>
 </ul>
@@ -860,13 +908,13 @@
 </div>
 </div>
 <div class="section" id="id21">
-<h2>删除物流公司信息<a class="headerlink" href="#id21" title="永久链接至标题">¶</a></h2>
-<p>某商家删除物流公司信息</p>
+<h2>查询物流公司详情<a class="headerlink" href="#id21" title="永久链接至标题">¶</a></h2>
+<p>某商家查询物流公司详情</p>
 <div class="section" id="id22">
 <h3>接口说明<a class="headerlink" href="#id22" title="永久链接至标题">¶</a></h3>
 <ul class="simple">
-<li>API接口请求地址：<code class="docutils literal"><span class="pre">/logistics/express</span></code></li>
-<li>API接口请求方法：<code class="docutils literal"><span class="pre">DELETE</span></code></li>
+<li>API接口请求地址：<code class="docutils literal"><span class="pre">/logistics/express/&lt;string:id&gt;</span></code></li>
+<li>API接口请求方法：<code class="docutils literal"><span class="pre">GET</span></code></li>
 <li>API接口用户授权：<code class="docutils literal"><span class="pre">token</span></code></li>
 </ul>
 </div>
@@ -890,10 +938,10 @@
 </thead>
 <tbody valign="top">
 <tr class="row-even"><td>rid</td>
-<td>Integer</td>
+<td>String</td>
 <td>必需</td>
 <td>&#160;</td>
-<td>物流公司id</td>
+<td>模板rid</td>
 </tr>
 </tbody>
 </table>
@@ -903,6 +951,28 @@
 <p>JSON数据格式:</p>
 <p>请求 <strong>正确</strong> 返回结果：</p>
 <div class="highlight-javascript"><div class="highlight"><pre><span></span><span class="p">{</span>
+    <span class="s2">&quot;data&quot;</span><span class="o">:</span> <span class="p">{</span>
+        <span class="s2">&quot;count&quot;</span><span class="o">:</span> <span class="mi">3</span><span class="p">,</span>
+        <span class="s2">&quot;next&quot;</span><span class="o">:</span> <span class="s2">&quot;http://0.0.0.0:9000/api/v1.0/logistics/express?page=2&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;expresses&quot;</span><span class="o">:</span> <span class="p">[</span>
+            <span class="p">{</span>
+                <span class="s2">&quot;code&quot;</span><span class="o">:</span> <span class="s2">&quot;EMS&quot;</span><span class="p">,</span>
+                <span class="s2">&quot;contact_mobile&quot;</span><span class="o">:</span> <span class="kc">null</span><span class="p">,</span>
+                <span class="s2">&quot;contact_name&quot;</span><span class="o">:</span> <span class="s2">&quot;EMS&quot;</span><span class="p">,</span>
+                <span class="s2">&quot;contact_phone&quot;</span><span class="o">:</span> <span class="kc">null</span><span class="p">,</span>
+                <span class="s2">&quot;created_at&quot;</span><span class="o">:</span> <span class="mi">1528703231</span><span class="p">,</span>
+                <span class="s2">&quot;customer_name&quot;</span><span class="o">:</span> <span class="kc">null</span><span class="p">,</span>
+                <span class="s2">&quot;customer_pwd&quot;</span><span class="o">:</span> <span class="kc">null</span><span class="p">,</span>
+                <span class="s2">&quot;description&quot;</span><span class="o">:</span> <span class="kc">null</span><span class="p">,</span>
+                <span class="s2">&quot;id&quot;</span><span class="o">:</span> <span class="mi">6</span><span class="p">,</span>
+                <span class="s2">&quot;is_default&quot;</span><span class="o">:</span> <span class="kc">false</span><span class="p">,</span>
+                <span class="s2">&quot;name&quot;</span><span class="o">:</span> <span class="s2">&quot;EMS&quot;</span><span class="p">,</span>
+                <span class="s2">&quot;send_site&quot;</span><span class="o">:</span> <span class="kc">null</span><span class="p">,</span>
+                <span class="s2">&quot;updated_at&quot;</span><span class="o">:</span> <span class="mi">1528704875</span>
+            <span class="p">}</span>
+        <span class="p">],</span>
+        <span class="s2">&quot;prev&quot;</span><span class="o">:</span> <span class="kc">null</span>
+    <span class="p">},</span>
     <span class="s2">&quot;status&quot;</span><span class="o">:</span> <span class="p">{</span>
         <span class="s2">&quot;code&quot;</span><span class="o">:</span> <span class="mi">200</span><span class="p">,</span>
         <span class="s2">&quot;message&quot;</span><span class="o">:</span> <span class="s2">&quot;Ok all right.&quot;</span>
@@ -911,26 +981,16 @@
 <span class="p">}</span>
 </pre></div>
 </div>
-<p>返回错误格式：</p>
-<div class="highlight-javascript"><div class="highlight"><pre><span></span><span class="p">{</span>
-    <span class="s2">&quot;status&quot;</span><span class="o">:</span> <span class="p">{</span>
-        <span class="s2">&quot;code&quot;</span><span class="o">:</span> <span class="mi">400</span><span class="p">,</span>
-        <span class="s2">&quot;message&quot;</span><span class="o">:</span> <span class="s2">&quot;Freight template quote this information!&quot;</span> <span class="c1">// 运费模板引用该信息</span>
-    <span class="p">},</span>
-    <span class="s2">&quot;success&quot;</span><span class="o">:</span> <span class="kc">false</span>
-<span class="p">}</span>
-</pre></div>
-</div>
 </div>
 </div>
 <div class="section" id="id25">
-<h2>设置默认物流公司<a class="headerlink" href="#id25" title="永久链接至标题">¶</a></h2>
-<p>某商家设置默认物流公司</p>
+<h2>删除物流公司信息<a class="headerlink" href="#id25" title="永久链接至标题">¶</a></h2>
+<p>某商家删除物流公司信息</p>
 <div class="section" id="id26">
 <h3>接口说明<a class="headerlink" href="#id26" title="永久链接至标题">¶</a></h3>
 <ul class="simple">
-<li>API接口请求地址：<code class="docutils literal"><span class="pre">/logistics/express/set_default</span></code></li>
-<li>API接口请求方法：<code class="docutils literal"><span class="pre">PUT</span></code></li>
+<li>API接口请求地址：<code class="docutils literal"><span class="pre">/logistics/express</span></code></li>
+<li>API接口请求方法：<code class="docutils literal"><span class="pre">DELETE</span></code></li>
 <li>API接口用户授权：<code class="docutils literal"><span class="pre">token</span></code></li>
 </ul>
 </div>
@@ -964,6 +1024,70 @@
 </div>
 <div class="section" id="id28">
 <h3>返回示例<a class="headerlink" href="#id28" title="永久链接至标题">¶</a></h3>
+<p>JSON数据格式:</p>
+<p>请求 <strong>正确</strong> 返回结果：</p>
+<div class="highlight-javascript"><div class="highlight"><pre><span></span><span class="p">{</span>
+    <span class="s2">&quot;status&quot;</span><span class="o">:</span> <span class="p">{</span>
+        <span class="s2">&quot;code&quot;</span><span class="o">:</span> <span class="mi">200</span><span class="p">,</span>
+        <span class="s2">&quot;message&quot;</span><span class="o">:</span> <span class="s2">&quot;Ok all right.&quot;</span>
+    <span class="p">},</span>
+    <span class="s2">&quot;success&quot;</span><span class="o">:</span> <span class="kc">true</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<p>返回错误格式：</p>
+<div class="highlight-javascript"><div class="highlight"><pre><span></span><span class="p">{</span>
+    <span class="s2">&quot;status&quot;</span><span class="o">:</span> <span class="p">{</span>
+        <span class="s2">&quot;code&quot;</span><span class="o">:</span> <span class="mi">400</span><span class="p">,</span>
+        <span class="s2">&quot;message&quot;</span><span class="o">:</span> <span class="s2">&quot;Freight template quote this information!&quot;</span> <span class="c1">// 运费模板引用该信息</span>
+    <span class="p">},</span>
+    <span class="s2">&quot;success&quot;</span><span class="o">:</span> <span class="kc">false</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="id29">
+<h2>设置默认物流公司<a class="headerlink" href="#id29" title="永久链接至标题">¶</a></h2>
+<p>某商家设置默认物流公司</p>
+<div class="section" id="id30">
+<h3>接口说明<a class="headerlink" href="#id30" title="永久链接至标题">¶</a></h3>
+<ul class="simple">
+<li>API接口请求地址：<code class="docutils literal"><span class="pre">/logistics/express/set_default</span></code></li>
+<li>API接口请求方法：<code class="docutils literal"><span class="pre">PUT</span></code></li>
+<li>API接口用户授权：<code class="docutils literal"><span class="pre">token</span></code></li>
+</ul>
+</div>
+<div class="section" id="id31">
+<h3>请求参数<a class="headerlink" href="#id31" title="永久链接至标题">¶</a></h3>
+<table border="1" class="docutils">
+<colgroup>
+<col width="25%" />
+<col width="13%" />
+<col width="12%" />
+<col width="13%" />
+<col width="36%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">名称</th>
+<th class="head">类型</th>
+<th class="head">是否必须</th>
+<th class="head">默认值</th>
+<th class="head">描述说明</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>rid</td>
+<td>Integer</td>
+<td>必需</td>
+<td>&#160;</td>
+<td>物流公司id</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="id32">
+<h3>返回示例<a class="headerlink" href="#id32" title="永久链接至标题">¶</a></h3>
 <p>JSON数据格式:</p>
 <p>请求 <strong>正确</strong> 返回结果：</p>
 <div class="highlight-javascript"><div class="highlight"><pre><span></span><span class="p">{</span>
@@ -1002,19 +1126,19 @@
 </div>
 </div>
 </div>
-<div class="section" id="id29">
-<h2>添加运费模板信息<a class="headerlink" href="#id29" title="永久链接至标题">¶</a></h2>
+<div class="section" id="id33">
+<h2>添加运费模板信息<a class="headerlink" href="#id33" title="永久链接至标题">¶</a></h2>
 <p>某商家添加运费模板信息</p>
-<div class="section" id="id30">
-<h3>接口说明<a class="headerlink" href="#id30" title="永久链接至标题">¶</a></h3>
+<div class="section" id="id34">
+<h3>接口说明<a class="headerlink" href="#id34" title="永久链接至标题">¶</a></h3>
 <ul class="simple">
 <li>API接口请求地址：<code class="docutils literal"><span class="pre">/logistics/freight_template</span></code></li>
 <li>API接口请求方法：<code class="docutils literal"><span class="pre">POST</span></code></li>
 <li>API接口用户授权：<code class="docutils literal"><span class="pre">token</span></code></li>
 </ul>
 </div>
-<div class="section" id="id31">
-<h3>请求参数<a class="headerlink" href="#id31" title="永久链接至标题">¶</a></h3>
+<div class="section" id="id35">
+<h3>请求参数<a class="headerlink" href="#id35" title="永久链接至标题">¶</a></h3>
 <p><strong>运费模板基本参数:</strong></p>
 <table border="1" class="docutils">
 <colgroup>
@@ -1261,8 +1385,8 @@
 </pre></div>
 </div>
 </div>
-<div class="section" id="id32">
-<h3>返回示例<a class="headerlink" href="#id32" title="永久链接至标题">¶</a></h3>
+<div class="section" id="id36">
+<h3>返回示例<a class="headerlink" href="#id36" title="永久链接至标题">¶</a></h3>
 <p>JSON数据格式:</p>
 <p>请求 <strong>正确</strong> 返回结果：</p>
 <div class="highlight-javascript"><div class="highlight"><pre><span></span><span class="p">{</span>
@@ -1322,19 +1446,119 @@
 </div>
 </div>
 </div>
-<div class="section" id="id33">
-<h2>修改运费模板信息<a class="headerlink" href="#id33" title="永久链接至标题">¶</a></h2>
+<div class="section" id="id37">
+<h2>复制运费模板信息<a class="headerlink" href="#id37" title="永久链接至标题">¶</a></h2>
+<p>某商家复制运费模板信息</p>
+<div class="section" id="id38">
+<h3>接口说明<a class="headerlink" href="#id38" title="永久链接至标题">¶</a></h3>
+<ul class="simple">
+<li>API接口请求地址：<code class="docutils literal"><span class="pre">/logistics/freight_template/copy</span></code></li>
+<li>API接口请求方法：<code class="docutils literal"><span class="pre">POST</span></code></li>
+<li>API接口用户授权：<code class="docutils literal"><span class="pre">token</span></code></li>
+</ul>
+</div>
+<div class="section" id="id39">
+<h3>请求参数<a class="headerlink" href="#id39" title="永久链接至标题">¶</a></h3>
+<table border="1" class="docutils">
+<colgroup>
+<col width="25%" />
+<col width="13%" />
+<col width="12%" />
+<col width="13%" />
+<col width="36%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">名称</th>
+<th class="head">类型</th>
+<th class="head">是否必须</th>
+<th class="head">默认值</th>
+<th class="head">描述说明</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>rid</td>
+<td>String</td>
+<td>必需</td>
+<td>&#160;</td>
+<td>模板rid</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="id40">
+<h3>返回示例<a class="headerlink" href="#id40" title="永久链接至标题">¶</a></h3>
+<p>JSON数据格式:</p>
+<p>请求 <strong>正确</strong> 返回结果：</p>
+<div class="highlight-javascript"><div class="highlight"><pre><span></span><span class="p">{</span>
+    <span class="s2">&quot;data&quot;</span><span class="o">:</span> <span class="p">{</span>
+        <span class="s2">&quot;name&quot;</span><span class="o">:</span> <span class="s2">&quot;运费模板3&quot;</span><span class="p">,</span>  <span class="c1">// 运费模板Id</span>
+        <span class="s2">&quot;pricing_method&quot;</span><span class="o">:</span> <span class="mi">1</span><span class="p">,</span>  <span class="c1">// 计费方式</span>
+        <span class="s2">&quot;rid&quot;</span><span class="o">:</span> <span class="s2">&quot;Ft726918503&quot;</span><span class="p">,</span>  <span class="c1">// 模板rid</span>
+        <span class="s2">&quot;update_at&quot;</span><span class="o">:</span> <span class="mi">1528707342</span><span class="p">,</span> <span class="c1">//最后修改时间</span>
+        <span class="s2">&quot;items&quot;</span><span class="o">:</span> <span class="p">[</span>
+            <span class="p">{</span>
+                <span class="s2">&quot;continuous_amount&quot;</span><span class="o">:</span> <span class="mi">20</span><span class="p">,</span>  <span class="c1">// 续费</span>
+                <span class="s2">&quot;continuous_item&quot;</span><span class="o">:</span> <span class="mi">1</span><span class="p">,</span>  <span class="c1">// 续件</span>
+                <span class="s2">&quot;continuous_weight&quot;</span><span class="o">:</span> <span class="mi">0</span><span class="p">,</span>  <span class="c1">// 续重</span>
+                <span class="s2">&quot;express_code&quot;</span><span class="o">:</span> <span class="s2">&quot;YTO&quot;</span><span class="p">,</span>  <span class="c1">// 物流公司code</span>
+                <span class="s2">&quot;express_id&quot;</span><span class="o">:</span> <span class="mi">4</span><span class="p">,</span>  <span class="c1">// 物流公司id</span>
+                <span class="s2">&quot;express_name&quot;</span><span class="o">:</span> <span class="s2">&quot;圆通&quot;</span><span class="p">,</span>  <span class="c1">// 物流公司名</span>
+                <span class="s2">&quot;first_amount&quot;</span><span class="o">:</span> <span class="mi">10</span><span class="p">,</span>  <span class="c1">// 首费</span>
+                <span class="s2">&quot;first_item&quot;</span><span class="o">:</span> <span class="mi">1</span><span class="p">,</span>  <span class="c1">// 首件</span>
+                <span class="s2">&quot;first_weight&quot;</span><span class="o">:</span> <span class="mi">0</span><span class="p">,</span>  <span class="c1">// 首重</span>
+                <span class="s2">&quot;is_default&quot;</span><span class="o">:</span> <span class="kc">true</span><span class="p">,</span>  <span class="c1">// 是否默认</span>
+                <span class="s2">&quot;max_days&quot;</span><span class="o">:</span> <span class="mi">5</span><span class="p">,</span>  <span class="c1">// 最长天数</span>
+                <span class="s2">&quot;min_days&quot;</span><span class="o">:</span> <span class="mi">3</span><span class="p">,</span>  <span class="c1">// 最小天数</span>
+                <span class="s2">&quot;places_items&quot;</span><span class="o">:</span> <span class="p">[</span>
+                    <span class="p">{</span>
+                        <span class="s2">&quot;continuous_amount&quot;</span><span class="o">:</span> <span class="mi">20</span><span class="p">,</span>
+                        <span class="s2">&quot;continuous_item&quot;</span><span class="o">:</span> <span class="mi">1</span><span class="p">,</span>
+                        <span class="s2">&quot;continuous_weight&quot;</span><span class="o">:</span> <span class="mi">0</span><span class="p">,</span>
+                        <span class="s2">&quot;first_amount&quot;</span><span class="o">:</span> <span class="mi">10</span><span class="p">,</span>
+                        <span class="s2">&quot;first_item&quot;</span><span class="o">:</span> <span class="mi">1</span><span class="p">,</span>
+                        <span class="s2">&quot;first_weight&quot;</span><span class="o">:</span> <span class="mi">0</span><span class="p">,</span>
+                        <span class="s2">&quot;is_default&quot;</span><span class="o">:</span> <span class="kc">false</span><span class="p">,</span>
+                        <span class="s2">&quot;places&quot;</span><span class="o">:</span> <span class="p">[</span>
+                            <span class="p">{</span>
+                                <span class="s2">&quot;place_name&quot;</span><span class="o">:</span> <span class="s2">&quot;北京&quot;</span><span class="p">,</span>
+                                <span class="s2">&quot;place_oid&quot;</span><span class="o">:</span> <span class="mi">1</span>
+                            <span class="p">},</span>
+                            <span class="p">{</span>
+                                <span class="s2">&quot;place_name&quot;</span><span class="o">:</span> <span class="s2">&quot;天津&quot;</span><span class="p">,</span>
+                                <span class="s2">&quot;place_oid&quot;</span><span class="o">:</span> <span class="mi">2</span>
+                            <span class="p">}</span>
+                        <span class="p">],</span>
+                        <span class="s2">&quot;rid&quot;</span><span class="o">:</span> <span class="s2">&quot;Fi153042768&quot;</span>  <span class="c1">// item_rid</span>
+                    <span class="p">},</span>
+                <span class="p">],</span>
+                <span class="s2">&quot;rid&quot;</span><span class="o">:</span> <span class="s2">&quot;Fi618937502&quot;</span>  <span class="c1">// item_rid</span>
+            <span class="p">},</span>
+        <span class="p">],</span>
+
+    <span class="p">},</span>
+    <span class="s2">&quot;status&quot;</span><span class="o">:</span> <span class="p">{</span>
+        <span class="s2">&quot;code&quot;</span><span class="o">:</span> <span class="mi">201</span><span class="p">,</span>
+        <span class="s2">&quot;message&quot;</span><span class="o">:</span> <span class="s2">&quot;All created.&quot;</span>
+    <span class="p">},</span>
+    <span class="s2">&quot;success&quot;</span><span class="o">:</span> <span class="kc">true</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="id41">
+<h2>修改运费模板信息<a class="headerlink" href="#id41" title="永久链接至标题">¶</a></h2>
 <p>某商家修改运费模板信息</p>
-<div class="section" id="id34">
-<h3>接口说明<a class="headerlink" href="#id34" title="永久链接至标题">¶</a></h3>
+<div class="section" id="id42">
+<h3>接口说明<a class="headerlink" href="#id42" title="永久链接至标题">¶</a></h3>
 <ul class="simple">
 <li>API接口请求地址：<code class="docutils literal"><span class="pre">/logistics/freight_template</span></code></li>
 <li>API接口请求方法：<code class="docutils literal"><span class="pre">PUT</span></code></li>
 <li>API接口用户授权：<code class="docutils literal"><span class="pre">token</span></code></li>
 </ul>
 </div>
-<div class="section" id="id35">
-<h3>请求参数<a class="headerlink" href="#id35" title="永久链接至标题">¶</a></h3>
+<div class="section" id="id43">
+<h3>请求参数<a class="headerlink" href="#id43" title="永久链接至标题">¶</a></h3>
 <p><strong>运费模板基本参数:</strong></p>
 <table border="1" class="docutils">
 <colgroup>
@@ -1533,8 +1757,8 @@
 </pre></div>
 </div>
 </div>
-<div class="section" id="id36">
-<h3>返回示例<a class="headerlink" href="#id36" title="永久链接至标题">¶</a></h3>
+<div class="section" id="id44">
+<h3>返回示例<a class="headerlink" href="#id44" title="永久链接至标题">¶</a></h3>
 <p>JSON数据格式:</p>
 <p>请求 <strong>正确</strong> 返回结果：</p>
 <div class="highlight-javascript"><div class="highlight"><pre><span></span><span class="p">{</span>
@@ -1585,8 +1809,8 @@
 
     <span class="p">},</span>
     <span class="s2">&quot;status&quot;</span><span class="o">:</span> <span class="p">{</span>
-        <span class="s2">&quot;code&quot;</span><span class="o">:</span> <span class="mi">201</span><span class="p">,</span>
-        <span class="s2">&quot;message&quot;</span><span class="o">:</span> <span class="s2">&quot;All created.&quot;</span>
+        <span class="s2">&quot;code&quot;</span><span class="o">:</span> <span class="mi">200</span><span class="p">,</span>
+        <span class="s2">&quot;message&quot;</span><span class="o">:</span> <span class="s2">&quot;Ok all right.&quot;</span>
     <span class="p">},</span>
     <span class="s2">&quot;success&quot;</span><span class="o">:</span> <span class="kc">true</span>
 <span class="p">}</span>
@@ -1594,19 +1818,19 @@
 </div>
 </div>
 </div>
-<div class="section" id="id37">
-<h2>查询运费模板信息<a class="headerlink" href="#id37" title="永久链接至标题">¶</a></h2>
-<p>某商家查询运费模板信息</p>
-<div class="section" id="id38">
-<h3>接口说明<a class="headerlink" href="#id38" title="永久链接至标题">¶</a></h3>
+<div class="section" id="id45">
+<h2>查询运费模板信息列表<a class="headerlink" href="#id45" title="永久链接至标题">¶</a></h2>
+<p>某商家查询运费模板信息列表</p>
+<div class="section" id="id46">
+<h3>接口说明<a class="headerlink" href="#id46" title="永久链接至标题">¶</a></h3>
 <ul class="simple">
 <li>API接口请求地址：<code class="docutils literal"><span class="pre">/logistics/freight_template</span></code></li>
 <li>API接口请求方法：<code class="docutils literal"><span class="pre">GET</span></code></li>
 <li>API接口用户授权：<code class="docutils literal"><span class="pre">token</span></code></li>
 </ul>
 </div>
-<div class="section" id="id39">
-<h3>请求参数<a class="headerlink" href="#id39" title="永久链接至标题">¶</a></h3>
+<div class="section" id="id47">
+<h3>请求参数<a class="headerlink" href="#id47" title="永久链接至标题">¶</a></h3>
 <table border="1" class="docutils">
 <colgroup>
 <col width="15%" />
@@ -1639,8 +1863,8 @@
 </tbody>
 </table>
 </div>
-<div class="section" id="id40">
-<h3>返回示例<a class="headerlink" href="#id40" title="永久链接至标题">¶</a></h3>
+<div class="section" id="id48">
+<h3>返回示例<a class="headerlink" href="#id48" title="永久链接至标题">¶</a></h3>
 <p>JSON数据格式:</p>
 <p>请求 <strong>正确</strong> 返回结果：</p>
 <div class="highlight-javascript"><div class="highlight"><pre><span></span><span class="p">{</span>
@@ -1712,19 +1936,19 @@
 </div>
 </div>
 </div>
-<div class="section" id="id41">
-<h2>删除运费模板信息<a class="headerlink" href="#id41" title="永久链接至标题">¶</a></h2>
-<p>某商家删除运费模板信息</p>
-<div class="section" id="id42">
-<h3>接口说明<a class="headerlink" href="#id42" title="永久链接至标题">¶</a></h3>
+<div class="section" id="id49">
+<h2>查询运费模板详情<a class="headerlink" href="#id49" title="永久链接至标题">¶</a></h2>
+<p>某商家查询运费模板详情</p>
+<div class="section" id="id50">
+<h3>接口说明<a class="headerlink" href="#id50" title="永久链接至标题">¶</a></h3>
 <ul class="simple">
-<li>API接口请求地址：<code class="docutils literal"><span class="pre">/logistics/freight_template</span></code></li>
-<li>API接口请求方法：<code class="docutils literal"><span class="pre">DELETE</span></code></li>
+<li>API接口请求地址：<code class="docutils literal"><span class="pre">/logistics/freight_template/&lt;string:rid&gt;</span></code></li>
+<li>API接口请求方法：<code class="docutils literal"><span class="pre">GET</span></code></li>
 <li>API接口用户授权：<code class="docutils literal"><span class="pre">token</span></code></li>
 </ul>
 </div>
-<div class="section" id="id43">
-<h3>请求参数<a class="headerlink" href="#id43" title="永久链接至标题">¶</a></h3>
+<div class="section" id="id51">
+<h3>请求参数<a class="headerlink" href="#id51" title="永久链接至标题">¶</a></h3>
 <table border="1" class="docutils">
 <colgroup>
 <col width="25%" />
@@ -1743,7 +1967,7 @@
 </thead>
 <tbody valign="top">
 <tr class="row-even"><td>rid</td>
-<td>Integer</td>
+<td>String</td>
 <td>必需</td>
 <td>&#160;</td>
 <td>模板rid</td>
@@ -1751,8 +1975,108 @@
 </tbody>
 </table>
 </div>
-<div class="section" id="id44">
-<h3>返回示例<a class="headerlink" href="#id44" title="永久链接至标题">¶</a></h3>
+<div class="section" id="id52">
+<h3>返回示例<a class="headerlink" href="#id52" title="永久链接至标题">¶</a></h3>
+<p>JSON数据格式:</p>
+<p>请求 <strong>正确</strong> 返回结果：</p>
+<div class="highlight-javascript"><div class="highlight"><pre><span></span><span class="p">{</span>
+    <span class="s2">&quot;data&quot;</span><span class="o">:</span> <span class="p">{</span>
+        <span class="s2">&quot;name&quot;</span><span class="o">:</span> <span class="s2">&quot;运费模板3&quot;</span><span class="p">,</span>  <span class="c1">// 运费模板Id</span>
+        <span class="s2">&quot;pricing_method&quot;</span><span class="o">:</span> <span class="mi">1</span><span class="p">,</span>  <span class="c1">// 计费方式</span>
+        <span class="s2">&quot;rid&quot;</span><span class="o">:</span> <span class="s2">&quot;Ft726918503&quot;</span><span class="p">,</span>  <span class="c1">// 模板rid</span>
+        <span class="s2">&quot;update_at&quot;</span><span class="o">:</span> <span class="mi">1528707342</span><span class="p">,</span> <span class="c1">//最后修改时间</span>
+        <span class="s2">&quot;items&quot;</span><span class="o">:</span> <span class="p">[</span>
+            <span class="p">{</span>
+                <span class="s2">&quot;continuous_amount&quot;</span><span class="o">:</span> <span class="mi">20</span><span class="p">,</span>  <span class="c1">// 续费</span>
+                <span class="s2">&quot;continuous_item&quot;</span><span class="o">:</span> <span class="mi">1</span><span class="p">,</span>  <span class="c1">// 续件</span>
+                <span class="s2">&quot;continuous_weight&quot;</span><span class="o">:</span> <span class="mi">0</span><span class="p">,</span>  <span class="c1">// 续重</span>
+                <span class="s2">&quot;express_code&quot;</span><span class="o">:</span> <span class="s2">&quot;YTO&quot;</span><span class="p">,</span>  <span class="c1">// 物流公司code</span>
+                <span class="s2">&quot;express_id&quot;</span><span class="o">:</span> <span class="mi">4</span><span class="p">,</span>  <span class="c1">// 物流公司id</span>
+                <span class="s2">&quot;express_name&quot;</span><span class="o">:</span> <span class="s2">&quot;圆通&quot;</span><span class="p">,</span>  <span class="c1">// 物流公司名</span>
+                <span class="s2">&quot;first_amount&quot;</span><span class="o">:</span> <span class="mi">10</span><span class="p">,</span>  <span class="c1">// 首费</span>
+                <span class="s2">&quot;first_item&quot;</span><span class="o">:</span> <span class="mi">1</span><span class="p">,</span>  <span class="c1">// 首件</span>
+                <span class="s2">&quot;first_weight&quot;</span><span class="o">:</span> <span class="mi">0</span><span class="p">,</span>  <span class="c1">// 首重</span>
+                <span class="s2">&quot;is_default&quot;</span><span class="o">:</span> <span class="kc">true</span><span class="p">,</span>  <span class="c1">// 是否默认</span>
+                <span class="s2">&quot;max_days&quot;</span><span class="o">:</span> <span class="mi">5</span><span class="p">,</span>  <span class="c1">// 最长天数</span>
+                <span class="s2">&quot;min_days&quot;</span><span class="o">:</span> <span class="mi">3</span><span class="p">,</span>  <span class="c1">// 最小天数</span>
+                <span class="s2">&quot;places_items&quot;</span><span class="o">:</span> <span class="p">[</span>
+                    <span class="p">{</span>
+                        <span class="s2">&quot;continuous_amount&quot;</span><span class="o">:</span> <span class="mi">20</span><span class="p">,</span>
+                        <span class="s2">&quot;continuous_item&quot;</span><span class="o">:</span> <span class="mi">1</span><span class="p">,</span>
+                        <span class="s2">&quot;continuous_weight&quot;</span><span class="o">:</span> <span class="mi">0</span><span class="p">,</span>
+                        <span class="s2">&quot;first_amount&quot;</span><span class="o">:</span> <span class="mi">10</span><span class="p">,</span>
+                        <span class="s2">&quot;first_item&quot;</span><span class="o">:</span> <span class="mi">1</span><span class="p">,</span>
+                        <span class="s2">&quot;first_weight&quot;</span><span class="o">:</span> <span class="mi">0</span><span class="p">,</span>
+                        <span class="s2">&quot;is_default&quot;</span><span class="o">:</span> <span class="kc">false</span><span class="p">,</span>
+                        <span class="s2">&quot;places&quot;</span><span class="o">:</span> <span class="p">[</span>
+                            <span class="p">{</span>
+                                <span class="s2">&quot;place_name&quot;</span><span class="o">:</span> <span class="s2">&quot;北京&quot;</span><span class="p">,</span>
+                                <span class="s2">&quot;place_oid&quot;</span><span class="o">:</span> <span class="mi">1</span>
+                            <span class="p">},</span>
+                            <span class="p">{</span>
+                                <span class="s2">&quot;place_name&quot;</span><span class="o">:</span> <span class="s2">&quot;天津&quot;</span><span class="p">,</span>
+                                <span class="s2">&quot;place_oid&quot;</span><span class="o">:</span> <span class="mi">2</span>
+                            <span class="p">}</span>
+                        <span class="p">],</span>
+                        <span class="s2">&quot;rid&quot;</span><span class="o">:</span> <span class="s2">&quot;Fi153042768&quot;</span>  <span class="c1">// item_rid</span>
+                    <span class="p">},</span>
+                <span class="p">],</span>
+                <span class="s2">&quot;rid&quot;</span><span class="o">:</span> <span class="s2">&quot;Fi618937502&quot;</span>  <span class="c1">// item_rid</span>
+            <span class="p">},</span>
+        <span class="p">],</span>
+
+    <span class="p">},</span>
+    <span class="s2">&quot;status&quot;</span><span class="o">:</span> <span class="p">{</span>
+        <span class="s2">&quot;code&quot;</span><span class="o">:</span> <span class="mi">200</span><span class="p">,</span>
+        <span class="s2">&quot;message&quot;</span><span class="o">:</span> <span class="s2">&quot;Ok all right.&quot;</span>
+    <span class="p">},</span>
+    <span class="s2">&quot;success&quot;</span><span class="o">:</span> <span class="kc">true</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="id53">
+<h2>删除运费模板信息<a class="headerlink" href="#id53" title="永久链接至标题">¶</a></h2>
+<p>某商家删除运费模板信息</p>
+<div class="section" id="id54">
+<h3>接口说明<a class="headerlink" href="#id54" title="永久链接至标题">¶</a></h3>
+<ul class="simple">
+<li>API接口请求地址：<code class="docutils literal"><span class="pre">/logistics/freight_template</span></code></li>
+<li>API接口请求方法：<code class="docutils literal"><span class="pre">DELETE</span></code></li>
+<li>API接口用户授权：<code class="docutils literal"><span class="pre">token</span></code></li>
+</ul>
+</div>
+<div class="section" id="id55">
+<h3>请求参数<a class="headerlink" href="#id55" title="永久链接至标题">¶</a></h3>
+<table border="1" class="docutils">
+<colgroup>
+<col width="25%" />
+<col width="13%" />
+<col width="12%" />
+<col width="13%" />
+<col width="36%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">名称</th>
+<th class="head">类型</th>
+<th class="head">是否必须</th>
+<th class="head">默认值</th>
+<th class="head">描述说明</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>rid</td>
+<td>String</td>
+<td>必需</td>
+<td>&#160;</td>
+<td>模板rid</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="id56">
+<h3>返回示例<a class="headerlink" href="#id56" title="永久链接至标题">¶</a></h3>
 <p>JSON数据格式:</p>
 <p>请求 <strong>正确</strong> 返回结果：</p>
 <div class="highlight-javascript"><div class="highlight"><pre><span></span><span class="p">{</span>
@@ -1771,6 +2095,132 @@
     <span class="s2">&quot;message&quot;</span><span class="o">:</span> <span class="s2">&quot;Not Found&quot;</span>
   <span class="p">},</span>
   <span class="s2">&quot;success&quot;</span><span class="o">:</span> <span class="kc">false</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="id57">
+<h2>计算运费<a class="headerlink" href="#id57" title="永久链接至标题">¶</a></h2>
+<p>计算运费</p>
+<div class="section" id="id58">
+<h3>接口说明<a class="headerlink" href="#id58" title="永久链接至标题">¶</a></h3>
+<ul class="simple">
+<li>API接口请求地址：<code class="docutils literal"><span class="pre">/logistics/freight</span></code></li>
+<li>API接口请求方法：<code class="docutils literal"><span class="pre">POST</span></code></li>
+<li>API接口用户授权：<code class="docutils literal"><span class="pre">token</span></code></li>
+</ul>
+</div>
+<div class="section" id="id59">
+<h3>请求参数<a class="headerlink" href="#id59" title="永久链接至标题">¶</a></h3>
+<p><strong>运费信息基本参数:</strong></p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="25%" />
+<col width="13%" />
+<col width="12%" />
+<col width="13%" />
+<col width="36%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">名称</th>
+<th class="head">类型</th>
+<th class="head">是否必须</th>
+<th class="head">默认值</th>
+<th class="head">描述说明</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>express_id</td>
+<td>Integer</td>
+<td>必须</td>
+<td>&#160;</td>
+<td>物流公司id</td>
+</tr>
+<tr class="row-odd"><td>place_oid</td>
+<td>Integer</td>
+<td>必须</td>
+<td>&#160;</td>
+<td>城市oid</td>
+</tr>
+<tr class="row-even"><td>product_items</td>
+<td>Array</td>
+<td>必须</td>
+<td>&#160;</td>
+<td>商品信息列表</td>
+</tr>
+</tbody>
+</table>
+<p><strong>商品信息:</strong></p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="25%" />
+<col width="13%" />
+<col width="12%" />
+<col width="13%" />
+<col width="36%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">名称</th>
+<th class="head">类型</th>
+<th class="head">是否必须</th>
+<th class="head">默认值</th>
+<th class="head">描述说明</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>product_items:</td>
+<td>&#160;</td>
+<td>&#160;</td>
+<td>&#160;</td>
+<td>&#160;</td>
+</tr>
+<tr class="row-odd"><td>rid</td>
+<td>String</td>
+<td>必须</td>
+<td>&#160;</td>
+<td>商品rid</td>
+</tr>
+<tr class="row-even"><td>quantity</td>
+<td>Integer</td>
+<td>可选</td>
+<td>1</td>
+<td>购买数量</td>
+</tr>
+</tbody>
+</table>
+<p>参考示例：</p>
+<div class="highlight-javascript"><div class="highlight"><pre><span></span><span class="p">{</span>
+    <span class="s2">&quot;express_id&quot;</span><span class="o">:</span><span class="mi">4</span><span class="p">,</span>
+    <span class="s2">&quot;place_oid&quot;</span><span class="o">:</span><span class="mi">1</span><span class="p">,</span>
+    <span class="s2">&quot;product_items&quot;</span><span class="o">:</span><span class="p">[</span>
+        <span class="p">{</span>
+            <span class="s2">&quot;sku_rid&quot;</span><span class="o">:</span><span class="s2">&quot;1&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;quantity&quot;</span><span class="o">:</span><span class="mi">2</span>
+        <span class="p">},</span>
+        <span class="p">{</span>
+            <span class="s2">&quot;sku_rid&quot;</span><span class="o">:</span><span class="s2">&quot;4&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;quantity&quot;</span><span class="o">:</span><span class="mi">2</span>
+        <span class="p">}</span>
+
+        <span class="p">]</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="id60">
+<h3>返回示例<a class="headerlink" href="#id60" title="永久链接至标题">¶</a></h3>
+<p>JSON数据格式:</p>
+<p>请求 <strong>正确</strong> 返回结果：</p>
+<div class="highlight-javascript"><div class="highlight"><pre><span></span><span class="p">{</span>
+    <span class="s2">&quot;data&quot;</span><span class="o">:</span> <span class="p">{</span>
+        <span class="s2">&quot;total_freight&quot;</span><span class="o">:</span> <span class="mi">23</span>  <span class="c1">// 总运费</span>
+    <span class="p">},</span>
+    <span class="s2">&quot;status&quot;</span><span class="o">:</span> <span class="p">{</span>
+        <span class="s2">&quot;code&quot;</span><span class="o">:</span> <span class="mi">200</span><span class="p">,</span>
+        <span class="s2">&quot;message&quot;</span><span class="o">:</span> <span class="s2">&quot;Ok all right.&quot;</span>
+    <span class="p">},</span>
+    <span class="s2">&quot;success&quot;</span><span class="o">:</span> <span class="kc">true</span>
 <span class="p">}</span>
 </pre></div>
 </div>

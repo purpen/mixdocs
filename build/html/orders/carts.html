@@ -79,15 +79,22 @@
 <li class="toctree-l2 current"><a class="current reference internal" href="#">购物车模块</a></li>
 <li class="toctree-l2"><a class="reference internal" href="addresses.html">收货地址模块</a></li>
 <li class="toctree-l2"><a class="reference internal" href="stats.html">统计模块</a></li>
+<li class="toctree-l2"><a class="reference internal" href="comment.html">订单评价模块</a></li>
+<li class="toctree-l2"><a class="reference internal" href="logistics.html">物流运费模块</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="../products/index.html">商品API模块</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="../products/products.html">商品模块</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../products/category.html">分类模块</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../products/brands.html">供应商/品牌模块</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../products/materials.html">商品材料模块</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../products/colors.html">商品颜色模块</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../products/models.html">商品规格模块</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../products/labels.html">标签模块</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../products/return_policies.html">商家退换货规则模块</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../products/store_product_packet.html">商品组模块</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../products/distributions.html">分销模块</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../products/wish.html">心愿清单模块</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../products/store_product_packet.html">店铺商品组模块</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../products/assets.html">附件模块</a></li>
 </ul>
 </li>
@@ -102,6 +109,7 @@
 </li>
 <li class="toctree-l1"><a class="reference internal" href="../shopes/index.html">微商城API模块</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="../shopes/shopes.html">微商城模块</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../shopes/store.html">店铺模块</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="../market/index.html">营销API模块</a><ul>
@@ -302,11 +310,11 @@
 <h3>请求参数<a class="headerlink" href="#id4" title="永久链接至标题">¶</a></h3>
 <table border="1" class="docutils">
 <colgroup>
-<col width="18%" />
-<col width="12%" />
-<col width="30%" />
-<col width="12%" />
-<col width="28%" />
+<col width="17%" />
+<col width="11%" />
+<col width="34%" />
+<col width="11%" />
+<col width="26%" />
 </colgroup>
 <thead valign="bottom">
 <tr class="row-odd"><th class="head">名称</th>
@@ -319,9 +327,9 @@
 <tbody valign="top">
 <tr class="row-even"><td>open_id</td>
 <td>String</td>
-<td>小程序端必填，其他端不填</td>
+<td>独立小程序端必填，其他端不填</td>
 <td>&#160;</td>
-<td>小程序openid</td>
+<td>独立小程序openid</td>
 </tr>
 </tbody>
 </table>
@@ -397,11 +405,11 @@
 <h3>请求参数<a class="headerlink" href="#id8" title="永久链接至标题">¶</a></h3>
 <table border="1" class="docutils">
 <colgroup>
-<col width="18%" />
-<col width="12%" />
-<col width="30%" />
-<col width="12%" />
-<col width="28%" />
+<col width="17%" />
+<col width="11%" />
+<col width="34%" />
+<col width="11%" />
+<col width="26%" />
 </colgroup>
 <thead valign="bottom">
 <tr class="row-odd"><th class="head">名称</th>
@@ -414,7 +422,7 @@
 <tbody valign="top">
 <tr class="row-even"><td>open_id</td>
 <td>String</td>
-<td>小程序端必填，其他端不填</td>
+<td>独立小程序端必填，其他端不填</td>
 <td>&#160;</td>
 <td>小程序openid</td>
 </tr>
@@ -503,9 +511,9 @@
 </tr>
 <tr class="row-odd"><td>open_id</td>
 <td>String</td>
-<td>小程序端必填，其他端必填0</td>
+<td>独立小程序端必填</td>
 <td>&#160;</td>
-<td>小程序openid</td>
+<td>独立小程序openid</td>
 </tr>
 </tbody>
 </table>
@@ -590,11 +598,11 @@
 <h3>请求参数<a class="headerlink" href="#id16" title="永久链接至标题">¶</a></h3>
 <table border="1" class="docutils">
 <colgroup>
-<col width="18%" />
-<col width="12%" />
-<col width="30%" />
-<col width="12%" />
-<col width="28%" />
+<col width="17%" />
+<col width="11%" />
+<col width="34%" />
+<col width="11%" />
+<col width="26%" />
 </colgroup>
 <thead valign="bottom">
 <tr class="row-odd"><th class="head">名称</th>
@@ -625,9 +633,9 @@
 </tr>
 <tr class="row-odd"><td>open_id</td>
 <td>String</td>
-<td>小程序端必填，其他端必填0</td>
+<td>独立小程序端必填</td>
 <td>&#160;</td>
-<td>小程序openid</td>
+<td>独立小程序openid</td>
 </tr>
 </tbody>
 </table>
@@ -699,7 +707,7 @@
 <div class="section" id="id19">
 <h3>接口说明<a class="headerlink" href="#id19" title="永久链接至标题">¶</a></h3>
 <ul class="simple">
-<li>API接口请求地址：<code class="docutils literal"><span class="pre">/cart/rid/remove</span></code></li>
+<li>API接口请求地址：<code class="docutils literal"><span class="pre">/cart/&lt;string:rid&gt;/remove</span></code></li>
 <li>API接口请求方法：<code class="docutils literal"><span class="pre">POST</span></code></li>
 <li>API接口用户授权：<code class="docutils literal"><span class="pre">token</span></code></li>
 </ul>
@@ -725,9 +733,9 @@
 <tbody valign="top">
 <tr class="row-even"><td>open_id</td>
 <td>String</td>
-<td>小程序端必填，其他端必填0</td>
+<td>独立小程序端必填</td>
 <td>&#160;</td>
-<td>小程序openid</td>
+<td>独立小程序openid</td>
 </tr>
 </tbody>
 </table>
@@ -798,9 +806,9 @@
 <tbody valign="top">
 <tr class="row-even"><td>open_id</td>
 <td>String</td>
-<td>小程序端必填，其他端必填0</td>
+<td>独立小程序端必填</td>
 <td>&#160;</td>
-<td>小程序openid</td>
+<td>独立小程序openid</td>
 </tr>
 </tbody>
 </table>
