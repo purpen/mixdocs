@@ -681,10 +681,12 @@ JSON数据格式:
                             "is_default": false,
                             "places": [
                                 {
+                                    "area_scope": 1,  // 区域范围
                                     "place_name": "北京",
                                     "place_oid": 1
                                 },
                                 {
+                                    "area_scope": 1,  // 区域范围
                                     "place_name": "天津",
                                     "place_oid": 2
                                 }
@@ -766,10 +768,12 @@ JSON数据格式:
                             "is_default": false,
                             "places": [
                                 {
+                                    "area_scope": 1,  // 区域范围
                                     "place_name": "北京",
                                     "place_oid": 1
                                 },
                                 {
+                                    "area_scope": 1,  // 区域范围
                                     "place_name": "天津",
                                     "place_oid": 2
                                 }
@@ -928,10 +932,12 @@ JSON数据格式:
                             "is_default": false,
                             "places": [
                                 {
+                                    "area_scope": 1,  // 区域范围
                                     "place_name": "北京",
                                     "place_oid": 1
                                 },
                                 {
+                                    "area_scope": 1,  // 区域范围
                                     "place_name": "天津",
                                     "place_oid": 2
                                 }
@@ -1018,10 +1024,12 @@ JSON数据格式:
                                         "is_default": false,
                                         "places": [
                                             {
+                                                "area_scope": 1,  // 区域范围
                                                 "place_name": "北京",
                                                 "place_oid": 1
                                             },
                                             {
+                                                "area_scope": 1,  // 区域范围
                                                 "place_name": "天津",
                                                 "place_oid": 2
                                             }
@@ -1111,10 +1119,12 @@ JSON数据格式:
                             "is_default": false,
                             "places": [
                                 {
+                                    "area_scope": 1,  // 区域范围
                                     "place_name": "北京",
                                     "place_oid": 1
                                 },
                                 {
+                                    "area_scope": 1,  // 区域范围
                                     "place_name": "天津",
                                     "place_oid": 2
                                 }
