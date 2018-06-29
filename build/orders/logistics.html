@@ -1326,7 +1326,7 @@
 <div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="p">{</span>
     <span class="s2">&quot;name&quot;</span><span class="o">:</span><span class="s2">&quot;运费模板2&quot;</span><span class="p">,</span>
     <span class="s2">&quot;pricing_method&quot;</span><span class="o">:</span><span class="mi">1</span><span class="p">,</span>
-    <span class="s2">&quot;default_items&quot;</span><span class="o">:</span><span class="p">[</span>
+    <span class="s2">&quot;items&quot;</span><span class="o">:</span><span class="p">[</span>
         <span class="p">{</span>
             <span class="s2">&quot;express_code&quot;</span><span class="o">:</span><span class="s2">&quot;YTO&quot;</span><span class="p">,</span>
             <span class="s2">&quot;min_days&quot;</span><span class="o">:</span><span class="mi">3</span><span class="p">,</span>
@@ -1576,7 +1576,7 @@
 <td>String</td>
 <td>必需</td>
 <td>&#160;</td>
-<td>模板rid</td>
+<td>运费模板rid</td>
 </tr>
 <tr class="row-odd"><td>name</td>
 <td>String</td>
@@ -1595,12 +1595,6 @@
 <td>可选</td>
 <td>[]</td>
 <td>物流公司默认信息</td>
-</tr>
-<tr class="row-even"><td>del_rids</td>
-<td>Array</td>
-<td>可选</td>
-<td>[]</td>
-<td>被删除的item的rid</td>
 </tr>
 </tbody>
 </table>
@@ -1632,19 +1626,99 @@
 <td>String</td>
 <td>必需</td>
 <td>&#160;</td>
-<td>模板rid</td>
+<td>运费模板明细rid</td>
 </tr>
-<tr class="row-even"><td>express_code</td>
+<tr class="row-even"><td>express_id</td>
 <td>String</td>
-<td>必须</td>
+<td>可选</td>
 <td>&#160;</td>
-<td>物流公司code</td>
+<td>物流公司id</td>
 </tr>
-<tr class="row-odd"><td>is_default</td>
-<td>Bool</td>
-<td>必须</td>
-<td>False</td>
-<td>是否默认</td>
+<tr class="row-odd"><td>first_item</td>
+<td>Integer</td>
+<td>可选</td>
+<td>1</td>
+<td>首件</td>
+</tr>
+<tr class="row-even"><td>first_weight</td>
+<td>Numeric</td>
+<td>可选</td>
+<td>0</td>
+<td>首重</td>
+</tr>
+<tr class="row-odd"><td>first_amount</td>
+<td>Numeric</td>
+<td>可选</td>
+<td>0</td>
+<td>首费</td>
+</tr>
+<tr class="row-even"><td>continuous_item</td>
+<td>Integer</td>
+<td>可选</td>
+<td>1</td>
+<td>续件</td>
+</tr>
+<tr class="row-odd"><td>continuous_weight</td>
+<td>Numeric</td>
+<td>可选</td>
+<td>0</td>
+<td>续费</td>
+</tr>
+<tr class="row-even"><td>continuous_amount</td>
+<td>Numeric</td>
+<td>可选</td>
+<td>0</td>
+<td>续重</td>
+</tr>
+<tr class="row-odd"><td>min_days</td>
+<td>Integer</td>
+<td>可选</td>
+<td>0</td>
+<td>最少天数</td>
+</tr>
+<tr class="row-even"><td>max_days</td>
+<td>Integer</td>
+<td>可选</td>
+<td>0</td>
+<td>最多天数</td>
+</tr>
+<tr class="row-odd"><td>place_items</td>
+<td>Array</td>
+<td>可选</td>
+<td>[]</td>
+<td>指定城市设置</td>
+</tr>
+</tbody>
+</table>
+<p><strong>指定城市设置:</strong></p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="25%" />
+<col width="13%" />
+<col width="12%" />
+<col width="13%" />
+<col width="36%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">名称</th>
+<th class="head">类型</th>
+<th class="head">是否必须</th>
+<th class="head">默认值</th>
+<th class="head">描述说明</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>place_items:</td>
+<td>&#160;</td>
+<td>&#160;</td>
+<td>&#160;</td>
+<td>&#160;</td>
+</tr>
+<tr class="row-odd"><td>rid</td>
+<td>String</td>
+<td>必需</td>
+<td>&#160;</td>
+<td>运费模板明细rid</td>
 </tr>
 <tr class="row-even"><td>first_item</td>
 <td>Integer</td>
@@ -1682,71 +1756,69 @@
 <td>0</td>
 <td>续重</td>
 </tr>
-<tr class="row-even"><td>min_days</td>
-<td>Integer</td>
-<td>可选</td>
-<td>0</td>
-<td>最少天数</td>
-</tr>
-<tr class="row-odd"><td>max_days</td>
-<td>Integer</td>
-<td>可选</td>
-<td>0</td>
-<td>最多天数</td>
-</tr>
 <tr class="row-even"><td>place_oid</td>
 <td>Array</td>
 <td>可选</td>
 <td>[]</td>
-<td>运送地区oid</td>
+<td>运送地区oid,元素为Integer</td>
 </tr>
 </tbody>
 </table>
 <p>参考示例：</p>
 <div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="p">{</span>
-    <span class="s2">&quot;name&quot;</span><span class="o">:</span> <span class="s2">&quot;运费模板2&quot;</span><span class="p">,</span>
-    <span class="s2">&quot;pricing_method&quot;</span><span class="o">:</span> <span class="mi">1</span><span class="p">,</span>
-    <span class="s2">&quot;rid&quot;</span><span class="o">:</span> <span class="s2">&quot;Ft250134987&quot;</span><span class="p">,</span>
-    <span class="s2">&quot;del_rids&quot;</span><span class="o">:</span><span class="p">[</span>
-        <span class="s2">&quot;Fi285619473&quot;</span>
-        <span class="p">],</span>
-    <span class="s2">&quot;items&quot;</span><span class="o">:</span> <span class="p">[</span>
+    <span class="s2">&quot;rid&quot;</span><span class="o">:</span><span class="s2">&quot;Ft415967803&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;name&quot;</span><span class="o">:</span><span class="s2">&quot;运费模板777&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;pricing_method&quot;</span><span class="o">:</span><span class="mi">1</span><span class="p">,</span>
+    <span class="s2">&quot;items&quot;</span><span class="o">:</span><span class="p">[</span>
         <span class="p">{</span>
-            <span class="s2">&quot;express_code&quot;</span><span class="o">:</span> <span class="s2">&quot;YTO&quot;</span><span class="p">,</span>
-            <span class="s2">&quot;continuous_amount&quot;</span><span class="o">:</span> <span class="mi">20</span><span class="p">,</span>
-            <span class="s2">&quot;continuous_item&quot;</span><span class="o">:</span> <span class="mi">1</span><span class="p">,</span>
-            <span class="s2">&quot;first_amount&quot;</span><span class="o">:</span> <span class="mi">10</span><span class="p">,</span>
-            <span class="s2">&quot;first_item&quot;</span><span class="o">:</span> <span class="mi">1</span><span class="p">,</span>
-            <span class="s2">&quot;is_default&quot;</span><span class="o">:</span> <span class="kc">false</span><span class="p">,</span>
-            <span class="s2">&quot;max_days&quot;</span><span class="o">:</span> <span class="mi">5</span><span class="p">,</span>
-            <span class="s2">&quot;min_days&quot;</span><span class="o">:</span> <span class="mi">3</span><span class="p">,</span>
-            <span class="s2">&quot;place_oid&quot;</span><span class="o">:</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">],</span>
-            <span class="s2">&quot;rid&quot;</span><span class="o">:</span> <span class="s2">&quot;Fi325716098&quot;</span>
+            <span class="s2">&quot;rid&quot;</span><span class="o">:</span><span class="s2">&quot;Fi804531692&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;express_id&quot;</span><span class="o">:</span><span class="mi">4</span><span class="p">,</span>
+            <span class="s2">&quot;min_days&quot;</span><span class="o">:</span><span class="mi">3</span><span class="p">,</span>
+            <span class="s2">&quot;max_days&quot;</span><span class="o">:</span><span class="mi">5</span><span class="p">,</span>
+            <span class="s2">&quot;first_item&quot;</span><span class="o">:</span><span class="mi">1</span><span class="p">,</span>
+            <span class="s2">&quot;first_amount&quot;</span><span class="o">:</span><span class="mi">10</span><span class="p">,</span>
+            <span class="s2">&quot;continuous_item&quot;</span><span class="o">:</span><span class="mi">1</span><span class="p">,</span>
+            <span class="s2">&quot;continuous_amount&quot;</span><span class="o">:</span><span class="mi">20</span><span class="p">,</span>
+            <span class="s2">&quot;place_items&quot;</span><span class="o">:</span><span class="p">[</span>
+                <span class="p">{</span>
+                    <span class="s2">&quot;rid&quot;</span><span class="o">:</span><span class="s2">&quot;Fi174680952&quot;</span><span class="p">,</span>
+                    <span class="s2">&quot;first_item&quot;</span><span class="o">:</span><span class="mi">1</span><span class="p">,</span>
+                    <span class="s2">&quot;first_amount&quot;</span><span class="o">:</span><span class="mi">10</span><span class="p">,</span>
+                    <span class="s2">&quot;continuous_item&quot;</span><span class="o">:</span><span class="mi">1</span><span class="p">,</span>
+                    <span class="s2">&quot;continuous_amount&quot;</span><span class="o">:</span><span class="mi">20</span><span class="p">,</span>
+                    <span class="s2">&quot;place_oid&quot;</span><span class="o">:</span><span class="p">[</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">]</span>
+                <span class="p">},</span>
+                <span class="p">{</span>
+                    <span class="s2">&quot;rid&quot;</span><span class="o">:</span><span class="mi">11111</span><span class="p">,</span>
+                    <span class="s2">&quot;first_item&quot;</span><span class="o">:</span><span class="mi">2</span><span class="p">,</span>
+                    <span class="s2">&quot;first_amount&quot;</span><span class="o">:</span><span class="mi">20</span><span class="p">,</span>
+                    <span class="s2">&quot;continuous_item&quot;</span><span class="o">:</span><span class="mi">1</span><span class="p">,</span>
+                    <span class="s2">&quot;continuous_amount&quot;</span><span class="o">:</span><span class="mi">20</span><span class="p">,</span>
+                    <span class="s2">&quot;place_oid&quot;</span><span class="o">:</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span>
+                <span class="p">}</span>
+            <span class="p">]</span>
         <span class="p">},</span>
         <span class="p">{</span>
-            <span class="s2">&quot;express_code&quot;</span><span class="o">:</span> <span class="s2">&quot;YTO&quot;</span><span class="p">,</span>
-            <span class="s2">&quot;continuous_amount&quot;</span><span class="o">:</span> <span class="mi">200</span><span class="p">,</span>
-            <span class="s2">&quot;continuous_item&quot;</span><span class="o">:</span> <span class="mi">1</span><span class="p">,</span>
-            <span class="s2">&quot;first_amount&quot;</span><span class="o">:</span> <span class="mi">100</span><span class="p">,</span>
-            <span class="s2">&quot;first_item&quot;</span><span class="o">:</span> <span class="mi">1</span><span class="p">,</span>
-            <span class="s2">&quot;is_default&quot;</span><span class="o">:</span> <span class="kc">true</span><span class="p">,</span>
-            <span class="s2">&quot;max_days&quot;</span><span class="o">:</span> <span class="mi">5</span><span class="p">,</span>
-            <span class="s2">&quot;min_days&quot;</span><span class="o">:</span> <span class="mi">3</span><span class="p">,</span>
-            <span class="s2">&quot;place_oid&quot;</span><span class="o">:</span> <span class="p">[],</span>
-            <span class="s2">&quot;rid&quot;</span><span class="o">:</span> <span class="s2">&quot;Fi123498507&quot;</span>
-        <span class="p">},</span>
-        <span class="p">{</span>
-            <span class="s2">&quot;express_code&quot;</span><span class="o">:</span> <span class="s2">&quot;EMS&quot;</span><span class="p">,</span>
-            <span class="s2">&quot;continuous_amount&quot;</span><span class="o">:</span> <span class="mi">20</span><span class="p">,</span>
-            <span class="s2">&quot;continuous_item&quot;</span><span class="o">:</span> <span class="mi">1</span><span class="p">,</span>
-            <span class="s2">&quot;first_amount&quot;</span><span class="o">:</span> <span class="mi">10</span><span class="p">,</span>
-            <span class="s2">&quot;first_item&quot;</span><span class="o">:</span> <span class="mi">1</span><span class="p">,</span>
-            <span class="s2">&quot;is_default&quot;</span><span class="o">:</span> <span class="kc">false</span><span class="p">,</span>
-            <span class="s2">&quot;max_days&quot;</span><span class="o">:</span> <span class="mi">5</span><span class="p">,</span>
-            <span class="s2">&quot;min_days&quot;</span><span class="o">:</span> <span class="mi">3</span><span class="p">,</span>
-            <span class="s2">&quot;place_oid&quot;</span><span class="o">:</span> <span class="p">[</span><span class="mi">2</span><span class="p">],</span>
-            <span class="s2">&quot;rid&quot;</span><span class="o">:</span> <span class="s2">&quot;0&quot;</span>
+            <span class="s2">&quot;rid&quot;</span><span class="o">:</span><span class="mi">2222222</span><span class="p">,</span>
+            <span class="s2">&quot;express_id&quot;</span><span class="o">:</span><span class="mi">5</span><span class="p">,</span>
+            <span class="s2">&quot;min_days&quot;</span><span class="o">:</span><span class="mi">3</span><span class="p">,</span>
+            <span class="s2">&quot;max_days&quot;</span><span class="o">:</span><span class="mi">5</span><span class="p">,</span>
+            <span class="s2">&quot;first_item&quot;</span><span class="o">:</span><span class="mi">1</span><span class="p">,</span>
+            <span class="s2">&quot;first_amount&quot;</span><span class="o">:</span><span class="mi">10</span><span class="p">,</span>
+            <span class="s2">&quot;continuous_item&quot;</span><span class="o">:</span><span class="mi">1</span><span class="p">,</span>
+            <span class="s2">&quot;continuous_amount&quot;</span><span class="o">:</span><span class="mi">20</span><span class="p">,</span>
+            <span class="s2">&quot;place_items&quot;</span><span class="o">:</span><span class="p">[</span>
+                <span class="p">{</span>
+                    <span class="s2">&quot;rid&quot;</span><span class="o">:</span><span class="mi">333333</span><span class="p">,</span>
+                    <span class="s2">&quot;first_item&quot;</span><span class="o">:</span><span class="mi">1</span><span class="p">,</span>
+                    <span class="s2">&quot;first_amount&quot;</span><span class="o">:</span><span class="mi">10</span><span class="p">,</span>
+                    <span class="s2">&quot;continuous_item&quot;</span><span class="o">:</span><span class="mi">1</span><span class="p">,</span>
+                    <span class="s2">&quot;continuous_amount&quot;</span><span class="o">:</span><span class="mi">20</span><span class="p">,</span>
+                    <span class="s2">&quot;place_oid&quot;</span><span class="o">:</span><span class="p">[</span><span class="mi">3</span><span class="p">]</span>
+                <span class="p">}</span>
+            <span class="p">]</span>
         <span class="p">}</span>
+
     <span class="p">]</span>
 <span class="p">}</span>
 </pre></div>
