@@ -593,7 +593,7 @@ place_oid              Array         可选          []          运送地区oid
     {
         "name":"运费模板2",
         "pricing_method":1,
-        "default_items":[
+        "items":[
             {
                 "express_code":"YTO",
                 "min_days":3,
@@ -813,11 +813,10 @@ JSON数据格式:
 =====================  ===========  ==========  ===========  ==============================
 名称                    类型          是否必须      默认值        描述说明
 =====================  ===========  ==========  ===========  ==============================
-rid                    String        必需                      模板rid
+rid                    String        必需                      运费模板rid
 name                   String        可选                      模板名称
 pricing_method         Integer       可选          1           计价方式 1、按件数 2、按重量
 items                  Array         可选          []          物流公司默认信息
-del_rids               Array         可选          []          被删除的item的rid
 =====================  ===========  ==========  ===========  ==============================
 
 **物流公司默认信息:**
@@ -826,9 +825,8 @@ del_rids               Array         可选          []          被删除的ite
 名称                    类型          是否必须      默认值        描述说明
 =====================  ===========  ==========  ===========  ==============================
 items:
-rid                    String        必需                      模板rid
-express_code           String        必须                      物流公司code
-is_default             Bool          必须          False       是否默认
+rid                    String        必需                      运费模板明细rid
+express_id             String        可选                      物流公司id
 first_item             Integer       可选          1           首件
 first_weight           Numeric       可选          0           首重
 first_amount           Numeric       可选          0           首费
@@ -837,57 +835,84 @@ continuous_weight      Numeric       可选          0           续费
 continuous_amount      Numeric       可选          0           续重
 min_days               Integer       可选          0           最少天数
 max_days               Integer       可选          0           最多天数
-place_oid              Array         可选          []          运送地区oid
+place_items            Array         可选          []          指定城市设置
+=====================  ===========  ==========  ===========  ==============================
+
+**指定城市设置:**
+
+=====================  ===========  ==========  ===========  ==============================
+名称                    类型          是否必须      默认值        描述说明
+=====================  ===========  ==========  ===========  ==============================
+place_items:
+rid                    String        必需                      运费模板明细rid
+first_item             Integer       可选          1           首件
+first_weight           Numeric       可选          0           首重
+first_amount           Numeric       可选          0           首费
+continuous_item        Integer       可选          1           续件
+continuous_weight      Numeric       可选          0           续费
+continuous_amount      Numeric       可选          0           续重
+place_oid              Array         可选          []          运送地区oid,元素为Integer
 =====================  ===========  ==========  ===========  ==============================
 
 参考示例：
 
 .. code-block:: javascript
 
+
     {
-        "name": "运费模板2",
-        "pricing_method": 1,
-        "rid": "Ft250134987",
-        "del_rids":[
-            "Fi285619473"
-            ],
-        "items": [
+        "rid":"Ft415967803",
+        "name":"运费模板777",
+        "pricing_method":1,
+        "items":[
             {
-                "express_code": "YTO",
-                "continuous_amount": 20,
-                "continuous_item": 1,
-                "first_amount": 10,
-                "first_item": 1,
-                "is_default": false,
-                "max_days": 5,
-                "min_days": 3,
-                "place_oid": [1,2,3],
-                "rid": "Fi325716098"
+                "rid":"Fi804531692",
+                "express_id":4,
+                "min_days":3,
+                "max_days":5,
+                "first_item":1,
+                "first_amount":10,
+                "continuous_item":1,
+                "continuous_amount":20,
+                "place_items":[
+                    {
+                        "rid":"Fi174680952",
+                        "first_item":1,
+                        "first_amount":10,
+                        "continuous_item":1,
+                        "continuous_amount":20,
+                        "place_oid":[1,2,3]
+                    },
+                    {
+                        "rid":11111,
+                        "first_item":2,
+                        "first_amount":20,
+                        "continuous_item":1,
+                        "continuous_amount":20,
+                        "place_oid":[2]
+                    }
+                ]
             },
             {
-                "express_code": "YTO",
-                "continuous_amount": 200,
-                "continuous_item": 1,
-                "first_amount": 100,
-                "first_item": 1,
-                "is_default": true,
-                "max_days": 5,
-                "min_days": 3,
-                "place_oid": [],
-                "rid": "Fi123498507"
-            },
-            {
-                "express_code": "EMS",
-                "continuous_amount": 20,
-                "continuous_item": 1,
-                "first_amount": 10,
-                "first_item": 1,
-                "is_default": false,
-                "max_days": 5,
-                "min_days": 3,
-                "place_oid": [2],
-                "rid": "0"
+                "rid":2222222,
+                "express_id":5,
+                "min_days":3,
+                "max_days":5,
+                "first_item":1,
+                "first_amount":10,
+                "continuous_item":1,
+                "continuous_amount":20,
+                "place_items":[
+                    {
+                        "rid":333333,
+                        "first_item":1,
+                        "first_amount":10,
+                        "continuous_item":1,
+                        "continuous_amount":20,
+                        "place_oid":[3]
+                    }
+                ]
             }
+
         ]
     }
 
