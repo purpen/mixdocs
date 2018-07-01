@@ -146,6 +146,51 @@ JSON数据格式
         "success": false
     }
 
+获取店铺(品牌馆)展示信息
+--------------------------
+
+
+接口说明
+~~~~~~~~~~~~~~
+
+* API接口请求地址：``/store/avatar``
+* API接口请求方法：``GET``
+
+
+返回示例
+~~~~~~~~~~~~~~~~
+
+JSON数据格式
+
+请求 **正确** 返回结果：
+
+.. code-block:: javascript
+
+    {
+        "data": {
+            "logo": "http://0.0.0.0:9000/_uploads/photos/http://127.0.0.1:9000/_uploads/photos/222222/5d2812257b539aa.jpg",
+            "name": "嘎哈很多",
+            "pattern": 1
+        },
+        "status": {
+            "code": 200,
+            "message": "Ok all right."
+        },
+        "success": true
+    }
+
+请求 ``失败`` 返回结果：
+
+.. code-block:: javascript
+
+    {
+        "status": {
+            "code": 404,
+            "message": "Not Found"
+        },
+        "success": false
+    }
+
 品牌馆基本信息设置或更新
 --------------------------
 
