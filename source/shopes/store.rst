@@ -191,6 +191,76 @@ JSON数据格式
         "success": false
     }
 
+获取店铺(品牌馆)资质信息
+--------------------------
+
+
+接口说明
+~~~~~~~~~~~~~~
+
+* API接口请求地址：``/store/qualification``
+* API接口请求方法：``GET``
+* API接口用户授权：``token``
+
+返回示例
+~~~~~~~~~~~~~~~~
+
+JSON数据格式
+
+请求 **正确** 返回结果：
+
+.. code-block:: javascript
+
+    {
+        "data": {
+            "already_pay": 500,
+            "also_need_pay": 500,
+            "company_qualification": [
+                {
+                    "created_at": null,
+                    "filename": "e",
+                    "filepath": "http://127.0.0.1:9000/_uploads/photos/222222/5d2812257b539bb.jpg",
+                    "id": 2,
+                    "type": null,
+                    "view_url": "http://0.0.0.0:9000/_uploads/photos/http://127.0.0.1:9000/_uploads/photos/222222/5d2812257b539bb.jpg"
+                },
+                {
+                    "created_at": null,
+                    "filename": "r",
+                    "filepath": "http://127.0.0.1:9000/_uploads/photos/222222/5d2812257b539oo.jpg",
+                    "id": 3,
+                    "type": null,
+                    "view_url": "http://0.0.0.0:9000/_uploads/photos/http://127.0.0.1:9000/_uploads/photos/222222/5d2812257b539oo.jpg"
+                }
+            ],
+            "contract_sn": null,
+            "current_date": null,
+            "expiration_date": null,
+            "need_pay": "1000",
+            "product_price": "100,1000",
+            "secured_trade": false,
+            "status": 2,
+            "user_type": 3
+        },
+        "status": {
+            "code": 200,
+            "message": "Ok all right."
+        },
+        "success": true
+    }
+
+请求 ``失败`` 返回结果：
+
+.. code-block:: javascript
+
+    {
+        "status": {
+            "code": 404,
+            "message": "Not Found"
+        },
+        "success": false
+    }
+
 品牌馆基本信息设置或更新
 --------------------------
 
