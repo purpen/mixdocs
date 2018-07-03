@@ -379,7 +379,7 @@ delivery_city_id        Integer     必须                      发货市ID
 country_id              Integer     必须                      商家位置国家ID
 province_id             Integer     必须                      商家位置省ID
 city_id                 Integer     必须                      商家位置市ID
-areacode                String      必须                      区号
+areacode                String      必须          +86         区号
 mobile                  String      必须                      手机号
 phone                   String      可选                      固定电话
 =====================  ==========  =========  ==========  =============================
@@ -1219,4 +1219,61 @@ JSON数据格式
     }
 
 
+申请小程序
+-------------------
 
+
+接口说明
+~~~~~~~~~~~~~~
+
+* API接口请求地址：``/store/wxapp``
+* API接口请求方法：``POST``
+* API接口用户授权：``token``
+
+请求参数
+~~~~~~~~~~~~~~~
+
+=============  ========  =========  ========  ====================================
+名称            类型      是否必须    默认值     描述说明
+=============  ========  =========  ========  ====================================
+country_id      Integer     可选      1        申请国家ID
+main_type       Integer     可选      1        主体类型，1、个人；2、公司；
+email           String      必须               邮箱
+=============  ========  =========  ========  ====================================
+
+返回示例
+~~~~~~~~~~~~~~~~
+
+JSON数据格式
+
+请求 **正确** 返回结果：
+
+.. code-block:: javascript
+
+    {
+        "data": {
+            "country": "中国",
+            "country_id": 1,
+            "email": "8888888@qq.com",
+            "id": 3,
+            "main_type": 1,
+            "master_uid": 2
+        },
+        "status": {
+            "code": 201,
+            "message": "All created."
+        },
+        "success": true
+    }
+
+请求 ``失败`` 返回结果：
+
+.. code-block:: javascript
+
+    {
+        "status": {
+            "code": 404,
+            "message": "Not Found"
+        },
+        "success": false
+    }
