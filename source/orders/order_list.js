@@ -33,6 +33,8 @@
                 "total_quantity": 3  // 商品总数量
                 "items": [
                     {
+                        "commission_price": 0,  // 佣金
+                        "commission_rate": 0,  // 佣金比
                         "cover": "http://0.0.0.0:9000/_uploads/photos/1",
                         "deal_price": 1,  // 交易价格
                         "express": 4,  // 快递公司ID
