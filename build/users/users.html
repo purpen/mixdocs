@@ -221,7 +221,7 @@
 <li><a class="reference internal" href="#id43">返回示例</a></li>
 </ul>
 </li>
-<li><a class="reference internal" href="#id44">签署或修改合同</a><ul>
+<li><a class="reference internal" href="#id44">签署或修改或续签合同</a><ul>
 <li><a class="reference internal" href="#id45">接口说明</a></li>
 <li><a class="reference internal" href="#id46">请求参数</a></li>
 <li><a class="reference internal" href="#id47">请求示例</a></li>
@@ -380,7 +380,7 @@
 <li><a class="reference internal" href="#id43">返回示例</a></li>
 </ul>
 </li>
-<li><a class="reference internal" href="#id44">签署或修改合同</a><ul>
+<li><a class="reference internal" href="#id44">签署或修改或续签合同</a><ul>
 <li><a class="reference internal" href="#id45">接口说明</a></li>
 <li><a class="reference internal" href="#id46">请求参数</a></li>
 <li><a class="reference internal" href="#id47">请求示例</a></li>
@@ -1535,7 +1535,7 @@
 </div>
 </div>
 <div class="section" id="id44">
-<h2>签署或修改合同<a class="headerlink" href="#id44" title="永久链接至标题">¶</a></h2>
+<h2>签署或修改或续签合同<a class="headerlink" href="#id44" title="永久链接至标题">¶</a></h2>
 <div class="section" id="id45">
 <h3>接口说明<a class="headerlink" href="#id45" title="永久链接至标题">¶</a></h3>
 <ul class="simple">
@@ -1563,7 +1563,7 @@
 </tr>
 </thead>
 <tbody valign="top">
-<tr class="row-even"><td>brand_name</td>
+<tr class="row-even"><td>second_party</td>
 <td>String</td>
 <td>必须</td>
 <td>&#160;</td>
@@ -1605,37 +1605,43 @@
 <td>&#160;</td>
 <td>联系人</td>
 </tr>
-<tr class="row-odd"><td>mobile</td>
+<tr class="row-odd"><td>areacode</td>
+<td>String</td>
+<td>可选</td>
+<td>+86</td>
+<td>区号</td>
+</tr>
+<tr class="row-even"><td>mobile</td>
 <td>String</td>
 <td>必须</td>
 <td>&#160;</td>
 <td>手机号</td>
 </tr>
-<tr class="row-even"><td>email</td>
+<tr class="row-odd"><td>email</td>
 <td>String</td>
 <td>必须</td>
 <td>&#160;</td>
 <td>邮箱</td>
 </tr>
-<tr class="row-odd"><td>bank_name</td>
+<tr class="row-even"><td>bank_name</td>
 <td>String</td>
 <td>必须</td>
 <td>&#160;</td>
 <td>银行名称</td>
 </tr>
-<tr class="row-even"><td>username</td>
+<tr class="row-odd"><td>username</td>
 <td>String</td>
 <td>必须</td>
 <td>&#160;</td>
 <td>户名</td>
 </tr>
-<tr class="row-odd"><td>bank_addr</td>
+<tr class="row-even"><td>bank_addr</td>
 <td>String</td>
 <td>必须</td>
 <td>&#160;</td>
 <td>开户行</td>
 </tr>
-<tr class="row-even"><td>account</td>
+<tr class="row-odd"><td>account</td>
 <td>String</td>
 <td>必须</td>
 <td>&#160;</td>
@@ -1647,7 +1653,7 @@
 <div class="section" id="id47">
 <h3>请求示例<a class="headerlink" href="#id47" title="永久链接至标题">¶</a></h3>
 <p>JSON数据格式:</p>
-<div class="highlight-javascript"><div class="highlight"><pre><span></span><span class="p">{</span><span class="s2">&quot;brand_name&quot;</span><span class="o">:</span><span class="s2">&quot;京东商城&quot;</span><span class="p">,</span><span class="s2">&quot;country_id&quot;</span><span class="o">:</span><span class="mi">1</span><span class="p">,</span><span class="s2">&quot;province_id&quot;</span><span class="o">:</span><span class="mi">1</span><span class="p">,</span><span class="s2">&quot;city_id&quot;</span><span class="o">:</span><span class="mi">1</span><span class="p">,</span><span class="s2">&quot;area_id&quot;</span><span class="o">:</span><span class="mi">5</span><span class="p">,</span><span class="s2">&quot;street_address&quot;</span><span class="o">:</span><span class="s2">&quot;中南海&quot;</span><span class="p">,</span><span class="s2">&quot;name&quot;</span><span class="o">:</span><span class="s2">&quot;马化腾&quot;</span><span class="p">,</span><span class="s2">&quot;areacode&quot;</span><span class="o">:</span><span class="s2">&quot;+86&quot;</span><span class="p">,</span><span class="s2">&quot;mobile&quot;</span><span class="o">:</span><span class="s2">&quot;13004578966&quot;</span><span class="p">,</span><span class="s2">&quot;email&quot;</span><span class="o">:</span><span class="s2">&quot;8888888@qq.com&quot;</span><span class="p">,</span><span class="s2">&quot;bank_name&quot;</span><span class="o">:</span><span class="s2">&quot;中国银行&quot;</span><span class="p">,</span> <span class="s2">&quot;username&quot;</span><span class="o">:</span><span class="s2">&quot;雷军&quot;</span><span class="p">,</span><span class="s2">&quot;bank_addr&quot;</span><span class="o">:</span><span class="s2">&quot;朝阳区酒仙桥支行&quot;</span><span class="p">,</span> <span class="s2">&quot;account&quot;</span><span class="o">:</span><span class="s2">&quot;6214865188793549&quot;</span><span class="p">}</span>
+<div class="highlight-javascript"><div class="highlight"><pre><span></span><span class="p">{</span><span class="s2">&quot;second_party&quot;</span><span class="o">:</span><span class="s2">&quot;京东商城&quot;</span><span class="p">,</span><span class="s2">&quot;country_id&quot;</span><span class="o">:</span><span class="mi">1</span><span class="p">,</span><span class="s2">&quot;province_id&quot;</span><span class="o">:</span><span class="mi">1</span><span class="p">,</span><span class="s2">&quot;city_id&quot;</span><span class="o">:</span><span class="mi">1</span><span class="p">,</span><span class="s2">&quot;area_id&quot;</span><span class="o">:</span><span class="mi">5</span><span class="p">,</span><span class="s2">&quot;street_address&quot;</span><span class="o">:</span><span class="s2">&quot;中南海&quot;</span><span class="p">,</span><span class="s2">&quot;name&quot;</span><span class="o">:</span><span class="s2">&quot;马化腾&quot;</span><span class="p">,</span><span class="s2">&quot;areacode&quot;</span><span class="o">:</span><span class="s2">&quot;+86&quot;</span><span class="p">,</span><span class="s2">&quot;mobile&quot;</span><span class="o">:</span><span class="s2">&quot;13004578966&quot;</span><span class="p">,</span><span class="s2">&quot;email&quot;</span><span class="o">:</span><span class="s2">&quot;8888888@qq.com&quot;</span><span class="p">,</span><span class="s2">&quot;bank_name&quot;</span><span class="o">:</span><span class="s2">&quot;中国银行&quot;</span><span class="p">,</span> <span class="s2">&quot;username&quot;</span><span class="o">:</span><span class="s2">&quot;雷军&quot;</span><span class="p">,</span><span class="s2">&quot;bank_addr&quot;</span><span class="o">:</span><span class="s2">&quot;朝阳区酒仙桥支行&quot;</span><span class="p">,</span> <span class="s2">&quot;account&quot;</span><span class="o">:</span><span class="s2">&quot;6214865188793549&quot;</span><span class="p">}</span>
 </pre></div>
 </div>
 </div>
@@ -1658,21 +1664,29 @@
 <div class="highlight-javascript"><div class="highlight"><pre><span></span><span class="p">{</span>
     <span class="s2">&quot;data&quot;</span><span class="o">:</span> <span class="p">{</span>
         <span class="s2">&quot;account&quot;</span><span class="o">:</span> <span class="s2">&quot;6214865188793549&quot;</span><span class="p">,</span>
-        <span class="s2">&quot;area&quot;</span><span class="o">:</span> <span class="s2">&quot;杨镇地区&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;area&quot;</span><span class="o">:</span> <span class="s2">&quot;&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;area_id&quot;</span><span class="o">:</span> <span class="kc">null</span><span class="p">,</span>
         <span class="s2">&quot;areacode&quot;</span><span class="o">:</span> <span class="s2">&quot;+86&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;attachment_id&quot;</span><span class="o">:</span> <span class="mi">0</span><span class="p">,</span>
         <span class="s2">&quot;bank_addr&quot;</span><span class="o">:</span> <span class="s2">&quot;朝阳区酒仙桥支行&quot;</span><span class="p">,</span>
         <span class="s2">&quot;bank_name&quot;</span><span class="o">:</span> <span class="s2">&quot;中国银行&quot;</span><span class="p">,</span>
-        <span class="s2">&quot;brand_name&quot;</span><span class="o">:</span> <span class="s2">&quot;京东商城&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;begin_at&quot;</span><span class="o">:</span> <span class="mi">0</span><span class="p">,</span>
         <span class="s2">&quot;city&quot;</span><span class="o">:</span> <span class="s2">&quot;北京&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;city_id&quot;</span><span class="o">:</span> <span class="mi">1</span><span class="p">,</span>
+        <span class="s2">&quot;contract_sn&quot;</span><span class="o">:</span> <span class="s2">&quot;MT201807036128&quot;</span><span class="p">,</span>
         <span class="s2">&quot;country&quot;</span><span class="o">:</span> <span class="s2">&quot;中国&quot;</span><span class="p">,</span>
-        <span class="s2">&quot;current_time&quot;</span><span class="o">:</span> <span class="mi">1529150144</span><span class="p">,</span>
-        <span class="s2">&quot;expiration_time&quot;</span><span class="o">:</span> <span class="mi">1560686144</span><span class="p">,</span>
-        <span class="s2">&quot;id&quot;</span><span class="o">:</span> <span class="mi">27</span><span class="p">,</span>
+        <span class="s2">&quot;country_id&quot;</span><span class="o">:</span> <span class="mi">1</span><span class="p">,</span>
+        <span class="s2">&quot;email&quot;</span><span class="o">:</span> <span class="s2">&quot;8888888@qq.com&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;end_at&quot;</span><span class="o">:</span> <span class="mi">0</span><span class="p">,</span>
+        <span class="s2">&quot;id&quot;</span><span class="o">:</span> <span class="mi">1</span><span class="p">,</span>
         <span class="s2">&quot;master_uid&quot;</span><span class="o">:</span> <span class="mi">2</span><span class="p">,</span>
         <span class="s2">&quot;mobile&quot;</span><span class="o">:</span> <span class="s2">&quot;13004578966&quot;</span><span class="p">,</span>
         <span class="s2">&quot;name&quot;</span><span class="o">:</span> <span class="s2">&quot;马化腾&quot;</span><span class="p">,</span>
         <span class="s2">&quot;province&quot;</span><span class="o">:</span> <span class="s2">&quot;北京&quot;</span><span class="p">,</span>
-        <span class="s2">&quot;street_address&quot;</span><span class="o">:</span> <span class="s2">&quot;中南海&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;province_id&quot;</span><span class="o">:</span> <span class="mi">1</span><span class="p">,</span>
+        <span class="s2">&quot;second_party&quot;</span><span class="o">:</span> <span class="s2">&quot;京东商城&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;status&quot;</span><span class="o">:</span> <span class="mi">2</span><span class="p">,</span>
+        <span class="s2">&quot;street_address&quot;</span><span class="o">:</span> <span class="kc">null</span><span class="p">,</span>
         <span class="s2">&quot;username&quot;</span><span class="o">:</span> <span class="s2">&quot;雷军&quot;</span>
     <span class="p">},</span>
     <span class="s2">&quot;status&quot;</span><span class="o">:</span> <span class="p">{</span>
@@ -1712,20 +1726,29 @@
 <div class="highlight-javascript"><div class="highlight"><pre><span></span><span class="p">{</span>
     <span class="s2">&quot;data&quot;</span><span class="o">:</span> <span class="p">{</span>
         <span class="s2">&quot;account&quot;</span><span class="o">:</span> <span class="s2">&quot;6214865188793549&quot;</span><span class="p">,</span>
-        <span class="s2">&quot;area&quot;</span><span class="o">:</span> <span class="s2">&quot;顺义区&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;area&quot;</span><span class="o">:</span> <span class="s2">&quot;&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;area_id&quot;</span><span class="o">:</span> <span class="kc">null</span><span class="p">,</span>
+        <span class="s2">&quot;areacode&quot;</span><span class="o">:</span> <span class="s2">&quot;+86&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;attachment_id&quot;</span><span class="o">:</span> <span class="mi">0</span><span class="p">,</span>
         <span class="s2">&quot;bank_addr&quot;</span><span class="o">:</span> <span class="s2">&quot;朝阳区酒仙桥支行&quot;</span><span class="p">,</span>
         <span class="s2">&quot;bank_name&quot;</span><span class="o">:</span> <span class="s2">&quot;中国银行&quot;</span><span class="p">,</span>
-        <span class="s2">&quot;brand_name&quot;</span><span class="o">:</span> <span class="s2">&quot;jkss &quot;</span><span class="p">,</span>
+        <span class="s2">&quot;begin_at&quot;</span><span class="o">:</span> <span class="mi">1530609462</span><span class="p">,</span>
         <span class="s2">&quot;city&quot;</span><span class="o">:</span> <span class="s2">&quot;北京&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;city_id&quot;</span><span class="o">:</span> <span class="mi">1</span><span class="p">,</span>
+        <span class="s2">&quot;contract_sn&quot;</span><span class="o">:</span> <span class="s2">&quot;MT201807036128&quot;</span><span class="p">,</span>
         <span class="s2">&quot;country&quot;</span><span class="o">:</span> <span class="s2">&quot;中国&quot;</span><span class="p">,</span>
-        <span class="s2">&quot;current_time&quot;</span><span class="o">:</span> <span class="mi">1529128217</span><span class="p">,</span>
-        <span class="s2">&quot;expiration_time&quot;</span><span class="o">:</span> <span class="mi">1560664217</span><span class="p">,</span>
-        <span class="s2">&quot;id&quot;</span><span class="o">:</span> <span class="mi">27</span><span class="p">,</span>
+        <span class="s2">&quot;country_id&quot;</span><span class="o">:</span> <span class="mi">1</span><span class="p">,</span>
+        <span class="s2">&quot;email&quot;</span><span class="o">:</span> <span class="s2">&quot;8888888@qq.com&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;end_at&quot;</span><span class="o">:</span> <span class="mi">1562145462</span><span class="p">,</span>
+        <span class="s2">&quot;id&quot;</span><span class="o">:</span> <span class="mi">1</span><span class="p">,</span>
         <span class="s2">&quot;master_uid&quot;</span><span class="o">:</span> <span class="mi">2</span><span class="p">,</span>
-        <span class="s2">&quot;mobile&quot;</span><span class="o">:</span> <span class="s2">&quot;13001179400&quot;</span><span class="p">,</span>
-        <span class="s2">&quot;name&quot;</span><span class="o">:</span> <span class="s2">&quot;毛爷爷&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;mobile&quot;</span><span class="o">:</span> <span class="s2">&quot;13004578966&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;name&quot;</span><span class="o">:</span> <span class="s2">&quot;马化腾&quot;</span><span class="p">,</span>
         <span class="s2">&quot;province&quot;</span><span class="o">:</span> <span class="s2">&quot;北京&quot;</span><span class="p">,</span>
-        <span class="s2">&quot;street_address&quot;</span><span class="o">:</span> <span class="s2">&quot;中南海&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;province_id&quot;</span><span class="o">:</span> <span class="mi">1</span><span class="p">,</span>
+        <span class="s2">&quot;second_party&quot;</span><span class="o">:</span> <span class="s2">&quot;京东商城&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;status&quot;</span><span class="o">:</span> <span class="mi">2</span><span class="p">,</span>
+        <span class="s2">&quot;street_address&quot;</span><span class="o">:</span> <span class="kc">null</span><span class="p">,</span>
         <span class="s2">&quot;username&quot;</span><span class="o">:</span> <span class="s2">&quot;雷军&quot;</span>
     <span class="p">},</span>
     <span class="s2">&quot;status&quot;</span><span class="o">:</span> <span class="p">{</span>
@@ -1777,15 +1800,15 @@
 </tr>
 </thead>
 <tbody valign="top">
-<tr class="row-even"><td>current_date</td>
+<tr class="row-even"><td>begin_at</td>
 <td>String</td>
-<td>必须</td>
+<td>可选</td>
 <td>&#160;</td>
 <td>合同签署日期</td>
 </tr>
-<tr class="row-odd"><td>expiration_date</td>
+<tr class="row-odd"><td>end_at</td>
 <td>String</td>
-<td>必须</td>
+<td>可选</td>
 <td>&#160;</td>
 <td>合同结束日期</td>
 </tr>
@@ -1798,121 +1821,31 @@
 <p>请求 <strong>正确</strong> 返回结果：</p>
 <div class="highlight-javascript"><div class="highlight"><pre><span></span><span class="p">{</span>
     <span class="s2">&quot;data&quot;</span><span class="o">:</span> <span class="p">{</span>
-        <span class="s2">&quot;account&quot;</span><span class="o">:</span> <span class="kc">null</span><span class="p">,</span>
-        <span class="s2">&quot;area&quot;</span><span class="o">:</span> <span class="kc">null</span><span class="p">,</span>
+        <span class="s2">&quot;account&quot;</span><span class="o">:</span> <span class="s2">&quot;6214865188793549&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;area&quot;</span><span class="o">:</span> <span class="s2">&quot;&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;area_id&quot;</span><span class="o">:</span> <span class="kc">null</span><span class="p">,</span>
         <span class="s2">&quot;areacode&quot;</span><span class="o">:</span> <span class="s2">&quot;+86&quot;</span><span class="p">,</span>
-        <span class="s2">&quot;attachments&quot;</span><span class="o">:</span> <span class="p">[</span>
-            <span class="p">{</span>
-                <span class="s2">&quot;created_at&quot;</span><span class="o">:</span> <span class="kc">null</span><span class="p">,</span>
-                <span class="s2">&quot;filename&quot;</span><span class="o">:</span> <span class="s2">&quot;a&quot;</span><span class="p">,</span>
-                <span class="s2">&quot;filepath&quot;</span><span class="o">:</span> <span class="s2">&quot;http://127.0.0.1:9000/_uploads/photos/222222/5d2812257b539aa.jpg&quot;</span><span class="p">,</span>
-                <span class="s2">&quot;id&quot;</span><span class="o">:</span> <span class="mi">1</span><span class="p">,</span>
-                <span class="s2">&quot;type&quot;</span><span class="o">:</span> <span class="kc">null</span><span class="p">,</span>
-                <span class="s2">&quot;view_url&quot;</span><span class="o">:</span> <span class="s2">&quot;http://0.0.0.0:9000/_uploads/photos/http://127.0.0.1:9000/_uploads/photos/222222/5d2812257b539aa.jpg&quot;</span>
-            <span class="p">},</span>
-            <span class="p">{</span>
-                <span class="s2">&quot;created_at&quot;</span><span class="o">:</span> <span class="kc">null</span><span class="p">,</span>
-                <span class="s2">&quot;filename&quot;</span><span class="o">:</span> <span class="s2">&quot;e&quot;</span><span class="p">,</span>
-                <span class="s2">&quot;filepath&quot;</span><span class="o">:</span> <span class="s2">&quot;http://127.0.0.1:9000/_uploads/photos/222222/5d2812257b539bb.jpg&quot;</span><span class="p">,</span>
-                <span class="s2">&quot;id&quot;</span><span class="o">:</span> <span class="mi">2</span><span class="p">,</span>
-                <span class="s2">&quot;type&quot;</span><span class="o">:</span> <span class="kc">null</span><span class="p">,</span>
-                <span class="s2">&quot;view_url&quot;</span><span class="o">:</span> <span class="s2">&quot;http://0.0.0.0:9000/_uploads/photos/http://127.0.0.1:9000/_uploads/photos/222222/5d2812257b539bb.jpg&quot;</span>
-            <span class="p">}</span>
-        <span class="p">],</span>
-        <span class="s2">&quot;avatar&quot;</span><span class="o">:</span> <span class="s2">&quot;http://0.0.0.0:9000/_uploads/photos/http://127.0.0.1:9000/_uploads/photos/222222/5d2812257b539aa.jpg&quot;</span><span class="p">,</span>
-        <span class="s2">&quot;bank_addr&quot;</span><span class="o">:</span> <span class="kc">null</span><span class="p">,</span>
-        <span class="s2">&quot;bank_name&quot;</span><span class="o">:</span> <span class="kc">null</span><span class="p">,</span>
-        <span class="s2">&quot;brand_name&quot;</span><span class="o">:</span> <span class="s2">&quot;jkss &quot;</span><span class="p">,</span>
+        <span class="s2">&quot;attachment_id&quot;</span><span class="o">:</span> <span class="mi">0</span><span class="p">,</span>
+        <span class="s2">&quot;bank_addr&quot;</span><span class="o">:</span> <span class="s2">&quot;朝阳区酒仙桥支行&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;bank_name&quot;</span><span class="o">:</span> <span class="s2">&quot;中国银行&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;begin_at&quot;</span><span class="o">:</span> <span class="mi">1530609462</span><span class="p">,</span>
         <span class="s2">&quot;city&quot;</span><span class="o">:</span> <span class="s2">&quot;北京&quot;</span><span class="p">,</span>
-        <span class="s2">&quot;company_name&quot;</span><span class="o">:</span> <span class="s2">&quot;京东&quot;</span><span class="p">,</span>
-        <span class="s2">&quot;company_qualification&quot;</span><span class="o">:</span> <span class="p">[</span>
-            <span class="p">{</span>
-                <span class="s2">&quot;created_at&quot;</span><span class="o">:</span> <span class="kc">null</span><span class="p">,</span>
-                <span class="s2">&quot;filename&quot;</span><span class="o">:</span> <span class="s2">&quot;a&quot;</span><span class="p">,</span>
-                <span class="s2">&quot;filepath&quot;</span><span class="o">:</span> <span class="s2">&quot;http://127.0.0.1:9000/_uploads/photos/222222/5d2812257b539aa.jpg&quot;</span><span class="p">,</span>
-                <span class="s2">&quot;id&quot;</span><span class="o">:</span> <span class="mi">1</span><span class="p">,</span>
-                <span class="s2">&quot;type&quot;</span><span class="o">:</span> <span class="kc">null</span><span class="p">,</span>
-                <span class="s2">&quot;view_url&quot;</span><span class="o">:</span> <span class="s2">&quot;http://0.0.0.0:9000/_uploads/photos/http://127.0.0.1:9000/_uploads/photos/222222/5d2812257b539aa.jpg&quot;</span>
-            <span class="p">}</span>
-        <span class="p">],</span>
-        <span class="s2">&quot;contract_sn&quot;</span><span class="o">:</span> <span class="s2">&quot;MT201806291749&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;city_id&quot;</span><span class="o">:</span> <span class="mi">1</span><span class="p">,</span>
+        <span class="s2">&quot;contract_sn&quot;</span><span class="o">:</span> <span class="s2">&quot;MT201807036128&quot;</span><span class="p">,</span>
         <span class="s2">&quot;country&quot;</span><span class="o">:</span> <span class="s2">&quot;中国&quot;</span><span class="p">,</span>
-        <span class="s2">&quot;current_date&quot;</span><span class="o">:</span> <span class="s2">&quot;2018-06-29&quot;</span><span class="p">,</span>
-        <span class="s2">&quot;customized&quot;</span><span class="o">:</span> <span class="kc">true</span><span class="p">,</span>
-        <span class="s2">&quot;email&quot;</span><span class="o">:</span> <span class="s2">&quot;1346555456@qq.com&quot;</span><span class="p">,</span>
-        <span class="s2">&quot;expiration_date&quot;</span><span class="o">:</span> <span class="s2">&quot;2019-06-29&quot;</span><span class="p">,</span>
-        <span class="s2">&quot;front_card_photo&quot;</span><span class="o">:</span> <span class="s2">&quot;http://0.0.0.0:9000/_uploads/photos/http://127.0.0.1:9000/_uploads/photos/222222/5d2812257b539aa.jpg&quot;</span><span class="p">,</span>
-        <span class="s2">&quot;holding_card_photo&quot;</span><span class="o">:</span> <span class="s2">&quot;http://0.0.0.0:9000/_uploads/photos/http://127.0.0.1:9000/_uploads/photos/222222/5d2812257b539oo.jpg&quot;</span><span class="p">,</span>
-        <span class="s2">&quot;id&quot;</span><span class="o">:</span> <span class="mi">25</span><span class="p">,</span>
-        <span class="s2">&quot;id_card&quot;</span><span class="o">:</span> <span class="s2">&quot;13082119921226801x&quot;</span><span class="p">,</span>
-        <span class="s2">&quot;label_libraries&quot;</span><span class="o">:</span> <span class="p">[</span>
-            <span class="p">[</span>
-                <span class="mi">1</span><span class="p">,</span>
-                <span class="s2">&quot;十年老件&quot;</span>
-            <span class="p">]</span>
-        <span class="p">],</span>
-        <span class="s2">&quot;link&quot;</span><span class="o">:</span> <span class="s2">&quot;https://www.taobao.com,https://www.jingdong.com,https://www.tianmao.com&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;country_id&quot;</span><span class="o">:</span> <span class="mi">1</span><span class="p">,</span>
+        <span class="s2">&quot;email&quot;</span><span class="o">:</span> <span class="s2">&quot;8888888@qq.com&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;end_at&quot;</span><span class="o">:</span> <span class="mi">1562145462</span><span class="p">,</span>
+        <span class="s2">&quot;id&quot;</span><span class="o">:</span> <span class="mi">1</span><span class="p">,</span>
         <span class="s2">&quot;master_uid&quot;</span><span class="o">:</span> <span class="mi">2</span><span class="p">,</span>
-        <span class="s2">&quot;mobile&quot;</span><span class="o">:</span> <span class="s2">&quot;13001179400&quot;</span><span class="p">,</span>
-        <span class="s2">&quot;name&quot;</span><span class="o">:</span> <span class="s2">&quot;毛爷&quot;</span><span class="p">,</span>
-        <span class="s2">&quot;other_scope&quot;</span><span class="o">:</span> <span class="kc">null</span><span class="p">,</span>
-        <span class="s2">&quot;own_brand&quot;</span><span class="o">:</span> <span class="kc">false</span><span class="p">,</span>
-        <span class="s2">&quot;packaging&quot;</span><span class="o">:</span> <span class="kc">true</span><span class="p">,</span>
-        <span class="s2">&quot;packaging_file&quot;</span><span class="o">:</span> <span class="p">[</span>
-            <span class="p">{</span>
-                <span class="s2">&quot;created_at&quot;</span><span class="o">:</span> <span class="kc">null</span><span class="p">,</span>
-                <span class="s2">&quot;filename&quot;</span><span class="o">:</span> <span class="s2">&quot;e&quot;</span><span class="p">,</span>
-                <span class="s2">&quot;filepath&quot;</span><span class="o">:</span> <span class="s2">&quot;http://127.0.0.1:9000/_uploads/photos/222222/5d2812257b539bb.jpg&quot;</span><span class="p">,</span>
-                <span class="s2">&quot;id&quot;</span><span class="o">:</span> <span class="mi">2</span><span class="p">,</span>
-                <span class="s2">&quot;type&quot;</span><span class="o">:</span> <span class="kc">null</span><span class="p">,</span>
-                <span class="s2">&quot;view_url&quot;</span><span class="o">:</span> <span class="s2">&quot;http://0.0.0.0:9000/_uploads/photos/http://127.0.0.1:9000/_uploads/photos/222222/5d2812257b539bb.jpg&quot;</span>
-            <span class="p">},</span>
-            <span class="p">{</span>
-                <span class="s2">&quot;created_at&quot;</span><span class="o">:</span> <span class="kc">null</span><span class="p">,</span>
-                <span class="s2">&quot;filename&quot;</span><span class="o">:</span> <span class="s2">&quot;r&quot;</span><span class="p">,</span>
-                <span class="s2">&quot;filepath&quot;</span><span class="o">:</span> <span class="s2">&quot;http://127.0.0.1:9000/_uploads/photos/222222/5d2812257b539oo.jpg&quot;</span><span class="p">,</span>
-                <span class="s2">&quot;id&quot;</span><span class="o">:</span> <span class="mi">3</span><span class="p">,</span>
-                <span class="s2">&quot;type&quot;</span><span class="o">:</span> <span class="kc">null</span><span class="p">,</span>
-                <span class="s2">&quot;view_url&quot;</span><span class="o">:</span> <span class="s2">&quot;http://0.0.0.0:9000/_uploads/photos/http://127.0.0.1:9000/_uploads/photos/222222/5d2812257b539oo.jpg&quot;</span>
-            <span class="p">}</span>
-        <span class="p">],</span>
-        <span class="s2">&quot;patent&quot;</span><span class="o">:</span> <span class="kc">true</span><span class="p">,</span>
-        <span class="s2">&quot;patent_file&quot;</span><span class="o">:</span> <span class="p">[</span>
-            <span class="p">{</span>
-                <span class="s2">&quot;created_at&quot;</span><span class="o">:</span> <span class="kc">null</span><span class="p">,</span>
-                <span class="s2">&quot;filename&quot;</span><span class="o">:</span> <span class="s2">&quot;a&quot;</span><span class="p">,</span>
-                <span class="s2">&quot;filepath&quot;</span><span class="o">:</span> <span class="s2">&quot;http://127.0.0.1:9000/_uploads/photos/222222/5d2812257b539aa.jpg&quot;</span><span class="p">,</span>
-                <span class="s2">&quot;id&quot;</span><span class="o">:</span> <span class="mi">1</span><span class="p">,</span>
-                <span class="s2">&quot;type&quot;</span><span class="o">:</span> <span class="kc">null</span><span class="p">,</span>
-                <span class="s2">&quot;view_url&quot;</span><span class="o">:</span> <span class="s2">&quot;http://0.0.0.0:9000/_uploads/photos/http://127.0.0.1:9000/_uploads/photos/222222/5d2812257b539aa.jpg&quot;</span>
-            <span class="p">},</span>
-            <span class="p">{</span>
-                <span class="s2">&quot;created_at&quot;</span><span class="o">:</span> <span class="kc">null</span><span class="p">,</span>
-                <span class="s2">&quot;filename&quot;</span><span class="o">:</span> <span class="s2">&quot;e&quot;</span><span class="p">,</span>
-                <span class="s2">&quot;filepath&quot;</span><span class="o">:</span> <span class="s2">&quot;http://127.0.0.1:9000/_uploads/photos/222222/5d2812257b539bb.jpg&quot;</span><span class="p">,</span>
-                <span class="s2">&quot;id&quot;</span><span class="o">:</span> <span class="mi">2</span><span class="p">,</span>
-                <span class="s2">&quot;type&quot;</span><span class="o">:</span> <span class="kc">null</span><span class="p">,</span>
-                <span class="s2">&quot;view_url&quot;</span><span class="o">:</span> <span class="s2">&quot;http://0.0.0.0:9000/_uploads/photos/http://127.0.0.1:9000/_uploads/photos/222222/5d2812257b539bb.jpg&quot;</span>
-            <span class="p">}</span>
-        <span class="p">],</span>
-        <span class="s2">&quot;phone&quot;</span><span class="o">:</span> <span class="kc">null</span><span class="p">,</span>
-        <span class="s2">&quot;product_category&quot;</span><span class="o">:</span> <span class="s2">&quot;无人机&quot;</span><span class="p">,</span>
-        <span class="s2">&quot;product_price&quot;</span><span class="o">:</span> <span class="s2">&quot;22,99&quot;</span><span class="p">,</span>
-        <span class="s2">&quot;product_scope&quot;</span><span class="o">:</span> <span class="s2">&quot;原创商品，由本人或团队独立思考设计&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;mobile&quot;</span><span class="o">:</span> <span class="s2">&quot;13004578966&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;name&quot;</span><span class="o">:</span> <span class="s2">&quot;马化腾&quot;</span><span class="p">,</span>
         <span class="s2">&quot;province&quot;</span><span class="o">:</span> <span class="s2">&quot;北京&quot;</span><span class="p">,</span>
-        <span class="s2">&quot;qq&quot;</span><span class="o">:</span> <span class="kc">null</span><span class="p">,</span>
-        <span class="s2">&quot;reverse_card_photo&quot;</span><span class="o">:</span> <span class="s2">&quot;http://0.0.0.0:9000/_uploads/photos/http://127.0.0.1:9000/_uploads/photos/222222/5d2812257b539bb.jpg&quot;</span><span class="p">,</span>
-        <span class="s2">&quot;sale_platform&quot;</span><span class="o">:</span> <span class="s2">&quot;京东,淘宝,天猫&quot;</span><span class="p">,</span>
-        <span class="s2">&quot;secured_trade&quot;</span><span class="o">:</span> <span class="kc">true</span><span class="p">,</span>
-        <span class="s2">&quot;status&quot;</span><span class="o">:</span> <span class="mi">1</span><span class="p">,</span>
-        <span class="s2">&quot;street_address&quot;</span><span class="o">:</span> <span class="s2">&quot;中南海&quot;</span><span class="p">,</span>
-        <span class="s2">&quot;urgent_contact_mobile&quot;</span><span class="o">:</span> <span class="s2">&quot;15879456532&quot;</span><span class="p">,</span>
-        <span class="s2">&quot;urgent_contact_name&quot;</span><span class="o">:</span> <span class="s2">&quot;普京&quot;</span><span class="p">,</span>
-        <span class="s2">&quot;url&quot;</span><span class="o">:</span> <span class="s2">&quot;https://www.jd.com&quot;</span><span class="p">,</span>
-        <span class="s2">&quot;user_identity&quot;</span><span class="o">:</span> <span class="mi">1</span><span class="p">,</span>
-        <span class="s2">&quot;user_type&quot;</span><span class="o">:</span> <span class="mi">3</span><span class="p">,</span>
-        <span class="s2">&quot;username&quot;</span><span class="o">:</span> <span class="kc">null</span><span class="p">,</span>
-        <span class="s2">&quot;wechat&quot;</span><span class="o">:</span> <span class="s2">&quot;jksjk45&quot;</span>
+        <span class="s2">&quot;province_id&quot;</span><span class="o">:</span> <span class="mi">1</span><span class="p">,</span>
+        <span class="s2">&quot;second_party&quot;</span><span class="o">:</span> <span class="s2">&quot;京东商城&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;status&quot;</span><span class="o">:</span> <span class="mi">2</span><span class="p">,</span>
+        <span class="s2">&quot;street_address&quot;</span><span class="o">:</span> <span class="kc">null</span><span class="p">,</span>
+        <span class="s2">&quot;username&quot;</span><span class="o">:</span> <span class="s2">&quot;雷军&quot;</span>
     <span class="p">},</span>
     <span class="s2">&quot;status&quot;</span><span class="o">:</span> <span class="p">{</span>
         <span class="s2">&quot;code&quot;</span><span class="o">:</span> <span class="mi">201</span><span class="p">,</span>

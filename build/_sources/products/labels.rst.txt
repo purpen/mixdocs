@@ -30,18 +30,22 @@ JSON数据格式:
 
     {
         "data": {
-            "id": 1,
-            "name": "独家贩售",
-            "sort_order": 9
-        },
-        {
-            "id": 2,
-            "name": "环保有机",
-            "sort_order": 8
+            "labels": [
+                {
+                    "id": 1,
+                    "name": "独家贩售",
+                    "sort_order": 109
+                },
+                {
+                    "id": 2,
+                    "name": "环保有机",
+                    "sort_order": 108
+                }
+            ]
         },
         "status": {
-            "code": 201,
-            "message": "All created."
+            "code": 200,
+            "message": "Ok all right."
         },
         "success": true
     }

@@ -85,7 +85,7 @@ JSON数据格式:
 
 
 
-广告列表<未开通>
+广告列表
 ----------------
 获取广告列表
 
@@ -110,6 +110,100 @@ per_page     Number    可选         10        每页数量
 
 JSON数据格式:
 
+.. code-block:: javascript
+
+    {
+        "data": {
+            "banners": [
+                {
+                    "height": 40,
+                    "name": "广告",
+                    "rid": "8548462054",
+                    "status": 1,
+                    "width": 30
+                },
+                {
+                    "height": 20,
+                    "name": "001",
+                    "rid": "8946315464",
+                    "status": 1,
+                    "width": 20
+                }
+            ],
+            "count": 2,
+            "next": false,
+            "prev": false
+        },
+        "status": {
+            "code": 200,
+            "message": "Ok all right."
+        },
+        "success": true
+    }
+
+
+广告图列表
+----------------
+获取广告位中广告图列表
+
+接口说明
+~~~~~~~~~~~~~~
+
+* API接口请求地址：``/market/banners/<rid>``
+* API接口请求方法：``GET``
+
+请求参数
+~~~~~~~~~~~~~~~
+
+==============  ========  =========  ========  ====================================
+名称             类型      是否必须    默认值     描述说明
+==============  ========  =========  ========  ====================================
+page            Number    可选         1         当前页码
+per_page        Number    可选         5         每页数量
+banner_type     Number    可选         1         广告类型
+==============  ========  =========  ========  ====================================
+
+返回示例
+~~~~~~~~~~~~~~~~
+
+JSON数据格式:
+
+.. code-block:: javascript
+
+    {
+        "data": {
+            "banner_images": [
+                {
+                    "description": "广告图描述",
+                    "image": "http://127.0.0.1:9000/_uploads/photos/180530/72de0b9ca1ae5a3.jpg",
+                    "link": "链接地址",
+                    "rid": 4,
+                    "sort_order": "排序",
+                    "status": true,
+                    "title": "标题",
+                    "type": "0=全部, 1=链接地址, 2=商品, 3=分类, 4=品牌, 5=专题"
+                },
+                {
+                    "description": "广告图描述",
+                    "image": "http://127.0.0.1:9000/_uploads/photos/180530/72de0b9ca1ae5a3.jpg",
+                    "link": "链接地址",
+                    "rid": 3,
+                    "sort_order": 1,
+                    "status": true,
+                    "title": "标题",
+                    "type": 2
+                }
+            ],
+            "count": 2,
+            "next": false,
+            "prev": false
+        },
+        "status": {
+            "code": 200,
+            "message": "Ok all right."
+        },
+        "success": true
+    }
 
 
 新增广告信息<未开通>

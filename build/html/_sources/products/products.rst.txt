@@ -213,8 +213,8 @@ JSON数据格式:
 =====================  ==========  =========  ==========  =============================
 page                    Number      可选         1         当前页码
 per_page                Number      可选         10        每页数量
-start_date              Number      可选                   发布日期的开始时间戳
-end_date                Number      可选                   发布日期的结束时间戳
+start_date              String      可选                   发布日期的开始日期
+end_date                String      可选                   发布日期的结束日期
 cid                     Number      可选                   分类Id
 status                  Number      可选         1         商品状态 0:仓库中; 1:出售中; 2:下架中; 3:已售罄
 is_distributed          Number      可选                   商品类别 0: 全部; 1：自营商品；2：分销商品
