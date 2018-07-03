@@ -766,6 +766,7 @@ city_id           Integer   可选                  市ID
 area_id           Integer   可选                  区域ID
 street_address    String    必须                  详细地址
 name              String    必须                  联系人
+areacode          String    可选        +86       区号
 mobile            String    必须                  手机号
 email             String    必须                  邮箱
 bank_name         String    必须                  银行名称
