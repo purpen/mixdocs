@@ -742,8 +742,8 @@ JSON数据格式:
       "success": false
     }
 
-签署或修改合同
------------------
+签署或修改或续签合同
+---------------------
 
 接口说明
 ~~~~~~~~~~~~~~
@@ -759,7 +759,7 @@ JSON数据格式:
 ===============  ========  =========  ========  ====================================
 名称              类型      是否必须    默认值     描述说明
 ===============  ========  =========  ========  ====================================
-brand_name        String    必须                  乙方
+second_party      String    必须                  乙方
 country_id        Integer   必须                  国家ID
 province_id       Integer   必须                  省ID
 city_id           Integer   可选                  市ID
@@ -782,7 +782,7 @@ JSON数据格式:
 
 .. code-block:: javascript
 
-    {"brand_name":"京东商城","country_id":1,"province_id":1,"city_id":1,"area_id":5,"street_address":"中南海","name":"马化腾","areacode":"+86","mobile":"13004578966","email":"8888888@qq.com","bank_name":"中国银行", "username":"雷军","bank_addr":"朝阳区酒仙桥支行", "account":"6214865188793549"}
+    {"second_party":"京东商城","country_id":1,"province_id":1,"city_id":1,"area_id":5,"street_address":"中南海","name":"马化腾","areacode":"+86","mobile":"13004578966","email":"8888888@qq.com","bank_name":"中国银行", "username":"雷军","bank_addr":"朝阳区酒仙桥支行", "account":"6214865188793549"}
 
 返回示例
 ~~~~~~~~~~~~~~~~
@@ -796,21 +796,29 @@ JSON数据格式:
     {
         "data": {
             "account": "6214865188793549",
-            "area": "杨镇地区",
+            "area": "",
+            "area_id": null,
             "areacode": "+86",
+            "attachment_id": 0,
             "bank_addr": "朝阳区酒仙桥支行",
             "bank_name": "中国银行",
-            "brand_name": "京东商城",
+            "begin_at": 0,
             "city": "北京",
+            "city_id": 1,
+            "contract_sn": "MT201807036128",
             "country": "中国",
-            "current_time": 1529150144,
-            "expiration_time": 1560686144,
-            "id": 27,
+            "country_id": 1,
+            "email": "8888888@qq.com",
+            "end_at": 0,
+            "id": 1,
             "master_uid": 2,
             "mobile": "13004578966",
             "name": "马化腾",
             "province": "北京",
-            "street_address": "中南海",
+            "province_id": 1,
+            "second_party": "京东商城",
+            "status": 2,
+            "street_address": null,
             "username": "雷军"
         },
         "status": {
@@ -855,20 +863,29 @@ JSON数据格式:
     {
         "data": {
             "account": "6214865188793549",
-            "area": "顺义区",
+            "area": "",
+            "area_id": null,
+            "areacode": "+86",
+            "attachment_id": 0,
             "bank_addr": "朝阳区酒仙桥支行",
             "bank_name": "中国银行",
-            "brand_name": "jkss ",
+            "begin_at": 1530609462,
             "city": "北京",
+            "city_id": 1,
+            "contract_sn": "MT201807036128",
             "country": "中国",
-            "current_time": 1529128217,
-            "expiration_time": 1560664217,
-            "id": 27,
+            "country_id": 1,
+            "email": "8888888@qq.com",
+            "end_at": 1562145462,
+            "id": 1,
             "master_uid": 2,
-            "mobile": "13001179400",
-            "name": "毛爷爷",
+            "mobile": "13004578966",
+            "name": "马化腾",
             "province": "北京",
-            "street_address": "中南海",
+            "province_id": 1,
+            "second_party": "京东商城",
+            "status": 2,
+            "street_address": null,
             "username": "雷军"
         },
         "status": {
@@ -907,8 +924,8 @@ JSON数据格式:
 ===============  ========  =========  ========  ====================================
 名称              类型      是否必须    默认值     描述说明
 ===============  ========  =========  ========  ====================================
-current_date      String    必须                  合同签署日期
-expiration_date   String    必须                  合同结束日期
+begin_at          String    可选                  合同签署日期
+end_at            String    可选                  合同结束日期
 ===============  ========  =========  ========  ====================================
 
 返回示例
@@ -922,121 +939,31 @@ JSON数据格式:
 
     {
         "data": {
-            "account": null,
-            "area": null,
+            "account": "6214865188793549",
+            "area": "",
+            "area_id": null,
             "areacode": "+86",
-            "attachments": [
-                {
-                    "created_at": null,
-                    "filename": "a",
-                    "filepath": "http://127.0.0.1:9000/_uploads/photos/222222/5d2812257b539aa.jpg",
-                    "id": 1,
-                    "type": null,
-                    "view_url": "http://0.0.0.0:9000/_uploads/photos/http://127.0.0.1:9000/_uploads/photos/222222/5d2812257b539aa.jpg"
-                },
-                {
-                    "created_at": null,
-                    "filename": "e",
-                    "filepath": "http://127.0.0.1:9000/_uploads/photos/222222/5d2812257b539bb.jpg",
-                    "id": 2,
-                    "type": null,
-                    "view_url": "http://0.0.0.0:9000/_uploads/photos/http://127.0.0.1:9000/_uploads/photos/222222/5d2812257b539bb.jpg"
-                }
-            ],
-            "avatar": "http://0.0.0.0:9000/_uploads/photos/http://127.0.0.1:9000/_uploads/photos/222222/5d2812257b539aa.jpg",
-            "bank_addr": null,
-            "bank_name": null,
-            "brand_name": "jkss ",
+            "attachment_id": 0,
+            "bank_addr": "朝阳区酒仙桥支行",
+            "bank_name": "中国银行",
+            "begin_at": 1530609462,
             "city": "北京",
-            "company_name": "京东",
-            "company_qualification": [
-                {
-                    "created_at": null,
-                    "filename": "a",
-                    "filepath": "http://127.0.0.1:9000/_uploads/photos/222222/5d2812257b539aa.jpg",
-                    "id": 1,
-                    "type": null,
-                    "view_url": "http://0.0.0.0:9000/_uploads/photos/http://127.0.0.1:9000/_uploads/photos/222222/5d2812257b539aa.jpg"
-                }
-            ],
-            "contract_sn": "MT201806291749",
+            "city_id": 1,
+            "contract_sn": "MT201807036128",
             "country": "中国",
-            "current_date": "2018-06-29",
-            "customized": true,
-            "email": "1346555456@qq.com",
-            "expiration_date": "2019-06-29",
-            "front_card_photo": "http://0.0.0.0:9000/_uploads/photos/http://127.0.0.1:9000/_uploads/photos/222222/5d2812257b539aa.jpg",
-            "holding_card_photo": "http://0.0.0.0:9000/_uploads/photos/http://127.0.0.1:9000/_uploads/photos/222222/5d2812257b539oo.jpg",
-            "id": 25,
-            "id_card": "13082119921226801x",
-            "label_libraries": [
-                [
-                    1,
-                    "十年老件"
-                ]
-            ],
-            "link": "https://www.taobao.com,https://www.jingdong.com,https://www.tianmao.com",
+            "country_id": 1,
+            "email": "8888888@qq.com",
+            "end_at": 1562145462,
+            "id": 1,
             "master_uid": 2,
-            "mobile": "13001179400",
-            "name": "毛爷",
-            "other_scope": null,
-            "own_brand": false,
-            "packaging": true,
-            "packaging_file": [
-                {
-                    "created_at": null,
-                    "filename": "e",
-                    "filepath": "http://127.0.0.1:9000/_uploads/photos/222222/5d2812257b539bb.jpg",
-                    "id": 2,
-                    "type": null,
-                    "view_url": "http://0.0.0.0:9000/_uploads/photos/http://127.0.0.1:9000/_uploads/photos/222222/5d2812257b539bb.jpg"
-                },
-                {
-                    "created_at": null,
-                    "filename": "r",
-                    "filepath": "http://127.0.0.1:9000/_uploads/photos/222222/5d2812257b539oo.jpg",
-                    "id": 3,
-                    "type": null,
-                    "view_url": "http://0.0.0.0:9000/_uploads/photos/http://127.0.0.1:9000/_uploads/photos/222222/5d2812257b539oo.jpg"
-                }
-            ],
-            "patent": true,
-            "patent_file": [
-                {
-                    "created_at": null,
-                    "filename": "a",
-                    "filepath": "http://127.0.0.1:9000/_uploads/photos/222222/5d2812257b539aa.jpg",
-                    "id": 1,
-                    "type": null,
-                    "view_url": "http://0.0.0.0:9000/_uploads/photos/http://127.0.0.1:9000/_uploads/photos/222222/5d2812257b539aa.jpg"
-                },
-                {
-                    "created_at": null,
-                    "filename": "e",
-                    "filepath": "http://127.0.0.1:9000/_uploads/photos/222222/5d2812257b539bb.jpg",
-                    "id": 2,
-                    "type": null,
-                    "view_url": "http://0.0.0.0:9000/_uploads/photos/http://127.0.0.1:9000/_uploads/photos/222222/5d2812257b539bb.jpg"
-                }
-            ],
-            "phone": null,
-            "product_category": "无人机",
-            "product_price": "22,99",
-            "product_scope": "原创商品，由本人或团队独立思考设计",
+            "mobile": "13004578966",
+            "name": "马化腾",
             "province": "北京",
-            "qq": null,
-            "reverse_card_photo": "http://0.0.0.0:9000/_uploads/photos/http://127.0.0.1:9000/_uploads/photos/222222/5d2812257b539bb.jpg",
-            "sale_platform": "京东,淘宝,天猫",
-            "secured_trade": true,
-            "status": 1,
-            "street_address": "中南海",
-            "urgent_contact_mobile": "15879456532",
-            "urgent_contact_name": "普京",
-            "url": "https://www.jd.com",
-            "user_identity": 1,
-            "user_type": 3,
-            "username": null,
-            "wechat": "jksjk45"
+            "province_id": 1,
+            "second_party": "京东商城",
+            "status": 2,
+            "street_address": null,
+            "username": "雷军"
         },
         "status": {
             "code": 201,
