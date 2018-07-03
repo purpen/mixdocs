@@ -191,6 +191,76 @@ JSON数据格式
         "success": false
     }
 
+获取店铺(品牌馆)资质信息
+--------------------------
+
+
+接口说明
+~~~~~~~~~~~~~~
+
+* API接口请求地址：``/store/qualification``
+* API接口请求方法：``GET``
+* API接口用户授权：``token``
+
+返回示例
+~~~~~~~~~~~~~~~~
+
+JSON数据格式
+
+请求 **正确** 返回结果：
+
+.. code-block:: javascript
+
+    {
+        "data": {
+            "already_pay": 500,
+            "also_need_pay": 500,
+            "company_qualification": [
+                {
+                    "created_at": null,
+                    "filename": "e",
+                    "filepath": "http://127.0.0.1:9000/_uploads/photos/222222/5d2812257b539bb.jpg",
+                    "id": 2,
+                    "type": null,
+                    "view_url": "http://0.0.0.0:9000/_uploads/photos/http://127.0.0.1:9000/_uploads/photos/222222/5d2812257b539bb.jpg"
+                },
+                {
+                    "created_at": null,
+                    "filename": "r",
+                    "filepath": "http://127.0.0.1:9000/_uploads/photos/222222/5d2812257b539oo.jpg",
+                    "id": 3,
+                    "type": null,
+                    "view_url": "http://0.0.0.0:9000/_uploads/photos/http://127.0.0.1:9000/_uploads/photos/222222/5d2812257b539oo.jpg"
+                }
+            ],
+            "contract_sn": null,
+            "current_date": null,
+            "expiration_date": null,
+            "need_pay": "1000",
+            "product_price": "100,1000",
+            "secured_trade": false,
+            "status": 2,
+            "user_type": 3
+        },
+        "status": {
+            "code": 200,
+            "message": "Ok all right."
+        },
+        "success": true
+    }
+
+请求 ``失败`` 返回结果：
+
+.. code-block:: javascript
+
+    {
+        "status": {
+            "code": 404,
+            "message": "Not Found"
+        },
+        "success": false
+    }
+
 品牌馆基本信息设置或更新
 --------------------------
 
@@ -460,11 +530,141 @@ JSON数据格式
     }
 
 
+更新店铺设置信息
+-----------------------
+
+接口说明
+~~~~~~~~~~~~~~
+
+* API接口请求地址：``/store/update_info``
+* API接口请求方法：``POST``
+* API接口用户授权：``token``
+
+请求参数
+~~~~~~~~~~~~~~~
+
+=====================  ==========  =========  ==========  =============================
+名称                    类型        是否必须     默认值       描述说明
+=====================  ==========  =========  ==========  =============================
+name                    String      必须                      品牌馆名称
+logo_id                 Integer     必须                      品牌馆logoID
+bgcover_id              Integer     必须                      品牌馆背景图ID
+tag_line                String      必须                      宣传语
+categories              Array       必须                      产品分类ID
+delivery_country_id     Integer     必须                      发货国家ID
+delivery_province_id    Integer     必须                      发货省ID
+delivery_city_id        Integer     必须                      发货市ID
+=====================  ==========  =========  ==========  =============================
+
+请求示例
+~~~~~~~~~~~~~~~~
+
+JSON数据格式:
+
+.. code-block:: javascript
+
+    {"name":"盛夏的果实","logo_id":1,"bgcover_id":2,"tag_line":"chunmianbujue处处蚊子咬","categories":[1,2,3],"delivery_country_id":1,"delivery_province_id":1,"delivery_city_id":1}
+
+返回示例
+~~~~~~~~~~~~~~~~
+
+JSON数据格式
+
+请求 **正确** 返回结果：
+
+.. code-block:: javascript
+
+    {
+        "data": {
+            "areacode": "+86",
+            "begin_date": "2018-06-26",
+            "bgcover": {
+                "created_at": null,
+                "filename": "e",
+                "filepath": "http://127.0.0.1:9000/_uploads/photos/222222/5d2812257b539bb.jpg",
+                "id": 2,
+                "type": null,
+                "view_url": "http://0.0.0.0:9000/_uploads/photos/http://127.0.0.1:9000/_uploads/photos/222222/5d2812257b539bb.jpg"
+            },
+            "browse_number": 0,
+            "categories": [
+                [
+                    1,
+                    "手机"
+                ],
+                [
+                    2,
+                    "电脑"
+                ]
+            ],
+            "city": "北京",
+            "city_id": 1,
+            "country": "中国",
+            "country_id": 1,
+            "created_at": 1529143434,
+            "delivery_city": "北京",
+            "delivery_city_id": 1,
+            "delivery_country ": "中国",
+            "delivery_country_id": 1,
+            "delivery_date": "2018-06-30",
+            "delivery_province": "北京",
+            "delivery_province_id": 1,
+            "description": null,
+            "detail": {
+                "content": "要下雨了",
+                "id": 1,
+                "store_rid": "99627015"
+            },
+            "distribution_type": 0,
+            "end_date": "2018-06-26",
+            "fans_count": 0,
+            "is_closed": false,
+            "logo": {
+                "created_at": null,
+                "filename": "a",
+                "filepath": "http://127.0.0.1:9000/_uploads/photos/222222/5d2812257b539aa.jpg",
+                "id": 1,
+                "type": null,
+                "view_url": "http://0.0.0.0:9000/_uploads/photos/http://127.0.0.1:9000/_uploads/photos/222222/5d2812257b539aa.jpg"
+            },
+            "mobile": "15555555555",
+            "name": "盛夏的果实",
+            "pattern": -1,
+            "phone": "0314-7894561",
+            "province": "北京",
+            "province_id": 1,
+            "rid": "99627015",
+            "status": 1,
+            "tag_line": "chunmianbujue处处蚊子咬",
+            "type": 1
+        },
+        "status": {
+            "code": 200,
+            "message": "Ok all right."
+        },
+        "success": true
+    }
+
+请求 ``失败`` 返回结果：
+
+.. code-block:: javascript
+
+    {
+        "status": {
+            "code": 404,
+            "message": "Not Found"
+        },
+        "success": false
+    }
+
+
 新增或更新店铺品牌故事
 -----------------------
 
 接口说明
 ~~~~~~~~~~~~~~
+
+
 
 * API接口请求地址：``/store/<string:rid>/detail``
 * API接口请求方法：``POST``
