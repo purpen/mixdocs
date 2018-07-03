@@ -536,6 +536,7 @@
                 <span class="s2">&quot;pay_amount&quot;</span><span class="p">:</span> <span class="mi">17</span><span class="p">,</span>  <span class="o">//</span> <span class="n">支付金额</span>
                 <span class="s2">&quot;reach_minus&quot;</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span>  <span class="o">//</span> <span class="n">满减金额</span>
                 <span class="s2">&quot;received_at&quot;</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span>  <span class="o">//</span> <span class="n">收货时间</span>
+                <span class="s2">&quot;distributed&quot;</span><span class="p">:</span> <span class="n">false</span><span class="p">,</span>  <span class="o">//</span> <span class="n">分销订单</span>
                 <span class="s2">&quot;remark&quot;</span><span class="p">:</span> <span class="n">null</span><span class="p">,</span>  <span class="o">//</span> <span class="n">卖家备注</span>
                 <span class="s2">&quot;rid&quot;</span><span class="p">:</span> <span class="s2">&quot;D18070316803529&quot;</span><span class="p">,</span>  <span class="o">//</span> <span class="n">订单编号</span>
                 <span class="s2">&quot;ship_mode&quot;</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span>  <span class="o">//</span> <span class="n">运送方式</span>
@@ -545,6 +546,8 @@
                 <span class="s2">&quot;total_quantity&quot;</span><span class="p">:</span> <span class="mi">3</span>  <span class="o">//</span> <span class="n">商品总数量</span>
                 <span class="s2">&quot;items&quot;</span><span class="p">:</span> <span class="p">[</span>
                     <span class="p">{</span>
+                        <span class="s2">&quot;commission_price&quot;</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span>  <span class="o">//</span> <span class="n">佣金</span>
+                        <span class="s2">&quot;commission_rate&quot;</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span>  <span class="o">//</span> <span class="n">佣金比</span>
                         <span class="s2">&quot;cover&quot;</span><span class="p">:</span> <span class="s2">&quot;http://0.0.0.0:9000/_uploads/photos/1&quot;</span><span class="p">,</span>
                         <span class="s2">&quot;deal_price&quot;</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span>  <span class="o">//</span> <span class="n">交易价格</span>
                         <span class="s2">&quot;express&quot;</span><span class="p">:</span> <span class="mi">4</span><span class="p">,</span>  <span class="o">//</span> <span class="n">快递公司ID</span>
@@ -631,6 +634,18 @@
 <td>&#160;</td>
 <td>未付款  0、未付款</td>
 </tr>
+<tr class="row-even"><td>create_at</td>
+<td>String</td>
+<td>可选</td>
+<td>&#160;</td>
+<td>下单时间</td>
+</tr>
+<tr class="row-odd"><td>search</td>
+<td>String</td>
+<td>可选</td>
+<td>&#160;</td>
+<td>商品名称或订单编号</td>
+</tr>
 <tr class="row-even"><td>page</td>
 <td>Number</td>
 <td>可选</td>
@@ -675,6 +690,7 @@
                 <span class="s2">&quot;pay_amount&quot;</span><span class="p">:</span> <span class="mi">17</span><span class="p">,</span>  <span class="o">//</span> <span class="n">支付金额</span>
                 <span class="s2">&quot;reach_minus&quot;</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span>  <span class="o">//</span> <span class="n">满减金额</span>
                 <span class="s2">&quot;received_at&quot;</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span>  <span class="o">//</span> <span class="n">收货时间</span>
+                <span class="s2">&quot;distributed&quot;</span><span class="p">:</span> <span class="n">false</span><span class="p">,</span>  <span class="o">//</span> <span class="n">分销订单</span>
                 <span class="s2">&quot;remark&quot;</span><span class="p">:</span> <span class="n">null</span><span class="p">,</span>  <span class="o">//</span> <span class="n">卖家备注</span>
                 <span class="s2">&quot;rid&quot;</span><span class="p">:</span> <span class="s2">&quot;D18070316803529&quot;</span><span class="p">,</span>  <span class="o">//</span> <span class="n">订单编号</span>
                 <span class="s2">&quot;ship_mode&quot;</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span>  <span class="o">//</span> <span class="n">运送方式</span>
@@ -684,6 +700,8 @@
                 <span class="s2">&quot;total_quantity&quot;</span><span class="p">:</span> <span class="mi">3</span>  <span class="o">//</span> <span class="n">商品总数量</span>
                 <span class="s2">&quot;items&quot;</span><span class="p">:</span> <span class="p">[</span>
                     <span class="p">{</span>
+                        <span class="s2">&quot;commission_price&quot;</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span>  <span class="o">//</span> <span class="n">佣金</span>
+                        <span class="s2">&quot;commission_rate&quot;</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span>  <span class="o">//</span> <span class="n">佣金比</span>
                         <span class="s2">&quot;cover&quot;</span><span class="p">:</span> <span class="s2">&quot;http://0.0.0.0:9000/_uploads/photos/1&quot;</span><span class="p">,</span>
                         <span class="s2">&quot;deal_price&quot;</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span>  <span class="o">//</span> <span class="n">交易价格</span>
                         <span class="s2">&quot;express&quot;</span><span class="p">:</span> <span class="mi">4</span><span class="p">,</span>  <span class="o">//</span> <span class="n">快递公司ID</span>
@@ -792,6 +810,7 @@
         <span class="s2">&quot;pay_amount&quot;</span><span class="o">:</span> <span class="mi">17</span><span class="p">,</span>  <span class="c1">// 支付金额</span>
         <span class="s2">&quot;reach_minus&quot;</span><span class="o">:</span> <span class="mi">0</span><span class="p">,</span>  <span class="c1">// 满减金额</span>
         <span class="s2">&quot;received_at&quot;</span><span class="o">:</span> <span class="mi">0</span><span class="p">,</span>  <span class="c1">// 收货时间</span>
+        <span class="s2">&quot;distributed&quot;</span><span class="o">:</span> <span class="kc">false</span><span class="p">,</span>  <span class="c1">// 分销订单</span>
         <span class="s2">&quot;remark&quot;</span><span class="o">:</span> <span class="kc">null</span><span class="p">,</span>  <span class="c1">// 卖家备注</span>
         <span class="s2">&quot;rid&quot;</span><span class="o">:</span> <span class="s2">&quot;D18070316803529&quot;</span><span class="p">,</span>  <span class="c1">// 订单编号</span>
         <span class="s2">&quot;ship_mode&quot;</span><span class="o">:</span> <span class="mi">1</span><span class="p">,</span>  <span class="c1">// 运送方式</span>
@@ -801,6 +820,8 @@
         <span class="s2">&quot;total_quantity&quot;</span><span class="o">:</span> <span class="mi">3</span>  <span class="c1">// 商品总数量</span>
         <span class="s2">&quot;items&quot;</span><span class="o">:</span> <span class="p">[</span>
             <span class="p">{</span>
+                <span class="s2">&quot;commission_price&quot;</span><span class="o">:</span> <span class="mi">0</span><span class="p">,</span>  <span class="c1">// 佣金</span>
+                <span class="s2">&quot;commission_rate&quot;</span><span class="o">:</span> <span class="mi">0</span><span class="p">,</span>  <span class="c1">// 佣金比</span>
                 <span class="s2">&quot;cover&quot;</span><span class="o">:</span> <span class="s2">&quot;http://0.0.0.0:9000/_uploads/photos/1&quot;</span><span class="p">,</span>
                 <span class="s2">&quot;deal_price&quot;</span><span class="o">:</span> <span class="mi">1</span><span class="p">,</span>  <span class="c1">// 交易价格</span>
                 <span class="s2">&quot;express&quot;</span><span class="o">:</span> <span class="mi">4</span><span class="p">,</span>  <span class="c1">// 快递公司ID</span>
@@ -1082,6 +1103,7 @@
                 <span class="s2">&quot;pay_amount&quot;</span><span class="o">:</span> <span class="mi">17</span><span class="p">,</span>  <span class="c1">// 支付金额</span>
                 <span class="s2">&quot;reach_minus&quot;</span><span class="o">:</span> <span class="mi">0</span><span class="p">,</span>  <span class="c1">// 满减金额</span>
                 <span class="s2">&quot;received_at&quot;</span><span class="o">:</span> <span class="mi">0</span><span class="p">,</span>  <span class="c1">// 收货时间</span>
+                <span class="s2">&quot;distributed&quot;</span><span class="o">:</span> <span class="kc">false</span><span class="p">,</span>  <span class="c1">// 分销订单</span>
                 <span class="s2">&quot;remark&quot;</span><span class="o">:</span> <span class="kc">null</span><span class="p">,</span>  <span class="c1">// 卖家备注</span>
                 <span class="s2">&quot;rid&quot;</span><span class="o">:</span> <span class="s2">&quot;D18070316803529&quot;</span><span class="p">,</span>  <span class="c1">// 订单编号</span>
                 <span class="s2">&quot;ship_mode&quot;</span><span class="o">:</span> <span class="mi">1</span><span class="p">,</span>  <span class="c1">// 运送方式</span>
@@ -1091,6 +1113,8 @@
                 <span class="s2">&quot;total_quantity&quot;</span><span class="o">:</span> <span class="mi">3</span>  <span class="c1">// 商品总数量</span>
                 <span class="s2">&quot;items&quot;</span><span class="o">:</span> <span class="p">[</span>
                     <span class="p">{</span>
+                        <span class="s2">&quot;commission_price&quot;</span><span class="o">:</span> <span class="mi">0</span><span class="p">,</span>  <span class="c1">// 佣金</span>
+                        <span class="s2">&quot;commission_rate&quot;</span><span class="o">:</span> <span class="mi">0</span><span class="p">,</span>  <span class="c1">// 佣金比</span>
                         <span class="s2">&quot;cover&quot;</span><span class="o">:</span> <span class="s2">&quot;http://0.0.0.0:9000/_uploads/photos/1&quot;</span><span class="p">,</span>
                         <span class="s2">&quot;deal_price&quot;</span><span class="o">:</span> <span class="mi">1</span><span class="p">,</span>  <span class="c1">// 交易价格</span>
                         <span class="s2">&quot;express&quot;</span><span class="o">:</span> <span class="mi">4</span><span class="p">,</span>  <span class="c1">// 快递公司ID</span>
@@ -1527,6 +1551,7 @@
                 <span class="s2">&quot;pay_amount&quot;</span><span class="o">:</span> <span class="mi">17</span><span class="p">,</span>  <span class="c1">// 支付金额</span>
                 <span class="s2">&quot;reach_minus&quot;</span><span class="o">:</span> <span class="mi">0</span><span class="p">,</span>  <span class="c1">// 满减金额</span>
                 <span class="s2">&quot;received_at&quot;</span><span class="o">:</span> <span class="mi">0</span><span class="p">,</span>  <span class="c1">// 收货时间</span>
+                <span class="s2">&quot;distributed&quot;</span><span class="o">:</span> <span class="kc">false</span><span class="p">,</span>  <span class="c1">// 分销订单</span>
                 <span class="s2">&quot;remark&quot;</span><span class="o">:</span> <span class="kc">null</span><span class="p">,</span>  <span class="c1">// 卖家备注</span>
                 <span class="s2">&quot;rid&quot;</span><span class="o">:</span> <span class="s2">&quot;D18070316803529&quot;</span><span class="p">,</span>  <span class="c1">// 订单编号</span>
                 <span class="s2">&quot;ship_mode&quot;</span><span class="o">:</span> <span class="mi">1</span><span class="p">,</span>  <span class="c1">// 运送方式</span>
@@ -1536,6 +1561,8 @@
                 <span class="s2">&quot;total_quantity&quot;</span><span class="o">:</span> <span class="mi">3</span>  <span class="c1">// 商品总数量</span>
                 <span class="s2">&quot;items&quot;</span><span class="o">:</span> <span class="p">[</span>
                     <span class="p">{</span>
+                        <span class="s2">&quot;commission_price&quot;</span><span class="o">:</span> <span class="mi">0</span><span class="p">,</span>  <span class="c1">// 佣金</span>
+                        <span class="s2">&quot;commission_rate&quot;</span><span class="o">:</span> <span class="mi">0</span><span class="p">,</span>  <span class="c1">// 佣金比</span>
                         <span class="s2">&quot;cover&quot;</span><span class="o">:</span> <span class="s2">&quot;http://0.0.0.0:9000/_uploads/photos/1&quot;</span><span class="p">,</span>
                         <span class="s2">&quot;deal_price&quot;</span><span class="o">:</span> <span class="mi">1</span><span class="p">,</span>  <span class="c1">// 交易价格</span>
                         <span class="s2">&quot;express&quot;</span><span class="o">:</span> <span class="mi">4</span><span class="p">,</span>  <span class="c1">// 快递公司ID</span>
@@ -1633,6 +1660,7 @@
                 <span class="s2">&quot;pay_amount&quot;</span><span class="o">:</span> <span class="mi">17</span><span class="p">,</span>  <span class="c1">// 支付金额</span>
                 <span class="s2">&quot;reach_minus&quot;</span><span class="o">:</span> <span class="mi">0</span><span class="p">,</span>  <span class="c1">// 满减金额</span>
                 <span class="s2">&quot;received_at&quot;</span><span class="o">:</span> <span class="mi">0</span><span class="p">,</span>  <span class="c1">// 收货时间</span>
+                <span class="s2">&quot;distributed&quot;</span><span class="o">:</span> <span class="kc">false</span><span class="p">,</span>  <span class="c1">// 分销订单</span>
                 <span class="s2">&quot;remark&quot;</span><span class="o">:</span> <span class="kc">null</span><span class="p">,</span>  <span class="c1">// 卖家备注</span>
                 <span class="s2">&quot;rid&quot;</span><span class="o">:</span> <span class="s2">&quot;D18070316803529&quot;</span><span class="p">,</span>  <span class="c1">// 订单编号</span>
                 <span class="s2">&quot;ship_mode&quot;</span><span class="o">:</span> <span class="mi">1</span><span class="p">,</span>  <span class="c1">// 运送方式</span>
@@ -1642,6 +1670,8 @@
                 <span class="s2">&quot;total_quantity&quot;</span><span class="o">:</span> <span class="mi">3</span>  <span class="c1">// 商品总数量</span>
                 <span class="s2">&quot;items&quot;</span><span class="o">:</span> <span class="p">[</span>
                     <span class="p">{</span>
+                        <span class="s2">&quot;commission_price&quot;</span><span class="o">:</span> <span class="mi">0</span><span class="p">,</span>  <span class="c1">// 佣金</span>
+                        <span class="s2">&quot;commission_rate&quot;</span><span class="o">:</span> <span class="mi">0</span><span class="p">,</span>  <span class="c1">// 佣金比</span>
                         <span class="s2">&quot;cover&quot;</span><span class="o">:</span> <span class="s2">&quot;http://0.0.0.0:9000/_uploads/photos/1&quot;</span><span class="p">,</span>
                         <span class="s2">&quot;deal_price&quot;</span><span class="o">:</span> <span class="mi">1</span><span class="p">,</span>  <span class="c1">// 交易价格</span>
                         <span class="s2">&quot;express&quot;</span><span class="o">:</span> <span class="mi">4</span><span class="p">,</span>  <span class="c1">// 快递公司ID</span>
@@ -1739,6 +1769,7 @@
                 <span class="s2">&quot;pay_amount&quot;</span><span class="o">:</span> <span class="mi">17</span><span class="p">,</span>  <span class="c1">// 支付金额</span>
                 <span class="s2">&quot;reach_minus&quot;</span><span class="o">:</span> <span class="mi">0</span><span class="p">,</span>  <span class="c1">// 满减金额</span>
                 <span class="s2">&quot;received_at&quot;</span><span class="o">:</span> <span class="mi">0</span><span class="p">,</span>  <span class="c1">// 收货时间</span>
+                <span class="s2">&quot;distributed&quot;</span><span class="o">:</span> <span class="kc">false</span><span class="p">,</span>  <span class="c1">// 分销订单</span>
                 <span class="s2">&quot;remark&quot;</span><span class="o">:</span> <span class="kc">null</span><span class="p">,</span>  <span class="c1">// 卖家备注</span>
                 <span class="s2">&quot;rid&quot;</span><span class="o">:</span> <span class="s2">&quot;D18070316803529&quot;</span><span class="p">,</span>  <span class="c1">// 订单编号</span>
                 <span class="s2">&quot;ship_mode&quot;</span><span class="o">:</span> <span class="mi">1</span><span class="p">,</span>  <span class="c1">// 运送方式</span>
@@ -1748,6 +1779,8 @@
                 <span class="s2">&quot;total_quantity&quot;</span><span class="o">:</span> <span class="mi">3</span>  <span class="c1">// 商品总数量</span>
                 <span class="s2">&quot;items&quot;</span><span class="o">:</span> <span class="p">[</span>
                     <span class="p">{</span>
+                        <span class="s2">&quot;commission_price&quot;</span><span class="o">:</span> <span class="mi">0</span><span class="p">,</span>  <span class="c1">// 佣金</span>
+                        <span class="s2">&quot;commission_rate&quot;</span><span class="o">:</span> <span class="mi">0</span><span class="p">,</span>  <span class="c1">// 佣金比</span>
                         <span class="s2">&quot;cover&quot;</span><span class="o">:</span> <span class="s2">&quot;http://0.0.0.0:9000/_uploads/photos/1&quot;</span><span class="p">,</span>
                         <span class="s2">&quot;deal_price&quot;</span><span class="o">:</span> <span class="mi">1</span><span class="p">,</span>  <span class="c1">// 交易价格</span>
                         <span class="s2">&quot;express&quot;</span><span class="o">:</span> <span class="mi">4</span><span class="p">,</span>  <span class="c1">// 快递公司ID</span>
@@ -1845,6 +1878,7 @@
                 <span class="s2">&quot;pay_amount&quot;</span><span class="o">:</span> <span class="mi">17</span><span class="p">,</span>  <span class="c1">// 支付金额</span>
                 <span class="s2">&quot;reach_minus&quot;</span><span class="o">:</span> <span class="mi">0</span><span class="p">,</span>  <span class="c1">// 满减金额</span>
                 <span class="s2">&quot;received_at&quot;</span><span class="o">:</span> <span class="mi">0</span><span class="p">,</span>  <span class="c1">// 收货时间</span>
+                <span class="s2">&quot;distributed&quot;</span><span class="o">:</span> <span class="kc">false</span><span class="p">,</span>  <span class="c1">// 分销订单</span>
                 <span class="s2">&quot;remark&quot;</span><span class="o">:</span> <span class="kc">null</span><span class="p">,</span>  <span class="c1">// 卖家备注</span>
                 <span class="s2">&quot;rid&quot;</span><span class="o">:</span> <span class="s2">&quot;D18070316803529&quot;</span><span class="p">,</span>  <span class="c1">// 订单编号</span>
                 <span class="s2">&quot;ship_mode&quot;</span><span class="o">:</span> <span class="mi">1</span><span class="p">,</span>  <span class="c1">// 运送方式</span>
@@ -1854,6 +1888,8 @@
                 <span class="s2">&quot;total_quantity&quot;</span><span class="o">:</span> <span class="mi">3</span>  <span class="c1">// 商品总数量</span>
                 <span class="s2">&quot;items&quot;</span><span class="o">:</span> <span class="p">[</span>
                     <span class="p">{</span>
+                        <span class="s2">&quot;commission_price&quot;</span><span class="o">:</span> <span class="mi">0</span><span class="p">,</span>  <span class="c1">// 佣金</span>
+                        <span class="s2">&quot;commission_rate&quot;</span><span class="o">:</span> <span class="mi">0</span><span class="p">,</span>  <span class="c1">// 佣金比</span>
                         <span class="s2">&quot;cover&quot;</span><span class="o">:</span> <span class="s2">&quot;http://0.0.0.0:9000/_uploads/photos/1&quot;</span><span class="p">,</span>
                         <span class="s2">&quot;deal_price&quot;</span><span class="o">:</span> <span class="mi">1</span><span class="p">,</span>  <span class="c1">// 交易价格</span>
                         <span class="s2">&quot;express&quot;</span><span class="o">:</span> <span class="mi">4</span><span class="p">,</span>  <span class="c1">// 快递公司ID</span>
@@ -1951,6 +1987,7 @@
                 <span class="s2">&quot;pay_amount&quot;</span><span class="o">:</span> <span class="mi">17</span><span class="p">,</span>  <span class="c1">// 支付金额</span>
                 <span class="s2">&quot;reach_minus&quot;</span><span class="o">:</span> <span class="mi">0</span><span class="p">,</span>  <span class="c1">// 满减金额</span>
                 <span class="s2">&quot;received_at&quot;</span><span class="o">:</span> <span class="mi">0</span><span class="p">,</span>  <span class="c1">// 收货时间</span>
+                <span class="s2">&quot;distributed&quot;</span><span class="o">:</span> <span class="kc">false</span><span class="p">,</span>  <span class="c1">// 分销订单</span>
                 <span class="s2">&quot;remark&quot;</span><span class="o">:</span> <span class="kc">null</span><span class="p">,</span>  <span class="c1">// 卖家备注</span>
                 <span class="s2">&quot;rid&quot;</span><span class="o">:</span> <span class="s2">&quot;D18070316803529&quot;</span><span class="p">,</span>  <span class="c1">// 订单编号</span>
                 <span class="s2">&quot;ship_mode&quot;</span><span class="o">:</span> <span class="mi">1</span><span class="p">,</span>  <span class="c1">// 运送方式</span>
@@ -1960,6 +1997,8 @@
                 <span class="s2">&quot;total_quantity&quot;</span><span class="o">:</span> <span class="mi">3</span>  <span class="c1">// 商品总数量</span>
                 <span class="s2">&quot;items&quot;</span><span class="o">:</span> <span class="p">[</span>
                     <span class="p">{</span>
+                        <span class="s2">&quot;commission_price&quot;</span><span class="o">:</span> <span class="mi">0</span><span class="p">,</span>  <span class="c1">// 佣金</span>
+                        <span class="s2">&quot;commission_rate&quot;</span><span class="o">:</span> <span class="mi">0</span><span class="p">,</span>  <span class="c1">// 佣金比</span>
                         <span class="s2">&quot;cover&quot;</span><span class="o">:</span> <span class="s2">&quot;http://0.0.0.0:9000/_uploads/photos/1&quot;</span><span class="p">,</span>
                         <span class="s2">&quot;deal_price&quot;</span><span class="o">:</span> <span class="mi">1</span><span class="p">,</span>  <span class="c1">// 交易价格</span>
                         <span class="s2">&quot;express&quot;</span><span class="o">:</span> <span class="mi">4</span><span class="p">,</span>  <span class="c1">// 快递公司ID</span>
@@ -2057,6 +2096,7 @@
                 <span class="s2">&quot;pay_amount&quot;</span><span class="o">:</span> <span class="mi">17</span><span class="p">,</span>  <span class="c1">// 支付金额</span>
                 <span class="s2">&quot;reach_minus&quot;</span><span class="o">:</span> <span class="mi">0</span><span class="p">,</span>  <span class="c1">// 满减金额</span>
                 <span class="s2">&quot;received_at&quot;</span><span class="o">:</span> <span class="mi">0</span><span class="p">,</span>  <span class="c1">// 收货时间</span>
+                <span class="s2">&quot;distributed&quot;</span><span class="o">:</span> <span class="kc">false</span><span class="p">,</span>  <span class="c1">// 分销订单</span>
                 <span class="s2">&quot;remark&quot;</span><span class="o">:</span> <span class="kc">null</span><span class="p">,</span>  <span class="c1">// 卖家备注</span>
                 <span class="s2">&quot;rid&quot;</span><span class="o">:</span> <span class="s2">&quot;D18070316803529&quot;</span><span class="p">,</span>  <span class="c1">// 订单编号</span>
                 <span class="s2">&quot;ship_mode&quot;</span><span class="o">:</span> <span class="mi">1</span><span class="p">,</span>  <span class="c1">// 运送方式</span>
@@ -2066,6 +2106,8 @@
                 <span class="s2">&quot;total_quantity&quot;</span><span class="o">:</span> <span class="mi">3</span>  <span class="c1">// 商品总数量</span>
                 <span class="s2">&quot;items&quot;</span><span class="o">:</span> <span class="p">[</span>
                     <span class="p">{</span>
+                        <span class="s2">&quot;commission_price&quot;</span><span class="o">:</span> <span class="mi">0</span><span class="p">,</span>  <span class="c1">// 佣金</span>
+                        <span class="s2">&quot;commission_rate&quot;</span><span class="o">:</span> <span class="mi">0</span><span class="p">,</span>  <span class="c1">// 佣金比</span>
                         <span class="s2">&quot;cover&quot;</span><span class="o">:</span> <span class="s2">&quot;http://0.0.0.0:9000/_uploads/photos/1&quot;</span><span class="p">,</span>
                         <span class="s2">&quot;deal_price&quot;</span><span class="o">:</span> <span class="mi">1</span><span class="p">,</span>  <span class="c1">// 交易价格</span>
                         <span class="s2">&quot;express&quot;</span><span class="o">:</span> <span class="mi">4</span><span class="p">,</span>  <span class="c1">// 快递公司ID</span>
@@ -2163,6 +2205,7 @@
             <span class="s2">&quot;pay_amount&quot;</span><span class="o">:</span> <span class="mi">17</span><span class="p">,</span>  <span class="c1">// 支付金额</span>
             <span class="s2">&quot;reach_minus&quot;</span><span class="o">:</span> <span class="mi">0</span><span class="p">,</span>  <span class="c1">// 满减金额</span>
             <span class="s2">&quot;received_at&quot;</span><span class="o">:</span> <span class="mi">0</span><span class="p">,</span>  <span class="c1">// 收货时间</span>
+            <span class="s2">&quot;distributed&quot;</span><span class="o">:</span> <span class="kc">false</span><span class="p">,</span>  <span class="c1">// 分销订单</span>
             <span class="s2">&quot;remark&quot;</span><span class="o">:</span> <span class="kc">null</span><span class="p">,</span>  <span class="c1">// 卖家备注</span>
             <span class="s2">&quot;rid&quot;</span><span class="o">:</span> <span class="s2">&quot;D18070316803529&quot;</span><span class="p">,</span>  <span class="c1">// 订单编号</span>
             <span class="s2">&quot;ship_mode&quot;</span><span class="o">:</span> <span class="mi">1</span><span class="p">,</span>  <span class="c1">// 运送方式</span>
@@ -2172,6 +2215,8 @@
             <span class="s2">&quot;total_quantity&quot;</span><span class="o">:</span> <span class="mi">3</span>  <span class="c1">// 商品总数量</span>
             <span class="s2">&quot;items&quot;</span><span class="o">:</span> <span class="p">[</span>
                 <span class="p">{</span>
+                    <span class="s2">&quot;commission_price&quot;</span><span class="o">:</span> <span class="mi">0</span><span class="p">,</span>  <span class="c1">// 佣金</span>
+                    <span class="s2">&quot;commission_rate&quot;</span><span class="o">:</span> <span class="mi">0</span><span class="p">,</span>  <span class="c1">// 佣金比</span>
                     <span class="s2">&quot;cover&quot;</span><span class="o">:</span> <span class="s2">&quot;http://0.0.0.0:9000/_uploads/photos/1&quot;</span><span class="p">,</span>
                     <span class="s2">&quot;deal_price&quot;</span><span class="o">:</span> <span class="mi">1</span><span class="p">,</span>  <span class="c1">// 交易价格</span>
                     <span class="s2">&quot;express&quot;</span><span class="o">:</span> <span class="mi">4</span><span class="p">,</span>  <span class="c1">// 快递公司ID</span>

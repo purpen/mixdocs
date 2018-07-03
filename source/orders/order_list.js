@@ -24,6 +24,7 @@
                 "pay_amount": 17,  // 支付金额
                 "reach_minus": 0,  // 满减金额
                 "received_at": 0,  // 收货时间
+                "distributed": false,  // 分销订单
                 "remark": null,  // 卖家备注
                 "rid": "D18070316803529",  // 订单编号
                 "ship_mode": 1,  // 运送方式
@@ -33,6 +34,8 @@
                 "total_quantity": 3  // 商品总数量
                 "items": [
                     {
+                        "commission_price": 0,  // 佣金
+                        "commission_rate": 0,  // 佣金比
                         "cover": "http://0.0.0.0:9000/_uploads/photos/1",
                         "deal_price": 1,  // 交易价格
                         "express": 4,  // 快递公司ID

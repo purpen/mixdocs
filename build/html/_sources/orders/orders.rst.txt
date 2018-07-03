@@ -69,6 +69,8 @@ JSON数据格式:
 ===========  ========  =========  ========  ==============================================
 status	     Number	   可选	 	             订单状态 1、待发货 2、已发货 3、已完成 4、已取消
 no_pay       Number    可选                   未付款  0、未付款
+create_at    String    可选                   下单时间
+search       String    可选                   商品名称或订单编号
 page         Number    可选         1         当前页码
 per_page     Number    可选         10        每页数量
 ===========  ========  =========  ========  ==============================================
@@ -142,6 +144,7 @@ JSON数据格式:
             "pay_amount": 17,  // 支付金额
             "reach_minus": 0,  // 满减金额
             "received_at": 0,  // 收货时间
+            "distributed": false,  // 分销订单
             "remark": null,  // 卖家备注
             "rid": "D18070316803529",  // 订单编号
             "ship_mode": 1,  // 运送方式
@@ -151,6 +154,8 @@ JSON数据格式:
             "total_quantity": 3  // 商品总数量
             "items": [
                 {
+                    "commission_price": 0,  // 佣金
+                    "commission_rate": 0,  // 佣金比
                     "cover": "http://0.0.0.0:9000/_uploads/photos/1",
                     "deal_price": 1,  // 交易价格
                     "express": 4,  // 快递公司ID
@@ -302,6 +307,7 @@ JSON数据格式:
                     "pay_amount": 17,  // 支付金额
                     "reach_minus": 0,  // 满减金额
                     "received_at": 0,  // 收货时间
+                    "distributed": false,  // 分销订单
                     "remark": null,  // 卖家备注
                     "rid": "D18070316803529",  // 订单编号
                     "ship_mode": 1,  // 运送方式
@@ -311,6 +317,8 @@ JSON数据格式:
                     "total_quantity": 3  // 商品总数量
                     "items": [
                         {
+                            "commission_price": 0,  // 佣金
+                            "commission_rate": 0,  // 佣金比
                             "cover": "http://0.0.0.0:9000/_uploads/photos/1",
                             "deal_price": 1,  // 交易价格
                             "express": 4,  // 快递公司ID
@@ -644,6 +652,7 @@ JSON数据格式:
                     "pay_amount": 17,  // 支付金额
                     "reach_minus": 0,  // 满减金额
                     "received_at": 0,  // 收货时间
+                    "distributed": false,  // 分销订单
                     "remark": null,  // 卖家备注
                     "rid": "D18070316803529",  // 订单编号
                     "ship_mode": 1,  // 运送方式
@@ -653,6 +662,8 @@ JSON数据格式:
                     "total_quantity": 3  // 商品总数量
                     "items": [
                         {
+                            "commission_price": 0,  // 佣金
+                            "commission_rate": 0,  // 佣金比
                             "cover": "http://0.0.0.0:9000/_uploads/photos/1",
                             "deal_price": 1,  // 交易价格
                             "express": 4,  // 快递公司ID
@@ -733,6 +744,7 @@ JSON数据格式:
                     "pay_amount": 17,  // 支付金额
                     "reach_minus": 0,  // 满减金额
                     "received_at": 0,  // 收货时间
+                    "distributed": false,  // 分销订单
                     "remark": null,  // 卖家备注
                     "rid": "D18070316803529",  // 订单编号
                     "ship_mode": 1,  // 运送方式
@@ -742,6 +754,8 @@ JSON数据格式:
                     "total_quantity": 3  // 商品总数量
                     "items": [
                         {
+                            "commission_price": 0,  // 佣金
+                            "commission_rate": 0,  // 佣金比
                             "cover": "http://0.0.0.0:9000/_uploads/photos/1",
                             "deal_price": 1,  // 交易价格
                             "express": 4,  // 快递公司ID
@@ -822,6 +836,7 @@ JSON数据格式:
                     "pay_amount": 17,  // 支付金额
                     "reach_minus": 0,  // 满减金额
                     "received_at": 0,  // 收货时间
+                    "distributed": false,  // 分销订单
                     "remark": null,  // 卖家备注
                     "rid": "D18070316803529",  // 订单编号
                     "ship_mode": 1,  // 运送方式
@@ -831,6 +846,8 @@ JSON数据格式:
                     "total_quantity": 3  // 商品总数量
                     "items": [
                         {
+                            "commission_price": 0,  // 佣金
+                            "commission_rate": 0,  // 佣金比
                             "cover": "http://0.0.0.0:9000/_uploads/photos/1",
                             "deal_price": 1,  // 交易价格
                             "express": 4,  // 快递公司ID
@@ -911,6 +928,7 @@ JSON数据格式:
                     "pay_amount": 17,  // 支付金额
                     "reach_minus": 0,  // 满减金额
                     "received_at": 0,  // 收货时间
+                    "distributed": false,  // 分销订单
                     "remark": null,  // 卖家备注
                     "rid": "D18070316803529",  // 订单编号
                     "ship_mode": 1,  // 运送方式
@@ -920,6 +938,8 @@ JSON数据格式:
                     "total_quantity": 3  // 商品总数量
                     "items": [
                         {
+                            "commission_price": 0,  // 佣金
+                            "commission_rate": 0,  // 佣金比
                             "cover": "http://0.0.0.0:9000/_uploads/photos/1",
                             "deal_price": 1,  // 交易价格
                             "express": 4,  // 快递公司ID
@@ -1000,6 +1020,7 @@ JSON数据格式:
                     "pay_amount": 17,  // 支付金额
                     "reach_minus": 0,  // 满减金额
                     "received_at": 0,  // 收货时间
+                    "distributed": false,  // 分销订单
                     "remark": null,  // 卖家备注
                     "rid": "D18070316803529",  // 订单编号
                     "ship_mode": 1,  // 运送方式
@@ -1009,6 +1030,8 @@ JSON数据格式:
                     "total_quantity": 3  // 商品总数量
                     "items": [
                         {
+                            "commission_price": 0,  // 佣金
+                            "commission_rate": 0,  // 佣金比
                             "cover": "http://0.0.0.0:9000/_uploads/photos/1",
                             "deal_price": 1,  // 交易价格
                             "express": 4,  // 快递公司ID
@@ -1089,6 +1112,7 @@ JSON数据格式:
                     "pay_amount": 17,  // 支付金额
                     "reach_minus": 0,  // 满减金额
                     "received_at": 0,  // 收货时间
+                    "distributed": false,  // 分销订单
                     "remark": null,  // 卖家备注
                     "rid": "D18070316803529",  // 订单编号
                     "ship_mode": 1,  // 运送方式
@@ -1098,6 +1122,8 @@ JSON数据格式:
                     "total_quantity": 3  // 商品总数量
                     "items": [
                         {
+                            "commission_price": 0,  // 佣金
+                            "commission_rate": 0,  // 佣金比
                             "cover": "http://0.0.0.0:9000/_uploads/photos/1",
                             "deal_price": 1,  // 交易价格
                             "express": 4,  // 快递公司ID
@@ -1178,6 +1204,7 @@ JSON数据格式:
                 "pay_amount": 17,  // 支付金额
                 "reach_minus": 0,  // 满减金额
                 "received_at": 0,  // 收货时间
+                "distributed": false,  // 分销订单
                 "remark": null,  // 卖家备注
                 "rid": "D18070316803529",  // 订单编号
                 "ship_mode": 1,  // 运送方式
@@ -1187,6 +1214,8 @@ JSON数据格式:
                 "total_quantity": 3  // 商品总数量
                 "items": [
                     {
+                        "commission_price": 0,  // 佣金
+                        "commission_rate": 0,  // 佣金比
                         "cover": "http://0.0.0.0:9000/_uploads/photos/1",
                         "deal_price": 1,  // 交易价格
                         "express": 4,  // 快递公司ID
