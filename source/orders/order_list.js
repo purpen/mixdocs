@@ -24,6 +24,7 @@
                 "pay_amount": 17,  // 支付金额
                 "reach_minus": 0,  // 满减金额
                 "received_at": 0,  // 收货时间
+                "distributed": false,  // 分销订单
                 "remark": null,  // 卖家备注
                 "rid": "D18070316803529",  // 订单编号
                 "ship_mode": 1,  // 运送方式
