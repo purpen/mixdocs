@@ -140,8 +140,44 @@ store_rid       String    必须                 登录账号
 
     {
         "data": {
-            "access_token": "7e209cac2ed0fe7329ad02b29fac4eea3aae77fe",
-            "app_key": "8rhJWHgT9NsKuOeRip3t"
+            "access_token": "cfe49b2ddaa797a5884ecc583137bb58706d677b",
+            "app_key": "sNcMxUrRLzfiGnZ2hd4E",
+            "store": {
+                "areacode": null,
+                "begin_date": "",
+                "bgcover": "http://kg.erp.taihuoniao.com",
+                "browse_number": 0,
+                "categories": [],
+                "city": "",
+                "city_id": "",
+                "country": "中国",
+                "country_id": 1,
+                "created_at": 1530674482,
+                "delivery_city": "",
+                "delivery_city_id": "",
+                "delivery_country ": "中国",
+                "delivery_country_id": 1,
+                "delivery_date": "",
+                "delivery_province": "",
+                "delivery_province_id": 0,
+                "description": null,
+                "detail": "",
+                "distribution_type": 0,
+                "end_date": "",
+                "fans_count": 0,
+                "is_closed": false,
+                "logo": "http://kg.erp.taihuoniao.com",
+                "mobile": null,
+                "name": "淘宝",
+                "pattern": 1,
+                "phone": null,
+                "province": "",
+                "province_id": 0,
+                "rid": "98049276",
+                "status": 1,
+                "tag_line": null,
+                "type": 1
+            }
         },
         "status": {
             "code": 200,
@@ -179,8 +215,10 @@ store_rid       String    必须                 登录账号
 =============  ========  =========  ========  ====================================
 名称            类型      是否必须    默认值     描述说明
 =============  ========  =========  ========  ====================================
+areacode        String    可选        +86      区号
+verify_code     String    必须                 手机验证码
 email           String    必须                 登录账号 - 必须保持唯一
-username        String    必须                 用户名/昵称 - 必须保持唯一
+username        String    可选                 用户名/昵称 - 必须保持唯一
 password        String    必须                 登录密码
 =============  ========  =========  ========  ====================================
 
