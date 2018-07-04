@@ -1226,7 +1226,7 @@ JSON数据格式
 接口说明
 ~~~~~~~~~~~~~~
 
-* API接口请求地址：``/store/wxapp``
+* API接口请求地址：``/store/wxapp_application``
 * API接口请求方法：``POST``
 * API接口用户授权：``token``
 
@@ -1254,10 +1254,67 @@ JSON数据格式
         "data": {
             "country": "中国",
             "country_id": 1,
+            "created_at": 1530674482,
             "email": "8888888@qq.com",
+            "fail_reason": null,
             "id": 3,
             "main_type": 1,
-            "master_uid": 2
+            "master_uid": 2,
+            "pwd": 089741,
+            "status": 0   // 状态: -1 申请失败； 0 默认状态；1 申请中；2 申请成功；
+        },
+        "status": {
+            "code": 201,
+            "message": "All created."
+        },
+        "success": true
+    }
+
+请求 ``失败`` 返回结果：
+
+.. code-block:: javascript
+
+    {
+        "status": {
+            "code": 404,
+            "message": "Not Found"
+        },
+        "success": false
+    }
+
+获取申请小程序信息
+---------------------
+
+
+接口说明
+~~~~~~~~~~~~~~
+
+* API接口请求地址：``/store/wxapp_application``
+* API接口请求方法：``GET``
+* API接口用户授权：``token``
+
+
+返回示例
+~~~~~~~~~~~~~~~~
+
+JSON数据格式
+
+请求 **正确** 返回结果：
+
+.. code-block:: javascript
+
+    {
+        "data": {
+            "country": "中国",
+            "country_id": 1,
+            "created_at": 1530674482,
+            "email": "8888888@qq.com",
+            "fail_reason": null,
+            "id": 3,
+            "main_type": 1,
+            "master_uid": 2,
+            "pwd": 089741,
+            "status": 0   // 状态: -1 申请失败； 0 默认状态；1 申请中；2 申请成功；
         },
         "status": {
             "code": 201,
