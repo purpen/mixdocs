@@ -261,169 +261,6 @@ JSON数据格式
         "success": false
     }
 
-品牌馆基本信息设置或更新
---------------------------
-
-接口说明
-~~~~~~~~~~~~~~
-
-* API接口请求地址：``/store/setting``
-* API接口请求方法：``POST``
-* API接口用户授权：``token``
-
-请求参数
-~~~~~~~~~~~~~~~
-
-=====================  ==========  =========  ==========  =============================
-名称                    类型        是否必须     默认值       描述说明
-=====================  ==========  =========  ==========  =============================
-name                    String      必须                      品牌馆名称
-logo_id                 Integer     必须                      品牌馆logoID
-bgcover_id              Integer     必须                      品牌馆背景图ID
-tag_line                String      必须                      宣传语
-=====================  ==========  =========  ==========  =============================
-
-返回示例
-~~~~~~~~~~~~~~~~
-
-JSON数据格式
-
-请求 **正确** 返回结果：
-
-.. code-block:: javascript
-
-    {
-        "data": {
-            "areacode": "+86",
-            "bgcover": {
-                "created_at": null,
-                "filename": "e",
-                "filepath": "http://127.0.0.1:9000/_uploads/photos/222222/5d2812257b539bb.jpg",
-                "id": 2,
-                "view_url": "http://0.0.0.0:9000/_uploads/photos/http://127.0.0.1:9000/_uploads/photos/222222/5d2812257b539bb.jpg"
-            },
-            "browse_number": 0,
-            "categories": [
-                "手机",
-                "电脑"
-            ],
-            "city": "北京",
-            "country": "中国",
-            "created_at": 1529143434,
-            "delivery_city": "北京",
-            "delivery_country": "中国",
-            "delivery_province": "北京",
-            "description": null,
-            "detail": {
-                "content": "床前明月光",
-                "id": 1,
-                "store_rid": "99627015"
-            },
-            "distribution_type": 0,
-            "fans_count": 0,
-            "logo": {
-                "created_at": null,
-                "filename": "a",
-                "filepath": "http://127.0.0.1:9000/_uploads/photos/222222/5d2812257b539aa.jpg",
-                "id": 1,
-                "view_url": "http://0.0.0.0:9000/_uploads/photos/http://127.0.0.1:9000/_uploads/photos/222222/5d2812257b539aa.jpg"
-            },
-            "mobile": "15555555555",
-            "name": "太火鸟",
-            "phone": "0314-7894561",
-            "province": "北京",
-            "rid": "99627015",
-            "status": 1,
-            "tag_line": "我就独风景还是可故事",
-            "type": 1
-        },
-        "status": {
-            "code": 201,
-            "message": "All created."
-        },
-        "success": true
-    }
-
-请求 ``失败`` 返回结果：
-
-.. code-block:: javascript
-
-    {
-        "status": {
-            "code": 404,
-            "message": "Not Found"
-        },
-        "success": false
-    }
-
-店铺（品牌馆）信息设置或更新
-------------------------------
-
-接口说明
-~~~~~~~~~~~~~~
-
-* API接口请求地址：``/store/extend_setting``
-* API接口请求方法：``POST``
-* API接口用户授权：``token``
-
-请求参数
-~~~~~~~~~~~~~~~
-
-=====================  ==========  =========  ==========  =============================
-名称                    类型        是否必须     默认值       描述说明
-=====================  ==========  =========  ==========  =============================
-categories              Array       必须                      产品分类ID
-delivery_country_id     Integer     必须                      发货国家ID
-delivery_province_id    Integer     必须                      发货省ID
-delivery_city_id        Integer     必须                      发货市ID
-country_id              Integer     必须                      商家位置国家ID
-province_id             Integer     必须                      商家位置省ID
-city_id                 Integer     必须                      商家位置市ID
-areacode                String      必须          +86         区号
-mobile                  String      必须                      手机号
-phone                   String      可选                      固定电话
-=====================  ==========  =========  ==========  =============================
-
-请求示例
-~~~~~~~~~~~~~~~~
-
-JSON数据格式:
-
-.. code-block:: javascript
-
-    {"categories":[1,7,9],"delivery_country_id":1,"delivery_province_id":1,"delivery_city_id":1,"country_id":1,"province_id":1,"city_id":1, "areacode":"+86","mobile":"15555555555", "phone":"0314-7894561"}
-
-返回示例
-~~~~~~~~~~~~~~~~
-
-JSON数据格式
-
-请求 **正确** 返回结果：
-
-.. code-block:: javascript
-
-    {
-        "data": {
-            "rid": "99627015"
-        },
-        "status": {
-            "code": 201,
-            "message": "All created."
-        },
-        "success": true
-    }
-
-请求 ``失败`` 返回结果：
-
-.. code-block:: javascript
-
-    {
-        "status": {
-            "code": 400,
-            "message": "请选择产品类别"
-        },
-        "success": false
-    }
 
 更新店铺基本信息及扩展信息
 --------------------------
@@ -530,140 +367,11 @@ JSON数据格式
     }
 
 
-更新店铺设置信息
------------------------
-
-接口说明
-~~~~~~~~~~~~~~
-
-* API接口请求地址：``/store/update_info``
-* API接口请求方法：``POST``
-* API接口用户授权：``token``
-
-请求参数
-~~~~~~~~~~~~~~~
-
-=====================  ==========  =========  ==========  =============================
-名称                    类型        是否必须     默认值       描述说明
-=====================  ==========  =========  ==========  =============================
-name                    String      必须                      品牌馆名称
-logo_id                 Integer     必须                      品牌馆logoID
-bgcover_id              Integer     必须                      品牌馆背景图ID
-tag_line                String      必须                      宣传语
-categories              Array       必须                      产品分类ID
-delivery_country_id     Integer     必须                      发货国家ID
-delivery_province_id    Integer     必须                      发货省ID
-delivery_city_id        Integer     必须                      发货市ID
-=====================  ==========  =========  ==========  =============================
-
-请求示例
-~~~~~~~~~~~~~~~~
-
-JSON数据格式:
-
-.. code-block:: javascript
-
-    {"name":"盛夏的果实","logo_id":1,"bgcover_id":2,"tag_line":"chunmianbujue处处蚊子咬","categories":[1,2,3],"delivery_country_id":1,"delivery_province_id":1,"delivery_city_id":1}
-
-返回示例
-~~~~~~~~~~~~~~~~
-
-JSON数据格式
-
-请求 **正确** 返回结果：
-
-.. code-block:: javascript
-
-    {
-        "data": {
-            "areacode": "+86",
-            "begin_date": "2018-06-26",
-            "bgcover": {
-                "created_at": null,
-                "filename": "e",
-                "filepath": "http://127.0.0.1:9000/_uploads/photos/222222/5d2812257b539bb.jpg",
-                "id": 2,
-                "type": null,
-                "view_url": "http://0.0.0.0:9000/_uploads/photos/http://127.0.0.1:9000/_uploads/photos/222222/5d2812257b539bb.jpg"
-            },
-            "browse_number": 0,
-            "categories": [
-                [
-                    1,
-                    "手机"
-                ],
-                [
-                    2,
-                    "电脑"
-                ]
-            ],
-            "city": "北京",
-            "city_id": 1,
-            "country": "中国",
-            "country_id": 1,
-            "created_at": 1529143434,
-            "delivery_city": "北京",
-            "delivery_city_id": 1,
-            "delivery_country ": "中国",
-            "delivery_country_id": 1,
-            "delivery_date": "2018-06-30",
-            "delivery_province": "北京",
-            "delivery_province_id": 1,
-            "description": null,
-            "detail": {
-                "content": "要下雨了",
-                "id": 1,
-                "store_rid": "99627015"
-            },
-            "distribution_type": 0,
-            "end_date": "2018-06-26",
-            "fans_count": 0,
-            "is_closed": false,
-            "logo": {
-                "created_at": null,
-                "filename": "a",
-                "filepath": "http://127.0.0.1:9000/_uploads/photos/222222/5d2812257b539aa.jpg",
-                "id": 1,
-                "type": null,
-                "view_url": "http://0.0.0.0:9000/_uploads/photos/http://127.0.0.1:9000/_uploads/photos/222222/5d2812257b539aa.jpg"
-            },
-            "mobile": "15555555555",
-            "name": "盛夏的果实",
-            "pattern": -1,
-            "phone": "0314-7894561",
-            "province": "北京",
-            "province_id": 1,
-            "rid": "99627015",
-            "status": 1,
-            "tag_line": "chunmianbujue处处蚊子咬",
-            "type": 1
-        },
-        "status": {
-            "code": 200,
-            "message": "Ok all right."
-        },
-        "success": true
-    }
-
-请求 ``失败`` 返回结果：
-
-.. code-block:: javascript
-
-    {
-        "status": {
-            "code": 404,
-            "message": "Not Found"
-        },
-        "success": false
-    }
-
-
 新增或更新店铺品牌故事
 -----------------------
 
 接口说明
 ~~~~~~~~~~~~~~
-
 
 
 * API接口请求地址：``/store/<string:rid>/detail``
@@ -728,12 +436,14 @@ JSON数据格式
 请求参数
 ~~~~~~~~~~~~~~~
 
-===========  ========  =========  ========  ====================================
-名称          类型      是否必须    默认值     描述说明
-===========  ========  =========  ========  ====================================
-begin_date    String    可选                   休馆开始时间
-end_date      String    可选                   休馆结束时间
-===========  ========  =========  ========  ====================================
+=====================  ==========  =========  ==========  =============================
+名称                    类型        是否必须     默认值       描述说明
+=====================  ==========  =========  ==========  =============================
+is_closed                String    可选        False       是否开启休馆
+begin_date               String    可选                    休馆开始时间
+end_date                 String    可选                    休馆结束时间
+delivery_date            String    可选                    恢复发货时间
+=====================  ==========  =========  ==========  =============================
 
 返回示例
 ~~~~~~~~~~~~~~~~
@@ -746,54 +456,39 @@ JSON数据格式
 
     {
         "data": {
-            "areacode": "+86",
-            "begin_date": "2018-06-26",
-            "bgcover": {
-                "created_at": null,
-                "filename": "e",
-                "filepath": "http://127.0.0.1:9000/_uploads/photos/222222/5d2812257b539bb.jpg",
-                "id": 2,
-                "type": null,
-                "view_url": "http://0.0.0.0:9000/_uploads/photos/http://127.0.0.1:9000/_uploads/photos/222222/5d2812257b539bb.jpg"
-            },
+            "areacode": null,
+            "begin_date": "2018-06-26",  // 休馆开始时间
+            "bgcover": "http://kg.erp.taihuoniao.com",
             "browse_number": 0,
             "categories": [],
-            "city": "北京",
-            "city_id": 1,
+            "city": "",
+            "city_id": "",
             "country": "中国",
             "country_id": 1,
-            "created_at": 1529143434,
-            "delivery_city": "北京",
-            "delivery_city_id": 1,
+            "created_at": 1530674482,
+            "delivery_city": "",
+            "delivery_city_id": "",
             "delivery_country ": "中国",
             "delivery_country_id": 1,
-            "delivery_province": "北京",
-            "delivery_province_id": 1,
+            "delivery_date": "2018-06-30", // 恢复发货时间
+            "delivery_province": "",
+            "delivery_province_id": 0,
             "description": null,
-            "detail": {
-                "content": "要下雨了",
-                "id": 1,
-                "store_rid": "99627015"
-            },
+            "detail": "",
             "distribution_type": 0,
-            "end_date": "2018-06-26",
+            "end_date": "2018-06-26", // 休馆结束时间
             "fans_count": 0,
-            "logo": {
-                "created_at": null,
-                "filename": "a",
-                "filepath": "http://127.0.0.1:9000/_uploads/photos/222222/5d2812257b539aa.jpg",
-                "id": 1,
-                "type": null,
-                "view_url": "http://0.0.0.0:9000/_uploads/photos/http://127.0.0.1:9000/_uploads/photos/222222/5d2812257b539aa.jpg"
-            },
-            "mobile": "15555555555",
-            "name": "嘎哈很多",
-            "phone": "0314-7894561",
-            "province": "北京",
-            "province_id": 1,
-            "rid": "99627015",
+            "is_closed": false, // 是否开启休馆
+            "logo": "http://kg.erp.taihuoniao.com",
+            "mobile": null,
+            "name": "淘宝",
+            "pattern": -1,
+            "phone": null,
+            "province": "",
+            "province_id": 0,
+            "rid": "98049276",
             "status": 1,
-            "tag_line": "处处蚊子咬",
+            "tag_line": null,
             "type": 1
         },
         "status": {
