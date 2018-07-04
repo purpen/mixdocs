@@ -975,7 +975,7 @@ JSON数据格式:
                 "about_me": null,
                 "avatar": "http://xxxx/photos/180224/c833237a728a1ed.jpg",
                 "city": "保定",
-                "date": "",
+                "date": "",  // 生日
                 "email": null,
                 "gender": 0,
                 "id": 1,
@@ -1040,7 +1040,7 @@ JSON数据格式:
                 "about_me": null,
                 "avatar": "http://xxxx/photos/180224/c833237a728a1ed.jpg",
                 "city": "保定",
-                "date": "",
+                "date": "",   // 生日
                 "email": null,
                 "gender": 0,
                 "id": 1,
@@ -1107,7 +1107,7 @@ JSON数据格式:
         "data": {
             "about_me": null,
             "avatar": null,
-            "date": "2008-05-15",
+            "date": "2008-05-15",  // 生日
             "description": null,
             "email": "13001179400",
             "gender": 1,
