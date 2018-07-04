@@ -931,14 +931,14 @@ JSON数据格式:
       "success": false
     }
 
-编辑个人资料
------------------
+普通用户未注册情况下编辑个人资料
+-------------------------------
 
 接口说明
 ~~~~~~~~~~~~~~
 
 
-* API接口请求地址：``/users/info``
+* API接口请求地址：``/users/update_info_by_openid``
 * API接口请求方法：``PUT``
 
 请求参数
@@ -948,16 +948,39 @@ JSON数据格式:
 名称              类型      是否必须    默认值     描述说明
 ===============  ========  =========  ========  ====================================
 openid           String     必须                 用户唯标识
-nick_name        String     可选                 用户昵称
+nick_name        String     必须                 用户名
 avatar_id        Integer    可选                 用户头像ID
 about_me         String     可选                 个人介绍
 gender           Integer    可选          0      性别
 province_id      Integer    可选                 省ID
 city_id          Integer    可选                 市ID
-type             Integer    可选          1      来源类型 1、微信
 email            String     可选                 邮箱
 date             String     可选                 出生日期
+type             Integer    可选          1      来源类型，1、微信
 ===============  ========  =========  ========  ====================================
+
+请求示例
+~~~~~~~~~~~~~~~~
+
+JSON数据格式:
+
+.. code-block:: javascript
+
+ {
+ 	"openid":"jsdkj3j",
+	"nick_name":"雷军",
+	"about_me":"一个好孩子",
+	"email":"zhiuren@163.com",
+ 	"avatar_id":2,
+ 	"country":1,
+ 	"province":1,
+ 	"city":1,
+ 	"date":"1992-12-26",
+ 	"gender":0,
+ 	"type":1
+
+
+ }
 
 返回示例
 ~~~~~~~~~~~~~~~~
@@ -970,21 +993,19 @@ JSON数据格式:
 
     {
         "data": {
-            "created_at": 1529067075,
-            "user_party": {
-                "about_me": null,
-                "avatar": "http://xxxx/photos/180224/c833237a728a1ed.jpg",
-                "city": "保定",
-                "date": "",  // 生日
-                "email": null,
-                "gender": 0,
-                "id": 1,
-                "master_uid": 2,
-                "nick_name": "丁磊",
-                "openid": "jsdkj3j",
-                "province": "河北",
-                "wxapp_id": "1"
-            }
+            "about_me": "一个好孩子",
+            "avatar": "http://0.0.0.0:9000/_uploads/photos/http://127.0.0.1:9000/_uploads/photos/222222/5d2812257b539bb.jpg",
+            "city": "保定",
+            "date": "1992年12月26日",
+            "email": "zhiuren@163.com",
+            "gender": 0,
+            "id": 8,
+            "master_uid": 2,
+            "nick_name": "雷军",
+            "openid": "jsdkj3j",
+            "province": "河北",
+            "type": 1,
+            "wxapp_id": "1"
         },
         "status": {
             "code": 200,
