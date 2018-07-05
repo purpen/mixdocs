@@ -931,14 +931,15 @@ JSON数据格式:
       "success": false
     }
 
-普通用户未注册情况下编辑个人资料
+编辑用户个人资料
 -------------------------------
+注册用户与未注册用户均可编辑
 
 接口说明
 ~~~~~~~~~~~~~~
 
 
-* API接口请求地址：``/users/update_info_by_openid``
+* API接口请求地址：``/users/update_user_info``
 * API接口请求方法：``PUT``
 
 请求参数
@@ -952,11 +953,11 @@ nick_name        String     必须                 用户名
 avatar_id        Integer    可选                 用户头像ID
 about_me         String     可选                 个人介绍
 gender           Integer    可选          0      性别
+country_id       Integer    可选                 国家ID
 province_id      Integer    可选                 省ID
 city_id          Integer    可选                 市ID
 email            String     可选                 邮箱
 date             String     可选                 出生日期
-type             Integer    可选          1      来源类型，1、微信
 ===============  ========  =========  ========  ====================================
 
 请求示例
@@ -977,9 +978,6 @@ JSON数据格式:
  	"city":1,
  	"date":"1992-12-26",
  	"gender":0,
- 	"type":1
-
-
  }
 
 返回示例
@@ -992,21 +990,6 @@ JSON数据格式:
 .. code-block:: javascript
 
     {
-        "data": {
-            "about_me": "一个好孩子",
-            "avatar": "http://0.0.0.0:9000/_uploads/photos/http://127.0.0.1:9000/_uploads/photos/222222/5d2812257b539bb.jpg",
-            "city": "保定",
-            "date": "1992年12月26日",
-            "email": "zhiuren@163.com",
-            "gender": 0,
-            "id": 8,
-            "master_uid": 2,
-            "nick_name": "雷军",
-            "openid": "jsdkj3j",
-            "province": "河北",
-            "type": 1,
-            "wxapp_id": "1"
-        },
         "status": {
             "code": 200,
             "message": "Ok all right."
@@ -1056,21 +1039,23 @@ JSON数据格式:
 
     {
         "data": {
-            "created_at": 1529067075,
-            "user_party": {
-                "about_me": null,
-                "avatar": "http://xxxx/photos/180224/c833237a728a1ed.jpg",
-                "city": "保定",
-                "date": "",   // 生日
-                "email": null,
-                "gender": 0,
-                "id": 1,
-                "master_uid": 2,
-                "nick_name": "丁磊",
-                "openid": "jsdkj3j",
-                "province": "河北",
-                "wxapp_id": "1"
-            }
+            "about_me": "一个好孩子",
+            "avatar": "http://0.0.0.0:9000/_uploads/photos/http://127.0.0.1:9000/_uploads/photos/222222/5d2812257b539bb.jpg", // 头像
+            "city": "北京",  // 位置
+            "country": "中国",  // 位置
+            "created_at": 1529493576, // 注册时间
+            "date": "1992-12-26", // 生日
+            "description": null,
+            "email": "13001179400",  // 账号
+            "gender": 0,  // 性别
+            "last_seen": 1530778940,
+            "master_uid": 2,
+            "mobile": null,
+            "name": null,  // 真实姓名
+            "province": "北京",  // 位置
+            "uid": "19562310748",
+            "username": "雷军",  // 用户名
+            "mail": "zhiuren@163.com" // 邮箱
         },
         "status": {
             "code": 200,
