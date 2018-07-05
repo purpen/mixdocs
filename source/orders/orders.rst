@@ -69,6 +69,8 @@ JSON数据格式:
 ===========  ========  =========  ========  ==============================================
 status	     Number	   可选	 	             订单状态 1、待发货 2、已发货 3、已完成 4、已取消
 no_pay       Number    可选                   未付款  0、未付款
+create_at    String    可选                   下单时间
+search       String    可选                   商品名称或订单编号
 page         Number    可选         1         当前页码
 per_page     Number    可选         10        每页数量
 ===========  ========  =========  ========  ==============================================
@@ -122,68 +124,56 @@ JSON数据格式:
 
     {
         "data": {
-            "buyer_address": "朝阳区",  // 买家地址
-            "buyer_city": "北京",  // 买家城市
+            "buyer_address": "青年路",  // 买家地址
+            "buyer_city": "淄博",  //买家市
             "buyer_country": "中国",  // 买家国家
-            "buyer_name": "田帅",  // 买家姓名
-            "buyer_phone": "13278989898",  // 买家手机
-            "buyer_province": "北京",  // 买家省
+            "buyer_name": "ZT-2",
+            "buyer_phone": "13260180689",  // 买家电话
+            "buyer_province": "山东",  // 买家省
             "buyer_remark": null,  // 买家备注
-            "buyer_tel": null,  // 买家电话
-            "buyer_zipcode": null,  // 买家邮政编码
-            "created_at": 1528620896,  // 订单时间
-            "customer_order_id": null,  // 关联分销商订单编号
-            "discount_amount": 0,  // 优惠金额
-            "express_at": 0,  // 发货时间
-            "express_name": "",  // 快递公司
-            "express_no": null,  // 运单号
-            "freight": 0,  // 运费
+            "buyer_tel": "13260180689",  // 买家手机
+            "buyer_zipcode": "255300",  // 买家邮编
+            "coupon_amount": 0,  // 优惠券金额
+            "created_at": 1530608616,  // 创建时间
+            "customer_order_id": null,  // 分销商订单编号
+            "discount_amount": 0,  // 店铺优惠金额 = 首单优惠 + 满减 + 优惠券
+            "first_discount": 0,  // 首单优惠
+            "freight": 14,  // 运费
+            "official_order_id": null,  // 官方平台订单号
+            "outside_target_id": "D18070316803529",  // 第三方平台订单号
+            "pay_amount": 17,  // 支付金额
+            "reach_minus": 0,  // 满减金额
+            "received_at": 0,  // 收货时间
+            "distributed": false,  // 分销订单
+            "remark": null,  // 卖家备注
+            "rid": "D18070316803529",  // 订单编号
+            "ship_mode": 1,  // 运送方式
+            "status": 5,  // 订单状态
+            "store_name": "第一家(None)",  // 店铺名称
+            "total_amount": 3,  // 商品金额
+            "total_quantity": 3  // 商品总数量
             "items": [
                 {
-                    "cost_price": "1.00",  // 采购价
-                    "cover": "http://0.0.0.0:9000/_uploads/photos/1",  // 商品图片
-                    "deal_price": 999.1,  // 交易单价
-                    "discount_amount": 0,  // 优惠金额
-                    "id_code": "1",  // 商品编码
-                    "mode": "1 1",  // 型号
-                    "price": "1.00",  // 零售价
-                    "product_name": "摩托",  // 商品名
-                    "quantity": 3,  // 购买数量
-                    "rid": "1",  // sku_serial_no
-                    "s_color": "1",  // 颜色
-                    "s_model": "1",  // 型号
-                    "s_weight": "1.00",  // 重量
-                    "sale_price": "1.00",  // 促销价
-                    "stock_count": 11089  // 库存
-                },
-                {
-                    "cost_price": "2.00",
+                    "commission_price": 0,  // 佣金
+                    "commission_rate": 0,  // 佣金比
                     "cover": "http://0.0.0.0:9000/_uploads/photos/1",
-                    "deal_price": 999.1,
-                    "discount_amount": 0,
+                    "deal_price": 1,  // 交易价格
+                    "express": 4,  // 快递公司ID
+                    "express_at": 0,  // 发货时间
+                    "express_no": null,  // 运单号
                     "id_code": "1",
-                    "mode": "2 2",
-                    "price": "2.00",
-                    "product_name": "汽车",
-                    "quantity": 1,
-                    "rid": "2",
-                    "s_color": "2",
-                    "s_model": "2",
-                    "s_weight": "2.00",
-                    "sale_price": "2.00",
-                    "stock_count": 22106
+                    "mode": "1 1",
+                    "price": 1,
+                    "product_name": "摩托",  // 商品名
+                    "quantity": 3,  // 数量
+                    "rid": "1",  // sku
+                    "s_color": "1",
+                    "s_model": "1",
+                    "s_weight": 1,
+                    "sale_price": 1,
+                    "stock_count": 11020
                 }
             ],
-            "outside_target_id": "D18061062954387",  // 第三方平台订单编号
-            "pay_amount": 3996.4,  // 支付金额
-            "received_at": 0,  // 收货时间
-            "remark": null,  // 卖家备注
-            "rid": "D18061062954387",  // 订单编号
-            "ship_mode": 1,  // 物流方式 1、快递；2、自提；
-            "status": 40,  // 订单状态
-            "store_name": "第一家(None)",  // 店铺名称
-            "total_amount": 3996.4,  // 总金额
-            "total_quantity": 4  // 总数量
         },
         "status": {
             "code": 200,
@@ -226,20 +216,27 @@ JSON数据格式:
 名称                    类型        是否必须     默认值       描述说明
 =====================  ==========  =========  ==========  =============================
 address_rid            String      必需                     收货地址ID
-ship_mode              Integer     可选           1         1、快递方式；2、自提方式；
 outside_target_id      String      可选
-freight                Integer     可选          0          邮费
-first_discount         Integer     可选          0          首单优惠金额
-reach_minus            Integer     可选          0          满减优惠金额
-bonus_amount           Integer     可选          0          红包优惠金额
 invoice_type           Integer     可选          1          发票类型
 invoice_info           String      可选          {}
 buyer_remark           String      可选                     买家备注
 from_client            String      可选                     来源客户端，1、小程序；2、H5 3、App 4、TV 5、POS 6、PAD
 affiliate_code         String      可选                     推广码
-coupon_code            String      可选                     优惠券码
+bonus_code             String      可选                     官方红包码
 customer_code          String      可选                     分销商代码
 sync_pay               Integer     可选                     是否同步返回支付参数
+store_items            Array       必需                     店铺商品信息
+=====================  ==========  =========  ==========  =============================
+
+**店铺商品信息:**
+
+=====================  ==========  =========  ==========  =============================
+名称                    类型        是否必须     默认值       描述说明
+=====================  ==========  =========  ==========  =============================
+store_items:
+store_rid              String      必需                    店铺rid
+coupon_codes           Array       可选                    优惠券码列表
+items                  Array       必需                    订单明细参数
 =====================  ==========  =========  ==========  =============================
 
 **订单明细参数:**
@@ -250,7 +247,7 @@ sync_pay               Integer     可选                     是否同步返回
 items:
 rid                    String      必需                    sku
 quantity               Number      必需         1          购买数量
-deal_price             Float       必需                    交易价格
+express_id             Integer     必需                    物流公司ID
 warehouse_id           Number      可选                    发货的仓库ID
 =====================  ==========  =========  ==========  =============================
 
@@ -258,17 +255,27 @@ warehouse_id           Number      可选                    发货的仓库ID
 
 .. code-block:: javascript
 
-    {"freight":0,"invoice_type":1,"invoice_info":{},"address_rid": "5748231905",
-    "items": [{"rid":"117280530556","quantity":1,"deal_price":23, "discount_amount":0,
-    "warehouse_id":0}],"outside_target_id":132234,"buyer_remark":"","from_client":1,
-    "affiliate_code":"mix001","affiliate_code":"mix001","sync_pay":1}
+    {
+        "address_rid":"5125783409",
+        "store_items":[
+            {
+                "store_rid":"2",
+                "items":[
+                    {
+                        "rid": "1",
+                        "quantity": 3,
+                        "express_id":4
+                    }
+                ]
+            }
+        ]
+    }
+
 
 返回示例
 ~~~~~~~~~~~~~~~~
 
-``规则1：`` 订单总金额 = 商品1交易价格 * 数量 + 商品2交易价格 * 数量+。。。。
-
-``规则2：`` 支付金额 = 订单总金额 + 运费 - 首单优惠 - 满减 - 优惠券 - 红包
+``规则：`` 实际支付金额 = 订单总金额 + 运费 - 首单优惠 - 满减 - 优惠券/红包
 
 JSON数据格式:
 
@@ -276,67 +283,63 @@ JSON数据格式:
 
     {
         "data": {
-            "order": {
-                "bonus_amount": 0,  // 红包金额
-                "buyer_address": "朝阳区",  // 买家地址
-                "buyer_city": "北京",  // 买家城市
-                "buyer_country": "中国",  // 买家国家
-                "buyer_name": "田帅",  // 买家姓名
-                "buyer_phone": "13278989898",  // 买家手机
-                "buyer_province": "北京",  // 买家省
-                "buyer_remark": null,  // 买家备注
-                "buyer_tel": null,  // 买家电话
-                "buyer_zipcode": null,  // 买家邮政编码
-                "coupon_amount": 2,  // 优惠券金额
-                "created_at": 1528620896,  // 订单时间
-                "customer_order_id": null,  // 关联分销商订单编号
-                "discount_amount": 0,  // 总优惠金额
-                "express_at": 0,  // 发货时间
-                "express_name": "",  // 快递公司
-                "express_no": null,  // 运单号
-                "first_discount": 300,  // 首单优惠金额
-                "freight": 0,  // 运费
-                "items": [
-                    {
-                        "cost_price": "1.00",  // 采购价
-                        "cover": "http://0.0.0.0:9000/_uploads/photos/1",  // 商品图片
-                        "deal_price": 999.1,  // 交易单价
-                        "discount_amount": 0,  // 优惠金额
-                        "id_code": "1",  // 商品编码
-                        "mode": "1 1",  // 型号
-                        "price": "1.00",  // 零售价
-                        "product_name": "摩托",  // 商品名
-                        "quantity": 3,  // 购买数量
-                        "rid": "1",  // sku_serial_no
-                        "s_color": "1",  // 颜色
-                        "s_model": "1",  // 型号
-                        "s_weight": "1.00",  // 重量
-                        "sale_price": "1.00",  // 促销价
-                        "stock_count": 11089  // 库存
-                    },
-                ],
-                "outside_target_id": "D18061062954387",  // 第三方平台订单编号
-                "pay_amount": 3996.4,  // 支付金额
-                "reach_minus": 0,  // 满减金额
-                "received_at": 0,  // 收货时间
-                "remark": null,  // 卖家备注
-                "rid": "D18061062954387",  // 订单编号
-                "ship_mode": 1,  // 物流方式 1、快递；2、自提；
-                "status": 40,  // 订单状态
-                "store_name": "第一家(None)",  // 店铺名称
-                "total_amount": 3996.4,  // 订单总金额
-                "total_quantity": 4  // 总数量
-            },
-            "pay_params": {
-                "appId": "wx11363b7f6f****ac8",  // WXPAY_APP_ID
-                "code_url": "weixin://wxpay/bizpayurl?pr=jKmv7J3",
-                "nonceStr": "zGDhaNmaN6LVVohjTZhwUXSxKKDAkMVt",
-                "package": "prepay_id=wx100027305593446cd7271ce00685789643",
-                "pay_sign": "4BF3410EBC0***537F0E82C9C302F404",
-                "prepay_id": "wx100027305593446cd***1ce00685789643",
-                "signType": "MD5",
-                "timeStamp": 1523291250
-            }
+            "actual_payment": 17,  // 实际支付金额
+            "bonus_amount": 0,  // 官方红包金额
+            "orders": [
+                {
+                    "buyer_address": "青年路",  // 买家地址
+                    "buyer_city": "淄博",  //买家市
+                    "buyer_country": "中国",  // 买家国家
+                    "buyer_name": "ZT-2",
+                    "buyer_phone": "13260180689",  // 买家电话
+                    "buyer_province": "山东",  // 买家省
+                    "buyer_remark": null,  // 买家备注
+                    "buyer_tel": "13260180689",  // 买家手机
+                    "buyer_zipcode": "255300",  // 买家邮编
+                    "coupon_amount": 0,  // 优惠券金额
+                    "created_at": 1530608616,  // 创建时间
+                    "customer_order_id": null,  // 分销商订单编号
+                    "discount_amount": 0,  // 店铺优惠金额 = 首单优惠 + 满减 + 优惠券
+                    "first_discount": 0,  // 首单优惠
+                    "freight": 14,  // 运费
+                    "official_order_id": null,  // 官方平台订单号
+                    "outside_target_id": "D18070316803529",  // 第三方平台订单号
+                    "pay_amount": 17,  // 支付金额
+                    "reach_minus": 0,  // 满减金额
+                    "received_at": 0,  // 收货时间
+                    "distributed": false,  // 分销订单
+                    "remark": null,  // 卖家备注
+                    "rid": "D18070316803529",  // 订单编号
+                    "ship_mode": 1,  // 运送方式
+                    "status": 5,  // 订单状态
+                    "store_name": "第一家(None)",  // 店铺名称
+                    "total_amount": 3,  // 商品金额
+                    "total_quantity": 3  // 商品总数量
+                    "items": [
+                        {
+                            "commission_price": 0,  // 佣金
+                            "commission_rate": 0,  // 佣金比
+                            "cover": "http://0.0.0.0:9000/_uploads/photos/1",
+                            "deal_price": 1,  // 交易价格
+                            "express": 4,  // 快递公司ID
+                            "express_at": 0,  // 发货时间
+                            "express_no": null,  // 运单号
+                            "id_code": "1",
+                            "mode": "1 1",
+                            "price": 1,
+                            "product_name": "摩托",  // 商品名
+                            "quantity": 3,  // 数量
+                            "rid": "1",  // sku
+                            "s_color": "1",
+                            "s_model": "1",
+                            "s_weight": 1,
+                            "sale_price": 1,
+                            "stock_count": 11020
+                        }
+                    ],
+
+                }
+            ]
         },
         "status": {
             "code": 201,
@@ -629,52 +632,57 @@ JSON数据格式:
     {
         "data": {
             "order": {
-                "buyer_address": "大街",
-                "buyer_city": "北京",
-                "buyer_country": "中国",
-                "buyer_name": "田帅",
-                "buyer_phone": "13278989898",
-                "buyer_province": "北京",
-                "buyer_remark": null,
-                "buyer_tel": null,
-                "buyer_zipcode": null,
-                "created_at": 1528620141,
-                "customer_order_id": null,
-                "discount_amount": 0,
-                "express_at": 0,
-                "express_name": "",
-                "express_no": null,
-                "freight": 0,
-                "items": [
-                    {
-                        "cost_price": "1.00",
-                        "cover": "http://0.0.0.0:9000/_uploads/photos/1",
-                        "deal_price": 999.1,
-                        "discount_amount": 0,
-                        "id_code": "1",
-                        "mode": "1 1",
-                        "price": "1.00",
-                        "product_name": "摩托",
-                        "quantity": 3,
-                        "rid": "1",
-                        "s_color": "1",
-                        "s_model": "1",
-                        "s_weight": "1.00",
-                        "sale_price": "1.00",
-                        "stock_count": 11089
-                    },
+                    "buyer_address": "青年路",  // 买家地址
+                    "buyer_city": "淄博",  //买家市
+                    "buyer_country": "中国",  // 买家国家
+                    "buyer_name": "ZT-2",
+                    "buyer_phone": "13260180689",  // 买家电话
+                    "buyer_province": "山东",  // 买家省
+                    "buyer_remark": null,  // 买家备注
+                    "buyer_tel": "13260180689",  // 买家手机
+                    "buyer_zipcode": "255300",  // 买家邮编
+                    "coupon_amount": 0,  // 优惠券金额
+                    "created_at": 1530608616,  // 创建时间
+                    "customer_order_id": null,  // 分销商订单编号
+                    "discount_amount": 0,  // 店铺优惠金额 = 首单优惠 + 满减 + 优惠券
+                    "first_discount": 0,  // 首单优惠
+                    "freight": 14,  // 运费
+                    "official_order_id": null,  // 官方平台订单号
+                    "outside_target_id": "D18070316803529",  // 第三方平台订单号
+                    "pay_amount": 17,  // 支付金额
+                    "reach_minus": 0,  // 满减金额
+                    "received_at": 0,  // 收货时间
+                    "distributed": false,  // 分销订单
+                    "remark": null,  // 卖家备注
+                    "rid": "D18070316803529",  // 订单编号
+                    "ship_mode": 1,  // 运送方式
+                    "status": 10,  // 订单状态
+                    "store_name": "第一家(None)",  // 店铺名称
+                    "total_amount": 3,  // 商品金额
+                    "total_quantity": 3  // 商品总数量
+                    "items": [
+                        {
+                            "commission_price": 0,  // 佣金
+                            "commission_rate": 0,  // 佣金比
+                            "cover": "http://0.0.0.0:9000/_uploads/photos/1",
+                            "deal_price": 1,  // 交易价格
+                            "express": 4,  // 快递公司ID
+                            "express_at": 0,  // 发货时间
+                            "express_no": null,  // 运单号
+                            "id_code": "1",
+                            "mode": "1 1",
+                            "price": 1,
+                            "product_name": "摩托",  // 商品名
+                            "quantity": 3,  // 数量
+                            "rid": "1",  // sku
+                            "s_color": "1",
+                            "s_model": "1",
+                            "s_weight": 1,
+                            "sale_price": 1,
+                            "stock_count": 11020
+                        }
+                    ],
 
-                ],
-                "outside_target_id": "D18061015836402",
-                "pay_amount": 3996.4,
-                "received_at": 0,
-                "remark": null,
-                "rid": "D18061015836402",
-                "ship_mode": 1,
-                "status": 10,
-                "store_name": "第一家(None)",
-                "total_amount": 3996.4,
-                "total_quantity": 4
             },
             "rid": "D18061015836402"
         },
@@ -716,52 +724,57 @@ JSON数据格式:
     {
         "data": {
             "order": {
-                "buyer_address": "大街",
-                "buyer_city": "北京",
-                "buyer_country": "中国",
-                "buyer_name": "田帅",
-                "buyer_phone": "13278989898",
-                "buyer_province": "北京",
-                "buyer_remark": null,
-                "buyer_tel": null,
-                "buyer_zipcode": null,
-                "created_at": 1528620141,
-                "customer_order_id": null,
-                "discount_amount": 0,
-                "express_at": 0,
-                "express_name": "",
-                "express_no": null,
-                "freight": 0,
-                "items": [
-                    {
-                        "cost_price": "1.00",
-                        "cover": "http://0.0.0.0:9000/_uploads/photos/1",
-                        "deal_price": 999.1,
-                        "discount_amount": 0,
-                        "id_code": "1",
-                        "mode": "1 1",
-                        "price": "1.00",
-                        "product_name": "摩托",
-                        "quantity": 3,
-                        "rid": "1",
-                        "s_color": "1",
-                        "s_model": "1",
-                        "s_weight": "1.00",
-                        "sale_price": "1.00",
-                        "stock_count": 11089
-                    },
+                    "buyer_address": "青年路",  // 买家地址
+                    "buyer_city": "淄博",  //买家市
+                    "buyer_country": "中国",  // 买家国家
+                    "buyer_name": "ZT-2",
+                    "buyer_phone": "13260180689",  // 买家电话
+                    "buyer_province": "山东",  // 买家省
+                    "buyer_remark": null,  // 买家备注
+                    "buyer_tel": "13260180689",  // 买家手机
+                    "buyer_zipcode": "255300",  // 买家邮编
+                    "coupon_amount": 0,  // 优惠券金额
+                    "created_at": 1530608616,  // 创建时间
+                    "customer_order_id": null,  // 分销商订单编号
+                    "discount_amount": 0,  // 店铺优惠金额 = 首单优惠 + 满减 + 优惠券
+                    "first_discount": 0,  // 首单优惠
+                    "freight": 14,  // 运费
+                    "official_order_id": null,  // 官方平台订单号
+                    "outside_target_id": "D18070316803529",  // 第三方平台订单号
+                    "pay_amount": 17,  // 支付金额
+                    "reach_minus": 0,  // 满减金额
+                    "received_at": 0,  // 收货时间
+                    "distributed": false,  // 分销订单
+                    "remark": null,  // 卖家备注
+                    "rid": "D18070316803529",  // 订单编号
+                    "ship_mode": 1,  // 运送方式
+                    "status": 12,  // 订单状态
+                    "store_name": "第一家(None)",  // 店铺名称
+                    "total_amount": 3,  // 商品金额
+                    "total_quantity": 3  // 商品总数量
+                    "items": [
+                        {
+                            "commission_price": 0,  // 佣金
+                            "commission_rate": 0,  // 佣金比
+                            "cover": "http://0.0.0.0:9000/_uploads/photos/1",
+                            "deal_price": 1,  // 交易价格
+                            "express": 4,  // 快递公司ID
+                            "express_at": 0,  // 发货时间
+                            "express_no": null,  // 运单号
+                            "id_code": "1",
+                            "mode": "1 1",
+                            "price": 1,
+                            "product_name": "摩托",  // 商品名
+                            "quantity": 3,  // 数量
+                            "rid": "1",  // sku
+                            "s_color": "1",
+                            "s_model": "1",
+                            "s_weight": 1,
+                            "sale_price": 1,
+                            "stock_count": 11020
+                        }
+                    ],
 
-                ],
-                "outside_target_id": "D18061015836402",
-                "pay_amount": 3996.4,
-                "received_at": 0,
-                "remark": null,
-                "rid": "D18061015836402",
-                "ship_mode": 1,
-                "status": 12,
-                "store_name": "第一家(None)",
-                "total_amount": 3996.4,
-                "total_quantity": 4
             },
             "rid": "D18061015836402"
         },
@@ -803,52 +816,57 @@ JSON数据格式:
     {
         "data": {
             "order": {
-                "buyer_address": "大街",
-                "buyer_city": "北京",
-                "buyer_country": "中国",
-                "buyer_name": "田帅",
-                "buyer_phone": "13278989898",
-                "buyer_province": "北京",
-                "buyer_remark": null,
-                "buyer_tel": null,
-                "buyer_zipcode": null,
-                "created_at": 1528620141,
-                "customer_order_id": null,
-                "discount_amount": 0,
-                "express_at": 0,
-                "express_name": "",
-                "express_no": null,
-                "freight": 0,
-                "items": [
-                    {
-                        "cost_price": "1.00",
-                        "cover": "http://0.0.0.0:9000/_uploads/photos/1",
-                        "deal_price": 999.1,
-                        "discount_amount": 0,
-                        "id_code": "1",
-                        "mode": "1 1",
-                        "price": "1.00",
-                        "product_name": "摩托",
-                        "quantity": 3,
-                        "rid": "1",
-                        "s_color": "1",
-                        "s_model": "1",
-                        "s_weight": "1.00",
-                        "sale_price": "1.00",
-                        "stock_count": 11089
-                    },
+                    "buyer_address": "青年路",  // 买家地址
+                    "buyer_city": "淄博",  //买家市
+                    "buyer_country": "中国",  // 买家国家
+                    "buyer_name": "ZT-2",
+                    "buyer_phone": "13260180689",  // 买家电话
+                    "buyer_province": "山东",  // 买家省
+                    "buyer_remark": null,  // 买家备注
+                    "buyer_tel": "13260180689",  // 买家手机
+                    "buyer_zipcode": "255300",  // 买家邮编
+                    "coupon_amount": 0,  // 优惠券金额
+                    "created_at": 1530608616,  // 创建时间
+                    "customer_order_id": null,  // 分销商订单编号
+                    "discount_amount": 0,  // 店铺优惠金额 = 首单优惠 + 满减 + 优惠券
+                    "first_discount": 0,  // 首单优惠
+                    "freight": 14,  // 运费
+                    "official_order_id": null,  // 官方平台订单号
+                    "outside_target_id": "D18070316803529",  // 第三方平台订单号
+                    "pay_amount": 17,  // 支付金额
+                    "reach_minus": 0,  // 满减金额
+                    "received_at": 0,  // 收货时间
+                    "distributed": false,  // 分销订单
+                    "remark": null,  // 卖家备注
+                    "rid": "D18070316803529",  // 订单编号
+                    "ship_mode": 1,  // 运送方式
+                    "status": 13,  // 订单状态
+                    "store_name": "第一家(None)",  // 店铺名称
+                    "total_amount": 3,  // 商品金额
+                    "total_quantity": 3  // 商品总数量
+                    "items": [
+                        {
+                            "commission_price": 0,  // 佣金
+                            "commission_rate": 0,  // 佣金比
+                            "cover": "http://0.0.0.0:9000/_uploads/photos/1",
+                            "deal_price": 1,  // 交易价格
+                            "express": 4,  // 快递公司ID
+                            "express_at": 0,  // 发货时间
+                            "express_no": null,  // 运单号
+                            "id_code": "1",
+                            "mode": "1 1",
+                            "price": 1,
+                            "product_name": "摩托",  // 商品名
+                            "quantity": 3,  // 数量
+                            "rid": "1",  // sku
+                            "s_color": "1",
+                            "s_model": "1",
+                            "s_weight": 1,
+                            "sale_price": 1,
+                            "stock_count": 11020
+                        }
+                    ],
 
-                ],
-                "outside_target_id": "D18061015836402",
-                "pay_amount": 3996.4,
-                "received_at": 0,
-                "remark": null,
-                "rid": "D18061015836402",
-                "ship_mode": 1,
-                "status": 13,
-                "store_name": "第一家(None)",
-                "total_amount": 3996.4,
-                "total_quantity": 4
             },
             "rid": "D18061015836402"
         },
@@ -890,52 +908,57 @@ JSON数据格式:
     {
         "data": {
             "order": {
-                "buyer_address": "大街",
-                "buyer_city": "北京",
-                "buyer_country": "中国",
-                "buyer_name": "田帅",
-                "buyer_phone": "13278989898",
-                "buyer_province": "北京",
-                "buyer_remark": null,
-                "buyer_tel": null,
-                "buyer_zipcode": null,
-                "created_at": 1528620141,
-                "customer_order_id": null,
-                "discount_amount": 0,
-                "express_at": 0,
-                "express_name": "",
-                "express_no": null,
-                "freight": 0,
-                "items": [
-                    {
-                        "cost_price": "1.00",
-                        "cover": "http://0.0.0.0:9000/_uploads/photos/1",
-                        "deal_price": 999.1,
-                        "discount_amount": 0,
-                        "id_code": "1",
-                        "mode": "1 1",
-                        "price": "1.00",
-                        "product_name": "摩托",
-                        "quantity": 3,
-                        "rid": "1",
-                        "s_color": "1",
-                        "s_model": "1",
-                        "s_weight": "1.00",
-                        "sale_price": "1.00",
-                        "stock_count": 11089
-                    },
+                    "buyer_address": "青年路",  // 买家地址
+                    "buyer_city": "淄博",  //买家市
+                    "buyer_country": "中国",  // 买家国家
+                    "buyer_name": "ZT-2",
+                    "buyer_phone": "13260180689",  // 买家电话
+                    "buyer_province": "山东",  // 买家省
+                    "buyer_remark": null,  // 买家备注
+                    "buyer_tel": "13260180689",  // 买家手机
+                    "buyer_zipcode": "255300",  // 买家邮编
+                    "coupon_amount": 0,  // 优惠券金额
+                    "created_at": 1530608616,  // 创建时间
+                    "customer_order_id": null,  // 分销商订单编号
+                    "discount_amount": 0,  // 店铺优惠金额 = 首单优惠 + 满减 + 优惠券
+                    "first_discount": 0,  // 首单优惠
+                    "freight": 14,  // 运费
+                    "official_order_id": null,  // 官方平台订单号
+                    "outside_target_id": "D18070316803529",  // 第三方平台订单号
+                    "pay_amount": 17,  // 支付金额
+                    "reach_minus": 0,  // 满减金额
+                    "received_at": 0,  // 收货时间
+                    "distributed": false,  // 分销订单
+                    "remark": null,  // 卖家备注
+                    "rid": "D18070316803529",  // 订单编号
+                    "ship_mode": 1,  // 运送方式
+                    "status": 16,  // 订单状态
+                    "store_name": "第一家(None)",  // 店铺名称
+                    "total_amount": 3,  // 商品金额
+                    "total_quantity": 3  // 商品总数量
+                    "items": [
+                        {
+                            "commission_price": 0,  // 佣金
+                            "commission_rate": 0,  // 佣金比
+                            "cover": "http://0.0.0.0:9000/_uploads/photos/1",
+                            "deal_price": 1,  // 交易价格
+                            "express": 4,  // 快递公司ID
+                            "express_at": 0,  // 发货时间
+                            "express_no": null,  // 运单号
+                            "id_code": "1",
+                            "mode": "1 1",
+                            "price": 1,
+                            "product_name": "摩托",  // 商品名
+                            "quantity": 3,  // 数量
+                            "rid": "1",  // sku
+                            "s_color": "1",
+                            "s_model": "1",
+                            "s_weight": 1,
+                            "sale_price": 1,
+                            "stock_count": 11020
+                        }
+                    ],
 
-                ],
-                "outside_target_id": "D18061015836402",
-                "pay_amount": 3996.4,
-                "received_at": 0,
-                "remark": null,
-                "rid": "D18061015836402",
-                "ship_mode": 1,
-                "status": 16,
-                "store_name": "第一家(None)",
-                "total_amount": 3996.4,
-                "total_quantity": 4
             },
             "rid": "D18061015836402"
         },
@@ -977,52 +1000,57 @@ JSON数据格式:
     {
         "data": {
             "order": {
-                "buyer_address": "大街",
-                "buyer_city": "北京",
-                "buyer_country": "中国",
-                "buyer_name": "田帅",
-                "buyer_phone": "13278989898",
-                "buyer_province": "北京",
-                "buyer_remark": null,
-                "buyer_tel": null,
-                "buyer_zipcode": null,
-                "created_at": 1528620141,
-                "customer_order_id": null,
-                "discount_amount": 0,
-                "express_at": 0,
-                "express_name": "",
-                "express_no": null,
-                "freight": 0,
-                "items": [
-                    {
-                        "cost_price": "1.00",
-                        "cover": "http://0.0.0.0:9000/_uploads/photos/1",
-                        "deal_price": 999.1,
-                        "discount_amount": 0,
-                        "id_code": "1",
-                        "mode": "1 1",
-                        "price": "1.00",
-                        "product_name": "摩托",
-                        "quantity": 3,
-                        "rid": "1",
-                        "s_color": "1",
-                        "s_model": "1",
-                        "s_weight": "1.00",
-                        "sale_price": "1.00",
-                        "stock_count": 11089
-                    },
+                    "buyer_address": "青年路",  // 买家地址
+                    "buyer_city": "淄博",  //买家市
+                    "buyer_country": "中国",  // 买家国家
+                    "buyer_name": "ZT-2",
+                    "buyer_phone": "13260180689",  // 买家电话
+                    "buyer_province": "山东",  // 买家省
+                    "buyer_remark": null,  // 买家备注
+                    "buyer_tel": "13260180689",  // 买家手机
+                    "buyer_zipcode": "255300",  // 买家邮编
+                    "coupon_amount": 0,  // 优惠券金额
+                    "created_at": 1530608616,  // 创建时间
+                    "customer_order_id": null,  // 分销商订单编号
+                    "discount_amount": 0,  // 店铺优惠金额 = 首单优惠 + 满减 + 优惠券
+                    "first_discount": 0,  // 首单优惠
+                    "freight": 14,  // 运费
+                    "official_order_id": null,  // 官方平台订单号
+                    "outside_target_id": "D18070316803529",  // 第三方平台订单号
+                    "pay_amount": 17,  // 支付金额
+                    "reach_minus": 0,  // 满减金额
+                    "received_at": 0,  // 收货时间
+                    "distributed": false,  // 分销订单
+                    "remark": null,  // 卖家备注
+                    "rid": "D18070316803529",  // 订单编号
+                    "ship_mode": 1,  // 运送方式
+                    "status": 40,  // 订单状态
+                    "store_name": "第一家(None)",  // 店铺名称
+                    "total_amount": 3,  // 商品金额
+                    "total_quantity": 3  // 商品总数量
+                    "items": [
+                        {
+                            "commission_price": 0,  // 佣金
+                            "commission_rate": 0,  // 佣金比
+                            "cover": "http://0.0.0.0:9000/_uploads/photos/1",
+                            "deal_price": 1,  // 交易价格
+                            "express": 4,  // 快递公司ID
+                            "express_at": 0,  // 发货时间
+                            "express_no": null,  // 运单号
+                            "id_code": "1",
+                            "mode": "1 1",
+                            "price": 1,
+                            "product_name": "摩托",  // 商品名
+                            "quantity": 3,  // 数量
+                            "rid": "1",  // sku
+                            "s_color": "1",
+                            "s_model": "1",
+                            "s_weight": 1,
+                            "sale_price": 1,
+                            "stock_count": 11020
+                        }
+                    ],
 
-                ],
-                "outside_target_id": "D18061015836402",
-                "pay_amount": 3996.4,
-                "received_at": 0,
-                "remark": null,
-                "rid": "D18061015836402",
-                "ship_mode": 1,
-                "status": 40,
-                "store_name": "第一家(None)",
-                "total_amount": 3996.4,
-                "total_quantity": 4
             },
             "rid": "D18061015836402"
         },
@@ -1064,52 +1092,57 @@ JSON数据格式:
     {
         "data": {
             "order": {
-                "buyer_address": "大街",
-                "buyer_city": "北京",
-                "buyer_country": "中国",
-                "buyer_name": "田帅",
-                "buyer_phone": "13278989898",
-                "buyer_province": "北京",
-                "buyer_remark": null,
-                "buyer_tel": null,
-                "buyer_zipcode": null,
-                "created_at": 1528620141,
-                "customer_order_id": null,
-                "discount_amount": 0,
-                "express_at": 0,
-                "express_name": "",
-                "express_no": null,
-                "freight": 0,
-                "items": [
-                    {
-                        "cost_price": "1.00",
-                        "cover": "http://0.0.0.0:9000/_uploads/photos/1",
-                        "deal_price": 999.1,
-                        "discount_amount": 0,
-                        "id_code": "1",
-                        "mode": "1 1",
-                        "price": "1.00",
-                        "product_name": "摩托",
-                        "quantity": 3,
-                        "rid": "1",
-                        "s_color": "1",
-                        "s_model": "1",
-                        "s_weight": "1.00",
-                        "sale_price": "1.00",
-                        "stock_count": 11089
-                    },
+                    "buyer_address": "青年路",  // 买家地址
+                    "buyer_city": "淄博",  //买家市
+                    "buyer_country": "中国",  // 买家国家
+                    "buyer_name": "ZT-2",
+                    "buyer_phone": "13260180689",  // 买家电话
+                    "buyer_province": "山东",  // 买家省
+                    "buyer_remark": null,  // 买家备注
+                    "buyer_tel": "13260180689",  // 买家手机
+                    "buyer_zipcode": "255300",  // 买家邮编
+                    "coupon_amount": 0,  // 优惠券金额
+                    "created_at": 1530608616,  // 创建时间
+                    "customer_order_id": null,  // 分销商订单编号
+                    "discount_amount": 0,  // 店铺优惠金额 = 首单优惠 + 满减 + 优惠券
+                    "first_discount": 0,  // 首单优惠
+                    "freight": 14,  // 运费
+                    "official_order_id": null,  // 官方平台订单号
+                    "outside_target_id": "D18070316803529",  // 第三方平台订单号
+                    "pay_amount": 17,  // 支付金额
+                    "reach_minus": 0,  // 满减金额
+                    "received_at": 0,  // 收货时间
+                    "distributed": false,  // 分销订单
+                    "remark": null,  // 卖家备注
+                    "rid": "D18070316803529",  // 订单编号
+                    "ship_mode": 1,  // 运送方式
+                    "status": 45,  // 订单状态
+                    "store_name": "第一家(None)",  // 店铺名称
+                    "total_amount": 3,  // 商品金额
+                    "total_quantity": 3  // 商品总数量
+                    "items": [
+                        {
+                            "commission_price": 0,  // 佣金
+                            "commission_rate": 0,  // 佣金比
+                            "cover": "http://0.0.0.0:9000/_uploads/photos/1",
+                            "deal_price": 1,  // 交易价格
+                            "express": 4,  // 快递公司ID
+                            "express_at": 0,  // 发货时间
+                            "express_no": null,  // 运单号
+                            "id_code": "1",
+                            "mode": "1 1",
+                            "price": 1,
+                            "product_name": "摩托",  // 商品名
+                            "quantity": 3,  // 数量
+                            "rid": "1",  // sku
+                            "s_color": "1",
+                            "s_model": "1",
+                            "s_weight": 1,
+                            "sale_price": 1,
+                            "stock_count": 11020
+                        }
+                    ],
 
-                ],
-                "outside_target_id": "D18061015836402",
-                "pay_amount": 3996.4,
-                "received_at": 0,
-                "remark": null,
-                "rid": "D18061015836402",
-                "ship_mode": 1,
-                "status": 45,
-                "store_name": "第一家(None)",
-                "total_amount": 3996.4,
-                "total_quantity": 4
             },
             "rid": "D18061015836402"
         },
@@ -1151,52 +1184,57 @@ JSON数据格式:
     {
         "data": {
             "order": {
-                "buyer_address": "大街",
-                "buyer_city": "北京",
-                "buyer_country": "中国",
-                "buyer_name": "田帅",
-                "buyer_phone": "13278989898",
-                "buyer_province": "北京",
-                "buyer_remark": null,
-                "buyer_tel": null,
-                "buyer_zipcode": null,
-                "created_at": 1528620141,
-                "customer_order_id": null,
-                "discount_amount": 0,
-                "express_at": 0,
-                "express_name": "",
-                "express_no": null,
-                "freight": 0,
+                "buyer_address": "青年路",  // 买家地址
+                "buyer_city": "淄博",  //买家市
+                "buyer_country": "中国",  // 买家国家
+                "buyer_name": "ZT-2",
+                "buyer_phone": "13260180689",  // 买家电话
+                "buyer_province": "山东",  // 买家省
+                "buyer_remark": null,  // 买家备注
+                "buyer_tel": "13260180689",  // 买家手机
+                "buyer_zipcode": "255300",  // 买家邮编
+                "coupon_amount": 0,  // 优惠券金额
+                "created_at": 1530608616,  // 创建时间
+                "customer_order_id": null,  // 分销商订单编号
+                "discount_amount": 0,  // 店铺优惠金额 = 首单优惠 + 满减 + 优惠券
+                "first_discount": 0,  // 首单优惠
+                "freight": 14,  // 运费
+                "official_order_id": null,  // 官方平台订单号
+                "outside_target_id": "D18070316803529",  // 第三方平台订单号
+                "pay_amount": 17,  // 支付金额
+                "reach_minus": 0,  // 满减金额
+                "received_at": 0,  // 收货时间
+                "distributed": false,  // 分销订单
+                "remark": null,  // 卖家备注
+                "rid": "D18070316803529",  // 订单编号
+                "ship_mode": 1,  // 运送方式
+                "status": 30,  // 订单状态
+                "store_name": "第一家(None)",  // 店铺名称
+                "total_amount": 3,  // 商品金额
+                "total_quantity": 3  // 商品总数量
                 "items": [
                     {
-                        "cost_price": "1.00",
+                        "commission_price": 0,  // 佣金
+                        "commission_rate": 0,  // 佣金比
                         "cover": "http://0.0.0.0:9000/_uploads/photos/1",
-                        "deal_price": 999.1,
-                        "discount_amount": 0,
+                        "deal_price": 1,  // 交易价格
+                        "express": 4,  // 快递公司ID
+                        "express_at": 0,  // 发货时间
+                        "express_no": null,  // 运单号
                         "id_code": "1",
                         "mode": "1 1",
-                        "price": "1.00",
-                        "product_name": "摩托",
-                        "quantity": 3,
-                        "rid": "1",
+                        "price": 1,
+                        "product_name": "摩托",  // 商品名
+                        "quantity": 3,  // 数量
+                        "rid": "1",  // sku
                         "s_color": "1",
                         "s_model": "1",
-                        "s_weight": "1.00",
-                        "sale_price": "1.00",
-                        "stock_count": 11089
-                    },
-
+                        "s_weight": 1,
+                        "sale_price": 1,
+                        "stock_count": 11020
+                    }
                 ],
-                "outside_target_id": "D18061015836402",
-                "pay_amount": 3996.4,
-                "received_at": 0,
-                "remark": null,
-                "rid": "D18061015836402",
-                "ship_mode": 1,
-                "status": 30,
-                "store_name": "第一家(None)",
-                "total_amount": 3996.4,
-                "total_quantity": 4
+
             },
             "rid": "D18061015836402"
         },

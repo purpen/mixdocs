@@ -96,6 +96,7 @@
 <li class="toctree-l2"><a class="reference internal" href="../products/distributions.html">分销模块</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../products/wish.html">心愿清单模块</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../products/assets.html">附件模块</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../products/wx_app_design.html">小程序配置模块</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="../customers/index.html">分销客户API模块</a><ul>
@@ -171,22 +172,28 @@
 <li><a class="reference internal" href="#id9">返回示例</a></li>
 </ul>
 </li>
-<li><a class="reference internal" href="#id10">广告列表&lt;未开通&gt;</a><ul>
+<li><a class="reference internal" href="#id10">广告列表</a><ul>
 <li><a class="reference internal" href="#id11">接口说明</a></li>
 <li><a class="reference internal" href="#id12">请求参数</a></li>
 <li><a class="reference internal" href="#id13">返回示例</a></li>
 </ul>
 </li>
-<li><a class="reference internal" href="#id14">新增广告信息&lt;未开通&gt;</a><ul>
+<li><a class="reference internal" href="#id14">广告图列表</a><ul>
 <li><a class="reference internal" href="#id15">接口说明</a></li>
+<li><a class="reference internal" href="#id16">请求参数</a></li>
+<li><a class="reference internal" href="#id17">返回示例</a></li>
 </ul>
 </li>
-<li><a class="reference internal" href="#id16">更新广告信息&lt;未开通&gt;</a><ul>
-<li><a class="reference internal" href="#id17">接口说明</a></li>
-</ul>
-</li>
-<li><a class="reference internal" href="#id18">删除广告信息&lt;未开通&gt;</a><ul>
+<li><a class="reference internal" href="#id18">新增广告信息&lt;未开通&gt;</a><ul>
 <li><a class="reference internal" href="#id19">接口说明</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#id20">更新广告信息&lt;未开通&gt;</a><ul>
+<li><a class="reference internal" href="#id21">接口说明</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#id22">删除广告信息&lt;未开通&gt;</a><ul>
+<li><a class="reference internal" href="#id23">接口说明</a></li>
 </ul>
 </li>
 </ul>
@@ -233,22 +240,28 @@
 <li><a class="reference internal" href="#id9">返回示例</a></li>
 </ul>
 </li>
-<li><a class="reference internal" href="#id10">广告列表&lt;未开通&gt;</a><ul>
+<li><a class="reference internal" href="#id10">广告列表</a><ul>
 <li><a class="reference internal" href="#id11">接口说明</a></li>
 <li><a class="reference internal" href="#id12">请求参数</a></li>
 <li><a class="reference internal" href="#id13">返回示例</a></li>
 </ul>
 </li>
-<li><a class="reference internal" href="#id14">新增广告信息&lt;未开通&gt;</a><ul>
+<li><a class="reference internal" href="#id14">广告图列表</a><ul>
 <li><a class="reference internal" href="#id15">接口说明</a></li>
+<li><a class="reference internal" href="#id16">请求参数</a></li>
+<li><a class="reference internal" href="#id17">返回示例</a></li>
 </ul>
 </li>
-<li><a class="reference internal" href="#id16">更新广告信息&lt;未开通&gt;</a><ul>
-<li><a class="reference internal" href="#id17">接口说明</a></li>
-</ul>
-</li>
-<li><a class="reference internal" href="#id18">删除广告信息&lt;未开通&gt;</a><ul>
+<li><a class="reference internal" href="#id18">新增广告信息&lt;未开通&gt;</a><ul>
 <li><a class="reference internal" href="#id19">接口说明</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#id20">更新广告信息&lt;未开通&gt;</a><ul>
+<li><a class="reference internal" href="#id21">接口说明</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#id22">删除广告信息&lt;未开通&gt;</a><ul>
+<li><a class="reference internal" href="#id23">接口说明</a></li>
 </ul>
 </li>
 </ul>
@@ -424,7 +437,7 @@
 </div>
 </div>
 <div class="section" id="id10">
-<h2>广告列表&lt;未开通&gt;<a class="headerlink" href="#id10" title="永久链接至标题">¶</a></h2>
+<h2>广告列表<a class="headerlink" href="#id10" title="永久链接至标题">¶</a></h2>
 <p>获取广告列表</p>
 <div class="section" id="id11">
 <h3>接口说明<a class="headerlink" href="#id11" title="永久链接至标题">¶</a></h3>
@@ -470,13 +483,134 @@
 <div class="section" id="id13">
 <h3>返回示例<a class="headerlink" href="#id13" title="永久链接至标题">¶</a></h3>
 <p>JSON数据格式:</p>
+<div class="highlight-javascript"><div class="highlight"><pre><span></span><span class="p">{</span>
+    <span class="s2">&quot;data&quot;</span><span class="o">:</span> <span class="p">{</span>
+        <span class="s2">&quot;banners&quot;</span><span class="o">:</span> <span class="p">[</span>
+            <span class="p">{</span>
+                <span class="s2">&quot;height&quot;</span><span class="o">:</span> <span class="mi">40</span><span class="p">,</span>
+                <span class="s2">&quot;name&quot;</span><span class="o">:</span> <span class="s2">&quot;广告&quot;</span><span class="p">,</span>
+                <span class="s2">&quot;rid&quot;</span><span class="o">:</span> <span class="s2">&quot;8548462054&quot;</span><span class="p">,</span>
+                <span class="s2">&quot;status&quot;</span><span class="o">:</span> <span class="mi">1</span><span class="p">,</span>
+                <span class="s2">&quot;width&quot;</span><span class="o">:</span> <span class="mi">30</span>
+            <span class="p">},</span>
+            <span class="p">{</span>
+                <span class="s2">&quot;height&quot;</span><span class="o">:</span> <span class="mi">20</span><span class="p">,</span>
+                <span class="s2">&quot;name&quot;</span><span class="o">:</span> <span class="s2">&quot;001&quot;</span><span class="p">,</span>
+                <span class="s2">&quot;rid&quot;</span><span class="o">:</span> <span class="s2">&quot;8946315464&quot;</span><span class="p">,</span>
+                <span class="s2">&quot;status&quot;</span><span class="o">:</span> <span class="mi">1</span><span class="p">,</span>
+                <span class="s2">&quot;width&quot;</span><span class="o">:</span> <span class="mi">20</span>
+            <span class="p">}</span>
+        <span class="p">],</span>
+        <span class="s2">&quot;count&quot;</span><span class="o">:</span> <span class="mi">2</span><span class="p">,</span>
+        <span class="s2">&quot;next&quot;</span><span class="o">:</span> <span class="kc">false</span><span class="p">,</span>
+        <span class="s2">&quot;prev&quot;</span><span class="o">:</span> <span class="kc">false</span>
+    <span class="p">},</span>
+    <span class="s2">&quot;status&quot;</span><span class="o">:</span> <span class="p">{</span>
+        <span class="s2">&quot;code&quot;</span><span class="o">:</span> <span class="mi">200</span><span class="p">,</span>
+        <span class="s2">&quot;message&quot;</span><span class="o">:</span> <span class="s2">&quot;Ok all right.&quot;</span>
+    <span class="p">},</span>
+    <span class="s2">&quot;success&quot;</span><span class="o">:</span> <span class="kc">true</span>
+<span class="p">}</span>
+</pre></div>
+</div>
 </div>
 </div>
 <div class="section" id="id14">
-<h2>新增广告信息&lt;未开通&gt;<a class="headerlink" href="#id14" title="永久链接至标题">¶</a></h2>
-<p>新增广告信息</p>
+<h2>广告图列表<a class="headerlink" href="#id14" title="永久链接至标题">¶</a></h2>
+<p>获取广告位中广告图列表</p>
 <div class="section" id="id15">
 <h3>接口说明<a class="headerlink" href="#id15" title="永久链接至标题">¶</a></h3>
+<ul class="simple">
+<li>API接口请求地址：<code class="docutils literal"><span class="pre">/market/banners/&lt;rid&gt;</span></code></li>
+<li>API接口请求方法：<code class="docutils literal"><span class="pre">GET</span></code></li>
+</ul>
+</div>
+<div class="section" id="id16">
+<h3>请求参数<a class="headerlink" href="#id16" title="永久链接至标题">¶</a></h3>
+<table border="1" class="docutils">
+<colgroup>
+<col width="19%" />
+<col width="11%" />
+<col width="12%" />
+<col width="11%" />
+<col width="48%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">名称</th>
+<th class="head">类型</th>
+<th class="head">是否必须</th>
+<th class="head">默认值</th>
+<th class="head">描述说明</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>page</td>
+<td>Number</td>
+<td>可选</td>
+<td>1</td>
+<td>当前页码</td>
+</tr>
+<tr class="row-odd"><td>per_page</td>
+<td>Number</td>
+<td>可选</td>
+<td>5</td>
+<td>每页数量</td>
+</tr>
+<tr class="row-even"><td>banner_type</td>
+<td>Number</td>
+<td>可选</td>
+<td>1</td>
+<td>广告类型</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="id17">
+<h3>返回示例<a class="headerlink" href="#id17" title="永久链接至标题">¶</a></h3>
+<p>JSON数据格式:</p>
+<div class="highlight-javascript"><div class="highlight"><pre><span></span><span class="p">{</span>
+    <span class="s2">&quot;data&quot;</span><span class="o">:</span> <span class="p">{</span>
+        <span class="s2">&quot;banner_images&quot;</span><span class="o">:</span> <span class="p">[</span>
+            <span class="p">{</span>
+                <span class="s2">&quot;description&quot;</span><span class="o">:</span> <span class="s2">&quot;广告图描述&quot;</span><span class="p">,</span>
+                <span class="s2">&quot;image&quot;</span><span class="o">:</span> <span class="s2">&quot;http://127.0.0.1:9000/_uploads/photos/180530/72de0b9ca1ae5a3.jpg&quot;</span><span class="p">,</span>
+                <span class="s2">&quot;link&quot;</span><span class="o">:</span> <span class="s2">&quot;链接地址&quot;</span><span class="p">,</span>
+                <span class="s2">&quot;rid&quot;</span><span class="o">:</span> <span class="mi">4</span><span class="p">,</span>
+                <span class="s2">&quot;sort_order&quot;</span><span class="o">:</span> <span class="s2">&quot;排序&quot;</span><span class="p">,</span>
+                <span class="s2">&quot;status&quot;</span><span class="o">:</span> <span class="kc">true</span><span class="p">,</span>
+                <span class="s2">&quot;title&quot;</span><span class="o">:</span> <span class="s2">&quot;标题&quot;</span><span class="p">,</span>
+                <span class="s2">&quot;type&quot;</span><span class="o">:</span> <span class="s2">&quot;0=全部, 1=链接地址, 2=商品, 3=分类, 4=品牌, 5=专题&quot;</span>
+            <span class="p">},</span>
+            <span class="p">{</span>
+                <span class="s2">&quot;description&quot;</span><span class="o">:</span> <span class="s2">&quot;广告图描述&quot;</span><span class="p">,</span>
+                <span class="s2">&quot;image&quot;</span><span class="o">:</span> <span class="s2">&quot;http://127.0.0.1:9000/_uploads/photos/180530/72de0b9ca1ae5a3.jpg&quot;</span><span class="p">,</span>
+                <span class="s2">&quot;link&quot;</span><span class="o">:</span> <span class="s2">&quot;链接地址&quot;</span><span class="p">,</span>
+                <span class="s2">&quot;rid&quot;</span><span class="o">:</span> <span class="mi">3</span><span class="p">,</span>
+                <span class="s2">&quot;sort_order&quot;</span><span class="o">:</span> <span class="mi">1</span><span class="p">,</span>
+                <span class="s2">&quot;status&quot;</span><span class="o">:</span> <span class="kc">true</span><span class="p">,</span>
+                <span class="s2">&quot;title&quot;</span><span class="o">:</span> <span class="s2">&quot;标题&quot;</span><span class="p">,</span>
+                <span class="s2">&quot;type&quot;</span><span class="o">:</span> <span class="mi">2</span>
+            <span class="p">}</span>
+        <span class="p">],</span>
+        <span class="s2">&quot;count&quot;</span><span class="o">:</span> <span class="mi">2</span><span class="p">,</span>
+        <span class="s2">&quot;next&quot;</span><span class="o">:</span> <span class="kc">false</span><span class="p">,</span>
+        <span class="s2">&quot;prev&quot;</span><span class="o">:</span> <span class="kc">false</span>
+    <span class="p">},</span>
+    <span class="s2">&quot;status&quot;</span><span class="o">:</span> <span class="p">{</span>
+        <span class="s2">&quot;code&quot;</span><span class="o">:</span> <span class="mi">200</span><span class="p">,</span>
+        <span class="s2">&quot;message&quot;</span><span class="o">:</span> <span class="s2">&quot;Ok all right.&quot;</span>
+    <span class="p">},</span>
+    <span class="s2">&quot;success&quot;</span><span class="o">:</span> <span class="kc">true</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="id18">
+<h2>新增广告信息&lt;未开通&gt;<a class="headerlink" href="#id18" title="永久链接至标题">¶</a></h2>
+<p>新增广告信息</p>
+<div class="section" id="id19">
+<h3>接口说明<a class="headerlink" href="#id19" title="永久链接至标题">¶</a></h3>
 <ul class="simple">
 <li>API接口请求地址：<code class="docutils literal"><span class="pre">/market/banners/create</span></code></li>
 <li>API接口请求方法：<code class="docutils literal"><span class="pre">POST</span></code></li>
@@ -484,11 +618,11 @@
 </ul>
 </div>
 </div>
-<div class="section" id="id16">
-<h2>更新广告信息&lt;未开通&gt;<a class="headerlink" href="#id16" title="永久链接至标题">¶</a></h2>
+<div class="section" id="id20">
+<h2>更新广告信息&lt;未开通&gt;<a class="headerlink" href="#id20" title="永久链接至标题">¶</a></h2>
 <p>更新广告信息</p>
-<div class="section" id="id17">
-<h3>接口说明<a class="headerlink" href="#id17" title="永久链接至标题">¶</a></h3>
+<div class="section" id="id21">
+<h3>接口说明<a class="headerlink" href="#id21" title="永久链接至标题">¶</a></h3>
 <ul class="simple">
 <li>API接口请求地址：<code class="docutils literal"><span class="pre">/market/banners/update</span></code></li>
 <li>API接口请求方法：<code class="docutils literal"><span class="pre">PUT</span></code></li>
@@ -496,11 +630,11 @@
 </ul>
 </div>
 </div>
-<div class="section" id="id18">
-<h2>删除广告信息&lt;未开通&gt;<a class="headerlink" href="#id18" title="永久链接至标题">¶</a></h2>
+<div class="section" id="id22">
+<h2>删除广告信息&lt;未开通&gt;<a class="headerlink" href="#id22" title="永久链接至标题">¶</a></h2>
 <p>删除广告信息</p>
-<div class="section" id="id19">
-<h3>接口说明<a class="headerlink" href="#id19" title="永久链接至标题">¶</a></h3>
+<div class="section" id="id23">
+<h3>接口说明<a class="headerlink" href="#id23" title="永久链接至标题">¶</a></h3>
 <ul class="simple">
 <li>API接口请求地址：<code class="docutils literal"><span class="pre">/market/banners/delete</span></code></li>
 <li>API接口请求方法：<code class="docutils literal"><span class="pre">DELETE</span></code></li>
