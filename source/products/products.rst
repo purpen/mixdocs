@@ -628,7 +628,7 @@ JSON数据格式:
 接口说明
 ~~~~~~~~~~~~~~
 
-* API接口请求地址：``/products/<rid>/publish1``
+* API接口请求地址：``/products/<rid>/publish_one``
 * API接口请求方法：``GET``
 * API接口用户授权：``token``
 
@@ -710,7 +710,7 @@ JSON数据格式:
 接口说明
 ~~~~~~~~~~~~~~
 
-* API接口请求地址：``/products/publish1``
+* API接口请求地址：``/products/publish_one``
 * API接口请求方法：``POST``
 * API接口用户授权：``token``
 
@@ -830,7 +830,7 @@ JSON数据格式:
 接口说明
 ~~~~~~~~~~~~~~
 
-* API接口请求地址：``/products/publish1?rid=8984507632``
+* API接口请求地址：``/products/publish_one?rid=8984507632``
 * API接口请求方法：``PUT``
 * API接口用户授权：``token``
 
@@ -918,7 +918,7 @@ JSON数据格式:
 接口说明
 ~~~~~~~~~~~~~~
 
-* API接口请求地址：``/products/<rid>/publish2``
+* API接口请求地址：``/products/<rid>/publish_two``
 * API接口请求方法：``GET``
 * API接口用户授权：``token``
 
@@ -1021,7 +1021,7 @@ JSON数据格式:
 接口说明
 ~~~~~~~~~~~~~~
 
-* API接口请求地址：``/products/publish2/warehouse``
+* API接口请求地址：``/products/publish_two/warehouse``
 * API接口请求方法：``POST``
 * API接口用户授权：``token``
 
@@ -1147,7 +1147,7 @@ JSON数据格式:
 接口说明
 ~~~~~~~~~~~~~~
 
-* API接口请求地址：``/products/publish2/publish``
+* API接口请求地址：``/products/publish_two/publish``
 * API接口请求方法：``POST``
 * API接口用户授权：``token``
 
@@ -1168,7 +1168,7 @@ JSON数据格式:
 接口说明
 ~~~~~~~~~~~~~~
 
-* API接口请求地址：``/products/publish2``
+* API接口请求地址：``/products/publish_two``
 * API接口请求方法：``PUT``
 * API接口用户授权：``token``
 

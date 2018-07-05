@@ -2,6 +2,62 @@
 分类模块
 =============
 
+全部分类列表
+-------------
+获取商家全部有效的分类列表
+
+接口说明
+~~~~~~~~~~~~~~
+
+* API接口请求地址：``/all_categories``
+* API接口请求方法：``GET``
+
+返回示例
+~~~~~~~~~~~~~~~~
+
+.. code-block:: javascript
+
+    {
+        "data": {
+            "k_1_0": [
+                {
+                    "cover": "http://kg.erp.taihuoniao.com/static/img/default-logo-180x180.png",
+                    "description": "",
+                    "id": 1,
+                    "name": "箱包&包袋",
+                    "pid": 0,
+                    "sort_order": 1,
+                    "status": 1
+                },
+                {
+                    "cover": "http://127.0.0.1:9000/_uploads/photos/180530/72de0b9ca1ae5a3.jpg",
+                    "description": "",
+                    "id": 2,
+                    "name": "玩具&娱乐",
+                    "pid": 0,
+                    "sort_order": 6,
+                    "status": 1
+                }
+            ],
+            "k_1_1": [
+                {
+                    "cover": "http://127.0.0.1:9000/_uploads/photos/180530/72de0b9ca1ae5a3.jpg",
+                    "description": "",
+                    "id": 16,
+                    "name": "儿童手工艺",
+                    "pid": 1,
+                    "sort_order": 11,
+                    "status": 1
+                }
+            ]
+        },
+        "status": {
+            "code": 200,
+            "message": "Ok all right."
+        },
+        "success": true
+    }
+
 分类列表
 -------------
 获取商品有效的分类列表
@@ -229,6 +285,92 @@ JSON数据格式:
         "success": false
     }
 
+
+全部官方分类列表
+-------------------
+获取官方全部有效的分类列表
+
+接口说明
+~~~~~~~~~~~~~~
+
+* API接口请求地址：``/official/all_categories``
+* API接口请求方法：``GET``
+
+返回示例
+~~~~~~~~~~~~~~~~
+
+.. code-block:: javascript
+
+    {
+        "data": {
+            "k_1_0": [
+                {
+                    "cover": "http://kg.erp.taihuoniao.com/static/img/default-logo-180x180.png",
+                    "description": "",
+                    "id": 1,
+                    "name": "箱包&包袋",
+                    "pid": 0,
+                    "sort_order": 1,
+                    "status": 1
+                },
+                {
+                    "cover": "http://127.0.0.1:9000/_uploads/photos/180530/72de0b9ca1ae5a3.jpg",
+                    "description": "",
+                    "id": 2,
+                    "name": "玩具&娱乐",
+                    "pid": 0,
+                    "sort_order": 6,
+                    "status": 1
+                }
+            ],
+            "k_1_1": [
+                {
+                    "cover": "http://127.0.0.1:9000/_uploads/photos/180530/72de0b9ca1ae5a3.jpg",
+                    "description": "",
+                    "id": 16,
+                    "name": "儿童手工艺",
+                    "pid": 1,
+                    "sort_order": 11,
+                    "status": 1
+                }
+            ]
+        },
+        "status": {
+            "code": 200,
+            "message": "Ok all right."
+        },
+        "success": true
+    }
+
+
+官方分类列表
+---------------
+获取商品有效的分类列表
+
+接口说明
+~~~~~~~~~~~~~~
+
+* API接口请求地址：``/official/categories``
+* API接口请求方法：``GET``
+
+请求参数
+~~~~~~~~~~~~~~~
+
+===========  ========  =========  ========  ====================================
+名称          类型      是否必须    默认值     描述说明
+===========  ========  =========  ========  ====================================
+page         Number    可选         1         当前页码
+per_page     Number    可选         100       每页数量
+pid          Number    可选         0         父级ID
+===========  ========  =========  ========  ====================================
+
+返回示例
+~~~~~~~~~~~~~~~~
+
+JSON数据格式:
+
+.. literalinclude:: category_list.js
+    :language: javascript
 
 新增官方分类
 -------------
