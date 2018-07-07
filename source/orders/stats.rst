@@ -253,7 +253,6 @@ JSON数据格式:
     }
 
 
-
 我的订单结算列表
 ----------------
 我的订单结算列表
@@ -290,20 +289,21 @@ JSON数据格式:
 
     {
         "data": {
-            "count": 6,
+            "count": 2,
             "next": null,
             "orders": [
                 {
-                    "actual_income": 535.8,  // 实际收入
+                    "actual_account_amount": 491.04,  // 实际入账金额
+                    "actual_income": 570,  // 实际收入
                     "commission_price": 0,  // 佣金
-                    "customer_code": null,  // 分销店铺
-                    "discount_amount": 24.2,  // 优惠
-                    "freight": 338,  // 运费
+                    "customer_order_id": null,  // 分销订单编号
+                    "discount_amount": 2,  // 优惠金额
+                    "freight": 347,  // 运费
+                    "order_serial_no": "D18070546197320",  // 订单编号
                     "payed_at": 1530781909,  // 交易时间
-                    "received_at": 1530781909,  // 交易完成时间
-                    "serial_no": "D18070571028695",  // 订单编号
-                    "service_fee": 64.296,  // 服务费
-                    "total_amount": 222  // 订单商品价格
+                    "received_at": 1530384400,  // 交易完成时间
+                    "service_fee": 68.4,  // 服务费
+                    "total_amount": 225  // 订单商品价格
                 },
             ],
             "prev": null
@@ -350,12 +350,14 @@ JSON数据格式:
 
     {
         "data": {
-            "accountable_amount": 2566.78,  // 应收款金额
-            "actual_income": 2916.8,  // 可结算销售总额
-            "commission_price": 0,  // 佣金总计
-            "count": 6,  // 订单数量
-            "discount_amount": 34.2,  // 优惠总计
-            "service_fee": 350.02  // 服务费
+            "settle_account": {
+                "actual_account_amount": 1003.2,  // 实际入账
+                "actual_income": 1140,  // 可结算销售总额
+                "commission_price": 0,  // 佣金总计
+                "count": 2,  // 订单数
+                "discount_amount": 4,  // 优惠总计
+                "service_fee": 136.8  // 服务费总计
+            }
         },
         "status": {
             "code": 200,
@@ -363,7 +365,6 @@ JSON数据格式:
         },
         "success": true
     }
-
 
 
 我的分销订单结算列表
@@ -400,16 +401,21 @@ JSON数据格式:
 
     {
         "data": {
-            "count": 3,
+            "count": 2,
             "next": null,
             "orders": [
                 {
-                    "commission_price": 11.1,  // 佣金
-                    "payed_at": 1530781909,  // 交易时间
-                    "received_at": 1530781909,  // 交易完成时间
-                    "serial_no": "D18070558301647",  // 订单编号
-                    "service_fee": 1.11,  // 服务费
-                    "total_amount": 111  // 商品价格
+                    "actual_account_amount": 9.99,  // 实际入账
+                    "actual_income": 11.1,  // 实际获得佣金
+                    "commission_price": 11.1, // 佣金
+                    "customer_order_id": null,
+                    "discount_amount": 0, // 优惠金额
+                    "freight": 1120, // 运费
+                    "order_serial_no": "D18070507481253", // 订单号
+                    "payed_at": 1530781909, // 交易时间
+                    "received_at": 1530946080, // 交易完成时间
+                    "service_fee": 1.11, // 服务费
+                    "total_amount": 111 // 订单商品价格
                 },
             ],
             "prev": null
@@ -455,11 +461,13 @@ JSON数据格式:
 
     {
         "data": {
-            "accountable_amount": 29.97,  // 应收销售收益
-            "commission_price": 33.3,  // 佣金总计
-            "count": 3,  // 订单数量
-            "pay_amount": 3693,  // 累计销售额
-            "service_fee": 3.33  // 服务费
+            "settle_account": {
+                "actual_account_amount": 10.26,  // 实际入账金额
+                "commission_price": 11.4,  // 实际获得佣金
+                "count": 2,  // 订单数
+                "service_fee": 1.14,  // 服务费
+                "total_sales": 1274  // 累计销售额
+            }
         },
         "status": {
             "code": 200,
@@ -467,3 +475,115 @@ JSON数据格式:
         },
         "success": true
     }
+
+
+
+我的订单对账单
+--------------------
+我的订单对账单
+
+接口说明
+~~~~~~~~~~~~~~
+
+* API接口请求地址：``/stats/orders/statements``
+* API接口请求方法：``GET``
+* API接口用户授权：``token``
+
+请求参数
+~~~~~~~~~~~~~~~
+
+=====================  ==========  =========  ==========  =============================
+名称                    类型        是否必须     默认值       描述说明
+=====================  ==========  =========  ==========  =============================
+start_time             String      必需                    统计开始日期
+end_time               String      必需                    统计结束日期
+status                 Number      必需         1          1、日汇总 2、月汇总
+page                   Number      可选         1          当前页码
+per_page               Number      可选         10         每页数量
+=====================  ==========  =========  ==========  =============================
+
+返回示例
+~~~~~~~~~~~~~~~~
+
+JSON数据格式:
+
+.. code-block:: javascript
+
+    {
+        "data": {
+            "count": 1,
+            "next": null,
+            "prev": null,
+            "statements": [
+                {
+                    "actual_account_amount": 1494.24,  // 实际入账金额
+                    "actual_income": 1698,  // 收入
+                    "date": "2018-07-01",  // 日期
+                    "service_fee": 203.76  // 服务费
+                }
+            ]
+        },
+        "status": {
+            "code": 200,
+            "message": "Ok all right."
+        },
+        "success": true
+    }
+
+
+
+我的分销订单对账单
+--------------------
+我的分销订单对账单
+
+接口说明
+~~~~~~~~~~~~~~
+
+* API接口请求地址：``/stats/distribute_orders/statements``
+* API接口请求方法：``GET``
+* API接口用户授权：``token``
+
+请求参数
+~~~~~~~~~~~~~~~
+
+=====================  ==========  =========  ==========  =============================
+名称                    类型        是否必须     默认值       描述说明
+=====================  ==========  =========  ==========  =============================
+start_time             String      必需                    统计开始日期
+end_time               String      必需                    统计结束日期
+status                 Number      必需         1          1、日汇总 2、月汇总
+page                   Number      可选         1          当前页码
+per_page               Number      可选         10         每页数量
+=====================  ==========  =========  ==========  =============================
+
+返回示例
+~~~~~~~~~~~~~~~~
+
+JSON数据格式:
+
+.. code-block:: javascript
+
+    {
+        "data": {
+            "count": 1,
+            "next": null,
+            "prev": null,
+            "statements": [
+                {
+                    "actual_account_amount": 10.26,  // 实际入账金额
+                    "actual_income": 11.4, // 收入
+                    "date": "2018-07", // 日期
+                    "service_fee": 1.14 // 服务费
+                }
+            ]
+        },
+        "status": {
+            "code": 200,
+            "message": "Ok all right."
+        },
+        "success": true
+    }
+
+
+
+
