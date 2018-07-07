@@ -541,7 +541,8 @@ JSON数据格式
 
     {
         "data": {
-            "fans_count": 1
+            "fans_count": 1,  // 粉丝数
+            "status": true  // 点击关注后的状态
         },
         "status": {
             "code": 200,
@@ -557,8 +558,8 @@ JSON数据格式
 
     {
         "status": {
-            "code": 400,
-            "message": "Store is None"
+            "code": 404,
+            "message": "Not Found"
         },
         "success": false
     }
@@ -595,7 +596,8 @@ JSON数据格式
 
     {
         "data": {
-            "fans_count": 0
+            "fans_count": 0,  // 粉丝数
+            "status": false  // 关注状态 取消关注后为false
         },
         "status": {
             "code": 200,
@@ -610,10 +612,9 @@ JSON数据格式
 
     {
         "status": {
-            "code": 400,
-            "message": "Store is None"
+            "code": 404,
+            "message": "Not Found"
         },
-
         "success": false
     }
 
