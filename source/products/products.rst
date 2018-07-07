@@ -650,7 +650,7 @@ JSON数据格式:
 
     {
         "data": {
-            "asset_ids": [
+            "assets": [
                 {
                     "created_at": 1527587113,
                     "filename": "m.jpg",
@@ -659,8 +659,10 @@ JSON数据格式:
                     "view_url": "http://127.0.0.1:9000/_uploads/photos/180529/e5a6b51ad55208d.jpg"
                 }
             ],
+            "category_id": 333,
             "content": "图文详情",
             "cover": "http://127.0.0.1:9000/_uploads/photos/180529/4158809a4303eab.jpg",
+            "cover_id": 2,
             "custom_details": "可以刻名字,生辰八字",
             "features": "商品推荐语",
             "id_code": "10086",
@@ -688,11 +690,14 @@ JSON数据格式:
                 }
             ],
             "made_cycle": 5,
+            "material_id": 1,
             "name": "商品名",
             "published_at": 0,
             "rid": "8520961834",
+            "second_category_id": 17,
             "status": 0,
             "sticked": false,
+            "top_category_id": 1,
             "stock_count": null
         },
         "status": {
