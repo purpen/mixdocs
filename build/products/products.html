@@ -111,6 +111,7 @@
 <li class="toctree-l1"><a class="reference internal" href="../shopes/index.html">微商城API模块</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="../shopes/shopes.html">微商城模块</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../shopes/store.html">店铺模块</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../shopes/wxapp.html">小程序模块</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="../market/index.html">营销API模块</a><ul>
@@ -1817,7 +1818,7 @@
 <p>JSON数据格式:</p>
 <div class="highlight-javascript"><div class="highlight"><pre><span></span><span class="p">{</span>
     <span class="s2">&quot;data&quot;</span><span class="o">:</span> <span class="p">{</span>
-        <span class="s2">&quot;asset_ids&quot;</span><span class="o">:</span> <span class="p">[</span>
+        <span class="s2">&quot;assets&quot;</span><span class="o">:</span> <span class="p">[</span>
             <span class="p">{</span>
                 <span class="s2">&quot;created_at&quot;</span><span class="o">:</span> <span class="mi">1527587113</span><span class="p">,</span>
                 <span class="s2">&quot;filename&quot;</span><span class="o">:</span> <span class="s2">&quot;m.jpg&quot;</span><span class="p">,</span>
@@ -1826,8 +1827,10 @@
                 <span class="s2">&quot;view_url&quot;</span><span class="o">:</span> <span class="s2">&quot;http://127.0.0.1:9000/_uploads/photos/180529/e5a6b51ad55208d.jpg&quot;</span>
             <span class="p">}</span>
         <span class="p">],</span>
+        <span class="s2">&quot;category_id&quot;</span><span class="o">:</span> <span class="mi">333</span><span class="p">,</span>
         <span class="s2">&quot;content&quot;</span><span class="o">:</span> <span class="s2">&quot;图文详情&quot;</span><span class="p">,</span>
         <span class="s2">&quot;cover&quot;</span><span class="o">:</span> <span class="s2">&quot;http://127.0.0.1:9000/_uploads/photos/180529/4158809a4303eab.jpg&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;cover_id&quot;</span><span class="o">:</span> <span class="mi">2</span><span class="p">,</span>
         <span class="s2">&quot;custom_details&quot;</span><span class="o">:</span> <span class="s2">&quot;可以刻名字,生辰八字&quot;</span><span class="p">,</span>
         <span class="s2">&quot;features&quot;</span><span class="o">:</span> <span class="s2">&quot;商品推荐语&quot;</span><span class="p">,</span>
         <span class="s2">&quot;id_code&quot;</span><span class="o">:</span> <span class="s2">&quot;10086&quot;</span><span class="p">,</span>
@@ -1855,16 +1858,19 @@
             <span class="p">}</span>
         <span class="p">],</span>
         <span class="s2">&quot;made_cycle&quot;</span><span class="o">:</span> <span class="mi">5</span><span class="p">,</span>
+        <span class="s2">&quot;material_id&quot;</span><span class="o">:</span> <span class="mi">1</span><span class="p">,</span>
         <span class="s2">&quot;name&quot;</span><span class="o">:</span> <span class="s2">&quot;商品名&quot;</span><span class="p">,</span>
         <span class="s2">&quot;published_at&quot;</span><span class="o">:</span> <span class="mi">0</span><span class="p">,</span>
         <span class="s2">&quot;rid&quot;</span><span class="o">:</span> <span class="s2">&quot;8520961834&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;second_category_id&quot;</span><span class="o">:</span> <span class="mi">17</span><span class="p">,</span>
         <span class="s2">&quot;status&quot;</span><span class="o">:</span> <span class="mi">0</span><span class="p">,</span>
         <span class="s2">&quot;sticked&quot;</span><span class="o">:</span> <span class="kc">false</span><span class="p">,</span>
+        <span class="s2">&quot;top_category_id&quot;</span><span class="o">:</span> <span class="mi">1</span><span class="p">,</span>
         <span class="s2">&quot;stock_count&quot;</span><span class="o">:</span> <span class="kc">null</span>
     <span class="p">},</span>
     <span class="s2">&quot;status&quot;</span><span class="o">:</span> <span class="p">{</span>
-        <span class="s2">&quot;code&quot;</span><span class="o">:</span> <span class="mi">201</span><span class="p">,</span>
-        <span class="s2">&quot;message&quot;</span><span class="o">:</span> <span class="s2">&quot;All created.&quot;</span>
+        <span class="s2">&quot;code&quot;</span><span class="o">:</span> <span class="mi">200</span><span class="p">,</span>
+        <span class="s2">&quot;message&quot;</span><span class="o">:</span> <span class="s2">&quot;Ok all right.&quot;</span>
     <span class="p">},</span>
     <span class="s2">&quot;success&quot;</span><span class="o">:</span> <span class="kc">true</span>
 <span class="p">}</span>
@@ -2021,19 +2027,19 @@
 <p>JSON数据格式:</p>
 <div class="highlight-javascript"><div class="highlight"><pre><span></span><span class="p">{</span>
     <span class="s2">&quot;data&quot;</span><span class="o">:</span> <span class="p">{</span>
-        <span class="s2">&quot;asset_ids&quot;</span><span class="o">:</span> <span class="p">[</span>
+        <span class="s2">&quot;assets&quot;</span><span class="o">:</span> <span class="p">[</span>
             <span class="p">{</span>
                 <span class="s2">&quot;created_at&quot;</span><span class="o">:</span> <span class="mi">1527587113</span><span class="p">,</span>
                 <span class="s2">&quot;filename&quot;</span><span class="o">:</span> <span class="s2">&quot;m.jpg&quot;</span><span class="p">,</span>
                 <span class="s2">&quot;filepath&quot;</span><span class="o">:</span> <span class="s2">&quot;180529/e5a6b51ad55208d.jpg&quot;</span><span class="p">,</span>
                 <span class="s2">&quot;id&quot;</span><span class="o">:</span> <span class="mi">5</span><span class="p">,</span>
-                <span class="s2">&quot;type&quot;</span><span class="o">:</span> <span class="mi">1</span><span class="p">,</span>
-                <span class="s2">&quot;type类型说明&quot;</span><span class="o">:</span> <span class="s2">&quot;1=图片, 2=视频, 3=文本, 4=音频, 5=其它&quot;</span><span class="p">,</span>
                 <span class="s2">&quot;view_url&quot;</span><span class="o">:</span> <span class="s2">&quot;http://127.0.0.1:9000/_uploads/photos/180529/e5a6b51ad55208d.jpg&quot;</span>
             <span class="p">}</span>
         <span class="p">],</span>
+        <span class="s2">&quot;category_id&quot;</span><span class="o">:</span> <span class="mi">333</span><span class="p">,</span>
         <span class="s2">&quot;content&quot;</span><span class="o">:</span> <span class="s2">&quot;图文详情&quot;</span><span class="p">,</span>
         <span class="s2">&quot;cover&quot;</span><span class="o">:</span> <span class="s2">&quot;http://127.0.0.1:9000/_uploads/photos/180529/4158809a4303eab.jpg&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;cover_id&quot;</span><span class="o">:</span> <span class="mi">2</span><span class="p">,</span>
         <span class="s2">&quot;custom_details&quot;</span><span class="o">:</span> <span class="s2">&quot;可以刻名字,生辰八字&quot;</span><span class="p">,</span>
         <span class="s2">&quot;features&quot;</span><span class="o">:</span> <span class="s2">&quot;商品推荐语&quot;</span><span class="p">,</span>
         <span class="s2">&quot;id_code&quot;</span><span class="o">:</span> <span class="s2">&quot;10086&quot;</span><span class="p">,</span>
@@ -2061,11 +2067,14 @@
             <span class="p">}</span>
         <span class="p">],</span>
         <span class="s2">&quot;made_cycle&quot;</span><span class="o">:</span> <span class="mi">5</span><span class="p">,</span>
+        <span class="s2">&quot;material_id&quot;</span><span class="o">:</span> <span class="mi">1</span><span class="p">,</span>
         <span class="s2">&quot;name&quot;</span><span class="o">:</span> <span class="s2">&quot;商品名&quot;</span><span class="p">,</span>
         <span class="s2">&quot;published_at&quot;</span><span class="o">:</span> <span class="mi">0</span><span class="p">,</span>
         <span class="s2">&quot;rid&quot;</span><span class="o">:</span> <span class="s2">&quot;8520961834&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;second_category_id&quot;</span><span class="o">:</span> <span class="mi">17</span><span class="p">,</span>
         <span class="s2">&quot;status&quot;</span><span class="o">:</span> <span class="mi">0</span><span class="p">,</span>
         <span class="s2">&quot;sticked&quot;</span><span class="o">:</span> <span class="kc">false</span><span class="p">,</span>
+        <span class="s2">&quot;top_category_id&quot;</span><span class="o">:</span> <span class="mi">1</span><span class="p">,</span>
         <span class="s2">&quot;stock_count&quot;</span><span class="o">:</span> <span class="kc">null</span>
     <span class="p">},</span>
     <span class="s2">&quot;status&quot;</span><span class="o">:</span> <span class="p">{</span>
@@ -2124,19 +2133,19 @@
 <p>请求 <strong>正确</strong> 返回结果：</p>
 <div class="highlight-javascript"><div class="highlight"><pre><span></span><span class="p">{</span>
     <span class="s2">&quot;data&quot;</span><span class="o">:</span> <span class="p">{</span>
-        <span class="s2">&quot;asset_ids&quot;</span><span class="o">:</span> <span class="p">[</span>
+        <span class="s2">&quot;assets&quot;</span><span class="o">:</span> <span class="p">[</span>
             <span class="p">{</span>
                 <span class="s2">&quot;created_at&quot;</span><span class="o">:</span> <span class="mi">1527587113</span><span class="p">,</span>
                 <span class="s2">&quot;filename&quot;</span><span class="o">:</span> <span class="s2">&quot;m.jpg&quot;</span><span class="p">,</span>
                 <span class="s2">&quot;filepath&quot;</span><span class="o">:</span> <span class="s2">&quot;180529/e5a6b51ad55208d.jpg&quot;</span><span class="p">,</span>
                 <span class="s2">&quot;id&quot;</span><span class="o">:</span> <span class="mi">5</span><span class="p">,</span>
-                <span class="s2">&quot;type&quot;</span><span class="o">:</span> <span class="mi">1</span><span class="p">,</span>
-                <span class="s2">&quot;type类型说明&quot;</span><span class="o">:</span> <span class="s2">&quot;1=图片, 2=视频, 3=文本, 4=音频, 5=其它&quot;</span><span class="p">,</span>
                 <span class="s2">&quot;view_url&quot;</span><span class="o">:</span> <span class="s2">&quot;http://127.0.0.1:9000/_uploads/photos/180529/e5a6b51ad55208d.jpg&quot;</span>
             <span class="p">}</span>
         <span class="p">],</span>
+        <span class="s2">&quot;category_id&quot;</span><span class="o">:</span> <span class="mi">333</span><span class="p">,</span>
         <span class="s2">&quot;content&quot;</span><span class="o">:</span> <span class="s2">&quot;新图文详情&quot;</span><span class="p">,</span>
         <span class="s2">&quot;cover&quot;</span><span class="o">:</span> <span class="s2">&quot;http://127.0.0.1:9000/_uploads/photos/180529/4158809a4303eab.jpg&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;cover_id&quot;</span><span class="o">:</span> <span class="mi">2</span><span class="p">,</span>
         <span class="s2">&quot;custom_details&quot;</span><span class="o">:</span> <span class="s2">&quot;可以刻名字,生辰八字&quot;</span><span class="p">,</span>
         <span class="s2">&quot;features&quot;</span><span class="o">:</span> <span class="s2">&quot;新商品推荐语&quot;</span><span class="p">,</span>
         <span class="s2">&quot;id_code&quot;</span><span class="o">:</span> <span class="s2">&quot;10086&quot;</span><span class="p">,</span>
@@ -2164,11 +2173,14 @@
             <span class="p">}</span>
         <span class="p">],</span>
         <span class="s2">&quot;made_cycle&quot;</span><span class="o">:</span> <span class="mi">5</span><span class="p">,</span>
+        <span class="s2">&quot;material_id&quot;</span><span class="o">:</span> <span class="mi">1</span><span class="p">,</span>
         <span class="s2">&quot;name&quot;</span><span class="o">:</span> <span class="s2">&quot;新商品名&quot;</span><span class="p">,</span>
         <span class="s2">&quot;published_at&quot;</span><span class="o">:</span> <span class="mi">0</span><span class="p">,</span>
         <span class="s2">&quot;rid&quot;</span><span class="o">:</span> <span class="s2">&quot;8520961834&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;second_category_id&quot;</span><span class="o">:</span> <span class="mi">17</span><span class="p">,</span>
         <span class="s2">&quot;status&quot;</span><span class="o">:</span> <span class="mi">0</span><span class="p">,</span>
         <span class="s2">&quot;sticked&quot;</span><span class="o">:</span> <span class="kc">false</span><span class="p">,</span>
+        <span class="s2">&quot;top_category_id&quot;</span><span class="o">:</span> <span class="mi">1</span><span class="p">,</span>
         <span class="s2">&quot;stock_count&quot;</span><span class="o">:</span> <span class="kc">null</span>
     <span class="p">},</span>
     <span class="s2">&quot;status&quot;</span><span class="o">:</span> <span class="p">{</span>
