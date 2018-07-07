@@ -7,9 +7,5 @@
     :maxdepth: 2
 
     shopes.rst
-
-
-.. toctree::
-    :maxdepth: 2
-
     store.rst
+    wxapp.rst

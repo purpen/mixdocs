@@ -559,7 +559,7 @@ items                  Array         可选          []          物流公司默
 名称                    类型          是否必须      默认值        描述说明
 =====================  ===========  ==========  ===========  ==============================
 items:
-express_code           String        必须                      物流公司code
+express_id             Integer       必须                      物流公司id
 first_item             Integer       可选          1           首件
 first_weight           Numeric       可选          0           首重
 first_amount           Numeric       可选          0           首费
@@ -595,7 +595,7 @@ place_oid              Array         可选          []          运送地区oid
         "pricing_method":1,
         "items":[
             {
-                "express_code":"YTO",
+                "express_id":4,
                 "min_days":3,
                 "max_days":5,
                 "first_item":1,
@@ -620,7 +620,7 @@ place_oid              Array         可选          []          运送地区oid
                 ]
             },
             {
-                "express_code":"EMS",
+                "express_id":5,
                 "min_days":3,
                 "max_days":5,
                 "first_item":1,
