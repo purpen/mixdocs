@@ -72,6 +72,7 @@
 <li class="toctree-l2"><a class="reference internal" href="../orders/stats.html">统计模块</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../orders/comment.html">订单评价模块</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../orders/logistics.html">物流运费模块</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../orders/finance.html">账户模块</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="../products/index.html">商品API模块</a><ul>
@@ -87,6 +88,7 @@
 <li class="toctree-l2"><a class="reference internal" href="../products/distributions.html">分销模块</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../products/wish.html">心愿清单模块</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../products/assets.html">附件模块</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../products/wx_app_design.html">小程序配置模块</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="../customers/index.html">分销客户API模块</a><ul>
@@ -101,6 +103,7 @@
 <li class="toctree-l1"><a class="reference internal" href="../shopes/index.html">微商城API模块</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="../shopes/shopes.html">微商城模块</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../shopes/store.html">店铺模块</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../shopes/wxapp.html">小程序模块</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="../market/index.html">营销API模块</a><ul>
@@ -224,51 +227,39 @@
 <li><a class="reference internal" href="#id51">返回示例</a></li>
 </ul>
 </li>
-<li><a class="reference internal" href="#id52">编辑个人资料</a><ul>
+<li><a class="reference internal" href="#id52">编辑商家基本信息</a><ul>
 <li><a class="reference internal" href="#id53">接口说明</a></li>
 <li><a class="reference internal" href="#id54">请求参数</a></li>
 <li><a class="reference internal" href="#id55">返回示例</a></li>
 </ul>
 </li>
-<li><a class="reference internal" href="#id56">获取个人资料</a><ul>
+<li><a class="reference internal" href="#id56">编辑商家联系信息</a><ul>
 <li><a class="reference internal" href="#id57">接口说明</a></li>
 <li><a class="reference internal" href="#id58">请求参数</a></li>
-<li><a class="reference internal" href="#id59">返回示例</a></li>
+<li><a class="reference internal" href="#id59">请求示例</a></li>
+<li><a class="reference internal" href="#id60">返回示例</a></li>
 </ul>
 </li>
-<li><a class="reference internal" href="#id60">编辑商家基本信息</a><ul>
-<li><a class="reference internal" href="#id61">接口说明</a></li>
-<li><a class="reference internal" href="#id62">请求参数</a></li>
+<li><a class="reference internal" href="#id61">获取商家个人信息</a><ul>
+<li><a class="reference internal" href="#id62">接口说明</a></li>
 <li><a class="reference internal" href="#id63">返回示例</a></li>
 </ul>
 </li>
-<li><a class="reference internal" href="#id64">编辑商家联系信息</a><ul>
+<li><a class="reference internal" href="#id64">上传商品专利附件</a><ul>
 <li><a class="reference internal" href="#id65">接口说明</a></li>
 <li><a class="reference internal" href="#id66">请求参数</a></li>
-<li><a class="reference internal" href="#id67">请求示例</a></li>
-<li><a class="reference internal" href="#id68">返回示例</a></li>
+<li><a class="reference internal" href="#id67">返回示例</a></li>
 </ul>
 </li>
-<li><a class="reference internal" href="#id69">获取商家个人信息</a><ul>
-<li><a class="reference internal" href="#id70">接口说明</a></li>
-<li><a class="reference internal" href="#id71">返回示例</a></li>
+<li><a class="reference internal" href="#id68">获取缴纳保证金页面</a><ul>
+<li><a class="reference internal" href="#id69">接口说明</a></li>
+<li><a class="reference internal" href="#id70">返回示例</a></li>
 </ul>
 </li>
-<li><a class="reference internal" href="#id72">上传商品专利附件</a><ul>
-<li><a class="reference internal" href="#id73">接口说明</a></li>
-<li><a class="reference internal" href="#id74">请求参数</a></li>
-<li><a class="reference internal" href="#id75">返回示例</a></li>
-</ul>
-</li>
-<li><a class="reference internal" href="#id76">获取缴纳保证金页面</a><ul>
-<li><a class="reference internal" href="#id77">接口说明</a></li>
-<li><a class="reference internal" href="#id78">返回示例</a></li>
-</ul>
-</li>
-<li><a class="reference internal" href="#id79">缴纳或补缴保证金</a><ul>
-<li><a class="reference internal" href="#id80">接口说明</a></li>
-<li><a class="reference internal" href="#id81">请求参数</a></li>
-<li><a class="reference internal" href="#id82">返回示例</a></li>
+<li><a class="reference internal" href="#id71">缴纳或补缴保证金</a><ul>
+<li><a class="reference internal" href="#id72">接口说明</a></li>
+<li><a class="reference internal" href="#id73">请求参数</a></li>
+<li><a class="reference internal" href="#id74">返回示例</a></li>
 </ul>
 </li>
 </ul>
@@ -377,51 +368,39 @@
 <li><a class="reference internal" href="#id51">返回示例</a></li>
 </ul>
 </li>
-<li><a class="reference internal" href="#id52">编辑个人资料</a><ul>
+<li><a class="reference internal" href="#id52">编辑商家基本信息</a><ul>
 <li><a class="reference internal" href="#id53">接口说明</a></li>
 <li><a class="reference internal" href="#id54">请求参数</a></li>
 <li><a class="reference internal" href="#id55">返回示例</a></li>
 </ul>
 </li>
-<li><a class="reference internal" href="#id56">获取个人资料</a><ul>
+<li><a class="reference internal" href="#id56">编辑商家联系信息</a><ul>
 <li><a class="reference internal" href="#id57">接口说明</a></li>
 <li><a class="reference internal" href="#id58">请求参数</a></li>
-<li><a class="reference internal" href="#id59">返回示例</a></li>
+<li><a class="reference internal" href="#id59">请求示例</a></li>
+<li><a class="reference internal" href="#id60">返回示例</a></li>
 </ul>
 </li>
-<li><a class="reference internal" href="#id60">编辑商家基本信息</a><ul>
-<li><a class="reference internal" href="#id61">接口说明</a></li>
-<li><a class="reference internal" href="#id62">请求参数</a></li>
+<li><a class="reference internal" href="#id61">获取商家个人信息</a><ul>
+<li><a class="reference internal" href="#id62">接口说明</a></li>
 <li><a class="reference internal" href="#id63">返回示例</a></li>
 </ul>
 </li>
-<li><a class="reference internal" href="#id64">编辑商家联系信息</a><ul>
+<li><a class="reference internal" href="#id64">上传商品专利附件</a><ul>
 <li><a class="reference internal" href="#id65">接口说明</a></li>
 <li><a class="reference internal" href="#id66">请求参数</a></li>
-<li><a class="reference internal" href="#id67">请求示例</a></li>
-<li><a class="reference internal" href="#id68">返回示例</a></li>
+<li><a class="reference internal" href="#id67">返回示例</a></li>
 </ul>
 </li>
-<li><a class="reference internal" href="#id69">获取商家个人信息</a><ul>
-<li><a class="reference internal" href="#id70">接口说明</a></li>
-<li><a class="reference internal" href="#id71">返回示例</a></li>
+<li><a class="reference internal" href="#id68">获取缴纳保证金页面</a><ul>
+<li><a class="reference internal" href="#id69">接口说明</a></li>
+<li><a class="reference internal" href="#id70">返回示例</a></li>
 </ul>
 </li>
-<li><a class="reference internal" href="#id72">上传商品专利附件</a><ul>
-<li><a class="reference internal" href="#id73">接口说明</a></li>
-<li><a class="reference internal" href="#id74">请求参数</a></li>
-<li><a class="reference internal" href="#id75">返回示例</a></li>
-</ul>
-</li>
-<li><a class="reference internal" href="#id76">获取缴纳保证金页面</a><ul>
-<li><a class="reference internal" href="#id77">接口说明</a></li>
-<li><a class="reference internal" href="#id78">返回示例</a></li>
-</ul>
-</li>
-<li><a class="reference internal" href="#id79">缴纳或补缴保证金</a><ul>
-<li><a class="reference internal" href="#id80">接口说明</a></li>
-<li><a class="reference internal" href="#id81">请求参数</a></li>
-<li><a class="reference internal" href="#id82">返回示例</a></li>
+<li><a class="reference internal" href="#id71">缴纳或补缴保证金</a><ul>
+<li><a class="reference internal" href="#id72">接口说明</a></li>
+<li><a class="reference internal" href="#id73">请求参数</a></li>
+<li><a class="reference internal" href="#id74">返回示例</a></li>
 </ul>
 </li>
 </ul>
@@ -489,7 +468,6 @@
 </div>
 <div class="section" id="id5">
 <h2>更新用户信息<a class="headerlink" href="#id5" title="永久链接至标题">¶</a></h2>
-<p>更新当前登录账户的用户信息</p>
 <div class="section" id="id6">
 <h3>接口说明<a class="headerlink" href="#id6" title="永久链接至标题">¶</a></h3>
 <ul class="simple">
@@ -502,11 +480,11 @@
 <h3>请求参数<a class="headerlink" href="#id7" title="永久链接至标题">¶</a></h3>
 <table border="1" class="docutils">
 <colgroup>
-<col width="18%" />
+<col width="20%" />
 <col width="11%" />
 <col width="12%" />
 <col width="11%" />
-<col width="49%" />
+<col width="47%" />
 </colgroup>
 <thead valign="bottom">
 <tr class="row-odd"><th class="head">名称</th>
@@ -519,15 +497,15 @@
 <tbody valign="top">
 <tr class="row-even"><td>username</td>
 <td>String</td>
-<td>可选</td>
+<td>必须</td>
 <td>&#160;</td>
 <td>昵称 - 必须保持唯一</td>
 </tr>
-<tr class="row-odd"><td>name</td>
-<td>String</td>
+<tr class="row-odd"><td>avatar_id</td>
+<td>Integer</td>
 <td>可选</td>
 <td>&#160;</td>
-<td>真实姓名</td>
+<td>用户头像ID</td>
 </tr>
 <tr class="row-even"><td>about_me</td>
 <td>String</td>
@@ -535,17 +513,41 @@
 <td>&#160;</td>
 <td>个人介绍</td>
 </tr>
-<tr class="row-odd"><td>mobile</td>
-<td>String</td>
+<tr class="row-odd"><td>gender</td>
+<td>Integer</td>
 <td>可选</td>
-<td>&#160;</td>
-<td>手机号</td>
+<td>0</td>
+<td>性别</td>
 </tr>
-<tr class="row-even"><td>description</td>
+<tr class="row-even"><td>country_id</td>
+<td>Integer</td>
+<td>可选</td>
+<td>&#160;</td>
+<td>国家ID</td>
+</tr>
+<tr class="row-odd"><td>province_id</td>
+<td>Integer</td>
+<td>可选</td>
+<td>&#160;</td>
+<td>省ID</td>
+</tr>
+<tr class="row-even"><td>city_id</td>
+<td>Integer</td>
+<td>可选</td>
+<td>&#160;</td>
+<td>市ID</td>
+</tr>
+<tr class="row-odd"><td>email</td>
 <td>String</td>
 <td>可选</td>
 <td>&#160;</td>
-<td>备注说明</td>
+<td>邮箱</td>
+</tr>
+<tr class="row-even"><td>date</td>
+<td>String</td>
+<td>可选</td>
+<td>&#160;</td>
+<td>出生日期</td>
 </tr>
 </tbody>
 </table>
@@ -1782,229 +1784,17 @@
 </div>
 </div>
 <div class="section" id="id52">
-<h2>编辑个人资料<a class="headerlink" href="#id52" title="永久链接至标题">¶</a></h2>
+<h2>编辑商家基本信息<a class="headerlink" href="#id52" title="永久链接至标题">¶</a></h2>
 <div class="section" id="id53">
 <h3>接口说明<a class="headerlink" href="#id53" title="永久链接至标题">¶</a></h3>
-<ul class="simple">
-<li>API接口请求地址：<code class="docutils literal notranslate"><span class="pre">/users/info</span></code></li>
-<li>API接口请求方法：<code class="docutils literal notranslate"><span class="pre">PUT</span></code></li>
-</ul>
-</div>
-<div class="section" id="id54">
-<h3>请求参数<a class="headerlink" href="#id54" title="永久链接至标题">¶</a></h3>
-<table border="1" class="docutils">
-<colgroup>
-<col width="20%" />
-<col width="11%" />
-<col width="12%" />
-<col width="11%" />
-<col width="47%" />
-</colgroup>
-<thead valign="bottom">
-<tr class="row-odd"><th class="head">名称</th>
-<th class="head">类型</th>
-<th class="head">是否必须</th>
-<th class="head">默认值</th>
-<th class="head">描述说明</th>
-</tr>
-</thead>
-<tbody valign="top">
-<tr class="row-even"><td>openid</td>
-<td>String</td>
-<td>必须</td>
-<td>&#160;</td>
-<td>用户唯标识</td>
-</tr>
-<tr class="row-odd"><td>nick_name</td>
-<td>String</td>
-<td>可选</td>
-<td>&#160;</td>
-<td>用户昵称</td>
-</tr>
-<tr class="row-even"><td>avatar_id</td>
-<td>Integer</td>
-<td>可选</td>
-<td>&#160;</td>
-<td>用户头像ID</td>
-</tr>
-<tr class="row-odd"><td>about_me</td>
-<td>String</td>
-<td>可选</td>
-<td>&#160;</td>
-<td>个人介绍</td>
-</tr>
-<tr class="row-even"><td>gender</td>
-<td>Integer</td>
-<td>可选</td>
-<td>0</td>
-<td>性别</td>
-</tr>
-<tr class="row-odd"><td>province_id</td>
-<td>Integer</td>
-<td>可选</td>
-<td>&#160;</td>
-<td>省ID</td>
-</tr>
-<tr class="row-even"><td>city_id</td>
-<td>Integer</td>
-<td>可选</td>
-<td>&#160;</td>
-<td>市ID</td>
-</tr>
-<tr class="row-odd"><td>type</td>
-<td>Integer</td>
-<td>可选</td>
-<td>1</td>
-<td>来源类型 1、微信</td>
-</tr>
-<tr class="row-even"><td>email</td>
-<td>String</td>
-<td>可选</td>
-<td>&#160;</td>
-<td>邮箱</td>
-</tr>
-<tr class="row-odd"><td>date</td>
-<td>String</td>
-<td>可选</td>
-<td>&#160;</td>
-<td>出生日期</td>
-</tr>
-</tbody>
-</table>
-</div>
-<div class="section" id="id55">
-<h3>返回示例<a class="headerlink" href="#id55" title="永久链接至标题">¶</a></h3>
-<p>JSON数据格式:</p>
-<p>请求 <strong>正确</strong> 返回结果：</p>
-<div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="p">{</span>
-    <span class="s2">&quot;data&quot;</span><span class="o">:</span> <span class="p">{</span>
-        <span class="s2">&quot;created_at&quot;</span><span class="o">:</span> <span class="mi">1529067075</span><span class="p">,</span>
-        <span class="s2">&quot;user_party&quot;</span><span class="o">:</span> <span class="p">{</span>
-            <span class="s2">&quot;about_me&quot;</span><span class="o">:</span> <span class="kc">null</span><span class="p">,</span>
-            <span class="s2">&quot;avatar&quot;</span><span class="o">:</span> <span class="s2">&quot;http://xxxx/photos/180224/c833237a728a1ed.jpg&quot;</span><span class="p">,</span>
-            <span class="s2">&quot;city&quot;</span><span class="o">:</span> <span class="s2">&quot;保定&quot;</span><span class="p">,</span>
-            <span class="s2">&quot;date&quot;</span><span class="o">:</span> <span class="s2">&quot;&quot;</span><span class="p">,</span>
-            <span class="s2">&quot;email&quot;</span><span class="o">:</span> <span class="kc">null</span><span class="p">,</span>
-            <span class="s2">&quot;gender&quot;</span><span class="o">:</span> <span class="mi">0</span><span class="p">,</span>
-            <span class="s2">&quot;id&quot;</span><span class="o">:</span> <span class="mi">1</span><span class="p">,</span>
-            <span class="s2">&quot;master_uid&quot;</span><span class="o">:</span> <span class="mi">2</span><span class="p">,</span>
-            <span class="s2">&quot;nick_name&quot;</span><span class="o">:</span> <span class="s2">&quot;丁磊&quot;</span><span class="p">,</span>
-            <span class="s2">&quot;openid&quot;</span><span class="o">:</span> <span class="s2">&quot;jsdkj3j&quot;</span><span class="p">,</span>
-            <span class="s2">&quot;province&quot;</span><span class="o">:</span> <span class="s2">&quot;河北&quot;</span><span class="p">,</span>
-            <span class="s2">&quot;wxapp_id&quot;</span><span class="o">:</span> <span class="s2">&quot;1&quot;</span>
-        <span class="p">}</span>
-    <span class="p">},</span>
-    <span class="s2">&quot;status&quot;</span><span class="o">:</span> <span class="p">{</span>
-        <span class="s2">&quot;code&quot;</span><span class="o">:</span> <span class="mi">200</span><span class="p">,</span>
-        <span class="s2">&quot;message&quot;</span><span class="o">:</span> <span class="s2">&quot;Ok all right.&quot;</span>
-    <span class="p">},</span>
-    <span class="s2">&quot;success&quot;</span><span class="o">:</span> <span class="kc">true</span>
-<span class="p">}</span>
-</pre></div>
-</div>
-<p>请求 <code class="docutils literal notranslate"><span class="pre">失败</span></code> 返回结果：</p>
-<div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="p">{</span>
-  <span class="s2">&quot;status&quot;</span><span class="o">:</span> <span class="p">{</span>
-    <span class="s2">&quot;code&quot;</span><span class="o">:</span> <span class="mi">404</span><span class="p">,</span>
-    <span class="s2">&quot;message&quot;</span><span class="o">:</span> <span class="s2">&quot;Not Found&quot;</span>
-  <span class="p">},</span>
-  <span class="s2">&quot;success&quot;</span><span class="o">:</span> <span class="kc">false</span>
-<span class="p">}</span>
-</pre></div>
-</div>
-</div>
-</div>
-<div class="section" id="id56">
-<h2>获取个人资料<a class="headerlink" href="#id56" title="永久链接至标题">¶</a></h2>
-<div class="section" id="id57">
-<h3>接口说明<a class="headerlink" href="#id57" title="永久链接至标题">¶</a></h3>
-<ul class="simple">
-<li>API接口请求地址：<code class="docutils literal notranslate"><span class="pre">/users/info</span></code></li>
-<li>API接口请求方法：<code class="docutils literal notranslate"><span class="pre">GET</span></code></li>
-</ul>
-</div>
-<div class="section" id="id58">
-<h3>请求参数<a class="headerlink" href="#id58" title="永久链接至标题">¶</a></h3>
-<table border="1" class="docutils">
-<colgroup>
-<col width="13%" />
-<col width="10%" />
-<col width="11%" />
-<col width="10%" />
-<col width="56%" />
-</colgroup>
-<thead valign="bottom">
-<tr class="row-odd"><th class="head">名称</th>
-<th class="head">类型</th>
-<th class="head">是否必须</th>
-<th class="head">默认值</th>
-<th class="head">描述说明</th>
-</tr>
-</thead>
-<tbody valign="top">
-<tr class="row-even"><td>openid</td>
-<td>String</td>
-<td>必填</td>
-<td>&#160;</td>
-<td>用户标识</td>
-</tr>
-</tbody>
-</table>
-</div>
-<div class="section" id="id59">
-<h3>返回示例<a class="headerlink" href="#id59" title="永久链接至标题">¶</a></h3>
-<p>JSON数据格式:</p>
-<p>请求 <strong>正确</strong> 返回结果：</p>
-<div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="p">{</span>
-    <span class="s2">&quot;data&quot;</span><span class="o">:</span> <span class="p">{</span>
-        <span class="s2">&quot;created_at&quot;</span><span class="o">:</span> <span class="mi">1529067075</span><span class="p">,</span>
-        <span class="s2">&quot;user_party&quot;</span><span class="o">:</span> <span class="p">{</span>
-            <span class="s2">&quot;about_me&quot;</span><span class="o">:</span> <span class="kc">null</span><span class="p">,</span>
-            <span class="s2">&quot;avatar&quot;</span><span class="o">:</span> <span class="s2">&quot;http://xxxx/photos/180224/c833237a728a1ed.jpg&quot;</span><span class="p">,</span>
-            <span class="s2">&quot;city&quot;</span><span class="o">:</span> <span class="s2">&quot;保定&quot;</span><span class="p">,</span>
-            <span class="s2">&quot;date&quot;</span><span class="o">:</span> <span class="s2">&quot;&quot;</span><span class="p">,</span>
-            <span class="s2">&quot;email&quot;</span><span class="o">:</span> <span class="kc">null</span><span class="p">,</span>
-            <span class="s2">&quot;gender&quot;</span><span class="o">:</span> <span class="mi">0</span><span class="p">,</span>
-            <span class="s2">&quot;id&quot;</span><span class="o">:</span> <span class="mi">1</span><span class="p">,</span>
-            <span class="s2">&quot;master_uid&quot;</span><span class="o">:</span> <span class="mi">2</span><span class="p">,</span>
-            <span class="s2">&quot;nick_name&quot;</span><span class="o">:</span> <span class="s2">&quot;丁磊&quot;</span><span class="p">,</span>
-            <span class="s2">&quot;openid&quot;</span><span class="o">:</span> <span class="s2">&quot;jsdkj3j&quot;</span><span class="p">,</span>
-            <span class="s2">&quot;province&quot;</span><span class="o">:</span> <span class="s2">&quot;河北&quot;</span><span class="p">,</span>
-            <span class="s2">&quot;wxapp_id&quot;</span><span class="o">:</span> <span class="s2">&quot;1&quot;</span>
-        <span class="p">}</span>
-    <span class="p">},</span>
-    <span class="s2">&quot;status&quot;</span><span class="o">:</span> <span class="p">{</span>
-        <span class="s2">&quot;code&quot;</span><span class="o">:</span> <span class="mi">200</span><span class="p">,</span>
-        <span class="s2">&quot;message&quot;</span><span class="o">:</span> <span class="s2">&quot;Ok all right.&quot;</span>
-    <span class="p">},</span>
-    <span class="s2">&quot;success&quot;</span><span class="o">:</span> <span class="kc">true</span>
-<span class="p">}</span>
-</pre></div>
-</div>
-<p>请求 <code class="docutils literal notranslate"><span class="pre">失败</span></code> 返回结果：</p>
-<div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="p">{</span>
-  <span class="s2">&quot;status&quot;</span><span class="o">:</span> <span class="p">{</span>
-    <span class="s2">&quot;code&quot;</span><span class="o">:</span> <span class="mi">404</span><span class="p">,</span>
-    <span class="s2">&quot;message&quot;</span><span class="o">:</span> <span class="s2">&quot;Not Found&quot;</span>
-  <span class="p">},</span>
-  <span class="s2">&quot;success&quot;</span><span class="o">:</span> <span class="kc">false</span>
-<span class="p">}</span>
-</pre></div>
-</div>
-</div>
-</div>
-<div class="section" id="id60">
-<h2>编辑商家基本信息<a class="headerlink" href="#id60" title="永久链接至标题">¶</a></h2>
-<div class="section" id="id61">
-<h3>接口说明<a class="headerlink" href="#id61" title="永久链接至标题">¶</a></h3>
 <ul class="simple">
 <li>API接口请求地址：<code class="docutils literal notranslate"><span class="pre">/users/basic_info</span></code></li>
 <li>API接口请求方法：<code class="docutils literal notranslate"><span class="pre">POST</span></code></li>
 <li>API接口用户授权：<code class="docutils literal notranslate"><span class="pre">token</span></code></li>
 </ul>
 </div>
-<div class="section" id="id62">
-<h3>请求参数<a class="headerlink" href="#id62" title="永久链接至标题">¶</a></h3>
+<div class="section" id="id54">
+<h3>请求参数<a class="headerlink" href="#id54" title="永久链接至标题">¶</a></h3>
 <table border="1" class="docutils">
 <colgroup>
 <col width="20%" />
@@ -2049,15 +1839,15 @@
 </tbody>
 </table>
 </div>
-<div class="section" id="id63">
-<h3>返回示例<a class="headerlink" href="#id63" title="永久链接至标题">¶</a></h3>
+<div class="section" id="id55">
+<h3>返回示例<a class="headerlink" href="#id55" title="永久链接至标题">¶</a></h3>
 <p>JSON数据格式:</p>
 <p>请求 <strong>正确</strong> 返回结果：</p>
 <div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="p">{</span>
     <span class="s2">&quot;data&quot;</span><span class="o">:</span> <span class="p">{</span>
         <span class="s2">&quot;about_me&quot;</span><span class="o">:</span> <span class="kc">null</span><span class="p">,</span>
         <span class="s2">&quot;avatar&quot;</span><span class="o">:</span> <span class="kc">null</span><span class="p">,</span>
-        <span class="s2">&quot;date&quot;</span><span class="o">:</span> <span class="s2">&quot;2008-05-15&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;date&quot;</span><span class="o">:</span> <span class="s2">&quot;2008-05-15&quot;</span><span class="p">,</span>  <span class="c1">// 生日</span>
         <span class="s2">&quot;description&quot;</span><span class="o">:</span> <span class="kc">null</span><span class="p">,</span>
         <span class="s2">&quot;email&quot;</span><span class="o">:</span> <span class="s2">&quot;13001179400&quot;</span><span class="p">,</span>
         <span class="s2">&quot;gender&quot;</span><span class="o">:</span> <span class="mi">1</span><span class="p">,</span>
@@ -2088,18 +1878,18 @@
 </div>
 </div>
 </div>
-<div class="section" id="id64">
-<h2>编辑商家联系信息<a class="headerlink" href="#id64" title="永久链接至标题">¶</a></h2>
-<div class="section" id="id65">
-<h3>接口说明<a class="headerlink" href="#id65" title="永久链接至标题">¶</a></h3>
+<div class="section" id="id56">
+<h2>编辑商家联系信息<a class="headerlink" href="#id56" title="永久链接至标题">¶</a></h2>
+<div class="section" id="id57">
+<h3>接口说明<a class="headerlink" href="#id57" title="永久链接至标题">¶</a></h3>
 <ul class="simple">
 <li>API接口请求地址：<code class="docutils literal notranslate"><span class="pre">/users/contact_info</span></code></li>
 <li>API接口请求方法：<code class="docutils literal notranslate"><span class="pre">POST</span></code></li>
 <li>API接口用户授权：<code class="docutils literal notranslate"><span class="pre">token</span></code></li>
 </ul>
 </div>
-<div class="section" id="id66">
-<h3>请求参数<a class="headerlink" href="#id66" title="永久链接至标题">¶</a></h3>
+<div class="section" id="id58">
+<h3>请求参数<a class="headerlink" href="#id58" title="永久链接至标题">¶</a></h3>
 <table border="1" class="docutils">
 <colgroup>
 <col width="20%" />
@@ -2174,15 +1964,15 @@
 </tbody>
 </table>
 </div>
-<div class="section" id="id67">
-<h3>请求示例<a class="headerlink" href="#id67" title="永久链接至标题">¶</a></h3>
+<div class="section" id="id59">
+<h3>请求示例<a class="headerlink" href="#id59" title="永久链接至标题">¶</a></h3>
 <p>JSON数据格式:</p>
 <div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="p">{</span><span class="s2">&quot;country_id&quot;</span><span class="o">:</span><span class="mi">1</span><span class="p">,</span><span class="s2">&quot;province_id&quot;</span><span class="o">:</span><span class="mi">1</span><span class="p">,</span><span class="s2">&quot;city_id&quot;</span><span class="o">:</span><span class="mi">1</span><span class="p">,</span><span class="s2">&quot;street_address&quot;</span><span class="o">:</span><span class="s2">&quot;天安门&quot;</span><span class="p">,</span><span class="s2">&quot;mobile&quot;</span><span class="o">:</span><span class="s2">&quot;13645647894&quot;</span><span class="p">,</span><span class="s2">&quot;email&quot;</span><span class="o">:</span><span class="s2">&quot;4568794@qq.com&quot;</span><span class="p">}</span>
 </pre></div>
 </div>
 </div>
-<div class="section" id="id68">
-<h3>返回示例<a class="headerlink" href="#id68" title="永久链接至标题">¶</a></h3>
+<div class="section" id="id60">
+<h3>返回示例<a class="headerlink" href="#id60" title="永久链接至标题">¶</a></h3>
 <p>JSON数据格式:</p>
 <p>请求 <strong>正确</strong> 返回结果：</p>
 <div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="p">{</span>
@@ -2206,18 +1996,18 @@
 </div>
 </div>
 </div>
-<div class="section" id="id69">
-<h2>获取商家个人信息<a class="headerlink" href="#id69" title="永久链接至标题">¶</a></h2>
-<div class="section" id="id70">
-<h3>接口说明<a class="headerlink" href="#id70" title="永久链接至标题">¶</a></h3>
+<div class="section" id="id61">
+<h2>获取商家个人信息<a class="headerlink" href="#id61" title="永久链接至标题">¶</a></h2>
+<div class="section" id="id62">
+<h3>接口说明<a class="headerlink" href="#id62" title="永久链接至标题">¶</a></h3>
 <ul class="simple">
 <li>API接口请求地址：<code class="docutils literal notranslate"><span class="pre">/users/supplier_info</span></code></li>
 <li>API接口请求方法：<code class="docutils literal notranslate"><span class="pre">GET</span></code></li>
 <li>API接口用户授权：<code class="docutils literal notranslate"><span class="pre">token</span></code></li>
 </ul>
 </div>
-<div class="section" id="id71">
-<h3>返回示例<a class="headerlink" href="#id71" title="永久链接至标题">¶</a></h3>
+<div class="section" id="id63">
+<h3>返回示例<a class="headerlink" href="#id63" title="永久链接至标题">¶</a></h3>
 <p>JSON数据格式:</p>
 <p>请求 <strong>正确</strong> 返回结果：</p>
 <div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="p">{</span>
@@ -2371,18 +2161,18 @@
 </div>
 </div>
 </div>
-<div class="section" id="id72">
-<h2>上传商品专利附件<a class="headerlink" href="#id72" title="永久链接至标题">¶</a></h2>
-<div class="section" id="id73">
-<h3>接口说明<a class="headerlink" href="#id73" title="永久链接至标题">¶</a></h3>
+<div class="section" id="id64">
+<h2>上传商品专利附件<a class="headerlink" href="#id64" title="永久链接至标题">¶</a></h2>
+<div class="section" id="id65">
+<h3>接口说明<a class="headerlink" href="#id65" title="永久链接至标题">¶</a></h3>
 <ul class="simple">
 <li>API接口请求地址：<code class="docutils literal notranslate"><span class="pre">/users/patent_file</span></code></li>
 <li>API接口请求方法：<code class="docutils literal notranslate"><span class="pre">POST</span></code></li>
 <li>API接口用户授权：<code class="docutils literal notranslate"><span class="pre">token</span></code></li>
 </ul>
 </div>
-<div class="section" id="id74">
-<h3>请求参数<a class="headerlink" href="#id74" title="永久链接至标题">¶</a></h3>
+<div class="section" id="id66">
+<h3>请求参数<a class="headerlink" href="#id66" title="永久链接至标题">¶</a></h3>
 <table border="1" class="docutils">
 <colgroup>
 <col width="20%" />
@@ -2409,8 +2199,8 @@
 </tbody>
 </table>
 </div>
-<div class="section" id="id75">
-<h3>返回示例<a class="headerlink" href="#id75" title="永久链接至标题">¶</a></h3>
+<div class="section" id="id67">
+<h3>返回示例<a class="headerlink" href="#id67" title="永久链接至标题">¶</a></h3>
 <p>JSON数据格式:</p>
 <p>请求 <strong>正确</strong> 返回结果：</p>
 <div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="p">{</span>
@@ -2434,18 +2224,18 @@
 </div>
 </div>
 </div>
-<div class="section" id="id76">
-<h2>获取缴纳保证金页面<a class="headerlink" href="#id76" title="永久链接至标题">¶</a></h2>
-<div class="section" id="id77">
-<h3>接口说明<a class="headerlink" href="#id77" title="永久链接至标题">¶</a></h3>
+<div class="section" id="id68">
+<h2>获取缴纳保证金页面<a class="headerlink" href="#id68" title="永久链接至标题">¶</a></h2>
+<div class="section" id="id69">
+<h3>接口说明<a class="headerlink" href="#id69" title="永久链接至标题">¶</a></h3>
 <ul class="simple">
 <li>API接口请求地址：<code class="docutils literal notranslate"><span class="pre">/users/deposit_page</span></code></li>
 <li>API接口请求方法：<code class="docutils literal notranslate"><span class="pre">GET</span></code></li>
 <li>API接口用户授权：<code class="docutils literal notranslate"><span class="pre">token</span></code></li>
 </ul>
 </div>
-<div class="section" id="id78">
-<h3>返回示例<a class="headerlink" href="#id78" title="永久链接至标题">¶</a></h3>
+<div class="section" id="id70">
+<h3>返回示例<a class="headerlink" href="#id70" title="永久链接至标题">¶</a></h3>
 <p>JSON数据格式:</p>
 <p>请求 <strong>正确</strong> 返回结果：</p>
 <div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="p">{</span>
@@ -2475,18 +2265,18 @@
 </div>
 </div>
 </div>
-<div class="section" id="id79">
-<h2>缴纳或补缴保证金<a class="headerlink" href="#id79" title="永久链接至标题">¶</a></h2>
-<div class="section" id="id80">
-<h3>接口说明<a class="headerlink" href="#id80" title="永久链接至标题">¶</a></h3>
+<div class="section" id="id71">
+<h2>缴纳或补缴保证金<a class="headerlink" href="#id71" title="永久链接至标题">¶</a></h2>
+<div class="section" id="id72">
+<h3>接口说明<a class="headerlink" href="#id72" title="永久链接至标题">¶</a></h3>
 <ul class="simple">
 <li>API接口请求地址：<code class="docutils literal notranslate"><span class="pre">/users/deposit</span></code></li>
 <li>API接口请求方法：<code class="docutils literal notranslate"><span class="pre">GET</span></code></li>
 <li>API接口用户授权：<code class="docutils literal notranslate"><span class="pre">POST</span></code></li>
 </ul>
 </div>
-<div class="section" id="id81">
-<h3>请求参数<a class="headerlink" href="#id81" title="永久链接至标题">¶</a></h3>
+<div class="section" id="id73">
+<h3>请求参数<a class="headerlink" href="#id73" title="永久链接至标题">¶</a></h3>
 <table border="1" class="docutils">
 <colgroup>
 <col width="19%" />
@@ -2537,8 +2327,8 @@
 </tbody>
 </table>
 </div>
-<div class="section" id="id82">
-<h3>返回示例<a class="headerlink" href="#id82" title="永久链接至标题">¶</a></h3>
+<div class="section" id="id74">
+<h3>返回示例<a class="headerlink" href="#id74" title="永久链接至标题">¶</a></h3>
 <p>JSON数据格式:</p>
 <p>请求 <strong>正确</strong> 返回结果：</p>
 <div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="p">{</span>

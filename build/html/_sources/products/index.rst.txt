@@ -18,3 +18,4 @@
     distributions.rst
     wish.rst
     assets.rst
+    wx_app_design.rst

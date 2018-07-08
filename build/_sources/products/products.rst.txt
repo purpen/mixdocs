@@ -628,7 +628,7 @@ JSON数据格式:
 接口说明
 ~~~~~~~~~~~~~~
 
-* API接口请求地址：``/products/<rid>/publish1``
+* API接口请求地址：``/products/<rid>/publish_one``
 * API接口请求方法：``GET``
 * API接口用户授权：``token``
 
@@ -650,7 +650,7 @@ JSON数据格式:
 
     {
         "data": {
-            "asset_ids": [
+            "assets": [
                 {
                     "created_at": 1527587113,
                     "filename": "m.jpg",
@@ -659,8 +659,10 @@ JSON数据格式:
                     "view_url": "http://127.0.0.1:9000/_uploads/photos/180529/e5a6b51ad55208d.jpg"
                 }
             ],
+            "category_id": 333,
             "content": "图文详情",
             "cover": "http://127.0.0.1:9000/_uploads/photos/180529/4158809a4303eab.jpg",
+            "cover_id": 2,
             "custom_details": "可以刻名字,生辰八字",
             "features": "商品推荐语",
             "id_code": "10086",
@@ -688,16 +690,19 @@ JSON数据格式:
                 }
             ],
             "made_cycle": 5,
+            "material_id": 1,
             "name": "商品名",
             "published_at": 0,
             "rid": "8520961834",
+            "second_category_id": 17,
             "status": 0,
             "sticked": false,
+            "top_category_id": 1,
             "stock_count": null
         },
         "status": {
-            "code": 201,
-            "message": "All created."
+            "code": 200,
+            "message": "Ok all right."
         },
         "success": true
     }
@@ -710,7 +715,7 @@ JSON数据格式:
 接口说明
 ~~~~~~~~~~~~~~
 
-* API接口请求地址：``/products/publish1``
+* API接口请求地址：``/products/publish_one``
 * API接口请求方法：``POST``
 * API接口用户授权：``token``
 
@@ -768,19 +773,19 @@ JSON数据格式:
 
     {
         "data": {
-            "asset_ids": [
+            "assets": [
                 {
                     "created_at": 1527587113,
                     "filename": "m.jpg",
                     "filepath": "180529/e5a6b51ad55208d.jpg",
                     "id": 5,
-                    "type": 1,
-                    "type类型说明": "1=图片, 2=视频, 3=文本, 4=音频, 5=其它",
                     "view_url": "http://127.0.0.1:9000/_uploads/photos/180529/e5a6b51ad55208d.jpg"
                 }
             ],
+            "category_id": 333,
             "content": "图文详情",
             "cover": "http://127.0.0.1:9000/_uploads/photos/180529/4158809a4303eab.jpg",
+            "cover_id": 2,
             "custom_details": "可以刻名字,生辰八字",
             "features": "商品推荐语",
             "id_code": "10086",
@@ -808,11 +813,14 @@ JSON数据格式:
                 }
             ],
             "made_cycle": 5,
+            "material_id": 1,
             "name": "商品名",
             "published_at": 0,
             "rid": "8520961834",
+            "second_category_id": 17,
             "status": 0,
             "sticked": false,
+            "top_category_id": 1,
             "stock_count": null
         },
         "status": {
@@ -830,7 +838,7 @@ JSON数据格式:
 接口说明
 ~~~~~~~~~~~~~~
 
-* API接口请求地址：``/products/publish1?rid=8984507632``
+* API接口请求地址：``/products/publish_one?rid=8984507632``
 * API接口请求方法：``PUT``
 * API接口用户授权：``token``
 
@@ -856,19 +864,19 @@ JSON数据格式:
 
     {
         "data": {
-            "asset_ids": [
+            "assets": [
                 {
                     "created_at": 1527587113,
                     "filename": "m.jpg",
                     "filepath": "180529/e5a6b51ad55208d.jpg",
                     "id": 5,
-                    "type": 1,
-                    "type类型说明": "1=图片, 2=视频, 3=文本, 4=音频, 5=其它",
                     "view_url": "http://127.0.0.1:9000/_uploads/photos/180529/e5a6b51ad55208d.jpg"
                 }
             ],
+            "category_id": 333,
             "content": "新图文详情",
             "cover": "http://127.0.0.1:9000/_uploads/photos/180529/4158809a4303eab.jpg",
+            "cover_id": 2,
             "custom_details": "可以刻名字,生辰八字",
             "features": "新商品推荐语",
             "id_code": "10086",
@@ -896,11 +904,14 @@ JSON数据格式:
                 }
             ],
             "made_cycle": 5,
+            "material_id": 1,
             "name": "新商品名",
             "published_at": 0,
             "rid": "8520961834",
+            "second_category_id": 17,
             "status": 0,
             "sticked": false,
+            "top_category_id": 1,
             "stock_count": null
         },
         "status": {
@@ -918,7 +929,7 @@ JSON数据格式:
 接口说明
 ~~~~~~~~~~~~~~
 
-* API接口请求地址：``/products/<rid>/publish2``
+* API接口请求地址：``/products/<rid>/publish_two``
 * API接口请求方法：``GET``
 * API接口用户授权：``token``
 
@@ -1014,15 +1025,15 @@ JSON数据格式:
     }
 
 
-发布商品第二步, 放入仓库
---------------------------
-发布商品详细信息
+发布或更新商品第二步: 放入仓库
+---------------------------------
+发布或更新商品详细信息
 
 接口说明
 ~~~~~~~~~~~~~~
 
-* API接口请求地址：``/products/publish2/warehouse``
-* API接口请求方法：``POST``
+* API接口请求地址：``/products/publish_two/warehouse``
+* API接口请求方法：``PUT``
 * API接口用户授权：``token``
 
 请求参数
@@ -1036,7 +1047,6 @@ rid                    String      必须                     商品编号
 fid                    String      必须                     运费模板编号
 product_return_policy  String      必须                     退换货规则
 is_distributed         Bool        必须                     商品是否分销
-status                 Number      必须                     商品状态 0: 放入仓库 1: 立即发布
 skus                   Array       必须                     商品sku信息
 
 sku参数信息
@@ -1070,7 +1080,7 @@ commission_rate        Number      可选                     佣金比率
                 "s_color": "黑色",
                 "s_model": "中",
                 "price": 2345.6,
-                "sale_price": 3456,
+                "sale_price": 2256,
                 "s_weight": 2.5,
                 "stock_quantity": 15,
                 "commission_rate": 2.5
@@ -1081,7 +1091,7 @@ commission_rate        Number      可选                     佣金比率
                 "s_color": "蓝色",
                 "s_model": "小",
                 "price": 3456.7,
-                "sale_price": 4567,
+                "sale_price": 3367,
                 "s_weight": 2.5,
                 "stock_quantity": 25,
                 "commission_rate": 3.5
@@ -1112,7 +1122,7 @@ JSON数据格式:
                     "s_color": "黑色",
                     "s_model": "小",
                     "s_weight": 2.5,
-                    "sale_price": 3456,
+                    "sale_price": 2256,
                     "stock_count": 15
                 },
                 {
@@ -1126,7 +1136,7 @@ JSON数据格式:
                     "s_color": "蓝色",
                     "s_model": "小",
                     "s_weight": 2.5,
-                    "sale_price": 4567,
+                    "sale_price": 3367,
                     "stock_count": 25
                 }
             ],
@@ -1140,42 +1150,26 @@ JSON数据格式:
     }
 
 
-发布商品第二步, 发布
------------------------
-发布商品详细信息
+发布或更新商品第二步: 发布
+------------------------------
+发布或更新商品详细信息
 
 接口说明
 ~~~~~~~~~~~~~~
 
-* API接口请求地址：``/products/publish2/publish``
-* API接口请求方法：``POST``
-* API接口用户授权：``token``
-
-请求参数
-~~~~~~~~~~~~~~~
-
-** 同上新增商品第二步, 放入仓库 **
-
-返回示例
-~~~~~~~~~~~~~~~
-
-** 同上新增商品第二步, 放入仓库 **
-
-更新商品第二步
-------------------
-更新商品详细信息
-
-接口说明
-~~~~~~~~~~~~~~
-
-* API接口请求地址：``/products/publish2``
+* API接口请求地址：``/products/publish_two``
 * API接口请求方法：``PUT``
 * API接口用户授权：``token``
 
 请求参数
 ~~~~~~~~~~~~~~~
 
-** 同上新增商品第二步参数要求, 注意: 如果是修改sku,参数sku_rid为获取到的值 **
+** 同上发布或更新商品第二步, 放入仓库 **
+
+返回示例
+~~~~~~~~~~~~~~~
+
+** 同上发布或更新商品第二步, 放入仓库 **
 
 删除商品
 ------------------
@@ -1224,6 +1218,65 @@ JSON数据格式:
             "message": "分销商品，不能删除!"
         },
         "success": false
+    }
+
+
+
+商品状态统计
+----------------
+统计店铺授权商品不同状态的数量
+
+接口说明
+~~~~~~~~~~~~~~
+
+* API接口请求地址：``/products/statistical``
+* API接口请求方法：``GET``
+* API接口用户授权：``token``
+
+请求参数
+~~~~~~~~~~~~~~~
+
+===========  ========  =========  ========  ====================================
+名称          类型      是否必须    默认值     描述说明
+===========  ========  =========  ========  ====================================
+sid          String    可选                  店铺编号
+===========  ========  =========  ========  ====================================
+
+返回示例
+~~~~~~~~~~~~~~~~
+
+JSON数据格式:
+
+.. code-block:: javascript
+
+    {
+        "data": [
+            {
+                "count": 9,
+                "name": "仓库中",
+                "status": 0
+            },
+            {
+                "count": 17,
+                "name": "出售中",
+                "status": 1
+            },
+            {
+                "count": 0,
+                "name": "已下架",
+                "status": 2
+            },
+            {
+                "count": 5,
+                "name": "已售罄",
+                "status": 3
+            }
+        ],
+        "status": {
+            "code": 200,
+            "message": "Ok all right."
+        },
+        "success": true
     }
 
 
