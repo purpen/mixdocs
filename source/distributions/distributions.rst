@@ -31,7 +31,7 @@ qk                  String    可选                 筛选条件
 
 JSON数据格式:
 
-.. literalinclude:: product_list.js
+.. literalinclude:: ../products/product_list.js
     :language: javascript
 
 
@@ -59,7 +59,7 @@ per_page     Number    可选         10        每页数量
 
 JSON数据格式:
 
-.. literalinclude:: product_list.js
+.. literalinclude:: ../products/product_list.js
     :language: javascript
 
 
@@ -87,7 +87,7 @@ per_page     Number    可选         10        每页数量
 
 JSON数据格式:
 
-.. literalinclude:: product_list.js
+.. literalinclude:: ../products/product_list.js
     :language: javascript
 
 
@@ -115,7 +115,7 @@ per_page     Number    可选         10        每页数量
 
 JSON数据格式:
 
-.. literalinclude:: product_list.js
+.. literalinclude:: ../products/product_list.js
     :language: javascript
 
 
@@ -246,7 +246,7 @@ per_page     Number    可选         10        每页数量
 
 JSON数据格式:
 
-.. literalinclude:: product_list.js
+.. literalinclude:: ../products/product_list.js
     :language: javascript
 
 仓库分销商品
@@ -275,7 +275,7 @@ status       String    可选         1         商品状态 0: 全部  1: 可�
 
 JSON数据格式:
 
-.. literalinclude:: product_list.js
+.. literalinclude:: ../products/product_list.js
     :language: javascript
 
 删除分销
@@ -567,7 +567,7 @@ status                 Number       可选         1         商品状态 1:出�
 
 JSON数据格式:
 
-.. literalinclude:: product_list.js
+.. literalinclude:: ../products/product_list.js
     :language: javascript
 
 商品更改商品组
