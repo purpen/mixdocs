@@ -231,6 +231,127 @@ JSON数据格式:
     :language: javascript
 
 
+多个商品基本信息
+------------------
+获取多个商品的详细基本信息
+
+接口说明
+~~~~~~~~~~~~~~
+
+* API接口请求地址：``/many_products``
+* API接口请求方法：``GET``
+
+请求参数
+~~~~~~~~~~~~~~~
+
+=====================  ==========  =========  ==========  =============================
+名称                    类型        是否必须     默认值       描述说明
+=====================  ==========  =========  ==========  =============================
+rids                    String      是                     商品编号, 多个用,号隔开
+=====================  ==========  =========  ==========  =============================
+
+返回示例
+~~~~~~~~~~~~~~~~
+
+JSON数据格式:
+
+请求 **正确** 返回结果：
+
+.. code-block:: javascript
+
+    {
+        "data": {
+            "products": [
+                {
+                    "category_id": 628,
+                    "commission_price": 172.83,
+                    "commission_rate": 5,
+                    "cover": "http://127.0.0.1:9000/_uploads/photos/180707/77409c8ab9b0abf.jpg",
+                    "cover_id": 2,
+                    "custom_details": "可以刻名字,生辰八字",
+                    "features": "获得更多的成长值，加速商铺成长获取更多特权：发布三星级及以上的产品可以获得与星级数量等额的成长值，每日上限为20点；",
+                    "id_code": "",
+                    "is_custom_made": true,
+                    "is_custom_service": true,
+                    "is_distributed": true,
+                    "is_free_postage": false,
+                    "is_made_holiday": false,
+                    "is_proprietary": true,
+                    "is_sold_out": true,
+                    "like_count": 0,
+                    "made_cycle": 5,
+                    "material_id": 2,
+                    "material_name": "皮革",
+                    "max_price": 3456.7,
+                    "max_sale_price": 0,
+                    "min_price": 1111,
+                    "min_sale_price": 0,
+                    "modes": [
+                        "1",
+                        "中 黑色",
+                        "小 蓝色"
+                    ],
+                    "name": "商品9",
+                    "published_at": 1531037601,
+                    "real_price": 3456.7,
+                    "real_sale_price": 0,
+                    "rid": "8843256790",
+                    "second_category_id": 628,
+                    "status": 0,
+                    "sticked": false,
+                    "top_category_id": 600,
+                    "total_stock": 0
+                },
+                {
+                    "category_id": 628,
+                    "commission_price": 172.83,
+                    "commission_rate": 5,
+                    "cover": "http://127.0.0.1:9000/_uploads/photos/180707/77409c8ab9b0abf.jpg",
+                    "cover_id": 2,
+                    "custom_details": "可以刻名字,生辰八字",
+                    "features": "获得更多的成长值，加速商铺成长获取更多特权：发布三星级及以上的产品可以获得与星级数量等额的成长值，每日上限为20点；",
+                    "id_code": "",
+                    "is_custom_made": true,
+                    "is_custom_service": true,
+                    "is_distributed": true,
+                    "is_free_postage": false,
+                    "is_made_holiday": false,
+                    "is_proprietary": true,
+                    "is_sold_out": false,
+                    "like_count": 0,
+                    "made_cycle": 5,
+                    "material_id": 2,
+                    "material_name": "皮革",
+                    "max_price": 2,
+                    "max_sale_price": 0,
+                    "min_price": 2,
+                    "min_sale_price": 0,
+                    "modes": [
+                        "1",
+                        "中 黑色",
+                        "小 蓝色"
+                    ],
+                    "name": "商品10",
+                    "published_at": 0,
+                    "real_price": 2,
+                    "real_sale_price": 0,
+                    "rid": "8698317405",
+                    "second_category_id": 628,
+                    "status": 0,
+                    "sticked": false,
+                    "top_category_id": 600,
+                    "total_stock": 41
+                }
+            ]
+        },
+        "status": {
+            "code": 200,
+            "message": "Ok all right."
+        },
+        "success": true
+    }
+
+
 商品基本信息
 ----------------
 获取商品的详细基本信息
