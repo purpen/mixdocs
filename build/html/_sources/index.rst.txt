@@ -13,12 +13,14 @@ moebeast api 文档
    开放平台文档说明 <intro>
    orders/index.rst
    products/index.rst
+   distributions/index.rst
    customers/index.rst
    warehouses/index.rst
    shopes/index.rst
    market/index.rst
    stats/index.rst
    users/index.rst
+   wx_apps/index.rst
    公用接口模块 <common>
    系统相关配置文档 <setting>
 
