@@ -13,3 +13,4 @@
     stats.rst
     comment.rst
     logistics.rst
+    finance.rst
