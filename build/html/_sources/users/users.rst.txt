@@ -1094,140 +1094,119 @@ JSON数据格式:
 
     {
         "data": {
-            "account": null,
-            "area": "",
-            "areacode": "+86",
-            "attachments": [
-                {
-                    "created_at": null,
-                    "filename": "a",
-                    "filepath": "http://127.0.0.1:9000/_uploads/photos/222222/5d2812257b539aa.jpg",
-                    "id": 1,
-                    "type": null,
-                    "view_url": "http://0.0.0.0:9000/_uploads/photos/http://127.0.0.1:9000/_uploads/photos/222222/5d2812257b539aa.jpg"
-                }
-            ],
-            "avatar": "http://0.0.0.0:9000/_uploads/photos/http://127.0.0.1:9000/_uploads/photos/222222/5d2812257b539aa.jpg",
-            "bank_addr": null,
-            "bank_name": null,
-            "brand_name": "jkss ",
-            "city": "北京",
-            "company_name": "京东",
-            "company_qualification": [
-                {
-                    "created_at": null,
-                    "filename": "e",
-                    "filepath": "http://127.0.0.1:9000/_uploads/photos/222222/5d2812257b539bb.jpg",
-                    "id": 2,
-                    "type": null,
-                    "view_url": "http://0.0.0.0:9000/_uploads/photos/http://127.0.0.1:9000/_uploads/photos/222222/5d2812257b539bb.jpg"
-                }
-            ],
-            "contract_sn": "",
-            "country": "中国",
-            "current_date": "",
-            "customized": true,
-            "email": "4568794@qq.com",
-            "expiration_date": "",
-            "front_card_photo": "http://0.0.0.0:9000/_uploads/photos/http://127.0.0.1:9000/_uploads/photos/222222/5d2812257b539aa.jpg",
-            "holding_card_photo": "http://0.0.0.0:9000/_uploads/photos/http://127.0.0.1:9000/_uploads/photos/222222/5d2812257b539oo.jpg",
-            "id": 30,
-            "id_card": "13082119921226801x",
-            "label_libraries": [
-                [
-                    1,
-                    "十年老件"
+            "authenticate": {
+                "area": "",
+                "area_id": 0,
+                "areacode": null,
+                "attachments": [
+                    {
+                        "created_at": null,
+                        "filename": "a",
+                        "filepath": "http://127.0.0.1:9000/_uploads/photos/222222/5d2812257b539aa.jpg",
+                        "id": 1,
+                        "type": null,
+                        "view_url": "http://0.0.0.0:9000/_uploads/photos/http://127.0.0.1:9000/_uploads/photos/222222/5d2812257b539aa.jpg"
+                    }
                 ],
-                [
-                    2,
-                    "手工制作"
+                "avatar": "http://0.0.0.0:9000/_uploads/photos/http://127.0.0  .1:9000/_uploads/photos/222222/5d2812257b539aa.jpg",  // 头像路径
+                "avatar_id": 1,  // 头像id
+                "brand_name": "jkss ",
+                "city": "北京",  // 城市
+                "city_id": 1,  // 城市id
+                "company_name": null,
+                "company_qualification": [],
+                "country": "中国", // 国家
+                "country_id": 1,  // 国家id
+                "customized": true,
+                "email": "45668794@qq.com", // 邮箱
+                "error_content": null,
+                "front_card_photo": "http://0.0.0.0:9000/_uploads/photos/http://127.0.0.1:9000/_uploads/photos/222222/5d2812257b539aa.jpg",
+                "front_card_photo_id": 1,
+                "holding_card_photo": "http://0.0.0.0:9000/_uploads/photos/http://127.0.0.1:9000/_uploads/photos/222222/5d2812257b539oo.jpg",
+                "holding_card_photo_id": 3,
+                "id": 32,
+                "id_card": "13082119921226801x",
+                "label_libraries": [],
+                "link": [
+                    "https://www.taobao.com",
+                    "https://www.jingdong.com",
+                    "https://www.tianmao.com"
                 ],
-                [
-                    3,
-                    "机械制作"
-                ]
-            ],
-            "link": [
-                "https://www.taobao.com",
-                "https://www.jingdong.com",
-                "https://www.tianmao.com"
-            ],
-            "master_uid": 2,
-            "mobile": "13645647894",
-            "name": "毛爷",
-            "other_scope": "",
-            "own_brand": false,
-            "packaging": true,
-            "packaging_file": [
-                {
-                    "created_at": null,
-                    "filename": "e",
-                    "filepath": "http://127.0.0.1:9000/_uploads/photos/222222/5d2812257b539bb.jpg",
-                    "id": 2,
-                    "type": null,
-                    "view_url": "http://0.0.0.0:9000/_uploads/photos/http://127.0.0.1:9000/_uploads/photos/222222/5d2812257b539bb.jpg"
-                },
-                {
-                    "created_at": null,
-                    "filename": "r",
-                    "filepath": "http://127.0.0.1:9000/_uploads/photos/222222/5d2812257b539oo.jpg",
-                    "id": 3,
-                    "type": null,
-                    "view_url": "http://0.0.0.0:9000/_uploads/photos/http://127.0.0.1:9000/_uploads/photos/222222/5d2812257b539oo.jpg"
-                }
-            ],
-            "patent": true,
-            "patent_file": [
-                {
-                    "created_at": null,
-                    "filename": "e",
-                    "filepath": "http://127.0.0.1:9000/_uploads/photos/222222/5d2812257b539bb.jpg",
-                    "id": 2,
-                    "type": null,
-                    "view_url": "http://0.0.0.0:9000/_uploads/photos/http://127.0.0.1:9000/_uploads/photos/222222/5d2812257b539bb.jpg"
-                }
-            ],
-            "phone": "",
-            "product_category": "无人机",
-            "product_price": "22,99",
-            "product_scope": "原创商品，由本人或团队独立思考设计",
-            "province": "北京",
-            "qq": "1345678956",
-            "reverse_card_photo": "http://0.0.0.0:9000/_uploads/photos/http://127.0.0.1:9000/_uploads/photos/222222/5d2812257b539bb.jpg",
-            "sale_platform": [
-                "京东",
-                "淘宝",
-                "天猫"
-            ],
-            "secured_trade": true,
-            "status": 1,
-            "street_address": "天安门",
-            "urgent_contact_mobile": "15879456532",
-            "urgent_contact_name": "普京",
-            "url": "https://www.jd.com",
-            "user_identity": 1,
-            "user_type": 3,
-            "username": null,
-            "wechat": "jksjk45"
+                "mobile": "13645647895", // 手机号
+                "name": "毛爷",
+                "other_scope": "",
+                "own_brand": false,
+                "packaging": true,
+                "packaging_file": [
+                    {
+                        "created_at": null,
+                        "filename": "e",
+                        "filepath": "http://127.0.0.1:9000/_uploads/photos/222222/5d2812257b539bb.jpg",
+                        "id": 2,
+                        "type": null,
+                        "view_url": "http://0.0.0.0:9000/_uploads/photos/http://127.0.0.1:9000/_uploads/photos/222222/5d2812257b539bb.jpg"
+                    }
+                ],
+                "patent": true,
+                "patent_file": [
+                    {
+                        "created_at": null,
+                        "filename": "a",
+                        "filepath": "http://127.0.0.1:9000/_uploads/photos/222222/5d2812257b539aa.jpg",
+                        "id": 1,
+                        "type": null,
+                        "view_url": "http://0.0.0.0:9000/_uploads/photos/http://127.0.0.1:9000/_uploads/photos/222222/5d2812257b539aa.jpg"
+                    }
+                ],
+                "phone": "",  // 固话
+                "product_category": "无人机",
+                "product_price": "22,99",
+                "product_scope": 1,
+                "province": "北京",
+                "province_id": 1,
+                "qq": "",
+                "reverse_card_photo": "http://0.0.0.0:9000/_uploads/photos/http://127.0.0.1:9000/_uploads/photos/222222/5d2812257b539bb.jpg",
+                "reverse_card_photo_id": 2,
+                "sale_platform": [
+                    "京东",
+                    "淘宝",
+                    "天猫"
+                ],
+                "secured_trade": true,
+                "status": 1,
+                "street_address": "天安门",
+                "urgent_contact_mobile": null,
+                "urgent_contact_name": null,
+                "url": null,
+                "user_identity": 11,
+                "user_type": 3,
+                "wechat": null
+            },
+            "user": {
+                "about_me": "一个好孩子",
+                "avatar": "http://0.0.0.0:9000/_uploads/photos/http://127.0.0.1:9000/_uploads/photos/222222/5d2812257b539bb.jpg",
+                "city": "北京",
+                "country": "中国",
+                "created_at": 1529493576,
+                "date": "1992-12-26",  //生日
+                "description": null,
+                "email": "13001179400",
+                "gender": 0, // 性别
+                "last_seen": 1530855883,
+                "mail": null,
+                "master_uid": 2,
+                "mobile": null,
+                "name": null,
+                "province": "北京",
+                "uid": "19562310748",
+                "username": "雷军"  // 用户名
+            }
         },
         "status": {
             "code": 200,
             "message": "Ok all right."
         },
-        "success": {
-            "about_me": null,
-            "avatar": null,
-            "date": "2008-05-15",
-            "description": null,
-            "email": "13001179400",
-            "gender": 1,
-            "last_seen": 1530422428,
-            "master_uid": 0,
-            "mobile": null,
-            "name": null,
-            "uid": "19562310748",
-            "username": "火烈鸟"
-        }
+        "success": true
     }
 
 请求 ``失败`` 返回结果：
