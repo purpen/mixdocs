@@ -263,6 +263,7 @@ JSON数据格式:
             "collections": [
                 {
                     "cover": "http://127.0.0.1:9000/_uploads/photos/180529/f7650e4cb4746bf.jpg",
+                    "cover_id": 2,
                     "id": 2,
                     "mask_color": "#ffffff",
                     "name": "主题名称",
