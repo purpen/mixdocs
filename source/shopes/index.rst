@@ -13,3 +13,9 @@
     :maxdepth: 2
 
     store.rst
+
+
+.. toctree::
+    :maxdepth: 2
+
+    wxapp.rst
