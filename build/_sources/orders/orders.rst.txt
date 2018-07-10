@@ -220,6 +220,7 @@ outside_target_id      String      可选
 invoice_type           Integer     可选          1          发票类型
 invoice_info           String      可选          {}
 buyer_remark           String      可选                     买家备注
+ship_mode              Integer     可选          1          0、自提 1、发快递
 from_client            String      可选                     来源客户端，1、小程序；2、H5 3、App 4、TV 5、POS 6、PAD
 affiliate_code         String      可选                     推广码
 bonus_code             String      可选                     官方红包码
