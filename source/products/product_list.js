@@ -5,11 +5,14 @@
     "prev": false,
     "products": [
       {
+        "category_id": "分类id",
         "commission_price": "分销佣金",
         "commission_rate": "佣金比率",
         "cover": "封面图片链接地址",
+        "cover_id": "封面图id",
         "custom_details": "定制详情",
         "features": "商品推荐语",
+        "have_distributed": "店铺是否分销过该商品",
         "id_code": "商品简码",
         "is_custom_made": "是否接单定制",
         "is_custom_service": "是否支持定制化服务",
@@ -33,16 +36,21 @@
         "real_price": "佣金对应的商品原价",
         "real_sale_price": "佣金对应的商品折扣价",
         "rid": "商品编号",
+        "second_category_id": "二级分类id",
         "status": "商品状态: 0=仓库中, 1=出售中, 2=下架中",
         "sticked": "是否推荐",
+        "top_category_id": "一级分类id",
         "total_stock": "库存数"
       },
       {
+        "category_id": 200,
         "commission_price": 30,
         "commission_rate": 6,
         "cover": "http://xxx/_uploads/photos/171010/fe7380064e18135.jpg",
+        "cover_id": 32,
         "custom_details": "定制详情",
         "features": "这是商品推荐语",
+        "have_distributed": true,
         "id_code": "6915545123548",
         "is_custom_made": true,
         "is_custom_service": true,
@@ -66,8 +74,10 @@
         "real_price": 200,
         "real_sale_price": 0,
         "rid": "117210372661",
+        "second_category_id": 50,
         "status": 1,
         "sticked": null,
+        "top_category_id": 1,
         "total_stock": 35
       },
     ]
