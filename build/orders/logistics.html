@@ -138,6 +138,8 @@
 <li class="toctree-l1"><a class="reference internal" href="../common.html">公用接口模块</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="../common.html#id2">幻灯图列表</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../common.html#id6">搜索关键词历史</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../common.html#id10">发送短信验证码</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../common.html#id15">发送邮件验证码</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="../setting.html">系统相关配置文档</a><ul>
@@ -2335,9 +2337,9 @@
 <div class="section" id="id62">
 <h3>接口说明<a class="headerlink" href="#id62" title="永久链接至标题">¶</a></h3>
 <ul class="simple">
-<li>API接口请求地址：<code class="docutils literal notranslate"><span class="pre">/logistics/freight/available</span></code></li>
-<li>API接口请求方法：<code class="docutils literal notranslate"><span class="pre">POST</span></code></li>
-<li>API接口用户授权：<code class="docutils literal notranslate"><span class="pre">token</span></code></li>
+<li>API接口请求地址：<code class="docutils literal"><span class="pre">/logistics/freight/available</span></code></li>
+<li>API接口请求方法：<code class="docutils literal"><span class="pre">POST</span></code></li>
+<li>API接口用户授权：<code class="docutils literal"><span class="pre">token</span></code></li>
 </ul>
 </div>
 <div class="section" id="id63">
@@ -2419,7 +2421,7 @@
 </tbody>
 </table>
 <p>参考示例：</p>
-<div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="p">{</span>
+<div class="highlight-javascript"><div class="highlight"><pre><span></span><span class="p">{</span>
     <span class="s2">&quot;place_oid&quot;</span><span class="o">:</span><span class="mi">1</span><span class="p">,</span>
     <span class="s2">&quot;product_items&quot;</span><span class="o">:</span><span class="p">[</span>
         <span class="p">{</span>
@@ -2443,7 +2445,7 @@
 <h3>返回示例<a class="headerlink" href="#id64" title="永久链接至标题">¶</a></h3>
 <p>JSON数据格式:</p>
 <p>请求 <strong>正确</strong> 返回结果：</p>
-<div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="p">{</span>
+<div class="highlight-javascript"><div class="highlight"><pre><span></span><span class="p">{</span>
     <span class="s2">&quot;data&quot;</span><span class="o">:</span> <span class="p">{</span>
         <span class="s2">&quot;express_info&quot;</span><span class="o">:</span> <span class="p">[</span>
             <span class="p">{</span>

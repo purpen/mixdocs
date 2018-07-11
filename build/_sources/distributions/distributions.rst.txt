@@ -230,6 +230,7 @@ JSON数据格式:
 
 * API接口请求地址：``/fx_distribute/proprietary``
 * API接口请求方法：``GET``
+* API接口用户授权：``token``
 
 请求参数
 ~~~~~~~~~~~~~~~
@@ -239,6 +240,36 @@ JSON数据格式:
 sid          String    可选                   店铺编号
 page         Number    可选         1         当前页码
 per_page     Number    可选         10        每页数量
+===========  ========  =========  ========  ====================================
+
+返回示例
+~~~~~~~~~~~~~~~~
+
+JSON数据格式:
+
+.. literalinclude:: ../products/product_list.js
+    :language: javascript
+
+我分销的商品
+----------------
+获取商家分销的别的店铺商品
+
+接口说明
+~~~~~~~~~~~~~~
+
+* API接口请求地址：``/fx_distribute/agency``
+* API接口请求方法：``GET``
+* API接口用户授权：``token``
+
+请求参数
+~~~~~~~~~~~~~~~
+===========  ========  =========  ========  ====================================
+名称          类型      是否必须    默认值     描述说明
+===========  ========  =========  ========  ====================================
+sid          String    可选                   店铺编号
+page         Number    可选         1         当前页码
+per_page     Number    可选         10        每页数量
+status       Number    可选         1         店铺商品状态, 0=全部  1=出售中  2=仓库中
 ===========  ========  =========  ========  ====================================
 
 返回示例
@@ -348,48 +379,32 @@ JSON数据格式:
     {
         "data": {
             "categories": [
-                {
-                    "cover": "http://127.0.0.1:9000/_uploads/photos/180530/72de0b9ca1ae5a3.jpg",
-                    "description": "手机描述信息",
-                    "id": 2,
-                    "name": "手机",
-                    "pid": 0,
-                    "sort_order": 16,
-                    "status": 1
-                },
-                {
-                    "cover": "http://127.0.0.1:9000/_uploads/photos/180530/72de0b9ca1ae5a3.jpg",
-                    "description": "华为手机描述信息",
-                    "id": 16,
-                    "name": "华为手机",
-                    "pid": 2,
-                    "sort_order": 11,
-                    "status": 1
-                }
+                "好感衣装",
+                "男装",
+                "T恤背心"
             ],
             "commission_price": 120.98,
             "commission_rate": 3.5,
             "content": "图文详情内容...",
             "features": "亮点",
+            "have_distributed": true,
             "images": [
-                [
-                    {
-                        "created_at": 1527587113,
-                        "filename": "m.jpg",
-                        "filepath": "180529/e5a6b51ad55208d.jpg",
-                        "id": 5,
-                        "type": 1,
-                        "view_url": "http://127.0.0.1:9000/_uploads/photos/180529/e5a6b51ad55208d.jpg"
-                    },
-                    {
-                        "created_at": 1527587113,
-                        "filename": "l.jpg",
-                        "filepath": "180529/4158809a4303eab.jpg",
-                        "id": 6,
-                        "type": 1,
-                        "view_url": "http://127.0.0.1:9000/_uploads/photos/180529/4158809a4303eab.jpg"
-                    }
-                ]
+                {
+                    "created_at": 1527587113,
+                    "filename": "m.jpg",
+                    "filepath": "180529/e5a6b51ad55208d.jpg",
+                    "id": 5,
+                    "type": 1,
+                    "view_url": "http://127.0.0.1:9000/_uploads/photos/180529/e5a6b51ad55208d.jpg"
+                },
+                {
+                    "created_at": 1527587113,
+                    "filename": "l.jpg",
+                    "filepath": "180529/4158809a4303eab.jpg",
+                    "id": 6,
+                    "type": 1,
+                    "view_url": "http://127.0.0.1:9000/_uploads/photos/180529/4158809a4303eab.jpg"
+                }
             ],
             "is_custom_service": true,
             "material_name": "棉.麻",
