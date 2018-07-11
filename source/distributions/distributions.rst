@@ -356,6 +356,7 @@ JSON数据格式:
             "commission_rate": 3.5,
             "content": "图文详情内容...",
             "features": "亮点",
+            "have_distributed": true,
             "images": [
                 {
                     "created_at": 1527587113,
