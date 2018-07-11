@@ -220,11 +220,12 @@ outside_target_id      String      可选
 invoice_type           Integer     可选          1          发票类型
 invoice_info           String      可选          {}
 buyer_remark           String      可选                     买家备注
+ship_mode              Integer     可选          1          1、发快递 2、自提
 from_client            String      可选                     来源客户端，1、小程序；2、H5 3、App 4、TV 5、POS 6、PAD
 affiliate_code         String      可选                     推广码
 bonus_code             String      可选                     官方红包码
 customer_code          String      可选                     分销商代码
-sync_pay               Integer     可选                     是否同步返回支付参数
+sync_pay               Integer     可选           0         是否同步返回支付参数 0、否 1、是
 store_items            Array       必需                     店铺商品信息
 =====================  ==========  =========  ==========  =============================
 
