@@ -242,7 +242,7 @@
 <li><a class="reference internal" href="#id60">返回示例</a></li>
 </ul>
 </li>
-<li><a class="reference internal" href="#id61">获取默认运费</a><ul>
+<li><a class="reference internal" href="#id61">选择合适的运费模板</a><ul>
 <li><a class="reference internal" href="#id62">接口说明</a></li>
 <li><a class="reference internal" href="#id63">请求参数</a></li>
 <li><a class="reference internal" href="#id64">返回示例</a></li>
@@ -369,7 +369,7 @@
 <li><a class="reference internal" href="#id60">返回示例</a></li>
 </ul>
 </li>
-<li><a class="reference internal" href="#id61">获取默认运费</a><ul>
+<li><a class="reference internal" href="#id61">选择合适的运费模板</a><ul>
 <li><a class="reference internal" href="#id62">接口说明</a></li>
 <li><a class="reference internal" href="#id63">请求参数</a></li>
 <li><a class="reference internal" href="#id64">返回示例</a></li>
@@ -2315,12 +2315,12 @@
 </div>
 </div>
 <div class="section" id="id61">
-<h2>获取默认运费<a class="headerlink" href="#id61" title="永久链接至标题">¶</a></h2>
-<p>获取默认运费</p>
+<h2>选择合适的运费模板<a class="headerlink" href="#id61" title="永久链接至标题">¶</a></h2>
+<p>选择合适的运费模板</p>
 <div class="section" id="id62">
 <h3>接口说明<a class="headerlink" href="#id62" title="永久链接至标题">¶</a></h3>
 <ul class="simple">
-<li>API接口请求地址：<code class="docutils literal notranslate"><span class="pre">/logistics/freight/default</span></code></li>
+<li>API接口请求地址：<code class="docutils literal notranslate"><span class="pre">/logistics/freight/available</span></code></li>
 <li>API接口请求方法：<code class="docutils literal notranslate"><span class="pre">POST</span></code></li>
 <li>API接口用户授权：<code class="docutils literal notranslate"><span class="pre">token</span></code></li>
 </ul>
@@ -2345,19 +2345,13 @@
 </tr>
 </thead>
 <tbody valign="top">
-<tr class="row-even"><td>template_rid</td>
-<td>String</td>
-<td>必须</td>
-<td>&#160;</td>
-<td>物流模板rid</td>
-</tr>
-<tr class="row-odd"><td>place_oid</td>
+<tr class="row-even"><td>place_oid</td>
 <td>Integer</td>
 <td>必须</td>
 <td>&#160;</td>
 <td>城市oid</td>
 </tr>
-<tr class="row-even"><td>product_items</td>
+<tr class="row-odd"><td>product_items</td>
 <td>Array</td>
 <td>必须</td>
 <td>&#160;</td>
@@ -2397,24 +2391,32 @@
 </tr>
 <tr class="row-even"><td>quantity</td>
 <td>Integer</td>
-<td>可选</td>
+<td>必须</td>
 <td>1</td>
 <td>购买数量</td>
+</tr>
+<tr class="row-odd"><td>freight_template_id</td>
+<td>Integer</td>
+<td>必须</td>
+<td>&#160;</td>
+<td>运费模板id</td>
 </tr>
 </tbody>
 </table>
 <p>参考示例：</p>
 <div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="p">{</span>
-    <span class="s2">&quot;template_rid&quot;</span><span class="o">:</span><span class="s2">&quot;Ft415967803&quot;</span><span class="p">,</span>
     <span class="s2">&quot;place_oid&quot;</span><span class="o">:</span><span class="mi">1</span><span class="p">,</span>
     <span class="s2">&quot;product_items&quot;</span><span class="o">:</span><span class="p">[</span>
         <span class="p">{</span>
             <span class="s2">&quot;sku_rid&quot;</span><span class="o">:</span><span class="s2">&quot;1&quot;</span><span class="p">,</span>
-            <span class="s2">&quot;quantity&quot;</span><span class="o">:</span><span class="mi">2</span>
+            <span class="s2">&quot;quantity&quot;</span><span class="o">:</span><span class="mi">2</span><span class="p">,</span>
+            <span class="s2">&quot;freight_template_id&quot;</span><span class="o">:</span> <span class="mi">44</span>
         <span class="p">},</span>
         <span class="p">{</span>
             <span class="s2">&quot;sku_rid&quot;</span><span class="o">:</span><span class="s2">&quot;4&quot;</span><span class="p">,</span>
-            <span class="s2">&quot;quantity&quot;</span><span class="o">:</span><span class="mi">2</span>
+            <span class="s2">&quot;quantity&quot;</span><span class="o">:</span><span class="mi">2</span><span class="p">,</span>
+            <span class="s2">&quot;freight_template_id&quot;</span><span class="o">:</span> <span class="mi">46</span>
+
         <span class="p">}</span>
 
         <span class="p">]</span>
@@ -2428,27 +2430,31 @@
 <p>请求 <strong>正确</strong> 返回结果：</p>
 <div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="p">{</span>
     <span class="s2">&quot;data&quot;</span><span class="o">:</span> <span class="p">{</span>
-        <span class="s2">&quot;express_item&quot;</span><span class="o">:</span> <span class="p">{</span>
-            <span class="s2">&quot;continuous_amount&quot;</span><span class="o">:</span> <span class="mi">5</span><span class="p">,</span>  <span class="c1">// 续费</span>
-            <span class="s2">&quot;continuous_item&quot;</span><span class="o">:</span> <span class="mi">1</span><span class="p">,</span>  <span class="c1">// 续件</span>
-            <span class="s2">&quot;continuous_weight&quot;</span><span class="o">:</span> <span class="mi">1</span><span class="p">,</span>  <span class="c1">// 续重</span>
-            <span class="s2">&quot;created_at&quot;</span><span class="o">:</span> <span class="mi">1530241687</span><span class="p">,</span>  <span class="c1">// 创建时间</span>
-            <span class="s2">&quot;express&quot;</span><span class="o">:</span> <span class="p">{</span>
-                <span class="s2">&quot;express_code&quot;</span><span class="o">:</span> <span class="s2">&quot;YTO&quot;</span><span class="p">,</span>  <span class="c1">// 物流公司code</span>
-                <span class="s2">&quot;express_id&quot;</span><span class="o">:</span> <span class="mi">4</span><span class="p">,</span>  <span class="c1">//  物流公司id</span>
-                <span class="s2">&quot;express_name&quot;</span><span class="o">:</span> <span class="s2">&quot;圆通&quot;</span>  <span class="c1">// 物流公司名</span>
+        <span class="s2">&quot;express_info&quot;</span><span class="o">:</span> <span class="p">[</span>
+            <span class="p">{</span>
+                <span class="s2">&quot;continuous_amount&quot;</span><span class="o">:</span> <span class="mi">20</span><span class="p">,</span>
+                <span class="s2">&quot;continuous_item&quot;</span><span class="o">:</span> <span class="mi">1</span><span class="p">,</span>
+                <span class="s2">&quot;continuous_weight&quot;</span><span class="o">:</span> <span class="mi">0</span><span class="p">,</span>
+                <span class="s2">&quot;created_at&quot;</span><span class="o">:</span> <span class="mi">1530251099</span><span class="p">,</span>
+                <span class="s2">&quot;express&quot;</span><span class="o">:</span> <span class="p">{</span>  <span class="c1">//物流公司</span>
+                    <span class="s2">&quot;express_code&quot;</span><span class="o">:</span> <span class="s2">&quot;YTO&quot;</span><span class="p">,</span>  <span class="c1">//物流公司</span>
+                    <span class="s2">&quot;express_id&quot;</span><span class="o">:</span> <span class="mi">4</span><span class="p">,</span>
+                    <span class="s2">&quot;express_name&quot;</span><span class="o">:</span> <span class="s2">&quot;圆通&quot;</span>
+                <span class="p">},</span>
+                <span class="s2">&quot;first_amount&quot;</span><span class="o">:</span> <span class="mi">10</span><span class="p">,</span>
+                <span class="s2">&quot;first_item&quot;</span><span class="o">:</span> <span class="mi">1</span><span class="p">,</span>
+                <span class="s2">&quot;first_weight&quot;</span><span class="o">:</span> <span class="mi">0</span><span class="p">,</span>
+                <span class="s2">&quot;freight&quot;</span><span class="o">:</span> <span class="mi">23</span><span class="p">,</span>  <span class="c1">// 运费</span>
+                <span class="s2">&quot;is_default&quot;</span><span class="o">:</span> <span class="kc">true</span><span class="p">,</span>
+                <span class="s2">&quot;max_days&quot;</span><span class="o">:</span> <span class="mi">5</span><span class="p">,</span>  <span class="c1">// 最大天数</span>
+                <span class="s2">&quot;min_days&quot;</span><span class="o">:</span> <span class="mi">3</span><span class="p">,</span>  <span class="c1">// 最小天数</span>
+                <span class="s2">&quot;place&quot;</span><span class="o">:</span> <span class="p">[],</span>
+                <span class="s2">&quot;rid&quot;</span><span class="o">:</span> <span class="s2">&quot;Fi278194536&quot;</span><span class="p">,</span>
+                <span class="s2">&quot;updated_at&quot;</span><span class="o">:</span> <span class="mi">1530251099</span>
             <span class="p">},</span>
-            <span class="s2">&quot;first_amount&quot;</span><span class="o">:</span> <span class="mi">12</span><span class="p">,</span>  <span class="c1">// 首费</span>
-            <span class="s2">&quot;first_item&quot;</span><span class="o">:</span> <span class="mi">1</span><span class="p">,</span>  <span class="c1">// 首件</span>
-            <span class="s2">&quot;first_weight&quot;</span><span class="o">:</span> <span class="mi">1</span><span class="p">,</span>  <span class="c1">// 首重</span>
-            <span class="s2">&quot;is_default&quot;</span><span class="o">:</span> <span class="kc">true</span><span class="p">,</span>  <span class="c1">// 是否默认</span>
-            <span class="s2">&quot;max_days&quot;</span><span class="o">:</span> <span class="mi">5</span><span class="p">,</span>  <span class="c1">// 最大天数</span>
-            <span class="s2">&quot;min_days&quot;</span><span class="o">:</span> <span class="mi">3</span><span class="p">,</span>  <span class="c1">// 最小天数</span>
-            <span class="s2">&quot;place&quot;</span><span class="o">:</span> <span class="p">[],</span>
-            <span class="s2">&quot;rid&quot;</span><span class="o">:</span> <span class="s2">&quot;Fi871296504&quot;</span><span class="p">,</span>  <span class="c1">// 物流运费明细rid</span>
-            <span class="s2">&quot;updated_at&quot;</span><span class="o">:</span> <span class="mi">1530241687</span>  <span class="c1">//</span>
-        <span class="p">},</span>
-        <span class="s2">&quot;mix_freight&quot;</span><span class="o">:</span> <span class="mi">23</span>  <span class="c1">// 运费</span>
+        <span class="p">],</span>
+        <span class="s2">&quot;min_express&quot;</span><span class="o">:</span> <span class="mi">4</span><span class="p">,</span>  <span class="c1">// 最小运费公司</span>
+        <span class="s2">&quot;min_freight&quot;</span><span class="o">:</span> <span class="mi">23</span>  <span class="c1">// 最小运费</span>
     <span class="p">},</span>
     <span class="s2">&quot;status&quot;</span><span class="o">:</span> <span class="p">{</span>
         <span class="s2">&quot;code&quot;</span><span class="o">:</span> <span class="mi">200</span><span class="p">,</span>

@@ -1299,14 +1299,14 @@ JSON数据格式:
 
 
 
-获取默认运费
-----------------
-获取默认运费
+选择合适的运费模板
+----------------------
+选择合适的运费模板
 
 接口说明
 ~~~~~~~~~~~~~~
 
-* API接口请求地址：``/logistics/freight/default``
+* API接口请求地址：``/logistics/freight/available``
 * API接口请求方法：``POST``
 * API接口用户授权：``token``
 
@@ -1318,7 +1318,6 @@ JSON数据格式:
 =====================  ===========  ==========  ===========  ==============================
 名称                    类型          是否必须      默认值        描述说明
 =====================  ===========  ==========  ===========  ==============================
-template_rid           String        必须                      物流模板rid
 place_oid              Integer       必须                      城市oid
 product_items          Array         必须                      商品信息列表
 =====================  ===========  ==========  ===========  ==============================
@@ -1330,7 +1329,8 @@ product_items          Array         必须                      商品信息列
 =====================  ===========  ==========  ===========  ==============================
 product_items:
 sku_rid                String        必须                      sku_rid
-quantity               Integer       可选          1           购买数量
+quantity               Integer       必须          1           购买数量
+freight_template_id    Integer       必须                      运费模板id
 =====================  ===========  ==========  ===========  ==============================
 
 
@@ -1340,16 +1340,18 @@ quantity               Integer       可选          1           购买数量
 
 
     {
-        "template_rid":"Ft415967803",
         "place_oid":1,
         "product_items":[
             {
                 "sku_rid":"1",
-                "quantity":2
+                "quantity":2,
+                "freight_template_id": 44
             },
             {
                 "sku_rid":"4",
-                "quantity":2
+                "quantity":2,
+                "freight_template_id": 46
+
             }
 
             ]
@@ -1368,27 +1370,31 @@ JSON数据格式:
 
     {
         "data": {
-            "express_item": {
-                "continuous_amount": 5,  // 续费
-                "continuous_item": 1,  // 续件
-                "continuous_weight": 1,  // 续重
-                "created_at": 1530241687,  // 创建时间
-                "express": {
-                    "express_code": "YTO",  // 物流公司code
-                    "express_id": 4,  //  物流公司id
-                    "express_name": "圆通"  // 物流公司名
+            "express_info": [
+                {
+                    "continuous_amount": 20,
+                    "continuous_item": 1,
+                    "continuous_weight": 0,
+                    "created_at": 1530251099,
+                    "express": {  //物流公司
+                        "express_code": "YTO",  //物流公司
+                        "express_id": 4,
+                        "express_name": "圆通"
+                    },
+                    "first_amount": 10,
+                    "first_item": 1,
+                    "first_weight": 0,
+                    "freight": 23,  // 运费
+                    "is_default": true,
+                    "max_days": 5,  // 最大天数
+                    "min_days": 3,  // 最小天数
+                    "place": [],
+                    "rid": "Fi278194536",
+                    "updated_at": 1530251099
                 },
-                "first_amount": 12,  // 首费
-                "first_item": 1,  // 首件
-                "first_weight": 1,  // 首重
-                "is_default": true,  // 是否默认
-                "max_days": 5,  // 最大天数
-                "min_days": 3,  // 最小天数
-                "place": [],
-                "rid": "Fi871296504",  // 物流运费明细rid
-                "updated_at": 1530241687  //
-            },
-            "mix_freight": 23  // 运费
+            ],
+            "min_express": 4,  // 最小运费公司
+            "min_freight": 23  // 最小运费
         },
         "status": {
             "code": 200,
@@ -1396,5 +1402,4 @@ JSON数据格式:
         },
         "success": true
     }
-
 
