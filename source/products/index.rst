@@ -15,4 +15,5 @@
     labels.rst
     return_policies.rst
     wish.rst
+    user_like.rst
     assets.rst
