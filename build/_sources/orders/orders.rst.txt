@@ -613,6 +613,7 @@ JSON数据格式:
 名称                    类型        是否必须     默认值       描述说明
 =====================  ==========  =========  ==========  =============================
 rid                    String      必需                    订单号
+from_client            Integer     必需             1      1、商家取消订单 2、消费者取消订单
 =====================  ==========  =========  ==========  =============================
 
 返回示例
@@ -623,20 +624,6 @@ JSON数据格式:
 .. code-block:: javascript
 
     {
-        "data": {
-            "order": {
-                "buyer_name": "小帅",
-                "buyer_phone": "18610320751",
-                "buyer_province": "北京市",
-                "buyer_remark": "",
-                ...
-                "rid": "D18030120453196",
-                "status": -1,
-                "store_name": "D3IN微商城(小程序)",
-                "total_amount": 149,
-                "total_quantity": 1
-            }
-        },
         "status": {
             "code": 200,
             "message": "Ok all right."
