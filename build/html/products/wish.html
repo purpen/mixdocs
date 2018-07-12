@@ -27,7 +27,7 @@
     <script type="text/javascript" src="../_static/bootstrap-sphinx.js"></script>
     <link rel="index" title="索引" href="../genindex.html" />
     <link rel="search" title="搜索" href="../search.html" />
-    <link rel="next" title="附件模块" href="assets.html" />
+    <link rel="next" title="用户喜欢模块" href="user_like.html" />
     <link rel="prev" title="商家退换货规则模块" href="return_policies.html" />
 <meta charset='utf-8'>
 <meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'>
@@ -94,6 +94,7 @@
 <li class="toctree-l2"><a class="reference internal" href="labels.html">标签模块</a></li>
 <li class="toctree-l2"><a class="reference internal" href="return_policies.html">商家退换货规则模块</a></li>
 <li class="toctree-l2 current"><a class="current reference internal" href="#">心愿清单模块</a></li>
+<li class="toctree-l2"><a class="reference internal" href="user_like.html">用户喜欢模块</a></li>
 <li class="toctree-l2"><a class="reference internal" href="assets.html">附件模块</a></li>
 </ul>
 </li>
@@ -188,6 +189,12 @@
 <li><a class="reference internal" href="#id13">返回示例</a></li>
 </ul>
 </li>
+<li><a class="reference internal" href="#id14">商品心愿清单</a><ul>
+<li><a class="reference internal" href="#id15">接口说明</a></li>
+<li><a class="reference internal" href="#id16">请求参数</a></li>
+<li><a class="reference internal" href="#id17">返回示例</a></li>
+</ul>
+</li>
 </ul>
 </li>
 </ul>
@@ -238,6 +245,12 @@
 <li><a class="reference internal" href="#id13">返回示例</a></li>
 </ul>
 </li>
+<li><a class="reference internal" href="#id14">商品心愿清单</a><ul>
+<li><a class="reference internal" href="#id15">接口说明</a></li>
+<li><a class="reference internal" href="#id16">请求参数</a></li>
+<li><a class="reference internal" href="#id17">返回示例</a></li>
+</ul>
+</li>
 </ul>
 </li>
 </ul>
@@ -249,7 +262,7 @@
     </a>
   </li>
   <li>
-    <a href="assets.html" title="Next Chapter: 附件模块"><span class="glyphicon glyphicon-chevron-right visible-sm"></span><span class="hidden-sm hidden-tablet">&raquo; 附件模块</span>
+    <a href="user_like.html" title="Next Chapter: 用户喜欢模块"><span class="glyphicon glyphicon-chevron-right visible-sm"></span><span class="hidden-sm hidden-tablet">&raquo; 用户喜欢模块</span>
     </a>
   </li>
 </ul>
@@ -418,7 +431,7 @@
 <div class="section" id="id7">
 <h3>接口说明<a class="headerlink" href="#id7" title="永久链接至标题">¶</a></h3>
 <ul class="simple">
-<li>API接口请求地址：<code class="docutils literal"><span class="pre">/wishlist/addto</span></code></li>
+<li>API接口请求地址：<code class="docutils literal"><span class="pre">/wishlist</span></code></li>
 <li>API接口请求方法：<code class="docutils literal"><span class="pre">POST</span></code></li>
 <li>API接口用户授权：<code class="docutils literal"><span class="pre">token</span></code></li>
 </ul>
@@ -472,8 +485,8 @@
 <div class="section" id="id11">
 <h3>接口说明<a class="headerlink" href="#id11" title="永久链接至标题">¶</a></h3>
 <ul class="simple">
-<li>API接口请求地址：<code class="docutils literal"><span class="pre">/wishlist/remove</span></code></li>
-<li>API接口请求方法：<code class="docutils literal"><span class="pre">POST</span></code></li>
+<li>API接口请求地址：<code class="docutils literal"><span class="pre">/wishlist</span></code></li>
+<li>API接口请求方法：<code class="docutils literal"><span class="pre">DELETE</span></code></li>
 <li>API接口用户授权：<code class="docutils literal"><span class="pre">token</span></code></li>
 </ul>
 </div>
@@ -513,6 +526,72 @@
     <span class="s2">&quot;status&quot;</span><span class="o">:</span> <span class="p">{</span>
         <span class="s2">&quot;code&quot;</span><span class="o">:</span> <span class="mi">204</span><span class="p">,</span>
         <span class="s2">&quot;message&quot;</span><span class="o">:</span> <span class="s2">&quot;All deleted.&quot;</span>
+    <span class="p">},</span>
+    <span class="s2">&quot;success&quot;</span><span class="o">:</span> <span class="kc">true</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="id14">
+<h2>商品心愿清单<a class="headerlink" href="#id14" title="永久链接至标题">¶</a></h2>
+<p>获取用户是否将商品加入心愿清单</p>
+<div class="section" id="id15">
+<h3>接口说明<a class="headerlink" href="#id15" title="永久链接至标题">¶</a></h3>
+<ul class="simple">
+<li>API接口请求地址：<code class="docutils literal"><span class="pre">/products_wishlist</span></code></li>
+<li>API接口请求方法：<code class="docutils literal"><span class="pre">GET</span></code></li>
+<li>API接口用户授权：<code class="docutils literal"><span class="pre">token</span></code></li>
+</ul>
+</div>
+<div class="section" id="id16">
+<h3>请求参数<a class="headerlink" href="#id16" title="永久链接至标题">¶</a></h3>
+<table border="1" class="docutils">
+<colgroup>
+<col width="15%" />
+<col width="11%" />
+<col width="13%" />
+<col width="11%" />
+<col width="50%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">名称</th>
+<th class="head">类型</th>
+<th class="head">是否必须</th>
+<th class="head">默认值</th>
+<th class="head">描述说明</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>rids</td>
+<td>String</td>
+<td>必须</td>
+<td>&#160;</td>
+<td>商品编号, 多个用,隔开</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="id17">
+<h3>返回示例<a class="headerlink" href="#id17" title="永久链接至标题">¶</a></h3>
+<div class="highlight-javascript"><div class="highlight"><pre><span></span><span class="p">{</span>
+    <span class="s2">&quot;data&quot;</span><span class="o">:</span> <span class="p">[</span>
+        <span class="p">{</span>
+            <span class="s2">&quot;is_wish&quot;</span><span class="o">:</span> <span class="kc">false</span><span class="p">,</span>
+            <span class="s2">&quot;rid&quot;</span><span class="o">:</span> <span class="s2">&quot;8781543209&quot;</span>
+        <span class="p">},</span>
+        <span class="p">{</span>
+            <span class="s2">&quot;is_wish&quot;</span><span class="o">:</span> <span class="kc">true</span><span class="p">,</span>
+            <span class="s2">&quot;rid&quot;</span><span class="o">:</span> <span class="s2">&quot;8362570981&quot;</span>
+        <span class="p">},</span>
+        <span class="p">{</span>
+            <span class="s2">&quot;is_wish&quot;</span><span class="o">:</span> <span class="kc">false</span><span class="p">,</span>
+            <span class="s2">&quot;rid&quot;</span><span class="o">:</span> <span class="s2">&quot;8843256790&quot;</span>
+        <span class="p">}</span>
+    <span class="p">],</span>
+    <span class="s2">&quot;status&quot;</span><span class="o">:</span> <span class="p">{</span>
+        <span class="s2">&quot;code&quot;</span><span class="o">:</span> <span class="mi">200</span><span class="p">,</span>
+        <span class="s2">&quot;message&quot;</span><span class="o">:</span> <span class="s2">&quot;Ok all right.&quot;</span>
     <span class="p">},</span>
     <span class="s2">&quot;success&quot;</span><span class="o">:</span> <span class="kc">true</span>
 <span class="p">}</span>

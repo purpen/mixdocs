@@ -94,6 +94,7 @@
 <li class="toctree-l2"><a class="reference internal" href="../products/labels.html">标签模块</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../products/return_policies.html">商家退换货规则模块</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../products/wish.html">心愿清单模块</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../products/user_like.html">用户喜欢模块</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../products/assets.html">附件模块</a></li>
 </ul>
 </li>
@@ -1493,11 +1494,11 @@
 <h3>请求参数<a class="headerlink" href="#id39" title="永久链接至标题">¶</a></h3>
 <table border="1" class="docutils">
 <colgroup>
-<col width="27%" />
-<col width="13%" />
+<col width="25%" />
+<col width="12%" />
 <col width="11%" />
-<col width="13%" />
-<col width="37%" />
+<col width="12%" />
+<col width="40%" />
 </colgroup>
 <thead valign="bottom">
 <tr class="row-odd"><th class="head">名称</th>
@@ -1514,6 +1515,12 @@
 <td>&#160;</td>
 <td>订单号</td>
 </tr>
+<tr class="row-odd"><td>from_client</td>
+<td>Integer</td>
+<td>必需</td>
+<td>1</td>
+<td>1、商家取消订单 2、消费者取消订单</td>
+</tr>
 </tbody>
 </table>
 </div>
@@ -1521,20 +1528,6 @@
 <h3>返回示例<a class="headerlink" href="#id40" title="永久链接至标题">¶</a></h3>
 <p>JSON数据格式:</p>
 <div class="highlight-javascript"><div class="highlight"><pre><span></span><span class="p">{</span>
-    <span class="s2">&quot;data&quot;</span><span class="o">:</span> <span class="p">{</span>
-        <span class="s2">&quot;order&quot;</span><span class="o">:</span> <span class="p">{</span>
-            <span class="s2">&quot;buyer_name&quot;</span><span class="o">:</span> <span class="s2">&quot;小帅&quot;</span><span class="p">,</span>
-            <span class="s2">&quot;buyer_phone&quot;</span><span class="o">:</span> <span class="s2">&quot;18610320751&quot;</span><span class="p">,</span>
-            <span class="s2">&quot;buyer_province&quot;</span><span class="o">:</span> <span class="s2">&quot;北京市&quot;</span><span class="p">,</span>
-            <span class="s2">&quot;buyer_remark&quot;</span><span class="o">:</span> <span class="s2">&quot;&quot;</span><span class="p">,</span>
-            <span class="p">...</span>
-            <span class="s2">&quot;rid&quot;</span><span class="o">:</span> <span class="s2">&quot;D18030120453196&quot;</span><span class="p">,</span>
-            <span class="s2">&quot;status&quot;</span><span class="o">:</span> <span class="o">-</span><span class="mi">1</span><span class="p">,</span>
-            <span class="s2">&quot;store_name&quot;</span><span class="o">:</span> <span class="s2">&quot;D3IN微商城(小程序)&quot;</span><span class="p">,</span>
-            <span class="s2">&quot;total_amount&quot;</span><span class="o">:</span> <span class="mi">149</span><span class="p">,</span>
-            <span class="s2">&quot;total_quantity&quot;</span><span class="o">:</span> <span class="mi">1</span>
-        <span class="p">}</span>
-    <span class="p">},</span>
     <span class="s2">&quot;status&quot;</span><span class="o">:</span> <span class="p">{</span>
         <span class="s2">&quot;code&quot;</span><span class="o">:</span> <span class="mi">200</span><span class="p">,</span>
         <span class="s2">&quot;message&quot;</span><span class="o">:</span> <span class="s2">&quot;Ok all right.&quot;</span>

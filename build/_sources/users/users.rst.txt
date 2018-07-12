@@ -467,9 +467,9 @@ JSON数据格式
 
     {
         "data": {
-            "account": null,
-            "area": "顺义区",
-            "areacode": "+86",
+            "area": "",
+            "area_id": 0,
+            "areacode": null,
             "attachments": [
                 {
                     "created_at": null,
@@ -478,95 +478,33 @@ JSON数据格式
                     "id": 1,
                     "type": null,
                     "view_url": "http://0.0.0.0:9000/_uploads/photos/http://127.0.0.1:9000/_uploads/photos/222222/5d2812257b539aa.jpg"
-                },
-                {
-                    "created_at": null,
-                    "filename": "e",
-                    "filepath": "http://127.0.0.1:9000/_uploads/photos/222222/5d2812257b539bb.jpg",
-                    "id": 2,
-                    "type": null,
-                    "view_url": "http://0.0.0.0:9000/_uploads/photos/http://127.0.0.1:9000/_uploads/photos/222222/5d2812257b539bb.jpg"
-                },
-                {
-                    "created_at": null,
-                    "filename": "r",
-                    "filepath": "http://127.0.0.1:9000/_uploads/photos/222222/5d2812257b539oo.jpg",
-                    "id": 3,
-                    "type": null,
-                    "view_url": "http://0.0.0.0:9000/_uploads/photos/http://127.0.0.1:9000/_uploads/photos/222222/5d2812257b539oo.jpg"
-                },
-                {
-                    "created_at": null,
-                    "filename": "h",
-                    "filepath": "http://127.0.0.1:9000/_uploads/photos/222222/5d2812257b539ii.jpg",
-                    "id": 4,
-                    "type": null,
-                    "view_url": "http://0.0.0.0:9000/_uploads/photos/http://127.0.0.1:9000/_uploads/photos/222222/5d2812257b539ii.jpg"
-                },
-                {
-                    "created_at": null,
-                    "filename": "p",
-                    "filepath": "http://127.0.0.1:9000/_uploads/photos/222222/5d2812257b539mm.jpg",
-                    "id": 5,
-                    "type": null,
-                    "view_url": "http://0.0.0.0:9000/_uploads/photos/http://127.0.0.1:9000/_uploads/photos/222222/5d2812257b539mm.jpg"
                 }
             ],
             "avatar": "http://0.0.0.0:9000/_uploads/photos/http://127.0.0.1:9000/_uploads/photos/222222/5d2812257b539aa.jpg",
-            "bank_addr": null,
-            "bank_name": null,
+            "avatar_id": 1,
             "brand_name": "jkss ",
             "city": "北京",
-            "company_name": "京东",
-            "company_qualification": [
-                {
-                    "created_at": null,
-                    "filename": "a",
-                    "filepath": "http://127.0.0.1:9000/_uploads/photos/222222/5d2812257b539aa.jpg",
-                    "id": 1,
-                    "type": null,
-                    "view_url": "http://0.0.0.0:9000/_uploads/photos/http://127.0.0.1:9000/_uploads/photos/222222/5d2812257b539aa.jpg"
-                },
-                {
-                    "created_at": null,
-                    "filename": "e",
-                    "filepath": "http://127.0.0.1:9000/_uploads/photos/222222/5d2812257b539bb.jpg",
-                    "id": 2,
-                    "type": null,
-                    "view_url": "http://0.0.0.0:9000/_uploads/photos/http://127.0.0.1:9000/_uploads/photos/222222/5d2812257b539bb.jpg"
-                }
-            ],
-            "contract_sn": "",
+            "city_id": 1,
+            "company_name": null,
+            "company_qualification": [],
             "country": "中国",
-            "current_date": "",
+            "country_id": 1,
             "customized": true,
-            "email": "1346555456@qq.com",
-            "expiration_date": "",
+            "email": "45668794@qq.com",
+            "error_content": "",
             "front_card_photo": "http://0.0.0.0:9000/_uploads/photos/http://127.0.0.1:9000/_uploads/photos/222222/5d2812257b539aa.jpg",
+            "front_card_photo_id": 1,
             "holding_card_photo": "http://0.0.0.0:9000/_uploads/photos/http://127.0.0.1:9000/_uploads/photos/222222/5d2812257b539oo.jpg",
-            "id": 30,
+            "holding_card_photo_id": 3,
+            "id": 32,
             "id_card": "13082119921226801x",
-            "label_libraries": [
-                [
-                    1,
-                    "十年老件"
-                ],
-                [
-                    2,
-                    "手工制作"
-                ],
-                [
-                    3,
-                    "机械制作"
-                ]
-            ],
+            "label_libraries": [],
             "link": [
                 "https://www.taobao.com",
                 "https://www.jingdong.com",
                 "https://www.tianmao.com"
             ],
-            "master_uid": 2,
-            "mobile": "13001179400",
+            "mobile": "13645647895",
             "name": "毛爷",
             "other_scope": "",
             "own_brand": false,
@@ -579,14 +517,6 @@ JSON数据格式
                     "id": 2,
                     "type": null,
                     "view_url": "http://0.0.0.0:9000/_uploads/photos/http://127.0.0.1:9000/_uploads/photos/222222/5d2812257b539bb.jpg"
-                },
-                {
-                    "created_at": null,
-                    "filename": "r",
-                    "filepath": "http://127.0.0.1:9000/_uploads/photos/222222/5d2812257b539oo.jpg",
-                    "id": 3,
-                    "type": null,
-                    "view_url": "http://0.0.0.0:9000/_uploads/photos/http://127.0.0.1:9000/_uploads/photos/222222/5d2812257b539oo.jpg"
                 }
             ],
             "patent": true,
@@ -598,38 +528,31 @@ JSON数据格式
                     "id": 1,
                     "type": null,
                     "view_url": "http://0.0.0.0:9000/_uploads/photos/http://127.0.0.1:9000/_uploads/photos/222222/5d2812257b539aa.jpg"
-                },
-                {
-                    "created_at": null,
-                    "filename": "e",
-                    "filepath": "http://127.0.0.1:9000/_uploads/photos/222222/5d2812257b539bb.jpg",
-                    "id": 2,
-                    "type": null,
-                    "view_url": "http://0.0.0.0:9000/_uploads/photos/http://127.0.0.1:9000/_uploads/photos/222222/5d2812257b539bb.jpg"
                 }
             ],
-            "phone": "0314-4567891",
+            "phone": "",
             "product_category": "无人机",
             "product_price": "22,99",
-            "product_scope": "原创商品，由本人或团队独立思考设计",
+            "product_scope": 1,
             "province": "北京",
-            "qq": "1345678956",
+            "province_id": 1,
+            "qq": "",
             "reverse_card_photo": "http://0.0.0.0:9000/_uploads/photos/http://127.0.0.1:9000/_uploads/photos/222222/5d2812257b539bb.jpg",
+            "reverse_card_photo_id": 2,
             "sale_platform": [
                 "京东",
                 "淘宝",
                 "天猫"
             ],
             "secured_trade": true,
-            "status": 1,
-            "street_address": "中南海",
-            "urgent_contact_mobile": "15879456532",
-            "urgent_contact_name": "普京",
-            "url": "https://www.jd.com",
-            "user_identity": 1,
+            "status": 4,
+            "street_address": "天安门",
+            "urgent_contact_mobile": null,
+            "urgent_contact_name": null,
+            "url": null,
+            "user_identity": 11,
             "user_type": 3,
-            "username": null,
-            "wechat": "jksjk45"
+            "wechat": null
         },
         "status": {
             "code": 200,
