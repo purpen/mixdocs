@@ -30,6 +30,7 @@ account                String      必需                    账户号
 bank                   String      必需                    开户银行
 branch_name            String      必需                    开户支行
 mobile                 String      必需                    预留手机号
+verify_code            String      必需                    验证码
 =====================  ==========  =========  ==========  =============================
 
 参考示例：
@@ -46,8 +47,8 @@ mobile                 String      必需                    预留手机号
         "account":"8888 8888 8888 8888",
         "bank":"招商银行",
         "branch_name":"大望路支行",
-        "mobile":"18788888888"
-
+        "mobile":"18788888888",
+        "verify_code":"0299"
     }
 
 

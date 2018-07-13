@@ -27,7 +27,7 @@
     <script type="text/javascript" src="../_static/bootstrap-sphinx.js"></script>
     <link rel="index" title="索引" href="../genindex.html" />
     <link rel="search" title="搜索" href="../search.html" />
-    <link rel="next" title="公用接口模块" href="../common.html" />
+    <link rel="next" title="小程序API模块" href="../wx_apps/index.html" />
     <link rel="prev" title="用户模块" href="users.html" />
 <meta charset='utf-8'>
 <meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'>
@@ -81,6 +81,7 @@
 <li class="toctree-l2"><a class="reference internal" href="../orders/stats.html">统计模块</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../orders/comment.html">订单评价模块</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../orders/logistics.html">物流运费模块</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../orders/finance.html">账户模块</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="../products/index.html">商品API模块</a><ul>
@@ -92,11 +93,14 @@
 <li class="toctree-l2"><a class="reference internal" href="../products/models.html">商品规格模块</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../products/labels.html">标签模块</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../products/return_policies.html">商家退换货规则模块</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../products/store_product_packet.html">商品组模块</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../products/distributions.html">分销模块</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../products/wish.html">心愿清单模块</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../products/user_like.html">用户喜欢模块</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../products/assets.html">附件模块</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../products/wx_app_design.html">小程序配置模块</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../distributions/index.html">分销API模块</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../distributions/distributions.html">分销模块</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../distributions/store_product_packet.html">商品组模块</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="../customers/index.html">分销客户API模块</a><ul>
@@ -111,6 +115,7 @@
 <li class="toctree-l1"><a class="reference internal" href="../shopes/index.html">微商城API模块</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="../shopes/shopes.html">微商城模块</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../shopes/store.html">店铺模块</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../shopes/wxapp.html">小程序模块</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="../market/index.html">营销API模块</a><ul>
@@ -127,9 +132,18 @@
 <li class="toctree-l2 current"><a class="current reference internal" href="#">用户认证模块</a></li>
 </ul>
 </li>
+<li class="toctree-l1"><a class="reference internal" href="../wx_apps/index.html">小程序API模块</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../wx_apps/wx_app_design.html">小程序配置模块</a></li>
+</ul>
+</li>
 <li class="toctree-l1"><a class="reference internal" href="../common.html">公用接口模块</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="../common.html#id2">幻灯图列表</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../common.html#id6">搜索关键词历史</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../common.html#id10">注册发送短信验证码</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../common.html#id15">登陆发送短信验证码</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../common.html#id19">动态登陆发送短信验证码</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../common.html#id23">账户编辑发送短信验证码</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../common.html#id27">发送邮件验证码</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="../setting.html">系统相关配置文档</a><ul>
@@ -166,40 +180,46 @@
 <li><a class="reference internal" href="#id5">返回示例</a></li>
 </ul>
 </li>
-<li><a class="reference internal" href="#id6">商家登录后台</a><ul>
+<li><a class="reference internal" href="#id6">用户动态登录</a><ul>
 <li><a class="reference internal" href="#id7">接口说明</a></li>
 <li><a class="reference internal" href="#id8">请求参数</a></li>
 <li><a class="reference internal" href="#id9">返回示例</a></li>
 </ul>
 </li>
-<li><a class="reference internal" href="#token">商家换取授权Token</a><ul>
-<li><a class="reference internal" href="#id10">接口说明</a></li>
-<li><a class="reference internal" href="#id11">请求参数</a></li>
-<li><a class="reference internal" href="#id12">返回示例</a></li>
+<li><a class="reference internal" href="#id10">商家登录后台</a><ul>
+<li><a class="reference internal" href="#id11">接口说明</a></li>
+<li><a class="reference internal" href="#id12">请求参数</a></li>
+<li><a class="reference internal" href="#id13">返回示例</a></li>
 </ul>
 </li>
-<li><a class="reference internal" href="#id13">用户注册</a><ul>
+<li><a class="reference internal" href="#token">商家换取授权Token</a><ul>
 <li><a class="reference internal" href="#id14">接口说明</a></li>
 <li><a class="reference internal" href="#id15">请求参数</a></li>
 <li><a class="reference internal" href="#id16">返回示例</a></li>
 </ul>
 </li>
-<li><a class="reference internal" href="#id17">获取Token</a><ul>
+<li><a class="reference internal" href="#id17">用户注册</a><ul>
 <li><a class="reference internal" href="#id18">接口说明</a></li>
 <li><a class="reference internal" href="#id19">请求参数</a></li>
 <li><a class="reference internal" href="#id20">返回示例</a></li>
 </ul>
 </li>
-<li><a class="reference internal" href="#id21">用户退出</a><ul>
+<li><a class="reference internal" href="#id21">获取Token</a><ul>
 <li><a class="reference internal" href="#id22">接口说明</a></li>
-<li><a class="reference internal" href="#id23">返回示例</a></li>
+<li><a class="reference internal" href="#id23">请求参数</a></li>
+<li><a class="reference internal" href="#id24">返回示例</a></li>
 </ul>
 </li>
-<li><a class="reference internal" href="#id24">忘记密码</a></li>
-<li><a class="reference internal" href="#id25">获取手机号地区编码</a><ul>
+<li><a class="reference internal" href="#id25">用户退出</a><ul>
 <li><a class="reference internal" href="#id26">接口说明</a></li>
-<li><a class="reference internal" href="#id27">请求参数</a></li>
-<li><a class="reference internal" href="#id28">返回示例</a></li>
+<li><a class="reference internal" href="#id27">返回示例</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#id28">忘记密码</a></li>
+<li><a class="reference internal" href="#id29">获取手机号地区编码</a><ul>
+<li><a class="reference internal" href="#id30">接口说明</a></li>
+<li><a class="reference internal" href="#id31">请求参数</a></li>
+<li><a class="reference internal" href="#id32">返回示例</a></li>
 </ul>
 </li>
 </ul>
@@ -240,40 +260,46 @@
 <li><a class="reference internal" href="#id5">返回示例</a></li>
 </ul>
 </li>
-<li><a class="reference internal" href="#id6">商家登录后台</a><ul>
+<li><a class="reference internal" href="#id6">用户动态登录</a><ul>
 <li><a class="reference internal" href="#id7">接口说明</a></li>
 <li><a class="reference internal" href="#id8">请求参数</a></li>
 <li><a class="reference internal" href="#id9">返回示例</a></li>
 </ul>
 </li>
-<li><a class="reference internal" href="#token">商家换取授权Token</a><ul>
-<li><a class="reference internal" href="#id10">接口说明</a></li>
-<li><a class="reference internal" href="#id11">请求参数</a></li>
-<li><a class="reference internal" href="#id12">返回示例</a></li>
+<li><a class="reference internal" href="#id10">商家登录后台</a><ul>
+<li><a class="reference internal" href="#id11">接口说明</a></li>
+<li><a class="reference internal" href="#id12">请求参数</a></li>
+<li><a class="reference internal" href="#id13">返回示例</a></li>
 </ul>
 </li>
-<li><a class="reference internal" href="#id13">用户注册</a><ul>
+<li><a class="reference internal" href="#token">商家换取授权Token</a><ul>
 <li><a class="reference internal" href="#id14">接口说明</a></li>
 <li><a class="reference internal" href="#id15">请求参数</a></li>
 <li><a class="reference internal" href="#id16">返回示例</a></li>
 </ul>
 </li>
-<li><a class="reference internal" href="#id17">获取Token</a><ul>
+<li><a class="reference internal" href="#id17">用户注册</a><ul>
 <li><a class="reference internal" href="#id18">接口说明</a></li>
 <li><a class="reference internal" href="#id19">请求参数</a></li>
 <li><a class="reference internal" href="#id20">返回示例</a></li>
 </ul>
 </li>
-<li><a class="reference internal" href="#id21">用户退出</a><ul>
+<li><a class="reference internal" href="#id21">获取Token</a><ul>
 <li><a class="reference internal" href="#id22">接口说明</a></li>
-<li><a class="reference internal" href="#id23">返回示例</a></li>
+<li><a class="reference internal" href="#id23">请求参数</a></li>
+<li><a class="reference internal" href="#id24">返回示例</a></li>
 </ul>
 </li>
-<li><a class="reference internal" href="#id24">忘记密码</a></li>
-<li><a class="reference internal" href="#id25">获取手机号地区编码</a><ul>
+<li><a class="reference internal" href="#id25">用户退出</a><ul>
 <li><a class="reference internal" href="#id26">接口说明</a></li>
-<li><a class="reference internal" href="#id27">请求参数</a></li>
-<li><a class="reference internal" href="#id28">返回示例</a></li>
+<li><a class="reference internal" href="#id27">返回示例</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#id28">忘记密码</a></li>
+<li><a class="reference internal" href="#id29">获取手机号地区编码</a><ul>
+<li><a class="reference internal" href="#id30">接口说明</a></li>
+<li><a class="reference internal" href="#id31">请求参数</a></li>
+<li><a class="reference internal" href="#id32">返回示例</a></li>
 </ul>
 </li>
 </ul>
@@ -287,7 +313,7 @@
     </a>
   </li>
   <li>
-    <a href="../common.html" title="Next Chapter: 公用接口模块"><span class="glyphicon glyphicon-chevron-right visible-sm"></span><span class="hidden-sm hidden-tablet">&raquo; 公用接口模块</span>
+    <a href="../wx_apps/index.html" title="Next Chapter: 小程序API模块"><span class="glyphicon glyphicon-chevron-right visible-sm"></span><span class="hidden-sm hidden-tablet">&raquo; 小程序API模块</span>
     </a>
   </li>
 </ul>
@@ -383,17 +409,97 @@
 </div>
 </div>
 <div class="section" id="id6">
-<h2>商家登录后台<a class="headerlink" href="#id6" title="永久链接至标题">¶</a></h2>
-<p><code class="docutils literal"><span class="pre">注意</span></code> 此接口不支持签名验证</p>
+<h2>用户动态登录<a class="headerlink" href="#id6" title="永久链接至标题">¶</a></h2>
+<p><strong>登录成功后，返回的token请妥善保存，以后需要登录访问的接口，请务必带上token参数。</strong></p>
 <div class="section" id="id7">
 <h3>接口说明<a class="headerlink" href="#id7" title="永久链接至标题">¶</a></h3>
 <ul class="simple">
-<li>API接口请求地址：<code class="docutils literal"><span class="pre">/auth/business_login</span></code></li>
+<li>API接口请求地址：<code class="docutils literal"><span class="pre">/auth/dynamic_login</span></code></li>
 <li>API接口请求方法：<code class="docutils literal"><span class="pre">POST</span></code></li>
 </ul>
 </div>
 <div class="section" id="id8">
 <h3>请求参数<a class="headerlink" href="#id8" title="永久链接至标题">¶</a></h3>
+<table border="1" class="docutils">
+<colgroup>
+<col width="18%" />
+<col width="11%" />
+<col width="12%" />
+<col width="11%" />
+<col width="49%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">名称</th>
+<th class="head">类型</th>
+<th class="head">是否必须</th>
+<th class="head">默认值</th>
+<th class="head">描述说明</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>area_code</td>
+<td>String</td>
+<td>可选</td>
+<td>+86</td>
+<td>区号</td>
+</tr>
+<tr class="row-odd"><td>verify_code</td>
+<td>String</td>
+<td>必须</td>
+<td>&#160;</td>
+<td>手机验证码</td>
+</tr>
+<tr class="row-even"><td>mobile</td>
+<td>String</td>
+<td>必须</td>
+<td>&#160;</td>
+<td>手机号</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="id9">
+<h3>返回示例<a class="headerlink" href="#id9" title="永久链接至标题">¶</a></h3>
+<p>JSON数据格式</p>
+<p>正确结果格式:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="p">{</span>
+    <span class="s2">&quot;data&quot;</span><span class="p">:</span> <span class="p">{</span>
+        <span class="s2">&quot;created_at&quot;</span><span class="p">:</span> <span class="mi">1531470515</span><span class="p">,</span>
+        <span class="s2">&quot;expiration&quot;</span><span class="p">:</span> <span class="mi">2592000</span><span class="p">,</span>
+        <span class="s2">&quot;token&quot;</span><span class="p">:</span> <span class="s2">&quot;eyJhbGciOiJIUzI1NiIsImlhdCI6MTUzMTQ3MDUxNSwiZXhwIjoxNTM0MDYyNTE1fQ.eyJpZCI6N30.DapSiS7E0r2_8h-5ydzvvnrwVjSclMx3PZ0D71UTn5I&quot;</span>
+    <span class="p">},</span>
+    <span class="s2">&quot;status&quot;</span><span class="p">:</span> <span class="p">{</span>
+        <span class="s2">&quot;code&quot;</span><span class="p">:</span> <span class="mi">200</span><span class="p">,</span>
+        <span class="s2">&quot;message&quot;</span><span class="p">:</span> <span class="s2">&quot;Ok all right.&quot;</span>
+    <span class="p">},</span>
+    <span class="s2">&quot;success&quot;</span><span class="p">:</span> <span class="n">true</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<p>错误结果格式:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="p">{</span>
+    <span class="s2">&quot;status&quot;</span><span class="p">:</span> <span class="p">{</span>
+        <span class="s2">&quot;code&quot;</span><span class="p">:</span> <span class="mi">400</span><span class="p">,</span>
+        <span class="s2">&quot;message&quot;</span><span class="p">:</span> <span class="s2">&quot;该用户不存在，请核对&quot;</span>
+    <span class="p">},</span>
+    <span class="s2">&quot;success&quot;</span><span class="p">:</span> <span class="n">false</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="id10">
+<h2>商家登录后台<a class="headerlink" href="#id10" title="永久链接至标题">¶</a></h2>
+<p><code class="docutils literal"><span class="pre">注意</span></code> 此接口不支持签名验证</p>
+<div class="section" id="id11">
+<h3>接口说明<a class="headerlink" href="#id11" title="永久链接至标题">¶</a></h3>
+<ul class="simple">
+<li>API接口请求地址：<code class="docutils literal"><span class="pre">/auth/business_login</span></code></li>
+<li>API接口请求方法：<code class="docutils literal"><span class="pre">POST</span></code></li>
+</ul>
+</div>
+<div class="section" id="id12">
+<h3>请求参数<a class="headerlink" href="#id12" title="永久链接至标题">¶</a></h3>
 <table border="1" class="docutils">
 <colgroup>
 <col width="18%" />
@@ -426,8 +532,8 @@
 </tbody>
 </table>
 </div>
-<div class="section" id="id9">
-<h3>返回示例<a class="headerlink" href="#id9" title="永久链接至标题">¶</a></h3>
+<div class="section" id="id13">
+<h3>返回示例<a class="headerlink" href="#id13" title="永久链接至标题">¶</a></h3>
 <p><code class="docutils literal"><span class="pre">注意</span></code> 登录成功后，返回的token请妥善保存，以后需要登录访问的接口，请务必带上token参数。</p>
 <p>JSON数据格式</p>
 <p>正确结果格式:</p>
@@ -461,16 +567,16 @@
 <div class="section" id="token">
 <h2>商家换取授权Token<a class="headerlink" href="#token" title="永久链接至标题">¶</a></h2>
 <p><code class="docutils literal"><span class="pre">注意</span></code> 此接口不支持签名验证</p>
-<div class="section" id="id10">
-<h3>接口说明<a class="headerlink" href="#id10" title="永久链接至标题">¶</a></h3>
+<div class="section" id="id14">
+<h3>接口说明<a class="headerlink" href="#id14" title="永久链接至标题">¶</a></h3>
 <ul class="simple">
 <li>API接口请求地址：<code class="docutils literal"><span class="pre">/auth/exchange_token</span></code></li>
 <li>API接口请求方法：<code class="docutils literal"><span class="pre">POST</span></code></li>
 <li>API接口用户授权：<code class="docutils literal"><span class="pre">token</span></code></li>
 </ul>
 </div>
-<div class="section" id="id11">
-<h3>请求参数<a class="headerlink" href="#id11" title="永久链接至标题">¶</a></h3>
+<div class="section" id="id15">
+<h3>请求参数<a class="headerlink" href="#id15" title="永久链接至标题">¶</a></h3>
 <table border="1" class="docutils">
 <colgroup>
 <col width="18%" />
@@ -497,8 +603,8 @@
 </tbody>
 </table>
 </div>
-<div class="section" id="id12">
-<h3>返回示例<a class="headerlink" href="#id12" title="永久链接至标题">¶</a></h3>
+<div class="section" id="id16">
+<h3>返回示例<a class="headerlink" href="#id16" title="永久链接至标题">¶</a></h3>
 <p><code class="docutils literal"><span class="pre">注意</span></code> 成功返回后，返回的key/access_token请妥善保存至本地，丢失或过期后需再次登录换取。</p>
 <p>正确结果格式:</p>
 <div class="highlight-default"><div class="highlight"><pre><span></span><span class="p">{</span>
@@ -562,18 +668,18 @@
 </div>
 </div>
 </div>
-<div class="section" id="id13">
-<h2>用户注册<a class="headerlink" href="#id13" title="永久链接至标题">¶</a></h2>
+<div class="section" id="id17">
+<h2>用户注册<a class="headerlink" href="#id17" title="永久链接至标题">¶</a></h2>
 <p>用户公开注册接口</p>
-<div class="section" id="id14">
-<h3>接口说明<a class="headerlink" href="#id14" title="永久链接至标题">¶</a></h3>
+<div class="section" id="id18">
+<h3>接口说明<a class="headerlink" href="#id18" title="永久链接至标题">¶</a></h3>
 <ul class="simple">
 <li>API接口请求地址：<code class="docutils literal"><span class="pre">/auth/register</span></code></li>
 <li>API接口请求方法：<code class="docutils literal"><span class="pre">POST</span></code></li>
 </ul>
 </div>
-<div class="section" id="id15">
-<h3>请求参数<a class="headerlink" href="#id15" title="永久链接至标题">¶</a></h3>
+<div class="section" id="id19">
+<h3>请求参数<a class="headerlink" href="#id19" title="永久链接至标题">¶</a></h3>
 <table border="1" class="docutils">
 <colgroup>
 <col width="18%" />
@@ -624,8 +730,8 @@
 </tbody>
 </table>
 </div>
-<div class="section" id="id16">
-<h3>返回示例<a class="headerlink" href="#id16" title="永久链接至标题">¶</a></h3>
+<div class="section" id="id20">
+<h3>返回示例<a class="headerlink" href="#id20" title="永久链接至标题">¶</a></h3>
 <p>JSON数据格式</p>
 <p>正确结果格式:</p>
 <div class="highlight-default"><div class="highlight"><pre><span></span><span class="p">{</span>
@@ -649,17 +755,17 @@
 </div>
 </div>
 </div>
-<div class="section" id="id17">
-<h2>获取Token<a class="headerlink" href="#id17" title="永久链接至标题">¶</a></h2>
-<div class="section" id="id18">
-<h3>接口说明<a class="headerlink" href="#id18" title="永久链接至标题">¶</a></h3>
+<div class="section" id="id21">
+<h2>获取Token<a class="headerlink" href="#id21" title="永久链接至标题">¶</a></h2>
+<div class="section" id="id22">
+<h3>接口说明<a class="headerlink" href="#id22" title="永久链接至标题">¶</a></h3>
 <ul class="simple">
 <li>API接口请求地址：<code class="docutils literal"><span class="pre">/token</span></code></li>
 <li>API接口请求方法：<code class="docutils literal"><span class="pre">POST</span></code></li>
 </ul>
 </div>
-<div class="section" id="id19">
-<h3>请求参数<a class="headerlink" href="#id19" title="永久链接至标题">¶</a></h3>
+<div class="section" id="id23">
+<h3>请求参数<a class="headerlink" href="#id23" title="永久链接至标题">¶</a></h3>
 <table border="1" class="docutils">
 <colgroup>
 <col width="18%" />
@@ -692,8 +798,8 @@
 </tbody>
 </table>
 </div>
-<div class="section" id="id20">
-<h3>返回示例<a class="headerlink" href="#id20" title="永久链接至标题">¶</a></h3>
+<div class="section" id="id24">
+<h3>返回示例<a class="headerlink" href="#id24" title="永久链接至标题">¶</a></h3>
 <p>JSON数据格式</p>
 <p>正确结果格式:</p>
 <div class="highlight-default"><div class="highlight"><pre><span></span><span class="p">{</span>
@@ -721,18 +827,18 @@
 </div>
 </div>
 </div>
-<div class="section" id="id21">
-<h2>用户退出<a class="headerlink" href="#id21" title="永久链接至标题">¶</a></h2>
+<div class="section" id="id25">
+<h2>用户退出<a class="headerlink" href="#id25" title="永久链接至标题">¶</a></h2>
 <p><code class="docutils literal"><span class="pre">注意</span></code> 收到请求回结果后，客户端同步清空缓存token</p>
-<div class="section" id="id22">
-<h3>接口说明<a class="headerlink" href="#id22" title="永久链接至标题">¶</a></h3>
+<div class="section" id="id26">
+<h3>接口说明<a class="headerlink" href="#id26" title="永久链接至标题">¶</a></h3>
 <ul class="simple">
 <li>API接口请求地址：<code class="docutils literal"><span class="pre">/auth/logout</span></code></li>
 <li>API接口请求方法：<code class="docutils literal"><span class="pre">POST</span></code></li>
 </ul>
 </div>
-<div class="section" id="id23">
-<h3>返回示例<a class="headerlink" href="#id23" title="永久链接至标题">¶</a></h3>
+<div class="section" id="id27">
+<h3>返回示例<a class="headerlink" href="#id27" title="永久链接至标题">¶</a></h3>
 <p>JSON数据格式</p>
 <p>正确结果格式:</p>
 <div class="highlight-default"><div class="highlight"><pre><span></span><span class="p">{</span>
@@ -746,22 +852,22 @@
 </div>
 </div>
 </div>
-<div class="section" id="id24">
-<h2>忘记密码<a class="headerlink" href="#id24" title="永久链接至标题">¶</a></h2>
+<div class="section" id="id28">
+<h2>忘记密码<a class="headerlink" href="#id28" title="永久链接至标题">¶</a></h2>
 <p><code class="docutils literal"><span class="pre">等待开放</span></code></p>
 </div>
-<div class="section" id="id25">
-<h2>获取手机号地区编码<a class="headerlink" href="#id25" title="永久链接至标题">¶</a></h2>
+<div class="section" id="id29">
+<h2>获取手机号地区编码<a class="headerlink" href="#id29" title="永久链接至标题">¶</a></h2>
 <p>获取手机号地区编码</p>
-<div class="section" id="id26">
-<h3>接口说明<a class="headerlink" href="#id26" title="永久链接至标题">¶</a></h3>
+<div class="section" id="id30">
+<h3>接口说明<a class="headerlink" href="#id30" title="永久链接至标题">¶</a></h3>
 <ul class="simple">
 <li>API接口请求地址：<code class="docutils literal"><span class="pre">/auth/area_code</span></code></li>
 <li>API接口请求方法：<code class="docutils literal"><span class="pre">GET</span></code></li>
 </ul>
 </div>
-<div class="section" id="id27">
-<h3>请求参数<a class="headerlink" href="#id27" title="永久链接至标题">¶</a></h3>
+<div class="section" id="id31">
+<h3>请求参数<a class="headerlink" href="#id31" title="永久链接至标题">¶</a></h3>
 <table border="1" class="docutils">
 <colgroup>
 <col width="15%" />
@@ -800,8 +906,8 @@
 </tbody>
 </table>
 </div>
-<div class="section" id="id28">
-<h3>返回示例<a class="headerlink" href="#id28" title="永久链接至标题">¶</a></h3>
+<div class="section" id="id32">
+<h3>返回示例<a class="headerlink" href="#id32" title="永久链接至标题">¶</a></h3>
 <p>JSON数据格式:</p>
 <div class="highlight-javascript"><div class="highlight"><pre><span></span><span class="p">{</span>
     <span class="s2">&quot;data&quot;</span><span class="o">:</span> <span class="p">{</span>

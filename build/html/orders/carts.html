@@ -139,8 +139,11 @@
 <li class="toctree-l1"><a class="reference internal" href="../common.html">公用接口模块</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="../common.html#id2">幻灯图列表</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../common.html#id6">搜索关键词历史</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../common.html#id10">发送短信验证码</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../common.html#id15">发送邮件验证码</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../common.html#id10">注册发送短信验证码</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../common.html#id15">登陆发送短信验证码</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../common.html#id19">动态登陆发送短信验证码</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../common.html#id23">账户编辑发送短信验证码</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../common.html#id27">发送邮件验证码</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="../setting.html">系统相关配置文档</a><ul>
@@ -359,22 +362,22 @@
         <span class="s2">&quot;item_count&quot;</span><span class="o">:</span> <span class="mi">2</span><span class="p">,</span>
         <span class="s2">&quot;items&quot;</span><span class="o">:</span> <span class="p">[</span>
             <span class="p">{</span>
-                <span class="s2">&quot;option&quot;</span><span class="o">:</span> <span class="s2">&quot;&quot;</span><span class="p">,</span>
+                <span class="s2">&quot;option&quot;</span><span class="o">:</span> <span class="s2">&quot;&quot;</span><span class="p">,</span>  <span class="c1">// 备注</span>
                 <span class="s2">&quot;product&quot;</span><span class="o">:</span> <span class="p">{</span>
                     <span class="s2">&quot;cost_price&quot;</span><span class="o">:</span> <span class="s2">&quot;189.00&quot;</span><span class="p">,</span>
                     <span class="s2">&quot;cover&quot;</span><span class="o">:</span> <span class="s2">&quot;http://127.0.0.1:9000/_uploads/photos/180128/494e473ec90dffd.jpeg&quot;</span><span class="p">,</span>
                     <span class="s2">&quot;id_code&quot;</span><span class="o">:</span> <span class="s2">&quot;&quot;</span><span class="p">,</span>
                     <span class="s2">&quot;mode&quot;</span><span class="o">:</span> <span class="s2">&quot;白色&quot;</span><span class="p">,</span>
-                    <span class="s2">&quot;price&quot;</span><span class="o">:</span> <span class="s2">&quot;None&quot;</span><span class="p">,</span>
+                    <span class="s2">&quot;price&quot;</span><span class="o">:</span> <span class="s2">&quot;None&quot;</span><span class="p">,</span>  <span class="c1">// 零售价</span>
                     <span class="s2">&quot;product_name&quot;</span><span class="o">:</span> <span class="s2">&quot;素士智能声波牙刷&quot;</span><span class="p">,</span>
                     <span class="s2">&quot;rid&quot;</span><span class="o">:</span> <span class="s2">&quot;118280601730&quot;</span><span class="p">,</span>
                     <span class="s2">&quot;s_color&quot;</span><span class="o">:</span> <span class="s2">&quot;白色&quot;</span><span class="p">,</span>
                     <span class="s2">&quot;s_model&quot;</span><span class="o">:</span> <span class="s2">&quot;&quot;</span><span class="p">,</span>
                     <span class="s2">&quot;s_weight&quot;</span><span class="o">:</span> <span class="s2">&quot;20.00&quot;</span><span class="p">,</span>
-                    <span class="s2">&quot;sale_price&quot;</span><span class="o">:</span> <span class="s2">&quot;269.00&quot;</span><span class="p">,</span>
+                    <span class="s2">&quot;sale_price&quot;</span><span class="o">:</span> <span class="s2">&quot;269.00&quot;</span><span class="p">,</span>  <span class="c1">// 折扣价</span>
                     <span class="s2">&quot;stock_count&quot;</span><span class="o">:</span> <span class="mi">10</span>
                 <span class="p">},</span>
-                <span class="s2">&quot;quantity&quot;</span><span class="o">:</span> <span class="mi">1</span><span class="p">,</span>
+                <span class="s2">&quot;quantity&quot;</span><span class="o">:</span> <span class="mi">1</span><span class="p">,</span>  <span class="c1">// 数量</span>
                 <span class="s2">&quot;rid&quot;</span><span class="o">:</span> <span class="s2">&quot;118280601730&quot;</span><span class="p">,</span>
                 <span class="s2">&quot;user_id&quot;</span><span class="o">:</span> <span class="mi">2</span>
             <span class="p">},</span>
@@ -451,7 +454,7 @@
 <p>请求 <strong>正确</strong> 返回结果：</p>
 <div class="highlight-javascript"><div class="highlight"><pre><span></span><span class="p">{</span>
     <span class="s2">&quot;data&quot;</span><span class="o">:</span> <span class="p">{</span>
-        <span class="s2">&quot;item_count&quot;</span><span class="o">:</span> <span class="mi">2</span>
+        <span class="s2">&quot;item_count&quot;</span><span class="o">:</span> <span class="mi">2</span>  <span class="c1">// 购物车中商品总数</span>
     <span class="p">},</span>
     <span class="s2">&quot;status&quot;</span><span class="o">:</span> <span class="p">{</span>
         <span class="s2">&quot;code&quot;</span><span class="o">:</span> <span class="mi">200</span><span class="p">,</span>
@@ -561,11 +564,11 @@
                 <span class="s2">&quot;sale_price&quot;</span><span class="o">:</span> <span class="s2">&quot;0.00&quot;</span><span class="p">,</span>
                 <span class="s2">&quot;stock_count&quot;</span><span class="o">:</span> <span class="mi">0</span>
             <span class="p">},</span>
-            <span class="s2">&quot;quantity&quot;</span><span class="o">:</span> <span class="mi">2</span><span class="p">,</span>
+            <span class="s2">&quot;quantity&quot;</span><span class="o">:</span> <span class="mi">2</span><span class="p">,</span>  <span class="c1">// 数量</span>
             <span class="s2">&quot;rid&quot;</span><span class="o">:</span> <span class="s2">&quot;118020098269&quot;</span><span class="p">,</span>
             <span class="s2">&quot;user_id&quot;</span><span class="o">:</span> <span class="mi">2</span>
         <span class="p">},</span>
-        <span class="s2">&quot;item_count&quot;</span><span class="o">:</span> <span class="mi">3</span>
+        <span class="s2">&quot;item_count&quot;</span><span class="o">:</span> <span class="mi">3</span>  <span class="c1">// 购物车中商品总数</span>
     <span class="p">},</span>
     <span class="s2">&quot;status&quot;</span><span class="o">:</span> <span class="p">{</span>
         <span class="s2">&quot;code&quot;</span><span class="o">:</span> <span class="mi">201</span><span class="p">,</span>
@@ -719,7 +722,7 @@
 <div class="section" id="id19">
 <h3>接口说明<a class="headerlink" href="#id19" title="永久链接至标题">¶</a></h3>
 <ul class="simple">
-<li>API接口请求地址：<code class="docutils literal"><span class="pre">/cart/&lt;string:rid&gt;/remove</span></code></li>
+<li>API接口请求地址：<code class="docutils literal"><span class="pre">/cart/remove</span></code></li>
 <li>API接口请求方法：<code class="docutils literal"><span class="pre">POST</span></code></li>
 <li>API接口用户授权：<code class="docutils literal"><span class="pre">token</span></code></li>
 </ul>
@@ -749,11 +752,18 @@
 <td>&#160;</td>
 <td>独立小程序openid</td>
 </tr>
+<tr class="row-odd"><td>rids</td>
+<td>Array</td>
+<td>必需</td>
+<td>&#160;</td>
+<td>删除的sku_rid</td>
+</tr>
 </tbody>
 </table>
 <p>参考示例：</p>
 <div class="highlight-javascript"><div class="highlight"><pre><span></span><span class="p">{</span>
-    <span class="s2">&quot;open_id&quot;</span><span class="o">:</span><span class="s2">&quot;12312321343&quot;</span>
+    <span class="s2">&quot;open_id&quot;</span><span class="o">:</span><span class="s2">&quot;12312321343&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;rids&quot;</span><span class="o">:</span><span class="p">[</span><span class="s2">&quot;12&quot;</span><span class="p">,</span><span class="s2">&quot;22&quot;</span><span class="p">]</span>
 <span class="p">}</span>
 </pre></div>
 </div>
@@ -764,7 +774,7 @@
 <p>请求 <strong>正确</strong> 返回结果：</p>
 <div class="highlight-javascript"><div class="highlight"><pre><span></span><span class="p">{</span>
     <span class="s2">&quot;data&quot;</span><span class="o">:</span> <span class="p">{</span>
-        <span class="s2">&quot;item_count&quot;</span><span class="o">:</span> <span class="mi">2</span>
+        <span class="s2">&quot;item_count&quot;</span><span class="o">:</span> <span class="mi">2</span>  <span class="c1">// 购物车剩余数量</span>
     <span class="p">},</span>
     <span class="s2">&quot;status&quot;</span><span class="o">:</span> <span class="p">{</span>
         <span class="s2">&quot;code&quot;</span><span class="o">:</span> <span class="mi">204</span><span class="p">,</span>

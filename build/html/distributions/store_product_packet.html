@@ -94,6 +94,7 @@
 <li class="toctree-l2"><a class="reference internal" href="../products/labels.html">标签模块</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../products/return_policies.html">商家退换货规则模块</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../products/wish.html">心愿清单模块</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../products/user_like.html">用户喜欢模块</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../products/assets.html">附件模块</a></li>
 </ul>
 </li>
@@ -138,8 +139,11 @@
 <li class="toctree-l1"><a class="reference internal" href="../common.html">公用接口模块</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="../common.html#id2">幻灯图列表</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../common.html#id6">搜索关键词历史</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../common.html#id10">发送短信验证码</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../common.html#id15">发送邮件验证码</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../common.html#id10">注册发送短信验证码</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../common.html#id15">登陆发送短信验证码</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../common.html#id19">动态登陆发送短信验证码</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../common.html#id23">账户编辑发送短信验证码</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../common.html#id27">发送邮件验证码</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="../setting.html">系统相关配置文档</a><ul>
@@ -759,10 +763,12 @@
         <span class="s2">&quot;is_custom_service&quot;</span><span class="o">:</span> <span class="s2">&quot;是否支持定制化服务&quot;</span><span class="p">,</span>
         <span class="s2">&quot;is_distributed&quot;</span><span class="o">:</span> <span class="s2">&quot;是否分销&quot;</span><span class="p">,</span>
         <span class="s2">&quot;is_free_postage&quot;</span><span class="o">:</span> <span class="s2">&quot;是否包邮&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;is_like&quot;</span><span class="o">:</span> <span class="s2">&quot;用户是否添加喜欢&quot;</span><span class="p">,</span>
         <span class="s2">&quot;is_made_holiday&quot;</span><span class="o">:</span> <span class="s2">&quot;制作周期是否包含节假日&quot;</span><span class="p">,</span>
         <span class="s2">&quot;is_sold_out&quot;</span><span class="o">:</span> <span class="s2">&quot;是否已售罄&quot;</span><span class="p">,</span>
         <span class="s2">&quot;is_proprietary&quot;</span><span class="o">:</span> <span class="s2">&quot;是否自营商品&quot;</span><span class="p">,</span>
         <span class="s2">&quot;like_count&quot;</span><span class="o">:</span> <span class="s2">&quot;商品被喜欢数&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;is_wish&quot;</span><span class="o">:</span> <span class="s2">&quot;用户是否加入心愿清单&quot;</span><span class="p">,</span>
         <span class="s2">&quot;made_cycle&quot;</span><span class="o">:</span> <span class="s2">&quot;制作周期,天数&quot;</span><span class="p">,</span>
         <span class="s2">&quot;max_price&quot;</span><span class="o">:</span> <span class="s2">&quot;最大售价&quot;</span><span class="p">,</span>
         <span class="s2">&quot;max_sale_price&quot;</span><span class="o">:</span> <span class="s2">&quot;最大促销价&quot;</span><span class="p">,</span>
@@ -797,9 +803,11 @@
         <span class="s2">&quot;is_custom_service&quot;</span><span class="o">:</span> <span class="kc">true</span><span class="p">,</span>
         <span class="s2">&quot;is_distributed&quot;</span><span class="o">:</span> <span class="kc">true</span><span class="p">,</span>
         <span class="s2">&quot;is_free_postage&quot;</span><span class="o">:</span> <span class="kc">false</span><span class="p">,</span>
+        <span class="s2">&quot;is_like&quot;</span><span class="o">:</span> <span class="kc">true</span><span class="p">,</span>
         <span class="s2">&quot;is_made_holiday&quot;</span><span class="o">:</span> <span class="kc">true</span><span class="p">,</span>
         <span class="s2">&quot;is_sold_out&quot;</span><span class="o">:</span> <span class="kc">false</span><span class="p">,</span>
         <span class="s2">&quot;is_proprietary&quot;</span><span class="o">:</span> <span class="kc">false</span><span class="p">,</span>
+        <span class="s2">&quot;is_wish&quot;</span><span class="o">:</span> <span class="kc">false</span><span class="p">,</span>
         <span class="s2">&quot;like_count&quot;</span><span class="o">:</span> <span class="mi">333</span><span class="p">,</span>
         <span class="s2">&quot;made_cycle&quot;</span><span class="o">:</span> <span class="mi">5</span><span class="p">,</span>
         <span class="s2">&quot;max_price&quot;</span><span class="o">:</span> <span class="mi">1888</span><span class="p">,</span>
