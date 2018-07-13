@@ -55,59 +55,6 @@ JSON数据格式
       "success": false
     }
 
-用户动态登录
--------------
-**登录成功后，返回的token请妥善保存，以后需要登录访问的接口，请务必带上token参数。**
-
-
-接口说明
-~~~~~~~~~~~~~~
-
-* API接口请求地址：``/auth/dynamic_login``
-* API接口请求方法：``POST``
-
-
-请求参数
-~~~~~~~~~~~~~~~
-
-=============  ========  =========  ========  ====================================
-名称            类型      是否必须    默认值     描述说明
-=============  ========  =========  ========  ====================================
-area_code       String    可选        +86      区号
-verify_code     String    必须                 手机验证码
-mobile          String    必须                 手机号
-=============  ========  =========  ========  ====================================
-
-返回示例
-~~~~~~~~~~~~~~~~
-
-JSON数据格式
-
-正确结果格式::
-
-    {
-        "data": {
-            "created_at": 1531470515,
-            "expiration": 2592000,
-            "token": "eyJhbGciOiJIUzI1NiIsImlhdCI6MTUzMTQ3MDUxNSwiZXhwIjoxNTM0MDYyNTE1fQ.eyJpZCI6N30.DapSiS7E0r2_8h-5ydzvvnrwVjSclMx3PZ0D71UTn5I"
-        },
-        "status": {
-            "code": 200,
-            "message": "Ok all right."
-        },
-        "success": true
-    }
-
-错误结果格式::
-
-    {
-        "status": {
-            "code": 400,
-            "message": "该用户不存在，请核对"
-        },
-        "success": false
-    }
-
 
 商家登录后台
 -------------
