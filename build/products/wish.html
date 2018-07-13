@@ -351,10 +351,12 @@
         <span class="s2">&quot;is_custom_service&quot;</span><span class="o">:</span> <span class="s2">&quot;是否支持定制化服务&quot;</span><span class="p">,</span>
         <span class="s2">&quot;is_distributed&quot;</span><span class="o">:</span> <span class="s2">&quot;是否分销&quot;</span><span class="p">,</span>
         <span class="s2">&quot;is_free_postage&quot;</span><span class="o">:</span> <span class="s2">&quot;是否包邮&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;is_like&quot;</span><span class="o">:</span> <span class="s2">&quot;用户是否添加喜欢&quot;</span><span class="p">,</span>
         <span class="s2">&quot;is_made_holiday&quot;</span><span class="o">:</span> <span class="s2">&quot;制作周期是否包含节假日&quot;</span><span class="p">,</span>
         <span class="s2">&quot;is_sold_out&quot;</span><span class="o">:</span> <span class="s2">&quot;是否已售罄&quot;</span><span class="p">,</span>
         <span class="s2">&quot;is_proprietary&quot;</span><span class="o">:</span> <span class="s2">&quot;是否自营商品&quot;</span><span class="p">,</span>
         <span class="s2">&quot;like_count&quot;</span><span class="o">:</span> <span class="s2">&quot;商品被喜欢数&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;is_wish&quot;</span><span class="o">:</span> <span class="s2">&quot;用户是否加入心愿清单&quot;</span><span class="p">,</span>
         <span class="s2">&quot;made_cycle&quot;</span><span class="o">:</span> <span class="s2">&quot;制作周期,天数&quot;</span><span class="p">,</span>
         <span class="s2">&quot;max_price&quot;</span><span class="o">:</span> <span class="s2">&quot;最大售价&quot;</span><span class="p">,</span>
         <span class="s2">&quot;max_sale_price&quot;</span><span class="o">:</span> <span class="s2">&quot;最大促销价&quot;</span><span class="p">,</span>
@@ -389,9 +391,11 @@
         <span class="s2">&quot;is_custom_service&quot;</span><span class="o">:</span> <span class="kc">true</span><span class="p">,</span>
         <span class="s2">&quot;is_distributed&quot;</span><span class="o">:</span> <span class="kc">true</span><span class="p">,</span>
         <span class="s2">&quot;is_free_postage&quot;</span><span class="o">:</span> <span class="kc">false</span><span class="p">,</span>
+        <span class="s2">&quot;is_like&quot;</span><span class="o">:</span> <span class="kc">true</span><span class="p">,</span>
         <span class="s2">&quot;is_made_holiday&quot;</span><span class="o">:</span> <span class="kc">true</span><span class="p">,</span>
         <span class="s2">&quot;is_sold_out&quot;</span><span class="o">:</span> <span class="kc">false</span><span class="p">,</span>
         <span class="s2">&quot;is_proprietary&quot;</span><span class="o">:</span> <span class="kc">false</span><span class="p">,</span>
+        <span class="s2">&quot;is_wish&quot;</span><span class="o">:</span> <span class="kc">false</span><span class="p">,</span>
         <span class="s2">&quot;like_count&quot;</span><span class="o">:</span> <span class="mi">333</span><span class="p">,</span>
         <span class="s2">&quot;made_cycle&quot;</span><span class="o">:</span> <span class="mi">5</span><span class="p">,</span>
         <span class="s2">&quot;max_price&quot;</span><span class="o">:</span> <span class="mi">1888</span><span class="p">,</span>
@@ -455,11 +459,11 @@
 </tr>
 </thead>
 <tbody valign="top">
-<tr class="row-even"><td>rid</td>
-<td>String</td>
+<tr class="row-even"><td>rids</td>
+<td>Array</td>
 <td>必须</td>
 <td>&#160;</td>
-<td>商品Id</td>
+<td>商品编号</td>
 </tr>
 </tbody>
 </table>
@@ -509,11 +513,11 @@
 </tr>
 </thead>
 <tbody valign="top">
-<tr class="row-even"><td>rid</td>
-<td>String</td>
+<tr class="row-even"><td>rids</td>
+<td>Array</td>
 <td>必须</td>
 <td>&#160;</td>
-<td>商品Id</td>
+<td>商品编号</td>
 </tr>
 </tbody>
 </table>
