@@ -8,3 +8,4 @@
 
     users.rst
     auth.rst
+    finance.rst

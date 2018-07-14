@@ -1,0 +1,705 @@
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml" lang="zh_CN">
+  <head>
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>账户模块 &#8212; mixdocs 0.1.0 文档</title>
+    <link rel="stylesheet" href="../_static/bootstrap-sphinx.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/mixpus.css" type="text/css" />
+    <script type="text/javascript" src="../_static/documentation_options.js"></script>
+    <script type="text/javascript" src="../_static/jquery.js"></script>
+    <script type="text/javascript" src="../_static/underscore.js"></script>
+    <script type="text/javascript" src="../_static/doctools.js"></script>
+    <script type="text/javascript" src="../_static/translations.js"></script>
+    <script type="text/javascript" src="../_static/js/jquery-1.11.0.min.js"></script>
+    <script type="text/javascript" src="../_static/js/jquery-fix.js"></script>
+    <script type="text/javascript" src="../_static/bootstrap-3.3.7/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="../_static/bootstrap-sphinx.js"></script>
+    <link rel="index" title="索引" href="../genindex.html" />
+    <link rel="search" title="搜索" href="../search.html" />
+    <link rel="next" title="小程序API模块" href="../wx_apps/index.html" />
+    <link rel="prev" title="用户认证模块" href="auth.html" />
+<meta charset='utf-8'>
+<meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'>
+<meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1'>
+<meta name="apple-mobile-web-app-capable" content="yes">
+
+  </head><body>
+
+  <div id="navbar" class="navbar navbar-inverse navbar-default navbar-fixed-top">
+    <div class="container">
+      <div class="navbar-header">
+        <!-- .btn-navbar is used as the toggle for collapsed navbar content -->
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".nav-collapse">
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="../index.html">
+          moebeast</a>
+        <span class="navbar-text navbar-version pull-left"><b>0.1.0</b></span>
+      </div>
+
+        <div class="collapse navbar-collapse nav-collapse">
+          <ul class="nav navbar-nav">
+            
+            
+              <li class="dropdown globaltoc-container">
+  <a role="button"
+     id="dLabelGlobalToc"
+     data-toggle="dropdown"
+     data-target="#"
+     href="../index.html">API文档 <b class="caret"></b></a>
+  <ul class="dropdown-menu globaltoc"
+      role="menu"
+      aria-labelledby="dLabelGlobalToc"><ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../intro.html">开放平台文档说明</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../intro.html#id2">开发入门</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../intro.html#id3">系统级请求参数</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../intro.html#id4">开发帮助文档</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../intro.html#id5">公共返回状态码说明</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../intro.html#oauth2-0">OAuth2.0协议介绍</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../intro.html#id6">参考资料链接</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../orders/index.html">销售API模块</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../orders/orders.html">订单模块</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../orders/customer_orders.html">分销商订单模块</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../orders/carts.html">购物车模块</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../orders/addresses.html">收货地址模块</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../orders/stats.html">统计模块</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../orders/comment.html">订单评价模块</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../orders/logistics.html">物流运费模块</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../products/index.html">商品API模块</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../products/products.html">商品模块</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../products/category.html">分类模块</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../products/brands.html">供应商/品牌模块</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../products/materials.html">商品材料模块</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../products/colors.html">商品颜色模块</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../products/models.html">商品规格模块</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../products/labels.html">标签模块</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../products/return_policies.html">商家退换货规则模块</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../products/wish.html">心愿清单模块</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../products/user_like.html">用户喜欢模块</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../products/assets.html">附件模块</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../distributions/index.html">分销API模块</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../distributions/distributions.html">分销模块</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../distributions/store_product_packet.html">商品组模块</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../customers/index.html">分销客户API模块</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../customers/customers.html">分销客户模块</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../customers/grades.html">客户等级模块</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../warehouses/index.html">采购仓储API模块</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../warehouses/purchase.html">采购API模块</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../shopes/index.html">微商城API模块</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../shopes/shopes.html">微商城模块</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../shopes/store.html">店铺模块</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../shopes/wxapp.html">小程序模块</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../market/index.html">营销API模块</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../market/banners.html">营销工具/广告模块</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../market/coupons.html">营销工具/优惠券模块</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../stats/index.html">统计API模块</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../stats/report.html">报表模块</a></li>
+</ul>
+</li>
+<li class="toctree-l1 current"><a class="reference internal" href="index.html">用户API模块</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="users.html">用户模块</a></li>
+<li class="toctree-l2"><a class="reference internal" href="auth.html">用户认证模块</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">账户模块</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../wx_apps/index.html">小程序API模块</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../wx_apps/wx_app_design.html">小程序配置模块</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../common.html">公用接口模块</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../common.html#id2">幻灯图列表</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../common.html#id6">搜索关键词历史</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../common.html#id10">注册发送短信验证码</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../common.html#id15">登陆发送短信验证码</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../common.html#id19">动态登陆发送短信验证码</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../common.html#id23">账户编辑发送短信验证码</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../common.html#id27">发送邮件验证码</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../setting.html">系统相关配置文档</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../setting.html#id2">开放国家列表</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../setting.html#id5">支持的语言</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../setting.html#id6">支持的币种</a></li>
+</ul>
+</li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../faq.html">常见问题</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../history.html">版本历史</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../history.html#v0-1-0">v0.1.0</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../todos.html">未来新功能</a></li>
+</ul>
+</ul>
+</li>
+              
+                <li class="dropdown">
+  <a role="button"
+     id="dLabelLocalToc"
+     data-toggle="dropdown"
+     data-target="#"
+     href="#">Page <b class="caret"></b></a>
+  <ul class="dropdown-menu localtoc"
+      role="menu"
+      aria-labelledby="dLabelLocalToc"><ul>
+<li><a class="reference internal" href="#">账户模块</a><ul>
+<li><a class="reference internal" href="#id2">绑定银行卡</a><ul>
+<li><a class="reference internal" href="#id3">接口说明</a></li>
+<li><a class="reference internal" href="#id4">请求参数</a></li>
+<li><a class="reference internal" href="#id5">返回示例</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#id6">查看银行卡</a><ul>
+<li><a class="reference internal" href="#id7">接口说明</a></li>
+<li><a class="reference internal" href="#id8">返回示例</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#id9">解绑银行卡</a><ul>
+<li><a class="reference internal" href="#id10">接口说明</a></li>
+<li><a class="reference internal" href="#id11">返回示例</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#id12">添加收款方式</a><ul>
+<li><a class="reference internal" href="#id13">接口说明</a></li>
+<li><a class="reference internal" href="#id14">请求参数</a></li>
+<li><a class="reference internal" href="#id15">返回示例</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#id16">收款方式列表</a><ul>
+<li><a class="reference internal" href="#id17">接口说明</a></li>
+<li><a class="reference internal" href="#id18">返回示例</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#id19">收款方式详情</a><ul>
+<li><a class="reference internal" href="#id20">接口说明</a></li>
+<li><a class="reference internal" href="#id21">返回示例</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#id22">删除收款方式</a><ul>
+<li><a class="reference internal" href="#id23">接口说明</a></li>
+<li><a class="reference internal" href="#id24">返回示例</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</ul>
+</li>
+              
+            
+            
+            
+            
+            
+          </ul>
+
+          
+            
+<form class="navbar-form navbar-right" action="../search.html" method="get">
+ <div class="form-group">
+  <input type="text" name="q" class="form-control" placeholder="Search" />
+ </div>
+  <input type="hidden" name="check_keywords" value="yes" />
+  <input type="hidden" name="area" value="default" />
+</form>
+          
+        </div>
+    </div>
+  </div>
+
+<div class="container">
+  <div class="row">
+      <div class="col-md-3">
+        <div id="sidebar" class="bs-sidenav" role="complementary"><ul>
+<li><a class="reference internal" href="#">账户模块</a><ul>
+<li><a class="reference internal" href="#id2">绑定银行卡</a><ul>
+<li><a class="reference internal" href="#id3">接口说明</a></li>
+<li><a class="reference internal" href="#id4">请求参数</a></li>
+<li><a class="reference internal" href="#id5">返回示例</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#id6">查看银行卡</a><ul>
+<li><a class="reference internal" href="#id7">接口说明</a></li>
+<li><a class="reference internal" href="#id8">返回示例</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#id9">解绑银行卡</a><ul>
+<li><a class="reference internal" href="#id10">接口说明</a></li>
+<li><a class="reference internal" href="#id11">返回示例</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#id12">添加收款方式</a><ul>
+<li><a class="reference internal" href="#id13">接口说明</a></li>
+<li><a class="reference internal" href="#id14">请求参数</a></li>
+<li><a class="reference internal" href="#id15">返回示例</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#id16">收款方式列表</a><ul>
+<li><a class="reference internal" href="#id17">接口说明</a></li>
+<li><a class="reference internal" href="#id18">返回示例</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#id19">收款方式详情</a><ul>
+<li><a class="reference internal" href="#id20">接口说明</a></li>
+<li><a class="reference internal" href="#id21">返回示例</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#id22">删除收款方式</a><ul>
+<li><a class="reference internal" href="#id23">接口说明</a></li>
+<li><a class="reference internal" href="#id24">返回示例</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+
+<ul class="nav nav-list">
+  <li>
+    <a href="auth.html" title="Previous Chapter: 用户认证模块"><span class="glyphicon glyphicon-chevron-left visible-sm"></span><span class="hidden-sm hidden-tablet">&raquo; 用户认证模块</span>
+    </a>
+  </li>
+  <li>
+    <a href="../wx_apps/index.html" title="Next Chapter: 小程序API模块"><span class="glyphicon glyphicon-chevron-right visible-sm"></span><span class="hidden-sm hidden-tablet">&raquo; 小程序API模块</span>
+    </a>
+  </li>
+</ul>
+<div id="sourcelink">
+  <a href="../_sources/users/finance.rst.txt"
+     rel="nofollow">Source</a>
+</div>
+<form action="../search.html" method="get">
+ <div class="form-group">
+  <input type="text" name="q" class="form-control" placeholder="Search" />
+ </div>
+  <input type="hidden" name="check_keywords" value="yes" />
+  <input type="hidden" name="area" value="default" />
+</form>
+        </div>
+      </div>
+    <div class="col-md-9 content">
+      
+  <div class="section" id="id1">
+<h1>账户模块<a class="headerlink" href="#id1" title="永久链接至标题">¶</a></h1>
+<div class="section" id="id2">
+<h2>绑定银行卡<a class="headerlink" href="#id2" title="永久链接至标题">¶</a></h2>
+<p>绑定银行卡</p>
+<div class="section" id="id3">
+<h3>接口说明<a class="headerlink" href="#id3" title="永久链接至标题">¶</a></h3>
+<ul class="simple">
+<li>API接口请求地址：<code class="docutils literal notranslate"><span class="pre">/pay_account</span></code></li>
+<li>API接口请求方法：<code class="docutils literal notranslate"><span class="pre">POST</span></code></li>
+<li>API接口用户授权：<code class="docutils literal notranslate"><span class="pre">token</span></code></li>
+</ul>
+</div>
+<div class="section" id="id4">
+<h3>请求参数<a class="headerlink" href="#id4" title="永久链接至标题">¶</a></h3>
+<table border="1" class="docutils">
+<colgroup>
+<col width="25%" />
+<col width="12%" />
+<col width="11%" />
+<col width="12%" />
+<col width="40%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">名称</th>
+<th class="head">类型</th>
+<th class="head">是否必须</th>
+<th class="head">默认值</th>
+<th class="head">描述说明</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>account_type</td>
+<td>Integer</td>
+<td>可选</td>
+<td>1</td>
+<td>账户类型 1、个人账户 2、企业账户</td>
+</tr>
+<tr class="row-odd"><td>country_id</td>
+<td>Integer</td>
+<td>可选</td>
+<td>1</td>
+<td>国家id</td>
+</tr>
+<tr class="row-even"><td>province_oid</td>
+<td>Integer</td>
+<td>必需</td>
+<td>&#160;</td>
+<td>省份id</td>
+</tr>
+<tr class="row-odd"><td>city_oid</td>
+<td>Integer</td>
+<td>必需</td>
+<td>&#160;</td>
+<td>市区id</td>
+</tr>
+<tr class="row-even"><td>bank_card_id</td>
+<td>Integer</td>
+<td>必需</td>
+<td>&#160;</td>
+<td>图片id</td>
+</tr>
+<tr class="row-odd"><td>name</td>
+<td>String</td>
+<td>必需</td>
+<td>&#160;</td>
+<td>户名</td>
+</tr>
+<tr class="row-even"><td>account</td>
+<td>String</td>
+<td>必需</td>
+<td>&#160;</td>
+<td>账户号</td>
+</tr>
+<tr class="row-odd"><td>bank</td>
+<td>String</td>
+<td>必需</td>
+<td>&#160;</td>
+<td>开户银行</td>
+</tr>
+<tr class="row-even"><td>branch_name</td>
+<td>String</td>
+<td>必需</td>
+<td>&#160;</td>
+<td>开户支行</td>
+</tr>
+<tr class="row-odd"><td>mobile</td>
+<td>String</td>
+<td>必需</td>
+<td>&#160;</td>
+<td>预留手机号</td>
+</tr>
+<tr class="row-even"><td>verify_code</td>
+<td>String</td>
+<td>必需</td>
+<td>&#160;</td>
+<td>验证码</td>
+</tr>
+</tbody>
+</table>
+<p>参考示例：</p>
+<div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="p">{</span>
+    <span class="s2">&quot;account_type&quot;</span><span class="o">:</span><span class="mi">1</span><span class="p">,</span>
+    <span class="s2">&quot;country_id&quot;</span><span class="o">:</span><span class="mi">1</span><span class="p">,</span>
+    <span class="s2">&quot;province_oid&quot;</span><span class="o">:</span><span class="mi">3</span><span class="p">,</span>
+    <span class="s2">&quot;city_oid&quot;</span><span class="o">:</span><span class="mi">4</span><span class="p">,</span>
+    <span class="s2">&quot;bank_card_id&quot;</span><span class="o">:</span><span class="mi">1</span><span class="p">,</span>
+    <span class="s2">&quot;name&quot;</span><span class="o">:</span><span class="s2">&quot;田帅&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;account&quot;</span><span class="o">:</span><span class="s2">&quot;8888 8888 8888 8888&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;bank&quot;</span><span class="o">:</span><span class="s2">&quot;招商银行&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;branch_name&quot;</span><span class="o">:</span><span class="s2">&quot;大望路支行&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;mobile&quot;</span><span class="o">:</span><span class="s2">&quot;18788888888&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;verify_code&quot;</span><span class="o">:</span><span class="s2">&quot;0299&quot;</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="id5">
+<h3>返回示例<a class="headerlink" href="#id5" title="永久链接至标题">¶</a></h3>
+<div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="p">{</span>
+    <span class="s2">&quot;data&quot;</span><span class="o">:</span> <span class="p">{</span>
+        <span class="s2">&quot;account&quot;</span><span class="o">:</span> <span class="s2">&quot;8888888888888888&quot;</span><span class="p">,</span>  <span class="c1">// 账户号</span>
+        <span class="s2">&quot;area&quot;</span><span class="o">:</span> <span class="p">{</span>
+            <span class="s2">&quot;area_code&quot;</span><span class="o">:</span> <span class="s2">&quot;+86&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;area_name&quot;</span><span class="o">:</span> <span class="s2">&quot;中国&quot;</span>
+        <span class="p">},</span>
+        <span class="s2">&quot;bank&quot;</span><span class="o">:</span> <span class="s2">&quot;招商银行&quot;</span><span class="p">,</span>  <span class="c1">// 开户银行</span>
+        <span class="s2">&quot;bank_card&quot;</span><span class="o">:</span> <span class="p">{</span>
+            <span class="s2">&quot;created_at&quot;</span><span class="o">:</span> <span class="mi">1</span><span class="p">,</span>
+            <span class="s2">&quot;filename&quot;</span><span class="o">:</span> <span class="s2">&quot;1&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;filepath&quot;</span><span class="o">:</span> <span class="s2">&quot;1&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;id&quot;</span><span class="o">:</span> <span class="mi">1</span><span class="p">,</span>
+            <span class="s2">&quot;type&quot;</span><span class="o">:</span> <span class="mi">1</span><span class="p">,</span>
+            <span class="s2">&quot;view_url&quot;</span><span class="o">:</span> <span class="s2">&quot;http://0.0.0.0:9000/_uploads/photos/1&quot;</span>
+        <span class="p">},</span>
+        <span class="s2">&quot;branch_name&quot;</span><span class="o">:</span> <span class="s2">&quot;大望路支行&quot;</span><span class="p">,</span>  <span class="c1">// 开户支行</span>
+        <span class="s2">&quot;city_name&quot;</span><span class="o">:</span> <span class="s2">&quot;淄博&quot;</span><span class="p">,</span>  <span class="c1">// 市</span>
+        <span class="s2">&quot;mobile&quot;</span><span class="o">:</span> <span class="s2">&quot;18788888888&quot;</span><span class="p">,</span>  <span class="c1">// 手机号</span>
+        <span class="s2">&quot;name&quot;</span><span class="o">:</span> <span class="s2">&quot;田帅&quot;</span><span class="p">,</span>  <span class="c1">// 户名</span>
+        <span class="s2">&quot;province_name&quot;</span><span class="o">:</span> <span class="s2">&quot;山东&quot;</span><span class="p">,</span>  <span class="c1">// 省</span>
+        <span class="s2">&quot;type&quot;</span><span class="o">:</span> <span class="mi">1</span>  <span class="c1">// 账户类型1、个人账户 2、企业账户</span>
+    <span class="p">},</span>
+    <span class="s2">&quot;status&quot;</span><span class="o">:</span> <span class="p">{</span>
+        <span class="s2">&quot;code&quot;</span><span class="o">:</span> <span class="mi">201</span><span class="p">,</span>
+        <span class="s2">&quot;message&quot;</span><span class="o">:</span> <span class="s2">&quot;All created.&quot;</span>
+    <span class="p">},</span>
+    <span class="s2">&quot;success&quot;</span><span class="o">:</span> <span class="kc">true</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="id6">
+<h2>查看银行卡<a class="headerlink" href="#id6" title="永久链接至标题">¶</a></h2>
+<p>查看银行卡</p>
+<div class="section" id="id7">
+<h3>接口说明<a class="headerlink" href="#id7" title="永久链接至标题">¶</a></h3>
+<ul class="simple">
+<li>API接口请求地址：<code class="docutils literal notranslate"><span class="pre">/pay_account</span></code></li>
+<li>API接口请求方法：<code class="docutils literal notranslate"><span class="pre">GET</span></code></li>
+<li>API接口用户授权：<code class="docutils literal notranslate"><span class="pre">token</span></code></li>
+</ul>
+</div>
+<div class="section" id="id8">
+<h3>返回示例<a class="headerlink" href="#id8" title="永久链接至标题">¶</a></h3>
+<div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="p">{</span>
+    <span class="s2">&quot;data&quot;</span><span class="o">:</span> <span class="p">{</span>
+        <span class="s2">&quot;account&quot;</span><span class="o">:</span> <span class="s2">&quot;8888888888888888&quot;</span><span class="p">,</span>  <span class="c1">// 账户号</span>
+        <span class="s2">&quot;area&quot;</span><span class="o">:</span> <span class="p">{</span>
+            <span class="s2">&quot;area_code&quot;</span><span class="o">:</span> <span class="s2">&quot;+86&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;area_name&quot;</span><span class="o">:</span> <span class="s2">&quot;中国&quot;</span>
+        <span class="p">},</span>
+        <span class="s2">&quot;bank&quot;</span><span class="o">:</span> <span class="s2">&quot;招商银行&quot;</span><span class="p">,</span>  <span class="c1">// 开户银行</span>
+        <span class="s2">&quot;bank_card&quot;</span><span class="o">:</span> <span class="p">{</span>
+            <span class="s2">&quot;created_at&quot;</span><span class="o">:</span> <span class="mi">1</span><span class="p">,</span>
+            <span class="s2">&quot;filename&quot;</span><span class="o">:</span> <span class="s2">&quot;1&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;filepath&quot;</span><span class="o">:</span> <span class="s2">&quot;1&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;id&quot;</span><span class="o">:</span> <span class="mi">1</span><span class="p">,</span>
+            <span class="s2">&quot;type&quot;</span><span class="o">:</span> <span class="mi">1</span><span class="p">,</span>
+            <span class="s2">&quot;view_url&quot;</span><span class="o">:</span> <span class="s2">&quot;http://0.0.0.0:9000/_uploads/photos/1&quot;</span>
+        <span class="p">},</span>
+        <span class="s2">&quot;branch_name&quot;</span><span class="o">:</span> <span class="s2">&quot;大望路支行&quot;</span><span class="p">,</span>  <span class="c1">// 开户支行</span>
+        <span class="s2">&quot;city_name&quot;</span><span class="o">:</span> <span class="s2">&quot;淄博&quot;</span><span class="p">,</span>  <span class="c1">// 市</span>
+        <span class="s2">&quot;mobile&quot;</span><span class="o">:</span> <span class="s2">&quot;18788888888&quot;</span><span class="p">,</span>  <span class="c1">// 手机号</span>
+        <span class="s2">&quot;name&quot;</span><span class="o">:</span> <span class="s2">&quot;田帅&quot;</span><span class="p">,</span>  <span class="c1">// 户名</span>
+        <span class="s2">&quot;province_name&quot;</span><span class="o">:</span> <span class="s2">&quot;山东&quot;</span><span class="p">,</span>  <span class="c1">// 省</span>
+        <span class="s2">&quot;type&quot;</span><span class="o">:</span> <span class="mi">1</span>  <span class="c1">// 账户类型1、个人账户 2、企业账户</span>
+    <span class="p">},</span>
+    <span class="s2">&quot;status&quot;</span><span class="o">:</span> <span class="p">{</span>
+        <span class="s2">&quot;code&quot;</span><span class="o">:</span> <span class="mi">200</span><span class="p">,</span>
+        <span class="s2">&quot;message&quot;</span><span class="o">:</span> <span class="s2">&quot;Ok all right.&quot;</span>
+    <span class="p">},</span>
+    <span class="s2">&quot;success&quot;</span><span class="o">:</span> <span class="kc">true</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="id9">
+<h2>解绑银行卡<a class="headerlink" href="#id9" title="永久链接至标题">¶</a></h2>
+<p>解绑银行卡</p>
+<div class="section" id="id10">
+<h3>接口说明<a class="headerlink" href="#id10" title="永久链接至标题">¶</a></h3>
+<ul class="simple">
+<li>API接口请求地址：<code class="docutils literal notranslate"><span class="pre">/pay_account</span></code></li>
+<li>API接口请求方法：<code class="docutils literal notranslate"><span class="pre">DELETE</span></code></li>
+<li>API接口用户授权：<code class="docutils literal notranslate"><span class="pre">token</span></code></li>
+</ul>
+</div>
+<div class="section" id="id11">
+<h3>返回示例<a class="headerlink" href="#id11" title="永久链接至标题">¶</a></h3>
+<div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="p">{</span>
+    <span class="s2">&quot;status&quot;</span><span class="o">:</span> <span class="p">{</span>
+        <span class="s2">&quot;code&quot;</span><span class="o">:</span> <span class="mi">200</span><span class="p">,</span>
+        <span class="s2">&quot;message&quot;</span><span class="o">:</span> <span class="s2">&quot;Ok all right.&quot;</span>
+    <span class="p">},</span>
+    <span class="s2">&quot;success&quot;</span><span class="o">:</span> <span class="kc">true</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="id12">
+<h2>添加收款方式<a class="headerlink" href="#id12" title="永久链接至标题">¶</a></h2>
+<p>添加收款方式</p>
+<div class="section" id="id13">
+<h3>接口说明<a class="headerlink" href="#id13" title="永久链接至标题">¶</a></h3>
+<ul class="simple">
+<li>API接口请求地址：<code class="docutils literal notranslate"><span class="pre">/receipt_methods</span></code></li>
+<li>API接口请求方法：<code class="docutils literal notranslate"><span class="pre">POST</span></code></li>
+<li>API接口用户授权：<code class="docutils literal notranslate"><span class="pre">token</span></code></li>
+</ul>
+</div>
+<div class="section" id="id14">
+<h3>请求参数<a class="headerlink" href="#id14" title="永久链接至标题">¶</a></h3>
+<table border="1" class="docutils">
+<colgroup>
+<col width="27%" />
+<col width="13%" />
+<col width="11%" />
+<col width="13%" />
+<col width="37%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">名称</th>
+<th class="head">类型</th>
+<th class="head">是否必须</th>
+<th class="head">默认值</th>
+<th class="head">描述说明</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>account_type</td>
+<td>Integer</td>
+<td>可选</td>
+<td>1</td>
+<td>收款方式 1、支付宝</td>
+</tr>
+<tr class="row-odd"><td>name</td>
+<td>String</td>
+<td>必需</td>
+<td>&#160;</td>
+<td>户名</td>
+</tr>
+<tr class="row-even"><td>account</td>
+<td>String</td>
+<td>必需</td>
+<td>&#160;</td>
+<td>账户号</td>
+</tr>
+</tbody>
+</table>
+<p>参考示例：</p>
+<div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="p">{</span>
+    <span class="s2">&quot;account_type&quot;</span><span class="o">:</span><span class="mi">1</span><span class="p">,</span>
+    <span class="s2">&quot;name&quot;</span><span class="o">:</span><span class="s2">&quot;田帅&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;account&quot;</span><span class="o">:</span><span class="s2">&quot;13288888888&quot;</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="id15">
+<h3>返回示例<a class="headerlink" href="#id15" title="永久链接至标题">¶</a></h3>
+<div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="p">{</span>
+    <span class="s2">&quot;data&quot;</span><span class="o">:</span> <span class="p">{</span>
+        <span class="s2">&quot;account&quot;</span><span class="o">:</span> <span class="s2">&quot;13288888888&quot;</span><span class="p">,</span>  <span class="c1">// 账户号</span>
+        <span class="s2">&quot;id&quot;</span><span class="o">:</span> <span class="mi">2</span><span class="p">,</span>
+        <span class="s2">&quot;name&quot;</span><span class="o">:</span> <span class="s2">&quot;田帅&quot;</span><span class="p">,</span>  <span class="c1">//户名</span>
+        <span class="s2">&quot;type&quot;</span><span class="o">:</span> <span class="mi">1</span>  <span class="c1">// 收款方式 1、支付宝</span>
+    <span class="p">},</span>
+    <span class="s2">&quot;status&quot;</span><span class="o">:</span> <span class="p">{</span>
+        <span class="s2">&quot;code&quot;</span><span class="o">:</span> <span class="mi">201</span><span class="p">,</span>
+        <span class="s2">&quot;message&quot;</span><span class="o">:</span> <span class="s2">&quot;All created.&quot;</span>
+    <span class="p">},</span>
+    <span class="s2">&quot;success&quot;</span><span class="o">:</span> <span class="kc">true</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="id16">
+<h2>收款方式列表<a class="headerlink" href="#id16" title="永久链接至标题">¶</a></h2>
+<p>收款方式列表</p>
+<div class="section" id="id17">
+<h3>接口说明<a class="headerlink" href="#id17" title="永久链接至标题">¶</a></h3>
+<ul class="simple">
+<li>API接口请求地址：<code class="docutils literal notranslate"><span class="pre">/receipt_methods</span></code></li>
+<li>API接口请求方法：<code class="docutils literal notranslate"><span class="pre">GET</span></code></li>
+<li>API接口用户授权：<code class="docutils literal notranslate"><span class="pre">token</span></code></li>
+</ul>
+</div>
+<div class="section" id="id18">
+<h3>返回示例<a class="headerlink" href="#id18" title="永久链接至标题">¶</a></h3>
+<div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="p">{</span>
+    <span class="s2">&quot;data&quot;</span><span class="o">:</span> <span class="p">[</span>
+        <span class="p">{</span>
+            <span class="s2">&quot;account&quot;</span><span class="o">:</span> <span class="s2">&quot;13288888888&quot;</span><span class="p">,</span>  <span class="c1">// 账户号</span>
+            <span class="s2">&quot;id&quot;</span><span class="o">:</span> <span class="mi">2</span><span class="p">,</span>
+            <span class="s2">&quot;name&quot;</span><span class="o">:</span> <span class="s2">&quot;田帅&quot;</span><span class="p">,</span>  <span class="c1">//户名</span>
+            <span class="s2">&quot;type&quot;</span><span class="o">:</span> <span class="mi">1</span>  <span class="c1">// 收款方式 1、支付宝</span>
+        <span class="p">}</span>
+    <span class="p">],</span>
+    <span class="s2">&quot;status&quot;</span><span class="o">:</span> <span class="p">{</span>
+        <span class="s2">&quot;code&quot;</span><span class="o">:</span> <span class="mi">200</span><span class="p">,</span>
+        <span class="s2">&quot;message&quot;</span><span class="o">:</span> <span class="s2">&quot;Ok all right.&quot;</span>
+    <span class="p">},</span>
+    <span class="s2">&quot;success&quot;</span><span class="o">:</span> <span class="kc">true</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="id19">
+<h2>收款方式详情<a class="headerlink" href="#id19" title="永久链接至标题">¶</a></h2>
+<p>收款方式详情</p>
+<div class="section" id="id20">
+<h3>接口说明<a class="headerlink" href="#id20" title="永久链接至标题">¶</a></h3>
+<ul class="simple">
+<li>API接口请求地址：<code class="docutils literal notranslate"><span class="pre">/receipt_methods/&lt;int:id&gt;</span></code></li>
+<li>API接口请求方法：<code class="docutils literal notranslate"><span class="pre">GET</span></code></li>
+<li>API接口用户授权：<code class="docutils literal notranslate"><span class="pre">token</span></code></li>
+</ul>
+</div>
+<div class="section" id="id21">
+<h3>返回示例<a class="headerlink" href="#id21" title="永久链接至标题">¶</a></h3>
+<div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="p">{</span>
+    <span class="s2">&quot;data&quot;</span><span class="o">:</span> <span class="p">{</span>
+        <span class="s2">&quot;account&quot;</span><span class="o">:</span> <span class="s2">&quot;13288888888&quot;</span><span class="p">,</span>  <span class="c1">// 账户号</span>
+        <span class="s2">&quot;id&quot;</span><span class="o">:</span> <span class="mi">2</span><span class="p">,</span>
+        <span class="s2">&quot;name&quot;</span><span class="o">:</span> <span class="s2">&quot;田帅&quot;</span><span class="p">,</span>  <span class="c1">//户名</span>
+        <span class="s2">&quot;type&quot;</span><span class="o">:</span> <span class="mi">1</span>  <span class="c1">// 收款方式 1、支付宝</span>
+    <span class="p">},</span>
+    <span class="s2">&quot;status&quot;</span><span class="o">:</span> <span class="p">{</span>
+        <span class="s2">&quot;code&quot;</span><span class="o">:</span> <span class="mi">201</span><span class="p">,</span>
+        <span class="s2">&quot;message&quot;</span><span class="o">:</span> <span class="s2">&quot;All created.&quot;</span>
+    <span class="p">},</span>
+    <span class="s2">&quot;success&quot;</span><span class="o">:</span> <span class="kc">true</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="id22">
+<h2>删除收款方式<a class="headerlink" href="#id22" title="永久链接至标题">¶</a></h2>
+<p>删除收款方式</p>
+<div class="section" id="id23">
+<h3>接口说明<a class="headerlink" href="#id23" title="永久链接至标题">¶</a></h3>
+<ul class="simple">
+<li>API接口请求地址：<code class="docutils literal notranslate"><span class="pre">/receipt_methods/&lt;int:id&gt;</span></code></li>
+<li>API接口请求方法：<code class="docutils literal notranslate"><span class="pre">DELETE</span></code></li>
+<li>API接口用户授权：<code class="docutils literal notranslate"><span class="pre">token</span></code></li>
+</ul>
+</div>
+<div class="section" id="id24">
+<h3>返回示例<a class="headerlink" href="#id24" title="永久链接至标题">¶</a></h3>
+<div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="p">{</span>
+    <span class="s2">&quot;status&quot;</span><span class="o">:</span> <span class="p">{</span>
+        <span class="s2">&quot;code&quot;</span><span class="o">:</span> <span class="mi">200</span><span class="p">,</span>
+        <span class="s2">&quot;message&quot;</span><span class="o">:</span> <span class="s2">&quot;Ok all right.&quot;</span>
+    <span class="p">},</span>
+    <span class="s2">&quot;success&quot;</span><span class="o">:</span> <span class="kc">true</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+
+
+    </div>
+      
+  </div>
+</div>
+<footer class="footer">
+    <div class="container">
+        <p>© Copyright 2018 moebeast.com.</p>
+        <p>Created using <a href="http://sphinx.pocoo.org/" target="_blank">Sphinx</a>.</p>
+    </div>
+</footer>
+
+  </body>
+</html>
