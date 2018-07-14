@@ -27,7 +27,7 @@
     <script type="text/javascript" src="../_static/bootstrap-sphinx.js"></script>
     <link rel="index" title="索引" href="../genindex.html" />
     <link rel="search" title="搜索" href="../search.html" />
-    <link rel="next" title="账户模块" href="finance.html" />
+    <link rel="next" title="商品API模块" href="../products/index.html" />
     <link rel="prev" title="订单评价模块" href="comment.html" />
 <meta charset='utf-8'>
 <meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'>
@@ -81,7 +81,6 @@
 <li class="toctree-l2"><a class="reference internal" href="stats.html">统计模块</a></li>
 <li class="toctree-l2"><a class="reference internal" href="comment.html">订单评价模块</a></li>
 <li class="toctree-l2 current"><a class="current reference internal" href="#">物流运费模块</a></li>
-<li class="toctree-l2"><a class="reference internal" href="finance.html">账户模块</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="../products/index.html">商品API模块</a><ul>
@@ -130,6 +129,7 @@
 <li class="toctree-l1"><a class="reference internal" href="../users/index.html">用户API模块</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="../users/users.html">用户模块</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../users/auth.html">用户认证模块</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../users/finance.html">账户模块</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="../wx_apps/index.html">小程序API模块</a><ul>
@@ -407,7 +407,7 @@
     </a>
   </li>
   <li>
-    <a href="finance.html" title="Next Chapter: 账户模块"><span class="glyphicon glyphicon-chevron-right visible-sm"></span><span class="hidden-sm hidden-tablet">&raquo; 账户模块</span>
+    <a href="../products/index.html" title="Next Chapter: 商品API模块"><span class="glyphicon glyphicon-chevron-right visible-sm"></span><span class="hidden-sm hidden-tablet">&raquo; 商品API模块</span>
     </a>
   </li>
 </ul>
@@ -1436,7 +1436,7 @@
                 <span class="s2">&quot;is_default&quot;</span><span class="o">:</span> <span class="kc">true</span><span class="p">,</span>  <span class="c1">// 是否默认</span>
                 <span class="s2">&quot;max_days&quot;</span><span class="o">:</span> <span class="mi">5</span><span class="p">,</span>  <span class="c1">// 最长天数</span>
                 <span class="s2">&quot;min_days&quot;</span><span class="o">:</span> <span class="mi">3</span><span class="p">,</span>  <span class="c1">// 最小天数</span>
-                <span class="s2">&quot;places_items&quot;</span><span class="o">:</span> <span class="p">[</span>
+                <span class="s2">&quot;place_items&quot;</span><span class="o">:</span> <span class="p">[</span>
                     <span class="p">{</span>
                         <span class="s2">&quot;continuous_amount&quot;</span><span class="o">:</span> <span class="mi">20</span><span class="p">,</span>
                         <span class="s2">&quot;continuous_item&quot;</span><span class="o">:</span> <span class="mi">1</span><span class="p">,</span>
@@ -1538,7 +1538,7 @@
                 <span class="s2">&quot;is_default&quot;</span><span class="o">:</span> <span class="kc">true</span><span class="p">,</span>  <span class="c1">// 是否默认</span>
                 <span class="s2">&quot;max_days&quot;</span><span class="o">:</span> <span class="mi">5</span><span class="p">,</span>  <span class="c1">// 最长天数</span>
                 <span class="s2">&quot;min_days&quot;</span><span class="o">:</span> <span class="mi">3</span><span class="p">,</span>  <span class="c1">// 最小天数</span>
-                <span class="s2">&quot;places_items&quot;</span><span class="o">:</span> <span class="p">[</span>
+                <span class="s2">&quot;place_items&quot;</span><span class="o">:</span> <span class="p">[</span>
                     <span class="p">{</span>
                         <span class="s2">&quot;continuous_amount&quot;</span><span class="o">:</span> <span class="mi">20</span><span class="p">,</span>
                         <span class="s2">&quot;continuous_item&quot;</span><span class="o">:</span> <span class="mi">1</span><span class="p">,</span>
@@ -1884,7 +1884,7 @@
                 <span class="s2">&quot;is_default&quot;</span><span class="o">:</span> <span class="kc">true</span><span class="p">,</span>  <span class="c1">// 是否默认</span>
                 <span class="s2">&quot;max_days&quot;</span><span class="o">:</span> <span class="mi">5</span><span class="p">,</span>  <span class="c1">// 最长天数</span>
                 <span class="s2">&quot;min_days&quot;</span><span class="o">:</span> <span class="mi">3</span><span class="p">,</span>  <span class="c1">// 最小天数</span>
-                <span class="s2">&quot;places_items&quot;</span><span class="o">:</span> <span class="p">[</span>
+                <span class="s2">&quot;place_items&quot;</span><span class="o">:</span> <span class="p">[</span>
                     <span class="p">{</span>
                         <span class="s2">&quot;continuous_amount&quot;</span><span class="o">:</span> <span class="mi">20</span><span class="p">,</span>
                         <span class="s2">&quot;continuous_item&quot;</span><span class="o">:</span> <span class="mi">1</span><span class="p">,</span>
@@ -1996,7 +1996,7 @@
                             <span class="s2">&quot;is_default&quot;</span><span class="o">:</span> <span class="kc">true</span><span class="p">,</span>  <span class="c1">// 是否默认</span>
                             <span class="s2">&quot;max_days&quot;</span><span class="o">:</span> <span class="mi">5</span><span class="p">,</span>  <span class="c1">// 最长天数</span>
                             <span class="s2">&quot;min_days&quot;</span><span class="o">:</span> <span class="mi">3</span><span class="p">,</span>  <span class="c1">// 最小天数</span>
-                            <span class="s2">&quot;places_items&quot;</span><span class="o">:</span> <span class="p">[</span>
+                            <span class="s2">&quot;place_items&quot;</span><span class="o">:</span> <span class="p">[</span>
                                 <span class="p">{</span>
                                     <span class="s2">&quot;continuous_amount&quot;</span><span class="o">:</span> <span class="mi">20</span><span class="p">,</span>
                                     <span class="s2">&quot;continuous_item&quot;</span><span class="o">:</span> <span class="mi">1</span><span class="p">,</span>
@@ -2106,7 +2106,7 @@
                 <span class="s2">&quot;is_default&quot;</span><span class="o">:</span> <span class="kc">true</span><span class="p">,</span>  <span class="c1">// 是否默认</span>
                 <span class="s2">&quot;max_days&quot;</span><span class="o">:</span> <span class="mi">5</span><span class="p">,</span>  <span class="c1">// 最长天数</span>
                 <span class="s2">&quot;min_days&quot;</span><span class="o">:</span> <span class="mi">3</span><span class="p">,</span>  <span class="c1">// 最小天数</span>
-                <span class="s2">&quot;places_items&quot;</span><span class="o">:</span> <span class="p">[</span>
+                <span class="s2">&quot;place_items&quot;</span><span class="o">:</span> <span class="p">[</span>
                     <span class="p">{</span>
                         <span class="s2">&quot;continuous_amount&quot;</span><span class="o">:</span> <span class="mi">20</span><span class="p">,</span>
                         <span class="s2">&quot;continuous_item&quot;</span><span class="o">:</span> <span class="mi">1</span><span class="p">,</span>

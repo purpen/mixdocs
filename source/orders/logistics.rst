@@ -670,7 +670,7 @@ JSON数据格式:
                     "is_default": true,  // 是否默认
                     "max_days": 5,  // 最长天数
                     "min_days": 3,  // 最小天数
-                    "places_items": [
+                    "place_items": [
                         {
                             "continuous_amount": 20,
                             "continuous_item": 1,
@@ -757,7 +757,7 @@ JSON数据格式:
                     "is_default": true,  // 是否默认
                     "max_days": 5,  // 最长天数
                     "min_days": 3,  // 最小天数
-                    "places_items": [
+                    "place_items": [
                         {
                             "continuous_amount": 20,
                             "continuous_item": 1,
@@ -946,7 +946,7 @@ JSON数据格式:
                     "is_default": true,  // 是否默认
                     "max_days": 5,  // 最长天数
                     "min_days": 3,  // 最小天数
-                    "places_items": [
+                    "place_items": [
                         {
                             "continuous_amount": 20,
                             "continuous_item": 1,
@@ -1038,7 +1038,7 @@ JSON数据格式:
                                 "is_default": true,  // 是否默认
                                 "max_days": 5,  // 最长天数
                                 "min_days": 3,  // 最小天数
-                                "places_items": [
+                                "place_items": [
                                     {
                                         "continuous_amount": 20,
                                         "continuous_item": 1,
@@ -1133,7 +1133,7 @@ JSON数据格式:
                     "is_default": true,  // 是否默认
                     "max_days": 5,  // 最长天数
                     "min_days": 3,  // 最小天数
-                    "places_items": [
+                    "place_items": [
                         {
                             "continuous_amount": 20,
                             "continuous_item": 1,
