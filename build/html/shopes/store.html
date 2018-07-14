@@ -81,6 +81,7 @@
 <li class="toctree-l2"><a class="reference internal" href="../orders/stats.html">统计模块</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../orders/comment.html">订单评价模块</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../orders/logistics.html">物流运费模块</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../orders/finance.html">账户模块</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="../products/index.html">商品API模块</a><ul>
@@ -92,11 +93,14 @@
 <li class="toctree-l2"><a class="reference internal" href="../products/models.html">商品规格模块</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../products/labels.html">标签模块</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../products/return_policies.html">商家退换货规则模块</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../products/store_product_packet.html">商品组模块</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../products/distributions.html">分销模块</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../products/wish.html">心愿清单模块</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../products/user_like.html">用户喜欢模块</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../products/assets.html">附件模块</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../products/wx_app_design.html">小程序配置模块</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../distributions/index.html">分销API模块</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../distributions/distributions.html">分销模块</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../distributions/store_product_packet.html">商品组模块</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="../customers/index.html">分销客户API模块</a><ul>
@@ -128,9 +132,18 @@
 <li class="toctree-l2"><a class="reference internal" href="../users/auth.html">用户认证模块</a></li>
 </ul>
 </li>
+<li class="toctree-l1"><a class="reference internal" href="../wx_apps/index.html">小程序API模块</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../wx_apps/wx_app_design.html">小程序配置模块</a></li>
+</ul>
+</li>
 <li class="toctree-l1"><a class="reference internal" href="../common.html">公用接口模块</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="../common.html#id2">幻灯图列表</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../common.html#id6">搜索关键词历史</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../common.html#id10">注册发送短信验证码</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../common.html#id15">登陆发送短信验证码</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../common.html#id19">动态登陆发送短信验证码</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../common.html#id23">账户编辑发送短信验证码</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../common.html#id27">发送邮件验证码</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="../setting.html">系统相关配置文档</a><ul>
@@ -1443,6 +1456,7 @@
 <ul class="simple">
 <li>API接口请求地址：<code class="docutils literal"><span class="pre">/store/visitor</span></code></li>
 <li>API接口请求方法：<code class="docutils literal"><span class="pre">POST</span></code></li>
+<li>API接口用户授权：<code class="docutils literal"><span class="pre">token</span></code></li>
 </ul>
 </div>
 <div class="section" id="id53">
@@ -1530,6 +1544,7 @@
 <ul class="simple">
 <li>API接口请求地址：<code class="docutils literal"><span class="pre">/store/&lt;string:rid&gt;/visitor</span></code></li>
 <li>API接口请求方法：<code class="docutils literal"><span class="pre">GET</span></code></li>
+<li>API接口用户授权：<code class="docutils literal"><span class="pre">token</span></code></li>
 </ul>
 </div>
 <div class="section" id="id57">
@@ -1578,55 +1593,73 @@
 <p>请求 <strong>正确</strong> 返回结果：</p>
 <div class="highlight-javascript"><div class="highlight"><pre><span></span><span class="p">{</span>
     <span class="s2">&quot;data&quot;</span><span class="o">:</span> <span class="p">{</span>
-        <span class="s2">&quot;count&quot;</span><span class="o">:</span> <span class="mi">2</span><span class="p">,</span>
-        <span class="s2">&quot;next_url&quot;</span><span class="o">:</span> <span class="kc">null</span><span class="p">,</span>
-        <span class="s2">&quot;prev_url&quot;</span><span class="o">:</span> <span class="kc">null</span><span class="p">,</span>
-        <span class="s2">&quot;store_Visitors&quot;</span><span class="o">:</span> <span class="p">[</span>
-            <span class="p">{</span>
-                <span class="s2">&quot;agent&quot;</span><span class="o">:</span> <span class="s2">&quot;Mozilla/5.0 (iPhone; CPU iPhone OS 10_1_1 like Mac OS X) AppleWebKit/602.2.14 (KHTML, like Gecko) Version/10.0&quot;</span><span class="p">,</span>
-                <span class="s2">&quot;id&quot;</span><span class="o">:</span> <span class="mi">6</span><span class="p">,</span>
-                <span class="s2">&quot;ip_addr&quot;</span><span class="o">:</span> <span class="s2">&quot;114.242.250.38&quot;</span><span class="p">,</span>
-                <span class="s2">&quot;master_uid&quot;</span><span class="o">:</span> <span class="mi">2</span><span class="p">,</span>
-                <span class="s2">&quot;user_party_id&quot;</span><span class="o">:</span> <span class="mi">6</span>
-            <span class="p">},</span>
-            <span class="p">{</span>
-                <span class="s2">&quot;agent&quot;</span><span class="o">:</span> <span class="s2">&quot;Mozilla/5.0 (iPhone; CPU iPhone OS 10_1_1 like Mac OS X) AppleWebKit/602.2.14 (KHTML, like Gecko) Version/10.0&quot;</span><span class="p">,</span>
-                <span class="s2">&quot;id&quot;</span><span class="o">:</span> <span class="mi">5</span><span class="p">,</span>
-                <span class="s2">&quot;ip_addr&quot;</span><span class="o">:</span> <span class="s2">&quot;114.242.250.38&quot;</span><span class="p">,</span>
-                <span class="s2">&quot;master_uid&quot;</span><span class="o">:</span> <span class="mi">2</span><span class="p">,</span>
-                <span class="s2">&quot;user_party_id&quot;</span><span class="o">:</span> <span class="mi">1</span>
-            <span class="p">}</span>
-        <span class="p">],</span>
-        <span class="s2">&quot;total_page&quot;</span><span class="o">:</span> <span class="mi">3</span><span class="p">,</span>
+        <span class="s2">&quot;count&quot;</span><span class="o">:</span> <span class="mi">4</span><span class="p">,</span>
+        <span class="s2">&quot;next_url&quot;</span><span class="o">:</span> <span class="kc">false</span><span class="p">,</span>
+        <span class="s2">&quot;prev_url&quot;</span><span class="o">:</span> <span class="kc">false</span><span class="p">,</span>
+        <span class="s2">&quot;total_page&quot;</span><span class="o">:</span> <span class="mi">1</span><span class="p">,</span>
         <span class="s2">&quot;user_parties&quot;</span><span class="o">:</span> <span class="p">[</span>
             <span class="p">{</span>
                 <span class="s2">&quot;about_me&quot;</span><span class="o">:</span> <span class="kc">null</span><span class="p">,</span>
-                <span class="s2">&quot;avatar&quot;</span><span class="o">:</span> <span class="s2">&quot;http://xxxx/photos/180224/c833237a728a1ed.jpg&quot;</span><span class="p">,</span>
-                <span class="s2">&quot;city&quot;</span><span class="o">:</span> <span class="s2">&quot;保定&quot;</span><span class="p">,</span>
+                <span class="s2">&quot;avatar&quot;</span><span class="o">:</span> <span class="s2">&quot;http://0.0.0.0:9000/_uploads/photos/http://127.0.0.1:9000/_uploads/photos/222222/5d2812257b539aa.jpg&quot;</span><span class="p">,</span> <span class="c1">// 头像</span>
+                <span class="s2">&quot;city&quot;</span><span class="o">:</span> <span class="kc">null</span><span class="p">,</span>
                 <span class="s2">&quot;date&quot;</span><span class="o">:</span> <span class="s2">&quot;&quot;</span><span class="p">,</span>
                 <span class="s2">&quot;email&quot;</span><span class="o">:</span> <span class="kc">null</span><span class="p">,</span>
-                <span class="s2">&quot;gender&quot;</span><span class="o">:</span> <span class="mi">0</span><span class="p">,</span>
+                <span class="s2">&quot;gender&quot;</span><span class="o">:</span> <span class="kc">null</span><span class="p">,</span>
                 <span class="s2">&quot;id&quot;</span><span class="o">:</span> <span class="mi">6</span><span class="p">,</span>
-                <span class="s2">&quot;master_uid&quot;</span><span class="o">:</span> <span class="mi">0</span><span class="p">,</span>
-                <span class="s2">&quot;nick_name&quot;</span><span class="o">:</span> <span class="s2">&quot;李彦宏&quot;</span><span class="p">,</span>
-                <span class="s2">&quot;openid&quot;</span><span class="o">:</span> <span class="s2">&quot;jsdkj3j&quot;</span><span class="p">,</span>
-                <span class="s2">&quot;province&quot;</span><span class="o">:</span> <span class="s2">&quot;河北&quot;</span><span class="p">,</span>
-                <span class="s2">&quot;user_id&quot;</span><span class="o">:</span> <span class="mi">0</span><span class="p">,</span>
+                <span class="s2">&quot;master_uid&quot;</span><span class="o">:</span> <span class="mi">2</span><span class="p">,</span>
+                <span class="s2">&quot;nick_name&quot;</span><span class="o">:</span> <span class="kc">null</span><span class="p">,</span>
+                <span class="s2">&quot;openid&quot;</span><span class="o">:</span> <span class="s2">&quot;d&quot;</span><span class="p">,</span>
+                <span class="s2">&quot;province&quot;</span><span class="o">:</span> <span class="kc">null</span><span class="p">,</span>
+                <span class="s2">&quot;type&quot;</span><span class="o">:</span> <span class="kc">null</span><span class="p">,</span>
                 <span class="s2">&quot;wxapp_id&quot;</span><span class="o">:</span> <span class="s2">&quot;1&quot;</span>
             <span class="p">},</span>
             <span class="p">{</span>
-                <span class="s2">&quot;about_me&quot;</span><span class="o">:</span> <span class="s2">&quot;php是最好的语言&quot;</span><span class="p">,</span>
-                <span class="s2">&quot;avatar&quot;</span><span class="o">:</span> <span class="s2">&quot;http://127.0.0.1:9000/_uploads/photjpgos/222222/5d2812257b539aa.&quot;</span><span class="p">,</span>
-                <span class="s2">&quot;city&quot;</span><span class="o">:</span> <span class="s2">&quot;南京&quot;</span><span class="p">,</span>
-                <span class="s2">&quot;date&quot;</span><span class="o">:</span> <span class="s2">&quot;1992年12月16日&quot;</span><span class="p">,</span>
-                <span class="s2">&quot;email&quot;</span><span class="o">:</span> <span class="s2">&quot;zhizhuren@163.com&quot;</span><span class="p">,</span>
-                <span class="s2">&quot;gender&quot;</span><span class="o">:</span> <span class="mi">1</span><span class="p">,</span>
-                <span class="s2">&quot;id&quot;</span><span class="o">:</span> <span class="mi">1</span><span class="p">,</span>
+                <span class="s2">&quot;about_me&quot;</span><span class="o">:</span> <span class="kc">null</span><span class="p">,</span>
+                <span class="s2">&quot;avatar&quot;</span><span class="o">:</span> <span class="s2">&quot;http://0.0.0.0:9000/_uploads/photos/http://127.0.0.1:9000/_uploads/photos/222222/5d2812257b539aa.jpg&quot;</span><span class="p">,</span> <span class="c1">// // 头像</span>
+                <span class="s2">&quot;city&quot;</span><span class="o">:</span> <span class="kc">null</span><span class="p">,</span>
+                <span class="s2">&quot;date&quot;</span><span class="o">:</span> <span class="s2">&quot;&quot;</span><span class="p">,</span>
+                <span class="s2">&quot;email&quot;</span><span class="o">:</span> <span class="kc">null</span><span class="p">,</span>
+                <span class="s2">&quot;gender&quot;</span><span class="o">:</span> <span class="kc">null</span><span class="p">,</span>
+                <span class="s2">&quot;id&quot;</span><span class="o">:</span> <span class="mi">5</span><span class="p">,</span>
                 <span class="s2">&quot;master_uid&quot;</span><span class="o">:</span> <span class="mi">2</span><span class="p">,</span>
-                <span class="s2">&quot;nick_name&quot;</span><span class="o">:</span> <span class="s2">&quot;马化腾&quot;</span><span class="p">,</span>
-                <span class="s2">&quot;openid&quot;</span><span class="o">:</span> <span class="s2">&quot;jsdkj3j&quot;</span><span class="p">,</span>
-                <span class="s2">&quot;province&quot;</span><span class="o">:</span> <span class="s2">&quot;江苏&quot;</span><span class="p">,</span>
-                <span class="s2">&quot;user_id&quot;</span><span class="o">:</span> <span class="mi">0</span><span class="p">,</span>
+                <span class="s2">&quot;nick_name&quot;</span><span class="o">:</span> <span class="kc">null</span><span class="p">,</span>
+                <span class="s2">&quot;openid&quot;</span><span class="o">:</span> <span class="s2">&quot;s&quot;</span><span class="p">,</span>
+                <span class="s2">&quot;province&quot;</span><span class="o">:</span> <span class="kc">null</span><span class="p">,</span>
+                <span class="s2">&quot;type&quot;</span><span class="o">:</span> <span class="kc">null</span><span class="p">,</span>
+                <span class="s2">&quot;wxapp_id&quot;</span><span class="o">:</span> <span class="s2">&quot;1&quot;</span>
+            <span class="p">},</span>
+            <span class="p">{</span>
+                <span class="s2">&quot;about_me&quot;</span><span class="o">:</span> <span class="kc">null</span><span class="p">,</span>
+                <span class="s2">&quot;avatar&quot;</span><span class="o">:</span> <span class="s2">&quot;http://0.0.0.0:9000/_uploads/photos/http://127.0.0.1:9000/_uploads/photos/222222/5d2812257b539aa.jpg&quot;</span><span class="p">,</span> <span class="c1">// // 头像</span>
+                <span class="s2">&quot;city&quot;</span><span class="o">:</span> <span class="kc">null</span><span class="p">,</span>
+                <span class="s2">&quot;country&quot;</span><span class="o">:</span> <span class="kc">null</span><span class="p">,</span>
+                <span class="s2">&quot;created_at&quot;</span><span class="o">:</span> <span class="mi">1531125527</span><span class="p">,</span>
+                <span class="s2">&quot;date&quot;</span><span class="o">:</span> <span class="s2">&quot;&quot;</span><span class="p">,</span>
+                <span class="s2">&quot;description&quot;</span><span class="o">:</span> <span class="kc">null</span><span class="p">,</span>
+                <span class="s2">&quot;email&quot;</span><span class="o">:</span> <span class="s2">&quot;13001179400&quot;</span><span class="p">,</span>
+                <span class="s2">&quot;gender&quot;</span><span class="o">:</span> <span class="mi">0</span><span class="p">,</span>
+                <span class="s2">&quot;last_seen&quot;</span><span class="o">:</span> <span class="mi">1531389228</span><span class="p">,</span>
+                <span class="s2">&quot;mail&quot;</span><span class="o">:</span> <span class="kc">null</span><span class="p">,</span>
+                <span class="s2">&quot;master_uid&quot;</span><span class="o">:</span> <span class="mi">2</span><span class="p">,</span>
+                <span class="s2">&quot;mobile&quot;</span><span class="o">:</span> <span class="kc">null</span><span class="p">,</span>
+                <span class="s2">&quot;name&quot;</span><span class="o">:</span> <span class="kc">null</span><span class="p">,</span>
+                <span class="s2">&quot;province&quot;</span><span class="o">:</span> <span class="kc">null</span><span class="p">,</span>
+                <span class="s2">&quot;uid&quot;</span><span class="o">:</span> <span class="s2">&quot;19138405762&quot;</span><span class="p">,</span>
+                <span class="s2">&quot;username&quot;</span><span class="o">:</span> <span class="s2">&quot;13001179400&quot;</span>
+            <span class="p">},</span>
+            <span class="p">{</span>
+                <span class="s2">&quot;about_me&quot;</span><span class="o">:</span> <span class="kc">null</span><span class="p">,</span>
+                <span class="s2">&quot;avatar&quot;</span><span class="o">:</span> <span class="s2">&quot;http://0.0.0.0:9000/_uploads/photos/http://127.0.0.1:9000/_uploads/photos/222222/5d2812257b539aa.jpg&quot;</span><span class="p">,</span> <span class="c1">// // 头像</span>
+                <span class="s2">&quot;city&quot;</span><span class="o">:</span> <span class="kc">null</span><span class="p">,</span>
+                <span class="s2">&quot;date&quot;</span><span class="o">:</span> <span class="s2">&quot;&quot;</span><span class="p">,</span>
+                <span class="s2">&quot;email&quot;</span><span class="o">:</span> <span class="kc">null</span><span class="p">,</span>
+                <span class="s2">&quot;gender&quot;</span><span class="o">:</span> <span class="kc">null</span><span class="p">,</span>
+                <span class="s2">&quot;id&quot;</span><span class="o">:</span> <span class="mi">4</span><span class="p">,</span>
+                <span class="s2">&quot;master_uid&quot;</span><span class="o">:</span> <span class="mi">2</span><span class="p">,</span>
+                <span class="s2">&quot;nick_name&quot;</span><span class="o">:</span> <span class="kc">null</span><span class="p">,</span>
+                <span class="s2">&quot;openid&quot;</span><span class="o">:</span> <span class="s2">&quot;a&quot;</span><span class="p">,</span>
+                <span class="s2">&quot;province&quot;</span><span class="o">:</span> <span class="kc">null</span><span class="p">,</span>
+                <span class="s2">&quot;type&quot;</span><span class="o">:</span> <span class="kc">null</span><span class="p">,</span>
                 <span class="s2">&quot;wxapp_id&quot;</span><span class="o">:</span> <span class="s2">&quot;1&quot;</span>
             <span class="p">}</span>
         <span class="p">]</span>
