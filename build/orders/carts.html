@@ -2,21 +2,13 @@
 
 <html xmlns="http://www.w3.org/1999/xhtml" lang="zh_CN">
   <head>
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <title>购物车模块 &#8212; mixdocs 0.1.0 文档</title>
     <link rel="stylesheet" href="../_static/bootstrap-sphinx.css" type="text/css" />
     <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
     <link rel="stylesheet" href="../_static/mixpus.css" type="text/css" />
-    <script type="text/javascript">
-      var DOCUMENTATION_OPTIONS = {
-        URL_ROOT:    '../',
-        VERSION:     '0.1.0',
-        COLLAPSE_INDEX: false,
-        FILE_SUFFIX: '.html',
-        HAS_SOURCE:  true,
-        SOURCELINK_SUFFIX: '.txt'
-      };
-    </script>
+    <script type="text/javascript" src="../_static/documentation_options.js"></script>
     <script type="text/javascript" src="../_static/jquery.js"></script>
     <script type="text/javascript" src="../_static/underscore.js"></script>
     <script type="text/javascript" src="../_static/doctools.js"></script>
@@ -34,8 +26,7 @@
 <meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1'>
 <meta name="apple-mobile-web-app-capable" content="yes">
 
-  </head>
-  <body>
+  </head><body>
 
   <div id="navbar" class="navbar navbar-inverse navbar-default navbar-fixed-top">
     <div class="container">
@@ -139,8 +130,11 @@
 <li class="toctree-l1"><a class="reference internal" href="../common.html">公用接口模块</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="../common.html#id2">幻灯图列表</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../common.html#id6">搜索关键词历史</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../common.html#id10">发送短信验证码</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../common.html#id15">发送邮件验证码</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../common.html#id10">注册发送短信验证码</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../common.html#id15">登陆发送短信验证码</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../common.html#id19">动态登陆发送短信验证码</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../common.html#id23">账户编辑发送短信验证码</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../common.html#id27">发送邮件验证码</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="../setting.html">系统相关配置文档</a><ul>
@@ -313,9 +307,9 @@
 <div class="section" id="id3">
 <h3>接口说明<a class="headerlink" href="#id3" title="永久链接至标题">¶</a></h3>
 <ul class="simple">
-<li>API接口请求地址：<code class="docutils literal"><span class="pre">/cart</span></code></li>
-<li>API接口请求方法：<code class="docutils literal"><span class="pre">GET</span></code></li>
-<li>API接口用户授权：<code class="docutils literal"><span class="pre">token</span></code></li>
+<li>API接口请求地址：<code class="docutils literal notranslate"><span class="pre">/cart</span></code></li>
+<li>API接口请求方法：<code class="docutils literal notranslate"><span class="pre">GET</span></code></li>
+<li>API接口用户授权：<code class="docutils literal notranslate"><span class="pre">token</span></code></li>
 </ul>
 </div>
 <div class="section" id="id4">
@@ -347,40 +341,43 @@
 </table>
 <p>参考示例：</p>
 <ul class="simple">
-<li>小程序接口请求参数传递：<code class="docutils literal"><span class="pre">/cart?open_id=123231231</span></code></li>
+<li>小程序接口请求参数传递：<code class="docutils literal notranslate"><span class="pre">/cart?open_id=123231231</span></code></li>
 </ul>
 </div>
 <div class="section" id="id5">
 <h3>返回示例<a class="headerlink" href="#id5" title="永久链接至标题">¶</a></h3>
 <p>JSON数据格式:</p>
 <p>请求 <strong>正确</strong> 返回结果：</p>
-<div class="highlight-javascript"><div class="highlight"><pre><span></span><span class="p">{</span>
+<div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="p">{</span>
     <span class="s2">&quot;data&quot;</span><span class="o">:</span> <span class="p">{</span>
-        <span class="s2">&quot;item_count&quot;</span><span class="o">:</span> <span class="mi">2</span><span class="p">,</span>
+        <span class="s2">&quot;item_count&quot;</span><span class="o">:</span> <span class="mi">7</span><span class="p">,</span>  <span class="c1">// 购物车中商品总数</span>
         <span class="s2">&quot;items&quot;</span><span class="o">:</span> <span class="p">[</span>
             <span class="p">{</span>
-                <span class="s2">&quot;option&quot;</span><span class="o">:</span> <span class="s2">&quot;&quot;</span><span class="p">,</span>  <span class="c1">// 备注</span>
+                <span class="s2">&quot;option&quot;</span><span class="o">:</span> <span class="s2">&quot;其他&quot;</span><span class="p">,</span>
                 <span class="s2">&quot;product&quot;</span><span class="o">:</span> <span class="p">{</span>
-                    <span class="s2">&quot;cost_price&quot;</span><span class="o">:</span> <span class="s2">&quot;189.00&quot;</span><span class="p">,</span>
-                    <span class="s2">&quot;cover&quot;</span><span class="o">:</span> <span class="s2">&quot;http://127.0.0.1:9000/_uploads/photos/180128/494e473ec90dffd.jpeg&quot;</span><span class="p">,</span>
-                    <span class="s2">&quot;id_code&quot;</span><span class="o">:</span> <span class="s2">&quot;&quot;</span><span class="p">,</span>
-                    <span class="s2">&quot;mode&quot;</span><span class="o">:</span> <span class="s2">&quot;白色&quot;</span><span class="p">,</span>
-                    <span class="s2">&quot;price&quot;</span><span class="o">:</span> <span class="s2">&quot;None&quot;</span><span class="p">,</span>  <span class="c1">// 零售价</span>
-                    <span class="s2">&quot;product_name&quot;</span><span class="o">:</span> <span class="s2">&quot;素士智能声波牙刷&quot;</span><span class="p">,</span>
-                    <span class="s2">&quot;rid&quot;</span><span class="o">:</span> <span class="s2">&quot;118280601730&quot;</span><span class="p">,</span>
-                    <span class="s2">&quot;s_color&quot;</span><span class="o">:</span> <span class="s2">&quot;白色&quot;</span><span class="p">,</span>
-                    <span class="s2">&quot;s_model&quot;</span><span class="o">:</span> <span class="s2">&quot;&quot;</span><span class="p">,</span>
-                    <span class="s2">&quot;s_weight&quot;</span><span class="o">:</span> <span class="s2">&quot;20.00&quot;</span><span class="p">,</span>
-                    <span class="s2">&quot;sale_price&quot;</span><span class="o">:</span> <span class="s2">&quot;269.00&quot;</span><span class="p">,</span>  <span class="c1">// 折扣价</span>
-                    <span class="s2">&quot;stock_count&quot;</span><span class="o">:</span> <span class="mi">10</span>
+                    <span class="s2">&quot;cover&quot;</span><span class="o">:</span> <span class="s2">&quot;http://0.0.0.0:9000/_uploads/photos/1&quot;</span><span class="p">,</span>
+                    <span class="s2">&quot;cover_id&quot;</span><span class="o">:</span> <span class="mi">1</span><span class="p">,</span>
+                    <span class="s2">&quot;id_code&quot;</span><span class="o">:</span> <span class="s2">&quot;1&quot;</span><span class="p">,</span>
+                    <span class="s2">&quot;mode&quot;</span><span class="o">:</span> <span class="s2">&quot;2 2&quot;</span><span class="p">,</span>
+                    <span class="s2">&quot;price&quot;</span><span class="o">:</span> <span class="mi">2</span><span class="p">,</span>  <span class="c1">// 零售价</span>
+                    <span class="s2">&quot;product_name&quot;</span><span class="o">:</span> <span class="s2">&quot;汽车&quot;</span><span class="p">,</span>
+                    <span class="s2">&quot;product_rid&quot;</span><span class="o">:</span> <span class="s2">&quot;2&quot;</span><span class="p">,</span>
+                    <span class="s2">&quot;rid&quot;</span><span class="o">:</span> <span class="s2">&quot;2&quot;</span><span class="p">,</span>
+                    <span class="s2">&quot;s_color&quot;</span><span class="o">:</span> <span class="s2">&quot;2&quot;</span><span class="p">,</span>
+                    <span class="s2">&quot;s_model&quot;</span><span class="o">:</span> <span class="s2">&quot;2&quot;</span><span class="p">,</span>
+                    <span class="s2">&quot;s_weight&quot;</span><span class="o">:</span> <span class="mi">2</span><span class="p">,</span>
+                    <span class="s2">&quot;sale_price&quot;</span><span class="o">:</span> <span class="mi">2</span><span class="p">,</span>  <span class="c1">// 促销价</span>
+                    <span class="s2">&quot;status&quot;</span><span class="o">:</span> <span class="mi">1</span><span class="p">,</span>  <span class="c1">// 商品状态: 0: 仓库中 1: 出售中  2: 下架中</span>
+                    <span class="s2">&quot;stock_count&quot;</span><span class="o">:</span> <span class="mi">21611</span><span class="p">,</span>
+                    <span class="s2">&quot;stock_quantity&quot;</span><span class="o">:</span> <span class="mi">21611</span><span class="p">,</span>  <span class="c1">// 库存数</span>
+                    <span class="s2">&quot;store_name&quot;</span><span class="o">:</span> <span class="s2">&quot;第一家&quot;</span>  <span class="c1">// 商品所属店铺名称</span>
                 <span class="p">},</span>
-                <span class="s2">&quot;quantity&quot;</span><span class="o">:</span> <span class="mi">1</span><span class="p">,</span>  <span class="c1">// 数量</span>
-                <span class="s2">&quot;rid&quot;</span><span class="o">:</span> <span class="s2">&quot;118280601730&quot;</span><span class="p">,</span>
+                <span class="s2">&quot;quantity&quot;</span><span class="o">:</span> <span class="mi">3</span><span class="p">,</span>
+                <span class="s2">&quot;rid&quot;</span><span class="o">:</span> <span class="s2">&quot;2&quot;</span><span class="p">,</span>
+                <span class="s2">&quot;store_id&quot;</span><span class="o">:</span> <span class="mi">2</span><span class="p">,</span>
                 <span class="s2">&quot;user_id&quot;</span><span class="o">:</span> <span class="mi">2</span>
-            <span class="p">},</span>
-            <span class="p">...</span>
-        <span class="p">],</span>
-        <span class="s2">&quot;total_quantity&quot;</span><span class="o">:</span> <span class="mi">2</span>
+            <span class="p">}</span>
+        <span class="p">]</span>
     <span class="p">},</span>
     <span class="s2">&quot;status&quot;</span><span class="o">:</span> <span class="p">{</span>
         <span class="s2">&quot;code&quot;</span><span class="o">:</span> <span class="mi">200</span><span class="p">,</span>
@@ -390,8 +387,8 @@
 <span class="p">}</span>
 </pre></div>
 </div>
-<p>请求 <code class="docutils literal"><span class="pre">失败</span></code> 返回结果：</p>
-<div class="highlight-javascript"><div class="highlight"><pre><span></span><span class="p">{</span>
+<p>请求 <code class="docutils literal notranslate"><span class="pre">失败</span></code> 返回结果：</p>
+<div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="p">{</span>
     <span class="s2">&quot;status&quot;</span><span class="o">:</span> <span class="p">{</span>
         <span class="s2">&quot;code&quot;</span><span class="o">:</span> <span class="mi">404</span><span class="p">,</span>
         <span class="s2">&quot;message&quot;</span><span class="o">:</span> <span class="s2">&quot;Not Found&quot;</span>
@@ -408,9 +405,9 @@
 <div class="section" id="id7">
 <h3>接口说明<a class="headerlink" href="#id7" title="永久链接至标题">¶</a></h3>
 <ul class="simple">
-<li>API接口请求地址：<code class="docutils literal"><span class="pre">/cart/item_count</span></code></li>
-<li>API接口请求方法：<code class="docutils literal"><span class="pre">GET</span></code></li>
-<li>API接口用户授权：<code class="docutils literal"><span class="pre">token</span></code></li>
+<li>API接口请求地址：<code class="docutils literal notranslate"><span class="pre">/cart/item_count</span></code></li>
+<li>API接口请求方法：<code class="docutils literal notranslate"><span class="pre">GET</span></code></li>
+<li>API接口用户授权：<code class="docutils literal notranslate"><span class="pre">token</span></code></li>
 </ul>
 </div>
 <div class="section" id="id8">
@@ -442,14 +439,14 @@
 </table>
 <p>参考示例：</p>
 <ul class="simple">
-<li>小程序接口请求参数传递：<code class="docutils literal"><span class="pre">/cart/item_count?open_id=123231231</span></code></li>
+<li>小程序接口请求参数传递：<code class="docutils literal notranslate"><span class="pre">/cart/item_count?open_id=123231231</span></code></li>
 </ul>
 </div>
 <div class="section" id="id9">
 <h3>返回示例<a class="headerlink" href="#id9" title="永久链接至标题">¶</a></h3>
 <p>JSON数据格式:</p>
 <p>请求 <strong>正确</strong> 返回结果：</p>
-<div class="highlight-javascript"><div class="highlight"><pre><span></span><span class="p">{</span>
+<div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="p">{</span>
     <span class="s2">&quot;data&quot;</span><span class="o">:</span> <span class="p">{</span>
         <span class="s2">&quot;item_count&quot;</span><span class="o">:</span> <span class="mi">2</span>  <span class="c1">// 购物车中商品总数</span>
     <span class="p">},</span>
@@ -461,8 +458,8 @@
 <span class="p">}</span>
 </pre></div>
 </div>
-<p>请求 <code class="docutils literal"><span class="pre">失败</span></code> 返回结果：</p>
-<div class="highlight-javascript"><div class="highlight"><pre><span></span><span class="p">{</span>
+<p>请求 <code class="docutils literal notranslate"><span class="pre">失败</span></code> 返回结果：</p>
+<div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="p">{</span>
     <span class="s2">&quot;status&quot;</span><span class="o">:</span> <span class="p">{</span>
         <span class="s2">&quot;code&quot;</span><span class="o">:</span> <span class="mi">404</span><span class="p">,</span>
         <span class="s2">&quot;message&quot;</span><span class="o">:</span> <span class="s2">&quot;Not Found&quot;</span>
@@ -479,9 +476,9 @@
 <div class="section" id="id11">
 <h3>接口说明<a class="headerlink" href="#id11" title="永久链接至标题">¶</a></h3>
 <ul class="simple">
-<li>API接口请求地址：<code class="docutils literal"><span class="pre">/cart</span></code></li>
-<li>API接口请求方法：<code class="docutils literal"><span class="pre">POST</span></code></li>
-<li>API接口用户授权：<code class="docutils literal"><span class="pre">token</span></code></li>
+<li>API接口请求地址：<code class="docutils literal notranslate"><span class="pre">/cart</span></code></li>
+<li>API接口请求方法：<code class="docutils literal notranslate"><span class="pre">POST</span></code></li>
+<li>API接口用户授权：<code class="docutils literal notranslate"><span class="pre">token</span></code></li>
 </ul>
 </div>
 <div class="section" id="id12">
@@ -530,7 +527,7 @@
 </tbody>
 </table>
 <p>参考示例：</p>
-<div class="highlight-javascript"><div class="highlight"><pre><span></span><span class="p">{</span>
+<div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="p">{</span>
     <span class="s2">&quot;open_id&quot;</span><span class="o">:</span><span class="s2">&quot;12312321343&quot;</span><span class="p">,</span>
     <span class="s2">&quot;rid&quot;</span><span class="o">:</span><span class="s2">&quot;12&quot;</span><span class="p">,</span>
     <span class="s2">&quot;quantity&quot;</span><span class="o">:</span><span class="mi">3</span><span class="p">,</span>
@@ -543,40 +540,45 @@
 <h3>返回示例<a class="headerlink" href="#id13" title="永久链接至标题">¶</a></h3>
 <p>JSON数据格式:</p>
 <p>请求 <strong>正确</strong> 返回结果：</p>
-<div class="highlight-javascript"><div class="highlight"><pre><span></span><span class="p">{</span>
+<div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="p">{</span>
     <span class="s2">&quot;data&quot;</span><span class="o">:</span> <span class="p">{</span>
         <span class="s2">&quot;cart&quot;</span><span class="o">:</span> <span class="p">{</span>
-            <span class="s2">&quot;option&quot;</span><span class="o">:</span> <span class="kc">null</span><span class="p">,</span>
+            <span class="s2">&quot;option&quot;</span><span class="o">:</span> <span class="s2">&quot;其他&quot;</span><span class="p">,</span>
             <span class="s2">&quot;product&quot;</span><span class="o">:</span> <span class="p">{</span>
-                <span class="s2">&quot;cost_price&quot;</span><span class="o">:</span> <span class="s2">&quot;24.00&quot;</span><span class="p">,</span>
-                <span class="s2">&quot;cover&quot;</span><span class="o">:</span> <span class="s2">&quot;http://xxx/_uploads/photos/180202/f51932c571ba21f.jpg&quot;</span><span class="p">,</span>
-                <span class="s2">&quot;id_code&quot;</span><span class="o">:</span> <span class="s2">&quot;&quot;</span><span class="p">,</span>
-                <span class="s2">&quot;mode&quot;</span><span class="o">:</span> <span class="s2">&quot;棕色&quot;</span><span class="p">,</span>
-                <span class="s2">&quot;price&quot;</span><span class="o">:</span> <span class="s2">&quot;68.00&quot;</span><span class="p">,</span>
-                <span class="s2">&quot;product_name&quot;</span><span class="o">:</span> <span class="s2">&quot;数据大仙&quot;</span><span class="p">,</span>
-                <span class="s2">&quot;rid&quot;</span><span class="o">:</span> <span class="s2">&quot;118020098269&quot;</span><span class="p">,</span>
-                <span class="s2">&quot;s_color&quot;</span><span class="o">:</span> <span class="s2">&quot;棕色&quot;</span><span class="p">,</span>
-                <span class="s2">&quot;s_model&quot;</span><span class="o">:</span> <span class="s2">&quot;&quot;</span><span class="p">,</span>
-                <span class="s2">&quot;s_weight&quot;</span><span class="o">:</span> <span class="s2">&quot;0.00&quot;</span><span class="p">,</span>
-                <span class="s2">&quot;sale_price&quot;</span><span class="o">:</span> <span class="s2">&quot;0.00&quot;</span><span class="p">,</span>
-                <span class="s2">&quot;stock_count&quot;</span><span class="o">:</span> <span class="mi">0</span>
+               <span class="s2">&quot;cover&quot;</span><span class="o">:</span> <span class="s2">&quot;http://0.0.0.0:9000/_uploads/photos/1&quot;</span><span class="p">,</span>
+                <span class="s2">&quot;cover_id&quot;</span><span class="o">:</span> <span class="mi">1</span><span class="p">,</span>
+                <span class="s2">&quot;id_code&quot;</span><span class="o">:</span> <span class="s2">&quot;1&quot;</span><span class="p">,</span>
+                <span class="s2">&quot;mode&quot;</span><span class="o">:</span> <span class="s2">&quot;2 2&quot;</span><span class="p">,</span>
+                <span class="s2">&quot;price&quot;</span><span class="o">:</span> <span class="mi">2</span><span class="p">,</span>  <span class="c1">// 零售价</span>
+                <span class="s2">&quot;product_name&quot;</span><span class="o">:</span> <span class="s2">&quot;汽车&quot;</span><span class="p">,</span>
+                <span class="s2">&quot;product_rid&quot;</span><span class="o">:</span> <span class="s2">&quot;2&quot;</span><span class="p">,</span>
+                <span class="s2">&quot;rid&quot;</span><span class="o">:</span> <span class="s2">&quot;2&quot;</span><span class="p">,</span>
+                <span class="s2">&quot;s_color&quot;</span><span class="o">:</span> <span class="s2">&quot;2&quot;</span><span class="p">,</span>
+                <span class="s2">&quot;s_model&quot;</span><span class="o">:</span> <span class="s2">&quot;2&quot;</span><span class="p">,</span>
+                <span class="s2">&quot;s_weight&quot;</span><span class="o">:</span> <span class="mi">2</span><span class="p">,</span>
+                <span class="s2">&quot;sale_price&quot;</span><span class="o">:</span> <span class="mi">2</span><span class="p">,</span>  <span class="c1">// 促销价</span>
+                <span class="s2">&quot;status&quot;</span><span class="o">:</span> <span class="mi">1</span><span class="p">,</span>  <span class="c1">// 商品状态: 0: 仓库中 1: 出售中  2: 下架中</span>
+                <span class="s2">&quot;stock_count&quot;</span><span class="o">:</span> <span class="mi">21611</span><span class="p">,</span>
+                <span class="s2">&quot;stock_quantity&quot;</span><span class="o">:</span> <span class="mi">21611</span><span class="p">,</span>  <span class="c1">// 库存数</span>
+                <span class="s2">&quot;store_name&quot;</span><span class="o">:</span> <span class="s2">&quot;第一家&quot;</span>  <span class="c1">// 商品所属店铺名称</span>
             <span class="p">},</span>
-            <span class="s2">&quot;quantity&quot;</span><span class="o">:</span> <span class="mi">2</span><span class="p">,</span>  <span class="c1">// 数量</span>
-            <span class="s2">&quot;rid&quot;</span><span class="o">:</span> <span class="s2">&quot;118020098269&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;quantity&quot;</span><span class="o">:</span> <span class="mi">4</span><span class="p">,</span>
+            <span class="s2">&quot;rid&quot;</span><span class="o">:</span> <span class="s2">&quot;1&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;store_id&quot;</span><span class="o">:</span> <span class="mi">2</span><span class="p">,</span>
             <span class="s2">&quot;user_id&quot;</span><span class="o">:</span> <span class="mi">2</span>
         <span class="p">},</span>
-        <span class="s2">&quot;item_count&quot;</span><span class="o">:</span> <span class="mi">3</span>  <span class="c1">// 购物车中商品总数</span>
+        <span class="s2">&quot;item_count&quot;</span><span class="o">:</span> <span class="mi">7</span>  <span class="c1">// 购物车中商品总数</span>
     <span class="p">},</span>
     <span class="s2">&quot;status&quot;</span><span class="o">:</span> <span class="p">{</span>
-        <span class="s2">&quot;code&quot;</span><span class="o">:</span> <span class="mi">201</span><span class="p">,</span>
-        <span class="s2">&quot;message&quot;</span><span class="o">:</span> <span class="s2">&quot;All created.&quot;</span>
+        <span class="s2">&quot;code&quot;</span><span class="o">:</span> <span class="mi">200</span><span class="p">,</span>
+        <span class="s2">&quot;message&quot;</span><span class="o">:</span> <span class="s2">&quot;Ok all right.&quot;</span>
     <span class="p">},</span>
     <span class="s2">&quot;success&quot;</span><span class="o">:</span> <span class="kc">true</span>
 <span class="p">}</span>
 </pre></div>
 </div>
-<p>请求 <code class="docutils literal"><span class="pre">失败</span></code> 返回结果：</p>
-<div class="highlight-javascript"><div class="highlight"><pre><span></span><span class="p">{</span>
+<p>请求 <code class="docutils literal notranslate"><span class="pre">失败</span></code> 返回结果：</p>
+<div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="p">{</span>
   <span class="s2">&quot;status&quot;</span><span class="o">:</span> <span class="p">{</span>
     <span class="s2">&quot;code&quot;</span><span class="o">:</span> <span class="mi">401</span><span class="p">,</span>
     <span class="s2">&quot;message&quot;</span><span class="o">:</span> <span class="s2">&quot;Unauthorized access.&quot;</span>
@@ -601,9 +603,9 @@
 <div class="section" id="id15">
 <h3>接口说明<a class="headerlink" href="#id15" title="永久链接至标题">¶</a></h3>
 <ul class="simple">
-<li>API接口请求地址：<code class="docutils literal"><span class="pre">/cart</span></code></li>
-<li>API接口请求方法：<code class="docutils literal"><span class="pre">PUT</span></code></li>
-<li>API接口用户授权：<code class="docutils literal"><span class="pre">token</span></code></li>
+<li>API接口请求地址：<code class="docutils literal notranslate"><span class="pre">/cart</span></code></li>
+<li>API接口请求方法：<code class="docutils literal notranslate"><span class="pre">PUT</span></code></li>
+<li>API接口用户授权：<code class="docutils literal notranslate"><span class="pre">token</span></code></li>
 </ul>
 </div>
 <div class="section" id="id16">
@@ -652,7 +654,7 @@
 </tbody>
 </table>
 <p>参考示例：</p>
-<div class="highlight-javascript"><div class="highlight"><pre><span></span><span class="p">{</span>
+<div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="p">{</span>
     <span class="s2">&quot;open_id&quot;</span><span class="o">:</span><span class="s2">&quot;12312321343&quot;</span><span class="p">,</span>
     <span class="s2">&quot;rid&quot;</span><span class="o">:</span><span class="s2">&quot;12&quot;</span><span class="p">,</span>
     <span class="s2">&quot;quantity&quot;</span><span class="o">:</span><span class="mi">3</span><span class="p">,</span>
@@ -665,36 +667,47 @@
 <h3>返回示例<a class="headerlink" href="#id17" title="永久链接至标题">¶</a></h3>
 <p>JSON数据格式:</p>
 <p>请求 <strong>正确</strong> 返回结果：</p>
-<div class="highlight-javascript"><div class="highlight"><pre><span></span><span class="p">{</span>
-  <span class="s2">&quot;data&quot;</span><span class="o">:</span> <span class="p">{</span>
-    <span class="s2">&quot;option&quot;</span><span class="o">:</span> <span class="kc">null</span><span class="p">,</span>
-    <span class="s2">&quot;product&quot;</span><span class="o">:</span> <span class="p">{</span>
-      <span class="s2">&quot;cost_price&quot;</span><span class="o">:</span> <span class="s2">&quot;24.00&quot;</span><span class="p">,</span>
-      <span class="s2">&quot;cover&quot;</span><span class="o">:</span> <span class="s2">&quot;/static/img/mic_logo180x180.jpg&quot;</span><span class="p">,</span>
-      <span class="s2">&quot;id_code&quot;</span><span class="o">:</span> <span class="s2">&quot;&quot;</span><span class="p">,</span>
-      <span class="s2">&quot;mode&quot;</span><span class="o">:</span> <span class="s2">&quot;iPhoneX 白色&quot;</span><span class="p">,</span>
-      <span class="s2">&quot;product_name&quot;</span><span class="o">:</span> <span class="s2">&quot;iPhoneX 手机壳&quot;</span><span class="p">,</span>
-      <span class="s2">&quot;rid&quot;</span><span class="o">:</span> <span class="s2">&quot;117280969019&quot;</span><span class="p">,</span>
-      <span class="s2">&quot;s_color&quot;</span><span class="o">:</span> <span class="s2">&quot;白色&quot;</span><span class="p">,</span>
-      <span class="s2">&quot;s_model&quot;</span><span class="o">:</span> <span class="s2">&quot;iPhoneX&quot;</span><span class="p">,</span>
-      <span class="s2">&quot;s_weight&quot;</span><span class="o">:</span> <span class="s2">&quot;0.00&quot;</span><span class="p">,</span>
-      <span class="s2">&quot;sale_price&quot;</span><span class="o">:</span> <span class="s2">&quot;69.00&quot;</span><span class="p">,</span>
-      <span class="s2">&quot;stock_count&quot;</span><span class="o">:</span> <span class="mi">10</span>
+<div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="p">{</span>
+    <span class="s2">&quot;data&quot;</span><span class="o">:</span> <span class="p">{</span>
+        <span class="s2">&quot;cart&quot;</span><span class="o">:</span> <span class="p">{</span>
+            <span class="s2">&quot;option&quot;</span><span class="o">:</span> <span class="kc">null</span><span class="p">,</span>
+            <span class="s2">&quot;product&quot;</span><span class="o">:</span> <span class="p">{</span>
+                <span class="s2">&quot;option&quot;</span><span class="o">:</span> <span class="s2">&quot;其他&quot;</span><span class="p">,</span>
+                <span class="s2">&quot;product&quot;</span><span class="o">:</span> <span class="p">{</span>
+                    <span class="s2">&quot;cover&quot;</span><span class="o">:</span> <span class="s2">&quot;http://0.0.0.0:9000/_uploads/photos/1&quot;</span><span class="p">,</span>
+                    <span class="s2">&quot;cover_id&quot;</span><span class="o">:</span> <span class="mi">1</span><span class="p">,</span>
+                    <span class="s2">&quot;id_code&quot;</span><span class="o">:</span> <span class="s2">&quot;1&quot;</span><span class="p">,</span>
+                    <span class="s2">&quot;mode&quot;</span><span class="o">:</span> <span class="s2">&quot;2 2&quot;</span><span class="p">,</span>
+                    <span class="s2">&quot;price&quot;</span><span class="o">:</span> <span class="mi">2</span><span class="p">,</span>  <span class="c1">// 零售价</span>
+                    <span class="s2">&quot;product_name&quot;</span><span class="o">:</span> <span class="s2">&quot;汽车&quot;</span><span class="p">,</span>
+                    <span class="s2">&quot;product_rid&quot;</span><span class="o">:</span> <span class="s2">&quot;2&quot;</span><span class="p">,</span>
+                    <span class="s2">&quot;rid&quot;</span><span class="o">:</span> <span class="s2">&quot;2&quot;</span><span class="p">,</span>
+                    <span class="s2">&quot;s_color&quot;</span><span class="o">:</span> <span class="s2">&quot;2&quot;</span><span class="p">,</span>
+                    <span class="s2">&quot;s_model&quot;</span><span class="o">:</span> <span class="s2">&quot;2&quot;</span><span class="p">,</span>
+                    <span class="s2">&quot;s_weight&quot;</span><span class="o">:</span> <span class="mi">2</span><span class="p">,</span>
+                    <span class="s2">&quot;sale_price&quot;</span><span class="o">:</span> <span class="mi">2</span><span class="p">,</span>  <span class="c1">// 促销价</span>
+                    <span class="s2">&quot;status&quot;</span><span class="o">:</span> <span class="mi">1</span><span class="p">,</span>  <span class="c1">// 商品状态: 0: 仓库中 1: 出售中  2: 下架中</span>
+                    <span class="s2">&quot;stock_count&quot;</span><span class="o">:</span> <span class="mi">21611</span><span class="p">,</span>
+                    <span class="s2">&quot;stock_quantity&quot;</span><span class="o">:</span> <span class="mi">21611</span><span class="p">,</span>  <span class="c1">// 库存数</span>
+                    <span class="s2">&quot;store_name&quot;</span><span class="o">:</span> <span class="s2">&quot;第一家&quot;</span>  <span class="c1">// 商品所属店铺名称</span>
+                <span class="p">},</span>
+                <span class="s2">&quot;quantity&quot;</span><span class="o">:</span> <span class="mi">3</span><span class="p">,</span>  <span class="c1">// 购买数量</span>
+                <span class="s2">&quot;rid&quot;</span><span class="o">:</span> <span class="s2">&quot;2&quot;</span><span class="p">,</span>  <span class="c1">// sku</span>
+                <span class="s2">&quot;store_id&quot;</span><span class="o">:</span> <span class="mi">2</span><span class="p">,</span>
+                <span class="s2">&quot;user_id&quot;</span><span class="o">:</span> <span class="mi">2</span>  <span class="c1">// 用户id</span>
+            <span class="p">},</span>
+        <span class="s2">&quot;item_count&quot;</span><span class="o">:</span> <span class="mi">3</span>  <span class="c1">// 购物车中商品总数</span>
     <span class="p">},</span>
-    <span class="s2">&quot;quantity&quot;</span><span class="o">:</span> <span class="mi">1</span><span class="p">,</span>
-    <span class="s2">&quot;rid&quot;</span><span class="o">:</span> <span class="s2">&quot;117280969019&quot;</span><span class="p">,</span>
-    <span class="s2">&quot;user_id&quot;</span><span class="o">:</span> <span class="mi">1</span>
-  <span class="p">},</span>
-  <span class="s2">&quot;status&quot;</span><span class="o">:</span> <span class="p">{</span>
-    <span class="s2">&quot;code&quot;</span><span class="o">:</span> <span class="mi">200</span><span class="p">,</span>
-    <span class="s2">&quot;message&quot;</span><span class="o">:</span> <span class="s2">&quot;Ok all right.&quot;</span>
-  <span class="p">},</span>
-  <span class="s2">&quot;success&quot;</span><span class="o">:</span> <span class="kc">true</span>
+    <span class="s2">&quot;status&quot;</span><span class="o">:</span> <span class="p">{</span>
+        <span class="s2">&quot;code&quot;</span><span class="o">:</span> <span class="mi">201</span><span class="p">,</span>
+        <span class="s2">&quot;message&quot;</span><span class="o">:</span> <span class="s2">&quot;All created.&quot;</span>
+    <span class="p">},</span>
+    <span class="s2">&quot;success&quot;</span><span class="o">:</span> <span class="kc">true</span>
 <span class="p">}</span>
 </pre></div>
 </div>
-<p>请求 <code class="docutils literal"><span class="pre">失败</span></code> 返回结果：</p>
-<div class="highlight-javascript"><div class="highlight"><pre><span></span><span class="p">{</span>
+<p>请求 <code class="docutils literal notranslate"><span class="pre">失败</span></code> 返回结果：</p>
+<div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="p">{</span>
   <span class="s2">&quot;status&quot;</span><span class="o">:</span> <span class="p">{</span>
     <span class="s2">&quot;code&quot;</span><span class="o">:</span> <span class="mi">401</span><span class="p">,</span>
     <span class="s2">&quot;message&quot;</span><span class="o">:</span> <span class="s2">&quot;Unauthorized access.&quot;</span>
@@ -719,9 +732,9 @@
 <div class="section" id="id19">
 <h3>接口说明<a class="headerlink" href="#id19" title="永久链接至标题">¶</a></h3>
 <ul class="simple">
-<li>API接口请求地址：<code class="docutils literal"><span class="pre">/cart/remove</span></code></li>
-<li>API接口请求方法：<code class="docutils literal"><span class="pre">POST</span></code></li>
-<li>API接口用户授权：<code class="docutils literal"><span class="pre">token</span></code></li>
+<li>API接口请求地址：<code class="docutils literal notranslate"><span class="pre">/cart/remove</span></code></li>
+<li>API接口请求方法：<code class="docutils literal notranslate"><span class="pre">POST</span></code></li>
+<li>API接口用户授权：<code class="docutils literal notranslate"><span class="pre">token</span></code></li>
 </ul>
 </div>
 <div class="section" id="id20">
@@ -758,7 +771,7 @@
 </tbody>
 </table>
 <p>参考示例：</p>
-<div class="highlight-javascript"><div class="highlight"><pre><span></span><span class="p">{</span>
+<div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="p">{</span>
     <span class="s2">&quot;open_id&quot;</span><span class="o">:</span><span class="s2">&quot;12312321343&quot;</span><span class="p">,</span>
     <span class="s2">&quot;rids&quot;</span><span class="o">:</span><span class="p">[</span><span class="s2">&quot;12&quot;</span><span class="p">,</span><span class="s2">&quot;22&quot;</span><span class="p">]</span>
 <span class="p">}</span>
@@ -769,7 +782,7 @@
 <h3>返回示例<a class="headerlink" href="#id21" title="永久链接至标题">¶</a></h3>
 <p>JSON数据格式:</p>
 <p>请求 <strong>正确</strong> 返回结果：</p>
-<div class="highlight-javascript"><div class="highlight"><pre><span></span><span class="p">{</span>
+<div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="p">{</span>
     <span class="s2">&quot;data&quot;</span><span class="o">:</span> <span class="p">{</span>
         <span class="s2">&quot;item_count&quot;</span><span class="o">:</span> <span class="mi">2</span>  <span class="c1">// 购物车剩余数量</span>
     <span class="p">},</span>
@@ -781,8 +794,8 @@
 <span class="p">}</span>
 </pre></div>
 </div>
-<p>请求 <code class="docutils literal"><span class="pre">失败</span></code> 返回结果：</p>
-<div class="highlight-javascript"><div class="highlight"><pre><span></span><span class="p">{</span>
+<p>请求 <code class="docutils literal notranslate"><span class="pre">失败</span></code> 返回结果：</p>
+<div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="p">{</span>
   <span class="s2">&quot;status&quot;</span><span class="o">:</span> <span class="p">{</span>
     <span class="s2">&quot;code&quot;</span><span class="o">:</span> <span class="mi">404</span><span class="p">,</span>
     <span class="s2">&quot;message&quot;</span><span class="o">:</span> <span class="s2">&quot;Not Found&quot;</span>
@@ -799,9 +812,9 @@
 <div class="section" id="id23">
 <h3>接口说明<a class="headerlink" href="#id23" title="永久链接至标题">¶</a></h3>
 <ul class="simple">
-<li>API接口请求地址：<code class="docutils literal"><span class="pre">/cart</span></code></li>
-<li>API接口请求方法：<code class="docutils literal"><span class="pre">DELETE</span></code></li>
-<li>API接口用户授权：<code class="docutils literal"><span class="pre">token</span></code></li>
+<li>API接口请求地址：<code class="docutils literal notranslate"><span class="pre">/cart</span></code></li>
+<li>API接口请求方法：<code class="docutils literal notranslate"><span class="pre">DELETE</span></code></li>
+<li>API接口用户授权：<code class="docutils literal notranslate"><span class="pre">token</span></code></li>
 </ul>
 </div>
 <div class="section" id="id24">
@@ -832,7 +845,7 @@
 </tbody>
 </table>
 <p>参考示例：</p>
-<div class="highlight-javascript"><div class="highlight"><pre><span></span><span class="p">{</span>
+<div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="p">{</span>
     <span class="s2">&quot;open_id&quot;</span><span class="o">:</span><span class="s2">&quot;12312321343&quot;</span>
 <span class="p">}</span>
 </pre></div>
@@ -842,7 +855,7 @@
 <h3>返回示例<a class="headerlink" href="#id25" title="永久链接至标题">¶</a></h3>
 <p>JSON数据格式:</p>
 <p>请求 <strong>正确</strong> 返回结果：</p>
-<div class="highlight-javascript"><div class="highlight"><pre><span></span><span class="p">{</span>
+<div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="p">{</span>
     <span class="s2">&quot;data&quot;</span><span class="o">:</span> <span class="p">{</span>
         <span class="s2">&quot;item_count&quot;</span><span class="o">:</span> <span class="mi">0</span>
     <span class="p">},</span>
@@ -854,8 +867,8 @@
 <span class="p">}</span>
 </pre></div>
 </div>
-<p>请求 <code class="docutils literal"><span class="pre">失败</span></code> 返回结果：</p>
-<div class="highlight-javascript"><div class="highlight"><pre><span></span><span class="p">{</span>
+<p>请求 <code class="docutils literal notranslate"><span class="pre">失败</span></code> 返回结果：</p>
+<div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="p">{</span>
   <span class="s2">&quot;status&quot;</span><span class="o">:</span> <span class="p">{</span>
     <span class="s2">&quot;code&quot;</span><span class="o">:</span> <span class="mi">404</span><span class="p">,</span>
     <span class="s2">&quot;message&quot;</span><span class="o">:</span> <span class="s2">&quot;Not Found&quot;</span>
