@@ -9,7 +9,7 @@
 接口说明
 ~~~~~~~~~~~~~~
 
-* API接口请求地址：``/users``
+* API接口请求地址：``/users/profile``
 * API接口请求方法：``GET``
 * API接口用户授权：``token``
 
@@ -21,19 +21,41 @@ JSON数据格式:
 .. code-block:: javascript
 
     {
-      "data": {
-        "email": "test@mixpu.com",
-        "last_seen": 1511335583,
-        "uid": "12497380613",
-        "username": "updatename"
-      },
-      "status": {
-        "code": 200,
-        "message": "Ok all right."
-      },
-      "success": true
+        "data": {
+            "about_me": "我是个好人",
+            "avatar": {
+                "created_at": null,
+                "filename": "a",
+                "filepath": "http://127.0.0.1:9000/_uploads/photos/222222/5d2812257b539aa.jpg",
+                "id": 1,
+                "type": null,
+                "view_url": "http://0.0.0.0:9000/_uploads/photos/http://127.0.0.1:9000/_uploads/photos/222222/5d2812257b539aa.jpg"  // 头像url
+            },
+            "avatar_id": 1,  // 头像ID
+            "city": "北京",
+            "city_id": 1,
+            "country": "中国",
+            "country_id": 1,
+            "created_at": 1531125527,  // 创建时间
+            "date": "1992-12-26",  // 生日
+            "description": null,
+            "email": "13001179400",
+            "gender": 0,
+            "last_seen": 1531563816,
+            "mail": "asd@163.com",  // 邮箱
+            "master_uid": 2,
+            "mobile": null,
+            "province": "北京",
+            "province_id": 1,
+            "uid": "19138405762",
+            "username": "盖世火锅" // 用户名
+        },
+        "status": {
+            "code": 200,
+            "message": "Ok all right."
+        },
+        "success": true
     }
-
 
 
 
@@ -55,7 +77,7 @@ JSON数据格式:
 ===============  ========  =========  ========  ====================================
 名称              类型      是否必须    默认值     描述说明
 ===============  ========  =========  ========  ====================================
-username         String     必须                 昵称 - 必须保持唯一
+username         String     可选                 昵称 - 必须保持唯一
 avatar_id        Integer    可选                 用户头像ID
 about_me         String     可选                 个人介绍
 gender           Integer    可选          0      性别
@@ -74,32 +96,50 @@ JSON数据格式
 正确结果格式::
 
     {
-      "data": {
-        "about_me": "小孩很可爱",
-        "description": null,
-        "email": "test@mixpu.com",
-        "last_seen": 1511335583,
-        "master_uid": 0,
-        "mobile": null,
-        "name": "天小山",
-        "uid": "12497380613",
-        "username": "demo01"
-      },
-      "status": {
-        "code": 200,
-        "message": "Ok all right."
-      },
-      "success": true
+        "data": {
+            "about_me": "我是个好人",
+            "avatar": {
+                "created_at": null,
+                "filename": "a",
+                "filepath": "http://127.0.0.1:9000/_uploads/photos/222222/5d2812257b539aa.jpg",
+                "id": 1,
+                "type": null,
+                "view_url": "http://0.0.0.0:9000/_uploads/photos/http://127.0.0.1:9000/_uploads/photos/222222/5d2812257b539aa.jpg"  // 头像url
+            },
+            "avatar_id": 1,  // 头像ID
+            "city": "北京",
+            "city_id": 1,
+            "country": "中国",
+            "country_id": 1,
+            "created_at": 1531125527,  // 创建时间
+            "date": "1992-12-26",  // 生日
+            "description": null,
+            "email": "13001179400",
+            "gender": 0,
+            "last_seen": 1531563816,
+            "mail": "asd@163.com",  // 邮箱
+            "master_uid": 2,
+            "mobile": null,
+            "province": "北京",
+            "province_id": 1,
+            "uid": "19138405762",
+            "username": "盖世火锅" // 用户名
+        },
+        "status": {
+            "code": 200,
+            "message": "Ok all right."
+        },
+        "success": true
     }
 
 错误结果格式::
 
     {
-      "status": {
-        "code": 400,
-        "message": "demo already existed!"
-      },
-      "success": false
+        "status": {
+            "code": 400,
+            "message": "盖世火锅 already existed!"
+        },
+        "success": false
     }
 
 
