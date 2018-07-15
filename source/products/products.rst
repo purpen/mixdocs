@@ -640,6 +640,77 @@ JSON数据格式:
     }
 
 
+SKU信息
+----------------
+根据sku编号获取该商品sku的详细信息
+
+接口说明
+~~~~~~~~~~~~~~
+
+* API接口请求地址：``/products/by_sku``
+* API接口请求方法：``GET``
+
+请求参数
+~~~~~~~~~~~~~~~
+
+===========  ========  =========  ========  ====================================
+名称          类型      是否必须    默认值     描述说明
+===========  ========  =========  ========  ====================================
+rid          String    必须                  sku id, 如批量请求，请逗号隔开
+===========  ========  =========  ========  ====================================
+
+返回示例
+~~~~~~~~~~~~~~~~
+
+JSON数据格式:
+
+请求 **正确** 返回结果：
+
+.. code-block:: javascript
+
+    {
+        "data": {
+            "8207431865": {
+                "cover": "http://127.0.0.1:9000/_uploads/photos/180707/912fc59a8199d04.jpg",
+                "cover_id": 4,
+                "fid": "11111",
+                "mode": "大 白色",
+                "price": 1234.5,
+                "product_name": "商品名",
+                "rid": "8207431865",
+                "s_color": "白色",
+                "s_model": "大",
+                "s_weight": 2.5,
+                "sale_price": 1145,
+                "stock_count": 5,
+                "stock_quantity": 5,
+                "store_name": "店铺名"
+            },
+            "8601459278": {
+                "cover": "http://kg.erp.taihuoniao.com/static/img/default-logo-180x180.png",
+                "cover_id": null,
+                "fid": "",
+                "mode": "中 黑色",
+                "price": 2,
+                "product_name": "商品名",
+                "rid": "8601459278",
+                "s_color": "黑色",
+                "s_model": "中",
+                "s_weight": 2.5,
+                "sale_price": 0,
+                "stock_count": 15,
+                "stock_quantity": 15,
+                "store_name": "分销商品2"
+            }
+        },
+        "status": {
+            "code": 200,
+            "message": "Ok all right."
+        },
+        "success": true
+    }
+
+
 商品SKU信息
 ----------------
 获取商品的SKU信息
