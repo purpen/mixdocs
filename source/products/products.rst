@@ -1401,6 +1401,7 @@ rid                    String      必须                     商品编号
 fid                    String      必须                     运费模板编号
 product_return_policy  String      必须                     退换货规则
 is_distributed         Bool        必须                     商品是否分销
+commission_rate        Number      可选                     佣金比率
 skus                   Array       必须                     商品sku信息
 
 sku参数信息
