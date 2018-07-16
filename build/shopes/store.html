@@ -92,8 +92,7 @@
 <li class="toctree-l2"><a class="reference internal" href="../products/models.html">商品规格模块</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../products/labels.html">标签模块</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../products/return_policies.html">商家退换货规则模块</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../products/wish.html">心愿清单模块</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../products/user_like.html">用户喜欢模块</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../products/user_record.html">用户商品记录模块</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../products/assets.html">附件模块</a></li>
 </ul>
 </li>
@@ -272,6 +271,12 @@
 <li><a class="reference internal" href="#id65">返回示例</a></li>
 </ul>
 </li>
+<li><a class="reference internal" href="#id66">跟新分销设置</a><ul>
+<li><a class="reference internal" href="#id67">接口说明</a></li>
+<li><a class="reference internal" href="#id68">请求参数</a></li>
+<li><a class="reference internal" href="#id69">返回示例</a></li>
+</ul>
+</li>
 </ul>
 </li>
 </ul>
@@ -400,6 +405,12 @@
 <li><a class="reference internal" href="#id63">获取申请小程序信息</a><ul>
 <li><a class="reference internal" href="#id64">接口说明</a></li>
 <li><a class="reference internal" href="#id65">返回示例</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#id66">跟新分销设置</a><ul>
+<li><a class="reference internal" href="#id67">接口说明</a></li>
+<li><a class="reference internal" href="#id68">请求参数</a></li>
+<li><a class="reference internal" href="#id69">返回示例</a></li>
 </ul>
 </li>
 </ul>
@@ -1801,6 +1812,78 @@
     <span class="s2">&quot;status&quot;</span><span class="o">:</span> <span class="p">{</span>
         <span class="s2">&quot;code&quot;</span><span class="o">:</span> <span class="mi">201</span><span class="p">,</span>
         <span class="s2">&quot;message&quot;</span><span class="o">:</span> <span class="s2">&quot;All created.&quot;</span>
+    <span class="p">},</span>
+    <span class="s2">&quot;success&quot;</span><span class="o">:</span> <span class="kc">true</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<p>请求 <code class="docutils literal"><span class="pre">失败</span></code> 返回结果：</p>
+<div class="highlight-javascript"><div class="highlight"><pre><span></span><span class="p">{</span>
+    <span class="s2">&quot;status&quot;</span><span class="o">:</span> <span class="p">{</span>
+        <span class="s2">&quot;code&quot;</span><span class="o">:</span> <span class="mi">404</span><span class="p">,</span>
+        <span class="s2">&quot;message&quot;</span><span class="o">:</span> <span class="s2">&quot;Not Found&quot;</span>
+    <span class="p">},</span>
+    <span class="s2">&quot;success&quot;</span><span class="o">:</span> <span class="kc">false</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="id66">
+<h2>跟新分销设置<a class="headerlink" href="#id66" title="永久链接至标题">¶</a></h2>
+<div class="section" id="id67">
+<h3>接口说明<a class="headerlink" href="#id67" title="永久链接至标题">¶</a></h3>
+<ul class="simple">
+<li>API接口请求地址：<code class="docutils literal"><span class="pre">/store/update_distribution_type</span></code></li>
+<li>API接口请求方法：<code class="docutils literal"><span class="pre">POST</span></code></li>
+<li>API接口用户授权：<code class="docutils literal"><span class="pre">token</span></code></li>
+</ul>
+</div>
+<div class="section" id="id68">
+<h3>请求参数<a class="headerlink" href="#id68" title="永久链接至标题">¶</a></h3>
+<table border="1" class="docutils">
+<colgroup>
+<col width="21%" />
+<col width="10%" />
+<col width="9%" />
+<col width="10%" />
+<col width="50%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">名称</th>
+<th class="head">类型</th>
+<th class="head">是否必须</th>
+<th class="head">默认值</th>
+<th class="head">描述说明</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>rid</td>
+<td>String</td>
+<td>必须</td>
+<td>&#160;</td>
+<td>店铺编号</td>
+</tr>
+<tr class="row-odd"><td>distribution_type</td>
+<td>Integer</td>
+<td>可选</td>
+<td>0</td>
+<td>店铺分销设置: 0、不分销  1、全品分销  2、单品分销</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="id69">
+<h3>返回示例<a class="headerlink" href="#id69" title="永久链接至标题">¶</a></h3>
+<p>JSON数据格式</p>
+<p>请求 <strong>正确</strong> 返回结果：</p>
+<div class="highlight-javascript"><div class="highlight"><pre><span></span><span class="p">{</span>
+    <span class="s2">&quot;data&quot;</span><span class="o">:</span> <span class="p">{</span>
+        <span class="s2">&quot;distribution_type&quot;</span><span class="o">:</span> <span class="mi">0</span>
+    <span class="p">},</span>
+    <span class="s2">&quot;status&quot;</span><span class="o">:</span> <span class="p">{</span>
+        <span class="s2">&quot;code&quot;</span><span class="o">:</span> <span class="mi">200</span><span class="p">,</span>
+        <span class="s2">&quot;message&quot;</span><span class="o">:</span> <span class="s2">&quot;Ok all right.&quot;</span>
     <span class="p">},</span>
     <span class="s2">&quot;success&quot;</span><span class="o">:</span> <span class="kc">true</span>
 <span class="p">}</span>
