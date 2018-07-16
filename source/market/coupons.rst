@@ -442,7 +442,7 @@ name              String     必填                        活动名称
 start_date        String     必填                        活动开始日期
 end_date          String     必填                        活动结束日期
 coupon_type       Integer    必填           1            优惠券类型 1、同享券 2、单享券
-amount_items      Array      必填                        优惠券信息列表
+items             Array      必填                        优惠券信息列表
 ===============  ========  =============  ============  ============================================
 
 **优惠券信息列表:**
@@ -450,12 +450,12 @@ amount_items      Array      必填                        优惠券信息列表
 ===============  ========  =============  ============  ============================================
 名称               类型       是否必须        默认值         描述说明
 ===============  ========  =============  ============  ============================================
-coupon_items:
+items:
 amount            Number     必填                        优惠券金额
 got_count         Integer    必填                        总数量
 min_amount        Number     必填                        最低金额限制
 days              Integer    必填                        有效天数
-product_rid       Array      可选                        优惠商品列表
+product_rids      Array      可选                        优惠商品列表
 ===============  ========  =============  ============  ============================================
 
 **参考示例**
@@ -467,7 +467,7 @@ product_rid       Array      可选                        优惠商品列表
         "start_date":"2018-06-29",
         "end_date":"2018-07-03",
         "coupon_type":2,
-        "amount_items":[
+        "items":[
             {
                 "amount":1,
                 "min_amount":90,
@@ -538,7 +538,7 @@ JSON数据格式:
 name              String     必填                        活动名称
 start_date        String     必填                        活动开始日期
 end_date          String     必填                        活动结束日期
-amount_items      Array      必填                        满减活动阶梯阶梯
+items             Array      必填                        满减活动阶梯阶梯
 ===============  ========  =============  ============  ============================================
 
 **优惠券信息列表:**
@@ -546,7 +546,7 @@ amount_items      Array      必填                        满减活动阶梯阶
 ===============  ========  =============  ============  ============================================
 名称               类型       是否必须        默认值         描述说明
 ===============  ========  =============  ============  ============================================
-amount_items:
+items:
 amount            Number     必填                        优惠券金额
 reach_amount      Number     必填                        满足金额
 ===============  ========  =============  ============  ============================================
@@ -559,7 +559,7 @@ reach_amount      Number     必填                        满足金额
         "name":"满减活动2",
         "start_date":"2018-06-29",
         "end_date":"2018-07-03",
-        "amount_items":[
+        "items":[
             {
                 "amount":1,
                 "reach_amount":10
@@ -620,7 +620,7 @@ activity_id       Integer    必填
 name              String     可选                        活动名称
 start_date        String     可选                        活动开始日期
 end_date          String     可选                        活动结束日期
-amount_items      Array      可选                        满减活动阶梯阶梯
+items             Array      可选                        满减活动阶梯阶梯
 delete_codes      Array      可选                        删除的优惠券的code
 ===============  ========  =============  ============  ============================================
 
@@ -629,7 +629,7 @@ delete_codes      Array      可选                        删除的优惠券的
 ===============  ========  =============  ============  ============================================
 名称               类型       是否必须        默认值         描述说明
 ===============  ========  =============  ============  ============================================
-amount_items:
+items:
 code              String     必须                        优惠券code,新增也需要
 amount            Number     必填                        优惠券金额
 reach_amount      Number     必填                        满足金额
@@ -647,7 +647,7 @@ reach_amount      Number     必填                        满足金额
         "delete_codes":[
             "UKADNHQYICL"
             ],
-        "amount_items":[
+        "items":[
             {
                 "code":"UVPAEYSMLTB",
                 "amount":100,
@@ -715,7 +715,7 @@ activity_id       Integer    必填
 name              String     可选                        活动名称
 start_date        String     可选                        活动开始日期
 end_date          String     可选                        活动结束日期
-amount_items      Array      可选                        优惠券活动
+items             Array      可选                        优惠券活动
 delete_codes      Array      可选                        删除的优惠券的code
 ===============  ========  =============  ============  ============================================
 
@@ -724,7 +724,7 @@ delete_codes      Array      可选                        删除的优惠券的
 ===============  ========  =============  ============  ============================================
 名称               类型       是否必须        默认值         描述说明
 ===============  ========  =============  ============  ============================================
-amount_items:
+items:
 code              String     必须                        优惠券code,新增也需要
 amount            Number     必填                        优惠券金额
 got_count         Integer    必填                        总数量
@@ -744,7 +744,7 @@ product_rid       Array      可选                        优惠商品列表
         "delete_codes":[
             "UPSUKWOYICN"
             ],
-        "amount_items":[
+        "items":[
             {
                 "code":"UXWJOVRFEDC",
                 "amount":1,
