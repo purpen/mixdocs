@@ -1301,8 +1301,10 @@ JSON数据格式:
 
     {
         "data": {
-            "freight_template_id": 2,
+            "fid": 2,
+            "is_distributed": true,
             "product_return_policy": "退换货规则, 不能小于20个字符.",
+            "return_policy_id": 1,
             "skus": [
                 {
                     "commission_price": 23.33,
@@ -1424,7 +1426,8 @@ commission_rate        Number      可选                     佣金比率
     {
         "sid": "1234567891",
         "rid" : "8390824751",
-        "freight_template_id": 1,
+        "fid": "ft156513594",
+        "return_policy_id": 1,
         "product_return_policy": "退换货规则",
         "status": 0,
         "is_distributed": true,
@@ -1464,8 +1467,10 @@ JSON数据格式:
 
     {
         "data": {
-            "freight_template_id": 2,
+            "fid": 2,
+            "is_distributed": true,
             "product_return_policy": "退换货规则, 不能小于20个字符.",
+            "return_policy_id": 1,
             "skus": [
                 {
                     "commission_rate": 2.34,
