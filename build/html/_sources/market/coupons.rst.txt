@@ -74,7 +74,7 @@ JSON数据格式:
                     "surplus_days": 7,  // 剩余天数
                     "total_quantity": 2000,  // 总数量
                     "type": 2  // 类型
-                    "coupon_items": [
+                    "items": [
                         {
                             "amount": 1,  // 面值
                             "code": "USNAKJEQROH",  // 优惠券代码
@@ -168,7 +168,7 @@ JSON数据格式:
 ~~~~~~~~~~~~~~
 
 * API接口请求地址：``/market/coupons/activity``
-* API接口请求方法：``POST``
+* API接口请求方法：``GET``
 * API接口用户授权：``token``
 
 返回示例
