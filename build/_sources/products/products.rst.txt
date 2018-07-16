@@ -1401,10 +1401,11 @@ rid                    String      必须                     商品编号
 fid                    String      必须                     运费模板编号
 product_return_policy  String      必须                     退换货规则
 is_distributed         Bool        必须                     商品是否分销
+commission_rate        Number      可选                     佣金比率
 skus                   Array       必须                     商品sku信息
 
 sku参数信息
-sku_rid                String      可选                     sku编号,新增时为null
+rid                    String      可选                     sku编号,新增时为null
 cover_id               Number      可选                     封面图ID
 s_color                String      可选                     颜色
 s_model                String      可选                     型号
@@ -1427,9 +1428,10 @@ commission_rate        Number      可选                     佣金比率
         "product_return_policy": "退换货规则",
         "status": 0,
         "is_distributed": true,
+        "commission_rate": 2.5,
         "skus": [
             {
-                "sku_rid": null,
+                "rid": null,
                 "cover_id":  6,
                 "s_color": "黑色",
                 "s_model": "中",
@@ -1440,7 +1442,7 @@ commission_rate        Number      可选                     佣金比率
                 "commission_rate": 2.5
             },
             {
-                "sku_rid": null,
+                "rid": null,
                 "cover_id":  7,
                 "s_color": "蓝色",
                 "s_model": "小",
@@ -1660,7 +1662,7 @@ rid                    String       必须                   商品编号
 skus                   Array        必须                   商品sku信息
 
 sku参数信息
-sku_rid                String      必须                    商品sku编号
+rid                    String      必须                    商品sku编号
 commission_rate        Number      必须                    佣金比率
 =====================  ==========  =========  ==========  =============================
 
@@ -1671,9 +1673,9 @@ commission_rate        Number      必须                    佣金比率
 
     {
      "skus": [
-        {"sku_rid": "118300547193", "commission_rate": 5.50},
-        {"sku_rid": "118300602895", "commission_rate": 13.60},
-        {"sku_rid": "118300401483", "commission_rate": 20},
+        {"sku": "118300547193", "commission_rate": 5.50},
+        {"sku": "118300602895", "commission_rate": 13.60},
+        {"sku": "118300401483", "commission_rate": 20},
       ]
     }
 
