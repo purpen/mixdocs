@@ -640,6 +640,77 @@ JSON数据格式:
     }
 
 
+SKU信息
+----------------
+根据sku编号获取该商品sku的详细信息
+
+接口说明
+~~~~~~~~~~~~~~
+
+* API接口请求地址：``/products/by_sku``
+* API接口请求方法：``GET``
+
+请求参数
+~~~~~~~~~~~~~~~
+
+===========  ========  =========  ========  ====================================
+名称          类型      是否必须    默认值     描述说明
+===========  ========  =========  ========  ====================================
+rid          String    必须                  sku id, 如批量请求，请逗号隔开
+===========  ========  =========  ========  ====================================
+
+返回示例
+~~~~~~~~~~~~~~~~
+
+JSON数据格式:
+
+请求 **正确** 返回结果：
+
+.. code-block:: javascript
+
+    {
+        "data": {
+            "8207431865": {
+                "cover": "http://127.0.0.1:9000/_uploads/photos/180707/912fc59a8199d04.jpg",
+                "cover_id": 4,
+                "fid": "11111",
+                "mode": "大 白色",
+                "price": 1234.5,
+                "product_name": "商品名",
+                "rid": "8207431865",
+                "s_color": "白色",
+                "s_model": "大",
+                "s_weight": 2.5,
+                "sale_price": 1145,
+                "stock_count": 5,
+                "stock_quantity": 5,
+                "store_name": "店铺名"
+            },
+            "8601459278": {
+                "cover": "http://kg.erp.taihuoniao.com/static/img/default-logo-180x180.png",
+                "cover_id": null,
+                "fid": "",
+                "mode": "中 黑色",
+                "price": 2,
+                "product_name": "商品名",
+                "rid": "8601459278",
+                "s_color": "黑色",
+                "s_model": "中",
+                "s_weight": 2.5,
+                "sale_price": 0,
+                "stock_count": 15,
+                "stock_quantity": 15,
+                "store_name": "分销商品2"
+            }
+        },
+        "status": {
+            "code": 200,
+            "message": "Ok all right."
+        },
+        "success": true
+    }
+
+
 商品SKU信息
 ----------------
 获取商品的SKU信息
@@ -1230,8 +1301,10 @@ JSON数据格式:
 
     {
         "data": {
-            "freight_template_id": 2,
+            "fid": 2,
+            "is_distributed": true,
             "product_return_policy": "退换货规则, 不能小于20个字符.",
+            "return_policy_id": 1,
             "skus": [
                 {
                     "commission_price": 23.33,
@@ -1330,10 +1403,11 @@ rid                    String      必须                     商品编号
 fid                    String      必须                     运费模板编号
 product_return_policy  String      必须                     退换货规则
 is_distributed         Bool        必须                     商品是否分销
+commission_rate        Number      可选                     佣金比率
 skus                   Array       必须                     商品sku信息
 
 sku参数信息
-sku_rid                String      可选                     sku编号,新增时为null
+rid                    String      可选                     sku编号,新增时为null
 cover_id               Number      可选                     封面图ID
 s_color                String      可选                     颜色
 s_model                String      可选                     型号
@@ -1352,13 +1426,15 @@ commission_rate        Number      可选                     佣金比率
     {
         "sid": "1234567891",
         "rid" : "8390824751",
-        "freight_template_id": 1,
+        "fid": "ft156513594",
+        "return_policy_id": 1,
         "product_return_policy": "退换货规则",
         "status": 0,
         "is_distributed": true,
+        "commission_rate": 2.5,
         "skus": [
             {
-                "sku_rid": null,
+                "rid": null,
                 "cover_id":  6,
                 "s_color": "黑色",
                 "s_model": "中",
@@ -1369,7 +1445,7 @@ commission_rate        Number      可选                     佣金比率
                 "commission_rate": 2.5
             },
             {
-                "sku_rid": null,
+                "rid": null,
                 "cover_id":  7,
                 "s_color": "蓝色",
                 "s_model": "小",
@@ -1391,8 +1467,10 @@ JSON数据格式:
 
     {
         "data": {
-            "freight_template_id": 2,
+            "fid": 2,
+            "is_distributed": true,
             "product_return_policy": "退换货规则, 不能小于20个字符.",
+            "return_policy_id": 1,
             "skus": [
                 {
                     "commission_rate": 2.34,
@@ -1589,7 +1667,7 @@ rid                    String       必须                   商品编号
 skus                   Array        必须                   商品sku信息
 
 sku参数信息
-sku_rid                String      必须                    商品sku编号
+rid                    String      必须                    商品sku编号
 commission_rate        Number      必须                    佣金比率
 =====================  ==========  =========  ==========  =============================
 
@@ -1600,9 +1678,9 @@ commission_rate        Number      必须                    佣金比率
 
     {
      "skus": [
-        {"sku_rid": "118300547193", "commission_rate": 5.50},
-        {"sku_rid": "118300602895", "commission_rate": 13.60},
-        {"sku_rid": "118300401483", "commission_rate": 20},
+        {"sku": "118300547193", "commission_rate": 5.50},
+        {"sku": "118300602895", "commission_rate": 13.60},
+        {"sku": "118300401483", "commission_rate": 20},
       ]
     }
 

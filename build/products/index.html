@@ -20,7 +20,7 @@
     <link rel="index" title="索引" href="../genindex.html" />
     <link rel="search" title="搜索" href="../search.html" />
     <link rel="next" title="商品模块" href="products.html" />
-    <link rel="prev" title="账户模块" href="../orders/finance.html" />
+    <link rel="prev" title="物流运费模块" href="../orders/logistics.html" />
 <meta charset='utf-8'>
 <meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'>
 <meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1'>
@@ -72,7 +72,6 @@
 <li class="toctree-l2"><a class="reference internal" href="../orders/stats.html">统计模块</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../orders/comment.html">订单评价模块</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../orders/logistics.html">物流运费模块</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../orders/finance.html">账户模块</a></li>
 </ul>
 </li>
 <li class="toctree-l1 current"><a class="current reference internal" href="#">商品API模块</a><ul>
@@ -84,8 +83,7 @@
 <li class="toctree-l2"><a class="reference internal" href="models.html">商品规格模块</a></li>
 <li class="toctree-l2"><a class="reference internal" href="labels.html">标签模块</a></li>
 <li class="toctree-l2"><a class="reference internal" href="return_policies.html">商家退换货规则模块</a></li>
-<li class="toctree-l2"><a class="reference internal" href="wish.html">心愿清单模块</a></li>
-<li class="toctree-l2"><a class="reference internal" href="user_like.html">用户喜欢模块</a></li>
+<li class="toctree-l2"><a class="reference internal" href="user_record.html">用户商品记录模块</a></li>
 <li class="toctree-l2"><a class="reference internal" href="assets.html">附件模块</a></li>
 </ul>
 </li>
@@ -121,6 +119,7 @@
 <li class="toctree-l1"><a class="reference internal" href="../users/index.html">用户API模块</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="../users/users.html">用户模块</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../users/auth.html">用户认证模块</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../users/finance.html">账户模块</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="../wx_apps/index.html">小程序API模块</a><ul>
@@ -200,7 +199,7 @@
 
 <ul class="nav nav-list">
   <li>
-    <a href="../orders/finance.html" title="Previous Chapter: 账户模块"><span class="glyphicon glyphicon-chevron-left visible-sm"></span><span class="hidden-sm hidden-tablet">&raquo; 账户模块</span>
+    <a href="../orders/logistics.html" title="Previous Chapter: 物流运费模块"><span class="glyphicon glyphicon-chevron-left visible-sm"></span><span class="hidden-sm hidden-tablet">&raquo; 物流运费模块</span>
     </a>
   </li>
   <li>
@@ -238,20 +237,21 @@
 <li class="toctree-l2"><a class="reference internal" href="products.html#id30">商品基本信息</a></li>
 <li class="toctree-l2"><a class="reference internal" href="products.html#id33">商品全部信息</a></li>
 <li class="toctree-l2"><a class="reference internal" href="products.html#id36">商品详情内容</a></li>
-<li class="toctree-l2"><a class="reference internal" href="products.html#sku">商品SKU信息</a></li>
-<li class="toctree-l2"><a class="reference internal" href="products.html#id42">商品SKU列表</a></li>
-<li class="toctree-l2"><a class="reference internal" href="products.html#id46">获取商品基本信息</a></li>
-<li class="toctree-l2"><a class="reference internal" href="products.html#id50">发布商品第一步</a></li>
-<li class="toctree-l2"><a class="reference internal" href="products.html#id55">更新商品第一步</a></li>
-<li class="toctree-l2"><a class="reference internal" href="products.html#id59">获取商品详细信息</a></li>
-<li class="toctree-l2"><a class="reference internal" href="products.html#id63">发布或更新商品第二步: 放入仓库</a></li>
-<li class="toctree-l2"><a class="reference internal" href="products.html#id68">发布或更新商品第二步: 发布</a></li>
-<li class="toctree-l2"><a class="reference internal" href="products.html#id72">删除商品</a></li>
-<li class="toctree-l2"><a class="reference internal" href="products.html#id76">商品状态统计</a></li>
-<li class="toctree-l2"><a class="reference internal" href="products.html#id80">分销设置</a></li>
-<li class="toctree-l2"><a class="reference internal" href="products.html#id85">商品上架</a></li>
-<li class="toctree-l2"><a class="reference internal" href="products.html#id89">商品下架</a></li>
-<li class="toctree-l2"><a class="reference internal" href="products.html#id93">用户商品记录</a></li>
+<li class="toctree-l2"><a class="reference internal" href="products.html#sku">SKU信息</a></li>
+<li class="toctree-l2"><a class="reference internal" href="products.html#id42">商品SKU信息</a></li>
+<li class="toctree-l2"><a class="reference internal" href="products.html#id46">商品SKU列表</a></li>
+<li class="toctree-l2"><a class="reference internal" href="products.html#id50">获取商品基本信息</a></li>
+<li class="toctree-l2"><a class="reference internal" href="products.html#id54">发布商品第一步</a></li>
+<li class="toctree-l2"><a class="reference internal" href="products.html#id59">更新商品第一步</a></li>
+<li class="toctree-l2"><a class="reference internal" href="products.html#id63">获取商品详细信息</a></li>
+<li class="toctree-l2"><a class="reference internal" href="products.html#id67">发布或更新商品第二步: 放入仓库</a></li>
+<li class="toctree-l2"><a class="reference internal" href="products.html#id72">发布或更新商品第二步: 发布</a></li>
+<li class="toctree-l2"><a class="reference internal" href="products.html#id76">删除商品</a></li>
+<li class="toctree-l2"><a class="reference internal" href="products.html#id80">商品状态统计</a></li>
+<li class="toctree-l2"><a class="reference internal" href="products.html#id84">分销设置</a></li>
+<li class="toctree-l2"><a class="reference internal" href="products.html#id89">商品上架</a></li>
+<li class="toctree-l2"><a class="reference internal" href="products.html#id93">商品下架</a></li>
+<li class="toctree-l2"><a class="reference internal" href="products.html#id97">用户商品记录</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="category.html">分类模块</a><ul>
@@ -313,18 +313,17 @@
 <li class="toctree-l2"><a class="reference internal" href="return_policies.html#id13">删除退换货规则</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="wish.html">心愿清单模块</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="wish.html#id2">心愿清单列表</a></li>
-<li class="toctree-l2"><a class="reference internal" href="wish.html#id6">添加心愿清单</a></li>
-<li class="toctree-l2"><a class="reference internal" href="wish.html#id10">移除心愿清单</a></li>
-<li class="toctree-l2"><a class="reference internal" href="wish.html#id14">商品心愿清单</a></li>
-</ul>
-</li>
-<li class="toctree-l1"><a class="reference internal" href="user_like.html">用户喜欢模块</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="user_like.html#id2">用户喜欢列表</a></li>
-<li class="toctree-l2"><a class="reference internal" href="user_like.html#id6">添加用户喜欢</a></li>
-<li class="toctree-l2"><a class="reference internal" href="user_like.html#id10">移除用户喜欢</a></li>
-<li class="toctree-l2"><a class="reference internal" href="user_like.html#id14">商品用户喜欢</a></li>
+<li class="toctree-l1"><a class="reference internal" href="user_record.html">用户商品记录模块</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="user_record.html#id2">心愿清单列表</a></li>
+<li class="toctree-l2"><a class="reference internal" href="user_record.html#id6">添加心愿清单</a></li>
+<li class="toctree-l2"><a class="reference internal" href="user_record.html#id10">移除心愿清单</a></li>
+<li class="toctree-l2"><a class="reference internal" href="user_record.html#id14">商品心愿清单</a></li>
+<li class="toctree-l2"><a class="reference internal" href="user_record.html#id18">用户喜欢列表</a></li>
+<li class="toctree-l2"><a class="reference internal" href="user_record.html#id22">添加用户喜欢</a></li>
+<li class="toctree-l2"><a class="reference internal" href="user_record.html#id26">移除用户喜欢</a></li>
+<li class="toctree-l2"><a class="reference internal" href="user_record.html#id30">商品用户喜欢</a></li>
+<li class="toctree-l2"><a class="reference internal" href="user_record.html#id34">用户浏览记录</a></li>
+<li class="toctree-l2"><a class="reference internal" href="user_record.html#id37">添加浏览记录</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="assets.html">附件模块</a><ul>

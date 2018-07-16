@@ -359,31 +359,34 @@
 <p>请求 <strong>正确</strong> 返回结果：</p>
 <div class="highlight-javascript"><div class="highlight"><pre><span></span><span class="p">{</span>
     <span class="s2">&quot;data&quot;</span><span class="o">:</span> <span class="p">{</span>
-        <span class="s2">&quot;item_count&quot;</span><span class="o">:</span> <span class="mi">2</span><span class="p">,</span>
+        <span class="s2">&quot;item_count&quot;</span><span class="o">:</span> <span class="mi">7</span><span class="p">,</span>  <span class="c1">// 购物车中商品总数</span>
         <span class="s2">&quot;items&quot;</span><span class="o">:</span> <span class="p">[</span>
             <span class="p">{</span>
-                <span class="s2">&quot;option&quot;</span><span class="o">:</span> <span class="s2">&quot;&quot;</span><span class="p">,</span>  <span class="c1">// 备注</span>
+                <span class="s2">&quot;option&quot;</span><span class="o">:</span> <span class="s2">&quot;其他&quot;</span><span class="p">,</span>
                 <span class="s2">&quot;product&quot;</span><span class="o">:</span> <span class="p">{</span>
-                    <span class="s2">&quot;cost_price&quot;</span><span class="o">:</span> <span class="s2">&quot;189.00&quot;</span><span class="p">,</span>
-                    <span class="s2">&quot;cover&quot;</span><span class="o">:</span> <span class="s2">&quot;http://127.0.0.1:9000/_uploads/photos/180128/494e473ec90dffd.jpeg&quot;</span><span class="p">,</span>
-                    <span class="s2">&quot;id_code&quot;</span><span class="o">:</span> <span class="s2">&quot;&quot;</span><span class="p">,</span>
-                    <span class="s2">&quot;mode&quot;</span><span class="o">:</span> <span class="s2">&quot;白色&quot;</span><span class="p">,</span>
-                    <span class="s2">&quot;price&quot;</span><span class="o">:</span> <span class="s2">&quot;None&quot;</span><span class="p">,</span>  <span class="c1">// 零售价</span>
-                    <span class="s2">&quot;product_name&quot;</span><span class="o">:</span> <span class="s2">&quot;素士智能声波牙刷&quot;</span><span class="p">,</span>
-                    <span class="s2">&quot;rid&quot;</span><span class="o">:</span> <span class="s2">&quot;118280601730&quot;</span><span class="p">,</span>
-                    <span class="s2">&quot;s_color&quot;</span><span class="o">:</span> <span class="s2">&quot;白色&quot;</span><span class="p">,</span>
-                    <span class="s2">&quot;s_model&quot;</span><span class="o">:</span> <span class="s2">&quot;&quot;</span><span class="p">,</span>
-                    <span class="s2">&quot;s_weight&quot;</span><span class="o">:</span> <span class="s2">&quot;20.00&quot;</span><span class="p">,</span>
-                    <span class="s2">&quot;sale_price&quot;</span><span class="o">:</span> <span class="s2">&quot;269.00&quot;</span><span class="p">,</span>  <span class="c1">// 折扣价</span>
-                    <span class="s2">&quot;stock_count&quot;</span><span class="o">:</span> <span class="mi">10</span>
+                    <span class="s2">&quot;cover&quot;</span><span class="o">:</span> <span class="s2">&quot;http://0.0.0.0:9000/_uploads/photos/1&quot;</span><span class="p">,</span>
+                    <span class="s2">&quot;cover_id&quot;</span><span class="o">:</span> <span class="mi">1</span><span class="p">,</span>
+                    <span class="s2">&quot;id_code&quot;</span><span class="o">:</span> <span class="s2">&quot;1&quot;</span><span class="p">,</span>
+                    <span class="s2">&quot;mode&quot;</span><span class="o">:</span> <span class="s2">&quot;2 2&quot;</span><span class="p">,</span>
+                    <span class="s2">&quot;price&quot;</span><span class="o">:</span> <span class="mi">2</span><span class="p">,</span>  <span class="c1">// 零售价</span>
+                    <span class="s2">&quot;product_name&quot;</span><span class="o">:</span> <span class="s2">&quot;汽车&quot;</span><span class="p">,</span>
+                    <span class="s2">&quot;product_rid&quot;</span><span class="o">:</span> <span class="s2">&quot;2&quot;</span><span class="p">,</span>
+                    <span class="s2">&quot;rid&quot;</span><span class="o">:</span> <span class="s2">&quot;2&quot;</span><span class="p">,</span>
+                    <span class="s2">&quot;s_color&quot;</span><span class="o">:</span> <span class="s2">&quot;2&quot;</span><span class="p">,</span>
+                    <span class="s2">&quot;s_model&quot;</span><span class="o">:</span> <span class="s2">&quot;2&quot;</span><span class="p">,</span>
+                    <span class="s2">&quot;s_weight&quot;</span><span class="o">:</span> <span class="mi">2</span><span class="p">,</span>
+                    <span class="s2">&quot;sale_price&quot;</span><span class="o">:</span> <span class="mi">2</span><span class="p">,</span>  <span class="c1">// 促销价</span>
+                    <span class="s2">&quot;status&quot;</span><span class="o">:</span> <span class="mi">1</span><span class="p">,</span>  <span class="c1">// 商品状态: 0: 仓库中 1: 出售中  2: 下架中</span>
+                    <span class="s2">&quot;stock_count&quot;</span><span class="o">:</span> <span class="mi">21611</span><span class="p">,</span>
+                    <span class="s2">&quot;stock_quantity&quot;</span><span class="o">:</span> <span class="mi">21611</span><span class="p">,</span>  <span class="c1">// 库存数</span>
+                    <span class="s2">&quot;store_name&quot;</span><span class="o">:</span> <span class="s2">&quot;第一家&quot;</span>  <span class="c1">// 商品所属店铺名称</span>
                 <span class="p">},</span>
-                <span class="s2">&quot;quantity&quot;</span><span class="o">:</span> <span class="mi">1</span><span class="p">,</span>  <span class="c1">// 数量</span>
-                <span class="s2">&quot;rid&quot;</span><span class="o">:</span> <span class="s2">&quot;118280601730&quot;</span><span class="p">,</span>
+                <span class="s2">&quot;quantity&quot;</span><span class="o">:</span> <span class="mi">3</span><span class="p">,</span>
+                <span class="s2">&quot;rid&quot;</span><span class="o">:</span> <span class="s2">&quot;2&quot;</span><span class="p">,</span>
+                <span class="s2">&quot;store_id&quot;</span><span class="o">:</span> <span class="mi">2</span><span class="p">,</span>
                 <span class="s2">&quot;user_id&quot;</span><span class="o">:</span> <span class="mi">2</span>
-            <span class="p">},</span>
-            <span class="p">...</span>
-        <span class="p">],</span>
-        <span class="s2">&quot;total_quantity&quot;</span><span class="o">:</span> <span class="mi">2</span>
+            <span class="p">}</span>
+        <span class="p">]</span>
     <span class="p">},</span>
     <span class="s2">&quot;status&quot;</span><span class="o">:</span> <span class="p">{</span>
         <span class="s2">&quot;code&quot;</span><span class="o">:</span> <span class="mi">200</span><span class="p">,</span>
@@ -549,30 +552,35 @@
 <div class="highlight-javascript"><div class="highlight"><pre><span></span><span class="p">{</span>
     <span class="s2">&quot;data&quot;</span><span class="o">:</span> <span class="p">{</span>
         <span class="s2">&quot;cart&quot;</span><span class="o">:</span> <span class="p">{</span>
-            <span class="s2">&quot;option&quot;</span><span class="o">:</span> <span class="kc">null</span><span class="p">,</span>
+            <span class="s2">&quot;option&quot;</span><span class="o">:</span> <span class="s2">&quot;其他&quot;</span><span class="p">,</span>
             <span class="s2">&quot;product&quot;</span><span class="o">:</span> <span class="p">{</span>
-                <span class="s2">&quot;cost_price&quot;</span><span class="o">:</span> <span class="s2">&quot;24.00&quot;</span><span class="p">,</span>
-                <span class="s2">&quot;cover&quot;</span><span class="o">:</span> <span class="s2">&quot;http://xxx/_uploads/photos/180202/f51932c571ba21f.jpg&quot;</span><span class="p">,</span>
-                <span class="s2">&quot;id_code&quot;</span><span class="o">:</span> <span class="s2">&quot;&quot;</span><span class="p">,</span>
-                <span class="s2">&quot;mode&quot;</span><span class="o">:</span> <span class="s2">&quot;棕色&quot;</span><span class="p">,</span>
-                <span class="s2">&quot;price&quot;</span><span class="o">:</span> <span class="s2">&quot;68.00&quot;</span><span class="p">,</span>
-                <span class="s2">&quot;product_name&quot;</span><span class="o">:</span> <span class="s2">&quot;数据大仙&quot;</span><span class="p">,</span>
-                <span class="s2">&quot;rid&quot;</span><span class="o">:</span> <span class="s2">&quot;118020098269&quot;</span><span class="p">,</span>
-                <span class="s2">&quot;s_color&quot;</span><span class="o">:</span> <span class="s2">&quot;棕色&quot;</span><span class="p">,</span>
-                <span class="s2">&quot;s_model&quot;</span><span class="o">:</span> <span class="s2">&quot;&quot;</span><span class="p">,</span>
-                <span class="s2">&quot;s_weight&quot;</span><span class="o">:</span> <span class="s2">&quot;0.00&quot;</span><span class="p">,</span>
-                <span class="s2">&quot;sale_price&quot;</span><span class="o">:</span> <span class="s2">&quot;0.00&quot;</span><span class="p">,</span>
-                <span class="s2">&quot;stock_count&quot;</span><span class="o">:</span> <span class="mi">0</span>
+               <span class="s2">&quot;cover&quot;</span><span class="o">:</span> <span class="s2">&quot;http://0.0.0.0:9000/_uploads/photos/1&quot;</span><span class="p">,</span>
+                <span class="s2">&quot;cover_id&quot;</span><span class="o">:</span> <span class="mi">1</span><span class="p">,</span>
+                <span class="s2">&quot;id_code&quot;</span><span class="o">:</span> <span class="s2">&quot;1&quot;</span><span class="p">,</span>
+                <span class="s2">&quot;mode&quot;</span><span class="o">:</span> <span class="s2">&quot;2 2&quot;</span><span class="p">,</span>
+                <span class="s2">&quot;price&quot;</span><span class="o">:</span> <span class="mi">2</span><span class="p">,</span>  <span class="c1">// 零售价</span>
+                <span class="s2">&quot;product_name&quot;</span><span class="o">:</span> <span class="s2">&quot;汽车&quot;</span><span class="p">,</span>
+                <span class="s2">&quot;product_rid&quot;</span><span class="o">:</span> <span class="s2">&quot;2&quot;</span><span class="p">,</span>
+                <span class="s2">&quot;rid&quot;</span><span class="o">:</span> <span class="s2">&quot;2&quot;</span><span class="p">,</span>
+                <span class="s2">&quot;s_color&quot;</span><span class="o">:</span> <span class="s2">&quot;2&quot;</span><span class="p">,</span>
+                <span class="s2">&quot;s_model&quot;</span><span class="o">:</span> <span class="s2">&quot;2&quot;</span><span class="p">,</span>
+                <span class="s2">&quot;s_weight&quot;</span><span class="o">:</span> <span class="mi">2</span><span class="p">,</span>
+                <span class="s2">&quot;sale_price&quot;</span><span class="o">:</span> <span class="mi">2</span><span class="p">,</span>  <span class="c1">// 促销价</span>
+                <span class="s2">&quot;status&quot;</span><span class="o">:</span> <span class="mi">1</span><span class="p">,</span>  <span class="c1">// 商品状态: 0: 仓库中 1: 出售中  2: 下架中</span>
+                <span class="s2">&quot;stock_count&quot;</span><span class="o">:</span> <span class="mi">21611</span><span class="p">,</span>
+                <span class="s2">&quot;stock_quantity&quot;</span><span class="o">:</span> <span class="mi">21611</span><span class="p">,</span>  <span class="c1">// 库存数</span>
+                <span class="s2">&quot;store_name&quot;</span><span class="o">:</span> <span class="s2">&quot;第一家&quot;</span>  <span class="c1">// 商品所属店铺名称</span>
             <span class="p">},</span>
-            <span class="s2">&quot;quantity&quot;</span><span class="o">:</span> <span class="mi">2</span><span class="p">,</span>  <span class="c1">// 数量</span>
-            <span class="s2">&quot;rid&quot;</span><span class="o">:</span> <span class="s2">&quot;118020098269&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;quantity&quot;</span><span class="o">:</span> <span class="mi">4</span><span class="p">,</span>
+            <span class="s2">&quot;rid&quot;</span><span class="o">:</span> <span class="s2">&quot;1&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;store_id&quot;</span><span class="o">:</span> <span class="mi">2</span><span class="p">,</span>
             <span class="s2">&quot;user_id&quot;</span><span class="o">:</span> <span class="mi">2</span>
         <span class="p">},</span>
-        <span class="s2">&quot;item_count&quot;</span><span class="o">:</span> <span class="mi">3</span>  <span class="c1">// 购物车中商品总数</span>
+        <span class="s2">&quot;item_count&quot;</span><span class="o">:</span> <span class="mi">7</span>  <span class="c1">// 购物车中商品总数</span>
     <span class="p">},</span>
     <span class="s2">&quot;status&quot;</span><span class="o">:</span> <span class="p">{</span>
-        <span class="s2">&quot;code&quot;</span><span class="o">:</span> <span class="mi">201</span><span class="p">,</span>
-        <span class="s2">&quot;message&quot;</span><span class="o">:</span> <span class="s2">&quot;All created.&quot;</span>
+        <span class="s2">&quot;code&quot;</span><span class="o">:</span> <span class="mi">200</span><span class="p">,</span>
+        <span class="s2">&quot;message&quot;</span><span class="o">:</span> <span class="s2">&quot;Ok all right.&quot;</span>
     <span class="p">},</span>
     <span class="s2">&quot;success&quot;</span><span class="o">:</span> <span class="kc">true</span>
 <span class="p">}</span>
@@ -669,30 +677,41 @@
 <p>JSON数据格式:</p>
 <p>请求 <strong>正确</strong> 返回结果：</p>
 <div class="highlight-javascript"><div class="highlight"><pre><span></span><span class="p">{</span>
-  <span class="s2">&quot;data&quot;</span><span class="o">:</span> <span class="p">{</span>
-    <span class="s2">&quot;option&quot;</span><span class="o">:</span> <span class="kc">null</span><span class="p">,</span>
-    <span class="s2">&quot;product&quot;</span><span class="o">:</span> <span class="p">{</span>
-      <span class="s2">&quot;cost_price&quot;</span><span class="o">:</span> <span class="s2">&quot;24.00&quot;</span><span class="p">,</span>
-      <span class="s2">&quot;cover&quot;</span><span class="o">:</span> <span class="s2">&quot;/static/img/mic_logo180x180.jpg&quot;</span><span class="p">,</span>
-      <span class="s2">&quot;id_code&quot;</span><span class="o">:</span> <span class="s2">&quot;&quot;</span><span class="p">,</span>
-      <span class="s2">&quot;mode&quot;</span><span class="o">:</span> <span class="s2">&quot;iPhoneX 白色&quot;</span><span class="p">,</span>
-      <span class="s2">&quot;product_name&quot;</span><span class="o">:</span> <span class="s2">&quot;iPhoneX 手机壳&quot;</span><span class="p">,</span>
-      <span class="s2">&quot;rid&quot;</span><span class="o">:</span> <span class="s2">&quot;117280969019&quot;</span><span class="p">,</span>
-      <span class="s2">&quot;s_color&quot;</span><span class="o">:</span> <span class="s2">&quot;白色&quot;</span><span class="p">,</span>
-      <span class="s2">&quot;s_model&quot;</span><span class="o">:</span> <span class="s2">&quot;iPhoneX&quot;</span><span class="p">,</span>
-      <span class="s2">&quot;s_weight&quot;</span><span class="o">:</span> <span class="s2">&quot;0.00&quot;</span><span class="p">,</span>
-      <span class="s2">&quot;sale_price&quot;</span><span class="o">:</span> <span class="s2">&quot;69.00&quot;</span><span class="p">,</span>
-      <span class="s2">&quot;stock_count&quot;</span><span class="o">:</span> <span class="mi">10</span>
+    <span class="s2">&quot;data&quot;</span><span class="o">:</span> <span class="p">{</span>
+        <span class="s2">&quot;cart&quot;</span><span class="o">:</span> <span class="p">{</span>
+            <span class="s2">&quot;option&quot;</span><span class="o">:</span> <span class="kc">null</span><span class="p">,</span>
+            <span class="s2">&quot;product&quot;</span><span class="o">:</span> <span class="p">{</span>
+                <span class="s2">&quot;option&quot;</span><span class="o">:</span> <span class="s2">&quot;其他&quot;</span><span class="p">,</span>
+                <span class="s2">&quot;product&quot;</span><span class="o">:</span> <span class="p">{</span>
+                    <span class="s2">&quot;cover&quot;</span><span class="o">:</span> <span class="s2">&quot;http://0.0.0.0:9000/_uploads/photos/1&quot;</span><span class="p">,</span>
+                    <span class="s2">&quot;cover_id&quot;</span><span class="o">:</span> <span class="mi">1</span><span class="p">,</span>
+                    <span class="s2">&quot;id_code&quot;</span><span class="o">:</span> <span class="s2">&quot;1&quot;</span><span class="p">,</span>
+                    <span class="s2">&quot;mode&quot;</span><span class="o">:</span> <span class="s2">&quot;2 2&quot;</span><span class="p">,</span>
+                    <span class="s2">&quot;price&quot;</span><span class="o">:</span> <span class="mi">2</span><span class="p">,</span>  <span class="c1">// 零售价</span>
+                    <span class="s2">&quot;product_name&quot;</span><span class="o">:</span> <span class="s2">&quot;汽车&quot;</span><span class="p">,</span>
+                    <span class="s2">&quot;product_rid&quot;</span><span class="o">:</span> <span class="s2">&quot;2&quot;</span><span class="p">,</span>
+                    <span class="s2">&quot;rid&quot;</span><span class="o">:</span> <span class="s2">&quot;2&quot;</span><span class="p">,</span>
+                    <span class="s2">&quot;s_color&quot;</span><span class="o">:</span> <span class="s2">&quot;2&quot;</span><span class="p">,</span>
+                    <span class="s2">&quot;s_model&quot;</span><span class="o">:</span> <span class="s2">&quot;2&quot;</span><span class="p">,</span>
+                    <span class="s2">&quot;s_weight&quot;</span><span class="o">:</span> <span class="mi">2</span><span class="p">,</span>
+                    <span class="s2">&quot;sale_price&quot;</span><span class="o">:</span> <span class="mi">2</span><span class="p">,</span>  <span class="c1">// 促销价</span>
+                    <span class="s2">&quot;status&quot;</span><span class="o">:</span> <span class="mi">1</span><span class="p">,</span>  <span class="c1">// 商品状态: 0: 仓库中 1: 出售中  2: 下架中</span>
+                    <span class="s2">&quot;stock_count&quot;</span><span class="o">:</span> <span class="mi">21611</span><span class="p">,</span>
+                    <span class="s2">&quot;stock_quantity&quot;</span><span class="o">:</span> <span class="mi">21611</span><span class="p">,</span>  <span class="c1">// 库存数</span>
+                    <span class="s2">&quot;store_name&quot;</span><span class="o">:</span> <span class="s2">&quot;第一家&quot;</span>  <span class="c1">// 商品所属店铺名称</span>
+                <span class="p">},</span>
+                <span class="s2">&quot;quantity&quot;</span><span class="o">:</span> <span class="mi">3</span><span class="p">,</span>  <span class="c1">// 购买数量</span>
+                <span class="s2">&quot;rid&quot;</span><span class="o">:</span> <span class="s2">&quot;2&quot;</span><span class="p">,</span>  <span class="c1">// sku</span>
+                <span class="s2">&quot;store_id&quot;</span><span class="o">:</span> <span class="mi">2</span><span class="p">,</span>
+                <span class="s2">&quot;user_id&quot;</span><span class="o">:</span> <span class="mi">2</span>  <span class="c1">// 用户id</span>
+            <span class="p">},</span>
+        <span class="s2">&quot;item_count&quot;</span><span class="o">:</span> <span class="mi">3</span>  <span class="c1">// 购物车中商品总数</span>
     <span class="p">},</span>
-    <span class="s2">&quot;quantity&quot;</span><span class="o">:</span> <span class="mi">1</span><span class="p">,</span>
-    <span class="s2">&quot;rid&quot;</span><span class="o">:</span> <span class="s2">&quot;117280969019&quot;</span><span class="p">,</span>
-    <span class="s2">&quot;user_id&quot;</span><span class="o">:</span> <span class="mi">1</span>
-  <span class="p">},</span>
-  <span class="s2">&quot;status&quot;</span><span class="o">:</span> <span class="p">{</span>
-    <span class="s2">&quot;code&quot;</span><span class="o">:</span> <span class="mi">200</span><span class="p">,</span>
-    <span class="s2">&quot;message&quot;</span><span class="o">:</span> <span class="s2">&quot;Ok all right.&quot;</span>
-  <span class="p">},</span>
-  <span class="s2">&quot;success&quot;</span><span class="o">:</span> <span class="kc">true</span>
+    <span class="s2">&quot;status&quot;</span><span class="o">:</span> <span class="p">{</span>
+        <span class="s2">&quot;code&quot;</span><span class="o">:</span> <span class="mi">201</span><span class="p">,</span>
+        <span class="s2">&quot;message&quot;</span><span class="o">:</span> <span class="s2">&quot;All created.&quot;</span>
+    <span class="p">},</span>
+    <span class="s2">&quot;success&quot;</span><span class="o">:</span> <span class="kc">true</span>
 <span class="p">}</span>
 </pre></div>
 </div>

@@ -39,31 +39,34 @@ JSON数据格式:
 
     {
         "data": {
-            "item_count": 2,
+            "item_count": 7,  // 购物车中商品总数
             "items": [
                 {
-                    "option": "",  // 备注
+                    "option": "其他",
                     "product": {
-                        "cost_price": "189.00",
-                        "cover": "http://127.0.0.1:9000/_uploads/photos/180128/494e473ec90dffd.jpeg",
-                        "id_code": "",
-                        "mode": "白色",
-                        "price": "None",  // 零售价
-                        "product_name": "素士智能声波牙刷",
-                        "rid": "118280601730",
-                        "s_color": "白色",
-                        "s_model": "",
-                        "s_weight": "20.00",
-                        "sale_price": "269.00",  // 折扣价
-                        "stock_count": 10
+                        "cover": "http://0.0.0.0:9000/_uploads/photos/1",
+                        "cover_id": 1,
+                        "id_code": "1",
+                        "mode": "2 2",
+                        "price": 2,  // 零售价
+                        "product_name": "汽车",
+                        "product_rid": "2",
+                        "rid": "2",
+                        "s_color": "2",
+                        "s_model": "2",
+                        "s_weight": 2,
+                        "sale_price": 2,  // 促销价
+                        "status": 1,  // 商品状态: 0: 仓库中 1: 出售中  2: 下架中
+                        "stock_count": 21611,
+                        "stock_quantity": 21611,  // 库存数
+                        "store_name": "第一家"  // 商品所属店铺名称
                     },
-                    "quantity": 1,  // 数量
-                    "rid": "118280601730",
+                    "quantity": 3,
+                    "rid": "2",
+                    "store_id": 2,
                     "user_id": 2
-                },
-                ...
-            ],
-            "total_quantity": 2
+                }
+            ]
         },
         "status": {
             "code": 200,
@@ -71,6 +74,7 @@ JSON数据格式:
         },
         "success": true
     }
+
 
 请求 ``失败`` 返回结果：
 
@@ -189,30 +193,35 @@ JSON数据格式:
     {
         "data": {
             "cart": {
-                "option": null,
+                "option": "其他",
                 "product": {
-                    "cost_price": "24.00",
-                    "cover": "http://xxx/_uploads/photos/180202/f51932c571ba21f.jpg",
-                    "id_code": "",
-                    "mode": "棕色",
-                    "price": "68.00",
-                    "product_name": "数据大仙",
-                    "rid": "118020098269",
-                    "s_color": "棕色",
-                    "s_model": "",
-                    "s_weight": "0.00",
-                    "sale_price": "0.00",
-                    "stock_count": 0
+                   "cover": "http://0.0.0.0:9000/_uploads/photos/1",
+                    "cover_id": 1,
+                    "id_code": "1",
+                    "mode": "2 2",
+                    "price": 2,  // 零售价
+                    "product_name": "汽车",
+                    "product_rid": "2",
+                    "rid": "2",
+                    "s_color": "2",
+                    "s_model": "2",
+                    "s_weight": 2,
+                    "sale_price": 2,  // 促销价
+                    "status": 1,  // 商品状态: 0: 仓库中 1: 出售中  2: 下架中
+                    "stock_count": 21611,
+                    "stock_quantity": 21611,  // 库存数
+                    "store_name": "第一家"  // 商品所属店铺名称
                 },
-                "quantity": 2,  // 数量
-                "rid": "118020098269",
+                "quantity": 4,
+                "rid": "1",
+                "store_id": 2,
                 "user_id": 2
             },
-            "item_count": 3  // 购物车中商品总数
+            "item_count": 7  // 购物车中商品总数
         },
         "status": {
-            "code": 201,
-            "message": "All created."
+            "code": 200,
+            "message": "Ok all right."
         },
         "success": true
     }
@@ -283,30 +292,41 @@ JSON数据格式:
 .. code-block:: javascript
 
     {
-      "data": {
-        "option": null,
-        "product": {
-          "cost_price": "24.00",
-          "cover": "/static/img/mic_logo180x180.jpg",
-          "id_code": "",
-          "mode": "iPhoneX 白色",
-          "product_name": "iPhoneX 手机壳",
-          "rid": "117280969019",
-          "s_color": "白色",
-          "s_model": "iPhoneX",
-          "s_weight": "0.00",
-          "sale_price": "69.00",
-          "stock_count": 10
+        "data": {
+            "cart": {
+                "option": null,
+                "product": {
+                    "option": "其他",
+                    "product": {
+                        "cover": "http://0.0.0.0:9000/_uploads/photos/1",
+                        "cover_id": 1,
+                        "id_code": "1",
+                        "mode": "2 2",
+                        "price": 2,  // 零售价
+                        "product_name": "汽车",
+                        "product_rid": "2",
+                        "rid": "2",
+                        "s_color": "2",
+                        "s_model": "2",
+                        "s_weight": 2,
+                        "sale_price": 2,  // 促销价
+                        "status": 1,  // 商品状态: 0: 仓库中 1: 出售中  2: 下架中
+                        "stock_count": 21611,
+                        "stock_quantity": 21611,  // 库存数
+                        "store_name": "第一家"  // 商品所属店铺名称
+                    },
+                    "quantity": 3,  // 购买数量
+                    "rid": "2",  // sku
+                    "store_id": 2,
+                    "user_id": 2  // 用户id
+                },
+            "item_count": 3  // 购物车中商品总数
         },
-        "quantity": 1,
-        "rid": "117280969019",
-        "user_id": 1
-      },
-      "status": {
-        "code": 200,
-        "message": "Ok all right."
-      },
-      "success": true
+        "status": {
+            "code": 201,
+            "message": "All created."
+        },
+        "success": true
     }
 
 

@@ -815,6 +815,7 @@ JSON数据格式
 
 * API接口请求地址：``/store/visitor``
 * API接口请求方法：``POST``
+* API接口用户授权：``token``
 
 请求参数
 ~~~~~~~~~~~~~~~
@@ -872,6 +873,7 @@ JSON数据格式
 
 * API接口请求地址：``/store/<string:rid>/visitor``
 * API接口请求方法：``GET``
+* API接口用户授权：``token``
 
 请求参数
 ~~~~~~~~~~~~~~~
@@ -895,55 +897,73 @@ JSON数据格式
 
     {
         "data": {
-            "count": 2,
-            "next_url": null,
-            "prev_url": null,
-            "store_Visitors": [
-                {
-                    "agent": "Mozilla/5.0 (iPhone; CPU iPhone OS 10_1_1 like Mac OS X) AppleWebKit/602.2.14 (KHTML, like Gecko) Version/10.0",
-                    "id": 6,
-                    "ip_addr": "114.242.250.38",
-                    "master_uid": 2,
-                    "user_party_id": 6
-                },
-                {
-                    "agent": "Mozilla/5.0 (iPhone; CPU iPhone OS 10_1_1 like Mac OS X) AppleWebKit/602.2.14 (KHTML, like Gecko) Version/10.0",
-                    "id": 5,
-                    "ip_addr": "114.242.250.38",
-                    "master_uid": 2,
-                    "user_party_id": 1
-                }
-            ],
-            "total_page": 3,
+            "count": 4,
+            "next_url": false,
+            "prev_url": false,
+            "total_page": 1,
             "user_parties": [
                 {
                     "about_me": null,
-                    "avatar": "http://xxxx/photos/180224/c833237a728a1ed.jpg",
-                    "city": "保定",
+                    "avatar": "http://0.0.0.0:9000/_uploads/photos/http://127.0.0.1:9000/_uploads/photos/222222/5d2812257b539aa.jpg", // 头像
+                    "city": null,
                     "date": "",
                     "email": null,
-                    "gender": 0,
+                    "gender": null,
                     "id": 6,
-                    "master_uid": 0,
-                    "nick_name": "李彦宏",
-                    "openid": "jsdkj3j",
-                    "province": "河北",
-                    "user_id": 0,
+                    "master_uid": 2,
+                    "nick_name": null,
+                    "openid": "d",
+                    "province": null,
+                    "type": null,
                     "wxapp_id": "1"
                 },
                 {
-                    "about_me": "php是最好的语言",
-                    "avatar": "http://127.0.0.1:9000/_uploads/photjpgos/222222/5d2812257b539aa.",
-                    "city": "南京",
-                    "date": "1992年12月16日",
-                    "email": "zhizhuren@163.com",
-                    "gender": 1,
-                    "id": 1,
+                    "about_me": null,
+                    "avatar": "http://0.0.0.0:9000/_uploads/photos/http://127.0.0.1:9000/_uploads/photos/222222/5d2812257b539aa.jpg", // // 头像
+                    "city": null,
+                    "date": "",
+                    "email": null,
+                    "gender": null,
+                    "id": 5,
                     "master_uid": 2,
-                    "nick_name": "马化腾",
-                    "openid": "jsdkj3j",
-                    "province": "江苏",
-                    "user_id": 0,
+                    "nick_name": null,
+                    "openid": "s",
+                    "province": null,
+                    "type": null,
+                    "wxapp_id": "1"
+                },
+                {
+                    "about_me": null,
+                    "avatar": "http://0.0.0.0:9000/_uploads/photos/http://127.0.0.1:9000/_uploads/photos/222222/5d2812257b539aa.jpg", // // 头像
+                    "city": null,
+                    "country": null,
+                    "created_at": 1531125527,
+                    "date": "",
+                    "description": null,
+                    "email": "13001179400",
+                    "gender": 0,
+                    "last_seen": 1531389228,
+                    "mail": null,
+                    "master_uid": 2,
+                    "mobile": null,
+                    "name": null,
+                    "province": null,
+                    "uid": "19138405762",
+                    "username": "13001179400"
+                },
+                {
+                    "about_me": null,
+                    "avatar": "http://0.0.0.0:9000/_uploads/photos/http://127.0.0.1:9000/_uploads/photos/222222/5d2812257b539aa.jpg", // // 头像
+                    "city": null,
+                    "date": "",
+                    "email": null,
+                    "gender": null,
+                    "id": 4,
+                    "master_uid": 2,
+                    "nick_name": null,
+                    "openid": "a",
+                    "province": null,
+                    "type": null,
                     "wxapp_id": "1"
                 }
             ]
@@ -1068,6 +1088,60 @@ JSON数据格式
         "status": {
             "code": 201,
             "message": "All created."
+        },
+        "success": true
+    }
+
+请求 ``失败`` 返回结果：
+
+.. code-block:: javascript
+
+    {
+        "status": {
+            "code": 404,
+            "message": "Not Found"
+        },
+        "success": false
+    }
+
+更新分销设置
+---------------------
+
+
+接口说明
+~~~~~~~~~~~~~~
+
+* API接口请求地址：``/store/update_distribution_type``
+* API接口请求方法：``POST``
+* API接口用户授权：``token``
+
+请求参数
+~~~~~~~~~~~~~~~
+
+=====================  ==========  =========  ==========  =================================================
+名称                    类型        是否必须     默认值       描述说明
+=====================  ==========  =========  ==========  =================================================
+rid                     String      必须                    店铺编号
+distribution_type       Integer     可选        0           店铺分销设置: 0、不分销  1、全品分销  2、单品分销
+=====================  ==========  =========  ==========  =================================================
+
+
+返回示例
+~~~~~~~~~~~~~~~~
+
+JSON数据格式
+
+请求 **正确** 返回结果：
+
+.. code-block:: javascript
+
+    {
+        "data": {
+            "distribution_type": 0
+        },
+        "status": {
+            "code": 200,
+            "message": "Ok all right."
         },
         "success": true
     }

@@ -14,6 +14,5 @@
     models.rst
     labels.rst
     return_policies.rst
-    wish.rst
-    user_like.rst
+    user_record.rst
     assets.rst
