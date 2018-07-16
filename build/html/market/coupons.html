@@ -92,11 +92,13 @@
 <li class="toctree-l2"><a class="reference internal" href="../products/models.html">商品规格模块</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../products/labels.html">标签模块</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../products/return_policies.html">商家退换货规则模块</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../products/store_product_packet.html">商品组模块</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../products/distributions.html">分销模块</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../products/wish.html">心愿清单模块</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../products/user_record.html">用户商品记录模块</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../products/assets.html">附件模块</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../products/wx_app_design.html">小程序配置模块</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../distributions/index.html">分销API模块</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../distributions/distributions.html">分销模块</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../distributions/store_product_packet.html">商品组模块</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="../customers/index.html">分销客户API模块</a><ul>
@@ -111,6 +113,7 @@
 <li class="toctree-l1"><a class="reference internal" href="../shopes/index.html">微商城API模块</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="../shopes/shopes.html">微商城模块</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../shopes/store.html">店铺模块</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../shopes/wxapp.html">小程序模块</a></li>
 </ul>
 </li>
 <li class="toctree-l1 current"><a class="reference internal" href="index.html">营销API模块</a><ul class="current">
@@ -125,11 +128,21 @@
 <li class="toctree-l1"><a class="reference internal" href="../users/index.html">用户API模块</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="../users/users.html">用户模块</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../users/auth.html">用户认证模块</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../users/finance.html">账户模块</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../wx_apps/index.html">小程序API模块</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../wx_apps/wx_app_design.html">小程序配置模块</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="../common.html">公用接口模块</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="../common.html#id2">幻灯图列表</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../common.html#id6">搜索关键词历史</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../common.html#id10">注册发送短信验证码</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../common.html#id15">登陆发送短信验证码</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../common.html#id19">动态登陆发送短信验证码</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../common.html#id23">账户编辑发送短信验证码</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../common.html#id27">发送邮件验证码</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="../setting.html">系统相关配置文档</a><ul>
@@ -1107,7 +1120,7 @@
 <td>1</td>
 <td>优惠券类型 1、同享券 2、单享券</td>
 </tr>
-<tr class="row-even"><td>amount_items</td>
+<tr class="row-even"><td>items</td>
 <td>Array</td>
 <td>必填</td>
 <td>&#160;</td>
@@ -1133,7 +1146,7 @@
 </tr>
 </thead>
 <tbody valign="top">
-<tr class="row-even"><td>coupon_items:</td>
+<tr class="row-even"><td>items:</td>
 <td>&#160;</td>
 <td>&#160;</td>
 <td>&#160;</td>
@@ -1163,7 +1176,7 @@
 <td>&#160;</td>
 <td>有效天数</td>
 </tr>
-<tr class="row-odd"><td>product_rid</td>
+<tr class="row-odd"><td>product_rids</td>
 <td>Array</td>
 <td>可选</td>
 <td>&#160;</td>
@@ -1177,7 +1190,7 @@
     <span class="s2">&quot;start_date&quot;</span><span class="o">:</span><span class="s2">&quot;2018-06-29&quot;</span><span class="p">,</span>
     <span class="s2">&quot;end_date&quot;</span><span class="o">:</span><span class="s2">&quot;2018-07-03&quot;</span><span class="p">,</span>
     <span class="s2">&quot;coupon_type&quot;</span><span class="o">:</span><span class="mi">2</span><span class="p">,</span>
-    <span class="s2">&quot;amount_items&quot;</span><span class="o">:</span><span class="p">[</span>
+    <span class="s2">&quot;items&quot;</span><span class="o">:</span><span class="p">[</span>
         <span class="p">{</span>
             <span class="s2">&quot;amount&quot;</span><span class="o">:</span><span class="mi">1</span><span class="p">,</span>
             <span class="s2">&quot;min_amount&quot;</span><span class="o">:</span><span class="mi">90</span><span class="p">,</span>
@@ -1276,7 +1289,7 @@
 <td>&#160;</td>
 <td>活动结束日期</td>
 </tr>
-<tr class="row-odd"><td>amount_items</td>
+<tr class="row-odd"><td>items</td>
 <td>Array</td>
 <td>必填</td>
 <td>&#160;</td>
@@ -1302,7 +1315,7 @@
 </tr>
 </thead>
 <tbody valign="top">
-<tr class="row-even"><td>amount_items:</td>
+<tr class="row-even"><td>items:</td>
 <td>&#160;</td>
 <td>&#160;</td>
 <td>&#160;</td>
@@ -1327,7 +1340,7 @@
     <span class="s2">&quot;name&quot;</span><span class="o">:</span><span class="s2">&quot;满减活动2&quot;</span><span class="p">,</span>
     <span class="s2">&quot;start_date&quot;</span><span class="o">:</span><span class="s2">&quot;2018-06-29&quot;</span><span class="p">,</span>
     <span class="s2">&quot;end_date&quot;</span><span class="o">:</span><span class="s2">&quot;2018-07-03&quot;</span><span class="p">,</span>
-    <span class="s2">&quot;amount_items&quot;</span><span class="o">:</span><span class="p">[</span>
+    <span class="s2">&quot;items&quot;</span><span class="o">:</span><span class="p">[</span>
         <span class="p">{</span>
             <span class="s2">&quot;amount&quot;</span><span class="o">:</span><span class="mi">1</span><span class="p">,</span>
             <span class="s2">&quot;reach_amount&quot;</span><span class="o">:</span><span class="mi">10</span>
@@ -1420,7 +1433,7 @@
 <td>&#160;</td>
 <td>活动结束日期</td>
 </tr>
-<tr class="row-even"><td>amount_items</td>
+<tr class="row-even"><td>items</td>
 <td>Array</td>
 <td>可选</td>
 <td>&#160;</td>
@@ -1452,7 +1465,7 @@
 </tr>
 </thead>
 <tbody valign="top">
-<tr class="row-even"><td>amount_items:</td>
+<tr class="row-even"><td>items:</td>
 <td>&#160;</td>
 <td>&#160;</td>
 <td>&#160;</td>
@@ -1486,7 +1499,7 @@
     <span class="s2">&quot;delete_codes&quot;</span><span class="o">:</span><span class="p">[</span>
         <span class="s2">&quot;UKADNHQYICL&quot;</span>
         <span class="p">],</span>
-    <span class="s2">&quot;amount_items&quot;</span><span class="o">:</span><span class="p">[</span>
+    <span class="s2">&quot;items&quot;</span><span class="o">:</span><span class="p">[</span>
         <span class="p">{</span>
             <span class="s2">&quot;code&quot;</span><span class="o">:</span><span class="s2">&quot;UVPAEYSMLTB&quot;</span><span class="p">,</span>
             <span class="s2">&quot;amount&quot;</span><span class="o">:</span><span class="mi">100</span><span class="p">,</span>
@@ -1585,7 +1598,7 @@
 <td>&#160;</td>
 <td>活动结束日期</td>
 </tr>
-<tr class="row-even"><td>amount_items</td>
+<tr class="row-even"><td>items</td>
 <td>Array</td>
 <td>可选</td>
 <td>&#160;</td>
@@ -1617,7 +1630,7 @@
 </tr>
 </thead>
 <tbody valign="top">
-<tr class="row-even"><td>amount_items:</td>
+<tr class="row-even"><td>items:</td>
 <td>&#160;</td>
 <td>&#160;</td>
 <td>&#160;</td>
@@ -1669,7 +1682,7 @@
     <span class="s2">&quot;delete_codes&quot;</span><span class="o">:</span><span class="p">[</span>
         <span class="s2">&quot;UPSUKWOYICN&quot;</span>
         <span class="p">],</span>
-    <span class="s2">&quot;amount_items&quot;</span><span class="o">:</span><span class="p">[</span>
+    <span class="s2">&quot;items&quot;</span><span class="o">:</span><span class="p">[</span>
         <span class="p">{</span>
             <span class="s2">&quot;code&quot;</span><span class="o">:</span><span class="s2">&quot;UXWJOVRFEDC&quot;</span><span class="p">,</span>
             <span class="s2">&quot;amount&quot;</span><span class="o">:</span><span class="mi">1</span><span class="p">,</span>
