@@ -1401,6 +1401,7 @@ JSON数据格式:
 sid                    String      可选                     店铺编号
 rid                    String      必须                     商品编号
 fid                    String      必须                     运费模板编号
+return_policy_id       Integer     必须                     退换货编号
 product_return_policy  String      必须                     退换货规则
 is_distributed         Bool        必须                     商品是否分销
 commission_rate        Number      可选                     佣金比率
