@@ -1604,14 +1604,14 @@
 <p>请求 <strong>正确</strong> 返回结果：</p>
 <div class="highlight-javascript"><div class="highlight"><pre><span></span><span class="p">{</span>
     <span class="s2">&quot;data&quot;</span><span class="o">:</span> <span class="p">{</span>
-        <span class="s2">&quot;count&quot;</span><span class="o">:</span> <span class="mi">4</span><span class="p">,</span>
+        <span class="s2">&quot;count&quot;</span><span class="o">:</span> <span class="mi">2</span><span class="p">,</span>
         <span class="s2">&quot;next_url&quot;</span><span class="o">:</span> <span class="kc">false</span><span class="p">,</span>
         <span class="s2">&quot;prev_url&quot;</span><span class="o">:</span> <span class="kc">false</span><span class="p">,</span>
         <span class="s2">&quot;total_page&quot;</span><span class="o">:</span> <span class="mi">1</span><span class="p">,</span>
         <span class="s2">&quot;user_parties&quot;</span><span class="o">:</span> <span class="p">[</span>
             <span class="p">{</span>
                 <span class="s2">&quot;about_me&quot;</span><span class="o">:</span> <span class="kc">null</span><span class="p">,</span>
-                <span class="s2">&quot;avatar&quot;</span><span class="o">:</span> <span class="s2">&quot;http://0.0.0.0:9000/_uploads/photos/http://127.0.0.1:9000/_uploads/photos/222222/5d2812257b539aa.jpg&quot;</span><span class="p">,</span> <span class="c1">// 头像</span>
+                <span class="s2">&quot;avatar&quot;</span><span class="o">:</span> <span class="s2">&quot;http://0.0.0.0:9000/_uploads/photos/http://127.0.0.1:9000/_uploads/photos/222222/5d2812257b539aa.jpg&quot;</span><span class="p">,</span> <span class="c1">// 头像url</span>
                 <span class="s2">&quot;city&quot;</span><span class="o">:</span> <span class="kc">null</span><span class="p">,</span>
                 <span class="s2">&quot;date&quot;</span><span class="o">:</span> <span class="s2">&quot;&quot;</span><span class="p">,</span>
                 <span class="s2">&quot;email&quot;</span><span class="o">:</span> <span class="kc">null</span><span class="p">,</span>
@@ -1625,53 +1625,33 @@
                 <span class="s2">&quot;wxapp_id&quot;</span><span class="o">:</span> <span class="s2">&quot;1&quot;</span>
             <span class="p">},</span>
             <span class="p">{</span>
-                <span class="s2">&quot;about_me&quot;</span><span class="o">:</span> <span class="kc">null</span><span class="p">,</span>
-                <span class="s2">&quot;avatar&quot;</span><span class="o">:</span> <span class="s2">&quot;http://0.0.0.0:9000/_uploads/photos/http://127.0.0.1:9000/_uploads/photos/222222/5d2812257b539aa.jpg&quot;</span><span class="p">,</span> <span class="c1">// // 头像</span>
-                <span class="s2">&quot;city&quot;</span><span class="o">:</span> <span class="kc">null</span><span class="p">,</span>
-                <span class="s2">&quot;date&quot;</span><span class="o">:</span> <span class="s2">&quot;&quot;</span><span class="p">,</span>
-                <span class="s2">&quot;email&quot;</span><span class="o">:</span> <span class="kc">null</span><span class="p">,</span>
-                <span class="s2">&quot;gender&quot;</span><span class="o">:</span> <span class="kc">null</span><span class="p">,</span>
-                <span class="s2">&quot;id&quot;</span><span class="o">:</span> <span class="mi">5</span><span class="p">,</span>
-                <span class="s2">&quot;master_uid&quot;</span><span class="o">:</span> <span class="mi">2</span><span class="p">,</span>
-                <span class="s2">&quot;nick_name&quot;</span><span class="o">:</span> <span class="kc">null</span><span class="p">,</span>
-                <span class="s2">&quot;openid&quot;</span><span class="o">:</span> <span class="s2">&quot;s&quot;</span><span class="p">,</span>
-                <span class="s2">&quot;province&quot;</span><span class="o">:</span> <span class="kc">null</span><span class="p">,</span>
-                <span class="s2">&quot;type&quot;</span><span class="o">:</span> <span class="kc">null</span><span class="p">,</span>
-                <span class="s2">&quot;wxapp_id&quot;</span><span class="o">:</span> <span class="s2">&quot;1&quot;</span>
-            <span class="p">},</span>
-            <span class="p">{</span>
-                <span class="s2">&quot;about_me&quot;</span><span class="o">:</span> <span class="kc">null</span><span class="p">,</span>
-                <span class="s2">&quot;avatar&quot;</span><span class="o">:</span> <span class="s2">&quot;http://0.0.0.0:9000/_uploads/photos/http://127.0.0.1:9000/_uploads/photos/222222/5d2812257b539aa.jpg&quot;</span><span class="p">,</span> <span class="c1">// // 头像</span>
-                <span class="s2">&quot;city&quot;</span><span class="o">:</span> <span class="kc">null</span><span class="p">,</span>
-                <span class="s2">&quot;country&quot;</span><span class="o">:</span> <span class="kc">null</span><span class="p">,</span>
+                <span class="s2">&quot;about_me&quot;</span><span class="o">:</span> <span class="s2">&quot;我是个好人&quot;</span><span class="p">,</span>
+                <span class="s2">&quot;avatar&quot;</span><span class="o">:</span> <span class="p">{</span>
+                    <span class="s2">&quot;created_at&quot;</span><span class="o">:</span> <span class="kc">null</span><span class="p">,</span>
+                    <span class="s2">&quot;filename&quot;</span><span class="o">:</span> <span class="s2">&quot;a&quot;</span><span class="p">,</span>
+                    <span class="s2">&quot;filepath&quot;</span><span class="o">:</span> <span class="s2">&quot;http://127.0.0.1:9000/_uploads/photos/222222/5d2812257b539aa.jpg&quot;</span><span class="p">,</span>
+                    <span class="s2">&quot;id&quot;</span><span class="o">:</span> <span class="mi">1</span><span class="p">,</span>
+                    <span class="s2">&quot;type&quot;</span><span class="o">:</span> <span class="kc">null</span><span class="p">,</span>
+                    <span class="s2">&quot;view_url&quot;</span><span class="o">:</span> <span class="s2">&quot;http://0.0.0.0:9000/_uploads/photos/http://127.0.0.1:9000/_uploads/photos/222222/5d2812257b539aa.jpg&quot;</span>  <span class="c1">// 头像url</span>
+                <span class="p">},</span>
+                <span class="s2">&quot;avatar_id&quot;</span><span class="o">:</span> <span class="mi">1</span><span class="p">,</span>
+                <span class="s2">&quot;city&quot;</span><span class="o">:</span> <span class="s2">&quot;北京&quot;</span><span class="p">,</span>
+                <span class="s2">&quot;city_id&quot;</span><span class="o">:</span> <span class="mi">1</span><span class="p">,</span>
+                <span class="s2">&quot;country&quot;</span><span class="o">:</span> <span class="s2">&quot;&quot;</span><span class="p">,</span>
+                <span class="s2">&quot;country_id&quot;</span><span class="o">:</span> <span class="kc">null</span><span class="p">,</span>
                 <span class="s2">&quot;created_at&quot;</span><span class="o">:</span> <span class="mi">1531125527</span><span class="p">,</span>
-                <span class="s2">&quot;date&quot;</span><span class="o">:</span> <span class="s2">&quot;&quot;</span><span class="p">,</span>
+                <span class="s2">&quot;date&quot;</span><span class="o">:</span> <span class="s2">&quot;1992-12-26&quot;</span><span class="p">,</span>
                 <span class="s2">&quot;description&quot;</span><span class="o">:</span> <span class="kc">null</span><span class="p">,</span>
                 <span class="s2">&quot;email&quot;</span><span class="o">:</span> <span class="s2">&quot;13001179400&quot;</span><span class="p">,</span>
                 <span class="s2">&quot;gender&quot;</span><span class="o">:</span> <span class="mi">0</span><span class="p">,</span>
-                <span class="s2">&quot;last_seen&quot;</span><span class="o">:</span> <span class="mi">1531389228</span><span class="p">,</span>
-                <span class="s2">&quot;mail&quot;</span><span class="o">:</span> <span class="kc">null</span><span class="p">,</span>
+                <span class="s2">&quot;last_seen&quot;</span><span class="o">:</span> <span class="mi">1531731642</span><span class="p">,</span>
+                <span class="s2">&quot;mail&quot;</span><span class="o">:</span> <span class="s2">&quot;asd@163.com&quot;</span><span class="p">,</span>
                 <span class="s2">&quot;master_uid&quot;</span><span class="o">:</span> <span class="mi">2</span><span class="p">,</span>
                 <span class="s2">&quot;mobile&quot;</span><span class="o">:</span> <span class="kc">null</span><span class="p">,</span>
-                <span class="s2">&quot;name&quot;</span><span class="o">:</span> <span class="kc">null</span><span class="p">,</span>
-                <span class="s2">&quot;province&quot;</span><span class="o">:</span> <span class="kc">null</span><span class="p">,</span>
+                <span class="s2">&quot;province&quot;</span><span class="o">:</span> <span class="s2">&quot;北京&quot;</span><span class="p">,</span>
+                <span class="s2">&quot;province_id&quot;</span><span class="o">:</span> <span class="mi">1</span><span class="p">,</span>
                 <span class="s2">&quot;uid&quot;</span><span class="o">:</span> <span class="s2">&quot;19138405762&quot;</span><span class="p">,</span>
-                <span class="s2">&quot;username&quot;</span><span class="o">:</span> <span class="s2">&quot;13001179400&quot;</span>
-            <span class="p">},</span>
-            <span class="p">{</span>
-                <span class="s2">&quot;about_me&quot;</span><span class="o">:</span> <span class="kc">null</span><span class="p">,</span>
-                <span class="s2">&quot;avatar&quot;</span><span class="o">:</span> <span class="s2">&quot;http://0.0.0.0:9000/_uploads/photos/http://127.0.0.1:9000/_uploads/photos/222222/5d2812257b539aa.jpg&quot;</span><span class="p">,</span> <span class="c1">// // 头像</span>
-                <span class="s2">&quot;city&quot;</span><span class="o">:</span> <span class="kc">null</span><span class="p">,</span>
-                <span class="s2">&quot;date&quot;</span><span class="o">:</span> <span class="s2">&quot;&quot;</span><span class="p">,</span>
-                <span class="s2">&quot;email&quot;</span><span class="o">:</span> <span class="kc">null</span><span class="p">,</span>
-                <span class="s2">&quot;gender&quot;</span><span class="o">:</span> <span class="kc">null</span><span class="p">,</span>
-                <span class="s2">&quot;id&quot;</span><span class="o">:</span> <span class="mi">4</span><span class="p">,</span>
-                <span class="s2">&quot;master_uid&quot;</span><span class="o">:</span> <span class="mi">2</span><span class="p">,</span>
-                <span class="s2">&quot;nick_name&quot;</span><span class="o">:</span> <span class="kc">null</span><span class="p">,</span>
-                <span class="s2">&quot;openid&quot;</span><span class="o">:</span> <span class="s2">&quot;a&quot;</span><span class="p">,</span>
-                <span class="s2">&quot;province&quot;</span><span class="o">:</span> <span class="kc">null</span><span class="p">,</span>
-                <span class="s2">&quot;type&quot;</span><span class="o">:</span> <span class="kc">null</span><span class="p">,</span>
-                <span class="s2">&quot;wxapp_id&quot;</span><span class="o">:</span> <span class="s2">&quot;1&quot;</span>
+                <span class="s2">&quot;username&quot;</span><span class="o">:</span> <span class="s2">&quot;超人会飞&quot;</span>
             <span class="p">}</span>
         <span class="p">]</span>
     <span class="p">},</span>
