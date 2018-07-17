@@ -897,14 +897,14 @@ JSON数据格式
 
     {
         "data": {
-            "count": 4,
+            "count": 2,
             "next_url": false,
             "prev_url": false,
             "total_page": 1,
             "user_parties": [
                 {
                     "about_me": null,
-                    "avatar": "http://0.0.0.0:9000/_uploads/photos/http://127.0.0.1:9000/_uploads/photos/222222/5d2812257b539aa.jpg", // 头像
+                    "avatar": "http://0.0.0.0:9000/_uploads/photos/http://127.0.0.1:9000/_uploads/photos/222222/5d2812257b539aa.jpg", // 头像url
                     "city": null,
                     "date": "",
                     "email": null,
@@ -918,53 +918,33 @@ JSON数据格式
                     "wxapp_id": "1"
                 },
                 {
-                    "about_me": null,
-                    "avatar": "http://0.0.0.0:9000/_uploads/photos/http://127.0.0.1:9000/_uploads/photos/222222/5d2812257b539aa.jpg", // // 头像
-                    "city": null,
-                    "date": "",
-                    "email": null,
-                    "gender": null,
-                    "id": 5,
-                    "master_uid": 2,
-                    "nick_name": null,
-                    "openid": "s",
-                    "province": null,
-                    "type": null,
-                    "wxapp_id": "1"
-                },
-                {
-                    "about_me": null,
-                    "avatar": "http://0.0.0.0:9000/_uploads/photos/http://127.0.0.1:9000/_uploads/photos/222222/5d2812257b539aa.jpg", // // 头像
-                    "city": null,
-                    "country": null,
+                    "about_me": "我是个好人",
+                    "avatar": {
+                        "created_at": null,
+                        "filename": "a",
+                        "filepath": "http://127.0.0.1:9000/_uploads/photos/222222/5d2812257b539aa.jpg",
+                        "id": 1,
+                        "type": null,
+                        "view_url": "http://0.0.0.0:9000/_uploads/photos/http://127.0.0.1:9000/_uploads/photos/222222/5d2812257b539aa.jpg"  // 头像url
+                    },
+                    "avatar_id": 1,
+                    "city": "北京",
+                    "city_id": 1,
+                    "country": "",
+                    "country_id": null,
                     "created_at": 1531125527,
-                    "date": "",
+                    "date": "1992-12-26",
                     "description": null,
                     "email": "13001179400",
                     "gender": 0,
-                    "last_seen": 1531389228,
-                    "mail": null,
+                    "last_seen": 1531731642,
+                    "mail": "asd@163.com",
                     "master_uid": 2,
                     "mobile": null,
-                    "name": null,
-                    "province": null,
+                    "province": "北京",
+                    "province_id": 1,
                     "uid": "19138405762",
-                    "username": "13001179400"
-                },
-                {
-                    "about_me": null,
-                    "avatar": "http://0.0.0.0:9000/_uploads/photos/http://127.0.0.1:9000/_uploads/photos/222222/5d2812257b539aa.jpg", // // 头像
-                    "city": null,
-                    "date": "",
-                    "email": null,
-                    "gender": null,
-                    "id": 4,
-                    "master_uid": 2,
-                    "nick_name": null,
-                    "openid": "a",
-                    "province": null,
-                    "type": null,
-                    "wxapp_id": "1"
+                    "username": "超人会飞"
                 }
             ]
         },
