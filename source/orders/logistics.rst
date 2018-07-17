@@ -1252,7 +1252,7 @@ product_items          Array         必须                      商品信息列
 product_items:
 sku_rid                String        必须                      sku_rid
 quantity               Integer       必须          1           购买数量
-freight_template_id    Integer       必须                      运费模板id
+freight_template_id    String        必须                      运费模板rid
 =====================  ===========  ==========  ===========  ==============================
 
 
@@ -1267,12 +1267,12 @@ freight_template_id    Integer       必须                      运费模板id
             {
                 "sku_rid":"1",
                 "quantity":2,
-                "freight_template_id": 44
+                "freight_template_id": "Ft304291658"
             },
             {
                 "sku_rid":"4",
                 "quantity":2,
-                "freight_template_id": 46
+                "freight_template_id": "Ft304291658"
 
             }
 
