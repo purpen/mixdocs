@@ -557,7 +557,7 @@
 <tr class="row-odd"><td>avatar_id</td>
 <td>Integer</td>
 <td>可选</td>
-<td>&#160;</td>
+<td>0</td>
 <td>用户头像ID</td>
 </tr>
 <tr class="row-even"><td>about_me</td>
@@ -611,19 +611,12 @@
 <p>正确结果格式:</p>
 <div class="highlight-default"><div class="highlight"><pre><span></span><span class="p">{</span>
     <span class="s2">&quot;data&quot;</span><span class="p">:</span> <span class="p">{</span>
-        <span class="s2">&quot;about_me&quot;</span><span class="p">:</span> <span class="s2">&quot;我是个好人&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;about_me&quot;</span><span class="p">:</span> <span class="s2">&quot;我是个好人&quot;</span><span class="p">,</span>  <span class="o">//</span> <span class="n">关于我</span>
         <span class="s2">&quot;area&quot;</span><span class="p">:</span> <span class="s2">&quot;鱼泉乡&quot;</span><span class="p">,</span>  <span class="o">//</span> <span class="n">区域</span>
-        <span class="s2">&quot;area_id&quot;</span><span class="p">:</span> <span class="mi">10000</span><span class="p">,</span>  <span class="o">//</span><span class="n">区域ID</span>
-        <span class="s2">&quot;avatar&quot;</span><span class="p">:</span> <span class="p">{</span>
-            <span class="s2">&quot;created_at&quot;</span><span class="p">:</span> <span class="n">null</span><span class="p">,</span>
-            <span class="s2">&quot;filename&quot;</span><span class="p">:</span> <span class="s2">&quot;a&quot;</span><span class="p">,</span>
-            <span class="s2">&quot;filepath&quot;</span><span class="p">:</span> <span class="s2">&quot;http://127.0.0.1:9000/_uploads/photos/222222/5d2812257b539aa.jpg&quot;</span><span class="p">,</span>
-            <span class="s2">&quot;id&quot;</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span>
-            <span class="s2">&quot;type&quot;</span><span class="p">:</span> <span class="n">null</span><span class="p">,</span>
-            <span class="s2">&quot;view_url&quot;</span><span class="p">:</span> <span class="s2">&quot;http://0.0.0.0:9000/_uploads/photos/http://127.0.0.1:9000/_uploads/photos/222222/5d2812257b539aa.jpg&quot;</span> <span class="o">//</span>  <span class="n">头像url</span>
-        <span class="p">},</span>
-        <span class="s2">&quot;avatar_id&quot;</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span>  <span class="o">//</span> <span class="n">头像ID</span>
-        <span class="s2">&quot;city&quot;</span><span class="p">:</span> <span class="s2">&quot;北京&quot;</span><span class="p">,</span>  <span class="o">//</span> <span class="n">市</span>
+        <span class="s2">&quot;area_id&quot;</span><span class="p">:</span> <span class="mi">10000</span><span class="p">,</span>
+        <span class="s2">&quot;avatar&quot;</span><span class="p">:</span> <span class="s2">&quot;http://kg.erp.taihuoniao.com/static/img/default-logo-180x180.png&quot;</span><span class="p">,</span> <span class="o">//</span> <span class="n">头像url</span>
+        <span class="s2">&quot;avatar_id&quot;</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span>  <span class="o">//</span> <span class="n">头像ID</span>
+        <span class="s2">&quot;city&quot;</span><span class="p">:</span> <span class="s2">&quot;北京&quot;</span><span class="p">,</span>
         <span class="s2">&quot;city_id&quot;</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span>
         <span class="s2">&quot;country&quot;</span><span class="p">:</span> <span class="s2">&quot;&quot;</span><span class="p">,</span>
         <span class="s2">&quot;country_id&quot;</span><span class="p">:</span> <span class="n">null</span><span class="p">,</span>
@@ -631,15 +624,15 @@
         <span class="s2">&quot;date&quot;</span><span class="p">:</span> <span class="s2">&quot;1992-12-26&quot;</span><span class="p">,</span>  <span class="o">//</span> <span class="n">生日</span>
         <span class="s2">&quot;description&quot;</span><span class="p">:</span> <span class="n">null</span><span class="p">,</span>
         <span class="s2">&quot;email&quot;</span><span class="p">:</span> <span class="s2">&quot;13001179400&quot;</span><span class="p">,</span>
-        <span class="s2">&quot;gender&quot;</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span> <span class="o">//</span> <span class="n">性别</span>
-        <span class="s2">&quot;last_seen&quot;</span><span class="p">:</span> <span class="mi">1531731642</span><span class="p">,</span>
-        <span class="s2">&quot;mail&quot;</span><span class="p">:</span> <span class="s2">&quot;asd@163.com&quot;</span><span class="p">,</span> <span class="o">//</span> <span class="n">邮箱</span>
+        <span class="s2">&quot;gender&quot;</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span>  <span class="o">//</span> <span class="n">性别</span>
+        <span class="s2">&quot;last_seen&quot;</span><span class="p">:</span> <span class="mi">1531842343</span><span class="p">,</span>
+        <span class="s2">&quot;mail&quot;</span><span class="p">:</span> <span class="s2">&quot;asd@163.com&quot;</span><span class="p">,</span>  <span class="o">//</span> <span class="n">邮箱</span>
         <span class="s2">&quot;master_uid&quot;</span><span class="p">:</span> <span class="mi">2</span><span class="p">,</span>
         <span class="s2">&quot;mobile&quot;</span><span class="p">:</span> <span class="n">null</span><span class="p">,</span>
-        <span class="s2">&quot;province&quot;</span><span class="p">:</span> <span class="s2">&quot;北京&quot;</span><span class="p">,</span>  <span class="o">//</span> <span class="n">省</span>
+        <span class="s2">&quot;province&quot;</span><span class="p">:</span> <span class="s2">&quot;北京&quot;</span><span class="p">,</span>
         <span class="s2">&quot;province_id&quot;</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span>
         <span class="s2">&quot;uid&quot;</span><span class="p">:</span> <span class="s2">&quot;19138405762&quot;</span><span class="p">,</span>
-        <span class="s2">&quot;username&quot;</span><span class="p">:</span> <span class="s2">&quot;超人不会飞&quot;</span>  <span class="o">//</span> <span class="n">用户名</span>
+        <span class="s2">&quot;username&quot;</span><span class="p">:</span> <span class="s2">&quot;超人啊&quot;</span>  <span class="o">//</span> <span class="n">用户名</span>
     <span class="p">},</span>
     <span class="s2">&quot;status&quot;</span><span class="p">:</span> <span class="p">{</span>
         <span class="s2">&quot;code&quot;</span><span class="p">:</span> <span class="mi">200</span><span class="p">,</span>
@@ -702,35 +695,28 @@
 <p>请求 <strong>正确</strong> 返回结果：</p>
 <div class="highlight-javascript"><div class="highlight"><pre><span></span><span class="p">{</span>
     <span class="s2">&quot;data&quot;</span><span class="o">:</span> <span class="p">{</span>
-        <span class="s2">&quot;about_me&quot;</span><span class="o">:</span> <span class="s2">&quot;我是个好人&quot;</span><span class="p">,</span>
-        <span class="s2">&quot;area&quot;</span><span class="o">:</span> <span class="s2">&quot;鱼泉乡&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;about_me&quot;</span><span class="o">:</span> <span class="s2">&quot;我是个好人&quot;</span><span class="p">,</span>  <span class="c1">// 关于我</span>
+        <span class="s2">&quot;area&quot;</span><span class="o">:</span> <span class="s2">&quot;鱼泉乡&quot;</span><span class="p">,</span>  <span class="c1">// 区域</span>
         <span class="s2">&quot;area_id&quot;</span><span class="o">:</span> <span class="mi">10000</span><span class="p">,</span>
-        <span class="s2">&quot;avatar&quot;</span><span class="o">:</span> <span class="p">{</span>
-            <span class="s2">&quot;created_at&quot;</span><span class="o">:</span> <span class="kc">null</span><span class="p">,</span>
-            <span class="s2">&quot;filename&quot;</span><span class="o">:</span> <span class="s2">&quot;a&quot;</span><span class="p">,</span>
-            <span class="s2">&quot;filepath&quot;</span><span class="o">:</span> <span class="s2">&quot;http://127.0.0.1:9000/_uploads/photos/222222/5d2812257b539aa.jpg&quot;</span><span class="p">,</span>
-            <span class="s2">&quot;id&quot;</span><span class="o">:</span> <span class="mi">1</span><span class="p">,</span>
-            <span class="s2">&quot;type&quot;</span><span class="o">:</span> <span class="kc">null</span><span class="p">,</span>
-            <span class="s2">&quot;view_url&quot;</span><span class="o">:</span> <span class="s2">&quot;http://0.0.0.0:9000/_uploads/photos/http://127.0.0.1:9000/_uploads/photos/222222/5d2812257b539aa.jpg&quot;</span> <span class="c1">// 头像url</span>
-        <span class="p">},</span>
-        <span class="s2">&quot;avatar_id&quot;</span><span class="o">:</span> <span class="mi">1</span><span class="p">,</span>
-        <span class="s2">&quot;city&quot;</span><span class="o">:</span> <span class="s2">&quot;北京&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;avatar&quot;</span><span class="o">:</span> <span class="s2">&quot;http://kg.erp.taihuoniao.com/static/img/default-logo-180x180.png&quot;</span><span class="p">,</span> <span class="c1">// 头像url</span>
+        <span class="s2">&quot;avatar_id&quot;</span><span class="o">:</span> <span class="mi">0</span><span class="p">,</span>  <span class="c1">// 头像ID</span>
+        <span class="s2">&quot;city&quot;</span><span class="o">:</span> <span class="s2">&quot;北京&quot;</span><span class="p">,</span>  <span class="c1">//市</span>
         <span class="s2">&quot;city_id&quot;</span><span class="o">:</span> <span class="mi">1</span><span class="p">,</span>
         <span class="s2">&quot;country&quot;</span><span class="o">:</span> <span class="s2">&quot;&quot;</span><span class="p">,</span>
         <span class="s2">&quot;country_id&quot;</span><span class="o">:</span> <span class="kc">null</span><span class="p">,</span>
-        <span class="s2">&quot;created_at&quot;</span><span class="o">:</span> <span class="mi">1531125527</span><span class="p">,</span>
-        <span class="s2">&quot;date&quot;</span><span class="o">:</span> <span class="s2">&quot;1992-12-26&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;created_at&quot;</span><span class="o">:</span> <span class="mi">1531125527</span><span class="p">,</span>  <span class="c1">// 创建时间</span>
+        <span class="s2">&quot;date&quot;</span><span class="o">:</span> <span class="s2">&quot;1992-12-26&quot;</span><span class="p">,</span>  <span class="c1">// 生日</span>
         <span class="s2">&quot;description&quot;</span><span class="o">:</span> <span class="kc">null</span><span class="p">,</span>
         <span class="s2">&quot;email&quot;</span><span class="o">:</span> <span class="s2">&quot;13001179400&quot;</span><span class="p">,</span>
-        <span class="s2">&quot;gender&quot;</span><span class="o">:</span> <span class="mi">0</span><span class="p">,</span>
-        <span class="s2">&quot;last_seen&quot;</span><span class="o">:</span> <span class="mi">1531731642</span><span class="p">,</span>
-        <span class="s2">&quot;mail&quot;</span><span class="o">:</span> <span class="s2">&quot;asd@163.com&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;gender&quot;</span><span class="o">:</span> <span class="mi">0</span><span class="p">,</span>  <span class="c1">// 性别</span>
+        <span class="s2">&quot;last_seen&quot;</span><span class="o">:</span> <span class="mi">1531842343</span><span class="p">,</span>
+        <span class="s2">&quot;mail&quot;</span><span class="o">:</span> <span class="s2">&quot;asd@163.com&quot;</span><span class="p">,</span>  <span class="c1">// 邮箱</span>
         <span class="s2">&quot;master_uid&quot;</span><span class="o">:</span> <span class="mi">2</span><span class="p">,</span>
         <span class="s2">&quot;mobile&quot;</span><span class="o">:</span> <span class="kc">null</span><span class="p">,</span>
-        <span class="s2">&quot;province&quot;</span><span class="o">:</span> <span class="s2">&quot;北京&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;province&quot;</span><span class="o">:</span> <span class="s2">&quot;北京&quot;</span><span class="p">,</span> <span class="c1">// 省</span>
         <span class="s2">&quot;province_id&quot;</span><span class="o">:</span> <span class="mi">1</span><span class="p">,</span>
         <span class="s2">&quot;uid&quot;</span><span class="o">:</span> <span class="s2">&quot;19138405762&quot;</span><span class="p">,</span>
-        <span class="s2">&quot;username&quot;</span><span class="o">:</span> <span class="s2">&quot;超人不会飞&quot;</span>
+        <span class="s2">&quot;username&quot;</span><span class="o">:</span> <span class="s2">&quot;超人啊&quot;</span>  <span class="c1">// 用户名</span>
     <span class="p">},</span>
     <span class="s2">&quot;status&quot;</span><span class="o">:</span> <span class="p">{</span>
         <span class="s2">&quot;code&quot;</span><span class="o">:</span> <span class="mi">200</span><span class="p">,</span>

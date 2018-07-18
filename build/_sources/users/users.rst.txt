@@ -78,7 +78,7 @@ JSON数据格式:
 名称              类型      是否必须    默认值     描述说明
 ===============  ========  =========  ========  ====================================
 username         String     可选                 昵称 - 必须保持唯一
-avatar_id        Integer    可选                 用户头像ID
+avatar_id        Integer    可选          0      用户头像ID
 about_me         String     可选                 个人介绍
 gender           Integer    可选          0      性别
 area_id          Integer    可选                 区域ID
@@ -97,19 +97,12 @@ JSON数据格式
 
     {
         "data": {
-            "about_me": "我是个好人",
+            "about_me": "我是个好人",  // 关于我
             "area": "鱼泉乡",  // 区域
-            "area_id": 10000,  //区域ID
-            "avatar": {
-                "created_at": null,
-                "filename": "a",
-                "filepath": "http://127.0.0.1:9000/_uploads/photos/222222/5d2812257b539aa.jpg",
-                "id": 1,
-                "type": null,
-                "view_url": "http://0.0.0.0:9000/_uploads/photos/http://127.0.0.1:9000/_uploads/photos/222222/5d2812257b539aa.jpg" //  头像url
-            },
-            "avatar_id": 1,  // 头像ID
-            "city": "北京",  // 市
+            "area_id": 10000,
+            "avatar": "http://kg.erp.taihuoniao.com/static/img/default-logo-180x180.png", // 头像url
+            "avatar_id": 0,  // 头像ID
+            "city": "北京",
             "city_id": 1,
             "country": "",
             "country_id": null,
@@ -117,15 +110,15 @@ JSON数据格式
             "date": "1992-12-26",  // 生日
             "description": null,
             "email": "13001179400",
-            "gender": 0, // 性别
-            "last_seen": 1531731642,
-            "mail": "asd@163.com", // 邮箱
+            "gender": 0,  // 性别
+            "last_seen": 1531842343,
+            "mail": "asd@163.com",  // 邮箱
             "master_uid": 2,
             "mobile": null,
-            "province": "北京",  // 省
+            "province": "北京",
             "province_id": 1,
             "uid": "19138405762",
-            "username": "超人不会飞"  // 用户名
+            "username": "超人啊"  // 用户名
         },
         "status": {
             "code": 200,
@@ -172,35 +165,28 @@ JSON数据格式
 
     {
         "data": {
-            "about_me": "我是个好人",
-            "area": "鱼泉乡",
+            "about_me": "我是个好人",  // 关于我
+            "area": "鱼泉乡",  // 区域
             "area_id": 10000,
-            "avatar": {
-                "created_at": null,
-                "filename": "a",
-                "filepath": "http://127.0.0.1:9000/_uploads/photos/222222/5d2812257b539aa.jpg",
-                "id": 1,
-                "type": null,
-                "view_url": "http://0.0.0.0:9000/_uploads/photos/http://127.0.0.1:9000/_uploads/photos/222222/5d2812257b539aa.jpg" // 头像url
-            },
-            "avatar_id": 1,
-            "city": "北京",
+            "avatar": "http://kg.erp.taihuoniao.com/static/img/default-logo-180x180.png", // 头像url
+            "avatar_id": 0,  // 头像ID
+            "city": "北京",  //市
             "city_id": 1,
             "country": "",
             "country_id": null,
-            "created_at": 1531125527,
-            "date": "1992-12-26",
+            "created_at": 1531125527,  // 创建时间
+            "date": "1992-12-26",  // 生日
             "description": null,
             "email": "13001179400",
-            "gender": 0,
-            "last_seen": 1531731642,
-            "mail": "asd@163.com",
+            "gender": 0,  // 性别
+            "last_seen": 1531842343,
+            "mail": "asd@163.com",  // 邮箱
             "master_uid": 2,
             "mobile": null,
-            "province": "北京",
+            "province": "北京", // 省
             "province_id": 1,
             "uid": "19138405762",
-            "username": "超人不会飞"
+            "username": "超人啊"  // 用户名
         },
         "status": {
             "code": 200,
