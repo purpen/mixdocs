@@ -32,46 +32,66 @@ JSON数据格式
 
     {
         "data": {
+            "area": "",
+            "area_id": 0,
             "areacode": "+86",
+            "begin_date": "",  // 休馆时间
             "bgcover": {
                 "created_at": null,
                 "filename": "e",
                 "filepath": "http://127.0.0.1:9000/_uploads/photos/222222/5d2812257b539bb.jpg",
                 "id": 2,
+                "type": null,
                 "view_url": "http://0.0.0.0:9000/_uploads/photos/http://127.0.0.1:9000/_uploads/photos/222222/5d2812257b539bb.jpg"
             },
-            "browse_number": 0,
+            "bgcover_id": 2,  // 背景
+            "browse_number": 2,  // 浏览人数
             "categories": [
-                "手机"
+                [
+                    1,
+                    "手机"
+                ],
+                [
+                    2,
+                    "电脑"
+                ]
             ],
             "city": "北京",
+            "city_id": 1,
             "country": "中国",
-            "created_at": 1529143434,
+            "country_id": 1,
+            "created_at": 1530951138,
             "delivery_city": "北京",
-            "delivery_country ": "中国",
+            "delivery_city_id": 1,
+            "delivery_country": "中国",
+            "delivery_country_id": 1,
+            "delivery_date": "",  // 恢复发货时间
             "delivery_province": "北京",
-            "description": null,
-            "detail": {
-                "content": "要下雨了",
-                "id": 1,
-                "store_rid": "99627015"
-            },
-            "distribution_type": 0,
-            "fans_count": 0,
+            "delivery_province_id": 1,
+            "description": "大雨还在下,你的心里怕不怕",  // 描述
+            "detail": "",  // 详情
+            "distribution_type": 2, // 分销设置
+            "end_date": "",  // 休馆结束日期
+            "fans_count": 0,  // 粉丝数
+            "is_closed": false,  // 是否休馆
             "logo": {
                 "created_at": null,
                 "filename": "a",
                 "filepath": "http://127.0.0.1:9000/_uploads/photos/222222/5d2812257b539aa.jpg",
                 "id": 1,
+                "type": null,
                 "view_url": "http://0.0.0.0:9000/_uploads/photos/http://127.0.0.1:9000/_uploads/photos/222222/5d2812257b539aa.jpg"
             },
+            "logo_id": 1,
             "mobile": "15555555555",
-            "name": "太火鸟",
+            "name": "雨一直下",  // 名称
+            "pattern": 1,
             "phone": "0314-7894561",
             "province": "北京",
-            "rid": "99627015",
+            "province_id": 1,
+            "rid": "97409251",
             "status": 1,
-            "tag_line": "处处蚊子咬",
+            "tag_line": "处处蚊子咬",  // 宣传语
             "type": 1
         },
         "status": {
@@ -882,6 +902,7 @@ JSON数据格式
 名称          类型      是否必须    默认值     描述说明
 ===========  ========  =========  ========  ==============================================
 rid          String    必填                  店铺编号
+openid       String    必须                  用户唯一标识
 page         Number    可选         1        当前页码
 per_page     Number    可选         12       每页数量
 ===========  ========  =========  ========  ==============================================
@@ -904,29 +925,33 @@ JSON数据格式
             "user_parties": [
                 {
                     "about_me": null,
-                    "avatar": "http://0.0.0.0:9000/_uploads/photos/http://127.0.0.1:9000/_uploads/photos/222222/5d2812257b539aa.jpg", // 头像url
-                    "city": null,
+                    "area": "",
+                    "area_id": null,
+                    "avatar": "http://kg.erp.taihuoniao.com/static/img/default-logo-180x180.png",  // 头像
+                    "avatar_id": null,
+                    "city": "",
+                    "city_id": null,
+                    "country": "",
+                    "country_id": null,
+                    "created_at": 1531567480,
                     "date": "",
-                    "email": null,
-                    "gender": null,
-                    "id": 6,
-                    "master_uid": 2,
-                    "nick_name": null,
-                    "openid": "d",
-                    "province": null,
-                    "type": null,
-                    "wxapp_id": "1"
+                    "description": null,
+                    "email": "13001145666",
+                    "gender": 0,
+                    "last_seen": 1531567480,
+                    "mail": null,
+                    "master_uid": 0,
+                    "mobile": "13001145666",
+                    "province": "",
+                    "province_id": null,
+                    "uid": "17210896435",
+                    "username": "13001145666"
                 },
                 {
                     "about_me": "我是个好人",
-                    "avatar": {
-                        "created_at": null,
-                        "filename": "a",
-                        "filepath": "http://127.0.0.1:9000/_uploads/photos/222222/5d2812257b539aa.jpg",
-                        "id": 1,
-                        "type": null,
-                        "view_url": "http://0.0.0.0:9000/_uploads/photos/http://127.0.0.1:9000/_uploads/photos/222222/5d2812257b539aa.jpg"  // 头像url
-                    },
+                    "area": "鱼泉乡",
+                    "area_id": 10000,
+                    "avatar": "http://0.0.0.0:9000/_uploads/photos/http://127.0.0.1:9000/_uploads/photos/222222/5d2812257b539aa.jpg",  // 头像
                     "avatar_id": 1,
                     "city": "北京",
                     "city_id": 1,
@@ -937,14 +962,14 @@ JSON数据格式
                     "description": null,
                     "email": "13001179400",
                     "gender": 0,
-                    "last_seen": 1531731642,
+                    "last_seen": 1531842343,
                     "mail": "asd@163.com",
                     "master_uid": 2,
                     "mobile": null,
                     "province": "北京",
                     "province_id": 1,
                     "uid": "19138405762",
-                    "username": "超人会飞"
+                    "username": "超看看人"
                 }
             ]
         },
