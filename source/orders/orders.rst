@@ -151,7 +151,9 @@ JSON数据格式:
             "status": 5,  // 订单状态
             "store_name": "第一家(None)",  // 店铺名称
             "total_amount": 3,  // 商品金额
-            "total_quantity": 3  // 商品总数量
+            "total_quantity": 3,  // 商品总数量
+            "blessing_utterance": "嘿嘿嘿",  // 买家寄语
+            "buyer_remark": "哈哈哈",  // 买家备注
             "items": [
                 {
                     "commission_price": 0,  // 佣金
@@ -219,12 +221,10 @@ address_rid            String      必需                     收货地址ID
 outside_target_id      String      可选
 invoice_type           Integer     可选          1          发票类型
 invoice_info           String      可选          {}
-buyer_remark           String      可选                     买家备注
 ship_mode              Integer     可选          1          1、发快递 2、自提
 from_client            String      可选                     来源客户端，1、小程序；2、H5 3、App 4、TV 5、POS 6、PAD
 affiliate_code         String      可选                     推广码
 bonus_code             String      可选                     官方红包码
-customer_code          String      可选                     分销商代码
 sync_pay               Integer     可选           0         是否同步返回支付参数 0、否 1、是
 store_items            Array       必需                     店铺商品信息
 =====================  ==========  =========  ==========  =============================
@@ -236,6 +236,8 @@ store_items            Array       必需                     店铺商品信息
 =====================  ==========  =========  ==========  =============================
 store_items:
 store_rid              String      必需                    店铺rid
+buyer_remark           String      可选                    买家备注
+blessing_utterance     String      可选                    买家寄语
 coupon_codes           Array       可选                    优惠券码列表
 items                  Array       必需                    订单明细参数
 =====================  ==========  =========  ==========  =============================
@@ -315,7 +317,9 @@ JSON数据格式:
                     "status": 5,  // 订单状态
                     "store_name": "第一家(None)",  // 店铺名称
                     "total_amount": 3,  // 商品金额
-                    "total_quantity": 3  // 商品总数量
+                    "total_quantity": 3,  // 商品总数量
+                    "blessing_utterance": "嘿嘿嘿",  // 买家寄语
+                    "buyer_remark": "哈哈哈",  // 买家备注
                     "items": [
                         {
                             "commission_price": 0,  // 佣金
@@ -561,7 +565,9 @@ JSON数据格式:
                 "status": 20,  // 订单状态
                 "store_name": "第一家(None)",  // 店铺名称
                 "total_amount": 3,  // 商品金额
-                "total_quantity": 3  // 商品总数量
+                "total_quantity": 3,  // 商品总数量
+                "blessing_utterance": "嘿嘿嘿",  // 买家寄语
+                "buyer_remark": "哈哈哈",  // 买家备注
                 "items": [
                     {
                         "commission_price": 0,  // 佣金
@@ -689,7 +695,9 @@ JSON数据格式:
                     "status": 10,  // 订单状态
                     "store_name": "第一家(None)",  // 店铺名称
                     "total_amount": 3,  // 商品金额
-                    "total_quantity": 3  // 商品总数量
+                    "total_quantity": 3,  // 商品总数量
+                    "blessing_utterance": "嘿嘿嘿",  // 买家寄语
+                    "buyer_remark": "哈哈哈",  // 买家备注
                     "items": [
                         {
                             "commission_price": 0,  // 佣金
@@ -781,7 +789,9 @@ JSON数据格式:
                     "status": 12,  // 订单状态
                     "store_name": "第一家(None)",  // 店铺名称
                     "total_amount": 3,  // 商品金额
-                    "total_quantity": 3  // 商品总数量
+                    "total_quantity": 3,  // 商品总数量
+                    "blessing_utterance": "嘿嘿嘿",  // 买家寄语
+                    "buyer_remark": "哈哈哈",  // 买家备注
                     "items": [
                         {
                             "commission_price": 0,  // 佣金
@@ -873,7 +883,9 @@ JSON数据格式:
                     "status": 13,  // 订单状态
                     "store_name": "第一家(None)",  // 店铺名称
                     "total_amount": 3,  // 商品金额
-                    "total_quantity": 3  // 商品总数量
+                    "total_quantity": 3,  // 商品总数量
+                    "blessing_utterance": "嘿嘿嘿",  // 买家寄语
+                    "buyer_remark": "哈哈哈",  // 买家备注
                     "items": [
                         {
                             "commission_price": 0,  // 佣金
@@ -965,7 +977,9 @@ JSON数据格式:
                     "status": 16,  // 订单状态
                     "store_name": "第一家(None)",  // 店铺名称
                     "total_amount": 3,  // 商品金额
-                    "total_quantity": 3  // 商品总数量
+                    "total_quantity": 3,  // 商品总数量
+                    "blessing_utterance": "嘿嘿嘿",  // 买家寄语
+                    "buyer_remark": "哈哈哈",  // 买家备注
                     "items": [
                         {
                             "commission_price": 0,  // 佣金
@@ -1057,7 +1071,9 @@ JSON数据格式:
                     "status": 40,  // 订单状态
                     "store_name": "第一家(None)",  // 店铺名称
                     "total_amount": 3,  // 商品金额
-                    "total_quantity": 3  // 商品总数量
+                    "total_quantity": 3,  // 商品总数量
+                    "blessing_utterance": "嘿嘿嘿",  // 买家寄语
+                    "buyer_remark": "哈哈哈",  // 买家备注
                     "items": [
                         {
                             "commission_price": 0,  // 佣金
@@ -1149,7 +1165,9 @@ JSON数据格式:
                     "status": 45,  // 订单状态
                     "store_name": "第一家(None)",  // 店铺名称
                     "total_amount": 3,  // 商品金额
-                    "total_quantity": 3  // 商品总数量
+                    "total_quantity": 3,  // 商品总数量
+                    "blessing_utterance": "嘿嘿嘿",  // 买家寄语
+                    "buyer_remark": "哈哈哈",  // 买家备注
                     "items": [
                         {
                             "commission_price": 0,  // 佣金
@@ -1241,7 +1259,9 @@ JSON数据格式:
                 "status": 30,  // 订单状态
                 "store_name": "第一家(None)",  // 店铺名称
                 "total_amount": 3,  // 商品金额
-                "total_quantity": 3  // 商品总数量
+                "total_quantity": 3,  // 商品总数量
+                "blessing_utterance": "嘿嘿嘿",  // 买家寄语
+                "buyer_remark": "哈哈哈",  // 买家备注
                 "items": [
                     {
                         "commission_price": 0,  // 佣金
