@@ -273,6 +273,53 @@ JSON数据格式:
     }
 
 
+
+用户获取商家优惠券列表
+-----------------------
+用户获取商家优惠券列表
+
+接口说明
+~~~~~~~~~~~~~~
+
+* API接口请求地址：``/market/user_master_coupons``
+* API接口请求方法：``GET``
+* API接口用户授权：``token``
+
+
+返回示例
+~~~~~~~~~~~~~~~~
+
+JSON数据格式:
+
+.. code-block:: javascript
+
+    {
+        "data": {
+            "coupons": [
+                {
+                    "amount": 10,  // 面值
+                    "code": "UHAOSIWFUVZ",  // 优惠券code
+                    "count": 100,
+                    "created_at": 1531742069,  //
+                    "days": 7,  // 有效期
+                    "min_amount": 99,  // 最小金额
+                    "products": [],
+                    "reach_amount": 0,
+                    "status": 1,  // 是否领取 0、未领取 1、已领取
+                    "type": 1,  // 类型
+                    "type_text": "全店通用"
+                }
+            ]
+        },
+        "status": {
+            "code": 200,
+            "message": "Ok all right."
+        },
+        "success": true
+    }
+
+
+
 符合条件的优惠券列表
 -----------------------
 符合某条件的优惠券列表
