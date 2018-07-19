@@ -1135,23 +1135,35 @@
 </tr>
 </thead>
 <tbody valign="top">
-<tr class="row-even"><td>date_time</td>
+<tr class="row-even"><td>start_time</td>
 <td>String</td>
 <td>必需</td>
 <td>&#160;</td>
-<td>统计日期月份 如:‘2018-06’</td>
+<td>统计开始日期</td>
 </tr>
-<tr class="row-odd"><td>status</td>
+<tr class="row-odd"><td>end_time</td>
+<td>String</td>
+<td>必需</td>
+<td>&#160;</td>
+<td>统计结束日期</td>
+</tr>
+<tr class="row-even"><td>status</td>
 <td>Number</td>
 <td>可选</td>
 <td>&#160;</td>
 <td>1、待结算 2、成功 3、失败 4、退款</td>
 </tr>
-<tr class="row-even"><td>is_distributed</td>
+<tr class="row-odd"><td>is_distributed</td>
 <td>Number</td>
 <td>可选</td>
 <td>0</td>
 <td>0、我的订单 1、我的分销订单</td>
+</tr>
+<tr class="row-even"><td>rid</td>
+<td>String</td>
+<td>可选</td>
+<td>&#160;</td>
+<td>订单编号</td>
 </tr>
 <tr class="row-odd"><td>page</td>
 <td>Number</td>
@@ -1194,6 +1206,8 @@
                 <span class="s2">&quot;first_discount&quot;</span><span class="o">:</span> <span class="mi">0</span><span class="p">,</span>  <span class="c1">// 首单优惠</span>
                 <span class="s2">&quot;freight&quot;</span><span class="o">:</span> <span class="mi">14</span><span class="p">,</span>  <span class="c1">// 运费</span>
                 <span class="s2">&quot;official_order_id&quot;</span><span class="o">:</span> <span class="kc">null</span><span class="p">,</span>  <span class="c1">// 官方平台订单号</span>
+                <span class="s2">&quot;payment_slip&quot;</span><span class="o">:</span> <span class="s2">&quot;1234567890&quot;</span><span class="p">,</span> <span class="c1">// 支付单号</span>
+                <span class="s2">&quot;refund_amount&quot;</span><span class="o">:</span> <span class="s2">&quot;1234567890&quot;</span><span class="p">,</span> <span class="c1">// 退款金额</span>
                 <span class="s2">&quot;outside_target_id&quot;</span><span class="o">:</span> <span class="s2">&quot;D18070316803529&quot;</span><span class="p">,</span>  <span class="c1">// 第三方平台订单号</span>
                 <span class="s2">&quot;pay_amount&quot;</span><span class="o">:</span> <span class="mi">17</span><span class="p">,</span>  <span class="c1">// 支付金额</span>
                 <span class="s2">&quot;reach_minus&quot;</span><span class="o">:</span> <span class="mi">0</span><span class="p">,</span>  <span class="c1">// 满减金额</span>
