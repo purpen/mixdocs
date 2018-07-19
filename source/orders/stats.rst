@@ -604,6 +604,7 @@ JSON数据格式:
                     "store_name": "第一家(None)",  // 店铺名称
                     "total_amount": 3,  // 商品金额
                     "total_quantity": 3  // 商品总数量
+                    "transaction_status": 1  // 交易记录状态，1、待结算 2、成功 3、失败 4、退款
                     "items": [
                         {
                             "commission_price": 0,  // 佣金
