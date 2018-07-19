@@ -235,10 +235,12 @@ store_items            Array       必需                     店铺商品信息
 名称                    类型        是否必须     默认值       描述说明
 =====================  ==========  =========  ==========  =============================
 store_items:
-store_rid              String      必需                    店铺rid
+store_rid	           String      必需	 	              当前店铺rid
+is_distribute          Integer     可选          0         是否分销 0、否 1、是
+original_store_rid     String      可选                    原店铺rid
 buyer_remark           String      可选                    买家备注
 blessing_utterance     String      可选                    买家寄语
-coupon_codes           Array       可选                    优惠券码列表
+coupon_codes           String      可选                    优惠券码
 items                  Array       必需                    订单明细参数
 =====================  ==========  =========  ==========  =============================
 
