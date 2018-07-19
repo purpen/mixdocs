@@ -100,7 +100,7 @@ JSON数据格式:
 接口说明
 ~~~~~~~~~~~~~
 
-* API接口请求地址：``/official/materials/4``
+* API接口请求地址：``/official/materials/<id>``
 * API接口请求方法：``PUT``
 
 请求参数
@@ -141,7 +141,7 @@ JSON数据格式:
 接口说明
 ~~~~~~~~~~~~~
 
-* API接口请求地址：``/official/materials/4``
+* API接口请求地址：``/official/materials/<id>``
 * API接口请求方法：``DELETE``
 
 返回示例
