@@ -347,17 +347,15 @@ JSON数据格式:
 
     {
         "data": {
-            "settle_account": {
-                "actual_account_amount": 1003.2,  // 实际入账
-                "total_sales_amount": 1140,  // 可结算销售总额
-                "commission_price": 0,  // 佣金总计
-                "count": 2,  // 订单数
-                "discount_amount": 4,  // 优惠总计
-                "service_fee": 136.8  // 服务费总计
-                "month": 7,  // 月份
-                "year": 2018, // 年
-                "status": 3 // 结算状态：1、待汇款 2、已汇款 3、待确认
-            }
+            "actual_account_amount": 542.08,  // 实际入账
+            "commission_price": 0,  // 佣金总计
+            "count": 4,  // 订单数
+            "discount_amount": 6,  // 优惠总计
+            "month": 7,  // 月份
+            "service_fee": 73.92,  // 服务费总计
+            "status": 3,  // 结算状态：1、待汇款 2、已汇款 3、待确认
+            "total_sales_amount": 616,  // 可结算销售总额
+            "year": 2018  // 年
         },
         "status": {
             "code": 200,
@@ -458,16 +456,14 @@ JSON数据格式:
 
     {
         "data": {
-            "settle_account": {
-                "actual_account_amount": 10.26,  // 实际入账金额
-                "commission_price": 11.4,  // 实际获得佣金
-                "count": 2,  // 订单数
-                "service_fee": 1.14,  // 服务费
-                "total_sales_amount": 1274,  // 累计销售额
-                "month": 7,  // 月份
-                "year": 2018, // 年
-                "status": 3 // 结算状态：1、待汇款 2、已汇款 3、待确认
-            }
+            "actual_account_amount": 0.9, // 实际入账金额
+            "commission_price": 1, // 实际获得佣金
+            "count": 1, // 订单数
+            "month": 7, // 月份
+            "service_fee": 0.1,
+            "status": 3,  // 结算状态：1、待汇款 2、已汇款 3、待确认
+            "total_sales_amount": 120, // 累计销售额
+            "year": 2018 // 年
         },
         "status": {
             "code": 200,
@@ -692,15 +688,6 @@ JSON数据格式:
 * API接口请求地址：``/stats/distribute_account_collect``
 * API接口请求方法：``GET``
 * API接口用户授权：``token``
-
-请求参数
-~~~~~~~~~~~~~~~
-
-=====================  ==========  =========  ==========  =============================
-名称                    类型        是否必须     默认值       描述说明
-=====================  ==========  =========  ==========  =============================
-date_time              String      必需                    统计日期月份 如:'2018-06'
-=====================  ==========  =========  ==========  =============================
 
 
 返回示例
