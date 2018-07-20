@@ -89,7 +89,7 @@ JSON数据格式:
 接口说明
 ~~~~~~~~~~~~~
 
-* API接口请求地址：``/products/models/1``
+* API接口请求地址：``/products/models/<id>``
 * API接口请求方法：``DELETE``
 * API接口用户授权：``token``
 

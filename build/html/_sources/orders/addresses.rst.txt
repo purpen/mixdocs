@@ -24,30 +24,37 @@ JSON数据格式:
 .. code-block:: javascript
 
     {
-      "data": [
-        {
-          "area": "四环至五环之间",
-          "city": "北京市",
-          "first_name": "田",
-          "full_name": "田帅",
-          "is_default": false,
-          "last_name": "帅",
-          "mobile": "18610230451",
-          "phone": "01084599328",
-          "province": "北京",
-          "rid": "57501684",
-          "street_address": "751设计广场",
-          "street_address_two": null,
-          "town": "朝阳区",
-          "zipcode": null
+        "data": [
+            {
+                "area": null,  // 区域
+                "area_id": null,  // 区域oid
+                "city": "北京",  // 城市
+                "city_id": 1,  // 城市oid
+                "country_id": 1,  // 国家id
+                "first_name": "田",  // 姓
+                "full_address": "北京北京大街",  // 地址
+                "full_name": "田帅",  // 姓名
+                "is_default": false,  // 是否默认
+                "is_from_wx": false,  // 是否微信地址
+                "is_overseas": false,  // 是否海外地址
+                "last_name": null,  // 名
+                "mobile": "13278989898",  // 手机
+                "phone": null,  // 电话
+                "province": "北京",  // 省
+                "province_id": 1,  // 省oid
+                "rid": "5254096781",  // 地址rid
+                "street_address": "大街",  // 街道
+                "street_address_two": null,  //
+                "town": null,  // 镇
+                "town_id": 0,  // 镇oid
+                "zipcode": null
+            }
+        ],
+        "status": {
+            "code": 200,
+            "message": "Ok all right."
         },
-        ...
-      ],
-      "status": {
-        "code": 200,
-        "message": "Ok all right."
-      },
-      "success": true
+        "success": true
     }
 
 收货地址详情
@@ -71,31 +78,39 @@ JSON数据格式:
 .. code-block:: javascript
 
     {
-      "data": {
-        "area": "四环至五环之间",
-        "city": "北京市",
-        "first_name": "田",
-        "full_name": "田帅",
-        "is_default": false,
-        "last_name": "帅",
-        "mobile": "18610230451",
-        "phone": "01084599328",
-        "province": "北京",
-        "rid": "58237496",
-        "street_address": "751设计广场",
-        "street_address_two": null,
-        "town": "朝阳区",
-        "zipcode": null
-      },
-      "status": {
-        "code": 200,
-        "message": "Ok all right."
-      },
-      "success": true
+        "data": {
+            "area": null,  // 区域
+            "area_id": null,  // 区域oid
+            "city": "北京",  // 城市
+            "city_id": 1,  // 城市oid
+            "country_id": 1,  // 国家id
+            "first_name": "田",  // 姓
+            "full_address": "北京北京大街",  // 地址
+            "full_name": "田帅",  // 姓名
+            "is_default": false,  // 是否默认
+            "is_from_wx": false,  // 是否微信地址
+            "is_overseas": false,  // 是否海外地址
+            "last_name": null,  // 名
+            "mobile": "13278989898",  // 手机
+            "phone": null,  // 电话
+            "province": "北京",  // 省
+            "province_id": 1,  // 省oid
+            "rid": "5254096781",  // 地址rid
+            "street_address": "大街",  // 街道
+            "street_address_two": null,  //
+            "town": null,  // 镇
+            "town_id": 0,  // 镇oid
+            "zipcode": null
+        },
+        "status": {
+            "code": 200,
+            "message": "Ok all right."
+        },
+        "success": true
     }
 
 
-默认收货地址
+获取默认收货地址
 ----------------
 获取某用户设置的默认收货地址
 
@@ -116,27 +131,35 @@ JSON数据格式:
 .. code-block:: javascript
 
     {
-      "data": {
-        "area": "四环至五环之间",
-        "city": "北京市",
-        "first_name": "田",
-        "full_name": "田帅",
-        "is_default": true,
-        "last_name": "帅",
-        "mobile": "18610230451",
-        "phone": "01084599328",
-        "province": "北京",
-        "rid": "5758463019",
-        "street_address": "751设计广场",
-        "street_address_two": null,
-        "town": "朝阳区",
-        "zipcode": null
-      },
-      "status": {
-        "code": 200,
-        "message": "Ok all right."
-      },
-      "success": true
+        "data": {
+            "area": null,  // 区域
+            "area_id": null,  // 区域oid
+            "city": "北京",  // 城市
+            "city_id": 1,  // 城市oid
+            "country_id": 1,  // 国家id
+            "first_name": "田",  // 姓
+            "full_address": "北京北京大街",  // 地址
+            "full_name": "田帅",  // 姓名
+            "is_default": false,  // 是否默认
+            "is_from_wx": false,  // 是否微信地址
+            "is_overseas": false,  // 是否海外地址
+            "last_name": null,  // 名
+            "mobile": "13278989898",  // 手机
+            "phone": null,  // 电话
+            "province": "北京",  // 省
+            "province_id": 1,  // 省oid
+            "rid": "5254096781",  // 地址rid
+            "street_address": "大街",  // 街道
+            "street_address_two": null,  //
+            "town": null,  // 镇
+            "town_id": 0,  // 镇oid
+            "zipcode": null
+        },
+        "status": {
+            "code": 200,
+            "message": "Ok all right."
+        },
+        "success": true
     }
 
 
@@ -191,11 +214,11 @@ first_name              String      必需                     姓
 last_name               String      可选                     名
 phone                   String      可选                     电话
 mobile                  String      必需                     手机号码
-country_id              Number      可选        1            国家
-province_id             Number      必需                     省市
-city_id                 Number      必需                     城区
-town_id                 Number      可选                     镇/地区
-area_id                 Number      可选                     村/区域
+country_id              Number      可选        1            国家id
+province_id             Number      必需                     省oid
+city_id                 Number      必需                     城区oid
+town_id                 Number      可选                     镇/地区oid
+area_id                 Number      可选                     村/区域oid
 street_address          String      必需                     详细街道
 street_address_two      String      可选
 zipcode                 Number      可选                     邮编
@@ -215,29 +238,35 @@ JSON数据格式:
 .. code-block:: javascript
 
     {
-      "data": {
-        "area": "四环至五环之间",
-        "city": "北京市",
-        "first_name": "田",
-        "full_address": "北京顺义区光明街道",
-        "full_name": "田帅",
-        "is_default": true,
-        "is_overseas": false,
-        "last_name": "帅",
-        "mobile": "18610230451",
-        "phone": "01084599328",
-        "province": "北京",
-        "rid": "5748231905",
-        "street_address": "751设计广场",
-        "street_address_two": null,
-        "town": "朝阳区",
-        "zipcode": "100015"
-      },
-      "status": {
-        "code": 201,
-        "message": "All created."
-      },
-      "success": true
+        "data": {
+            "area": null,  // 区域
+            "area_id": null,  // 区域oid
+            "city": "北京",  // 城市
+            "city_id": 1,  // 城市oid
+            "country_id": 1,  // 国家id
+            "first_name": "田",  // 姓
+            "full_address": "北京北京大街",  // 地址
+            "full_name": "田帅",  // 姓名
+            "is_default": false,  // 是否默认
+            "is_from_wx": false,  // 是否微信地址
+            "is_overseas": false,  // 是否海外地址
+            "last_name": null,  // 名
+            "mobile": "13278989898",  // 手机
+            "phone": null,  // 电话
+            "province": "北京",  // 省
+            "province_id": 1,  // 省oid
+            "rid": "5254096781",  // 地址rid
+            "street_address": "大街",  // 街道
+            "street_address_two": null,  //
+            "town": null,  // 镇
+            "town_id": 0,  // 镇oid
+            "zipcode": null
+        },
+        "status": {
+            "code": 200,
+            "message": "Ok all right."
+        },
+        "success": true
     }
 
 请求 **失败** 返回结果：
@@ -259,14 +288,33 @@ JSON数据格式:
 接口说明
 ~~~~~~~~~~~~~~
 
-* API接口请求地址：``/address/<rid>``
+* API接口请求地址：``/address``
 * API接口请求方法：``PUT``
 * API接口用户授权：``token``
 
 请求参数
 ~~~~~~~~~~~~~~~
 
-``备注`` 与新增收货地址参数一致，请参考 `新增收货地址`_ 参数说明
+=====================  ==========  =========  ==========  =============================
+名称                    类型        是否必须    默认值        描述说明
+=====================  ==========  =========  ==========  =============================
+rid                     String      必需                     收货地址rid
+first_name              String      必需                     姓
+last_name               String      可选                     名
+phone                   String      可选                     电话
+mobile                  String      必需                     手机号码
+country_id              Number      可选        1            国家id
+province_id             Number      必需                     省oid
+city_id                 Number      必需                     城区oid
+town_id                 Number      可选                     镇/地区oid
+area_id                 Number      可选                     村/区域oid
+street_address          String      必需                     详细街道
+street_address_two      String      可选
+zipcode                 Number      可选                     邮编
+is_default              Bool        可选        False        是否默认地址
+is_overseas             Bool        可选        False        是否海外地址
+user_custom_id          Integer     可选                     海关信息id
+=====================  ==========  =========  ==========  =============================
 
 
 返回示例
@@ -279,29 +327,35 @@ JSON数据格式:
 .. code-block:: javascript
 
     {
-      "data": {
-        "area": "四环至五环之间",
-        "city": "北京市",
-        "first_name": "田",
-        "full_address": "北京顺义区光明街道",
-        "full_name": "田小北",
-        "is_default": true,
-        "is_overseas": false,
-        "last_name": "小北",
-        "mobile": "18610230451",
-        "phone": "01084599328",
-        "province": "北京",
-        "rid": "5748231905",
-        "street_address": "751设计广场",
-        "street_address_two": null,
-        "town": "朝阳区",
-        "zipcode": "100015"
-      },
-      "status": {
-        "code": 200,
-        "message": "Ok all right."
-      },
-      "success": true
+        "data": {
+            "area": null,  // 区域
+            "area_id": null,  // 区域oid
+            "city": "北京",  // 城市
+            "city_id": 1,  // 城市oid
+            "country_id": 1,  // 国家id
+            "first_name": "田",  // 姓
+            "full_address": "北京北京大街",  // 地址
+            "full_name": "田帅",  // 姓名
+            "is_default": false,  // 是否默认
+            "is_from_wx": false,  // 是否微信地址
+            "is_overseas": false,  // 是否海外地址
+            "last_name": null,  // 名
+            "mobile": "13278989898",  // 手机
+            "phone": null,  // 电话
+            "province": "北京",  // 省
+            "province_id": 1,  // 省oid
+            "rid": "5254096781",  // 地址rid
+            "street_address": "大街",  // 街道
+            "street_address_two": null,  //
+            "town": null,  // 镇
+            "town_id": 0,  // 镇oid
+            "zipcode": null
+        },
+        "status": {
+            "code": 200,
+            "message": "Ok all right."
+        },
+        "success": true
     }
 
 请求 **失败** 返回结果：
@@ -385,72 +439,69 @@ JSON数据格式:
 .. code-block:: javascript
 
     {
-      "data": {
-        "k_1_0": [
-          {
-            "name": "北京",
-            "pid": 0,
-            "rid": 1,
-            "sort_by": 1,
-            "status": true
-          },
-          {
-            "name": "天津",
-            "pid": 0,
-            "rid": 8,
-            "sort_by": 1,
-            "status": true
-          },
-          {
-            "name": "河北省",
-            "pid": 0,
-            "rid": 9,
-            "sort_by": 1,
-            "status": true
-          },
-          ...
-        ],
-        "k_2_1": [
-          {
-            "name": "北京市",
-            "pid": 1,
-            "rid": 3,
-            "sort_by": 1,
-            "status": true
-          }
-        ],
-        "k_3_3": [
-          {
-            "name": "朝阳区",
-            "pid": 3,
-            "rid": 4,
-            "sort_by": 1,
-            "status": true
-          },
-          {
-            "name": "海淀区",
-            "pid": 3,
-            "rid": 6,
-            "sort_by": 1,
-            "status": true
-          },
-          ...
-        ],
-        "k_4_4": [
-          {
-            "name": "四环至五环之间",
-            "pid": 4,
-            "rid": 5,
-            "sort_by": 1,
-            "status": true
-          }
-        ]
-      },
-      "status": {
-        "code": 200,
-        "message": "Ok all right."
-      },
-      "success": true
+        "data": {
+            "k_1_None": [
+                {
+                    "area_scope": null, // 区域范围
+                    "name": "北京",
+                    "oid": 1,
+                    "pid": null,
+                    "sort_by": 1,
+                    "status": true // 状态：显示 True; 隐藏 False
+                },
+                {
+                    "area_scope": null,
+                    "name": "山东",
+                    "oid": 3,
+                    "pid": null,
+                    "sort_by": 1,
+                    "status": true
+                }
+            ],
+            "k_2_3": [
+                {
+                    "area_scope": null,
+                    "name": "淄博",
+                    "oid": 4,
+                    "pid": 3,
+                    "sort_by": 1,
+                    "status": true
+                },
+                {
+                    "area_scope": null,
+                    "name": "济南",
+                    "oid": 5,
+                    "pid": 3,
+                    "sort_by": null,
+                    "status": true
+                }
+            ],
+            "k_3_4": [
+                {
+                    "area_scope": null,
+                    "name": "周村",
+                    "oid": 6,
+                    "pid": 4,
+                    "sort_by": 1,
+                    "status": true
+                }
+            ],
+            "k_4_6": [
+                {
+                    "area_scope": null,
+                    "name": "青年路",
+                    "oid": 8,
+                    "pid": 6,
+                    "sort_by": 1,
+                    "status": true
+                }
+            ]
+        },
+        "status": {
+            "code": 200,
+            "message": "Ok all right."
+        },
+        "success": true
     }
 
 
@@ -496,20 +547,15 @@ JSON数据格式:
         "data": {
             "k_1_None": [
                 {
-                    "name": "北京",  // 名称
-                    "oid": 1,  // 城市代码
-                    "pid": null,  // 父id
-                    "sort_by": 1,
-                    "status": true  // 状态：显示 True; 隐藏 False
-                },
-                {
-                    "name": "天津",
-                    "oid": 2,
+                    "area_scope": null,
+                    "name": "北京",
+                    "oid": 1,
                     "pid": null,
                     "sort_by": 1,
                     "status": true
                 },
                 {
+                    "area_scope": null,
                     "name": "山东",
                     "oid": 3,
                     "pid": null,
@@ -519,13 +565,7 @@ JSON数据格式:
             ],
             "k_2_3": [
                 {
-                    "name": "淄博",
-                    "oid": 4,
-                    "pid": 3,
-                    "sort_by": 1,
-                    "status": true
-                },
-                {
+                    "area_scope": null,
                     "name": "济南",
                     "oid": 5,
                     "pid": 3,
@@ -540,6 +580,7 @@ JSON数据格式:
         },
         "success": true
     }
+
 
 
 全部省级列表
@@ -575,28 +616,29 @@ JSON数据格式:
 .. code-block:: javascript
 
     {
-      "data": [
-        {
-          "name": "北京",
-          "pid": 0,
-          "rid": 1,
-          "sort_by": 1,
-          "status": true
+        "data": [
+            {
+                "area_scope": null,
+                "name": "北京",
+                "oid": 1,
+                "pid": null,
+                "sort_by": 1,
+                "status": true
+            },
+            {
+                "area_scope": null,
+                "name": "山东",
+                "oid": 3,
+                "pid": null,
+                "sort_by": 1,
+                "status": true
+            }
+        ],
+        "status": {
+            "code": 200,
+            "message": "Ok all right."
         },
-        {
-          "name": "天津",
-          "pid": 0,
-          "rid": 8,
-          "sort_by": 1,
-          "status": true
-        },
-        ...
-      ],
-      "status": {
-        "code": 200,
-        "message": "Ok all right."
-      },
-      "success": true
+        "success": true
     }
 
 全部城市列表
@@ -632,21 +674,21 @@ JSON数据格式:
 .. code-block:: javascript
 
     {
-      "data": [
-        {
-          "name": "北京市",
-          "pid": 1,
-          "rid": 3,
-          "sort_by": 1,
-          "status": true
-        }
-        ...
-      ],
-      "status": {
-        "code": 200,
-        "message": "Ok all right."
-      },
-      "success": true
+        "data": [
+            {
+                "area_scope": null,
+                "name": "济南",
+                "oid": 5,
+                "pid": 3,
+                "sort_by": null,
+                "status": true
+            }
+        ],
+        "status": {
+            "code": 200,
+            "message": "Ok all right."
+        },
+        "success": true
     }
 
 
@@ -685,20 +727,13 @@ JSON数据格式:
     {
       "data": [
         {
+          "area_scope": null,
           "name": "朝阳区",
           "pid": 3,
           "rid": 4,
           "sort_by": 1,
           "status": true
         },
-        {
-          "name": "海淀区",
-          "pid": 3,
-          "rid": 6,
-          "sort_by": 1,
-          "status": true
-        },
-        ...
       ],
       "status": {
         "code": 200,
@@ -742,6 +777,7 @@ JSON数据格式:
     {
       "data": [
         {
+          "area_scope": null,
           "name": "四环至五环之间",
           "pid": 4,
           "rid": 5,

@@ -78,10 +78,10 @@ JSON数据格式:
 名称              类型      是否必须    默认值     描述说明
 ===============  ========  =========  ========  ====================================
 username         String     可选                 昵称 - 必须保持唯一
-avatar_id        Integer    可选                 用户头像ID
+avatar_id        Integer    可选          0      用户头像ID
 about_me         String     可选                 个人介绍
 gender           Integer    可选          0      性别
-country_id       Integer    可选                 国家ID
+area_id          Integer    可选                 区域ID
 province_id      Integer    可选                 省ID
 city_id          Integer    可选                 市ID
 email            String     可选                 邮箱
@@ -97,33 +97,28 @@ JSON数据格式
 
     {
         "data": {
-            "about_me": "我是个好人",
-            "avatar": {
-                "created_at": null,
-                "filename": "a",
-                "filepath": "http://127.0.0.1:9000/_uploads/photos/222222/5d2812257b539aa.jpg",
-                "id": 1,
-                "type": null,
-                "view_url": "http://0.0.0.0:9000/_uploads/photos/http://127.0.0.1:9000/_uploads/photos/222222/5d2812257b539aa.jpg"  // 头像url
-            },
-            "avatar_id": 1,  // 头像ID
+            "about_me": "我是个好人",  // 关于我
+            "area": "鱼泉乡",  // 区域
+            "area_id": 10000,
+            "avatar": "http://kg.erp.taihuoniao.com/static/img/default-logo-180x180.png", // 头像url
+            "avatar_id": 0,  // 头像ID
             "city": "北京",
             "city_id": 1,
-            "country": "中国",
-            "country_id": 1,
+            "country": "",
+            "country_id": null,
             "created_at": 1531125527,  // 创建时间
             "date": "1992-12-26",  // 生日
             "description": null,
             "email": "13001179400",
-            "gender": 0,
-            "last_seen": 1531563816,
+            "gender": 0,  // 性别
+            "last_seen": 1531842343,
             "mail": "asd@163.com",  // 邮箱
             "master_uid": 2,
             "mobile": null,
             "province": "北京",
             "province_id": 1,
             "uid": "19138405762",
-            "username": "盖世火锅" // 用户名
+            "username": "超人啊"  // 用户名
         },
         "status": {
             "code": 200,
@@ -142,6 +137,75 @@ JSON数据格式
         "success": false
     }
 
+编辑用户头像
+-----------------
+
+
+接口说明
+~~~~~~~~~~~~~~
+
+* API接口请求地址：``/users/update_avatar``
+* API接口请求方法：``PUT``
+* API接口用户授权：``token``
+
+===============  ========  =========  ========  ====================================
+名称              类型      是否必须    默认值     描述说明
+===============  ========  =========  ========  ====================================
+avatar_id        Integer    必须                 用户头像ID
+===============  ========  =========  ========  ====================================
+
+返回示例
+~~~~~~~~~~~~~~~~
+
+JSON数据格式
+
+请求 **正确** 返回结果：
+
+.. code-block:: javascript
+
+    {
+        "data": {
+            "about_me": "我是个好人",  // 关于我
+            "area": "鱼泉乡",  // 区域
+            "area_id": 10000,
+            "avatar": "http://kg.erp.taihuoniao.com/static/img/default-logo-180x180.png", // 头像url
+            "avatar_id": 0,  // 头像ID
+            "city": "北京",  //市
+            "city_id": 1,
+            "country": "",
+            "country_id": null,
+            "created_at": 1531125527,  // 创建时间
+            "date": "1992-12-26",  // 生日
+            "description": null,
+            "email": "13001179400",
+            "gender": 0,  // 性别
+            "last_seen": 1531842343,
+            "mail": "asd@163.com",  // 邮箱
+            "master_uid": 2,
+            "mobile": null,
+            "province": "北京", // 省
+            "province_id": 1,
+            "uid": "19138405762",
+            "username": "超人啊"  // 用户名
+        },
+        "status": {
+            "code": 200,
+            "message": "Ok all right."
+        },
+        "success": true
+    }
+
+请求 ``失败`` 返回结果：
+
+.. code-block:: javascript
+
+    {
+        "status": {
+            "code": 400,
+            "message": "用户头像有误"
+        },
+        "success": false
+    }
 
 添加或修改(个人或管理员)基本信息
 ----------------------------------

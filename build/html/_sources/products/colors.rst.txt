@@ -109,7 +109,7 @@ JSON数据格式:
 接口说明
 ~~~~~~~~~~~~~
 
-* API接口请求地址：``/official/colors/3``
+* API接口请求地址：``/official/colors/<id>``
 * API接口请求方法：``PUT``
 
 请求参数
@@ -263,7 +263,7 @@ JSON数据格式:
 接口说明
 ~~~~~~~~~~~~~
 
-* API接口请求地址：``/products/colors/3``
+* API接口请求地址：``/products/colors/<id>``
 * API接口请求方法：``DELETE``
 * API接口用户授权：``token``
 

@@ -81,7 +81,6 @@
 <li class="toctree-l2"><a class="reference internal" href="stats.html">统计模块</a></li>
 <li class="toctree-l2"><a class="reference internal" href="comment.html">订单评价模块</a></li>
 <li class="toctree-l2"><a class="reference internal" href="logistics.html">物流运费模块</a></li>
-<li class="toctree-l2"><a class="reference internal" href="finance.html">账户模块</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="../products/index.html">商品API模块</a><ul>
@@ -93,8 +92,7 @@
 <li class="toctree-l2"><a class="reference internal" href="../products/models.html">商品规格模块</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../products/labels.html">标签模块</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../products/return_policies.html">商家退换货规则模块</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../products/wish.html">心愿清单模块</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../products/user_like.html">用户喜欢模块</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../products/user_record.html">用户商品记录模块</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../products/assets.html">附件模块</a></li>
 </ul>
 </li>
@@ -130,6 +128,7 @@
 <li class="toctree-l1"><a class="reference internal" href="../users/index.html">用户API模块</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="../users/users.html">用户模块</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../users/auth.html">用户认证模块</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../users/finance.html">账户模块</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="../wx_apps/index.html">小程序API模块</a><ul>
@@ -139,8 +138,11 @@
 <li class="toctree-l1"><a class="reference internal" href="../common.html">公用接口模块</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="../common.html#id2">幻灯图列表</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../common.html#id6">搜索关键词历史</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../common.html#id10">发送短信验证码</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../common.html#id15">发送邮件验证码</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../common.html#id10">注册发送短信验证码</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../common.html#id15">登陆发送短信验证码</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../common.html#id19">动态登陆发送短信验证码</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../common.html#id23">账户编辑发送短信验证码</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../common.html#id27">发送邮件验证码</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="../setting.html">系统相关配置文档</a><ul>
@@ -829,7 +831,9 @@
         <span class="s2">&quot;status&quot;</span><span class="o">:</span> <span class="mi">5</span><span class="p">,</span>  <span class="c1">// 订单状态</span>
         <span class="s2">&quot;store_name&quot;</span><span class="o">:</span> <span class="s2">&quot;第一家(None)&quot;</span><span class="p">,</span>  <span class="c1">// 店铺名称</span>
         <span class="s2">&quot;total_amount&quot;</span><span class="o">:</span> <span class="mi">3</span><span class="p">,</span>  <span class="c1">// 商品金额</span>
-        <span class="s2">&quot;total_quantity&quot;</span><span class="o">:</span> <span class="mi">3</span>  <span class="c1">// 商品总数量</span>
+        <span class="s2">&quot;total_quantity&quot;</span><span class="o">:</span> <span class="mi">3</span><span class="p">,</span>  <span class="c1">// 商品总数量</span>
+        <span class="s2">&quot;blessing_utterance&quot;</span><span class="o">:</span> <span class="s2">&quot;嘿嘿嘿&quot;</span><span class="p">,</span>  <span class="c1">// 买家寄语</span>
+        <span class="s2">&quot;buyer_remark&quot;</span><span class="o">:</span> <span class="s2">&quot;哈哈哈&quot;</span><span class="p">,</span>  <span class="c1">// 买家备注</span>
         <span class="s2">&quot;items&quot;</span><span class="o">:</span> <span class="p">[</span>
             <span class="p">{</span>
                 <span class="s2">&quot;commission_price&quot;</span><span class="o">:</span> <span class="mi">0</span><span class="p">,</span>  <span class="c1">// 佣金</span>
@@ -928,41 +932,29 @@
 <td>{}</td>
 <td>&#160;</td>
 </tr>
-<tr class="row-even"><td>buyer_remark</td>
-<td>String</td>
-<td>可选</td>
-<td>&#160;</td>
-<td>买家备注</td>
-</tr>
-<tr class="row-odd"><td>ship_mode</td>
+<tr class="row-even"><td>ship_mode</td>
 <td>Integer</td>
 <td>可选</td>
 <td>1</td>
 <td>1、发快递 2、自提</td>
 </tr>
-<tr class="row-even"><td>from_client</td>
+<tr class="row-odd"><td>from_client</td>
 <td>String</td>
 <td>可选</td>
 <td>&#160;</td>
 <td>来源客户端，1、小程序；2、H5 3、App 4、TV 5、POS 6、PAD</td>
 </tr>
-<tr class="row-odd"><td>affiliate_code</td>
+<tr class="row-even"><td>affiliate_code</td>
 <td>String</td>
 <td>可选</td>
 <td>&#160;</td>
 <td>推广码</td>
 </tr>
-<tr class="row-even"><td>bonus_code</td>
+<tr class="row-odd"><td>bonus_code</td>
 <td>String</td>
 <td>可选</td>
 <td>&#160;</td>
 <td>官方红包码</td>
-</tr>
-<tr class="row-odd"><td>customer_code</td>
-<td>String</td>
-<td>可选</td>
-<td>&#160;</td>
-<td>分销商代码</td>
 </tr>
 <tr class="row-even"><td>sync_pay</td>
 <td>Integer</td>
@@ -1006,13 +998,37 @@
 <td>String</td>
 <td>必需</td>
 <td>&#160;</td>
-<td>店铺rid</td>
+<td>当前店铺rid</td>
 </tr>
-<tr class="row-even"><td>coupon_codes</td>
-<td>Array</td>
+<tr class="row-even"><td>is_distribute</td>
+<td>Integer</td>
+<td>可选</td>
+<td>0</td>
+<td>是否分销 0、否 1、是</td>
+</tr>
+<tr class="row-odd"><td>original_store_rid</td>
+<td>String</td>
 <td>可选</td>
 <td>&#160;</td>
-<td>优惠券码列表</td>
+<td>原店铺rid</td>
+</tr>
+<tr class="row-even"><td>buyer_remark</td>
+<td>String</td>
+<td>可选</td>
+<td>&#160;</td>
+<td>买家备注</td>
+</tr>
+<tr class="row-odd"><td>blessing_utterance</td>
+<td>String</td>
+<td>可选</td>
+<td>&#160;</td>
+<td>买家寄语</td>
+</tr>
+<tr class="row-even"><td>coupon_codes</td>
+<td>String</td>
+<td>可选</td>
+<td>&#160;</td>
+<td>优惠券码</td>
 </tr>
 <tr class="row-odd"><td>items</td>
 <td>Array</td>
@@ -1128,7 +1144,9 @@
                 <span class="s2">&quot;status&quot;</span><span class="o">:</span> <span class="mi">5</span><span class="p">,</span>  <span class="c1">// 订单状态</span>
                 <span class="s2">&quot;store_name&quot;</span><span class="o">:</span> <span class="s2">&quot;第一家(None)&quot;</span><span class="p">,</span>  <span class="c1">// 店铺名称</span>
                 <span class="s2">&quot;total_amount&quot;</span><span class="o">:</span> <span class="mi">3</span><span class="p">,</span>  <span class="c1">// 商品金额</span>
-                <span class="s2">&quot;total_quantity&quot;</span><span class="o">:</span> <span class="mi">3</span>  <span class="c1">// 商品总数量</span>
+                <span class="s2">&quot;total_quantity&quot;</span><span class="o">:</span> <span class="mi">3</span><span class="p">,</span>  <span class="c1">// 商品总数量</span>
+                <span class="s2">&quot;blessing_utterance&quot;</span><span class="o">:</span> <span class="s2">&quot;嘿嘿嘿&quot;</span><span class="p">,</span>  <span class="c1">// 买家寄语</span>
+                <span class="s2">&quot;buyer_remark&quot;</span><span class="o">:</span> <span class="s2">&quot;哈哈哈&quot;</span><span class="p">,</span>  <span class="c1">// 买家备注</span>
                 <span class="s2">&quot;items&quot;</span><span class="o">:</span> <span class="p">[</span>
                     <span class="p">{</span>
                         <span class="s2">&quot;commission_price&quot;</span><span class="o">:</span> <span class="mi">0</span><span class="p">,</span>  <span class="c1">// 佣金</span>
@@ -1442,7 +1460,9 @@
             <span class="s2">&quot;status&quot;</span><span class="o">:</span> <span class="mi">20</span><span class="p">,</span>  <span class="c1">// 订单状态</span>
             <span class="s2">&quot;store_name&quot;</span><span class="o">:</span> <span class="s2">&quot;第一家(None)&quot;</span><span class="p">,</span>  <span class="c1">// 店铺名称</span>
             <span class="s2">&quot;total_amount&quot;</span><span class="o">:</span> <span class="mi">3</span><span class="p">,</span>  <span class="c1">// 商品金额</span>
-            <span class="s2">&quot;total_quantity&quot;</span><span class="o">:</span> <span class="mi">3</span>  <span class="c1">// 商品总数量</span>
+            <span class="s2">&quot;total_quantity&quot;</span><span class="o">:</span> <span class="mi">3</span><span class="p">,</span>  <span class="c1">// 商品总数量</span>
+            <span class="s2">&quot;blessing_utterance&quot;</span><span class="o">:</span> <span class="s2">&quot;嘿嘿嘿&quot;</span><span class="p">,</span>  <span class="c1">// 买家寄语</span>
+            <span class="s2">&quot;buyer_remark&quot;</span><span class="o">:</span> <span class="s2">&quot;哈哈哈&quot;</span><span class="p">,</span>  <span class="c1">// 买家备注</span>
             <span class="s2">&quot;items&quot;</span><span class="o">:</span> <span class="p">[</span>
                 <span class="p">{</span>
                     <span class="s2">&quot;commission_price&quot;</span><span class="o">:</span> <span class="mi">0</span><span class="p">,</span>  <span class="c1">// 佣金</span>
@@ -1610,7 +1630,9 @@
                 <span class="s2">&quot;status&quot;</span><span class="o">:</span> <span class="mi">10</span><span class="p">,</span>  <span class="c1">// 订单状态</span>
                 <span class="s2">&quot;store_name&quot;</span><span class="o">:</span> <span class="s2">&quot;第一家(None)&quot;</span><span class="p">,</span>  <span class="c1">// 店铺名称</span>
                 <span class="s2">&quot;total_amount&quot;</span><span class="o">:</span> <span class="mi">3</span><span class="p">,</span>  <span class="c1">// 商品金额</span>
-                <span class="s2">&quot;total_quantity&quot;</span><span class="o">:</span> <span class="mi">3</span>  <span class="c1">// 商品总数量</span>
+                <span class="s2">&quot;total_quantity&quot;</span><span class="o">:</span> <span class="mi">3</span><span class="p">,</span>  <span class="c1">// 商品总数量</span>
+                <span class="s2">&quot;blessing_utterance&quot;</span><span class="o">:</span> <span class="s2">&quot;嘿嘿嘿&quot;</span><span class="p">,</span>  <span class="c1">// 买家寄语</span>
+                <span class="s2">&quot;buyer_remark&quot;</span><span class="o">:</span> <span class="s2">&quot;哈哈哈&quot;</span><span class="p">,</span>  <span class="c1">// 买家备注</span>
                 <span class="s2">&quot;items&quot;</span><span class="o">:</span> <span class="p">[</span>
                     <span class="p">{</span>
                         <span class="s2">&quot;commission_price&quot;</span><span class="o">:</span> <span class="mi">0</span><span class="p">,</span>  <span class="c1">// 佣金</span>
@@ -1719,7 +1741,9 @@
                 <span class="s2">&quot;status&quot;</span><span class="o">:</span> <span class="mi">12</span><span class="p">,</span>  <span class="c1">// 订单状态</span>
                 <span class="s2">&quot;store_name&quot;</span><span class="o">:</span> <span class="s2">&quot;第一家(None)&quot;</span><span class="p">,</span>  <span class="c1">// 店铺名称</span>
                 <span class="s2">&quot;total_amount&quot;</span><span class="o">:</span> <span class="mi">3</span><span class="p">,</span>  <span class="c1">// 商品金额</span>
-                <span class="s2">&quot;total_quantity&quot;</span><span class="o">:</span> <span class="mi">3</span>  <span class="c1">// 商品总数量</span>
+                <span class="s2">&quot;total_quantity&quot;</span><span class="o">:</span> <span class="mi">3</span><span class="p">,</span>  <span class="c1">// 商品总数量</span>
+                <span class="s2">&quot;blessing_utterance&quot;</span><span class="o">:</span> <span class="s2">&quot;嘿嘿嘿&quot;</span><span class="p">,</span>  <span class="c1">// 买家寄语</span>
+                <span class="s2">&quot;buyer_remark&quot;</span><span class="o">:</span> <span class="s2">&quot;哈哈哈&quot;</span><span class="p">,</span>  <span class="c1">// 买家备注</span>
                 <span class="s2">&quot;items&quot;</span><span class="o">:</span> <span class="p">[</span>
                     <span class="p">{</span>
                         <span class="s2">&quot;commission_price&quot;</span><span class="o">:</span> <span class="mi">0</span><span class="p">,</span>  <span class="c1">// 佣金</span>
@@ -1828,7 +1852,9 @@
                 <span class="s2">&quot;status&quot;</span><span class="o">:</span> <span class="mi">13</span><span class="p">,</span>  <span class="c1">// 订单状态</span>
                 <span class="s2">&quot;store_name&quot;</span><span class="o">:</span> <span class="s2">&quot;第一家(None)&quot;</span><span class="p">,</span>  <span class="c1">// 店铺名称</span>
                 <span class="s2">&quot;total_amount&quot;</span><span class="o">:</span> <span class="mi">3</span><span class="p">,</span>  <span class="c1">// 商品金额</span>
-                <span class="s2">&quot;total_quantity&quot;</span><span class="o">:</span> <span class="mi">3</span>  <span class="c1">// 商品总数量</span>
+                <span class="s2">&quot;total_quantity&quot;</span><span class="o">:</span> <span class="mi">3</span><span class="p">,</span>  <span class="c1">// 商品总数量</span>
+                <span class="s2">&quot;blessing_utterance&quot;</span><span class="o">:</span> <span class="s2">&quot;嘿嘿嘿&quot;</span><span class="p">,</span>  <span class="c1">// 买家寄语</span>
+                <span class="s2">&quot;buyer_remark&quot;</span><span class="o">:</span> <span class="s2">&quot;哈哈哈&quot;</span><span class="p">,</span>  <span class="c1">// 买家备注</span>
                 <span class="s2">&quot;items&quot;</span><span class="o">:</span> <span class="p">[</span>
                     <span class="p">{</span>
                         <span class="s2">&quot;commission_price&quot;</span><span class="o">:</span> <span class="mi">0</span><span class="p">,</span>  <span class="c1">// 佣金</span>
@@ -1937,7 +1963,9 @@
                 <span class="s2">&quot;status&quot;</span><span class="o">:</span> <span class="mi">16</span><span class="p">,</span>  <span class="c1">// 订单状态</span>
                 <span class="s2">&quot;store_name&quot;</span><span class="o">:</span> <span class="s2">&quot;第一家(None)&quot;</span><span class="p">,</span>  <span class="c1">// 店铺名称</span>
                 <span class="s2">&quot;total_amount&quot;</span><span class="o">:</span> <span class="mi">3</span><span class="p">,</span>  <span class="c1">// 商品金额</span>
-                <span class="s2">&quot;total_quantity&quot;</span><span class="o">:</span> <span class="mi">3</span>  <span class="c1">// 商品总数量</span>
+                <span class="s2">&quot;total_quantity&quot;</span><span class="o">:</span> <span class="mi">3</span><span class="p">,</span>  <span class="c1">// 商品总数量</span>
+                <span class="s2">&quot;blessing_utterance&quot;</span><span class="o">:</span> <span class="s2">&quot;嘿嘿嘿&quot;</span><span class="p">,</span>  <span class="c1">// 买家寄语</span>
+                <span class="s2">&quot;buyer_remark&quot;</span><span class="o">:</span> <span class="s2">&quot;哈哈哈&quot;</span><span class="p">,</span>  <span class="c1">// 买家备注</span>
                 <span class="s2">&quot;items&quot;</span><span class="o">:</span> <span class="p">[</span>
                     <span class="p">{</span>
                         <span class="s2">&quot;commission_price&quot;</span><span class="o">:</span> <span class="mi">0</span><span class="p">,</span>  <span class="c1">// 佣金</span>
@@ -2046,7 +2074,9 @@
                 <span class="s2">&quot;status&quot;</span><span class="o">:</span> <span class="mi">40</span><span class="p">,</span>  <span class="c1">// 订单状态</span>
                 <span class="s2">&quot;store_name&quot;</span><span class="o">:</span> <span class="s2">&quot;第一家(None)&quot;</span><span class="p">,</span>  <span class="c1">// 店铺名称</span>
                 <span class="s2">&quot;total_amount&quot;</span><span class="o">:</span> <span class="mi">3</span><span class="p">,</span>  <span class="c1">// 商品金额</span>
-                <span class="s2">&quot;total_quantity&quot;</span><span class="o">:</span> <span class="mi">3</span>  <span class="c1">// 商品总数量</span>
+                <span class="s2">&quot;total_quantity&quot;</span><span class="o">:</span> <span class="mi">3</span><span class="p">,</span>  <span class="c1">// 商品总数量</span>
+                <span class="s2">&quot;blessing_utterance&quot;</span><span class="o">:</span> <span class="s2">&quot;嘿嘿嘿&quot;</span><span class="p">,</span>  <span class="c1">// 买家寄语</span>
+                <span class="s2">&quot;buyer_remark&quot;</span><span class="o">:</span> <span class="s2">&quot;哈哈哈&quot;</span><span class="p">,</span>  <span class="c1">// 买家备注</span>
                 <span class="s2">&quot;items&quot;</span><span class="o">:</span> <span class="p">[</span>
                     <span class="p">{</span>
                         <span class="s2">&quot;commission_price&quot;</span><span class="o">:</span> <span class="mi">0</span><span class="p">,</span>  <span class="c1">// 佣金</span>
@@ -2155,7 +2185,9 @@
                 <span class="s2">&quot;status&quot;</span><span class="o">:</span> <span class="mi">45</span><span class="p">,</span>  <span class="c1">// 订单状态</span>
                 <span class="s2">&quot;store_name&quot;</span><span class="o">:</span> <span class="s2">&quot;第一家(None)&quot;</span><span class="p">,</span>  <span class="c1">// 店铺名称</span>
                 <span class="s2">&quot;total_amount&quot;</span><span class="o">:</span> <span class="mi">3</span><span class="p">,</span>  <span class="c1">// 商品金额</span>
-                <span class="s2">&quot;total_quantity&quot;</span><span class="o">:</span> <span class="mi">3</span>  <span class="c1">// 商品总数量</span>
+                <span class="s2">&quot;total_quantity&quot;</span><span class="o">:</span> <span class="mi">3</span><span class="p">,</span>  <span class="c1">// 商品总数量</span>
+                <span class="s2">&quot;blessing_utterance&quot;</span><span class="o">:</span> <span class="s2">&quot;嘿嘿嘿&quot;</span><span class="p">,</span>  <span class="c1">// 买家寄语</span>
+                <span class="s2">&quot;buyer_remark&quot;</span><span class="o">:</span> <span class="s2">&quot;哈哈哈&quot;</span><span class="p">,</span>  <span class="c1">// 买家备注</span>
                 <span class="s2">&quot;items&quot;</span><span class="o">:</span> <span class="p">[</span>
                     <span class="p">{</span>
                         <span class="s2">&quot;commission_price&quot;</span><span class="o">:</span> <span class="mi">0</span><span class="p">,</span>  <span class="c1">// 佣金</span>
@@ -2264,7 +2296,9 @@
             <span class="s2">&quot;status&quot;</span><span class="o">:</span> <span class="mi">30</span><span class="p">,</span>  <span class="c1">// 订单状态</span>
             <span class="s2">&quot;store_name&quot;</span><span class="o">:</span> <span class="s2">&quot;第一家(None)&quot;</span><span class="p">,</span>  <span class="c1">// 店铺名称</span>
             <span class="s2">&quot;total_amount&quot;</span><span class="o">:</span> <span class="mi">3</span><span class="p">,</span>  <span class="c1">// 商品金额</span>
-            <span class="s2">&quot;total_quantity&quot;</span><span class="o">:</span> <span class="mi">3</span>  <span class="c1">// 商品总数量</span>
+            <span class="s2">&quot;total_quantity&quot;</span><span class="o">:</span> <span class="mi">3</span><span class="p">,</span>  <span class="c1">// 商品总数量</span>
+            <span class="s2">&quot;blessing_utterance&quot;</span><span class="o">:</span> <span class="s2">&quot;嘿嘿嘿&quot;</span><span class="p">,</span>  <span class="c1">// 买家寄语</span>
+            <span class="s2">&quot;buyer_remark&quot;</span><span class="o">:</span> <span class="s2">&quot;哈哈哈&quot;</span><span class="p">,</span>  <span class="c1">// 买家备注</span>
             <span class="s2">&quot;items&quot;</span><span class="o">:</span> <span class="p">[</span>
                 <span class="p">{</span>
                     <span class="s2">&quot;commission_price&quot;</span><span class="o">:</span> <span class="mi">0</span><span class="p">,</span>  <span class="c1">// 佣金</span>
