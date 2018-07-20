@@ -142,7 +142,6 @@ JSON数据格式:
             "outside_target_id": "D18070316803529",  // 第三方平台订单号
             "pay_amount": 17,  // 支付金额
             "reach_minus": 0,  // 满减金额
-            "received_at": 0,  // 收货时间
             "distributed": false,  // 分销订单
             "remark": null,  // 卖家备注
             "rid": "D18070316803529",  // 订单编号
@@ -153,6 +152,8 @@ JSON数据格式:
             "total_quantity": 3,  // 商品总数量
             "blessing_utterance": "嘿嘿嘿",  // 买家寄语
             "buyer_remark": "哈哈哈",  // 买家备注
+            "payed_at": 12321312,  // 付款时间
+            "received_at": 12321312,  // 签收时间
             "items": [
                 {
                     "commission_price": 0,  // 佣金
@@ -310,7 +311,6 @@ JSON数据格式:
                     "outside_target_id": "D18070316803529",  // 第三方平台订单号
                     "pay_amount": 17,  // 支付金额
                     "reach_minus": 0,  // 满减金额
-                    "received_at": 0,  // 收货时间
                     "distributed": false,  // 分销订单
                     "remark": null,  // 卖家备注
                     "rid": "D18070316803529",  // 订单编号
@@ -321,6 +321,8 @@ JSON数据格式:
                     "total_quantity": 3,  // 商品总数量
                     "blessing_utterance": "嘿嘿嘿",  // 买家寄语
                     "buyer_remark": "哈哈哈",  // 买家备注
+                    "payed_at": 12321312,  // 付款时间
+                    "received_at": 12321312,  // 签收时间
                     "items": [
                         {
                             "commission_price": 0,  // 佣金
@@ -558,7 +560,6 @@ JSON数据格式:
                 "outside_target_id": "D18070316803529",  // 第三方平台订单号
                 "pay_amount": 17,  // 支付金额
                 "reach_minus": 0,  // 满减金额
-                "received_at": 0,  // 收货时间
                 "distributed": false,  // 分销订单
                 "remark": null,  // 卖家备注
                 "rid": "D18070316803529",  // 订单编号
@@ -569,6 +570,8 @@ JSON数据格式:
                 "total_quantity": 3,  // 商品总数量
                 "blessing_utterance": "嘿嘿嘿",  // 买家寄语
                 "buyer_remark": "哈哈哈",  // 买家备注
+                "payed_at": 12321312,  // 付款时间
+                "received_at": 12321312,  // 签收时间
                 "items": [
                     {
                         "commission_price": 0,  // 佣金
@@ -688,7 +691,6 @@ JSON数据格式:
                     "outside_target_id": "D18070316803529",  // 第三方平台订单号
                     "pay_amount": 17,  // 支付金额
                     "reach_minus": 0,  // 满减金额
-                    "received_at": 0,  // 收货时间
                     "distributed": false,  // 分销订单
                     "remark": null,  // 卖家备注
                     "rid": "D18070316803529",  // 订单编号
@@ -699,6 +701,8 @@ JSON数据格式:
                     "total_quantity": 3,  // 商品总数量
                     "blessing_utterance": "嘿嘿嘿",  // 买家寄语
                     "buyer_remark": "哈哈哈",  // 买家备注
+                    "payed_at": 12321312,  // 付款时间
+                    "received_at": 12321312,  // 签收时间
                     "items": [
                         {
                             "commission_price": 0,  // 佣金
@@ -782,7 +786,6 @@ JSON数据格式:
                     "outside_target_id": "D18070316803529",  // 第三方平台订单号
                     "pay_amount": 17,  // 支付金额
                     "reach_minus": 0,  // 满减金额
-                    "received_at": 0,  // 收货时间
                     "distributed": false,  // 分销订单
                     "remark": null,  // 卖家备注
                     "rid": "D18070316803529",  // 订单编号
@@ -793,6 +796,8 @@ JSON数据格式:
                     "total_quantity": 3,  // 商品总数量
                     "blessing_utterance": "嘿嘿嘿",  // 买家寄语
                     "buyer_remark": "哈哈哈",  // 买家备注
+                    "payed_at": 12321312,  // 付款时间
+                    "received_at": 12321312,  // 签收时间
                     "items": [
                         {
                             "commission_price": 0,  // 佣金
@@ -876,7 +881,6 @@ JSON数据格式:
                     "outside_target_id": "D18070316803529",  // 第三方平台订单号
                     "pay_amount": 17,  // 支付金额
                     "reach_minus": 0,  // 满减金额
-                    "received_at": 0,  // 收货时间
                     "distributed": false,  // 分销订单
                     "remark": null,  // 卖家备注
                     "rid": "D18070316803529",  // 订单编号
@@ -887,6 +891,8 @@ JSON数据格式:
                     "total_quantity": 3,  // 商品总数量
                     "blessing_utterance": "嘿嘿嘿",  // 买家寄语
                     "buyer_remark": "哈哈哈",  // 买家备注
+                    "payed_at": 12321312,  // 付款时间
+                    "received_at": 12321312,  // 签收时间
                     "items": [
                         {
                             "commission_price": 0,  // 佣金
@@ -970,7 +976,6 @@ JSON数据格式:
                     "outside_target_id": "D18070316803529",  // 第三方平台订单号
                     "pay_amount": 17,  // 支付金额
                     "reach_minus": 0,  // 满减金额
-                    "received_at": 0,  // 收货时间
                     "distributed": false,  // 分销订单
                     "remark": null,  // 卖家备注
                     "rid": "D18070316803529",  // 订单编号
@@ -981,6 +986,8 @@ JSON数据格式:
                     "total_quantity": 3,  // 商品总数量
                     "blessing_utterance": "嘿嘿嘿",  // 买家寄语
                     "buyer_remark": "哈哈哈",  // 买家备注
+                    "payed_at": 12321312,  // 付款时间
+                    "received_at": 12321312,  // 签收时间
                     "items": [
                         {
                             "commission_price": 0,  // 佣金
@@ -1064,7 +1071,6 @@ JSON数据格式:
                     "outside_target_id": "D18070316803529",  // 第三方平台订单号
                     "pay_amount": 17,  // 支付金额
                     "reach_minus": 0,  // 满减金额
-                    "received_at": 0,  // 收货时间
                     "distributed": false,  // 分销订单
                     "remark": null,  // 卖家备注
                     "rid": "D18070316803529",  // 订单编号
@@ -1075,6 +1081,8 @@ JSON数据格式:
                     "total_quantity": 3,  // 商品总数量
                     "blessing_utterance": "嘿嘿嘿",  // 买家寄语
                     "buyer_remark": "哈哈哈",  // 买家备注
+                    "payed_at": 12321312,  // 付款时间
+                    "received_at": 12321312,  // 签收时间
                     "items": [
                         {
                             "commission_price": 0,  // 佣金
@@ -1169,6 +1177,8 @@ JSON数据格式:
                     "total_quantity": 3,  // 商品总数量
                     "blessing_utterance": "嘿嘿嘿",  // 买家寄语
                     "buyer_remark": "哈哈哈",  // 买家备注
+                    "payed_at": 12321312,  // 付款时间
+                    "received_at": 12321312,  // 签收时间
                     "items": [
                         {
                             "commission_price": 0,  // 佣金
@@ -1252,7 +1262,6 @@ JSON数据格式:
                 "outside_target_id": "D18070316803529",  // 第三方平台订单号
                 "pay_amount": 17,  // 支付金额
                 "reach_minus": 0,  // 满减金额
-                "received_at": 0,  // 收货时间
                 "distributed": false,  // 分销订单
                 "remark": null,  // 卖家备注
                 "rid": "D18070316803529",  // 订单编号
@@ -1263,6 +1272,8 @@ JSON数据格式:
                 "total_quantity": 3,  // 商品总数量
                 "blessing_utterance": "嘿嘿嘿",  // 买家寄语
                 "buyer_remark": "哈哈哈",  // 买家备注
+                "payed_at": 12321312,  // 付款时间
+                "received_at": 12321312,  // 签收时间
                 "items": [
                     {
                         "commission_price": 0,  // 佣金
