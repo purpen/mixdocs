@@ -2,21 +2,13 @@
 
 <html xmlns="http://www.w3.org/1999/xhtml" lang="zh_CN">
   <head>
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <title>API文档说明 &#8212; mixdocs 0.1.0 文档</title>
     <link rel="stylesheet" href="_static/bootstrap-sphinx.css" type="text/css" />
     <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
     <link rel="stylesheet" href="_static/mixpus.css" type="text/css" />
-    <script type="text/javascript">
-      var DOCUMENTATION_OPTIONS = {
-        URL_ROOT:    './',
-        VERSION:     '0.1.0',
-        COLLAPSE_INDEX: false,
-        FILE_SUFFIX: '.html',
-        HAS_SOURCE:  true,
-        SOURCELINK_SUFFIX: '.txt'
-      };
-    </script>
+    <script type="text/javascript" src="_static/documentation_options.js"></script>
     <script type="text/javascript" src="_static/jquery.js"></script>
     <script type="text/javascript" src="_static/underscore.js"></script>
     <script type="text/javascript" src="_static/doctools.js"></script>
@@ -34,8 +26,7 @@
 <meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1'>
 <meta name="apple-mobile-web-app-capable" content="yes">
 
-  </head>
-  <body>
+  </head><body>
 
   <div id="navbar" class="navbar navbar-inverse navbar-default navbar-fixed-top">
     <div class="container">
@@ -266,7 +257,7 @@
 </div>
 <div class="section" id="id3">
 <h2>系统级请求参数<a class="headerlink" href="#id3" title="永久链接至标题">¶</a></h2>
-<p><code class="docutils literal"><span class="pre">注意</span></code> API每次发起的请求，均需要以下参数.</p>
+<p><code class="docutils literal notranslate"><span class="pre">注意</span></code> API每次发起的请求，均需要以下参数.</p>
 <table border="1" class="docutils">
 <colgroup>
 <col width="15%" />
@@ -310,8 +301,8 @@
 </tr>
 </tbody>
 </table>
-<p><code class="docutils literal"><span class="pre">签名规则:</span></code></p>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="mf">1.</span> <span class="n">将app_key</span><span class="p">,</span><span class="n">timestamp</span><span class="p">,</span><span class="n">nonce_str三个参数字典排序</span>
+<p><code class="docutils literal notranslate"><span class="pre">签名规则:</span></code></p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="mf">1.</span> <span class="n">将app_key</span><span class="p">,</span><span class="n">timestamp</span><span class="p">,</span><span class="n">nonce_str三个参数字典排序</span>
 <span class="mf">2.</span> <span class="n">将三个参数字符串拼接成一个字符串</span><span class="o">+</span><span class="n">app_secret进行sha1加密</span>
 <span class="mf">3.</span> <span class="n">加密后的字符串即为sign</span>
 </pre></div>
