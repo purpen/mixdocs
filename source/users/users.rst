@@ -1568,10 +1568,14 @@ JSON数据格式:
 
     {
         "data": {
-            "need_pay": "99",
-            "product_price": "22,99",
-            "secured_trade": true,
-            "status": ""
+            "already_pay": 500,  // 已支付金额
+            "also_need_pay": 500, // 还需支付金额
+            "need_pay": "1000",  // 总需支付金额
+            "pay_at": null, // 支付时间
+            "pay_way": 1, // 支付方式: 1、微信；2：支付宝；3、银联；
+            "product_price": "100,1000",  // 商品价格区间
+            "secured_trade": true, // 是否成为消保人
+            "status": 1  // 支付状态: 1、部分缴纳；-1：未缴纳；2、全部缴纳；
         },
         "status": {
             "code": 200,
