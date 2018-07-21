@@ -246,26 +246,27 @@
 <li><a class="reference internal" href="#id48">返回示例</a></li>
 </ul>
 </li>
-<li><a class="reference internal" href="#id49">验证用户海关信息是否存在</a><ul>
+<li><a class="reference internal" href="#id49">新增地址海关信息</a><ul>
 <li><a class="reference internal" href="#id50">接口说明</a></li>
-<li><a class="reference internal" href="#id51">返回示例</a></li>
+<li><a class="reference internal" href="#id51">请求参数</a></li>
+<li><a class="reference internal" href="#id52">返回示例</a></li>
 </ul>
 </li>
-<li><a class="reference internal" href="#id52">新增地址海关信息</a><ul>
-<li><a class="reference internal" href="#id53">接口说明</a></li>
-<li><a class="reference internal" href="#id54">请求参数</a></li>
-<li><a class="reference internal" href="#id55">返回示例</a></li>
+<li><a class="reference internal" href="#id53">更新地址海关信息</a><ul>
+<li><a class="reference internal" href="#id54">接口说明</a></li>
+<li><a class="reference internal" href="#id55">请求参数</a></li>
+<li><a class="reference internal" href="#id56">返回示例</a></li>
 </ul>
 </li>
-<li><a class="reference internal" href="#id56">更新地址海关信息</a><ul>
-<li><a class="reference internal" href="#id57">接口说明</a></li>
-<li><a class="reference internal" href="#id58">请求参数</a></li>
-<li><a class="reference internal" href="#id59">返回示例</a></li>
+<li><a class="reference internal" href="#id57">删除地址海关信息</a><ul>
+<li><a class="reference internal" href="#id58">接口说明</a></li>
+<li><a class="reference internal" href="#id59">请求参数</a></li>
+<li><a class="reference internal" href="#id60">返回示例</a></li>
 </ul>
 </li>
-<li><a class="reference internal" href="#id60">删除地址海关信息</a><ul>
-<li><a class="reference internal" href="#id61">接口说明</a></li>
-<li><a class="reference internal" href="#id62">返回示例</a></li>
+<li><a class="reference internal" href="#id61">获取用户收货地址海关信息</a><ul>
+<li><a class="reference internal" href="#id62">接口说明</a></li>
+<li><a class="reference internal" href="#id63">返回示例</a></li>
 </ul>
 </li>
 </ul>
@@ -373,26 +374,27 @@
 <li><a class="reference internal" href="#id48">返回示例</a></li>
 </ul>
 </li>
-<li><a class="reference internal" href="#id49">验证用户海关信息是否存在</a><ul>
+<li><a class="reference internal" href="#id49">新增地址海关信息</a><ul>
 <li><a class="reference internal" href="#id50">接口说明</a></li>
-<li><a class="reference internal" href="#id51">返回示例</a></li>
+<li><a class="reference internal" href="#id51">请求参数</a></li>
+<li><a class="reference internal" href="#id52">返回示例</a></li>
 </ul>
 </li>
-<li><a class="reference internal" href="#id52">新增地址海关信息</a><ul>
-<li><a class="reference internal" href="#id53">接口说明</a></li>
-<li><a class="reference internal" href="#id54">请求参数</a></li>
-<li><a class="reference internal" href="#id55">返回示例</a></li>
+<li><a class="reference internal" href="#id53">更新地址海关信息</a><ul>
+<li><a class="reference internal" href="#id54">接口说明</a></li>
+<li><a class="reference internal" href="#id55">请求参数</a></li>
+<li><a class="reference internal" href="#id56">返回示例</a></li>
 </ul>
 </li>
-<li><a class="reference internal" href="#id56">更新地址海关信息</a><ul>
-<li><a class="reference internal" href="#id57">接口说明</a></li>
-<li><a class="reference internal" href="#id58">请求参数</a></li>
-<li><a class="reference internal" href="#id59">返回示例</a></li>
+<li><a class="reference internal" href="#id57">删除地址海关信息</a><ul>
+<li><a class="reference internal" href="#id58">接口说明</a></li>
+<li><a class="reference internal" href="#id59">请求参数</a></li>
+<li><a class="reference internal" href="#id60">返回示例</a></li>
 </ul>
 </li>
-<li><a class="reference internal" href="#id60">删除地址海关信息</a><ul>
-<li><a class="reference internal" href="#id61">接口说明</a></li>
-<li><a class="reference internal" href="#id62">返回示例</a></li>
+<li><a class="reference internal" href="#id61">获取用户收货地址海关信息</a><ul>
+<li><a class="reference internal" href="#id62">接口说明</a></li>
+<li><a class="reference internal" href="#id63">返回示例</a></li>
 </ul>
 </li>
 </ul>
@@ -719,12 +721,6 @@
 <td>False</td>
 <td>是否海外地址</td>
 </tr>
-<tr class="row-even"><td>user_custom_id</td>
-<td>Integer</td>
-<td>可选</td>
-<td>&#160;</td>
-<td>海关信息id</td>
-</tr>
 </tbody>
 </table>
 </div>
@@ -896,12 +892,6 @@
 <td>可选</td>
 <td>False</td>
 <td>是否海外地址</td>
-</tr>
-<tr class="row-odd"><td>user_custom_id</td>
-<td>Integer</td>
-<td>可选</td>
-<td>&#160;</td>
-<td>海关信息id</td>
 </tr>
 </tbody>
 </table>
@@ -1449,47 +1439,18 @@
 </div>
 </div>
 <div class="section" id="id49">
-<h2>验证用户海关信息是否存在<a class="headerlink" href="#id49" title="永久链接至标题">¶</a></h2>
-<p>验证用户海关信息是否存在</p>
+<h2>新增地址海关信息<a class="headerlink" href="#id49" title="永久链接至标题">¶</a></h2>
+<p>某用户新增地址海关信息</p>
 <div class="section" id="id50">
 <h3>接口说明<a class="headerlink" href="#id50" title="永久链接至标题">¶</a></h3>
-<ul class="simple">
-<li>API接口请求地址：<code class="docutils literal"><span class="pre">/address/exists_custom</span></code></li>
-<li>API接口请求方法：<code class="docutils literal"><span class="pre">GET</span></code></li>
-<li>API接口用户授权：<code class="docutils literal"><span class="pre">token</span></code></li>
-</ul>
-</div>
-<div class="section" id="id51">
-<h3>返回示例<a class="headerlink" href="#id51" title="永久链接至标题">¶</a></h3>
-<p>JSON数据格式:</p>
-<p>请求 <strong>正确</strong> 返回结果：</p>
-<div class="highlight-javascript"><div class="highlight"><pre><span></span><span class="p">{</span>
-    <span class="s2">&quot;data&quot;</span><span class="o">:</span> <span class="p">{</span>
-        <span class="s2">&quot;exists&quot;</span><span class="o">:</span> <span class="kc">true</span>
-    <span class="p">},</span>
-    <span class="s2">&quot;status&quot;</span><span class="o">:</span> <span class="p">{</span>
-        <span class="s2">&quot;code&quot;</span><span class="o">:</span> <span class="mi">200</span><span class="p">,</span>
-        <span class="s2">&quot;message&quot;</span><span class="o">:</span> <span class="s2">&quot;Ok all right.&quot;</span>
-    <span class="p">},</span>
-    <span class="s2">&quot;success&quot;</span><span class="o">:</span> <span class="kc">true</span>
-<span class="p">}</span>
-</pre></div>
-</div>
-</div>
-</div>
-<div class="section" id="id52">
-<h2>新增地址海关信息<a class="headerlink" href="#id52" title="永久链接至标题">¶</a></h2>
-<p>某用户新增地址海关信息</p>
-<div class="section" id="id53">
-<h3>接口说明<a class="headerlink" href="#id53" title="永久链接至标题">¶</a></h3>
 <ul class="simple">
 <li>API接口请求地址：<code class="docutils literal"><span class="pre">/address/custom</span></code></li>
 <li>API接口请求方法：<code class="docutils literal"><span class="pre">POST</span></code></li>
 <li>API接口用户授权：<code class="docutils literal"><span class="pre">token</span></code></li>
 </ul>
 </div>
-<div class="section" id="id54">
-<h3>请求参数<a class="headerlink" href="#id54" title="永久链接至标题">¶</a></h3>
+<div class="section" id="id51">
+<h3>请求参数<a class="headerlink" href="#id51" title="永久链接至标题">¶</a></h3>
 <table border="1" class="docutils">
 <colgroup>
 <col width="27%" />
@@ -1507,19 +1468,25 @@
 </tr>
 </thead>
 <tbody valign="top">
-<tr class="row-even"><td>id_card</td>
+<tr class="row-even"><td>address_rid</td>
+<td>String</td>
+<td>必需</td>
+<td>&#160;</td>
+<td>收货地址rid</td>
+</tr>
+<tr class="row-odd"><td>id_card</td>
 <td>String</td>
 <td>必需</td>
 <td>&#160;</td>
 <td>身份证号</td>
 </tr>
-<tr class="row-odd"><td>id_card_front</td>
+<tr class="row-even"><td>id_card_front</td>
 <td>Integer</td>
 <td>必需</td>
 <td>&#160;</td>
 <td>身份证正面照片图片资源id</td>
 </tr>
-<tr class="row-even"><td>id_card_back</td>
+<tr class="row-odd"><td>id_card_back</td>
 <td>Integer</td>
 <td>必需</td>
 <td>&#160;</td>
@@ -1528,20 +1495,35 @@
 </tbody>
 </table>
 </div>
-<div class="section" id="id55">
-<h3>返回示例<a class="headerlink" href="#id55" title="永久链接至标题">¶</a></h3>
+<div class="section" id="id52">
+<h3>返回示例<a class="headerlink" href="#id52" title="永久链接至标题">¶</a></h3>
 <p>JSON数据格式:</p>
 <p>请求 <strong>正确</strong> 返回结果：</p>
 <div class="highlight-javascript"><div class="highlight"><pre><span></span><span class="p">{</span>
     <span class="s2">&quot;data&quot;</span><span class="o">:</span> <span class="p">{</span>
-        <span class="s2">&quot;id_card&quot;</span><span class="o">:</span> <span class="s2">&quot;13278989898&quot;</span><span class="p">,</span>
-        <span class="s2">&quot;id_card_back&quot;</span><span class="o">:</span> <span class="mi">2</span><span class="p">,</span>
-        <span class="s2">&quot;id_card_front&quot;</span><span class="o">:</span> <span class="mi">1</span><span class="p">,</span>
-        <span class="s2">&quot;user_id&quot;</span><span class="o">:</span> <span class="mi">1</span>
+        <span class="s2">&quot;address_rid&quot;</span><span class="o">:</span> <span class="s2">&quot;5608945713&quot;</span><span class="p">,</span>  <span class="c1">// 收货地址rid</span>
+        <span class="s2">&quot;id_card&quot;</span><span class="o">:</span> <span class="s2">&quot;27812768766&quot;</span><span class="p">,</span>  <span class="c1">// 身份证号</span>
+        <span class="s2">&quot;id_card_back&quot;</span><span class="o">:</span> <span class="p">{</span>  <span class="c1">// 身份证背面</span>
+            <span class="s2">&quot;created_at&quot;</span><span class="o">:</span> <span class="mi">3</span><span class="p">,</span>
+            <span class="s2">&quot;filename&quot;</span><span class="o">:</span> <span class="s2">&quot;3&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;filepath&quot;</span><span class="o">:</span> <span class="s2">&quot;3&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;id&quot;</span><span class="o">:</span> <span class="mi">3</span><span class="p">,</span>
+            <span class="s2">&quot;type&quot;</span><span class="o">:</span> <span class="mi">3</span><span class="p">,</span>
+            <span class="s2">&quot;view_url&quot;</span><span class="o">:</span> <span class="s2">&quot;http://0.0.0.0:9000/_uploads/photos/3&quot;</span>
+        <span class="p">},</span>
+        <span class="s2">&quot;id_card_front&quot;</span><span class="o">:</span> <span class="p">{</span>  <span class="c1">// 身份证后面</span>
+            <span class="s2">&quot;created_at&quot;</span><span class="o">:</span> <span class="mi">3</span><span class="p">,</span>
+            <span class="s2">&quot;filename&quot;</span><span class="o">:</span> <span class="s2">&quot;3&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;filepath&quot;</span><span class="o">:</span> <span class="s2">&quot;3&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;id&quot;</span><span class="o">:</span> <span class="mi">3</span><span class="p">,</span>
+            <span class="s2">&quot;type&quot;</span><span class="o">:</span> <span class="mi">3</span><span class="p">,</span>
+            <span class="s2">&quot;view_url&quot;</span><span class="o">:</span> <span class="s2">&quot;http://0.0.0.0:9000/_uploads/photos/3&quot;</span>
+        <span class="p">},</span>
+        <span class="s2">&quot;user_id&quot;</span><span class="o">:</span> <span class="mi">2</span>  <span class="c1">//</span>
     <span class="p">},</span>
     <span class="s2">&quot;status&quot;</span><span class="o">:</span> <span class="p">{</span>
-        <span class="s2">&quot;code&quot;</span><span class="o">:</span> <span class="mi">201</span><span class="p">,</span>
-        <span class="s2">&quot;message&quot;</span><span class="o">:</span> <span class="s2">&quot;All created.&quot;</span>
+        <span class="s2">&quot;code&quot;</span><span class="o">:</span> <span class="mi">200</span><span class="p">,</span>
+        <span class="s2">&quot;message&quot;</span><span class="o">:</span> <span class="s2">&quot;Ok all right.&quot;</span>
     <span class="p">},</span>
     <span class="s2">&quot;success&quot;</span><span class="o">:</span> <span class="kc">true</span>
 <span class="p">}</span>
@@ -1559,19 +1541,19 @@
 </div>
 </div>
 </div>
-<div class="section" id="id56">
-<h2>更新地址海关信息<a class="headerlink" href="#id56" title="永久链接至标题">¶</a></h2>
+<div class="section" id="id53">
+<h2>更新地址海关信息<a class="headerlink" href="#id53" title="永久链接至标题">¶</a></h2>
 <p>某用户更新地址海关信息</p>
-<div class="section" id="id57">
-<h3>接口说明<a class="headerlink" href="#id57" title="永久链接至标题">¶</a></h3>
+<div class="section" id="id54">
+<h3>接口说明<a class="headerlink" href="#id54" title="永久链接至标题">¶</a></h3>
 <ul class="simple">
 <li>API接口请求地址：<code class="docutils literal"><span class="pre">/address/custom</span></code></li>
 <li>API接口请求方法：<code class="docutils literal"><span class="pre">PUT</span></code></li>
 <li>API接口用户授权：<code class="docutils literal"><span class="pre">token</span></code></li>
 </ul>
 </div>
-<div class="section" id="id58">
-<h3>请求参数<a class="headerlink" href="#id58" title="永久链接至标题">¶</a></h3>
+<div class="section" id="id55">
+<h3>请求参数<a class="headerlink" href="#id55" title="永久链接至标题">¶</a></h3>
 <table border="1" class="docutils">
 <colgroup>
 <col width="27%" />
@@ -1589,41 +1571,62 @@
 </tr>
 </thead>
 <tbody valign="top">
-<tr class="row-even"><td>id_card</td>
+<tr class="row-even"><td>address_rid</td>
 <td>String</td>
 <td>必需</td>
 <td>&#160;</td>
+<td>地址rid</td>
+</tr>
+<tr class="row-odd"><td>id_card</td>
+<td>String</td>
+<td>可选</td>
+<td>&#160;</td>
 <td>身份证号</td>
 </tr>
-<tr class="row-odd"><td>id_card_front</td>
+<tr class="row-even"><td>id_card_front</td>
 <td>Integer</td>
-<td>必需</td>
+<td>可选</td>
 <td>&#160;</td>
 <td>身份证正面照片图片资源id</td>
 </tr>
-<tr class="row-even"><td>id_card_back</td>
+<tr class="row-odd"><td>id_card_back</td>
 <td>Integer</td>
-<td>必需</td>
+<td>可选</td>
 <td>&#160;</td>
 <td>身份证背面照片图片资源id</td>
 </tr>
 </tbody>
 </table>
 </div>
-<div class="section" id="id59">
-<h3>返回示例<a class="headerlink" href="#id59" title="永久链接至标题">¶</a></h3>
+<div class="section" id="id56">
+<h3>返回示例<a class="headerlink" href="#id56" title="永久链接至标题">¶</a></h3>
 <p>JSON数据格式:</p>
 <p>请求 <strong>正确</strong> 返回结果：</p>
 <div class="highlight-javascript"><div class="highlight"><pre><span></span><span class="p">{</span>
     <span class="s2">&quot;data&quot;</span><span class="o">:</span> <span class="p">{</span>
-        <span class="s2">&quot;id_card&quot;</span><span class="o">:</span> <span class="s2">&quot;13278989898&quot;</span><span class="p">,</span>
-        <span class="s2">&quot;id_card_back&quot;</span><span class="o">:</span> <span class="mi">2</span><span class="p">,</span>
-        <span class="s2">&quot;id_card_front&quot;</span><span class="o">:</span> <span class="mi">1</span><span class="p">,</span>
-        <span class="s2">&quot;user_id&quot;</span><span class="o">:</span> <span class="mi">1</span>
+        <span class="s2">&quot;address_rid&quot;</span><span class="o">:</span> <span class="s2">&quot;5608945713&quot;</span><span class="p">,</span>  <span class="c1">// 收货地址rid</span>
+        <span class="s2">&quot;id_card&quot;</span><span class="o">:</span> <span class="s2">&quot;27812768766&quot;</span><span class="p">,</span>  <span class="c1">// 身份证号</span>
+        <span class="s2">&quot;id_card_back&quot;</span><span class="o">:</span> <span class="p">{</span>  <span class="c1">// 身份证背面</span>
+            <span class="s2">&quot;created_at&quot;</span><span class="o">:</span> <span class="mi">3</span><span class="p">,</span>
+            <span class="s2">&quot;filename&quot;</span><span class="o">:</span> <span class="s2">&quot;3&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;filepath&quot;</span><span class="o">:</span> <span class="s2">&quot;3&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;id&quot;</span><span class="o">:</span> <span class="mi">3</span><span class="p">,</span>
+            <span class="s2">&quot;type&quot;</span><span class="o">:</span> <span class="mi">3</span><span class="p">,</span>
+            <span class="s2">&quot;view_url&quot;</span><span class="o">:</span> <span class="s2">&quot;http://0.0.0.0:9000/_uploads/photos/3&quot;</span>
+        <span class="p">},</span>
+        <span class="s2">&quot;id_card_front&quot;</span><span class="o">:</span> <span class="p">{</span>  <span class="c1">// 身份证后面</span>
+            <span class="s2">&quot;created_at&quot;</span><span class="o">:</span> <span class="mi">3</span><span class="p">,</span>
+            <span class="s2">&quot;filename&quot;</span><span class="o">:</span> <span class="s2">&quot;3&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;filepath&quot;</span><span class="o">:</span> <span class="s2">&quot;3&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;id&quot;</span><span class="o">:</span> <span class="mi">3</span><span class="p">,</span>
+            <span class="s2">&quot;type&quot;</span><span class="o">:</span> <span class="mi">3</span><span class="p">,</span>
+            <span class="s2">&quot;view_url&quot;</span><span class="o">:</span> <span class="s2">&quot;http://0.0.0.0:9000/_uploads/photos/3&quot;</span>
+        <span class="p">},</span>
+        <span class="s2">&quot;user_id&quot;</span><span class="o">:</span> <span class="mi">2</span>  <span class="c1">//</span>
     <span class="p">},</span>
     <span class="s2">&quot;status&quot;</span><span class="o">:</span> <span class="p">{</span>
-        <span class="s2">&quot;code&quot;</span><span class="o">:</span> <span class="mi">201</span><span class="p">,</span>
-        <span class="s2">&quot;message&quot;</span><span class="o">:</span> <span class="s2">&quot;All created.&quot;</span>
+        <span class="s2">&quot;code&quot;</span><span class="o">:</span> <span class="mi">200</span><span class="p">,</span>
+        <span class="s2">&quot;message&quot;</span><span class="o">:</span> <span class="s2">&quot;Ok all right.&quot;</span>
     <span class="p">},</span>
     <span class="s2">&quot;success&quot;</span><span class="o">:</span> <span class="kc">true</span>
 <span class="p">}</span>
@@ -1641,19 +1644,47 @@
 </div>
 </div>
 </div>
-<div class="section" id="id60">
-<h2>删除地址海关信息<a class="headerlink" href="#id60" title="永久链接至标题">¶</a></h2>
+<div class="section" id="id57">
+<h2>删除地址海关信息<a class="headerlink" href="#id57" title="永久链接至标题">¶</a></h2>
 <p>某用户删除地址海关信息</p>
-<div class="section" id="id61">
-<h3>接口说明<a class="headerlink" href="#id61" title="永久链接至标题">¶</a></h3>
+<div class="section" id="id58">
+<h3>接口说明<a class="headerlink" href="#id58" title="永久链接至标题">¶</a></h3>
 <ul class="simple">
 <li>API接口请求地址：<code class="docutils literal"><span class="pre">/address/custom</span></code></li>
 <li>API接口请求方法：<code class="docutils literal"><span class="pre">DELETE</span></code></li>
 <li>API接口用户授权：<code class="docutils literal"><span class="pre">token</span></code></li>
 </ul>
 </div>
-<div class="section" id="id62">
-<h3>返回示例<a class="headerlink" href="#id62" title="永久链接至标题">¶</a></h3>
+<div class="section" id="id59">
+<h3>请求参数<a class="headerlink" href="#id59" title="永久链接至标题">¶</a></h3>
+<table border="1" class="docutils">
+<colgroup>
+<col width="27%" />
+<col width="13%" />
+<col width="11%" />
+<col width="13%" />
+<col width="37%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">名称</th>
+<th class="head">类型</th>
+<th class="head">是否必须</th>
+<th class="head">默认值</th>
+<th class="head">描述说明</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>address_rid</td>
+<td>String</td>
+<td>必需</td>
+<td>&#160;</td>
+<td>地址rid</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="id60">
+<h3>返回示例<a class="headerlink" href="#id60" title="永久链接至标题">¶</a></h3>
 <p>JSON数据格式:</p>
 <p>请求 <strong>正确</strong> 返回结果：</p>
 <div class="highlight-javascript"><div class="highlight"><pre><span></span><span class="p">{</span>
@@ -1672,6 +1703,53 @@
         <span class="s2">&quot;message&quot;</span><span class="o">:</span> <span class="s2">&quot;Not Found&quot;</span>
     <span class="p">},</span>
     <span class="s2">&quot;success&quot;</span><span class="o">:</span> <span class="kc">false</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="id61">
+<h2>获取用户收货地址海关信息<a class="headerlink" href="#id61" title="永久链接至标题">¶</a></h2>
+<p>获取用户收货地址海关信息</p>
+<div class="section" id="id62">
+<h3>接口说明<a class="headerlink" href="#id62" title="永久链接至标题">¶</a></h3>
+<ul class="simple">
+<li>API接口请求地址：<code class="docutils literal"><span class="pre">/address/custom</span></code></li>
+<li>API接口请求方法：<code class="docutils literal"><span class="pre">GET</span></code></li>
+<li>API接口用户授权：<code class="docutils literal"><span class="pre">token</span></code></li>
+</ul>
+</div>
+<div class="section" id="id63">
+<h3>返回示例<a class="headerlink" href="#id63" title="永久链接至标题">¶</a></h3>
+<p>JSON数据格式:</p>
+<p>请求 <strong>正确</strong> 返回结果：</p>
+<div class="highlight-javascript"><div class="highlight"><pre><span></span><span class="p">{</span>
+    <span class="s2">&quot;data&quot;</span><span class="o">:</span> <span class="p">{</span>
+        <span class="s2">&quot;address_rid&quot;</span><span class="o">:</span> <span class="s2">&quot;5608945713&quot;</span><span class="p">,</span>  <span class="c1">// 收货地址rid</span>
+        <span class="s2">&quot;id_card&quot;</span><span class="o">:</span> <span class="s2">&quot;27812768766&quot;</span><span class="p">,</span>  <span class="c1">// 身份证号</span>
+        <span class="s2">&quot;id_card_back&quot;</span><span class="o">:</span> <span class="p">{</span>  <span class="c1">// 身份证背面</span>
+            <span class="s2">&quot;created_at&quot;</span><span class="o">:</span> <span class="mi">3</span><span class="p">,</span>
+            <span class="s2">&quot;filename&quot;</span><span class="o">:</span> <span class="s2">&quot;3&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;filepath&quot;</span><span class="o">:</span> <span class="s2">&quot;3&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;id&quot;</span><span class="o">:</span> <span class="mi">3</span><span class="p">,</span>
+            <span class="s2">&quot;type&quot;</span><span class="o">:</span> <span class="mi">3</span><span class="p">,</span>
+            <span class="s2">&quot;view_url&quot;</span><span class="o">:</span> <span class="s2">&quot;http://0.0.0.0:9000/_uploads/photos/3&quot;</span>
+        <span class="p">},</span>
+        <span class="s2">&quot;id_card_front&quot;</span><span class="o">:</span> <span class="p">{</span>  <span class="c1">// 身份证后面</span>
+            <span class="s2">&quot;created_at&quot;</span><span class="o">:</span> <span class="mi">3</span><span class="p">,</span>
+            <span class="s2">&quot;filename&quot;</span><span class="o">:</span> <span class="s2">&quot;3&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;filepath&quot;</span><span class="o">:</span> <span class="s2">&quot;3&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;id&quot;</span><span class="o">:</span> <span class="mi">3</span><span class="p">,</span>
+            <span class="s2">&quot;type&quot;</span><span class="o">:</span> <span class="mi">3</span><span class="p">,</span>
+            <span class="s2">&quot;view_url&quot;</span><span class="o">:</span> <span class="s2">&quot;http://0.0.0.0:9000/_uploads/photos/3&quot;</span>
+        <span class="p">},</span>
+        <span class="s2">&quot;user_id&quot;</span><span class="o">:</span> <span class="mi">2</span>  <span class="c1">//</span>
+    <span class="p">},</span>
+    <span class="s2">&quot;status&quot;</span><span class="o">:</span> <span class="p">{</span>
+        <span class="s2">&quot;code&quot;</span><span class="o">:</span> <span class="mi">200</span><span class="p">,</span>
+        <span class="s2">&quot;message&quot;</span><span class="o">:</span> <span class="s2">&quot;Ok all right.&quot;</span>
+    <span class="p">},</span>
+    <span class="s2">&quot;success&quot;</span><span class="o">:</span> <span class="kc">true</span>
 <span class="p">}</span>
 </pre></div>
 </div>

@@ -224,7 +224,6 @@ street_address_two      String      可选
 zipcode                 Number      可选                     邮编
 is_default              Bool        可选        False        是否默认地址
 is_overseas             Bool        可选        False        是否海外地址
-user_custom_id          Integer     可选                     海关信息id
 =====================  ==========  =========  ==========  =============================
 
 
@@ -313,7 +312,6 @@ street_address_two      String      可选
 zipcode                 Number      可选                     邮编
 is_default              Bool        可选        False        是否默认地址
 is_overseas             Bool        可选        False        是否海外地址
-user_custom_id          Integer     可选                     海关信息id
 =====================  ==========  =========  ==========  =============================
 
 
@@ -793,40 +791,6 @@ JSON数据格式:
       "success": true
     }
 
-
-验证用户海关信息是否存在
-------------------------
-验证用户海关信息是否存在
-
-接口说明
-~~~~~~~~~~~~~~
-
-* API接口请求地址：``/address/exists_custom``
-* API接口请求方法：``GET``
-* API接口用户授权：``token``
-
-
-返回示例
-~~~~~~~~~~~~~~~~
-
-JSON数据格式:
-
-请求 **正确** 返回结果：
-
-.. code-block:: javascript
-
-    {
-        "data": {
-            "exists": true
-        },
-        "status": {
-            "code": 200,
-            "message": "Ok all right."
-        },
-        "success": true
-    }
-
-
 新增地址海关信息
 ----------------
 某用户新增地址海关信息
@@ -845,6 +809,7 @@ JSON数据格式:
 =====================  ==========  =========  ==========  =============================
 名称                    类型        是否必须    默认值        描述说明
 =====================  ==========  =========  ==========  =============================
+address_rid             String      必需                     收货地址rid
 id_card                 String      必需                     身份证号
 id_card_front           Integer     必需                     身份证正面照片图片资源id
 id_card_back            Integer     必需                     身份证背面照片图片资源id
@@ -861,14 +826,29 @@ JSON数据格式:
 
     {
         "data": {
-            "id_card": "13278989898",
-            "id_card_back": 2,
-            "id_card_front": 1,
-            "user_id": 1
+            "address_rid": "5608945713",  // 收货地址rid
+            "id_card": "27812768766",  // 身份证号
+            "id_card_back": {  // 身份证背面
+                "created_at": 3,
+                "filename": "3",
+                "filepath": "3",
+                "id": 3,
+                "type": 3,
+                "view_url": "http://0.0.0.0:9000/_uploads/photos/3"
+            },
+            "id_card_front": {  // 身份证后面
+                "created_at": 3,
+                "filename": "3",
+                "filepath": "3",
+                "id": 3,
+                "type": 3,
+                "view_url": "http://0.0.0.0:9000/_uploads/photos/3"
+            },
+            "user_id": 2  //
         },
         "status": {
-            "code": 201,
-            "message": "All created."
+            "code": 200,
+            "message": "Ok all right."
         },
         "success": true
     }
@@ -905,9 +885,10 @@ JSON数据格式:
 =====================  ==========  =========  ==========  =============================
 名称                    类型        是否必须    默认值        描述说明
 =====================  ==========  =========  ==========  =============================
-id_card                 String      必需                     身份证号
-id_card_front           Integer     必需                     身份证正面照片图片资源id
-id_card_back            Integer     必需                     身份证背面照片图片资源id
+address_rid             String      必需                     地址rid
+id_card                 String      可选                     身份证号
+id_card_front           Integer     可选                     身份证正面照片图片资源id
+id_card_back            Integer     可选                     身份证背面照片图片资源id
 =====================  ==========  =========  ==========  =============================
 
 返回示例
@@ -921,14 +902,29 @@ JSON数据格式:
 
     {
         "data": {
-            "id_card": "13278989898",
-            "id_card_back": 2,
-            "id_card_front": 1,
-            "user_id": 1
+            "address_rid": "5608945713",  // 收货地址rid
+            "id_card": "27812768766",  // 身份证号
+            "id_card_back": {  // 身份证背面
+                "created_at": 3,
+                "filename": "3",
+                "filepath": "3",
+                "id": 3,
+                "type": 3,
+                "view_url": "http://0.0.0.0:9000/_uploads/photos/3"
+            },
+            "id_card_front": {  // 身份证后面
+                "created_at": 3,
+                "filename": "3",
+                "filepath": "3",
+                "id": 3,
+                "type": 3,
+                "view_url": "http://0.0.0.0:9000/_uploads/photos/3"
+            },
+            "user_id": 2  //
         },
         "status": {
-            "code": 201,
-            "message": "All created."
+            "code": 200,
+            "message": "Ok all right."
         },
         "success": true
     }
@@ -957,6 +953,17 @@ JSON数据格式:
 * API接口请求方法：``DELETE``
 * API接口用户授权：``token``
 
+
+请求参数
+~~~~~~~~~~~~~~~
+
+=====================  ==========  =========  ==========  =============================
+名称                    类型        是否必须    默认值        描述说明
+=====================  ==========  =========  ==========  =============================
+address_rid             String      必需                     地址rid
+=====================  ==========  =========  ==========  =============================
+
+
 返回示例
 ~~~~~~~~~~~~~~~~
 
@@ -984,5 +991,55 @@ JSON数据格式:
             "message": "Not Found"
         },
         "success": false
+    }
+
+
+获取用户收货地址海关信息
+----------------------------
+获取用户收货地址海关信息
+
+接口说明
+~~~~~~~~~~~~~~
+
+* API接口请求地址：``/address/custom``
+* API接口请求方法：``GET``
+* API接口用户授权：``token``
+
+返回示例
+~~~~~~~~~~~~~~~~
+
+JSON数据格式:
+
+请求 **正确** 返回结果：
+
+.. code-block:: javascript
+
+    {
+        "data": {
+            "address_rid": "5608945713",  // 收货地址rid
+            "id_card": "27812768766",  // 身份证号
+            "id_card_back": {  // 身份证背面
+                "created_at": 3,
+                "filename": "3",
+                "filepath": "3",
+                "id": 3,
+                "type": 3,
+                "view_url": "http://0.0.0.0:9000/_uploads/photos/3"
+            },
+            "id_card_front": {  // 身份证后面
+                "created_at": 3,
+                "filename": "3",
+                "filepath": "3",
+                "id": 3,
+                "type": 3,
+                "view_url": "http://0.0.0.0:9000/_uploads/photos/3"
+            },
+            "user_id": 2  //
+        },
+        "status": {
+            "code": 200,
+            "message": "Ok all right."
+        },
+        "success": true
     }
 
