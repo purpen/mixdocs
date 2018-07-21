@@ -40,7 +40,7 @@ JSON数据格式:
             "date": "1992-12-26",  // 生日
             "description": null,
             "email": "13001179400",
-            "gender": 0,
+            "gender": 0, // 性别 0默认为女
             "last_seen": 1531563816,
             "mail": "asd@163.com",  // 邮箱
             "master_uid": 2,
@@ -58,6 +58,100 @@ JSON数据格式:
     }
 
 
+获取用户身份
+----------------------------------
+
+
+接口说明
+~~~~~~~~~~~~~~
+
+
+* API接口请求地址：``/users/identity``
+* API接口请求方法：``GET``
+* API接口用户授权：``token``
+
+返回示例
+~~~~~~~~~~~~~~~~
+
+JSON数据格式
+
+正确结果格式::
+
+    {
+        "data": {
+            "id_card": "456123456789", // 身份证号
+            "name": "张飞",  // 姓名
+            "status": 4,   // 认证状态, 只有为4的时候是已认证
+            "user_identity": 1  // 用户身份; 1、独立设计师；2、艺术家；3、手做人；4、业余设计师(原创设计达人):11、原创商户经营
+        },
+        "status": {
+            "code": 200,
+            "message": "Ok all right."
+        },
+        "success": true
+    }
+
+请求 ``失败`` 返回结果：
+
+.. code-block:: javascript
+
+    {
+      "status": {
+        "code": 404,
+        "message": "Not Found"
+      },
+      "success": false
+    }
+
+获取商家头像
+----------------
+
+
+接口说明
+~~~~~~~~~~~~~~
+
+* API接口请求地址：``/users/avatar``
+* API接口请求方法：``GET``
+* API接口用户授权：``token``
+
+返回示例
+~~~~~~~~~~~~~~~~
+
+JSON数据格式
+
+请求 **正确** 返回结果：
+
+.. code-block:: javascript
+
+    {
+        "data": {
+            "avatar": {
+                "created_at": null,
+                "filename": "d",
+                "filepath": "static/img/default-logo-180x180.png",
+                "id": 1,
+                "type": null,
+                "view_url": "http://0.0.0.0:9000/_uploads/photos/static/img/default-logo-180x180.png" // 头像url
+            }
+        },
+        "status": {
+            "code": 200,
+            "message": "Ok all right."
+        },
+        "success": true
+    }
+
+请求 ``失败`` 返回结果：
+
+.. code-block:: javascript
+
+    {
+      "status": {
+        "code": 404,
+        "message": "Not Found"
+      },
+      "success": false
+    }
 
 更新用户信息
 -------------
@@ -110,7 +204,7 @@ JSON数据格式
             "date": "1992-12-26",  // 生日
             "description": null,
             "email": "13001179400",
-            "gender": 0,  // 性别
+            "gender": 0,  // 性别 0默认为女
             "last_seen": 1531842343,
             "mail": "asd@163.com",  // 邮箱
             "master_uid": 2,
