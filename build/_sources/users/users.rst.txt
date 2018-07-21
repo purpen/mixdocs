@@ -153,6 +153,113 @@ JSON数据格式
       "success": false
     }
 
+获取合同附件
+----------------
+
+
+接口说明
+~~~~~~~~~~~~~~
+
+* API接口请求地址：``/users/contract_attachment``
+* API接口请求方法：``GET``
+* API接口用户授权：``token``
+
+返回示例
+~~~~~~~~~~~~~~~~
+
+JSON数据格式
+
+请求 **正确** 返回结果：
+
+.. code-block:: javascript
+
+    {
+        "data": {
+            "attachment": "http://0.0.0.0:9000/_uploads/photos/static/img/default-logo-180x180.png", // 附件url
+            "begin_at": 0,  // 合同开始时间
+            "contract_sn": "MF201807201906",  // 合同编号
+            "end_at": 0  // 合同结束时间
+        },
+        "status": {
+            "code": 200,
+            "message": "Ok all right."
+        },
+        "success": true
+    }
+
+请求 ``失败`` 返回结果：
+
+.. code-block:: javascript
+
+    {
+      "status": {
+        "code": 404,
+        "message": "Not Found"
+      },
+      "success": false
+    }
+
+
+获取专利附件
+----------------
+
+
+接口说明
+~~~~~~~~~~~~~~
+
+* API接口请求地址：``/users/patent_attachment``
+* API接口请求方法：``GET``
+* API接口用户授权：``token``
+
+返回示例
+~~~~~~~~~~~~~~~~
+
+JSON数据格式
+
+请求 **正确** 返回结果：
+
+.. code-block:: javascript
+
+    {
+        "data": {
+            "patent_file": [
+                {
+                    "created_at": null,
+                    "filename": "d",
+                    "filepath": "static/img/default-logo-180x180.png",
+                    "id": 1,
+                    "type": null,
+                    "view_url": "http://0.0.0.0:9000/_uploads/photos/static/img/default-logo-180x180.png" // 专利附件url
+                },
+                {
+                    "created_at": null,
+                    "filename": "e",
+                    "filepath": "static/img/default2-logo-180x180.png",
+                    "id": 2,
+                    "type": null,
+                    "view_url": "http://0.0.0.0:9000/_uploads/photos/static/img/default2-logo-180x180.png"
+                }
+            ]
+        },
+        "status": {
+            "code": 200,
+            "message": "Ok all right."
+        },
+        "success": true
+    }
+
+请求 ``失败`` 返回结果：
+
+.. code-block:: javascript
+
+    {
+      "status": {
+        "code": 404,
+        "message": "Not Found"
+      },
+      "success": false
+    }
+
 更新用户信息
 -------------
 
@@ -1114,7 +1221,7 @@ JSON数据格式:
 ===============  ========  =========  ========  ====================================
 username         String      必须                 用户名
 avatar_id        Integer     必须                 用户头像ID
-gender           Integer     可选          0      性别
+gender           Integer     可选          0      性别; 0女1男
 date             String      可选                 出生日期
 ===============  ========  =========  ========  ====================================
 
@@ -1129,18 +1236,28 @@ JSON数据格式:
 
     {
         "data": {
-            "about_me": null,
-            "avatar": null,
-            "date": "2008-05-15",  // 生日
+            "about_me": "好人",
+            "area": "鱼泉乡",
+            "area_id": 10000,
+            "avatar": "http://0.0.0.0:9000/_uploads/photos/static/img/default-logo-180x180.png",
+            "avatar_id": 1,
+            "city": "北京",
+            "city_id": 1,
+            "country": "",
+            "country_id": null,
+            "created_at": 1532055457,
+            "date": "2000-02-02",  // 生日
             "description": null,
             "email": "13001179400",
-            "gender": 1,
-            "last_seen": 1530422428,
+            "gender": 0,  // 性别
+            "last_seen": 1532055457,
+            "mail": null,
             "master_uid": 0,
-            "mobile": null,
-            "name": null,
-            "uid": "19562310748",
-            "username": "火烈鸟"
+            "mobile": "13001179400",
+            "province": "北京",
+            "province_id": 1,
+            "uid": "17048395612",
+            "username": "张飞"  // 用户名
         },
         "status": {
             "code": 200,
