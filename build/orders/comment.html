@@ -295,7 +295,7 @@
             <span class="p">{</span>
                 <span class="s2">&quot;comment_query&quot;</span><span class="o">:</span> <span class="mi">2</span><span class="p">,</span>
                 <span class="s2">&quot;score&quot;</span><span class="o">:</span> <span class="mi">4</span><span class="p">,</span>
-                <span class="s2">&quot;sku_id&quot;</span><span class="o">:</span> <span class="mi">2</span>
+                <span class="s2">&quot;sku_rid&quot;</span><span class="o">:</span> <span class="mi">2</span>
             <span class="p">}</span>
         <span class="p">],</span>
         <span class="s2">&quot;count&quot;</span><span class="o">:</span> <span class="mi">2</span><span class="p">,</span>
@@ -343,10 +343,10 @@
 </thead>
 <tbody valign="top">
 <tr class="row-even"><td>rid</td>
-<td>Integer</td>
+<td>String</td>
 <td>必需</td>
 <td>&#160;</td>
-<td>商品sku_id</td>
+<td>商品sku</td>
 </tr>
 </tbody>
 </table>
@@ -382,7 +382,7 @@
                             <span class="p">}</span>
                         <span class="p">],</span>
                         <span class="s2">&quot;pid&quot;</span><span class="o">:</span> <span class="mi">3</span><span class="p">,</span>
-                        <span class="s2">&quot;sku_id&quot;</span><span class="o">:</span> <span class="mi">1</span><span class="p">,</span>
+                        <span class="s2">&quot;sku_rid&quot;</span><span class="o">:</span> <span class="mi">1</span><span class="p">,</span>
                         <span class="s2">&quot;sku_score&quot;</span><span class="o">:</span> <span class="mi">1</span><span class="p">,</span>
                         <span class="s2">&quot;user_id&quot;</span><span class="o">:</span> <span class="mi">2</span><span class="p">,</span>
                         <span class="s2">&quot;user_name&quot;</span><span class="o">:</span> <span class="kc">null</span>
@@ -408,7 +408,7 @@
                     <span class="p">}</span>
                 <span class="p">],</span>
                 <span class="s2">&quot;pid&quot;</span><span class="o">:</span> <span class="mi">0</span><span class="p">,</span>
-                <span class="s2">&quot;sku_id&quot;</span><span class="o">:</span> <span class="mi">1</span><span class="p">,</span>
+                <span class="s2">&quot;sku_rid&quot;</span><span class="o">:</span> <span class="mi">1</span><span class="p">,</span>
                 <span class="s2">&quot;sku_score&quot;</span><span class="o">:</span> <span class="mi">5</span><span class="p">,</span>
                 <span class="s2">&quot;user_id&quot;</span><span class="o">:</span> <span class="mi">1</span><span class="p">,</span>
                 <span class="s2">&quot;user_name&quot;</span><span class="o">:</span> <span class="kc">null</span>
@@ -458,13 +458,13 @@
 </tr>
 </thead>
 <tbody valign="top">
-<tr class="row-even"><td>rid</td>
-<td>Integer</td>
+<tr class="row-even"><td>sku_rid</td>
+<td>String</td>
 <td>必需</td>
 <td>&#160;</td>
-<td>商品sku_id</td>
+<td>商品sku_rid</td>
 </tr>
-<tr class="row-odd"><td>order_serial</td>
+<tr class="row-odd"><td>order_rid</td>
 <td>String</td>
 <td>必需</td>
 <td>&#160;</td>
@@ -485,24 +485,24 @@
 <tr class="row-even"><td>pid</td>
 <td>Integer</td>
 <td>可选</td>
-<td>&#160;</td>
+<td>0</td>
 <td>父级评论id</td>
 </tr>
 <tr class="row-odd"><td>asset_ids</td>
-<td>String</td>
+<td>Array</td>
 <td>可选</td>
 <td>&#160;</td>
-<td>图片id, 多个图片逗号隔开</td>
+<td>图片id列表</td>
 </tr>
 </tbody>
 </table>
 <p>参考示例：</p>
 <div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="p">{</span>
-    <span class="s2">&quot;rid&quot;</span><span class="o">:</span><span class="mi">2</span><span class="p">,</span>
-    <span class="s2">&quot;order_serial&quot;</span><span class="o">:</span><span class="s2">&quot;D18061059304628&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;sku_rid&quot;</span><span class="o">:</span><span class="mi">2</span><span class="p">,</span>
+    <span class="s2">&quot;order_rid&quot;</span><span class="o">:</span><span class="s2">&quot;D18061059304628&quot;</span><span class="p">,</span>
     <span class="s2">&quot;content&quot;</span><span class="o">:</span><span class="s2">&quot;这个不错&quot;</span><span class="p">,</span>
     <span class="s2">&quot;score&quot;</span><span class="o">:</span><span class="mi">5</span><span class="p">,</span>
-    <span class="s2">&quot;asset_ids&quot;</span><span class="o">:</span><span class="s2">&quot;1,2&quot;</span>
+    <span class="s2">&quot;asset_ids&quot;</span><span class="o">:</span><span class="p">[</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">]</span>
 <span class="p">}</span>
 </pre></div>
 </div>
@@ -514,7 +514,7 @@
 <div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="p">{</span>
     <span class="s2">&quot;data&quot;</span><span class="o">:</span> <span class="p">{</span>
         <span class="s2">&quot;content&quot;</span><span class="o">:</span> <span class="s2">&quot;这个不错&quot;</span><span class="p">,</span>
-        <span class="s2">&quot;created_at&quot;</span><span class="o">:</span> <span class="mi">1528700217</span><span class="p">,</span>
+        <span class="s2">&quot;created_at&quot;</span><span class="o">:</span> <span class="mi">1532160559</span><span class="p">,</span>
         <span class="s2">&quot;id&quot;</span><span class="o">:</span> <span class="mi">6</span><span class="p">,</span>
         <span class="s2">&quot;images&quot;</span><span class="o">:</span> <span class="p">[</span>
             <span class="p">{</span>
@@ -522,6 +522,7 @@
                 <span class="s2">&quot;filename&quot;</span><span class="o">:</span> <span class="s2">&quot;1&quot;</span><span class="p">,</span>
                 <span class="s2">&quot;filepath&quot;</span><span class="o">:</span> <span class="s2">&quot;1&quot;</span><span class="p">,</span>
                 <span class="s2">&quot;id&quot;</span><span class="o">:</span> <span class="mi">1</span><span class="p">,</span>
+                <span class="s2">&quot;type&quot;</span><span class="o">:</span> <span class="mi">1</span><span class="p">,</span>
                 <span class="s2">&quot;view_url&quot;</span><span class="o">:</span> <span class="s2">&quot;http://0.0.0.0:9000/_uploads/photos/1&quot;</span>
             <span class="p">},</span>
             <span class="p">{</span>
@@ -529,14 +530,15 @@
                 <span class="s2">&quot;filename&quot;</span><span class="o">:</span> <span class="s2">&quot;2&quot;</span><span class="p">,</span>
                 <span class="s2">&quot;filepath&quot;</span><span class="o">:</span> <span class="s2">&quot;2&quot;</span><span class="p">,</span>
                 <span class="s2">&quot;id&quot;</span><span class="o">:</span> <span class="mi">2</span><span class="p">,</span>
+                <span class="s2">&quot;type&quot;</span><span class="o">:</span> <span class="mi">2</span><span class="p">,</span>
                 <span class="s2">&quot;view_url&quot;</span><span class="o">:</span> <span class="s2">&quot;http://0.0.0.0:9000/_uploads/photos/2&quot;</span>
             <span class="p">}</span>
         <span class="p">],</span>
+        <span class="s2">&quot;order_rid&quot;</span><span class="o">:</span> <span class="s2">&quot;D18061059304628&quot;</span><span class="p">,</span>
         <span class="s2">&quot;pid&quot;</span><span class="o">:</span> <span class="mi">0</span><span class="p">,</span>
-        <span class="s2">&quot;rid&quot;</span><span class="o">:</span> <span class="s2">&quot;D18061059304628&quot;</span><span class="p">,</span>
-        <span class="s2">&quot;sku_id&quot;</span><span class="o">:</span> <span class="mi">2</span><span class="p">,</span>
+        <span class="s2">&quot;sku_rid&quot;</span><span class="o">:</span> <span class="s2">&quot;2&quot;</span><span class="p">,</span>
         <span class="s2">&quot;sku_score&quot;</span><span class="o">:</span> <span class="mi">5</span><span class="p">,</span>
-        <span class="s2">&quot;user_id&quot;</span><span class="o">:</span> <span class="mi">1</span>
+        <span class="s2">&quot;user_id&quot;</span><span class="o">:</span> <span class="mi">2</span>
     <span class="p">},</span>
     <span class="s2">&quot;status&quot;</span><span class="o">:</span> <span class="p">{</span>
         <span class="s2">&quot;code&quot;</span><span class="o">:</span> <span class="mi">201</span><span class="p">,</span>
@@ -578,11 +580,11 @@
 </tr>
 </thead>
 <tbody valign="top">
-<tr class="row-even"><td>rid</td>
+<tr class="row-even"><td>comment_id</td>
 <td>Integer</td>
 <td>必需</td>
 <td>&#160;</td>
-<td>商品sku_id</td>
+<td>商品评价id</td>
 </tr>
 </tbody>
 </table>
