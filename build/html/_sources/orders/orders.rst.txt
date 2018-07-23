@@ -19,14 +19,13 @@
 请求参数
 ~~~~~~~~~~~~~~~
 
-===========  ========  =========  ========  ====================================
+===========  ========  =========  ========  ===========================================================
 名称          类型      是否必须    默认值     描述说明
-===========  ========  =========  ========  ====================================
-status	     Number	   可选	 	             订单状态 1、待发货 2、待收货 3、待评价
-no_pay       Number    可选                   未付款  0、未付款
+===========  ========  =========  ========  ===========================================================
+status	     Number	   可选         0        订单状态 0、全部 1、待发货 2、待收货 3、待评价 4、待付款
 page         Number    可选         1         当前页码
 per_page     Number    可选         10        每页数量
-===========  ========  =========  ========  ====================================
+===========  ========  =========  ========  ===========================================================
 
 返回示例
 ~~~~~~~~~~~~~~~~
@@ -143,7 +142,6 @@ JSON数据格式:
             "outside_target_id": "D18070316803529",  // 第三方平台订单号
             "pay_amount": 17,  // 支付金额
             "reach_minus": 0,  // 满减金额
-            "received_at": 0,  // 收货时间
             "distributed": false,  // 分销订单
             "remark": null,  // 卖家备注
             "rid": "D18070316803529",  // 订单编号
@@ -151,7 +149,11 @@ JSON数据格式:
             "status": 5,  // 订单状态
             "store_name": "第一家(None)",  // 店铺名称
             "total_amount": 3,  // 商品金额
-            "total_quantity": 3  // 商品总数量
+            "total_quantity": 3,  // 商品总数量
+            "blessing_utterance": "嘿嘿嘿",  // 买家寄语
+            "buyer_remark": "哈哈哈",  // 买家备注
+            "payed_at": 12321312,  // 付款时间
+            "received_at": 12321312,  // 签收时间
             "items": [
                 {
                     "commission_price": 0,  // 佣金
@@ -219,12 +221,11 @@ address_rid            String      必需                     收货地址ID
 outside_target_id      String      可选
 invoice_type           Integer     可选          1          发票类型
 invoice_info           String      可选          {}
-buyer_remark           String      可选                     买家备注
+ship_mode              Integer     可选          1          1、发快递 2、自提
 from_client            String      可选                     来源客户端，1、小程序；2、H5 3、App 4、TV 5、POS 6、PAD
 affiliate_code         String      可选                     推广码
 bonus_code             String      可选                     官方红包码
-customer_code          String      可选                     分销商代码
-sync_pay               Integer     可选                     是否同步返回支付参数
+sync_pay               Integer     可选           0         是否同步返回支付参数 0、否 1、是
 store_items            Array       必需                     店铺商品信息
 =====================  ==========  =========  ==========  =============================
 
@@ -234,8 +235,12 @@ store_items            Array       必需                     店铺商品信息
 名称                    类型        是否必须     默认值       描述说明
 =====================  ==========  =========  ==========  =============================
 store_items:
-store_rid              String      必需                    店铺rid
-coupon_codes           Array       可选                    优惠券码列表
+store_rid	           String      必需	 	              当前店铺rid
+is_distribute          Integer     可选          0         是否分销 0、否 1、是
+original_store_rid     String      可选                    原店铺rid
+buyer_remark           String      可选                    买家备注
+blessing_utterance     String      可选                    买家寄语
+coupon_codes           String      可选                    优惠券码
 items                  Array       必需                    订单明细参数
 =====================  ==========  =========  ==========  =============================
 
@@ -306,7 +311,6 @@ JSON数据格式:
                     "outside_target_id": "D18070316803529",  // 第三方平台订单号
                     "pay_amount": 17,  // 支付金额
                     "reach_minus": 0,  // 满减金额
-                    "received_at": 0,  // 收货时间
                     "distributed": false,  // 分销订单
                     "remark": null,  // 卖家备注
                     "rid": "D18070316803529",  // 订单编号
@@ -314,7 +318,11 @@ JSON数据格式:
                     "status": 5,  // 订单状态
                     "store_name": "第一家(None)",  // 店铺名称
                     "total_amount": 3,  // 商品金额
-                    "total_quantity": 3  // 商品总数量
+                    "total_quantity": 3,  // 商品总数量
+                    "blessing_utterance": "嘿嘿嘿",  // 买家寄语
+                    "buyer_remark": "哈哈哈",  // 买家备注
+                    "payed_at": 12321312,  // 付款时间
+                    "received_at": 12321312,  // 签收时间
                     "items": [
                         {
                             "commission_price": 0,  // 佣金
@@ -503,9 +511,9 @@ JSON数据格式:
         "success": true
     }
 
-签收订单状态
+用户确认收货状态
 ================
-更新订单签收状态
+用户更新确认收货状态
 
 接口说明
 ~~~~~~~~~~~~~~
@@ -533,17 +541,62 @@ JSON数据格式:
     {
         "data": {
             "order": {
-                "buyer_name": "小帅",
-                "buyer_phone": "18610320751",
-                "buyer_province": "北京市",
-                "buyer_remark": "",
-                ...
-                "rid": "D18030120453196",
-                "status": -1,
-                "store_name": "D3IN微商城(小程序)",
-                "total_amount": 149,
-                "total_quantity": 1
-            }
+                "buyer_address": "青年路",  // 买家地址
+                "buyer_city": "淄博",  //买家市
+                "buyer_country": "中国",  // 买家国家
+                "buyer_name": "ZT-2",
+                "buyer_phone": "13260180689",  // 买家电话
+                "buyer_province": "山东",  // 买家省
+                "buyer_remark": null,  // 买家备注
+                "buyer_tel": "13260180689",  // 买家手机
+                "buyer_zipcode": "255300",  // 买家邮编
+                "coupon_amount": 0,  // 优惠券金额
+                "created_at": 1530608616,  // 创建时间
+                "customer_order_id": null,  // 分销商订单编号
+                "discount_amount": 0,  // 店铺优惠金额 = 首单优惠 + 满减 + 优惠券
+                "first_discount": 0,  // 首单优惠
+                "freight": 14,  // 运费
+                "official_order_id": null,  // 官方平台订单号
+                "outside_target_id": "D18070316803529",  // 第三方平台订单号
+                "pay_amount": 17,  // 支付金额
+                "reach_minus": 0,  // 满减金额
+                "distributed": false,  // 分销订单
+                "remark": null,  // 卖家备注
+                "rid": "D18070316803529",  // 订单编号
+                "ship_mode": 1,  // 运送方式
+                "status": 20,  // 订单状态
+                "store_name": "第一家(None)",  // 店铺名称
+                "total_amount": 3,  // 商品金额
+                "total_quantity": 3,  // 商品总数量
+                "blessing_utterance": "嘿嘿嘿",  // 买家寄语
+                "buyer_remark": "哈哈哈",  // 买家备注
+                "payed_at": 12321312,  // 付款时间
+                "received_at": 12321312,  // 签收时间
+                "items": [
+                    {
+                        "commission_price": 0,  // 佣金
+                        "commission_rate": 0,  // 佣金比
+                        "cover": "http://0.0.0.0:9000/_uploads/photos/1",
+                        "deal_price": 1,  // 交易价格
+                        "express": 4,  // 快递公司ID
+                        "express_at": 0,  // 发货时间
+                        "express_no": null,  // 运单号
+                        "id_code": "1",
+                        "mode": "1 1",
+                        "price": 1,
+                        "product_name": "摩托",  // 商品名
+                        "quantity": 3,  // 数量
+                        "rid": "1",  // sku
+                        "s_color": "1",
+                        "s_model": "1",
+                        "s_weight": 1,
+                        "sale_price": 1,
+                        "stock_count": 11020
+                    }
+                ],
+
+            },
+            "rid": "D18061015836402"
         },
         "status": {
             "code": 200,
@@ -570,6 +623,7 @@ JSON数据格式:
 名称                    类型        是否必须     默认值       描述说明
 =====================  ==========  =========  ==========  =============================
 rid                    String      必需                    订单号
+from_client            Integer     必需             1      1、商家取消订单 2、消费者取消订单
 =====================  ==========  =========  ==========  =============================
 
 返回示例
@@ -580,20 +634,6 @@ JSON数据格式:
 .. code-block:: javascript
 
     {
-        "data": {
-            "order": {
-                "buyer_name": "小帅",
-                "buyer_phone": "18610320751",
-                "buyer_province": "北京市",
-                "buyer_remark": "",
-                ...
-                "rid": "D18030120453196",
-                "status": -1,
-                "store_name": "D3IN微商城(小程序)",
-                "total_amount": 149,
-                "total_quantity": 1
-            }
-        },
         "status": {
             "code": 200,
             "message": "Ok all right."
@@ -651,7 +691,6 @@ JSON数据格式:
                     "outside_target_id": "D18070316803529",  // 第三方平台订单号
                     "pay_amount": 17,  // 支付金额
                     "reach_minus": 0,  // 满减金额
-                    "received_at": 0,  // 收货时间
                     "distributed": false,  // 分销订单
                     "remark": null,  // 卖家备注
                     "rid": "D18070316803529",  // 订单编号
@@ -659,7 +698,11 @@ JSON数据格式:
                     "status": 10,  // 订单状态
                     "store_name": "第一家(None)",  // 店铺名称
                     "total_amount": 3,  // 商品金额
-                    "total_quantity": 3  // 商品总数量
+                    "total_quantity": 3,  // 商品总数量
+                    "blessing_utterance": "嘿嘿嘿",  // 买家寄语
+                    "buyer_remark": "哈哈哈",  // 买家备注
+                    "payed_at": 12321312,  // 付款时间
+                    "received_at": 12321312,  // 签收时间
                     "items": [
                         {
                             "commission_price": 0,  // 佣金
@@ -743,7 +786,6 @@ JSON数据格式:
                     "outside_target_id": "D18070316803529",  // 第三方平台订单号
                     "pay_amount": 17,  // 支付金额
                     "reach_minus": 0,  // 满减金额
-                    "received_at": 0,  // 收货时间
                     "distributed": false,  // 分销订单
                     "remark": null,  // 卖家备注
                     "rid": "D18070316803529",  // 订单编号
@@ -751,7 +793,11 @@ JSON数据格式:
                     "status": 12,  // 订单状态
                     "store_name": "第一家(None)",  // 店铺名称
                     "total_amount": 3,  // 商品金额
-                    "total_quantity": 3  // 商品总数量
+                    "total_quantity": 3,  // 商品总数量
+                    "blessing_utterance": "嘿嘿嘿",  // 买家寄语
+                    "buyer_remark": "哈哈哈",  // 买家备注
+                    "payed_at": 12321312,  // 付款时间
+                    "received_at": 12321312,  // 签收时间
                     "items": [
                         {
                             "commission_price": 0,  // 佣金
@@ -835,7 +881,6 @@ JSON数据格式:
                     "outside_target_id": "D18070316803529",  // 第三方平台订单号
                     "pay_amount": 17,  // 支付金额
                     "reach_minus": 0,  // 满减金额
-                    "received_at": 0,  // 收货时间
                     "distributed": false,  // 分销订单
                     "remark": null,  // 卖家备注
                     "rid": "D18070316803529",  // 订单编号
@@ -843,7 +888,11 @@ JSON数据格式:
                     "status": 13,  // 订单状态
                     "store_name": "第一家(None)",  // 店铺名称
                     "total_amount": 3,  // 商品金额
-                    "total_quantity": 3  // 商品总数量
+                    "total_quantity": 3,  // 商品总数量
+                    "blessing_utterance": "嘿嘿嘿",  // 买家寄语
+                    "buyer_remark": "哈哈哈",  // 买家备注
+                    "payed_at": 12321312,  // 付款时间
+                    "received_at": 12321312,  // 签收时间
                     "items": [
                         {
                             "commission_price": 0,  // 佣金
@@ -927,7 +976,6 @@ JSON数据格式:
                     "outside_target_id": "D18070316803529",  // 第三方平台订单号
                     "pay_amount": 17,  // 支付金额
                     "reach_minus": 0,  // 满减金额
-                    "received_at": 0,  // 收货时间
                     "distributed": false,  // 分销订单
                     "remark": null,  // 卖家备注
                     "rid": "D18070316803529",  // 订单编号
@@ -935,7 +983,11 @@ JSON数据格式:
                     "status": 16,  // 订单状态
                     "store_name": "第一家(None)",  // 店铺名称
                     "total_amount": 3,  // 商品金额
-                    "total_quantity": 3  // 商品总数量
+                    "total_quantity": 3,  // 商品总数量
+                    "blessing_utterance": "嘿嘿嘿",  // 买家寄语
+                    "buyer_remark": "哈哈哈",  // 买家备注
+                    "payed_at": 12321312,  // 付款时间
+                    "received_at": 12321312,  // 签收时间
                     "items": [
                         {
                             "commission_price": 0,  // 佣金
@@ -1019,7 +1071,6 @@ JSON数据格式:
                     "outside_target_id": "D18070316803529",  // 第三方平台订单号
                     "pay_amount": 17,  // 支付金额
                     "reach_minus": 0,  // 满减金额
-                    "received_at": 0,  // 收货时间
                     "distributed": false,  // 分销订单
                     "remark": null,  // 卖家备注
                     "rid": "D18070316803529",  // 订单编号
@@ -1027,7 +1078,11 @@ JSON数据格式:
                     "status": 40,  // 订单状态
                     "store_name": "第一家(None)",  // 店铺名称
                     "total_amount": 3,  // 商品金额
-                    "total_quantity": 3  // 商品总数量
+                    "total_quantity": 3,  // 商品总数量
+                    "blessing_utterance": "嘿嘿嘿",  // 买家寄语
+                    "buyer_remark": "哈哈哈",  // 买家备注
+                    "payed_at": 12321312,  // 付款时间
+                    "received_at": 12321312,  // 签收时间
                     "items": [
                         {
                             "commission_price": 0,  // 佣金
@@ -1119,7 +1174,11 @@ JSON数据格式:
                     "status": 45,  // 订单状态
                     "store_name": "第一家(None)",  // 店铺名称
                     "total_amount": 3,  // 商品金额
-                    "total_quantity": 3  // 商品总数量
+                    "total_quantity": 3,  // 商品总数量
+                    "blessing_utterance": "嘿嘿嘿",  // 买家寄语
+                    "buyer_remark": "哈哈哈",  // 买家备注
+                    "payed_at": 12321312,  // 付款时间
+                    "received_at": 12321312,  // 签收时间
                     "items": [
                         {
                             "commission_price": 0,  // 佣金
@@ -1203,7 +1262,6 @@ JSON数据格式:
                 "outside_target_id": "D18070316803529",  // 第三方平台订单号
                 "pay_amount": 17,  // 支付金额
                 "reach_minus": 0,  // 满减金额
-                "received_at": 0,  // 收货时间
                 "distributed": false,  // 分销订单
                 "remark": null,  // 卖家备注
                 "rid": "D18070316803529",  // 订单编号
@@ -1211,7 +1269,11 @@ JSON数据格式:
                 "status": 30,  // 订单状态
                 "store_name": "第一家(None)",  // 店铺名称
                 "total_amount": 3,  // 商品金额
-                "total_quantity": 3  // 商品总数量
+                "total_quantity": 3,  // 商品总数量
+                "blessing_utterance": "嘿嘿嘿",  // 买家寄语
+                "buyer_remark": "哈哈哈",  // 买家备注
+                "payed_at": 12321312,  // 付款时间
+                "received_at": 12321312,  // 签收时间
                 "items": [
                     {
                         "commission_price": 0,  // 佣金

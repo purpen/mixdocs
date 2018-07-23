@@ -27,8 +27,8 @@
     <script type="text/javascript" src="../_static/bootstrap-sphinx.js"></script>
     <link rel="index" title="索引" href="../genindex.html" />
     <link rel="search" title="搜索" href="../search.html" />
-    <link rel="next" title="小程序配置模块" href="wx_app_design.html" />
-    <link rel="prev" title="心愿清单模块" href="wish.html" />
+    <link rel="next" title="分销API模块" href="../distributions/index.html" />
+    <link rel="prev" title="用户商品记录模块" href="user_record.html" />
 <meta charset='utf-8'>
 <meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'>
 <meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1'>
@@ -92,11 +92,13 @@
 <li class="toctree-l2"><a class="reference internal" href="models.html">商品规格模块</a></li>
 <li class="toctree-l2"><a class="reference internal" href="labels.html">标签模块</a></li>
 <li class="toctree-l2"><a class="reference internal" href="return_policies.html">商家退换货规则模块</a></li>
-<li class="toctree-l2"><a class="reference internal" href="store_product_packet.html">商品组模块</a></li>
-<li class="toctree-l2"><a class="reference internal" href="distributions.html">分销模块</a></li>
-<li class="toctree-l2"><a class="reference internal" href="wish.html">心愿清单模块</a></li>
+<li class="toctree-l2"><a class="reference internal" href="user_record.html">用户商品记录模块</a></li>
 <li class="toctree-l2 current"><a class="current reference internal" href="#">附件模块</a></li>
-<li class="toctree-l2"><a class="reference internal" href="wx_app_design.html">小程序配置模块</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../distributions/index.html">分销API模块</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../distributions/distributions.html">分销模块</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../distributions/store_product_packet.html">商品组模块</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="../customers/index.html">分销客户API模块</a><ul>
@@ -111,6 +113,7 @@
 <li class="toctree-l1"><a class="reference internal" href="../shopes/index.html">微商城API模块</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="../shopes/shopes.html">微商城模块</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../shopes/store.html">店铺模块</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../shopes/wxapp.html">小程序模块</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="../market/index.html">营销API模块</a><ul>
@@ -125,11 +128,21 @@
 <li class="toctree-l1"><a class="reference internal" href="../users/index.html">用户API模块</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="../users/users.html">用户模块</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../users/auth.html">用户认证模块</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../users/finance.html">账户模块</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../wx_apps/index.html">小程序API模块</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../wx_apps/wx_app_design.html">小程序配置模块</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="../common.html">公用接口模块</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="../common.html#id2">幻灯图列表</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../common.html#id6">搜索关键词历史</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../common.html#id10">注册发送短信验证码</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../common.html#id15">登陆发送短信验证码</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../common.html#id19">动态登陆发送短信验证码</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../common.html#id23">账户编辑发送短信验证码</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../common.html#id27">发送邮件验证码</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="../setting.html">系统相关配置文档</a><ul>
@@ -160,18 +173,46 @@
       role="menu"
       aria-labelledby="dLabelLocalToc"><ul>
 <li><a class="reference internal" href="#">附件模块</a><ul>
-<li><a class="reference internal" href="#id2">附件列表</a><ul>
-<li><a class="reference internal" href="#id3">接口说明</a></li>
-<li><a class="reference internal" href="#id4">请求参数</a></li>
-<li><a class="reference internal" href="#id5">返回示例</a></li>
+<li><a class="reference internal" href="#token">获取上传附件Token</a><ul>
+<li><a class="reference internal" href="#id2">接口说明</a></li>
+<li><a class="reference internal" href="#id3">返回示例</a></li>
 </ul>
 </li>
-<li><a class="reference internal" href="#token">获取上传附件Token</a><ul>
-<li><a class="reference internal" href="#id6">接口说明</a></li>
+<li><a class="reference internal" href="#id4">附件列表</a><ul>
+<li><a class="reference internal" href="#id5">接口说明</a></li>
+<li><a class="reference internal" href="#id6">请求参数</a></li>
 <li><a class="reference internal" href="#id7">返回示例</a></li>
 </ul>
 </li>
-<li><a class="reference internal" href="#id8">删除附件 &lt;未开通&gt;</a></li>
+<li><a class="reference internal" href="#id8">目录列表</a><ul>
+<li><a class="reference internal" href="#id9">接口说明</a></li>
+<li><a class="reference internal" href="#id10">请求参数</a></li>
+<li><a class="reference internal" href="#id11">返回示例</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#id12">新增目录</a><ul>
+<li><a class="reference internal" href="#id13">接口说明</a></li>
+<li><a class="reference internal" href="#id14">请求参数</a></li>
+<li><a class="reference internal" href="#id15">返回示例</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#id16">修改目录</a><ul>
+<li><a class="reference internal" href="#id17">接口说明</a></li>
+<li><a class="reference internal" href="#id18">请求参数</a></li>
+<li><a class="reference internal" href="#id19">返回示例</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#id20">删除目录</a><ul>
+<li><a class="reference internal" href="#id21">接口说明</a></li>
+<li><a class="reference internal" href="#id22">请求参数</a></li>
+<li><a class="reference internal" href="#id23">返回示例</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#id24">删除附件</a><ul>
+<li><a class="reference internal" href="#id25">请求参数</a></li>
+<li><a class="reference internal" href="#id26">返回示例</a></li>
+</ul>
+</li>
 </ul>
 </li>
 </ul>
@@ -204,18 +245,46 @@
       <div class="col-md-3">
         <div id="sidebar" class="bs-sidenav" role="complementary"><ul>
 <li><a class="reference internal" href="#">附件模块</a><ul>
-<li><a class="reference internal" href="#id2">附件列表</a><ul>
-<li><a class="reference internal" href="#id3">接口说明</a></li>
-<li><a class="reference internal" href="#id4">请求参数</a></li>
-<li><a class="reference internal" href="#id5">返回示例</a></li>
+<li><a class="reference internal" href="#token">获取上传附件Token</a><ul>
+<li><a class="reference internal" href="#id2">接口说明</a></li>
+<li><a class="reference internal" href="#id3">返回示例</a></li>
 </ul>
 </li>
-<li><a class="reference internal" href="#token">获取上传附件Token</a><ul>
-<li><a class="reference internal" href="#id6">接口说明</a></li>
+<li><a class="reference internal" href="#id4">附件列表</a><ul>
+<li><a class="reference internal" href="#id5">接口说明</a></li>
+<li><a class="reference internal" href="#id6">请求参数</a></li>
 <li><a class="reference internal" href="#id7">返回示例</a></li>
 </ul>
 </li>
-<li><a class="reference internal" href="#id8">删除附件 &lt;未开通&gt;</a></li>
+<li><a class="reference internal" href="#id8">目录列表</a><ul>
+<li><a class="reference internal" href="#id9">接口说明</a></li>
+<li><a class="reference internal" href="#id10">请求参数</a></li>
+<li><a class="reference internal" href="#id11">返回示例</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#id12">新增目录</a><ul>
+<li><a class="reference internal" href="#id13">接口说明</a></li>
+<li><a class="reference internal" href="#id14">请求参数</a></li>
+<li><a class="reference internal" href="#id15">返回示例</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#id16">修改目录</a><ul>
+<li><a class="reference internal" href="#id17">接口说明</a></li>
+<li><a class="reference internal" href="#id18">请求参数</a></li>
+<li><a class="reference internal" href="#id19">返回示例</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#id20">删除目录</a><ul>
+<li><a class="reference internal" href="#id21">接口说明</a></li>
+<li><a class="reference internal" href="#id22">请求参数</a></li>
+<li><a class="reference internal" href="#id23">返回示例</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#id24">删除附件</a><ul>
+<li><a class="reference internal" href="#id25">请求参数</a></li>
+<li><a class="reference internal" href="#id26">返回示例</a></li>
+</ul>
+</li>
 </ul>
 </li>
 </ul>
@@ -223,11 +292,11 @@
 
 <ul class="nav nav-list">
   <li>
-    <a href="wish.html" title="Previous Chapter: 心愿清单模块"><span class="glyphicon glyphicon-chevron-left visible-sm"></span><span class="hidden-sm hidden-tablet">&raquo; 心愿清单模块</span>
+    <a href="user_record.html" title="Previous Chapter: 用户商品记录模块"><span class="glyphicon glyphicon-chevron-left visible-sm"></span><span class="hidden-sm hidden-tablet">&raquo; 用户商品记录模块</span>
     </a>
   </li>
   <li>
-    <a href="wx_app_design.html" title="Next Chapter: 小程序配置模块"><span class="glyphicon glyphicon-chevron-right visible-sm"></span><span class="hidden-sm hidden-tablet">&raquo; 小程序配置模块</span>
+    <a href="../distributions/index.html" title="Next Chapter: 分销API模块"><span class="glyphicon glyphicon-chevron-right visible-sm"></span><span class="hidden-sm hidden-tablet">&raquo; 分销API模块</span>
     </a>
   </li>
 </ul>
@@ -248,18 +317,48 @@
       
   <div class="section" id="id1">
 <h1>附件模块<a class="headerlink" href="#id1" title="永久链接至标题">¶</a></h1>
+<div class="section" id="token">
+<h2>获取上传附件Token<a class="headerlink" href="#token" title="永久链接至标题">¶</a></h2>
+<p>获取上传附件（包括图片）Token</p>
+<p>上传流程机制，参考文档：<a class="reference external" href="https://developer.qiniu.com/kodo/manual/1208/upload-token">https://developer.qiniu.com/kodo/manual/1208/upload-token</a></p>
 <div class="section" id="id2">
-<h2>附件列表<a class="headerlink" href="#id2" title="永久链接至标题">¶</a></h2>
-<p>获取附件（包括图片）列表</p>
+<h3>接口说明<a class="headerlink" href="#id2" title="永久链接至标题">¶</a></h3>
+<ul class="simple">
+<li>API接口请求地址：<code class="docutils literal"><span class="pre">/assets/up_token</span></code></li>
+<li>API接口请求方法：<code class="docutils literal"><span class="pre">GET</span></code></li>
+</ul>
+</div>
 <div class="section" id="id3">
-<h3>接口说明<a class="headerlink" href="#id3" title="永久链接至标题">¶</a></h3>
+<h3>返回示例<a class="headerlink" href="#id3" title="永久链接至标题">¶</a></h3>
+<p>JSON数据格式:</p>
+<div class="highlight-javascript"><div class="highlight"><pre><span></span><span class="p">{</span>
+    <span class="s2">&quot;data&quot;</span><span class="o">:</span> <span class="p">{</span>
+        <span class="s2">&quot;user_id&quot;</span><span class="o">:</span> <span class="mi">4</span><span class="p">,</span>
+        <span class="s2">&quot;up_endpoint&quot;</span><span class="o">:</span> <span class="s2">&quot;https://up.qbox.me&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;up_token&quot;</span><span class="o">:</span> <span class="s2">&quot;AWTEpwVNmNcVjsIL-vS1hOabJ0NgIfNDzvTbDb4i:OgsNLotOvWrTLDv7_QOSREvN2Zo=:eyJzY29wZSI6ImZya2luZyIsImRlYWRsaW5lIjoxNTIxNzcxNzI1LCJjYWxsYmFja1VybCI6Imh0dHA6Ly8xMjcuMC4wLjE6OTAwMC9vcGVuL3Fpbml1L25vdGlmeSIsImNhbGxiYWNrQm9keSI6ImZpbGVwYXRoPSQoa2V5KSZmaWxlbmFtZT0kKGZuYW1lKSZmaWxlc2l6ZT0kKGZzaXplKSZtaW1lPSQobWltZVR5cGUpJnVzZXJfaWQ9JCh4OnVzZXJfaWQpJndpZHRoPSQoaW1hZ2VJbmZvLndpZHRoKSZoZWlnaHQ9JChpbWFnZUluZm8uaGVpZ2h0KSZleHQ9JChleHQpJmRpcmVjdG9yeT0kKHg6ZGlyZWN0b3J5KSIsInNhdmVLZXkiOiIkKHllYXIpJChtb24pJChkYXkpLyQoZXRhZykkKGV4dCkiLCJmc2l6ZUxpbWl0IjoyMDk3MTUyMCwicmV0dXJuVXJsIjoiIiwicmV0dXJuQm9keSI6IiJ9&quot;</span>
+    <span class="p">},</span>
+    <span class="s2">&quot;status&quot;</span><span class="o">:</span> <span class="p">{</span>
+        <span class="s2">&quot;code&quot;</span><span class="o">:</span> <span class="mi">200</span><span class="p">,</span>
+        <span class="s2">&quot;message&quot;</span><span class="o">:</span> <span class="s2">&quot;Ok all right.&quot;</span>
+    <span class="p">},</span>
+    <span class="s2">&quot;success&quot;</span><span class="o">:</span> <span class="kc">true</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="id4">
+<h2>附件列表<a class="headerlink" href="#id4" title="永久链接至标题">¶</a></h2>
+<p>获取附件（包括图片）列表</p>
+<div class="section" id="id5">
+<h3>接口说明<a class="headerlink" href="#id5" title="永久链接至标题">¶</a></h3>
 <ul class="simple">
 <li>API接口请求地址：<code class="docutils literal"><span class="pre">/assets</span></code></li>
 <li>API接口请求方法：<code class="docutils literal"><span class="pre">GET</span></code></li>
 </ul>
 </div>
-<div class="section" id="id4">
-<h3>请求参数<a class="headerlink" href="#id4" title="永久链接至标题">¶</a></h3>
+<div class="section" id="id6">
+<h3>请求参数<a class="headerlink" href="#id6" title="永久链接至标题">¶</a></h3>
 <table border="1" class="docutils">
 <colgroup>
 <col width="15%" />
@@ -277,11 +376,11 @@
 </tr>
 </thead>
 <tbody valign="top">
-<tr class="row-even"><td>directory</td>
-<td>String</td>
-<td>必须</td>
-<td>&#160;</td>
-<td>某个目录</td>
+<tr class="row-even"><td>rid</td>
+<td>Number</td>
+<td>可选</td>
+<td>0</td>
+<td>目录编号</td>
 </tr>
 <tr class="row-odd"><td>page</td>
 <td>Number</td>
@@ -298,14 +397,15 @@
 </tbody>
 </table>
 </div>
-<div class="section" id="id5">
-<h3>返回示例<a class="headerlink" href="#id5" title="永久链接至标题">¶</a></h3>
+<div class="section" id="id7">
+<h3>返回示例<a class="headerlink" href="#id7" title="永久链接至标题">¶</a></h3>
 <p>JSON数据格式:</p>
 <p>请求 <strong>正确</strong> 返回结果：</p>
 <div class="highlight-javascript"><div class="highlight"><pre><span></span><span class="p">{</span>
     <span class="s2">&quot;data&quot;</span><span class="o">:</span> <span class="p">{</span>
         <span class="s2">&quot;all_directory&quot;</span><span class="o">:</span> <span class="p">[</span>
             <span class="p">{</span>
+                <span class="s2">&quot;assets_count&quot;</span><span class="o">:</span> <span class="s2">&quot;目录中图片个数&quot;</span><span class="p">,</span>
                 <span class="s2">&quot;is_default&quot;</span><span class="o">:</span> <span class="kc">true</span><span class="p">,</span>
                 <span class="s2">&quot;name&quot;</span><span class="o">:</span> <span class="s2">&quot;默认目录&quot;</span><span class="p">,</span>
                 <span class="s2">&quot;parent_id&quot;</span><span class="o">:</span> <span class="mi">0</span><span class="p">,</span>
@@ -315,6 +415,7 @@
             <span class="p">},</span>
             <span class="p">...</span>
             <span class="p">{</span>
+                <span class="s2">&quot;assets_count&quot;</span><span class="o">:</span> <span class="mi">3</span><span class="p">,</span>
                 <span class="s2">&quot;is_default&quot;</span><span class="o">:</span> <span class="kc">false</span><span class="p">,</span>
                 <span class="s2">&quot;name&quot;</span><span class="o">:</span> <span class="s2">&quot;产品&quot;</span><span class="p">,</span>
                 <span class="s2">&quot;parent_id&quot;</span><span class="o">:</span> <span class="mi">0</span><span class="p">,</span>
@@ -341,9 +442,9 @@
             <span class="p">}</span>
         <span class="p">],</span>
         <span class="s2">&quot;count&quot;</span><span class="o">:</span> <span class="mi">4</span><span class="p">,</span>
-        <span class="s2">&quot;next&quot;</span><span class="o">:</span> <span class="kc">null</span><span class="p">,</span>
+        <span class="s2">&quot;next&quot;</span><span class="o">:</span> <span class="kc">false</span><span class="p">,</span>
         <span class="s2">&quot;parent_directory&quot;</span><span class="o">:</span> <span class="s2">&quot;&quot;</span><span class="p">,</span>
-        <span class="s2">&quot;prev&quot;</span><span class="o">:</span> <span class="kc">null</span>
+        <span class="s2">&quot;prev&quot;</span><span class="o">:</span> <span class="kc">false</span>
     <span class="p">},</span>
     <span class="s2">&quot;status&quot;</span><span class="o">:</span> <span class="p">{</span>
         <span class="s2">&quot;code&quot;</span><span class="o">:</span> <span class="mi">200</span><span class="p">,</span>
@@ -365,25 +466,102 @@
 </div>
 </div>
 </div>
-<div class="section" id="token">
-<h2>获取上传附件Token<a class="headerlink" href="#token" title="永久链接至标题">¶</a></h2>
-<p>获取上传附件（包括图片）Token</p>
-<p>上传流程机制，参考文档：<a class="reference external" href="https://developer.qiniu.com/kodo/manual/1208/upload-token">https://developer.qiniu.com/kodo/manual/1208/upload-token</a></p>
-<div class="section" id="id6">
-<h3>接口说明<a class="headerlink" href="#id6" title="永久链接至标题">¶</a></h3>
+<div class="section" id="id8">
+<h2>目录列表<a class="headerlink" href="#id8" title="永久链接至标题">¶</a></h2>
+<div class="section" id="id9">
+<h3>接口说明<a class="headerlink" href="#id9" title="永久链接至标题">¶</a></h3>
 <ul class="simple">
-<li>API接口请求地址：<code class="docutils literal"><span class="pre">/assets/up_token</span></code></li>
+<li>API接口请求地址：<code class="docutils literal"><span class="pre">/directories</span></code></li>
 <li>API接口请求方法：<code class="docutils literal"><span class="pre">GET</span></code></li>
 </ul>
 </div>
-<div class="section" id="id7">
-<h3>返回示例<a class="headerlink" href="#id7" title="永久链接至标题">¶</a></h3>
+<div class="section" id="id10">
+<h3>请求参数<a class="headerlink" href="#id10" title="永久链接至标题">¶</a></h3>
+<table border="1" class="docutils">
+<colgroup>
+<col width="15%" />
+<col width="11%" />
+<col width="13%" />
+<col width="11%" />
+<col width="50%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">名称</th>
+<th class="head">类型</th>
+<th class="head">是否必须</th>
+<th class="head">默认值</th>
+<th class="head">描述说明</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>parent_id</td>
+<td>Number</td>
+<td>可选</td>
+<td>0</td>
+<td>父级目录编号</td>
+</tr>
+<tr class="row-odd"><td>page</td>
+<td>Number</td>
+<td>可选</td>
+<td>1</td>
+<td>当前页码</td>
+</tr>
+<tr class="row-even"><td>per_page</td>
+<td>Number</td>
+<td>可选</td>
+<td>10</td>
+<td>每页数量</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="id11">
+<h3>返回示例<a class="headerlink" href="#id11" title="永久链接至标题">¶</a></h3>
 <p>JSON数据格式:</p>
+<p>请求 <strong>正确</strong> 返回结果：</p>
 <div class="highlight-javascript"><div class="highlight"><pre><span></span><span class="p">{</span>
     <span class="s2">&quot;data&quot;</span><span class="o">:</span> <span class="p">{</span>
-        <span class="s2">&quot;user_id&quot;</span><span class="o">:</span> <span class="mi">4</span><span class="p">,</span>
-        <span class="s2">&quot;up_endpoint&quot;</span><span class="o">:</span> <span class="s2">&quot;https://up.qbox.me&quot;</span><span class="p">,</span>
-        <span class="s2">&quot;up_token&quot;</span><span class="o">:</span> <span class="s2">&quot;AWTEpwVNmNcVjsIL-vS1hOabJ0NgIfNDzvTbDb4i:OgsNLotOvWrTLDv7_QOSREvN2Zo=:eyJzY29wZSI6ImZya2luZyIsImRlYWRsaW5lIjoxNTIxNzcxNzI1LCJjYWxsYmFja1VybCI6Imh0dHA6Ly8xMjcuMC4wLjE6OTAwMC9vcGVuL3Fpbml1L25vdGlmeSIsImNhbGxiYWNrQm9keSI6ImZpbGVwYXRoPSQoa2V5KSZmaWxlbmFtZT0kKGZuYW1lKSZmaWxlc2l6ZT0kKGZzaXplKSZtaW1lPSQobWltZVR5cGUpJnVzZXJfaWQ9JCh4OnVzZXJfaWQpJndpZHRoPSQoaW1hZ2VJbmZvLndpZHRoKSZoZWlnaHQ9JChpbWFnZUluZm8uaGVpZ2h0KSZleHQ9JChleHQpJmRpcmVjdG9yeT0kKHg6ZGlyZWN0b3J5KSIsInNhdmVLZXkiOiIkKHllYXIpJChtb24pJChkYXkpLyQoZXRhZykkKGV4dCkiLCJmc2l6ZUxpbWl0IjoyMDk3MTUyMCwicmV0dXJuVXJsIjoiIiwicmV0dXJuQm9keSI6IiJ9&quot;</span>
+        <span class="s2">&quot;count&quot;</span><span class="o">:</span> <span class="mi">4</span><span class="p">,</span>
+        <span class="s2">&quot;directories&quot;</span><span class="o">:</span> <span class="p">[</span>
+            <span class="p">{</span>
+                <span class="s2">&quot;assets_count&quot;</span><span class="o">:</span> <span class="mi">10</span><span class="p">,</span>
+                <span class="s2">&quot;is_default&quot;</span><span class="o">:</span> <span class="kc">false</span><span class="p">,</span>
+                <span class="s2">&quot;name&quot;</span><span class="o">:</span> <span class="s2">&quot;目录名1&quot;</span><span class="p">,</span>
+                <span class="s2">&quot;parent_id&quot;</span><span class="o">:</span> <span class="mi">0</span><span class="p">,</span>
+                <span class="s2">&quot;rid&quot;</span><span class="o">:</span> <span class="mi">2</span><span class="p">,</span>
+                <span class="s2">&quot;top&quot;</span><span class="o">:</span> <span class="mi">1</span><span class="p">,</span>
+                <span class="s2">&quot;type&quot;</span><span class="o">:</span> <span class="mi">1</span>
+            <span class="p">},</span>
+            <span class="p">{</span>
+                <span class="s2">&quot;assets_count&quot;</span><span class="o">:</span> <span class="mi">7</span><span class="p">,</span>
+                <span class="s2">&quot;is_default&quot;</span><span class="o">:</span> <span class="kc">false</span><span class="p">,</span>
+                <span class="s2">&quot;name&quot;</span><span class="o">:</span> <span class="s2">&quot;目录名2&quot;</span><span class="p">,</span>
+                <span class="s2">&quot;parent_id&quot;</span><span class="o">:</span> <span class="mi">0</span><span class="p">,</span>
+                <span class="s2">&quot;rid&quot;</span><span class="o">:</span> <span class="mi">4</span><span class="p">,</span>
+                <span class="s2">&quot;top&quot;</span><span class="o">:</span> <span class="mi">1</span><span class="p">,</span>
+                <span class="s2">&quot;type&quot;</span><span class="o">:</span> <span class="mi">1</span>
+            <span class="p">},</span>
+            <span class="p">{</span>
+                <span class="s2">&quot;assets_count&quot;</span><span class="o">:</span> <span class="mi">6</span><span class="p">,</span>
+                <span class="s2">&quot;is_default&quot;</span><span class="o">:</span> <span class="kc">false</span><span class="p">,</span>
+                <span class="s2">&quot;name&quot;</span><span class="o">:</span> <span class="s2">&quot;目录名3&quot;</span><span class="p">,</span>
+                <span class="s2">&quot;parent_id&quot;</span><span class="o">:</span> <span class="mi">0</span><span class="p">,</span>
+                <span class="s2">&quot;rid&quot;</span><span class="o">:</span> <span class="mi">5</span><span class="p">,</span>
+                <span class="s2">&quot;top&quot;</span><span class="o">:</span> <span class="mi">1</span><span class="p">,</span>
+                <span class="s2">&quot;type&quot;</span><span class="o">:</span> <span class="mi">1</span>
+            <span class="p">},</span>
+            <span class="p">{</span>
+                <span class="s2">&quot;assets_count&quot;</span><span class="o">:</span> <span class="mi">5</span><span class="p">,</span>
+                <span class="s2">&quot;is_default&quot;</span><span class="o">:</span> <span class="kc">false</span><span class="p">,</span>
+                <span class="s2">&quot;name&quot;</span><span class="o">:</span> <span class="s2">&quot;目录名4&quot;</span><span class="p">,</span>
+                <span class="s2">&quot;parent_id&quot;</span><span class="o">:</span> <span class="mi">0</span><span class="p">,</span>
+                <span class="s2">&quot;rid&quot;</span><span class="o">:</span> <span class="mi">11</span><span class="p">,</span>
+                <span class="s2">&quot;top&quot;</span><span class="o">:</span> <span class="mi">1</span><span class="p">,</span>
+                <span class="s2">&quot;type&quot;</span><span class="o">:</span> <span class="mi">1</span>
+            <span class="p">}</span>
+        <span class="p">],</span>
+        <span class="s2">&quot;next&quot;</span><span class="o">:</span> <span class="kc">false</span><span class="p">,</span>
+        <span class="s2">&quot;prev&quot;</span><span class="o">:</span> <span class="kc">false</span>
     <span class="p">},</span>
     <span class="s2">&quot;status&quot;</span><span class="o">:</span> <span class="p">{</span>
         <span class="s2">&quot;code&quot;</span><span class="o">:</span> <span class="mi">200</span><span class="p">,</span>
@@ -395,9 +573,255 @@
 </div>
 </div>
 </div>
-<div class="section" id="id8">
-<h2>删除附件 &lt;未开通&gt;<a class="headerlink" href="#id8" title="永久链接至标题">¶</a></h2>
+<div class="section" id="id12">
+<h2>新增目录<a class="headerlink" href="#id12" title="永久链接至标题">¶</a></h2>
+<div class="section" id="id13">
+<h3>接口说明<a class="headerlink" href="#id13" title="永久链接至标题">¶</a></h3>
+<ul class="simple">
+<li>API接口请求地址：<code class="docutils literal"><span class="pre">/directories</span></code></li>
+<li>API接口请求方法：<code class="docutils literal"><span class="pre">POST</span></code></li>
+</ul>
+</div>
+<div class="section" id="id14">
+<h3>请求参数<a class="headerlink" href="#id14" title="永久链接至标题">¶</a></h3>
+<table border="1" class="docutils">
+<colgroup>
+<col width="18%" />
+<col width="11%" />
+<col width="12%" />
+<col width="11%" />
+<col width="49%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">名称</th>
+<th class="head">类型</th>
+<th class="head">是否必须</th>
+<th class="head">默认值</th>
+<th class="head">描述说明</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>name</td>
+<td>String</td>
+<td>必填</td>
+<td>&#160;</td>
+<td>材料名称</td>
+</tr>
+<tr class="row-odd"><td>parent_id</td>
+<td>Number</td>
+<td>可选</td>
+<td>0</td>
+<td>上级目录编号</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="id15">
+<h3>返回示例<a class="headerlink" href="#id15" title="永久链接至标题">¶</a></h3>
+<p>JSON数据格式:</p>
+<div class="highlight-javascript"><div class="highlight"><pre><span></span><span class="p">{</span>
+    <span class="s2">&quot;data&quot;</span><span class="o">:</span> <span class="p">{</span>
+        <span class="s2">&quot;assets_count&quot;</span><span class="o">:</span> <span class="mi">0</span><span class="p">,</span>
+        <span class="s2">&quot;is_default&quot;</span><span class="o">:</span> <span class="kc">false</span><span class="p">,</span>
+        <span class="s2">&quot;name&quot;</span><span class="o">:</span> <span class="s2">&quot;目录名&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;parent_id&quot;</span><span class="o">:</span> <span class="mi">0</span><span class="p">,</span>
+        <span class="s2">&quot;rid&quot;</span><span class="o">:</span> <span class="mi">12</span><span class="p">,</span>
+        <span class="s2">&quot;top&quot;</span><span class="o">:</span> <span class="mi">1</span><span class="p">,</span>
+        <span class="s2">&quot;type&quot;</span><span class="o">:</span> <span class="mi">1</span>
+    <span class="p">},</span>
+    <span class="s2">&quot;status&quot;</span><span class="o">:</span> <span class="p">{</span>
+        <span class="s2">&quot;code&quot;</span><span class="o">:</span> <span class="mi">201</span><span class="p">,</span>
+        <span class="s2">&quot;message&quot;</span><span class="o">:</span> <span class="s2">&quot;All created.&quot;</span>
+    <span class="p">},</span>
+    <span class="s2">&quot;success&quot;</span><span class="o">:</span> <span class="kc">true</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="id16">
+<h2>修改目录<a class="headerlink" href="#id16" title="永久链接至标题">¶</a></h2>
+<div class="section" id="id17">
+<h3>接口说明<a class="headerlink" href="#id17" title="永久链接至标题">¶</a></h3>
+<ul class="simple">
+<li>API接口请求地址：<code class="docutils literal"><span class="pre">/directories/&lt;:rid&gt;</span></code></li>
+<li>API接口请求方法：<code class="docutils literal"><span class="pre">PUT</span></code></li>
+</ul>
+</div>
+<div class="section" id="id18">
+<h3>请求参数<a class="headerlink" href="#id18" title="永久链接至标题">¶</a></h3>
+<table border="1" class="docutils">
+<colgroup>
+<col width="18%" />
+<col width="11%" />
+<col width="12%" />
+<col width="11%" />
+<col width="49%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">名称</th>
+<th class="head">类型</th>
+<th class="head">是否必须</th>
+<th class="head">默认值</th>
+<th class="head">描述说明</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>rid</td>
+<td>Number</td>
+<td>必须</td>
+<td>&#160;</td>
+<td>目录编号</td>
+</tr>
+<tr class="row-odd"><td>name</td>
+<td>String</td>
+<td>可选</td>
+<td>&#160;</td>
+<td>材料名称</td>
+</tr>
+<tr class="row-even"><td>parent_id</td>
+<td>Number</td>
+<td>可选</td>
+<td>0</td>
+<td>上级目录编号</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="id19">
+<h3>返回示例<a class="headerlink" href="#id19" title="永久链接至标题">¶</a></h3>
+<p>JSON数据格式:</p>
+<div class="highlight-javascript"><div class="highlight"><pre><span></span><span class="p">{</span>
+    <span class="s2">&quot;data&quot;</span><span class="o">:</span> <span class="p">{</span>
+        <span class="s2">&quot;assets_count&quot;</span><span class="o">:</span> <span class="mi">0</span><span class="p">,</span>
+        <span class="s2">&quot;is_default&quot;</span><span class="o">:</span> <span class="kc">false</span><span class="p">,</span>
+        <span class="s2">&quot;name&quot;</span><span class="o">:</span> <span class="s2">&quot;新目录名&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;parent_id&quot;</span><span class="o">:</span> <span class="mi">12</span><span class="p">,</span>
+        <span class="s2">&quot;rid&quot;</span><span class="o">:</span> <span class="mi">13</span><span class="p">,</span>
+        <span class="s2">&quot;top&quot;</span><span class="o">:</span> <span class="mi">2</span><span class="p">,</span>
+        <span class="s2">&quot;type&quot;</span><span class="o">:</span> <span class="mi">1</span>
+    <span class="p">},</span>
+    <span class="s2">&quot;status&quot;</span><span class="o">:</span> <span class="p">{</span>
+        <span class="s2">&quot;code&quot;</span><span class="o">:</span> <span class="mi">200</span><span class="p">,</span>
+        <span class="s2">&quot;message&quot;</span><span class="o">:</span> <span class="s2">&quot;Ok all right.&quot;</span>
+    <span class="p">},</span>
+    <span class="s2">&quot;success&quot;</span><span class="o">:</span> <span class="kc">true</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="id20">
+<h2>删除目录<a class="headerlink" href="#id20" title="永久链接至标题">¶</a></h2>
+<div class="section" id="id21">
+<h3>接口说明<a class="headerlink" href="#id21" title="永久链接至标题">¶</a></h3>
+<ul class="simple">
+<li>API接口请求地址：<code class="docutils literal"><span class="pre">/directories/&lt;rid&gt;</span></code></li>
+<li>API接口请求方法：<code class="docutils literal"><span class="pre">DELETE</span></code></li>
+</ul>
+</div>
+<div class="section" id="id22">
+<h3>请求参数<a class="headerlink" href="#id22" title="永久链接至标题">¶</a></h3>
+<table border="1" class="docutils">
+<colgroup>
+<col width="18%" />
+<col width="11%" />
+<col width="12%" />
+<col width="11%" />
+<col width="49%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">名称</th>
+<th class="head">类型</th>
+<th class="head">是否必须</th>
+<th class="head">默认值</th>
+<th class="head">描述说明</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>rid</td>
+<td>Number</td>
+<td>必须</td>
+<td>&#160;</td>
+<td>目录编号</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="id23">
+<h3>返回示例<a class="headerlink" href="#id23" title="永久链接至标题">¶</a></h3>
+<p>JSON数据格式:</p>
+<div class="highlight-javascript"><div class="highlight"><pre><span></span><span class="p">{</span>
+    <span class="s2">&quot;status&quot;</span><span class="o">:</span> <span class="p">{</span>
+        <span class="s2">&quot;code&quot;</span><span class="o">:</span> <span class="mi">204</span><span class="p">,</span>
+        <span class="s2">&quot;message&quot;</span><span class="o">:</span> <span class="s2">&quot;All deleted.&quot;</span>
+    <span class="p">},</span>
+    <span class="s2">&quot;success&quot;</span><span class="o">:</span> <span class="kc">true</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="id24">
+<h2>删除附件<a class="headerlink" href="#id24" title="永久链接至标题">¶</a></h2>
 <p>删除某个附件图片</p>
+<ul class="simple">
+<li>API接口请求地址：<code class="docutils literal"><span class="pre">/assets/&lt;rid&gt;</span></code></li>
+<li>API接口请求方法：<code class="docutils literal"><span class="pre">DELETE</span></code></li>
+</ul>
+<div class="section" id="id25">
+<h3>请求参数<a class="headerlink" href="#id25" title="永久链接至标题">¶</a></h3>
+<table border="1" class="docutils">
+<colgroup>
+<col width="17%" />
+<col width="11%" />
+<col width="12%" />
+<col width="11%" />
+<col width="50%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">名称</th>
+<th class="head">类型</th>
+<th class="head">是否必须</th>
+<th class="head">默认值</th>
+<th class="head">描述说明</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>rid</td>
+<td>Number</td>
+<td>必须</td>
+<td>&#160;</td>
+<td>目录编号</td>
+</tr>
+<tr class="row-odd"><td>source_rid</td>
+<td>String</td>
+<td>可选</td>
+<td>&#160;</td>
+<td>附件来源编号</td>
+</tr>
+<tr class="row-even"><td>source_type</td>
+<td>Number</td>
+<td>可选</td>
+<td>0</td>
+<td>附件来源类型: 0=无, 1=商品, 2=商品sku</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="id26">
+<h3>返回示例<a class="headerlink" href="#id26" title="永久链接至标题">¶</a></h3>
+<p>JSON数据格式:</p>
+<div class="highlight-javascript"><div class="highlight"><pre><span></span><span class="p">{</span>
+    <span class="s2">&quot;status&quot;</span><span class="o">:</span> <span class="p">{</span>
+        <span class="s2">&quot;code&quot;</span><span class="o">:</span> <span class="mi">204</span><span class="p">,</span>
+        <span class="s2">&quot;message&quot;</span><span class="o">:</span> <span class="s2">&quot;All deleted.&quot;</span>
+    <span class="p">},</span>
+    <span class="s2">&quot;success&quot;</span><span class="o">:</span> <span class="kc">true</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</div>
 </div>
 </div>
 

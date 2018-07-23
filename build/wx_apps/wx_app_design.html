@@ -92,7 +92,7 @@
 <li class="toctree-l2"><a class="reference internal" href="../products/models.html">商品规格模块</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../products/labels.html">标签模块</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../products/return_policies.html">商家退换货规则模块</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../products/wish.html">心愿清单模块</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../products/user_record.html">用户商品记录模块</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../products/assets.html">附件模块</a></li>
 </ul>
 </li>
@@ -128,6 +128,7 @@
 <li class="toctree-l1"><a class="reference internal" href="../users/index.html">用户API模块</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="../users/users.html">用户模块</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../users/auth.html">用户认证模块</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../users/finance.html">账户模块</a></li>
 </ul>
 </li>
 <li class="toctree-l1 current"><a class="reference internal" href="index.html">小程序API模块</a><ul class="current">
@@ -137,6 +138,11 @@
 <li class="toctree-l1"><a class="reference internal" href="../common.html">公用接口模块</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="../common.html#id2">幻灯图列表</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../common.html#id6">搜索关键词历史</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../common.html#id10">注册发送短信验证码</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../common.html#id15">登陆发送短信验证码</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../common.html#id19">动态登陆发送短信验证码</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../common.html#id23">账户编辑发送短信验证码</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../common.html#id27">发送邮件验证码</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="../setting.html">系统相关配置文档</a><ul>
@@ -724,6 +730,7 @@
         <span class="s2">&quot;collections&quot;</span><span class="o">:</span> <span class="p">[</span>
             <span class="p">{</span>
                 <span class="s2">&quot;cover&quot;</span><span class="o">:</span> <span class="s2">&quot;http://127.0.0.1:9000/_uploads/photos/180529/f7650e4cb4746bf.jpg&quot;</span><span class="p">,</span>
+                <span class="s2">&quot;cover_id&quot;</span><span class="o">:</span> <span class="mi">2</span><span class="p">,</span>
                 <span class="s2">&quot;id&quot;</span><span class="o">:</span> <span class="mi">2</span><span class="p">,</span>
                 <span class="s2">&quot;mask_color&quot;</span><span class="o">:</span> <span class="s2">&quot;#ffffff&quot;</span><span class="p">,</span>
                 <span class="s2">&quot;name&quot;</span><span class="o">:</span> <span class="s2">&quot;主题名称&quot;</span><span class="p">,</span>
@@ -734,6 +741,10 @@
                     <span class="p">{</span>
                         <span class="s2">&quot;商品基本信息...&quot;</span>
                     <span class="p">}</span>
+                <span class="p">],</span>
+                <span class="s2">&quot;rids&quot;</span><span class="o">:</span> <span class="p">[</span>
+                    <span class="s2">&quot;8265498731&quot;</span><span class="p">,</span>
+                    <span class="s2">&quot;8698317405&quot;</span>
                 <span class="p">],</span>
                 <span class="s2">&quot;sort_order&quot;</span><span class="o">:</span> <span class="mi">0</span><span class="p">,</span>
                 <span class="s2">&quot;sub_name&quot;</span><span class="o">:</span> <span class="s2">&quot;主题名称二&quot;</span>
@@ -834,6 +845,10 @@
             <span class="p">{</span>
                 <span class="s2">&quot;商品基本信息...&quot;</span>
             <span class="p">}</span>
+        <span class="p">],</span>
+        <span class="s2">&quot;rids&quot;</span><span class="o">:</span> <span class="p">[</span>
+            <span class="s2">&quot;8265498731&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;8698317405&quot;</span>
         <span class="p">],</span>
         <span class="s2">&quot;sort_order&quot;</span><span class="o">:</span> <span class="mi">0</span><span class="p">,</span>
         <span class="s2">&quot;sub_name&quot;</span><span class="o">:</span> <span class="s2">&quot;主题名称二&quot;</span>

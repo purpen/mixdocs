@@ -9,7 +9,7 @@
 接口说明
 ~~~~~~~~~~~~~~
 
-* API接口请求地址：``/users``
+* API接口请求地址：``/users/profile``
 * API接口请求方法：``GET``
 * API接口用户授权：``token``
 
@@ -21,21 +21,244 @@ JSON数据格式:
 .. code-block:: javascript
 
     {
-      "data": {
-        "email": "test@mixpu.com",
-        "last_seen": 1511335583,
-        "uid": "12497380613",
-        "username": "updatename"
-      },
-      "status": {
-        "code": 200,
-        "message": "Ok all right."
-      },
-      "success": true
+        "data": {
+            "about_me": "我是个好人",
+            "avatar": {
+                "created_at": null,
+                "filename": "a",
+                "filepath": "http://127.0.0.1:9000/_uploads/photos/222222/5d2812257b539aa.jpg",
+                "id": 1,
+                "type": null,
+                "view_url": "http://0.0.0.0:9000/_uploads/photos/http://127.0.0.1:9000/_uploads/photos/222222/5d2812257b539aa.jpg"  // 头像url
+            },
+            "avatar_id": 1,  // 头像ID
+            "city": "北京",
+            "city_id": 1,
+            "country": "中国",
+            "country_id": 1,
+            "created_at": 1531125527,  // 创建时间
+            "date": "1992-12-26",  // 生日
+            "description": null,
+            "email": "13001179400",
+            "gender": 0, // 性别 0默认为女
+            "last_seen": 1531563816,
+            "mail": "asd@163.com",  // 邮箱
+            "master_uid": 2,
+            "mobile": null,
+            "province": "北京",
+            "province_id": 1,
+            "uid": "19138405762",
+            "username": "盖世火锅" // 用户名
+        },
+        "status": {
+            "code": 200,
+            "message": "Ok all right."
+        },
+        "success": true
     }
 
 
+获取用户身份
+----------------------------------
 
+
+接口说明
+~~~~~~~~~~~~~~
+
+
+* API接口请求地址：``/users/identity``
+* API接口请求方法：``GET``
+* API接口用户授权：``token``
+
+返回示例
+~~~~~~~~~~~~~~~~
+
+JSON数据格式
+
+正确结果格式::
+
+    {
+        "data": {
+            "id_card": "456123456789", // 身份证号
+            "name": "张飞",  // 姓名
+            "status": 4,   // 认证状态, 只有为4的时候是已认证
+            "user_identity": 1  // 用户身份; 1、独立设计师；2、艺术家；3、手做人；4、业余设计师(原创设计达人):11、原创商户经营
+        },
+        "status": {
+            "code": 200,
+            "message": "Ok all right."
+        },
+        "success": true
+    }
+
+请求 ``失败`` 返回结果：
+
+.. code-block:: javascript
+
+    {
+      "status": {
+        "code": 404,
+        "message": "Not Found"
+      },
+      "success": false
+    }
+
+获取商家头像
+----------------
+
+
+接口说明
+~~~~~~~~~~~~~~
+
+* API接口请求地址：``/users/avatar``
+* API接口请求方法：``GET``
+* API接口用户授权：``token``
+
+返回示例
+~~~~~~~~~~~~~~~~
+
+JSON数据格式
+
+请求 **正确** 返回结果：
+
+.. code-block:: javascript
+
+    {
+        "data": {
+            "avatar": {
+                "created_at": null,
+                "filename": "d",
+                "filepath": "static/img/default-logo-180x180.png",
+                "id": 1,
+                "type": null,
+                "view_url": "http://0.0.0.0:9000/_uploads/photos/static/img/default-logo-180x180.png" // 头像url
+            }
+        },
+        "status": {
+            "code": 200,
+            "message": "Ok all right."
+        },
+        "success": true
+    }
+
+请求 ``失败`` 返回结果：
+
+.. code-block:: javascript
+
+    {
+      "status": {
+        "code": 404,
+        "message": "Not Found"
+      },
+      "success": false
+    }
+
+获取合同附件
+----------------
+
+
+接口说明
+~~~~~~~~~~~~~~
+
+* API接口请求地址：``/users/contract_attachment``
+* API接口请求方法：``GET``
+* API接口用户授权：``token``
+
+返回示例
+~~~~~~~~~~~~~~~~
+
+JSON数据格式
+
+请求 **正确** 返回结果：
+
+.. code-block:: javascript
+
+    {
+        "data": {
+            "attachment": "http://0.0.0.0:9000/_uploads/photos/static/img/default-logo-180x180.png", // 附件url
+            "begin_at": 0,  // 合同开始时间
+            "contract_sn": "MF201807201906",  // 合同编号
+            "end_at": 0  // 合同结束时间
+        },
+        "status": {
+            "code": 200,
+            "message": "Ok all right."
+        },
+        "success": true
+    }
+
+请求 ``失败`` 返回结果：
+
+.. code-block:: javascript
+
+    {
+      "status": {
+        "code": 404,
+        "message": "Not Found"
+      },
+      "success": false
+    }
+
+
+获取专利附件
+----------------
+
+
+接口说明
+~~~~~~~~~~~~~~
+
+* API接口请求地址：``/users/patent_attachment``
+* API接口请求方法：``GET``
+* API接口用户授权：``token``
+
+返回示例
+~~~~~~~~~~~~~~~~
+
+JSON数据格式
+
+请求 **正确** 返回结果：
+
+.. code-block:: javascript
+
+    {
+        "data": {
+            "patent_file": [
+                {
+                    "created_at": null,
+                    "filename": "d",
+                    "filepath": "static/img/default-logo-180x180.png",
+                    "id": 1,
+                    "type": null,
+                    "view_url": "http://0.0.0.0:9000/_uploads/photos/static/img/default-logo-180x180.png" // 专利附件url
+                },
+                {
+                    "created_at": null,
+                    "filename": "e",
+                    "filepath": "static/img/default2-logo-180x180.png",
+                    "id": 2,
+                    "type": null,
+                    "view_url": "http://0.0.0.0:9000/_uploads/photos/static/img/default2-logo-180x180.png"
+                }
+            ]
+        },
+        "status": {
+            "code": 200,
+            "message": "Ok all right."
+        },
+        "success": true
+    }
+
+请求 ``失败`` 返回结果：
+
+.. code-block:: javascript
+
+    {
+      "status": {
+        "code": 404,
+        "message": "Not Found"
+      },
+      "success": false
+    }
 
 更新用户信息
 -------------
@@ -55,11 +278,11 @@ JSON数据格式:
 ===============  ========  =========  ========  ====================================
 名称              类型      是否必须    默认值     描述说明
 ===============  ========  =========  ========  ====================================
-username         String     必须                 昵称 - 必须保持唯一
-avatar_id        Integer    可选                 用户头像ID
+username         String     可选                 昵称 - 必须保持唯一
+avatar_id        Integer    可选          0      用户头像ID
 about_me         String     可选                 个人介绍
 gender           Integer    可选          0      性别
-country_id       Integer    可选                 国家ID
+area_id          Integer    可选                 区域ID
 province_id      Integer    可选                 省ID
 city_id          Integer    可选                 市ID
 email            String     可选                 邮箱
@@ -74,34 +297,116 @@ JSON数据格式
 正确结果格式::
 
     {
-      "data": {
-        "about_me": "小孩很可爱",
-        "description": null,
-        "email": "test@mixpu.com",
-        "last_seen": 1511335583,
-        "master_uid": 0,
-        "mobile": null,
-        "name": "天小山",
-        "uid": "12497380613",
-        "username": "demo01"
-      },
-      "status": {
-        "code": 200,
-        "message": "Ok all right."
-      },
-      "success": true
+        "data": {
+            "about_me": "我是个好人",  // 关于我
+            "area": "鱼泉乡",  // 区域
+            "area_id": 10000,
+            "avatar": "http://kg.erp.taihuoniao.com/static/img/default-logo-180x180.png", // 头像url
+            "avatar_id": 0,  // 头像ID
+            "city": "北京",
+            "city_id": 1,
+            "country": "",
+            "country_id": null,
+            "created_at": 1531125527,  // 创建时间
+            "date": "1992-12-26",  // 生日
+            "description": null,
+            "email": "13001179400",
+            "gender": 0,  // 性别 0默认为女
+            "last_seen": 1531842343,
+            "mail": "asd@163.com",  // 邮箱
+            "master_uid": 2,
+            "mobile": null,
+            "province": "北京",
+            "province_id": 1,
+            "uid": "19138405762",
+            "username": "超人啊"  // 用户名
+        },
+        "status": {
+            "code": 200,
+            "message": "Ok all right."
+        },
+        "success": true
     }
 
 错误结果格式::
 
     {
-      "status": {
-        "code": 400,
-        "message": "demo already existed!"
-      },
-      "success": false
+        "status": {
+            "code": 400,
+            "message": "盖世火锅 already existed!"
+        },
+        "success": false
     }
 
+编辑用户头像
+-----------------
+
+
+接口说明
+~~~~~~~~~~~~~~
+
+* API接口请求地址：``/users/update_avatar``
+* API接口请求方法：``PUT``
+* API接口用户授权：``token``
+
+===============  ========  =========  ========  ====================================
+名称              类型      是否必须    默认值     描述说明
+===============  ========  =========  ========  ====================================
+avatar_id        Integer    必须                 用户头像ID
+===============  ========  =========  ========  ====================================
+
+返回示例
+~~~~~~~~~~~~~~~~
+
+JSON数据格式
+
+请求 **正确** 返回结果：
+
+.. code-block:: javascript
+
+    {
+        "data": {
+            "about_me": "我是个好人",  // 关于我
+            "area": "鱼泉乡",  // 区域
+            "area_id": 10000,
+            "avatar": "http://kg.erp.taihuoniao.com/static/img/default-logo-180x180.png", // 头像url
+            "avatar_id": 0,  // 头像ID
+            "city": "北京",  //市
+            "city_id": 1,
+            "country": "",
+            "country_id": null,
+            "created_at": 1531125527,  // 创建时间
+            "date": "1992-12-26",  // 生日
+            "description": null,
+            "email": "13001179400",
+            "gender": 0,  // 性别
+            "last_seen": 1531842343,
+            "mail": "asd@163.com",  // 邮箱
+            "master_uid": 2,
+            "mobile": null,
+            "province": "北京", // 省
+            "province_id": 1,
+            "uid": "19138405762",
+            "username": "超人啊"  // 用户名
+        },
+        "status": {
+            "code": 200,
+            "message": "Ok all right."
+        },
+        "success": true
+    }
+
+请求 ``失败`` 返回结果：
+
+.. code-block:: javascript
+
+    {
+        "status": {
+            "code": 400,
+            "message": "用户头像有误"
+        },
+        "success": false
+    }
 
 添加或修改(个人或管理员)基本信息
 ----------------------------------
@@ -467,9 +772,9 @@ JSON数据格式
 
     {
         "data": {
-            "account": null,
-            "area": "顺义区",
-            "areacode": "+86",
+            "area": "",
+            "area_id": 0,
+            "areacode": null,
             "attachments": [
                 {
                     "created_at": null,
@@ -478,95 +783,33 @@ JSON数据格式
                     "id": 1,
                     "type": null,
                     "view_url": "http://0.0.0.0:9000/_uploads/photos/http://127.0.0.1:9000/_uploads/photos/222222/5d2812257b539aa.jpg"
-                },
-                {
-                    "created_at": null,
-                    "filename": "e",
-                    "filepath": "http://127.0.0.1:9000/_uploads/photos/222222/5d2812257b539bb.jpg",
-                    "id": 2,
-                    "type": null,
-                    "view_url": "http://0.0.0.0:9000/_uploads/photos/http://127.0.0.1:9000/_uploads/photos/222222/5d2812257b539bb.jpg"
-                },
-                {
-                    "created_at": null,
-                    "filename": "r",
-                    "filepath": "http://127.0.0.1:9000/_uploads/photos/222222/5d2812257b539oo.jpg",
-                    "id": 3,
-                    "type": null,
-                    "view_url": "http://0.0.0.0:9000/_uploads/photos/http://127.0.0.1:9000/_uploads/photos/222222/5d2812257b539oo.jpg"
-                },
-                {
-                    "created_at": null,
-                    "filename": "h",
-                    "filepath": "http://127.0.0.1:9000/_uploads/photos/222222/5d2812257b539ii.jpg",
-                    "id": 4,
-                    "type": null,
-                    "view_url": "http://0.0.0.0:9000/_uploads/photos/http://127.0.0.1:9000/_uploads/photos/222222/5d2812257b539ii.jpg"
-                },
-                {
-                    "created_at": null,
-                    "filename": "p",
-                    "filepath": "http://127.0.0.1:9000/_uploads/photos/222222/5d2812257b539mm.jpg",
-                    "id": 5,
-                    "type": null,
-                    "view_url": "http://0.0.0.0:9000/_uploads/photos/http://127.0.0.1:9000/_uploads/photos/222222/5d2812257b539mm.jpg"
                 }
             ],
             "avatar": "http://0.0.0.0:9000/_uploads/photos/http://127.0.0.1:9000/_uploads/photos/222222/5d2812257b539aa.jpg",
-            "bank_addr": null,
-            "bank_name": null,
+            "avatar_id": 1,
             "brand_name": "jkss ",
             "city": "北京",
-            "company_name": "京东",
-            "company_qualification": [
-                {
-                    "created_at": null,
-                    "filename": "a",
-                    "filepath": "http://127.0.0.1:9000/_uploads/photos/222222/5d2812257b539aa.jpg",
-                    "id": 1,
-                    "type": null,
-                    "view_url": "http://0.0.0.0:9000/_uploads/photos/http://127.0.0.1:9000/_uploads/photos/222222/5d2812257b539aa.jpg"
-                },
-                {
-                    "created_at": null,
-                    "filename": "e",
-                    "filepath": "http://127.0.0.1:9000/_uploads/photos/222222/5d2812257b539bb.jpg",
-                    "id": 2,
-                    "type": null,
-                    "view_url": "http://0.0.0.0:9000/_uploads/photos/http://127.0.0.1:9000/_uploads/photos/222222/5d2812257b539bb.jpg"
-                }
-            ],
-            "contract_sn": "",
+            "city_id": 1,
+            "company_name": null,
+            "company_qualification": [],
             "country": "中国",
-            "current_date": "",
+            "country_id": 1,
             "customized": true,
-            "email": "1346555456@qq.com",
-            "expiration_date": "",
+            "email": "45668794@qq.com",
+            "error_content": "",
             "front_card_photo": "http://0.0.0.0:9000/_uploads/photos/http://127.0.0.1:9000/_uploads/photos/222222/5d2812257b539aa.jpg",
+            "front_card_photo_id": 1,
             "holding_card_photo": "http://0.0.0.0:9000/_uploads/photos/http://127.0.0.1:9000/_uploads/photos/222222/5d2812257b539oo.jpg",
-            "id": 30,
+            "holding_card_photo_id": 3,
+            "id": 32,
             "id_card": "13082119921226801x",
-            "label_libraries": [
-                [
-                    1,
-                    "十年老件"
-                ],
-                [
-                    2,
-                    "手工制作"
-                ],
-                [
-                    3,
-                    "机械制作"
-                ]
-            ],
+            "label_libraries": [],
             "link": [
                 "https://www.taobao.com",
                 "https://www.jingdong.com",
                 "https://www.tianmao.com"
             ],
-            "master_uid": 2,
-            "mobile": "13001179400",
+            "mobile": "13645647895",
             "name": "毛爷",
             "other_scope": "",
             "own_brand": false,
@@ -579,14 +822,6 @@ JSON数据格式
                     "id": 2,
                     "type": null,
                     "view_url": "http://0.0.0.0:9000/_uploads/photos/http://127.0.0.1:9000/_uploads/photos/222222/5d2812257b539bb.jpg"
-                },
-                {
-                    "created_at": null,
-                    "filename": "r",
-                    "filepath": "http://127.0.0.1:9000/_uploads/photos/222222/5d2812257b539oo.jpg",
-                    "id": 3,
-                    "type": null,
-                    "view_url": "http://0.0.0.0:9000/_uploads/photos/http://127.0.0.1:9000/_uploads/photos/222222/5d2812257b539oo.jpg"
                 }
             ],
             "patent": true,
@@ -598,38 +833,31 @@ JSON数据格式
                     "id": 1,
                     "type": null,
                     "view_url": "http://0.0.0.0:9000/_uploads/photos/http://127.0.0.1:9000/_uploads/photos/222222/5d2812257b539aa.jpg"
-                },
-                {
-                    "created_at": null,
-                    "filename": "e",
-                    "filepath": "http://127.0.0.1:9000/_uploads/photos/222222/5d2812257b539bb.jpg",
-                    "id": 2,
-                    "type": null,
-                    "view_url": "http://0.0.0.0:9000/_uploads/photos/http://127.0.0.1:9000/_uploads/photos/222222/5d2812257b539bb.jpg"
                 }
             ],
-            "phone": "0314-4567891",
+            "phone": "",
             "product_category": "无人机",
             "product_price": "22,99",
-            "product_scope": "原创商品，由本人或团队独立思考设计",
+            "product_scope": 1,
             "province": "北京",
-            "qq": "1345678956",
+            "province_id": 1,
+            "qq": "",
             "reverse_card_photo": "http://0.0.0.0:9000/_uploads/photos/http://127.0.0.1:9000/_uploads/photos/222222/5d2812257b539bb.jpg",
+            "reverse_card_photo_id": 2,
             "sale_platform": [
                 "京东",
                 "淘宝",
                 "天猫"
             ],
             "secured_trade": true,
-            "status": 1,
-            "street_address": "中南海",
-            "urgent_contact_mobile": "15879456532",
-            "urgent_contact_name": "普京",
-            "url": "https://www.jd.com",
-            "user_identity": 1,
+            "status": 4,
+            "street_address": "天安门",
+            "urgent_contact_mobile": null,
+            "urgent_contact_name": null,
+            "url": null,
+            "user_identity": 11,
             "user_type": 3,
-            "username": null,
-            "wechat": "jksjk45"
+            "wechat": null
         },
         "status": {
             "code": 200,
@@ -649,6 +877,44 @@ JSON数据格式
       },
       "success": false
     }
+
+删除用户认证缓存信息
+--------------------
+
+接口说明
+~~~~~~~~~~~~~~
+
+* API接口请求地址：``/users/delete_authenticate_info``
+* API接口请求方法：``DELETE``
+* API接口用户授权：``token``
+
+请求参数
+~~~~~~~~~~~~~~~
+
+===============  ========  =========  ========  ====================================
+名称              类型      是否必须    默认值     描述说明
+===============  ========  =========  ========  ====================================
+authenticate_id   Integer   必须                  用户认证ID
+user_type         Integer   必须                  用户类型
+===============  ========  =========  ========  ====================================
+
+返回示例
+~~~~~~~~~~~~~~~~
+
+JSON数据格式
+
+请求 **正确** 返回结果：
+
+.. code-block:: javascript
+
+    {
+        "status": {
+            "code": 200,
+            "message": "Ok all right."
+        },
+        "success": true
+    }
+
 
 返回审核状态
 -----------------
@@ -955,7 +1221,7 @@ JSON数据格式:
 ===============  ========  =========  ========  ====================================
 username         String      必须                 用户名
 avatar_id        Integer     必须                 用户头像ID
-gender           Integer     可选          0      性别
+gender           Integer     可选          0      性别; 0女1男
 date             String      可选                 出生日期
 ===============  ========  =========  ========  ====================================
 
@@ -970,18 +1236,28 @@ JSON数据格式:
 
     {
         "data": {
-            "about_me": null,
-            "avatar": null,
-            "date": "2008-05-15",  // 生日
+            "about_me": "好人",
+            "area": "鱼泉乡",
+            "area_id": 10000,
+            "avatar": "http://0.0.0.0:9000/_uploads/photos/static/img/default-logo-180x180.png",
+            "avatar_id": 1,
+            "city": "北京",
+            "city_id": 1,
+            "country": "",
+            "country_id": null,
+            "created_at": 1532055457,
+            "date": "2000-02-02",  // 生日
             "description": null,
             "email": "13001179400",
-            "gender": 1,
-            "last_seen": 1530422428,
+            "gender": 0,  // 性别
+            "last_seen": 1532055457,
+            "mail": null,
             "master_uid": 0,
-            "mobile": null,
-            "name": null,
-            "uid": "19562310748",
-            "username": "火烈鸟"
+            "mobile": "13001179400",
+            "province": "北京",
+            "province_id": 1,
+            "uid": "17048395612",
+            "username": "张飞"  // 用户名
         },
         "status": {
             "code": 200,
@@ -1094,140 +1370,119 @@ JSON数据格式:
 
     {
         "data": {
-            "account": null,
-            "area": "",
-            "areacode": "+86",
-            "attachments": [
-                {
-                    "created_at": null,
-                    "filename": "a",
-                    "filepath": "http://127.0.0.1:9000/_uploads/photos/222222/5d2812257b539aa.jpg",
-                    "id": 1,
-                    "type": null,
-                    "view_url": "http://0.0.0.0:9000/_uploads/photos/http://127.0.0.1:9000/_uploads/photos/222222/5d2812257b539aa.jpg"
-                }
-            ],
-            "avatar": "http://0.0.0.0:9000/_uploads/photos/http://127.0.0.1:9000/_uploads/photos/222222/5d2812257b539aa.jpg",
-            "bank_addr": null,
-            "bank_name": null,
-            "brand_name": "jkss ",
-            "city": "北京",
-            "company_name": "京东",
-            "company_qualification": [
-                {
-                    "created_at": null,
-                    "filename": "e",
-                    "filepath": "http://127.0.0.1:9000/_uploads/photos/222222/5d2812257b539bb.jpg",
-                    "id": 2,
-                    "type": null,
-                    "view_url": "http://0.0.0.0:9000/_uploads/photos/http://127.0.0.1:9000/_uploads/photos/222222/5d2812257b539bb.jpg"
-                }
-            ],
-            "contract_sn": "",
-            "country": "中国",
-            "current_date": "",
-            "customized": true,
-            "email": "4568794@qq.com",
-            "expiration_date": "",
-            "front_card_photo": "http://0.0.0.0:9000/_uploads/photos/http://127.0.0.1:9000/_uploads/photos/222222/5d2812257b539aa.jpg",
-            "holding_card_photo": "http://0.0.0.0:9000/_uploads/photos/http://127.0.0.1:9000/_uploads/photos/222222/5d2812257b539oo.jpg",
-            "id": 30,
-            "id_card": "13082119921226801x",
-            "label_libraries": [
-                [
-                    1,
-                    "十年老件"
+            "authenticate": {
+                "area": "",
+                "area_id": 0,
+                "areacode": null,
+                "attachments": [
+                    {
+                        "created_at": null,
+                        "filename": "a",
+                        "filepath": "http://127.0.0.1:9000/_uploads/photos/222222/5d2812257b539aa.jpg",
+                        "id": 1,
+                        "type": null,
+                        "view_url": "http://0.0.0.0:9000/_uploads/photos/http://127.0.0.1:9000/_uploads/photos/222222/5d2812257b539aa.jpg"
+                    }
                 ],
-                [
-                    2,
-                    "手工制作"
+                "avatar": "http://0.0.0.0:9000/_uploads/photos/http://127.0.0  .1:9000/_uploads/photos/222222/5d2812257b539aa.jpg",  // 头像路径
+                "avatar_id": 1,  // 头像id
+                "brand_name": "jkss ",
+                "city": "北京",  // 城市
+                "city_id": 1,  // 城市id
+                "company_name": null,
+                "company_qualification": [],
+                "country": "中国", // 国家
+                "country_id": 1,  // 国家id
+                "customized": true,
+                "email": "45668794@qq.com", // 邮箱
+                "error_content": null,
+                "front_card_photo": "http://0.0.0.0:9000/_uploads/photos/http://127.0.0.1:9000/_uploads/photos/222222/5d2812257b539aa.jpg",
+                "front_card_photo_id": 1,
+                "holding_card_photo": "http://0.0.0.0:9000/_uploads/photos/http://127.0.0.1:9000/_uploads/photos/222222/5d2812257b539oo.jpg",
+                "holding_card_photo_id": 3,
+                "id": 32,
+                "id_card": "13082119921226801x",
+                "label_libraries": [],
+                "link": [
+                    "https://www.taobao.com",
+                    "https://www.jingdong.com",
+                    "https://www.tianmao.com"
                 ],
-                [
-                    3,
-                    "机械制作"
-                ]
-            ],
-            "link": [
-                "https://www.taobao.com",
-                "https://www.jingdong.com",
-                "https://www.tianmao.com"
-            ],
-            "master_uid": 2,
-            "mobile": "13645647894",
-            "name": "毛爷",
-            "other_scope": "",
-            "own_brand": false,
-            "packaging": true,
-            "packaging_file": [
-                {
-                    "created_at": null,
-                    "filename": "e",
-                    "filepath": "http://127.0.0.1:9000/_uploads/photos/222222/5d2812257b539bb.jpg",
-                    "id": 2,
-                    "type": null,
-                    "view_url": "http://0.0.0.0:9000/_uploads/photos/http://127.0.0.1:9000/_uploads/photos/222222/5d2812257b539bb.jpg"
-                },
-                {
-                    "created_at": null,
-                    "filename": "r",
-                    "filepath": "http://127.0.0.1:9000/_uploads/photos/222222/5d2812257b539oo.jpg",
-                    "id": 3,
-                    "type": null,
-                    "view_url": "http://0.0.0.0:9000/_uploads/photos/http://127.0.0.1:9000/_uploads/photos/222222/5d2812257b539oo.jpg"
-                }
-            ],
-            "patent": true,
-            "patent_file": [
-                {
-                    "created_at": null,
-                    "filename": "e",
-                    "filepath": "http://127.0.0.1:9000/_uploads/photos/222222/5d2812257b539bb.jpg",
-                    "id": 2,
-                    "type": null,
-                    "view_url": "http://0.0.0.0:9000/_uploads/photos/http://127.0.0.1:9000/_uploads/photos/222222/5d2812257b539bb.jpg"
-                }
-            ],
-            "phone": "",
-            "product_category": "无人机",
-            "product_price": "22,99",
-            "product_scope": "原创商品，由本人或团队独立思考设计",
-            "province": "北京",
-            "qq": "1345678956",
-            "reverse_card_photo": "http://0.0.0.0:9000/_uploads/photos/http://127.0.0.1:9000/_uploads/photos/222222/5d2812257b539bb.jpg",
-            "sale_platform": [
-                "京东",
-                "淘宝",
-                "天猫"
-            ],
-            "secured_trade": true,
-            "status": 1,
-            "street_address": "天安门",
-            "urgent_contact_mobile": "15879456532",
-            "urgent_contact_name": "普京",
-            "url": "https://www.jd.com",
-            "user_identity": 1,
-            "user_type": 3,
-            "username": null,
-            "wechat": "jksjk45"
+                "mobile": "13645647895", // 手机号
+                "name": "毛爷",
+                "other_scope": "",
+                "own_brand": false,
+                "packaging": true,
+                "packaging_file": [
+                    {
+                        "created_at": null,
+                        "filename": "e",
+                        "filepath": "http://127.0.0.1:9000/_uploads/photos/222222/5d2812257b539bb.jpg",
+                        "id": 2,
+                        "type": null,
+                        "view_url": "http://0.0.0.0:9000/_uploads/photos/http://127.0.0.1:9000/_uploads/photos/222222/5d2812257b539bb.jpg"
+                    }
+                ],
+                "patent": true,
+                "patent_file": [
+                    {
+                        "created_at": null,
+                        "filename": "a",
+                        "filepath": "http://127.0.0.1:9000/_uploads/photos/222222/5d2812257b539aa.jpg",
+                        "id": 1,
+                        "type": null,
+                        "view_url": "http://0.0.0.0:9000/_uploads/photos/http://127.0.0.1:9000/_uploads/photos/222222/5d2812257b539aa.jpg"
+                    }
+                ],
+                "phone": "",  // 固话
+                "product_category": "无人机",
+                "product_price": "22,99",
+                "product_scope": 1,
+                "province": "北京",
+                "province_id": 1,
+                "qq": "",
+                "reverse_card_photo": "http://0.0.0.0:9000/_uploads/photos/http://127.0.0.1:9000/_uploads/photos/222222/5d2812257b539bb.jpg",
+                "reverse_card_photo_id": 2,
+                "sale_platform": [
+                    "京东",
+                    "淘宝",
+                    "天猫"
+                ],
+                "secured_trade": true,
+                "status": 1,
+                "street_address": "天安门",
+                "urgent_contact_mobile": null,
+                "urgent_contact_name": null,
+                "url": null,
+                "user_identity": 11,
+                "user_type": 3,
+                "wechat": null
+            },
+            "user": {
+                "about_me": "一个好孩子",
+                "avatar": "http://0.0.0.0:9000/_uploads/photos/http://127.0.0.1:9000/_uploads/photos/222222/5d2812257b539bb.jpg",
+                "city": "北京",
+                "country": "中国",
+                "created_at": 1529493576,
+                "date": "1992-12-26",  //生日
+                "description": null,
+                "email": "13001179400",
+                "gender": 0, // 性别
+                "last_seen": 1530855883,
+                "mail": null,
+                "master_uid": 2,
+                "mobile": null,
+                "name": null,
+                "province": "北京",
+                "uid": "19562310748",
+                "username": "雷军"  // 用户名
+            }
         },
         "status": {
             "code": 200,
             "message": "Ok all right."
         },
-        "success": {
-            "about_me": null,
-            "avatar": null,
-            "date": "2008-05-15",
-            "description": null,
-            "email": "13001179400",
-            "gender": 1,
-            "last_seen": 1530422428,
-            "master_uid": 0,
-            "mobile": null,
-            "name": null,
-            "uid": "19562310748",
-            "username": "火烈鸟"
-        }
+        "success": true
     }
 
 请求 ``失败`` 返回结果：
@@ -1313,10 +1568,14 @@ JSON数据格式:
 
     {
         "data": {
-            "need_pay": "99",
-            "product_price": "22,99",
-            "secured_trade": true,
-            "status": ""
+            "already_pay": 500,  // 已支付金额
+            "also_need_pay": 500, // 还需支付金额
+            "need_pay": "1000",  // 总需支付金额
+            "pay_at": null, // 支付时间
+            "pay_way": 1, // 支付方式: 1、微信；2：支付宝；3、银联；
+            "product_price": "100,1000",  // 商品价格区间
+            "secured_trade": true, // 是否成为消保人
+            "status": 1  // 支付状态: 1、部分缴纳；-1：未缴纳；2、全部缴纳；
         },
         "status": {
             "code": 200,

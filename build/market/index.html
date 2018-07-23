@@ -28,7 +28,7 @@
     <link rel="index" title="索引" href="../genindex.html" />
     <link rel="search" title="搜索" href="../search.html" />
     <link rel="next" title="营销工具/广告模块" href="banners.html" />
-    <link rel="prev" title="店铺模块" href="../shopes/store.html" />
+    <link rel="prev" title="小程序模块" href="../shopes/wxapp.html" />
 <meta charset='utf-8'>
 <meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'>
 <meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1'>
@@ -92,11 +92,13 @@
 <li class="toctree-l2"><a class="reference internal" href="../products/models.html">商品规格模块</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../products/labels.html">标签模块</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../products/return_policies.html">商家退换货规则模块</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../products/store_product_packet.html">商品组模块</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../products/distributions.html">分销模块</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../products/wish.html">心愿清单模块</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../products/user_record.html">用户商品记录模块</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../products/assets.html">附件模块</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../products/wx_app_design.html">小程序配置模块</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../distributions/index.html">分销API模块</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../distributions/distributions.html">分销模块</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../distributions/store_product_packet.html">商品组模块</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="../customers/index.html">分销客户API模块</a><ul>
@@ -111,6 +113,7 @@
 <li class="toctree-l1"><a class="reference internal" href="../shopes/index.html">微商城API模块</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="../shopes/shopes.html">微商城模块</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../shopes/store.html">店铺模块</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../shopes/wxapp.html">小程序模块</a></li>
 </ul>
 </li>
 <li class="toctree-l1 current"><a class="current reference internal" href="#">营销API模块</a><ul>
@@ -125,11 +128,21 @@
 <li class="toctree-l1"><a class="reference internal" href="../users/index.html">用户API模块</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="../users/users.html">用户模块</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../users/auth.html">用户认证模块</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../users/finance.html">账户模块</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../wx_apps/index.html">小程序API模块</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../wx_apps/wx_app_design.html">小程序配置模块</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="../common.html">公用接口模块</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="../common.html#id2">幻灯图列表</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../common.html#id6">搜索关键词历史</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../common.html#id10">注册发送短信验证码</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../common.html#id15">登陆发送短信验证码</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../common.html#id19">动态登陆发送短信验证码</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../common.html#id23">账户编辑发送短信验证码</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../common.html#id27">发送邮件验证码</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="../setting.html">系统相关配置文档</a><ul>
@@ -195,7 +208,7 @@
 
 <ul class="nav nav-list">
   <li>
-    <a href="../shopes/store.html" title="Previous Chapter: 店铺模块"><span class="glyphicon glyphicon-chevron-left visible-sm"></span><span class="hidden-sm hidden-tablet">&raquo; 店铺模块</span>
+    <a href="../shopes/wxapp.html" title="Previous Chapter: 小程序模块"><span class="glyphicon glyphicon-chevron-left visible-sm"></span><span class="hidden-sm hidden-tablet">&raquo; 小程序模块</span>
     </a>
   </li>
   <li>
@@ -238,22 +251,26 @@
 <li class="toctree-l2"><a class="reference internal" href="coupons.html#id10">优惠活动详情列表</a></li>
 <li class="toctree-l2"><a class="reference internal" href="coupons.html#id14">正在活动中的优惠券列表</a></li>
 <li class="toctree-l2"><a class="reference internal" href="coupons.html#id17">用户优惠券列表</a></li>
-<li class="toctree-l2"><a class="reference internal" href="coupons.html#id21">符合条件的优惠券列表</a></li>
-<li class="toctree-l2"><a class="reference internal" href="coupons.html#id25">符合条件的满减活动</a></li>
-<li class="toctree-l2"><a class="reference internal" href="coupons.html#id29">优惠券详情</a></li>
-<li class="toctree-l2"><a class="reference internal" href="coupons.html#id32">新增优惠券</a></li>
-<li class="toctree-l2"><a class="reference internal" href="coupons.html#id36">新增满减活动</a></li>
-<li class="toctree-l2"><a class="reference internal" href="coupons.html#id40">修改满减活动</a></li>
-<li class="toctree-l2"><a class="reference internal" href="coupons.html#id44">修改优惠券活动</a></li>
-<li class="toctree-l2"><a class="reference internal" href="coupons.html#id48">撤销优惠券活动</a></li>
-<li class="toctree-l2"><a class="reference internal" href="coupons.html#id52">领取优惠券</a></li>
-<li class="toctree-l2"><a class="reference internal" href="coupons.html#id56">禁用优惠券</a></li>
-<li class="toctree-l2"><a class="reference internal" href="coupons.html#id59">新用户72小时内首单9折</a></li>
-<li class="toctree-l2"><a class="reference internal" href="coupons.html#id63">用户使用优惠券</a></li>
-<li class="toctree-l2"><a class="reference internal" href="coupons.html#id67">用户使用满减活动</a></li>
-<li class="toctree-l2"><a class="reference internal" href="coupons.html#id71">用户领取红包</a></li>
-<li class="toctree-l2"><a class="reference internal" href="coupons.html#id75">用户红包列表</a></li>
-<li class="toctree-l2"><a class="reference internal" href="coupons.html#id79">用户使用红包</a></li>
+<li class="toctree-l2"><a class="reference internal" href="coupons.html#id21">用户获取商家优惠券列表</a></li>
+<li class="toctree-l2"><a class="reference internal" href="coupons.html#id24">用户获取分销商优惠券列表</a></li>
+<li class="toctree-l2"><a class="reference internal" href="coupons.html#id28">用户获取当前订单的符合条件的优惠券信息</a></li>
+<li class="toctree-l2"><a class="reference internal" href="coupons.html#id32">用户获取当前订单的符合条件的满减信息</a></li>
+<li class="toctree-l2"><a class="reference internal" href="coupons.html#id36">符合条件的优惠券列表</a></li>
+<li class="toctree-l2"><a class="reference internal" href="coupons.html#id40">符合条件的满减活动</a></li>
+<li class="toctree-l2"><a class="reference internal" href="coupons.html#id44">优惠券详情</a></li>
+<li class="toctree-l2"><a class="reference internal" href="coupons.html#id47">新增优惠券</a></li>
+<li class="toctree-l2"><a class="reference internal" href="coupons.html#id51">新增满减活动</a></li>
+<li class="toctree-l2"><a class="reference internal" href="coupons.html#id55">修改满减活动</a></li>
+<li class="toctree-l2"><a class="reference internal" href="coupons.html#id59">修改优惠券活动</a></li>
+<li class="toctree-l2"><a class="reference internal" href="coupons.html#id63">撤销优惠券活动</a></li>
+<li class="toctree-l2"><a class="reference internal" href="coupons.html#id67">领取优惠券</a></li>
+<li class="toctree-l2"><a class="reference internal" href="coupons.html#id71">禁用优惠券</a></li>
+<li class="toctree-l2"><a class="reference internal" href="coupons.html#id74">新用户72小时内首单9折</a></li>
+<li class="toctree-l2"><a class="reference internal" href="coupons.html#id78">用户使用优惠券</a></li>
+<li class="toctree-l2"><a class="reference internal" href="coupons.html#id82">用户使用满减活动</a></li>
+<li class="toctree-l2"><a class="reference internal" href="coupons.html#id86">用户领取红包</a></li>
+<li class="toctree-l2"><a class="reference internal" href="coupons.html#id90">用户红包列表</a></li>
+<li class="toctree-l2"><a class="reference internal" href="coupons.html#id94">用户使用红包</a></li>
 </ul>
 </li>
 </ul>

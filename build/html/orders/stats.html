@@ -92,11 +92,13 @@
 <li class="toctree-l2"><a class="reference internal" href="../products/models.html">商品规格模块</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../products/labels.html">标签模块</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../products/return_policies.html">商家退换货规则模块</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../products/store_product_packet.html">商品组模块</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../products/distributions.html">分销模块</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../products/wish.html">心愿清单模块</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../products/user_record.html">用户商品记录模块</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../products/assets.html">附件模块</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../products/wx_app_design.html">小程序配置模块</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../distributions/index.html">分销API模块</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../distributions/distributions.html">分销模块</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../distributions/store_product_packet.html">商品组模块</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="../customers/index.html">分销客户API模块</a><ul>
@@ -126,11 +128,21 @@
 <li class="toctree-l1"><a class="reference internal" href="../users/index.html">用户API模块</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="../users/users.html">用户模块</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../users/auth.html">用户认证模块</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../users/finance.html">账户模块</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../wx_apps/index.html">小程序API模块</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../wx_apps/wx_app_design.html">小程序配置模块</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="../common.html">公用接口模块</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="../common.html#id2">幻灯图列表</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../common.html#id6">搜索关键词历史</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../common.html#id10">注册发送短信验证码</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../common.html#id15">登陆发送短信验证码</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../common.html#id19">动态登陆发送短信验证码</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../common.html#id23">账户编辑发送短信验证码</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../common.html#id27">发送邮件验证码</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="../setting.html">系统相关配置文档</a><ul>
@@ -206,6 +218,41 @@
 <li><a class="reference internal" href="#id30">接口说明</a></li>
 <li><a class="reference internal" href="#id31">请求参数</a></li>
 <li><a class="reference internal" href="#id32">返回示例</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#id33">我的订单、我的分销订单对账单</a><ul>
+<li><a class="reference internal" href="#id34">接口说明</a></li>
+<li><a class="reference internal" href="#id35">请求参数</a></li>
+<li><a class="reference internal" href="#id36">返回示例</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#id37">我的订单、我的分销订单交易记录</a><ul>
+<li><a class="reference internal" href="#id38">接口说明</a></li>
+<li><a class="reference internal" href="#id39">请求参数</a></li>
+<li><a class="reference internal" href="#id40">返回示例</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#id41">账户管理订单汇总</a><ul>
+<li><a class="reference internal" href="#id42">接口说明</a></li>
+<li><a class="reference internal" href="#id43">请求参数</a></li>
+<li><a class="reference internal" href="#id44">返回示例</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#id45">账户管理分销订单汇总</a><ul>
+<li><a class="reference internal" href="#id46">接口说明</a></li>
+<li><a class="reference internal" href="#id47">返回示例</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#id48">我的订单确认结算</a><ul>
+<li><a class="reference internal" href="#id49">接口说明</a></li>
+<li><a class="reference internal" href="#id50">请求参数</a></li>
+<li><a class="reference internal" href="#id51">返回示例</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#id52">我的分销订单确认结算</a><ul>
+<li><a class="reference internal" href="#id53">接口说明</a></li>
+<li><a class="reference internal" href="#id54">请求参数</a></li>
+<li><a class="reference internal" href="#id55">返回示例</a></li>
 </ul>
 </li>
 </ul>
@@ -285,6 +332,41 @@
 <li><a class="reference internal" href="#id30">接口说明</a></li>
 <li><a class="reference internal" href="#id31">请求参数</a></li>
 <li><a class="reference internal" href="#id32">返回示例</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#id33">我的订单、我的分销订单对账单</a><ul>
+<li><a class="reference internal" href="#id34">接口说明</a></li>
+<li><a class="reference internal" href="#id35">请求参数</a></li>
+<li><a class="reference internal" href="#id36">返回示例</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#id37">我的订单、我的分销订单交易记录</a><ul>
+<li><a class="reference internal" href="#id38">接口说明</a></li>
+<li><a class="reference internal" href="#id39">请求参数</a></li>
+<li><a class="reference internal" href="#id40">返回示例</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#id41">账户管理订单汇总</a><ul>
+<li><a class="reference internal" href="#id42">接口说明</a></li>
+<li><a class="reference internal" href="#id43">请求参数</a></li>
+<li><a class="reference internal" href="#id44">返回示例</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#id45">账户管理分销订单汇总</a><ul>
+<li><a class="reference internal" href="#id46">接口说明</a></li>
+<li><a class="reference internal" href="#id47">返回示例</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#id48">我的订单确认结算</a><ul>
+<li><a class="reference internal" href="#id49">接口说明</a></li>
+<li><a class="reference internal" href="#id50">请求参数</a></li>
+<li><a class="reference internal" href="#id51">返回示例</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#id52">我的分销订单确认结算</a><ul>
+<li><a class="reference internal" href="#id53">接口说明</a></li>
+<li><a class="reference internal" href="#id54">请求参数</a></li>
+<li><a class="reference internal" href="#id55">返回示例</a></li>
 </ul>
 </li>
 </ul>
@@ -657,25 +739,19 @@
 </tr>
 </thead>
 <tbody valign="top">
-<tr class="row-even"><td>start_time</td>
+<tr class="row-even"><td>date_time</td>
 <td>String</td>
 <td>必需</td>
 <td>&#160;</td>
-<td>统计开始日期</td>
+<td>统计日期月份 如:‘2018-06’</td>
 </tr>
-<tr class="row-odd"><td>end_time</td>
-<td>String</td>
-<td>必需</td>
-<td>&#160;</td>
-<td>统计结束日期</td>
-</tr>
-<tr class="row-even"><td>page</td>
+<tr class="row-odd"><td>page</td>
 <td>Number</td>
 <td>可选</td>
 <td>1</td>
 <td>当前页码</td>
 </tr>
-<tr class="row-odd"><td>per_page</td>
+<tr class="row-even"><td>per_page</td>
 <td>Number</td>
 <td>可选</td>
 <td>10</td>
@@ -690,20 +766,22 @@
 <p>JSON数据格式:</p>
 <div class="highlight-javascript"><div class="highlight"><pre><span></span><span class="p">{</span>
     <span class="s2">&quot;data&quot;</span><span class="o">:</span> <span class="p">{</span>
-        <span class="s2">&quot;count&quot;</span><span class="o">:</span> <span class="mi">6</span><span class="p">,</span>
+        <span class="s2">&quot;count&quot;</span><span class="o">:</span> <span class="mi">2</span><span class="p">,</span>
         <span class="s2">&quot;next&quot;</span><span class="o">:</span> <span class="kc">null</span><span class="p">,</span>
         <span class="s2">&quot;orders&quot;</span><span class="o">:</span> <span class="p">[</span>
             <span class="p">{</span>
-                <span class="s2">&quot;actual_income&quot;</span><span class="o">:</span> <span class="mf">535.8</span><span class="p">,</span>  <span class="c1">// 实际收入</span>
+                <span class="s2">&quot;actual_account_amount&quot;</span><span class="o">:</span> <span class="mf">491.04</span><span class="p">,</span>  <span class="c1">// 实际入账金额</span>
+                <span class="s2">&quot;actual_income&quot;</span><span class="o">:</span> <span class="mi">570</span><span class="p">,</span>  <span class="c1">// 实际收入</span>
                 <span class="s2">&quot;commission_price&quot;</span><span class="o">:</span> <span class="mi">0</span><span class="p">,</span>  <span class="c1">// 佣金</span>
-                <span class="s2">&quot;customer_code&quot;</span><span class="o">:</span> <span class="kc">null</span><span class="p">,</span>  <span class="c1">// 分销店铺</span>
-                <span class="s2">&quot;discount_amount&quot;</span><span class="o">:</span> <span class="mf">24.2</span><span class="p">,</span>  <span class="c1">// 优惠</span>
-                <span class="s2">&quot;freight&quot;</span><span class="o">:</span> <span class="mi">338</span><span class="p">,</span>  <span class="c1">// 运费</span>
+                <span class="s2">&quot;customer_order_id&quot;</span><span class="o">:</span> <span class="kc">null</span><span class="p">,</span>  <span class="c1">// 分销订单编号</span>
+                <span class="s2">&quot;discount_amount&quot;</span><span class="o">:</span> <span class="mi">2</span><span class="p">,</span>  <span class="c1">// 优惠金额</span>
+                <span class="s2">&quot;freight&quot;</span><span class="o">:</span> <span class="mi">347</span><span class="p">,</span>  <span class="c1">// 运费</span>
+                <span class="s2">&quot;is_settlement&quot;</span><span class="o">:</span> <span class="kc">true</span><span class="p">,</span>  <span class="c1">// 是否结算</span>
+                <span class="s2">&quot;order_serial_no&quot;</span><span class="o">:</span> <span class="s2">&quot;D18070546197320&quot;</span><span class="p">,</span>  <span class="c1">// 订单编号</span>
                 <span class="s2">&quot;payed_at&quot;</span><span class="o">:</span> <span class="mi">1530781909</span><span class="p">,</span>  <span class="c1">// 交易时间</span>
-                <span class="s2">&quot;received_at&quot;</span><span class="o">:</span> <span class="mi">1530781909</span><span class="p">,</span>  <span class="c1">// 交易完成时间</span>
-                <span class="s2">&quot;serial_no&quot;</span><span class="o">:</span> <span class="s2">&quot;D18070571028695&quot;</span><span class="p">,</span>  <span class="c1">// 订单编号</span>
-                <span class="s2">&quot;service_fee&quot;</span><span class="o">:</span> <span class="mf">64.296</span><span class="p">,</span>  <span class="c1">// 服务费</span>
-                <span class="s2">&quot;total_amount&quot;</span><span class="o">:</span> <span class="mi">222</span>  <span class="c1">// 订单商品价格</span>
+                <span class="s2">&quot;received_at&quot;</span><span class="o">:</span> <span class="mi">1530384400</span><span class="p">,</span>  <span class="c1">// 交易完成时间</span>
+                <span class="s2">&quot;service_fee&quot;</span><span class="o">:</span> <span class="mf">68.4</span><span class="p">,</span>  <span class="c1">// 服务费</span>
+                <span class="s2">&quot;total_amount&quot;</span><span class="o">:</span> <span class="mi">225</span>  <span class="c1">// 订单商品价格</span>
             <span class="p">},</span>
         <span class="p">],</span>
         <span class="s2">&quot;prev&quot;</span><span class="o">:</span> <span class="kc">null</span>
@@ -748,29 +826,11 @@
 </tr>
 </thead>
 <tbody valign="top">
-<tr class="row-even"><td>start_time</td>
+<tr class="row-even"><td>date_time</td>
 <td>String</td>
 <td>必需</td>
 <td>&#160;</td>
-<td>统计开始日期</td>
-</tr>
-<tr class="row-odd"><td>end_time</td>
-<td>String</td>
-<td>必需</td>
-<td>&#160;</td>
-<td>统计结束日期</td>
-</tr>
-<tr class="row-even"><td>page</td>
-<td>Number</td>
-<td>可选</td>
-<td>1</td>
-<td>当前页码</td>
-</tr>
-<tr class="row-odd"><td>per_page</td>
-<td>Number</td>
-<td>可选</td>
-<td>10</td>
-<td>每页数量</td>
+<td>统计日期月份 如:‘2018-06’</td>
 </tr>
 </tbody>
 </table>
@@ -780,12 +840,15 @@
 <p>JSON数据格式:</p>
 <div class="highlight-javascript"><div class="highlight"><pre><span></span><span class="p">{</span>
     <span class="s2">&quot;data&quot;</span><span class="o">:</span> <span class="p">{</span>
-        <span class="s2">&quot;accountable_amount&quot;</span><span class="o">:</span> <span class="mf">2566.78</span><span class="p">,</span>  <span class="c1">// 应收款金额</span>
-        <span class="s2">&quot;actual_income&quot;</span><span class="o">:</span> <span class="mf">2916.8</span><span class="p">,</span>  <span class="c1">// 可结算销售总额</span>
+        <span class="s2">&quot;actual_account_amount&quot;</span><span class="o">:</span> <span class="mf">542.08</span><span class="p">,</span>  <span class="c1">// 实际入账</span>
         <span class="s2">&quot;commission_price&quot;</span><span class="o">:</span> <span class="mi">0</span><span class="p">,</span>  <span class="c1">// 佣金总计</span>
-        <span class="s2">&quot;count&quot;</span><span class="o">:</span> <span class="mi">6</span><span class="p">,</span>  <span class="c1">// 订单数量</span>
-        <span class="s2">&quot;discount_amount&quot;</span><span class="o">:</span> <span class="mf">34.2</span><span class="p">,</span>  <span class="c1">// 优惠总计</span>
-        <span class="s2">&quot;service_fee&quot;</span><span class="o">:</span> <span class="mf">350.02</span>  <span class="c1">// 服务费</span>
+        <span class="s2">&quot;count&quot;</span><span class="o">:</span> <span class="mi">4</span><span class="p">,</span>  <span class="c1">// 订单数</span>
+        <span class="s2">&quot;discount_amount&quot;</span><span class="o">:</span> <span class="mi">6</span><span class="p">,</span>  <span class="c1">// 优惠总计</span>
+        <span class="s2">&quot;month&quot;</span><span class="o">:</span> <span class="mi">7</span><span class="p">,</span>  <span class="c1">// 月份</span>
+        <span class="s2">&quot;service_fee&quot;</span><span class="o">:</span> <span class="mf">73.92</span><span class="p">,</span>  <span class="c1">// 服务费总计</span>
+        <span class="s2">&quot;status&quot;</span><span class="o">:</span> <span class="mi">3</span><span class="p">,</span>  <span class="c1">// 结算状态：1、待汇款 2、已汇款 3、待确认</span>
+        <span class="s2">&quot;total_sales_amount&quot;</span><span class="o">:</span> <span class="mi">616</span><span class="p">,</span>  <span class="c1">// 可结算销售总额</span>
+        <span class="s2">&quot;year&quot;</span><span class="o">:</span> <span class="mi">2018</span>  <span class="c1">// 年</span>
     <span class="p">},</span>
     <span class="s2">&quot;status&quot;</span><span class="o">:</span> <span class="p">{</span>
         <span class="s2">&quot;code&quot;</span><span class="o">:</span> <span class="mi">200</span><span class="p">,</span>
@@ -827,25 +890,19 @@
 </tr>
 </thead>
 <tbody valign="top">
-<tr class="row-even"><td>start_time</td>
+<tr class="row-even"><td>date_time</td>
 <td>String</td>
 <td>必需</td>
 <td>&#160;</td>
-<td>统计开始日期</td>
+<td>统计日期月份 如:‘2018-06’</td>
 </tr>
-<tr class="row-odd"><td>end_time</td>
-<td>String</td>
-<td>必需</td>
-<td>&#160;</td>
-<td>统计结束日期</td>
-</tr>
-<tr class="row-even"><td>page</td>
+<tr class="row-odd"><td>page</td>
 <td>Number</td>
 <td>可选</td>
 <td>1</td>
 <td>当前页码</td>
 </tr>
-<tr class="row-odd"><td>per_page</td>
+<tr class="row-even"><td>per_page</td>
 <td>Number</td>
 <td>可选</td>
 <td>10</td>
@@ -859,16 +916,22 @@
 <p>JSON数据格式:</p>
 <div class="highlight-javascript"><div class="highlight"><pre><span></span><span class="p">{</span>
     <span class="s2">&quot;data&quot;</span><span class="o">:</span> <span class="p">{</span>
-        <span class="s2">&quot;count&quot;</span><span class="o">:</span> <span class="mi">3</span><span class="p">,</span>
+        <span class="s2">&quot;count&quot;</span><span class="o">:</span> <span class="mi">2</span><span class="p">,</span>
         <span class="s2">&quot;next&quot;</span><span class="o">:</span> <span class="kc">null</span><span class="p">,</span>
         <span class="s2">&quot;orders&quot;</span><span class="o">:</span> <span class="p">[</span>
             <span class="p">{</span>
-                <span class="s2">&quot;commission_price&quot;</span><span class="o">:</span> <span class="mf">11.1</span><span class="p">,</span>  <span class="c1">// 佣金</span>
-                <span class="s2">&quot;payed_at&quot;</span><span class="o">:</span> <span class="mi">1530781909</span><span class="p">,</span>  <span class="c1">// 交易时间</span>
-                <span class="s2">&quot;received_at&quot;</span><span class="o">:</span> <span class="mi">1530781909</span><span class="p">,</span>  <span class="c1">// 交易完成时间</span>
-                <span class="s2">&quot;serial_no&quot;</span><span class="o">:</span> <span class="s2">&quot;D18070558301647&quot;</span><span class="p">,</span>  <span class="c1">// 订单编号</span>
-                <span class="s2">&quot;service_fee&quot;</span><span class="o">:</span> <span class="mf">1.11</span><span class="p">,</span>  <span class="c1">// 服务费</span>
-                <span class="s2">&quot;total_amount&quot;</span><span class="o">:</span> <span class="mi">111</span>  <span class="c1">// 商品价格</span>
+                <span class="s2">&quot;actual_account_amount&quot;</span><span class="o">:</span> <span class="mf">9.99</span><span class="p">,</span>  <span class="c1">// 实际入账</span>
+                <span class="s2">&quot;actual_income&quot;</span><span class="o">:</span> <span class="mf">11.1</span><span class="p">,</span>  <span class="c1">// 实际获得佣金</span>
+                <span class="s2">&quot;commission_price&quot;</span><span class="o">:</span> <span class="mf">11.1</span><span class="p">,</span> <span class="c1">// 佣金</span>
+                <span class="s2">&quot;customer_order_id&quot;</span><span class="o">:</span> <span class="kc">null</span><span class="p">,</span>
+                <span class="s2">&quot;discount_amount&quot;</span><span class="o">:</span> <span class="mi">0</span><span class="p">,</span> <span class="c1">// 优惠金额</span>
+                <span class="s2">&quot;freight&quot;</span><span class="o">:</span> <span class="mi">1120</span><span class="p">,</span> <span class="c1">// 运费</span>
+                <span class="s2">&quot;is_settlement&quot;</span><span class="o">:</span> <span class="kc">true</span><span class="p">,</span>  <span class="c1">// 是否结算</span>
+                <span class="s2">&quot;order_serial_no&quot;</span><span class="o">:</span> <span class="s2">&quot;D18070507481253&quot;</span><span class="p">,</span> <span class="c1">// 订单号</span>
+                <span class="s2">&quot;payed_at&quot;</span><span class="o">:</span> <span class="mi">1530781909</span><span class="p">,</span> <span class="c1">// 交易时间</span>
+                <span class="s2">&quot;received_at&quot;</span><span class="o">:</span> <span class="mi">1530946080</span><span class="p">,</span> <span class="c1">// 交易完成时间</span>
+                <span class="s2">&quot;service_fee&quot;</span><span class="o">:</span> <span class="mf">1.11</span><span class="p">,</span> <span class="c1">// 服务费</span>
+                <span class="s2">&quot;total_amount&quot;</span><span class="o">:</span> <span class="mi">111</span> <span class="c1">// 订单商品价格</span>
             <span class="p">},</span>
         <span class="p">],</span>
         <span class="s2">&quot;prev&quot;</span><span class="o">:</span> <span class="kc">null</span>
@@ -913,6 +976,159 @@
 </tr>
 </thead>
 <tbody valign="top">
+<tr class="row-even"><td>date_time</td>
+<td>String</td>
+<td>必需</td>
+<td>&#160;</td>
+<td>统计日期月份 如:‘2018-06’</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="id32">
+<h3>返回示例<a class="headerlink" href="#id32" title="永久链接至标题">¶</a></h3>
+<p>JSON数据格式:</p>
+<div class="highlight-javascript"><div class="highlight"><pre><span></span><span class="p">{</span>
+    <span class="s2">&quot;data&quot;</span><span class="o">:</span> <span class="p">{</span>
+        <span class="s2">&quot;actual_account_amount&quot;</span><span class="o">:</span> <span class="mf">0.9</span><span class="p">,</span> <span class="c1">// 实际入账金额</span>
+        <span class="s2">&quot;commission_price&quot;</span><span class="o">:</span> <span class="mi">1</span><span class="p">,</span> <span class="c1">// 实际获得佣金</span>
+        <span class="s2">&quot;count&quot;</span><span class="o">:</span> <span class="mi">1</span><span class="p">,</span> <span class="c1">// 订单数</span>
+        <span class="s2">&quot;month&quot;</span><span class="o">:</span> <span class="mi">7</span><span class="p">,</span> <span class="c1">// 月份</span>
+        <span class="s2">&quot;service_fee&quot;</span><span class="o">:</span> <span class="mf">0.1</span><span class="p">,</span>
+        <span class="s2">&quot;status&quot;</span><span class="o">:</span> <span class="mi">3</span><span class="p">,</span>  <span class="c1">// 结算状态：1、待汇款 2、已汇款 3、待确认</span>
+        <span class="s2">&quot;total_sales_amount&quot;</span><span class="o">:</span> <span class="mi">120</span><span class="p">,</span> <span class="c1">// 累计销售额</span>
+        <span class="s2">&quot;year&quot;</span><span class="o">:</span> <span class="mi">2018</span> <span class="c1">// 年</span>
+    <span class="p">},</span>
+    <span class="s2">&quot;status&quot;</span><span class="o">:</span> <span class="p">{</span>
+        <span class="s2">&quot;code&quot;</span><span class="o">:</span> <span class="mi">200</span><span class="p">,</span>
+        <span class="s2">&quot;message&quot;</span><span class="o">:</span> <span class="s2">&quot;Ok all right.&quot;</span>
+    <span class="p">},</span>
+    <span class="s2">&quot;success&quot;</span><span class="o">:</span> <span class="kc">true</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="id33">
+<h2>我的订单、我的分销订单对账单<a class="headerlink" href="#id33" title="永久链接至标题">¶</a></h2>
+<p>我的订单、我的分销订单对账单</p>
+<div class="section" id="id34">
+<h3>接口说明<a class="headerlink" href="#id34" title="永久链接至标题">¶</a></h3>
+<ul class="simple">
+<li>API接口请求地址：<code class="docutils literal"><span class="pre">/stats/orders/statements</span></code></li>
+<li>API接口请求方法：<code class="docutils literal"><span class="pre">GET</span></code></li>
+<li>API接口用户授权：<code class="docutils literal"><span class="pre">token</span></code></li>
+</ul>
+</div>
+<div class="section" id="id35">
+<h3>请求参数<a class="headerlink" href="#id35" title="永久链接至标题">¶</a></h3>
+<table border="1" class="docutils">
+<colgroup>
+<col width="27%" />
+<col width="13%" />
+<col width="11%" />
+<col width="13%" />
+<col width="37%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">名称</th>
+<th class="head">类型</th>
+<th class="head">是否必须</th>
+<th class="head">默认值</th>
+<th class="head">描述说明</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>date_time</td>
+<td>String</td>
+<td>必需</td>
+<td>&#160;</td>
+<td>统计日期月份 如:‘2018-06’</td>
+</tr>
+<tr class="row-odd"><td>status</td>
+<td>Number</td>
+<td>可选</td>
+<td>1</td>
+<td>1、日汇总 2、月汇总</td>
+</tr>
+<tr class="row-even"><td>is_distributed</td>
+<td>Number</td>
+<td>可选</td>
+<td>0</td>
+<td>0、我的订单 1、我的分销订单</td>
+</tr>
+<tr class="row-odd"><td>page</td>
+<td>Number</td>
+<td>可选</td>
+<td>1</td>
+<td>当前页码</td>
+</tr>
+<tr class="row-even"><td>per_page</td>
+<td>Number</td>
+<td>可选</td>
+<td>10</td>
+<td>每页数量</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="id36">
+<h3>返回示例<a class="headerlink" href="#id36" title="永久链接至标题">¶</a></h3>
+<p>JSON数据格式:</p>
+<div class="highlight-javascript"><div class="highlight"><pre><span></span><span class="p">{</span>
+    <span class="s2">&quot;data&quot;</span><span class="o">:</span> <span class="p">{</span>
+        <span class="s2">&quot;count&quot;</span><span class="o">:</span> <span class="mi">1</span><span class="p">,</span>
+        <span class="s2">&quot;next&quot;</span><span class="o">:</span> <span class="kc">null</span><span class="p">,</span>
+        <span class="s2">&quot;prev&quot;</span><span class="o">:</span> <span class="kc">null</span><span class="p">,</span>
+        <span class="s2">&quot;statements&quot;</span><span class="o">:</span> <span class="p">[</span>
+            <span class="p">{</span>
+                <span class="s2">&quot;actual_account_amount&quot;</span><span class="o">:</span> <span class="mf">1494.24</span><span class="p">,</span>  <span class="c1">// 实际入账金额</span>
+                <span class="s2">&quot;actual_income&quot;</span><span class="o">:</span> <span class="mi">1698</span><span class="p">,</span>  <span class="c1">// 收入</span>
+                <span class="s2">&quot;date&quot;</span><span class="o">:</span> <span class="s2">&quot;2018-07-01&quot;</span><span class="p">,</span>  <span class="c1">// 日期</span>
+                <span class="s2">&quot;service_fee&quot;</span><span class="o">:</span> <span class="mf">203.76</span>  <span class="c1">// 服务费</span>
+            <span class="p">}</span>
+        <span class="p">]</span>
+    <span class="p">},</span>
+    <span class="s2">&quot;status&quot;</span><span class="o">:</span> <span class="p">{</span>
+        <span class="s2">&quot;code&quot;</span><span class="o">:</span> <span class="mi">200</span><span class="p">,</span>
+        <span class="s2">&quot;message&quot;</span><span class="o">:</span> <span class="s2">&quot;Ok all right.&quot;</span>
+    <span class="p">},</span>
+    <span class="s2">&quot;success&quot;</span><span class="o">:</span> <span class="kc">true</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="id37">
+<h2>我的订单、我的分销订单交易记录<a class="headerlink" href="#id37" title="永久链接至标题">¶</a></h2>
+<p>我的订单、我的分销订单交易记录</p>
+<div class="section" id="id38">
+<h3>接口说明<a class="headerlink" href="#id38" title="永久链接至标题">¶</a></h3>
+<ul class="simple">
+<li>API接口请求地址：<code class="docutils literal"><span class="pre">/stats/orders/transactions</span></code></li>
+<li>API接口请求方法：<code class="docutils literal"><span class="pre">GET</span></code></li>
+<li>API接口用户授权：<code class="docutils literal"><span class="pre">token</span></code></li>
+</ul>
+</div>
+<div class="section" id="id39">
+<h3>请求参数<a class="headerlink" href="#id39" title="永久链接至标题">¶</a></h3>
+<table border="1" class="docutils">
+<colgroup>
+<col width="25%" />
+<col width="12%" />
+<col width="11%" />
+<col width="12%" />
+<col width="40%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">名称</th>
+<th class="head">类型</th>
+<th class="head">是否必须</th>
+<th class="head">默认值</th>
+<th class="head">描述说明</th>
+</tr>
+</thead>
+<tbody valign="top">
 <tr class="row-even"><td>start_time</td>
 <td>String</td>
 <td>必需</td>
@@ -925,13 +1141,31 @@
 <td>&#160;</td>
 <td>统计结束日期</td>
 </tr>
-<tr class="row-even"><td>page</td>
+<tr class="row-even"><td>status</td>
+<td>Number</td>
+<td>可选</td>
+<td>&#160;</td>
+<td>1、待结算 2、成功 3、失败 4、退款</td>
+</tr>
+<tr class="row-odd"><td>is_distributed</td>
+<td>Number</td>
+<td>可选</td>
+<td>0</td>
+<td>0、我的订单 1、我的分销订单</td>
+</tr>
+<tr class="row-even"><td>rid</td>
+<td>String</td>
+<td>可选</td>
+<td>&#160;</td>
+<td>订单编号</td>
+</tr>
+<tr class="row-odd"><td>page</td>
 <td>Number</td>
 <td>可选</td>
 <td>1</td>
 <td>当前页码</td>
 </tr>
-<tr class="row-odd"><td>per_page</td>
+<tr class="row-even"><td>per_page</td>
 <td>Number</td>
 <td>可选</td>
 <td>10</td>
@@ -940,20 +1174,302 @@
 </tbody>
 </table>
 </div>
-<div class="section" id="id32">
-<h3>返回示例<a class="headerlink" href="#id32" title="永久链接至标题">¶</a></h3>
+<div class="section" id="id40">
+<h3>返回示例<a class="headerlink" href="#id40" title="永久链接至标题">¶</a></h3>
 <p>JSON数据格式:</p>
 <div class="highlight-javascript"><div class="highlight"><pre><span></span><span class="p">{</span>
     <span class="s2">&quot;data&quot;</span><span class="o">:</span> <span class="p">{</span>
-        <span class="s2">&quot;accountable_amount&quot;</span><span class="o">:</span> <span class="mf">29.97</span><span class="p">,</span>  <span class="c1">// 应收销售收益</span>
-        <span class="s2">&quot;commission_price&quot;</span><span class="o">:</span> <span class="mf">33.3</span><span class="p">,</span>  <span class="c1">// 佣金总计</span>
-        <span class="s2">&quot;count&quot;</span><span class="o">:</span> <span class="mi">3</span><span class="p">,</span>  <span class="c1">// 订单数量</span>
-        <span class="s2">&quot;pay_amount&quot;</span><span class="o">:</span> <span class="mi">3693</span><span class="p">,</span>  <span class="c1">// 累计销售额</span>
-        <span class="s2">&quot;service_fee&quot;</span><span class="o">:</span> <span class="mf">3.33</span>  <span class="c1">// 服务费</span>
+        <span class="s2">&quot;count&quot;</span><span class="o">:</span> <span class="mi">2</span><span class="p">,</span>
+        <span class="s2">&quot;next&quot;</span><span class="o">:</span> <span class="kc">null</span><span class="p">,</span>
+        <span class="s2">&quot;prev&quot;</span><span class="o">:</span> <span class="kc">null</span><span class="p">,</span>
+        <span class="s2">&quot;transactions&quot;</span><span class="o">:</span> <span class="p">[</span>
+            <span class="p">{</span>
+                <span class="s2">&quot;buyer_address&quot;</span><span class="o">:</span> <span class="s2">&quot;青年路&quot;</span><span class="p">,</span>  <span class="c1">// 买家地址</span>
+                <span class="s2">&quot;buyer_city&quot;</span><span class="o">:</span> <span class="s2">&quot;淄博&quot;</span><span class="p">,</span>  <span class="c1">//买家市</span>
+                <span class="s2">&quot;buyer_country&quot;</span><span class="o">:</span> <span class="s2">&quot;中国&quot;</span><span class="p">,</span>  <span class="c1">// 买家国家</span>
+                <span class="s2">&quot;buyer_name&quot;</span><span class="o">:</span> <span class="s2">&quot;ZT-2&quot;</span><span class="p">,</span>
+                <span class="s2">&quot;buyer_phone&quot;</span><span class="o">:</span> <span class="s2">&quot;13260180689&quot;</span><span class="p">,</span>  <span class="c1">// 买家电话</span>
+                <span class="s2">&quot;buyer_province&quot;</span><span class="o">:</span> <span class="s2">&quot;山东&quot;</span><span class="p">,</span>  <span class="c1">// 买家省</span>
+                <span class="s2">&quot;buyer_remark&quot;</span><span class="o">:</span> <span class="kc">null</span><span class="p">,</span>  <span class="c1">// 买家备注</span>
+                <span class="s2">&quot;buyer_tel&quot;</span><span class="o">:</span> <span class="s2">&quot;13260180689&quot;</span><span class="p">,</span>  <span class="c1">// 买家手机</span>
+                <span class="s2">&quot;buyer_zipcode&quot;</span><span class="o">:</span> <span class="s2">&quot;255300&quot;</span><span class="p">,</span>  <span class="c1">// 买家邮编</span>
+                <span class="s2">&quot;coupon_amount&quot;</span><span class="o">:</span> <span class="mi">0</span><span class="p">,</span>  <span class="c1">// 优惠券金额</span>
+                <span class="s2">&quot;created_at&quot;</span><span class="o">:</span> <span class="mi">1530608616</span><span class="p">,</span>  <span class="c1">// 创建时间</span>
+                <span class="s2">&quot;customer_order_id&quot;</span><span class="o">:</span> <span class="kc">null</span><span class="p">,</span>  <span class="c1">// 分销商订单编号</span>
+                <span class="s2">&quot;discount_amount&quot;</span><span class="o">:</span> <span class="mi">0</span><span class="p">,</span>  <span class="c1">// 店铺优惠金额 = 首单优惠 + 满减 + 优惠券</span>
+                <span class="s2">&quot;first_discount&quot;</span><span class="o">:</span> <span class="mi">0</span><span class="p">,</span>  <span class="c1">// 首单优惠</span>
+                <span class="s2">&quot;freight&quot;</span><span class="o">:</span> <span class="mi">14</span><span class="p">,</span>  <span class="c1">// 运费</span>
+                <span class="s2">&quot;official_order_id&quot;</span><span class="o">:</span> <span class="kc">null</span><span class="p">,</span>  <span class="c1">// 官方平台订单号</span>
+                <span class="s2">&quot;payment_slip&quot;</span><span class="o">:</span> <span class="s2">&quot;1234567890&quot;</span><span class="p">,</span> <span class="c1">// 支付单号</span>
+                <span class="s2">&quot;refund_amount&quot;</span><span class="o">:</span> <span class="s2">&quot;1234567890&quot;</span><span class="p">,</span> <span class="c1">// 退款金额</span>
+                <span class="s2">&quot;outside_target_id&quot;</span><span class="o">:</span> <span class="s2">&quot;D18070316803529&quot;</span><span class="p">,</span>  <span class="c1">// 第三方平台订单号</span>
+                <span class="s2">&quot;pay_amount&quot;</span><span class="o">:</span> <span class="mi">17</span><span class="p">,</span>  <span class="c1">// 支付金额</span>
+                <span class="s2">&quot;reach_minus&quot;</span><span class="o">:</span> <span class="mi">0</span><span class="p">,</span>  <span class="c1">// 满减金额</span>
+                <span class="s2">&quot;received_at&quot;</span><span class="o">:</span> <span class="mi">0</span><span class="p">,</span>  <span class="c1">// 收货时间</span>
+                <span class="s2">&quot;distributed&quot;</span><span class="o">:</span> <span class="kc">false</span><span class="p">,</span>  <span class="c1">// 分销订单</span>
+                <span class="s2">&quot;remark&quot;</span><span class="o">:</span> <span class="kc">null</span><span class="p">,</span>  <span class="c1">// 卖家备注</span>
+                <span class="s2">&quot;rid&quot;</span><span class="o">:</span> <span class="s2">&quot;D18070316803529&quot;</span><span class="p">,</span>  <span class="c1">// 订单编号</span>
+                <span class="s2">&quot;ship_mode&quot;</span><span class="o">:</span> <span class="mi">1</span><span class="p">,</span>  <span class="c1">// 运送方式</span>
+                <span class="s2">&quot;status&quot;</span><span class="o">:</span> <span class="mi">5</span><span class="p">,</span>  <span class="c1">// 订单状态</span>
+                <span class="s2">&quot;store_name&quot;</span><span class="o">:</span> <span class="s2">&quot;第一家(None)&quot;</span><span class="p">,</span>  <span class="c1">// 店铺名称</span>
+                <span class="s2">&quot;total_amount&quot;</span><span class="o">:</span> <span class="mi">3</span><span class="p">,</span>  <span class="c1">// 商品金额</span>
+                <span class="s2">&quot;total_quantity&quot;</span><span class="o">:</span> <span class="mi">3</span>  <span class="c1">// 商品总数量</span>
+                <span class="s2">&quot;transaction_status&quot;</span><span class="o">:</span> <span class="mi">1</span>  <span class="c1">// 交易记录状态，1、待结算 2、成功 3、失败 4、退款</span>
+                <span class="s2">&quot;items&quot;</span><span class="o">:</span> <span class="p">[</span>
+                    <span class="p">{</span>
+                        <span class="s2">&quot;commission_price&quot;</span><span class="o">:</span> <span class="mi">0</span><span class="p">,</span>  <span class="c1">// 佣金</span>
+                        <span class="s2">&quot;commission_rate&quot;</span><span class="o">:</span> <span class="mi">0</span><span class="p">,</span>  <span class="c1">// 佣金比</span>
+                        <span class="s2">&quot;cover&quot;</span><span class="o">:</span> <span class="s2">&quot;http://0.0.0.0:9000/_uploads/photos/1&quot;</span><span class="p">,</span>
+                        <span class="s2">&quot;deal_price&quot;</span><span class="o">:</span> <span class="mi">1</span><span class="p">,</span>  <span class="c1">// 交易价格</span>
+                        <span class="s2">&quot;express&quot;</span><span class="o">:</span> <span class="mi">4</span><span class="p">,</span>  <span class="c1">// 快递公司ID</span>
+                        <span class="s2">&quot;express_at&quot;</span><span class="o">:</span> <span class="mi">0</span><span class="p">,</span>  <span class="c1">// 发货时间</span>
+                        <span class="s2">&quot;express_no&quot;</span><span class="o">:</span> <span class="kc">null</span><span class="p">,</span>  <span class="c1">// 运单号</span>
+                        <span class="s2">&quot;id_code&quot;</span><span class="o">:</span> <span class="s2">&quot;1&quot;</span><span class="p">,</span>
+                        <span class="s2">&quot;mode&quot;</span><span class="o">:</span> <span class="s2">&quot;1 1&quot;</span><span class="p">,</span>
+                        <span class="s2">&quot;price&quot;</span><span class="o">:</span> <span class="mi">1</span><span class="p">,</span>
+                        <span class="s2">&quot;product_name&quot;</span><span class="o">:</span> <span class="s2">&quot;摩托&quot;</span><span class="p">,</span>  <span class="c1">// 商品名</span>
+                        <span class="s2">&quot;quantity&quot;</span><span class="o">:</span> <span class="mi">3</span><span class="p">,</span>  <span class="c1">// 数量</span>
+                        <span class="s2">&quot;rid&quot;</span><span class="o">:</span> <span class="s2">&quot;1&quot;</span><span class="p">,</span>  <span class="c1">// sku</span>
+                        <span class="s2">&quot;s_color&quot;</span><span class="o">:</span> <span class="s2">&quot;1&quot;</span><span class="p">,</span>
+                        <span class="s2">&quot;s_model&quot;</span><span class="o">:</span> <span class="s2">&quot;1&quot;</span><span class="p">,</span>
+                        <span class="s2">&quot;s_weight&quot;</span><span class="o">:</span> <span class="mi">1</span><span class="p">,</span>
+                        <span class="s2">&quot;sale_price&quot;</span><span class="o">:</span> <span class="mi">1</span><span class="p">,</span>
+                        <span class="s2">&quot;stock_count&quot;</span><span class="o">:</span> <span class="mi">11020</span>
+                    <span class="p">}</span>
+                <span class="p">],</span>
+
+            <span class="p">}</span>
+        <span class="p">]</span>
     <span class="p">},</span>
     <span class="s2">&quot;status&quot;</span><span class="o">:</span> <span class="p">{</span>
         <span class="s2">&quot;code&quot;</span><span class="o">:</span> <span class="mi">200</span><span class="p">,</span>
         <span class="s2">&quot;message&quot;</span><span class="o">:</span> <span class="s2">&quot;Ok all right.&quot;</span>
+    <span class="p">},</span>
+    <span class="s2">&quot;success&quot;</span><span class="o">:</span> <span class="kc">true</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="id41">
+<h2>账户管理订单汇总<a class="headerlink" href="#id41" title="永久链接至标题">¶</a></h2>
+<p>账户管理订单汇总</p>
+<div class="section" id="id42">
+<h3>接口说明<a class="headerlink" href="#id42" title="永久链接至标题">¶</a></h3>
+<ul class="simple">
+<li>API接口请求地址：<code class="docutils literal"><span class="pre">/stats/account_collect</span></code></li>
+<li>API接口请求方法：<code class="docutils literal"><span class="pre">GET</span></code></li>
+<li>API接口用户授权：<code class="docutils literal"><span class="pre">token</span></code></li>
+</ul>
+</div>
+<div class="section" id="id43">
+<h3>请求参数<a class="headerlink" href="#id43" title="永久链接至标题">¶</a></h3>
+<table border="1" class="docutils">
+<colgroup>
+<col width="22%" />
+<col width="10%" />
+<col width="9%" />
+<col width="10%" />
+<col width="48%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">名称</th>
+<th class="head">类型</th>
+<th class="head">是否必须</th>
+<th class="head">默认值</th>
+<th class="head">描述说明</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>date_range</td>
+<td>String</td>
+<td>必需</td>
+<td>&#160;</td>
+<td>时间段 ‘week’近7天 ‘month’近一月 ‘year’近一年</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="id44">
+<h3>返回示例<a class="headerlink" href="#id44" title="永久链接至标题">¶</a></h3>
+<p>JSON数据格式:</p>
+<div class="highlight-javascript"><div class="highlight"><pre><span></span><span class="p">{</span>
+    <span class="s2">&quot;data&quot;</span><span class="o">:</span> <span class="p">{</span>
+        <span class="s2">&quot;pending_settlement_amount&quot;</span><span class="o">:</span> <span class="mf">161.7</span><span class="p">,</span>  <span class="c1">// 待结算金额</span>
+        <span class="s2">&quot;time_sale_amount&quot;</span><span class="o">:</span> <span class="mf">161.7</span><span class="p">,</span>  <span class="c1">// 按时间查询的销售额</span>
+        <span class="s2">&quot;total_sale_amount&quot;</span><span class="o">:</span> <span class="mf">161.7</span>  <span class="c1">// 总销售额</span>
+    <span class="p">},</span>
+    <span class="s2">&quot;status&quot;</span><span class="o">:</span> <span class="p">{</span>
+        <span class="s2">&quot;code&quot;</span><span class="o">:</span> <span class="mi">200</span><span class="p">,</span>
+        <span class="s2">&quot;message&quot;</span><span class="o">:</span> <span class="s2">&quot;Ok all right.&quot;</span>
+    <span class="p">},</span>
+    <span class="s2">&quot;success&quot;</span><span class="o">:</span> <span class="kc">true</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="id45">
+<h2>账户管理分销订单汇总<a class="headerlink" href="#id45" title="永久链接至标题">¶</a></h2>
+<p>账户管理分销订单汇总</p>
+<div class="section" id="id46">
+<h3>接口说明<a class="headerlink" href="#id46" title="永久链接至标题">¶</a></h3>
+<ul class="simple">
+<li>API接口请求地址：<code class="docutils literal"><span class="pre">/stats/distribute_account_collect</span></code></li>
+<li>API接口请求方法：<code class="docutils literal"><span class="pre">GET</span></code></li>
+<li>API接口用户授权：<code class="docutils literal"><span class="pre">token</span></code></li>
+</ul>
+</div>
+<div class="section" id="id47">
+<h3>返回示例<a class="headerlink" href="#id47" title="永久链接至标题">¶</a></h3>
+<p>JSON数据格式:</p>
+<div class="highlight-javascript"><div class="highlight"><pre><span></span><span class="p">{</span>
+    <span class="s2">&quot;data&quot;</span><span class="o">:</span> <span class="p">{</span>
+        <span class="s2">&quot;pending_commission_price&quot;</span><span class="o">:</span> <span class="mf">1.3</span><span class="p">,</span>  <span class="c1">// 待结算佣金收入</span>
+        <span class="s2">&quot;time_commission_price&quot;</span><span class="o">:</span> <span class="mf">1.3</span><span class="p">,</span>  <span class="c1">// 按时间查询的销售额</span>
+        <span class="s2">&quot;total_commission_price&quot;</span><span class="o">:</span> <span class="mf">1.3</span>  <span class="c1">// 累计分销佣金</span>
+    <span class="p">},</span>
+    <span class="s2">&quot;status&quot;</span><span class="o">:</span> <span class="p">{</span>
+        <span class="s2">&quot;code&quot;</span><span class="o">:</span> <span class="mi">200</span><span class="p">,</span>
+        <span class="s2">&quot;message&quot;</span><span class="o">:</span> <span class="s2">&quot;Ok all right.&quot;</span>
+    <span class="p">},</span>
+    <span class="s2">&quot;success&quot;</span><span class="o">:</span> <span class="kc">true</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="id48">
+<h2>我的订单确认结算<a class="headerlink" href="#id48" title="永久链接至标题">¶</a></h2>
+<p>我的订单确认结算</p>
+<div class="section" id="id49">
+<h3>接口说明<a class="headerlink" href="#id49" title="永久链接至标题">¶</a></h3>
+<ul class="simple">
+<li>API接口请求地址：<code class="docutils literal"><span class="pre">/stats/orders/confirm_settlement</span></code></li>
+<li>API接口请求方法：<code class="docutils literal"><span class="pre">POST</span></code></li>
+<li>API接口用户授权：<code class="docutils literal"><span class="pre">token</span></code></li>
+</ul>
+</div>
+<div class="section" id="id50">
+<h3>请求参数<a class="headerlink" href="#id50" title="永久链接至标题">¶</a></h3>
+<table border="1" class="docutils">
+<colgroup>
+<col width="27%" />
+<col width="13%" />
+<col width="11%" />
+<col width="13%" />
+<col width="37%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">名称</th>
+<th class="head">类型</th>
+<th class="head">是否必须</th>
+<th class="head">默认值</th>
+<th class="head">描述说明</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>date_time</td>
+<td>String</td>
+<td>必需</td>
+<td>&#160;</td>
+<td>统计日期月份 如:‘2018-06’</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="id51">
+<h3>返回示例<a class="headerlink" href="#id51" title="永久链接至标题">¶</a></h3>
+<p>JSON数据格式:</p>
+<div class="highlight-javascript"><div class="highlight"><pre><span></span><span class="p">{</span>
+    <span class="s2">&quot;data&quot;</span><span class="o">:</span> <span class="p">{</span>
+        <span class="s2">&quot;actual_account_amount&quot;</span><span class="o">:</span> <span class="mf">209.44</span><span class="p">,</span>  <span class="c1">// 应收款 = 汇款金额</span>
+        <span class="s2">&quot;commission_price&quot;</span><span class="o">:</span> <span class="mi">2</span><span class="p">,</span>  <span class="c1">// 佣金总计</span>
+        <span class="s2">&quot;count&quot;</span><span class="o">:</span> <span class="mi">2</span><span class="p">,</span>  <span class="c1">// 交易完成订单数量</span>
+        <span class="s2">&quot;created_at&quot;</span><span class="o">:</span> <span class="mi">1531883404</span><span class="p">,</span>  <span class="c1">// 确认时间</span>
+        <span class="s2">&quot;discount_amount&quot;</span><span class="o">:</span> <span class="mi">0</span><span class="p">,</span>  <span class="c1">// 优惠总计</span>
+        <span class="s2">&quot;is_distributed&quot;</span><span class="o">:</span> <span class="kc">false</span><span class="p">,</span>  <span class="c1">// 是否分销订单</span>
+        <span class="s2">&quot;month&quot;</span><span class="o">:</span> <span class="mi">7</span><span class="p">,</span>  <span class="c1">// 月份</span>
+        <span class="s2">&quot;remittance_amount&quot;</span><span class="o">:</span> <span class="mi">0</span><span class="p">,</span>  <span class="c1">// 汇款金额</span>
+        <span class="s2">&quot;remittance_at&quot;</span><span class="o">:</span> <span class="mi">0</span><span class="p">,</span>  <span class="c1">// 汇款时间</span>
+        <span class="s2">&quot;remittance_id&quot;</span><span class="o">:</span> <span class="mi">0</span><span class="p">,</span>  <span class="c1">// 汇款人</span>
+        <span class="s2">&quot;service_fee&quot;</span><span class="o">:</span> <span class="mf">28.56</span><span class="p">,</span>  <span class="c1">// 技术服务费</span>
+        <span class="s2">&quot;status&quot;</span><span class="o">:</span> <span class="mi">1</span><span class="p">,</span>  <span class="c1">// 汇款状态 1、待汇款 2、已汇款 3、待确认</span>
+        <span class="s2">&quot;total_sales_amount&quot;</span><span class="o">:</span> <span class="mi">238</span><span class="p">,</span>  <span class="c1">// 可结算销售额、累计销售额</span>
+        <span class="s2">&quot;year&quot;</span><span class="o">:</span> <span class="mi">2018</span>  <span class="c1">// 年</span>
+    <span class="p">},</span>
+    <span class="s2">&quot;status&quot;</span><span class="o">:</span> <span class="p">{</span>
+        <span class="s2">&quot;code&quot;</span><span class="o">:</span> <span class="mi">201</span><span class="p">,</span>
+        <span class="s2">&quot;message&quot;</span><span class="o">:</span> <span class="s2">&quot;All created.&quot;</span>
+    <span class="p">},</span>
+    <span class="s2">&quot;success&quot;</span><span class="o">:</span> <span class="kc">true</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="id52">
+<h2>我的分销订单确认结算<a class="headerlink" href="#id52" title="永久链接至标题">¶</a></h2>
+<p>我的分销订单确认结算</p>
+<div class="section" id="id53">
+<h3>接口说明<a class="headerlink" href="#id53" title="永久链接至标题">¶</a></h3>
+<ul class="simple">
+<li>API接口请求地址：<code class="docutils literal"><span class="pre">/stats/distribute_orders/confirm_settlement</span></code></li>
+<li>API接口请求方法：<code class="docutils literal"><span class="pre">POST</span></code></li>
+<li>API接口用户授权：<code class="docutils literal"><span class="pre">token</span></code></li>
+</ul>
+</div>
+<div class="section" id="id54">
+<h3>请求参数<a class="headerlink" href="#id54" title="永久链接至标题">¶</a></h3>
+<table border="1" class="docutils">
+<colgroup>
+<col width="27%" />
+<col width="13%" />
+<col width="11%" />
+<col width="13%" />
+<col width="37%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">名称</th>
+<th class="head">类型</th>
+<th class="head">是否必须</th>
+<th class="head">默认值</th>
+<th class="head">描述说明</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>date_time</td>
+<td>String</td>
+<td>必需</td>
+<td>&#160;</td>
+<td>统计日期月份 如:‘2018-06’</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="id55">
+<h3>返回示例<a class="headerlink" href="#id55" title="永久链接至标题">¶</a></h3>
+<p>JSON数据格式:</p>
+<div class="highlight-javascript"><div class="highlight"><pre><span></span><span class="p">{</span>
+    <span class="s2">&quot;data&quot;</span><span class="o">:</span> <span class="p">{</span>
+        <span class="s2">&quot;actual_account_amount&quot;</span><span class="o">:</span> <span class="mf">209.44</span><span class="p">,</span>  <span class="c1">// 应收款 = 汇款金额</span>
+        <span class="s2">&quot;commission_price&quot;</span><span class="o">:</span> <span class="mi">2</span><span class="p">,</span>  <span class="c1">// 佣金总计</span>
+        <span class="s2">&quot;count&quot;</span><span class="o">:</span> <span class="mi">2</span><span class="p">,</span>  <span class="c1">// 交易完成订单数量</span>
+        <span class="s2">&quot;created_at&quot;</span><span class="o">:</span> <span class="mi">1531883404</span><span class="p">,</span>  <span class="c1">// 确认时间</span>
+        <span class="s2">&quot;discount_amount&quot;</span><span class="o">:</span> <span class="mi">0</span><span class="p">,</span>  <span class="c1">// 优惠总计</span>
+        <span class="s2">&quot;is_distributed&quot;</span><span class="o">:</span> <span class="kc">false</span><span class="p">,</span>  <span class="c1">// 是否分销订单</span>
+        <span class="s2">&quot;month&quot;</span><span class="o">:</span> <span class="mi">7</span><span class="p">,</span>  <span class="c1">// 月份</span>
+        <span class="s2">&quot;remittance_amount&quot;</span><span class="o">:</span> <span class="mi">0</span><span class="p">,</span>  <span class="c1">// 汇款金额</span>
+        <span class="s2">&quot;remittance_at&quot;</span><span class="o">:</span> <span class="mi">0</span><span class="p">,</span>  <span class="c1">// 汇款时间</span>
+        <span class="s2">&quot;remittance_id&quot;</span><span class="o">:</span> <span class="mi">0</span><span class="p">,</span>  <span class="c1">// 汇款人</span>
+        <span class="s2">&quot;service_fee&quot;</span><span class="o">:</span> <span class="mf">28.56</span><span class="p">,</span>  <span class="c1">// 技术服务费</span>
+        <span class="s2">&quot;status&quot;</span><span class="o">:</span> <span class="mi">1</span><span class="p">,</span>  <span class="c1">// 汇款状态 1、待汇款 2、已汇款 3、待确认</span>
+        <span class="s2">&quot;total_sales_amount&quot;</span><span class="o">:</span> <span class="mi">238</span><span class="p">,</span>  <span class="c1">// 可结算销售额、累计销售额</span>
+        <span class="s2">&quot;year&quot;</span><span class="o">:</span> <span class="mi">2018</span>  <span class="c1">// 年</span>
+    <span class="p">},</span>
+    <span class="s2">&quot;status&quot;</span><span class="o">:</span> <span class="p">{</span>
+        <span class="s2">&quot;code&quot;</span><span class="o">:</span> <span class="mi">201</span><span class="p">,</span>
+        <span class="s2">&quot;message&quot;</span><span class="o">:</span> <span class="s2">&quot;All created.&quot;</span>
     <span class="p">},</span>
     <span class="s2">&quot;success&quot;</span><span class="o">:</span> <span class="kc">true</span>
 <span class="p">}</span>

@@ -92,11 +92,13 @@
 <li class="toctree-l2"><a class="reference internal" href="../products/models.html">商品规格模块</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../products/labels.html">标签模块</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../products/return_policies.html">商家退换货规则模块</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../products/store_product_packet.html">商品组模块</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../products/distributions.html">分销模块</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../products/wish.html">心愿清单模块</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../products/user_record.html">用户商品记录模块</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../products/assets.html">附件模块</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../products/wx_app_design.html">小程序配置模块</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../distributions/index.html">分销API模块</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../distributions/distributions.html">分销模块</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../distributions/store_product_packet.html">商品组模块</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="../customers/index.html">分销客户API模块</a><ul>
@@ -111,6 +113,7 @@
 <li class="toctree-l1"><a class="reference internal" href="../shopes/index.html">微商城API模块</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="../shopes/shopes.html">微商城模块</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../shopes/store.html">店铺模块</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../shopes/wxapp.html">小程序模块</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="../market/index.html">营销API模块</a><ul>
@@ -125,11 +128,21 @@
 <li class="toctree-l1"><a class="reference internal" href="../users/index.html">用户API模块</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="../users/users.html">用户模块</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../users/auth.html">用户认证模块</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../users/finance.html">账户模块</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../wx_apps/index.html">小程序API模块</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../wx_apps/wx_app_design.html">小程序配置模块</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="../common.html">公用接口模块</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="../common.html#id2">幻灯图列表</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../common.html#id6">搜索关键词历史</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../common.html#id10">注册发送短信验证码</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../common.html#id15">登陆发送短信验证码</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../common.html#id19">动态登陆发送短信验证码</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../common.html#id23">账户编辑发送短信验证码</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../common.html#id27">发送邮件验证码</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="../setting.html">系统相关配置文档</a><ul>
@@ -170,7 +183,7 @@
 <li><a class="reference internal" href="#id7">返回示例</a></li>
 </ul>
 </li>
-<li><a class="reference internal" href="#id8">默认收货地址</a><ul>
+<li><a class="reference internal" href="#id8">获取默认收货地址</a><ul>
 <li><a class="reference internal" href="#id9">接口说明</a></li>
 <li><a class="reference internal" href="#id10">返回示例</a></li>
 </ul>
@@ -233,26 +246,27 @@
 <li><a class="reference internal" href="#id48">返回示例</a></li>
 </ul>
 </li>
-<li><a class="reference internal" href="#id49">验证用户海关信息是否存在</a><ul>
+<li><a class="reference internal" href="#id49">新增地址海关信息</a><ul>
 <li><a class="reference internal" href="#id50">接口说明</a></li>
-<li><a class="reference internal" href="#id51">返回示例</a></li>
+<li><a class="reference internal" href="#id51">请求参数</a></li>
+<li><a class="reference internal" href="#id52">返回示例</a></li>
 </ul>
 </li>
-<li><a class="reference internal" href="#id52">新增地址海关信息</a><ul>
-<li><a class="reference internal" href="#id53">接口说明</a></li>
-<li><a class="reference internal" href="#id54">请求参数</a></li>
-<li><a class="reference internal" href="#id55">返回示例</a></li>
+<li><a class="reference internal" href="#id53">更新地址海关信息</a><ul>
+<li><a class="reference internal" href="#id54">接口说明</a></li>
+<li><a class="reference internal" href="#id55">请求参数</a></li>
+<li><a class="reference internal" href="#id56">返回示例</a></li>
 </ul>
 </li>
-<li><a class="reference internal" href="#id56">更新地址海关信息</a><ul>
-<li><a class="reference internal" href="#id57">接口说明</a></li>
-<li><a class="reference internal" href="#id58">请求参数</a></li>
-<li><a class="reference internal" href="#id59">返回示例</a></li>
+<li><a class="reference internal" href="#id57">删除地址海关信息</a><ul>
+<li><a class="reference internal" href="#id58">接口说明</a></li>
+<li><a class="reference internal" href="#id59">请求参数</a></li>
+<li><a class="reference internal" href="#id60">返回示例</a></li>
 </ul>
 </li>
-<li><a class="reference internal" href="#id60">删除地址海关信息</a><ul>
-<li><a class="reference internal" href="#id61">接口说明</a></li>
-<li><a class="reference internal" href="#id62">返回示例</a></li>
+<li><a class="reference internal" href="#id61">获取用户收货地址海关信息</a><ul>
+<li><a class="reference internal" href="#id62">接口说明</a></li>
+<li><a class="reference internal" href="#id63">返回示例</a></li>
 </ul>
 </li>
 </ul>
@@ -297,7 +311,7 @@
 <li><a class="reference internal" href="#id7">返回示例</a></li>
 </ul>
 </li>
-<li><a class="reference internal" href="#id8">默认收货地址</a><ul>
+<li><a class="reference internal" href="#id8">获取默认收货地址</a><ul>
 <li><a class="reference internal" href="#id9">接口说明</a></li>
 <li><a class="reference internal" href="#id10">返回示例</a></li>
 </ul>
@@ -360,26 +374,27 @@
 <li><a class="reference internal" href="#id48">返回示例</a></li>
 </ul>
 </li>
-<li><a class="reference internal" href="#id49">验证用户海关信息是否存在</a><ul>
+<li><a class="reference internal" href="#id49">新增地址海关信息</a><ul>
 <li><a class="reference internal" href="#id50">接口说明</a></li>
-<li><a class="reference internal" href="#id51">返回示例</a></li>
+<li><a class="reference internal" href="#id51">请求参数</a></li>
+<li><a class="reference internal" href="#id52">返回示例</a></li>
 </ul>
 </li>
-<li><a class="reference internal" href="#id52">新增地址海关信息</a><ul>
-<li><a class="reference internal" href="#id53">接口说明</a></li>
-<li><a class="reference internal" href="#id54">请求参数</a></li>
-<li><a class="reference internal" href="#id55">返回示例</a></li>
+<li><a class="reference internal" href="#id53">更新地址海关信息</a><ul>
+<li><a class="reference internal" href="#id54">接口说明</a></li>
+<li><a class="reference internal" href="#id55">请求参数</a></li>
+<li><a class="reference internal" href="#id56">返回示例</a></li>
 </ul>
 </li>
-<li><a class="reference internal" href="#id56">更新地址海关信息</a><ul>
-<li><a class="reference internal" href="#id57">接口说明</a></li>
-<li><a class="reference internal" href="#id58">请求参数</a></li>
-<li><a class="reference internal" href="#id59">返回示例</a></li>
+<li><a class="reference internal" href="#id57">删除地址海关信息</a><ul>
+<li><a class="reference internal" href="#id58">接口说明</a></li>
+<li><a class="reference internal" href="#id59">请求参数</a></li>
+<li><a class="reference internal" href="#id60">返回示例</a></li>
 </ul>
 </li>
-<li><a class="reference internal" href="#id60">删除地址海关信息</a><ul>
-<li><a class="reference internal" href="#id61">接口说明</a></li>
-<li><a class="reference internal" href="#id62">返回示例</a></li>
+<li><a class="reference internal" href="#id61">获取用户收货地址海关信息</a><ul>
+<li><a class="reference internal" href="#id62">接口说明</a></li>
+<li><a class="reference internal" href="#id63">返回示例</a></li>
 </ul>
 </li>
 </ul>
@@ -430,30 +445,37 @@
 <p>JSON数据格式:</p>
 <p>请求 <strong>正确</strong> 返回结果：</p>
 <div class="highlight-javascript"><div class="highlight"><pre><span></span><span class="p">{</span>
-  <span class="s2">&quot;data&quot;</span><span class="o">:</span> <span class="p">[</span>
-    <span class="p">{</span>
-      <span class="s2">&quot;area&quot;</span><span class="o">:</span> <span class="s2">&quot;四环至五环之间&quot;</span><span class="p">,</span>
-      <span class="s2">&quot;city&quot;</span><span class="o">:</span> <span class="s2">&quot;北京市&quot;</span><span class="p">,</span>
-      <span class="s2">&quot;first_name&quot;</span><span class="o">:</span> <span class="s2">&quot;田&quot;</span><span class="p">,</span>
-      <span class="s2">&quot;full_name&quot;</span><span class="o">:</span> <span class="s2">&quot;田帅&quot;</span><span class="p">,</span>
-      <span class="s2">&quot;is_default&quot;</span><span class="o">:</span> <span class="kc">false</span><span class="p">,</span>
-      <span class="s2">&quot;last_name&quot;</span><span class="o">:</span> <span class="s2">&quot;帅&quot;</span><span class="p">,</span>
-      <span class="s2">&quot;mobile&quot;</span><span class="o">:</span> <span class="s2">&quot;18610230451&quot;</span><span class="p">,</span>
-      <span class="s2">&quot;phone&quot;</span><span class="o">:</span> <span class="s2">&quot;01084599328&quot;</span><span class="p">,</span>
-      <span class="s2">&quot;province&quot;</span><span class="o">:</span> <span class="s2">&quot;北京&quot;</span><span class="p">,</span>
-      <span class="s2">&quot;rid&quot;</span><span class="o">:</span> <span class="s2">&quot;57501684&quot;</span><span class="p">,</span>
-      <span class="s2">&quot;street_address&quot;</span><span class="o">:</span> <span class="s2">&quot;751设计广场&quot;</span><span class="p">,</span>
-      <span class="s2">&quot;street_address_two&quot;</span><span class="o">:</span> <span class="kc">null</span><span class="p">,</span>
-      <span class="s2">&quot;town&quot;</span><span class="o">:</span> <span class="s2">&quot;朝阳区&quot;</span><span class="p">,</span>
-      <span class="s2">&quot;zipcode&quot;</span><span class="o">:</span> <span class="kc">null</span>
+    <span class="s2">&quot;data&quot;</span><span class="o">:</span> <span class="p">[</span>
+        <span class="p">{</span>
+            <span class="s2">&quot;area&quot;</span><span class="o">:</span> <span class="kc">null</span><span class="p">,</span>  <span class="c1">// 区域</span>
+            <span class="s2">&quot;area_id&quot;</span><span class="o">:</span> <span class="kc">null</span><span class="p">,</span>  <span class="c1">// 区域oid</span>
+            <span class="s2">&quot;city&quot;</span><span class="o">:</span> <span class="s2">&quot;北京&quot;</span><span class="p">,</span>  <span class="c1">// 城市</span>
+            <span class="s2">&quot;city_id&quot;</span><span class="o">:</span> <span class="mi">1</span><span class="p">,</span>  <span class="c1">// 城市oid</span>
+            <span class="s2">&quot;country_id&quot;</span><span class="o">:</span> <span class="mi">1</span><span class="p">,</span>  <span class="c1">// 国家id</span>
+            <span class="s2">&quot;first_name&quot;</span><span class="o">:</span> <span class="s2">&quot;田&quot;</span><span class="p">,</span>  <span class="c1">// 姓</span>
+            <span class="s2">&quot;full_address&quot;</span><span class="o">:</span> <span class="s2">&quot;北京北京大街&quot;</span><span class="p">,</span>  <span class="c1">// 地址</span>
+            <span class="s2">&quot;full_name&quot;</span><span class="o">:</span> <span class="s2">&quot;田帅&quot;</span><span class="p">,</span>  <span class="c1">// 姓名</span>
+            <span class="s2">&quot;is_default&quot;</span><span class="o">:</span> <span class="kc">false</span><span class="p">,</span>  <span class="c1">// 是否默认</span>
+            <span class="s2">&quot;is_from_wx&quot;</span><span class="o">:</span> <span class="kc">false</span><span class="p">,</span>  <span class="c1">// 是否微信地址</span>
+            <span class="s2">&quot;is_overseas&quot;</span><span class="o">:</span> <span class="kc">false</span><span class="p">,</span>  <span class="c1">// 是否海外地址</span>
+            <span class="s2">&quot;last_name&quot;</span><span class="o">:</span> <span class="kc">null</span><span class="p">,</span>  <span class="c1">// 名</span>
+            <span class="s2">&quot;mobile&quot;</span><span class="o">:</span> <span class="s2">&quot;13278989898&quot;</span><span class="p">,</span>  <span class="c1">// 手机</span>
+            <span class="s2">&quot;phone&quot;</span><span class="o">:</span> <span class="kc">null</span><span class="p">,</span>  <span class="c1">// 电话</span>
+            <span class="s2">&quot;province&quot;</span><span class="o">:</span> <span class="s2">&quot;北京&quot;</span><span class="p">,</span>  <span class="c1">// 省</span>
+            <span class="s2">&quot;province_id&quot;</span><span class="o">:</span> <span class="mi">1</span><span class="p">,</span>  <span class="c1">// 省oid</span>
+            <span class="s2">&quot;rid&quot;</span><span class="o">:</span> <span class="s2">&quot;5254096781&quot;</span><span class="p">,</span>  <span class="c1">// 地址rid</span>
+            <span class="s2">&quot;street_address&quot;</span><span class="o">:</span> <span class="s2">&quot;大街&quot;</span><span class="p">,</span>  <span class="c1">// 街道</span>
+            <span class="s2">&quot;street_address_two&quot;</span><span class="o">:</span> <span class="kc">null</span><span class="p">,</span>  <span class="c1">//</span>
+            <span class="s2">&quot;town&quot;</span><span class="o">:</span> <span class="kc">null</span><span class="p">,</span>  <span class="c1">// 镇</span>
+            <span class="s2">&quot;town_id&quot;</span><span class="o">:</span> <span class="mi">0</span><span class="p">,</span>  <span class="c1">// 镇oid</span>
+            <span class="s2">&quot;zipcode&quot;</span><span class="o">:</span> <span class="kc">null</span>
+        <span class="p">}</span>
+    <span class="p">],</span>
+    <span class="s2">&quot;status&quot;</span><span class="o">:</span> <span class="p">{</span>
+        <span class="s2">&quot;code&quot;</span><span class="o">:</span> <span class="mi">200</span><span class="p">,</span>
+        <span class="s2">&quot;message&quot;</span><span class="o">:</span> <span class="s2">&quot;Ok all right.&quot;</span>
     <span class="p">},</span>
-    <span class="p">...</span>
-  <span class="p">],</span>
-  <span class="s2">&quot;status&quot;</span><span class="o">:</span> <span class="p">{</span>
-    <span class="s2">&quot;code&quot;</span><span class="o">:</span> <span class="mi">200</span><span class="p">,</span>
-    <span class="s2">&quot;message&quot;</span><span class="o">:</span> <span class="s2">&quot;Ok all right.&quot;</span>
-  <span class="p">},</span>
-  <span class="s2">&quot;success&quot;</span><span class="o">:</span> <span class="kc">true</span>
+    <span class="s2">&quot;success&quot;</span><span class="o">:</span> <span class="kc">true</span>
 <span class="p">}</span>
 </pre></div>
 </div>
@@ -475,34 +497,42 @@
 <p>JSON数据格式:</p>
 <p>请求 <strong>正确</strong> 返回结果：</p>
 <div class="highlight-javascript"><div class="highlight"><pre><span></span><span class="p">{</span>
-  <span class="s2">&quot;data&quot;</span><span class="o">:</span> <span class="p">{</span>
-    <span class="s2">&quot;area&quot;</span><span class="o">:</span> <span class="s2">&quot;四环至五环之间&quot;</span><span class="p">,</span>
-    <span class="s2">&quot;city&quot;</span><span class="o">:</span> <span class="s2">&quot;北京市&quot;</span><span class="p">,</span>
-    <span class="s2">&quot;first_name&quot;</span><span class="o">:</span> <span class="s2">&quot;田&quot;</span><span class="p">,</span>
-    <span class="s2">&quot;full_name&quot;</span><span class="o">:</span> <span class="s2">&quot;田帅&quot;</span><span class="p">,</span>
-    <span class="s2">&quot;is_default&quot;</span><span class="o">:</span> <span class="kc">false</span><span class="p">,</span>
-    <span class="s2">&quot;last_name&quot;</span><span class="o">:</span> <span class="s2">&quot;帅&quot;</span><span class="p">,</span>
-    <span class="s2">&quot;mobile&quot;</span><span class="o">:</span> <span class="s2">&quot;18610230451&quot;</span><span class="p">,</span>
-    <span class="s2">&quot;phone&quot;</span><span class="o">:</span> <span class="s2">&quot;01084599328&quot;</span><span class="p">,</span>
-    <span class="s2">&quot;province&quot;</span><span class="o">:</span> <span class="s2">&quot;北京&quot;</span><span class="p">,</span>
-    <span class="s2">&quot;rid&quot;</span><span class="o">:</span> <span class="s2">&quot;58237496&quot;</span><span class="p">,</span>
-    <span class="s2">&quot;street_address&quot;</span><span class="o">:</span> <span class="s2">&quot;751设计广场&quot;</span><span class="p">,</span>
-    <span class="s2">&quot;street_address_two&quot;</span><span class="o">:</span> <span class="kc">null</span><span class="p">,</span>
-    <span class="s2">&quot;town&quot;</span><span class="o">:</span> <span class="s2">&quot;朝阳区&quot;</span><span class="p">,</span>
-    <span class="s2">&quot;zipcode&quot;</span><span class="o">:</span> <span class="kc">null</span>
-  <span class="p">},</span>
-  <span class="s2">&quot;status&quot;</span><span class="o">:</span> <span class="p">{</span>
-    <span class="s2">&quot;code&quot;</span><span class="o">:</span> <span class="mi">200</span><span class="p">,</span>
-    <span class="s2">&quot;message&quot;</span><span class="o">:</span> <span class="s2">&quot;Ok all right.&quot;</span>
-  <span class="p">},</span>
-  <span class="s2">&quot;success&quot;</span><span class="o">:</span> <span class="kc">true</span>
+    <span class="s2">&quot;data&quot;</span><span class="o">:</span> <span class="p">{</span>
+        <span class="s2">&quot;area&quot;</span><span class="o">:</span> <span class="kc">null</span><span class="p">,</span>  <span class="c1">// 区域</span>
+        <span class="s2">&quot;area_id&quot;</span><span class="o">:</span> <span class="kc">null</span><span class="p">,</span>  <span class="c1">// 区域oid</span>
+        <span class="s2">&quot;city&quot;</span><span class="o">:</span> <span class="s2">&quot;北京&quot;</span><span class="p">,</span>  <span class="c1">// 城市</span>
+        <span class="s2">&quot;city_id&quot;</span><span class="o">:</span> <span class="mi">1</span><span class="p">,</span>  <span class="c1">// 城市oid</span>
+        <span class="s2">&quot;country_id&quot;</span><span class="o">:</span> <span class="mi">1</span><span class="p">,</span>  <span class="c1">// 国家id</span>
+        <span class="s2">&quot;first_name&quot;</span><span class="o">:</span> <span class="s2">&quot;田&quot;</span><span class="p">,</span>  <span class="c1">// 姓</span>
+        <span class="s2">&quot;full_address&quot;</span><span class="o">:</span> <span class="s2">&quot;北京北京大街&quot;</span><span class="p">,</span>  <span class="c1">// 地址</span>
+        <span class="s2">&quot;full_name&quot;</span><span class="o">:</span> <span class="s2">&quot;田帅&quot;</span><span class="p">,</span>  <span class="c1">// 姓名</span>
+        <span class="s2">&quot;is_default&quot;</span><span class="o">:</span> <span class="kc">false</span><span class="p">,</span>  <span class="c1">// 是否默认</span>
+        <span class="s2">&quot;is_from_wx&quot;</span><span class="o">:</span> <span class="kc">false</span><span class="p">,</span>  <span class="c1">// 是否微信地址</span>
+        <span class="s2">&quot;is_overseas&quot;</span><span class="o">:</span> <span class="kc">false</span><span class="p">,</span>  <span class="c1">// 是否海外地址</span>
+        <span class="s2">&quot;last_name&quot;</span><span class="o">:</span> <span class="kc">null</span><span class="p">,</span>  <span class="c1">// 名</span>
+        <span class="s2">&quot;mobile&quot;</span><span class="o">:</span> <span class="s2">&quot;13278989898&quot;</span><span class="p">,</span>  <span class="c1">// 手机</span>
+        <span class="s2">&quot;phone&quot;</span><span class="o">:</span> <span class="kc">null</span><span class="p">,</span>  <span class="c1">// 电话</span>
+        <span class="s2">&quot;province&quot;</span><span class="o">:</span> <span class="s2">&quot;北京&quot;</span><span class="p">,</span>  <span class="c1">// 省</span>
+        <span class="s2">&quot;province_id&quot;</span><span class="o">:</span> <span class="mi">1</span><span class="p">,</span>  <span class="c1">// 省oid</span>
+        <span class="s2">&quot;rid&quot;</span><span class="o">:</span> <span class="s2">&quot;5254096781&quot;</span><span class="p">,</span>  <span class="c1">// 地址rid</span>
+        <span class="s2">&quot;street_address&quot;</span><span class="o">:</span> <span class="s2">&quot;大街&quot;</span><span class="p">,</span>  <span class="c1">// 街道</span>
+        <span class="s2">&quot;street_address_two&quot;</span><span class="o">:</span> <span class="kc">null</span><span class="p">,</span>  <span class="c1">//</span>
+        <span class="s2">&quot;town&quot;</span><span class="o">:</span> <span class="kc">null</span><span class="p">,</span>  <span class="c1">// 镇</span>
+        <span class="s2">&quot;town_id&quot;</span><span class="o">:</span> <span class="mi">0</span><span class="p">,</span>  <span class="c1">// 镇oid</span>
+        <span class="s2">&quot;zipcode&quot;</span><span class="o">:</span> <span class="kc">null</span>
+    <span class="p">},</span>
+    <span class="s2">&quot;status&quot;</span><span class="o">:</span> <span class="p">{</span>
+        <span class="s2">&quot;code&quot;</span><span class="o">:</span> <span class="mi">200</span><span class="p">,</span>
+        <span class="s2">&quot;message&quot;</span><span class="o">:</span> <span class="s2">&quot;Ok all right.&quot;</span>
+    <span class="p">},</span>
+    <span class="s2">&quot;success&quot;</span><span class="o">:</span> <span class="kc">true</span>
 <span class="p">}</span>
 </pre></div>
 </div>
 </div>
 </div>
 <div class="section" id="id8">
-<h2>默认收货地址<a class="headerlink" href="#id8" title="永久链接至标题">¶</a></h2>
+<h2>获取默认收货地址<a class="headerlink" href="#id8" title="永久链接至标题">¶</a></h2>
 <p>获取某用户设置的默认收货地址</p>
 <div class="section" id="id9">
 <h3>接口说明<a class="headerlink" href="#id9" title="永久链接至标题">¶</a></h3>
@@ -517,27 +547,35 @@
 <p>JSON数据格式:</p>
 <p>请求 <strong>正确</strong> 返回结果：</p>
 <div class="highlight-javascript"><div class="highlight"><pre><span></span><span class="p">{</span>
-  <span class="s2">&quot;data&quot;</span><span class="o">:</span> <span class="p">{</span>
-    <span class="s2">&quot;area&quot;</span><span class="o">:</span> <span class="s2">&quot;四环至五环之间&quot;</span><span class="p">,</span>
-    <span class="s2">&quot;city&quot;</span><span class="o">:</span> <span class="s2">&quot;北京市&quot;</span><span class="p">,</span>
-    <span class="s2">&quot;first_name&quot;</span><span class="o">:</span> <span class="s2">&quot;田&quot;</span><span class="p">,</span>
-    <span class="s2">&quot;full_name&quot;</span><span class="o">:</span> <span class="s2">&quot;田帅&quot;</span><span class="p">,</span>
-    <span class="s2">&quot;is_default&quot;</span><span class="o">:</span> <span class="kc">true</span><span class="p">,</span>
-    <span class="s2">&quot;last_name&quot;</span><span class="o">:</span> <span class="s2">&quot;帅&quot;</span><span class="p">,</span>
-    <span class="s2">&quot;mobile&quot;</span><span class="o">:</span> <span class="s2">&quot;18610230451&quot;</span><span class="p">,</span>
-    <span class="s2">&quot;phone&quot;</span><span class="o">:</span> <span class="s2">&quot;01084599328&quot;</span><span class="p">,</span>
-    <span class="s2">&quot;province&quot;</span><span class="o">:</span> <span class="s2">&quot;北京&quot;</span><span class="p">,</span>
-    <span class="s2">&quot;rid&quot;</span><span class="o">:</span> <span class="s2">&quot;5758463019&quot;</span><span class="p">,</span>
-    <span class="s2">&quot;street_address&quot;</span><span class="o">:</span> <span class="s2">&quot;751设计广场&quot;</span><span class="p">,</span>
-    <span class="s2">&quot;street_address_two&quot;</span><span class="o">:</span> <span class="kc">null</span><span class="p">,</span>
-    <span class="s2">&quot;town&quot;</span><span class="o">:</span> <span class="s2">&quot;朝阳区&quot;</span><span class="p">,</span>
-    <span class="s2">&quot;zipcode&quot;</span><span class="o">:</span> <span class="kc">null</span>
-  <span class="p">},</span>
-  <span class="s2">&quot;status&quot;</span><span class="o">:</span> <span class="p">{</span>
-    <span class="s2">&quot;code&quot;</span><span class="o">:</span> <span class="mi">200</span><span class="p">,</span>
-    <span class="s2">&quot;message&quot;</span><span class="o">:</span> <span class="s2">&quot;Ok all right.&quot;</span>
-  <span class="p">},</span>
-  <span class="s2">&quot;success&quot;</span><span class="o">:</span> <span class="kc">true</span>
+    <span class="s2">&quot;data&quot;</span><span class="o">:</span> <span class="p">{</span>
+        <span class="s2">&quot;area&quot;</span><span class="o">:</span> <span class="kc">null</span><span class="p">,</span>  <span class="c1">// 区域</span>
+        <span class="s2">&quot;area_id&quot;</span><span class="o">:</span> <span class="kc">null</span><span class="p">,</span>  <span class="c1">// 区域oid</span>
+        <span class="s2">&quot;city&quot;</span><span class="o">:</span> <span class="s2">&quot;北京&quot;</span><span class="p">,</span>  <span class="c1">// 城市</span>
+        <span class="s2">&quot;city_id&quot;</span><span class="o">:</span> <span class="mi">1</span><span class="p">,</span>  <span class="c1">// 城市oid</span>
+        <span class="s2">&quot;country_id&quot;</span><span class="o">:</span> <span class="mi">1</span><span class="p">,</span>  <span class="c1">// 国家id</span>
+        <span class="s2">&quot;first_name&quot;</span><span class="o">:</span> <span class="s2">&quot;田&quot;</span><span class="p">,</span>  <span class="c1">// 姓</span>
+        <span class="s2">&quot;full_address&quot;</span><span class="o">:</span> <span class="s2">&quot;北京北京大街&quot;</span><span class="p">,</span>  <span class="c1">// 地址</span>
+        <span class="s2">&quot;full_name&quot;</span><span class="o">:</span> <span class="s2">&quot;田帅&quot;</span><span class="p">,</span>  <span class="c1">// 姓名</span>
+        <span class="s2">&quot;is_default&quot;</span><span class="o">:</span> <span class="kc">false</span><span class="p">,</span>  <span class="c1">// 是否默认</span>
+        <span class="s2">&quot;is_from_wx&quot;</span><span class="o">:</span> <span class="kc">false</span><span class="p">,</span>  <span class="c1">// 是否微信地址</span>
+        <span class="s2">&quot;is_overseas&quot;</span><span class="o">:</span> <span class="kc">false</span><span class="p">,</span>  <span class="c1">// 是否海外地址</span>
+        <span class="s2">&quot;last_name&quot;</span><span class="o">:</span> <span class="kc">null</span><span class="p">,</span>  <span class="c1">// 名</span>
+        <span class="s2">&quot;mobile&quot;</span><span class="o">:</span> <span class="s2">&quot;13278989898&quot;</span><span class="p">,</span>  <span class="c1">// 手机</span>
+        <span class="s2">&quot;phone&quot;</span><span class="o">:</span> <span class="kc">null</span><span class="p">,</span>  <span class="c1">// 电话</span>
+        <span class="s2">&quot;province&quot;</span><span class="o">:</span> <span class="s2">&quot;北京&quot;</span><span class="p">,</span>  <span class="c1">// 省</span>
+        <span class="s2">&quot;province_id&quot;</span><span class="o">:</span> <span class="mi">1</span><span class="p">,</span>  <span class="c1">// 省oid</span>
+        <span class="s2">&quot;rid&quot;</span><span class="o">:</span> <span class="s2">&quot;5254096781&quot;</span><span class="p">,</span>  <span class="c1">// 地址rid</span>
+        <span class="s2">&quot;street_address&quot;</span><span class="o">:</span> <span class="s2">&quot;大街&quot;</span><span class="p">,</span>  <span class="c1">// 街道</span>
+        <span class="s2">&quot;street_address_two&quot;</span><span class="o">:</span> <span class="kc">null</span><span class="p">,</span>  <span class="c1">//</span>
+        <span class="s2">&quot;town&quot;</span><span class="o">:</span> <span class="kc">null</span><span class="p">,</span>  <span class="c1">// 镇</span>
+        <span class="s2">&quot;town_id&quot;</span><span class="o">:</span> <span class="mi">0</span><span class="p">,</span>  <span class="c1">// 镇oid</span>
+        <span class="s2">&quot;zipcode&quot;</span><span class="o">:</span> <span class="kc">null</span>
+    <span class="p">},</span>
+    <span class="s2">&quot;status&quot;</span><span class="o">:</span> <span class="p">{</span>
+        <span class="s2">&quot;code&quot;</span><span class="o">:</span> <span class="mi">200</span><span class="p">,</span>
+        <span class="s2">&quot;message&quot;</span><span class="o">:</span> <span class="s2">&quot;Ok all right.&quot;</span>
+    <span class="p">},</span>
+    <span class="s2">&quot;success&quot;</span><span class="o">:</span> <span class="kc">true</span>
 <span class="p">}</span>
 </pre></div>
 </div>
@@ -627,31 +665,31 @@
 <td>Number</td>
 <td>可选</td>
 <td>1</td>
-<td>国家</td>
+<td>国家id</td>
 </tr>
 <tr class="row-odd"><td>province_id</td>
 <td>Number</td>
 <td>必需</td>
 <td>&#160;</td>
-<td>省市</td>
+<td>省oid</td>
 </tr>
 <tr class="row-even"><td>city_id</td>
 <td>Number</td>
 <td>必需</td>
 <td>&#160;</td>
-<td>城区</td>
+<td>城区oid</td>
 </tr>
 <tr class="row-odd"><td>town_id</td>
 <td>Number</td>
 <td>可选</td>
 <td>&#160;</td>
-<td>镇/地区</td>
+<td>镇/地区oid</td>
 </tr>
 <tr class="row-even"><td>area_id</td>
 <td>Number</td>
 <td>可选</td>
 <td>&#160;</td>
-<td>村/区域</td>
+<td>村/区域oid</td>
 </tr>
 <tr class="row-odd"><td>street_address</td>
 <td>String</td>
@@ -683,12 +721,6 @@
 <td>False</td>
 <td>是否海外地址</td>
 </tr>
-<tr class="row-even"><td>user_custom_id</td>
-<td>Integer</td>
-<td>可选</td>
-<td>&#160;</td>
-<td>海关信息id</td>
-</tr>
 </tbody>
 </table>
 </div>
@@ -697,29 +729,35 @@
 <p>JSON数据格式:</p>
 <p>请求 <strong>正确</strong> 返回结果：</p>
 <div class="highlight-javascript"><div class="highlight"><pre><span></span><span class="p">{</span>
-  <span class="s2">&quot;data&quot;</span><span class="o">:</span> <span class="p">{</span>
-    <span class="s2">&quot;area&quot;</span><span class="o">:</span> <span class="s2">&quot;四环至五环之间&quot;</span><span class="p">,</span>
-    <span class="s2">&quot;city&quot;</span><span class="o">:</span> <span class="s2">&quot;北京市&quot;</span><span class="p">,</span>
-    <span class="s2">&quot;first_name&quot;</span><span class="o">:</span> <span class="s2">&quot;田&quot;</span><span class="p">,</span>
-    <span class="s2">&quot;full_address&quot;</span><span class="o">:</span> <span class="s2">&quot;北京顺义区光明街道&quot;</span><span class="p">,</span>
-    <span class="s2">&quot;full_name&quot;</span><span class="o">:</span> <span class="s2">&quot;田帅&quot;</span><span class="p">,</span>
-    <span class="s2">&quot;is_default&quot;</span><span class="o">:</span> <span class="kc">true</span><span class="p">,</span>
-    <span class="s2">&quot;is_overseas&quot;</span><span class="o">:</span> <span class="kc">false</span><span class="p">,</span>
-    <span class="s2">&quot;last_name&quot;</span><span class="o">:</span> <span class="s2">&quot;帅&quot;</span><span class="p">,</span>
-    <span class="s2">&quot;mobile&quot;</span><span class="o">:</span> <span class="s2">&quot;18610230451&quot;</span><span class="p">,</span>
-    <span class="s2">&quot;phone&quot;</span><span class="o">:</span> <span class="s2">&quot;01084599328&quot;</span><span class="p">,</span>
-    <span class="s2">&quot;province&quot;</span><span class="o">:</span> <span class="s2">&quot;北京&quot;</span><span class="p">,</span>
-    <span class="s2">&quot;rid&quot;</span><span class="o">:</span> <span class="s2">&quot;5748231905&quot;</span><span class="p">,</span>
-    <span class="s2">&quot;street_address&quot;</span><span class="o">:</span> <span class="s2">&quot;751设计广场&quot;</span><span class="p">,</span>
-    <span class="s2">&quot;street_address_two&quot;</span><span class="o">:</span> <span class="kc">null</span><span class="p">,</span>
-    <span class="s2">&quot;town&quot;</span><span class="o">:</span> <span class="s2">&quot;朝阳区&quot;</span><span class="p">,</span>
-    <span class="s2">&quot;zipcode&quot;</span><span class="o">:</span> <span class="s2">&quot;100015&quot;</span>
-  <span class="p">},</span>
-  <span class="s2">&quot;status&quot;</span><span class="o">:</span> <span class="p">{</span>
-    <span class="s2">&quot;code&quot;</span><span class="o">:</span> <span class="mi">201</span><span class="p">,</span>
-    <span class="s2">&quot;message&quot;</span><span class="o">:</span> <span class="s2">&quot;All created.&quot;</span>
-  <span class="p">},</span>
-  <span class="s2">&quot;success&quot;</span><span class="o">:</span> <span class="kc">true</span>
+    <span class="s2">&quot;data&quot;</span><span class="o">:</span> <span class="p">{</span>
+        <span class="s2">&quot;area&quot;</span><span class="o">:</span> <span class="kc">null</span><span class="p">,</span>  <span class="c1">// 区域</span>
+        <span class="s2">&quot;area_id&quot;</span><span class="o">:</span> <span class="kc">null</span><span class="p">,</span>  <span class="c1">// 区域oid</span>
+        <span class="s2">&quot;city&quot;</span><span class="o">:</span> <span class="s2">&quot;北京&quot;</span><span class="p">,</span>  <span class="c1">// 城市</span>
+        <span class="s2">&quot;city_id&quot;</span><span class="o">:</span> <span class="mi">1</span><span class="p">,</span>  <span class="c1">// 城市oid</span>
+        <span class="s2">&quot;country_id&quot;</span><span class="o">:</span> <span class="mi">1</span><span class="p">,</span>  <span class="c1">// 国家id</span>
+        <span class="s2">&quot;first_name&quot;</span><span class="o">:</span> <span class="s2">&quot;田&quot;</span><span class="p">,</span>  <span class="c1">// 姓</span>
+        <span class="s2">&quot;full_address&quot;</span><span class="o">:</span> <span class="s2">&quot;北京北京大街&quot;</span><span class="p">,</span>  <span class="c1">// 地址</span>
+        <span class="s2">&quot;full_name&quot;</span><span class="o">:</span> <span class="s2">&quot;田帅&quot;</span><span class="p">,</span>  <span class="c1">// 姓名</span>
+        <span class="s2">&quot;is_default&quot;</span><span class="o">:</span> <span class="kc">false</span><span class="p">,</span>  <span class="c1">// 是否默认</span>
+        <span class="s2">&quot;is_from_wx&quot;</span><span class="o">:</span> <span class="kc">false</span><span class="p">,</span>  <span class="c1">// 是否微信地址</span>
+        <span class="s2">&quot;is_overseas&quot;</span><span class="o">:</span> <span class="kc">false</span><span class="p">,</span>  <span class="c1">// 是否海外地址</span>
+        <span class="s2">&quot;last_name&quot;</span><span class="o">:</span> <span class="kc">null</span><span class="p">,</span>  <span class="c1">// 名</span>
+        <span class="s2">&quot;mobile&quot;</span><span class="o">:</span> <span class="s2">&quot;13278989898&quot;</span><span class="p">,</span>  <span class="c1">// 手机</span>
+        <span class="s2">&quot;phone&quot;</span><span class="o">:</span> <span class="kc">null</span><span class="p">,</span>  <span class="c1">// 电话</span>
+        <span class="s2">&quot;province&quot;</span><span class="o">:</span> <span class="s2">&quot;北京&quot;</span><span class="p">,</span>  <span class="c1">// 省</span>
+        <span class="s2">&quot;province_id&quot;</span><span class="o">:</span> <span class="mi">1</span><span class="p">,</span>  <span class="c1">// 省oid</span>
+        <span class="s2">&quot;rid&quot;</span><span class="o">:</span> <span class="s2">&quot;5254096781&quot;</span><span class="p">,</span>  <span class="c1">// 地址rid</span>
+        <span class="s2">&quot;street_address&quot;</span><span class="o">:</span> <span class="s2">&quot;大街&quot;</span><span class="p">,</span>  <span class="c1">// 街道</span>
+        <span class="s2">&quot;street_address_two&quot;</span><span class="o">:</span> <span class="kc">null</span><span class="p">,</span>  <span class="c1">//</span>
+        <span class="s2">&quot;town&quot;</span><span class="o">:</span> <span class="kc">null</span><span class="p">,</span>  <span class="c1">// 镇</span>
+        <span class="s2">&quot;town_id&quot;</span><span class="o">:</span> <span class="mi">0</span><span class="p">,</span>  <span class="c1">// 镇oid</span>
+        <span class="s2">&quot;zipcode&quot;</span><span class="o">:</span> <span class="kc">null</span>
+    <span class="p">},</span>
+    <span class="s2">&quot;status&quot;</span><span class="o">:</span> <span class="p">{</span>
+        <span class="s2">&quot;code&quot;</span><span class="o">:</span> <span class="mi">200</span><span class="p">,</span>
+        <span class="s2">&quot;message&quot;</span><span class="o">:</span> <span class="s2">&quot;Ok all right.&quot;</span>
+    <span class="p">},</span>
+    <span class="s2">&quot;success&quot;</span><span class="o">:</span> <span class="kc">true</span>
 <span class="p">}</span>
 </pre></div>
 </div>
@@ -741,43 +779,157 @@
 <div class="section" id="id19">
 <h3>接口说明<a class="headerlink" href="#id19" title="永久链接至标题">¶</a></h3>
 <ul class="simple">
-<li>API接口请求地址：<code class="docutils literal"><span class="pre">/address/&lt;rid&gt;</span></code></li>
+<li>API接口请求地址：<code class="docutils literal"><span class="pre">/address</span></code></li>
 <li>API接口请求方法：<code class="docutils literal"><span class="pre">PUT</span></code></li>
 <li>API接口用户授权：<code class="docutils literal"><span class="pre">token</span></code></li>
 </ul>
 </div>
 <div class="section" id="id20">
 <h3>请求参数<a class="headerlink" href="#id20" title="永久链接至标题">¶</a></h3>
-<p><code class="docutils literal"><span class="pre">备注</span></code> 与新增收货地址参数一致，请参考 <a class="reference internal" href="#id14">新增收货地址</a> 参数说明</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="27%" />
+<col width="13%" />
+<col width="11%" />
+<col width="13%" />
+<col width="37%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">名称</th>
+<th class="head">类型</th>
+<th class="head">是否必须</th>
+<th class="head">默认值</th>
+<th class="head">描述说明</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>rid</td>
+<td>String</td>
+<td>必需</td>
+<td>&#160;</td>
+<td>收货地址rid</td>
+</tr>
+<tr class="row-odd"><td>first_name</td>
+<td>String</td>
+<td>必需</td>
+<td>&#160;</td>
+<td>姓</td>
+</tr>
+<tr class="row-even"><td>last_name</td>
+<td>String</td>
+<td>可选</td>
+<td>&#160;</td>
+<td>名</td>
+</tr>
+<tr class="row-odd"><td>phone</td>
+<td>String</td>
+<td>可选</td>
+<td>&#160;</td>
+<td>电话</td>
+</tr>
+<tr class="row-even"><td>mobile</td>
+<td>String</td>
+<td>必需</td>
+<td>&#160;</td>
+<td>手机号码</td>
+</tr>
+<tr class="row-odd"><td>country_id</td>
+<td>Number</td>
+<td>可选</td>
+<td>1</td>
+<td>国家id</td>
+</tr>
+<tr class="row-even"><td>province_id</td>
+<td>Number</td>
+<td>必需</td>
+<td>&#160;</td>
+<td>省oid</td>
+</tr>
+<tr class="row-odd"><td>city_id</td>
+<td>Number</td>
+<td>必需</td>
+<td>&#160;</td>
+<td>城区oid</td>
+</tr>
+<tr class="row-even"><td>town_id</td>
+<td>Number</td>
+<td>可选</td>
+<td>&#160;</td>
+<td>镇/地区oid</td>
+</tr>
+<tr class="row-odd"><td>area_id</td>
+<td>Number</td>
+<td>可选</td>
+<td>&#160;</td>
+<td>村/区域oid</td>
+</tr>
+<tr class="row-even"><td>street_address</td>
+<td>String</td>
+<td>必需</td>
+<td>&#160;</td>
+<td>详细街道</td>
+</tr>
+<tr class="row-odd"><td>street_address_two</td>
+<td>String</td>
+<td>可选</td>
+<td>&#160;</td>
+<td>&#160;</td>
+</tr>
+<tr class="row-even"><td>zipcode</td>
+<td>Number</td>
+<td>可选</td>
+<td>&#160;</td>
+<td>邮编</td>
+</tr>
+<tr class="row-odd"><td>is_default</td>
+<td>Bool</td>
+<td>可选</td>
+<td>False</td>
+<td>是否默认地址</td>
+</tr>
+<tr class="row-even"><td>is_overseas</td>
+<td>Bool</td>
+<td>可选</td>
+<td>False</td>
+<td>是否海外地址</td>
+</tr>
+</tbody>
+</table>
 </div>
 <div class="section" id="id21">
 <h3>返回示例<a class="headerlink" href="#id21" title="永久链接至标题">¶</a></h3>
 <p>JSON数据格式:</p>
 <p>请求 <strong>正确</strong> 返回结果：</p>
 <div class="highlight-javascript"><div class="highlight"><pre><span></span><span class="p">{</span>
-  <span class="s2">&quot;data&quot;</span><span class="o">:</span> <span class="p">{</span>
-    <span class="s2">&quot;area&quot;</span><span class="o">:</span> <span class="s2">&quot;四环至五环之间&quot;</span><span class="p">,</span>
-    <span class="s2">&quot;city&quot;</span><span class="o">:</span> <span class="s2">&quot;北京市&quot;</span><span class="p">,</span>
-    <span class="s2">&quot;first_name&quot;</span><span class="o">:</span> <span class="s2">&quot;田&quot;</span><span class="p">,</span>
-    <span class="s2">&quot;full_address&quot;</span><span class="o">:</span> <span class="s2">&quot;北京顺义区光明街道&quot;</span><span class="p">,</span>
-    <span class="s2">&quot;full_name&quot;</span><span class="o">:</span> <span class="s2">&quot;田小北&quot;</span><span class="p">,</span>
-    <span class="s2">&quot;is_default&quot;</span><span class="o">:</span> <span class="kc">true</span><span class="p">,</span>
-    <span class="s2">&quot;is_overseas&quot;</span><span class="o">:</span> <span class="kc">false</span><span class="p">,</span>
-    <span class="s2">&quot;last_name&quot;</span><span class="o">:</span> <span class="s2">&quot;小北&quot;</span><span class="p">,</span>
-    <span class="s2">&quot;mobile&quot;</span><span class="o">:</span> <span class="s2">&quot;18610230451&quot;</span><span class="p">,</span>
-    <span class="s2">&quot;phone&quot;</span><span class="o">:</span> <span class="s2">&quot;01084599328&quot;</span><span class="p">,</span>
-    <span class="s2">&quot;province&quot;</span><span class="o">:</span> <span class="s2">&quot;北京&quot;</span><span class="p">,</span>
-    <span class="s2">&quot;rid&quot;</span><span class="o">:</span> <span class="s2">&quot;5748231905&quot;</span><span class="p">,</span>
-    <span class="s2">&quot;street_address&quot;</span><span class="o">:</span> <span class="s2">&quot;751设计广场&quot;</span><span class="p">,</span>
-    <span class="s2">&quot;street_address_two&quot;</span><span class="o">:</span> <span class="kc">null</span><span class="p">,</span>
-    <span class="s2">&quot;town&quot;</span><span class="o">:</span> <span class="s2">&quot;朝阳区&quot;</span><span class="p">,</span>
-    <span class="s2">&quot;zipcode&quot;</span><span class="o">:</span> <span class="s2">&quot;100015&quot;</span>
-  <span class="p">},</span>
-  <span class="s2">&quot;status&quot;</span><span class="o">:</span> <span class="p">{</span>
-    <span class="s2">&quot;code&quot;</span><span class="o">:</span> <span class="mi">200</span><span class="p">,</span>
-    <span class="s2">&quot;message&quot;</span><span class="o">:</span> <span class="s2">&quot;Ok all right.&quot;</span>
-  <span class="p">},</span>
-  <span class="s2">&quot;success&quot;</span><span class="o">:</span> <span class="kc">true</span>
+    <span class="s2">&quot;data&quot;</span><span class="o">:</span> <span class="p">{</span>
+        <span class="s2">&quot;area&quot;</span><span class="o">:</span> <span class="kc">null</span><span class="p">,</span>  <span class="c1">// 区域</span>
+        <span class="s2">&quot;area_id&quot;</span><span class="o">:</span> <span class="kc">null</span><span class="p">,</span>  <span class="c1">// 区域oid</span>
+        <span class="s2">&quot;city&quot;</span><span class="o">:</span> <span class="s2">&quot;北京&quot;</span><span class="p">,</span>  <span class="c1">// 城市</span>
+        <span class="s2">&quot;city_id&quot;</span><span class="o">:</span> <span class="mi">1</span><span class="p">,</span>  <span class="c1">// 城市oid</span>
+        <span class="s2">&quot;country_id&quot;</span><span class="o">:</span> <span class="mi">1</span><span class="p">,</span>  <span class="c1">// 国家id</span>
+        <span class="s2">&quot;first_name&quot;</span><span class="o">:</span> <span class="s2">&quot;田&quot;</span><span class="p">,</span>  <span class="c1">// 姓</span>
+        <span class="s2">&quot;full_address&quot;</span><span class="o">:</span> <span class="s2">&quot;北京北京大街&quot;</span><span class="p">,</span>  <span class="c1">// 地址</span>
+        <span class="s2">&quot;full_name&quot;</span><span class="o">:</span> <span class="s2">&quot;田帅&quot;</span><span class="p">,</span>  <span class="c1">// 姓名</span>
+        <span class="s2">&quot;is_default&quot;</span><span class="o">:</span> <span class="kc">false</span><span class="p">,</span>  <span class="c1">// 是否默认</span>
+        <span class="s2">&quot;is_from_wx&quot;</span><span class="o">:</span> <span class="kc">false</span><span class="p">,</span>  <span class="c1">// 是否微信地址</span>
+        <span class="s2">&quot;is_overseas&quot;</span><span class="o">:</span> <span class="kc">false</span><span class="p">,</span>  <span class="c1">// 是否海外地址</span>
+        <span class="s2">&quot;last_name&quot;</span><span class="o">:</span> <span class="kc">null</span><span class="p">,</span>  <span class="c1">// 名</span>
+        <span class="s2">&quot;mobile&quot;</span><span class="o">:</span> <span class="s2">&quot;13278989898&quot;</span><span class="p">,</span>  <span class="c1">// 手机</span>
+        <span class="s2">&quot;phone&quot;</span><span class="o">:</span> <span class="kc">null</span><span class="p">,</span>  <span class="c1">// 电话</span>
+        <span class="s2">&quot;province&quot;</span><span class="o">:</span> <span class="s2">&quot;北京&quot;</span><span class="p">,</span>  <span class="c1">// 省</span>
+        <span class="s2">&quot;province_id&quot;</span><span class="o">:</span> <span class="mi">1</span><span class="p">,</span>  <span class="c1">// 省oid</span>
+        <span class="s2">&quot;rid&quot;</span><span class="o">:</span> <span class="s2">&quot;5254096781&quot;</span><span class="p">,</span>  <span class="c1">// 地址rid</span>
+        <span class="s2">&quot;street_address&quot;</span><span class="o">:</span> <span class="s2">&quot;大街&quot;</span><span class="p">,</span>  <span class="c1">// 街道</span>
+        <span class="s2">&quot;street_address_two&quot;</span><span class="o">:</span> <span class="kc">null</span><span class="p">,</span>  <span class="c1">//</span>
+        <span class="s2">&quot;town&quot;</span><span class="o">:</span> <span class="kc">null</span><span class="p">,</span>  <span class="c1">// 镇</span>
+        <span class="s2">&quot;town_id&quot;</span><span class="o">:</span> <span class="mi">0</span><span class="p">,</span>  <span class="c1">// 镇oid</span>
+        <span class="s2">&quot;zipcode&quot;</span><span class="o">:</span> <span class="kc">null</span>
+    <span class="p">},</span>
+    <span class="s2">&quot;status&quot;</span><span class="o">:</span> <span class="p">{</span>
+        <span class="s2">&quot;code&quot;</span><span class="o">:</span> <span class="mi">200</span><span class="p">,</span>
+        <span class="s2">&quot;message&quot;</span><span class="o">:</span> <span class="s2">&quot;Ok all right.&quot;</span>
+    <span class="p">},</span>
+    <span class="s2">&quot;success&quot;</span><span class="o">:</span> <span class="kc">true</span>
 <span class="p">}</span>
 </pre></div>
 </div>
@@ -866,72 +1018,69 @@
 <p>JSON数据格式:</p>
 <p>请求 <strong>正确</strong> 返回结果：</p>
 <div class="highlight-javascript"><div class="highlight"><pre><span></span><span class="p">{</span>
-  <span class="s2">&quot;data&quot;</span><span class="o">:</span> <span class="p">{</span>
-    <span class="s2">&quot;k_1_0&quot;</span><span class="o">:</span> <span class="p">[</span>
-      <span class="p">{</span>
-        <span class="s2">&quot;name&quot;</span><span class="o">:</span> <span class="s2">&quot;北京&quot;</span><span class="p">,</span>
-        <span class="s2">&quot;pid&quot;</span><span class="o">:</span> <span class="mi">0</span><span class="p">,</span>
-        <span class="s2">&quot;rid&quot;</span><span class="o">:</span> <span class="mi">1</span><span class="p">,</span>
-        <span class="s2">&quot;sort_by&quot;</span><span class="o">:</span> <span class="mi">1</span><span class="p">,</span>
-        <span class="s2">&quot;status&quot;</span><span class="o">:</span> <span class="kc">true</span>
-      <span class="p">},</span>
-      <span class="p">{</span>
-        <span class="s2">&quot;name&quot;</span><span class="o">:</span> <span class="s2">&quot;天津&quot;</span><span class="p">,</span>
-        <span class="s2">&quot;pid&quot;</span><span class="o">:</span> <span class="mi">0</span><span class="p">,</span>
-        <span class="s2">&quot;rid&quot;</span><span class="o">:</span> <span class="mi">8</span><span class="p">,</span>
-        <span class="s2">&quot;sort_by&quot;</span><span class="o">:</span> <span class="mi">1</span><span class="p">,</span>
-        <span class="s2">&quot;status&quot;</span><span class="o">:</span> <span class="kc">true</span>
-      <span class="p">},</span>
-      <span class="p">{</span>
-        <span class="s2">&quot;name&quot;</span><span class="o">:</span> <span class="s2">&quot;河北省&quot;</span><span class="p">,</span>
-        <span class="s2">&quot;pid&quot;</span><span class="o">:</span> <span class="mi">0</span><span class="p">,</span>
-        <span class="s2">&quot;rid&quot;</span><span class="o">:</span> <span class="mi">9</span><span class="p">,</span>
-        <span class="s2">&quot;sort_by&quot;</span><span class="o">:</span> <span class="mi">1</span><span class="p">,</span>
-        <span class="s2">&quot;status&quot;</span><span class="o">:</span> <span class="kc">true</span>
-      <span class="p">},</span>
-      <span class="p">...</span>
-    <span class="p">],</span>
-    <span class="s2">&quot;k_2_1&quot;</span><span class="o">:</span> <span class="p">[</span>
-      <span class="p">{</span>
-        <span class="s2">&quot;name&quot;</span><span class="o">:</span> <span class="s2">&quot;北京市&quot;</span><span class="p">,</span>
-        <span class="s2">&quot;pid&quot;</span><span class="o">:</span> <span class="mi">1</span><span class="p">,</span>
-        <span class="s2">&quot;rid&quot;</span><span class="o">:</span> <span class="mi">3</span><span class="p">,</span>
-        <span class="s2">&quot;sort_by&quot;</span><span class="o">:</span> <span class="mi">1</span><span class="p">,</span>
-        <span class="s2">&quot;status&quot;</span><span class="o">:</span> <span class="kc">true</span>
-      <span class="p">}</span>
-    <span class="p">],</span>
-    <span class="s2">&quot;k_3_3&quot;</span><span class="o">:</span> <span class="p">[</span>
-      <span class="p">{</span>
-        <span class="s2">&quot;name&quot;</span><span class="o">:</span> <span class="s2">&quot;朝阳区&quot;</span><span class="p">,</span>
-        <span class="s2">&quot;pid&quot;</span><span class="o">:</span> <span class="mi">3</span><span class="p">,</span>
-        <span class="s2">&quot;rid&quot;</span><span class="o">:</span> <span class="mi">4</span><span class="p">,</span>
-        <span class="s2">&quot;sort_by&quot;</span><span class="o">:</span> <span class="mi">1</span><span class="p">,</span>
-        <span class="s2">&quot;status&quot;</span><span class="o">:</span> <span class="kc">true</span>
-      <span class="p">},</span>
-      <span class="p">{</span>
-        <span class="s2">&quot;name&quot;</span><span class="o">:</span> <span class="s2">&quot;海淀区&quot;</span><span class="p">,</span>
-        <span class="s2">&quot;pid&quot;</span><span class="o">:</span> <span class="mi">3</span><span class="p">,</span>
-        <span class="s2">&quot;rid&quot;</span><span class="o">:</span> <span class="mi">6</span><span class="p">,</span>
-        <span class="s2">&quot;sort_by&quot;</span><span class="o">:</span> <span class="mi">1</span><span class="p">,</span>
-        <span class="s2">&quot;status&quot;</span><span class="o">:</span> <span class="kc">true</span>
-      <span class="p">},</span>
-      <span class="p">...</span>
-    <span class="p">],</span>
-    <span class="s2">&quot;k_4_4&quot;</span><span class="o">:</span> <span class="p">[</span>
-      <span class="p">{</span>
-        <span class="s2">&quot;name&quot;</span><span class="o">:</span> <span class="s2">&quot;四环至五环之间&quot;</span><span class="p">,</span>
-        <span class="s2">&quot;pid&quot;</span><span class="o">:</span> <span class="mi">4</span><span class="p">,</span>
-        <span class="s2">&quot;rid&quot;</span><span class="o">:</span> <span class="mi">5</span><span class="p">,</span>
-        <span class="s2">&quot;sort_by&quot;</span><span class="o">:</span> <span class="mi">1</span><span class="p">,</span>
-        <span class="s2">&quot;status&quot;</span><span class="o">:</span> <span class="kc">true</span>
-      <span class="p">}</span>
-    <span class="p">]</span>
-  <span class="p">},</span>
-  <span class="s2">&quot;status&quot;</span><span class="o">:</span> <span class="p">{</span>
-    <span class="s2">&quot;code&quot;</span><span class="o">:</span> <span class="mi">200</span><span class="p">,</span>
-    <span class="s2">&quot;message&quot;</span><span class="o">:</span> <span class="s2">&quot;Ok all right.&quot;</span>
-  <span class="p">},</span>
-  <span class="s2">&quot;success&quot;</span><span class="o">:</span> <span class="kc">true</span>
+    <span class="s2">&quot;data&quot;</span><span class="o">:</span> <span class="p">{</span>
+        <span class="s2">&quot;k_1_None&quot;</span><span class="o">:</span> <span class="p">[</span>
+            <span class="p">{</span>
+                <span class="s2">&quot;area_scope&quot;</span><span class="o">:</span> <span class="kc">null</span><span class="p">,</span> <span class="c1">// 区域范围</span>
+                <span class="s2">&quot;name&quot;</span><span class="o">:</span> <span class="s2">&quot;北京&quot;</span><span class="p">,</span>
+                <span class="s2">&quot;oid&quot;</span><span class="o">:</span> <span class="mi">1</span><span class="p">,</span>
+                <span class="s2">&quot;pid&quot;</span><span class="o">:</span> <span class="kc">null</span><span class="p">,</span>
+                <span class="s2">&quot;sort_by&quot;</span><span class="o">:</span> <span class="mi">1</span><span class="p">,</span>
+                <span class="s2">&quot;status&quot;</span><span class="o">:</span> <span class="kc">true</span> <span class="c1">// 状态：显示 True; 隐藏 False</span>
+            <span class="p">},</span>
+            <span class="p">{</span>
+                <span class="s2">&quot;area_scope&quot;</span><span class="o">:</span> <span class="kc">null</span><span class="p">,</span>
+                <span class="s2">&quot;name&quot;</span><span class="o">:</span> <span class="s2">&quot;山东&quot;</span><span class="p">,</span>
+                <span class="s2">&quot;oid&quot;</span><span class="o">:</span> <span class="mi">3</span><span class="p">,</span>
+                <span class="s2">&quot;pid&quot;</span><span class="o">:</span> <span class="kc">null</span><span class="p">,</span>
+                <span class="s2">&quot;sort_by&quot;</span><span class="o">:</span> <span class="mi">1</span><span class="p">,</span>
+                <span class="s2">&quot;status&quot;</span><span class="o">:</span> <span class="kc">true</span>
+            <span class="p">}</span>
+        <span class="p">],</span>
+        <span class="s2">&quot;k_2_3&quot;</span><span class="o">:</span> <span class="p">[</span>
+            <span class="p">{</span>
+                <span class="s2">&quot;area_scope&quot;</span><span class="o">:</span> <span class="kc">null</span><span class="p">,</span>
+                <span class="s2">&quot;name&quot;</span><span class="o">:</span> <span class="s2">&quot;淄博&quot;</span><span class="p">,</span>
+                <span class="s2">&quot;oid&quot;</span><span class="o">:</span> <span class="mi">4</span><span class="p">,</span>
+                <span class="s2">&quot;pid&quot;</span><span class="o">:</span> <span class="mi">3</span><span class="p">,</span>
+                <span class="s2">&quot;sort_by&quot;</span><span class="o">:</span> <span class="mi">1</span><span class="p">,</span>
+                <span class="s2">&quot;status&quot;</span><span class="o">:</span> <span class="kc">true</span>
+            <span class="p">},</span>
+            <span class="p">{</span>
+                <span class="s2">&quot;area_scope&quot;</span><span class="o">:</span> <span class="kc">null</span><span class="p">,</span>
+                <span class="s2">&quot;name&quot;</span><span class="o">:</span> <span class="s2">&quot;济南&quot;</span><span class="p">,</span>
+                <span class="s2">&quot;oid&quot;</span><span class="o">:</span> <span class="mi">5</span><span class="p">,</span>
+                <span class="s2">&quot;pid&quot;</span><span class="o">:</span> <span class="mi">3</span><span class="p">,</span>
+                <span class="s2">&quot;sort_by&quot;</span><span class="o">:</span> <span class="kc">null</span><span class="p">,</span>
+                <span class="s2">&quot;status&quot;</span><span class="o">:</span> <span class="kc">true</span>
+            <span class="p">}</span>
+        <span class="p">],</span>
+        <span class="s2">&quot;k_3_4&quot;</span><span class="o">:</span> <span class="p">[</span>
+            <span class="p">{</span>
+                <span class="s2">&quot;area_scope&quot;</span><span class="o">:</span> <span class="kc">null</span><span class="p">,</span>
+                <span class="s2">&quot;name&quot;</span><span class="o">:</span> <span class="s2">&quot;周村&quot;</span><span class="p">,</span>
+                <span class="s2">&quot;oid&quot;</span><span class="o">:</span> <span class="mi">6</span><span class="p">,</span>
+                <span class="s2">&quot;pid&quot;</span><span class="o">:</span> <span class="mi">4</span><span class="p">,</span>
+                <span class="s2">&quot;sort_by&quot;</span><span class="o">:</span> <span class="mi">1</span><span class="p">,</span>
+                <span class="s2">&quot;status&quot;</span><span class="o">:</span> <span class="kc">true</span>
+            <span class="p">}</span>
+        <span class="p">],</span>
+        <span class="s2">&quot;k_4_6&quot;</span><span class="o">:</span> <span class="p">[</span>
+            <span class="p">{</span>
+                <span class="s2">&quot;area_scope&quot;</span><span class="o">:</span> <span class="kc">null</span><span class="p">,</span>
+                <span class="s2">&quot;name&quot;</span><span class="o">:</span> <span class="s2">&quot;青年路&quot;</span><span class="p">,</span>
+                <span class="s2">&quot;oid&quot;</span><span class="o">:</span> <span class="mi">8</span><span class="p">,</span>
+                <span class="s2">&quot;pid&quot;</span><span class="o">:</span> <span class="mi">6</span><span class="p">,</span>
+                <span class="s2">&quot;sort_by&quot;</span><span class="o">:</span> <span class="mi">1</span><span class="p">,</span>
+                <span class="s2">&quot;status&quot;</span><span class="o">:</span> <span class="kc">true</span>
+            <span class="p">}</span>
+        <span class="p">]</span>
+    <span class="p">},</span>
+    <span class="s2">&quot;status&quot;</span><span class="o">:</span> <span class="p">{</span>
+        <span class="s2">&quot;code&quot;</span><span class="o">:</span> <span class="mi">200</span><span class="p">,</span>
+        <span class="s2">&quot;message&quot;</span><span class="o">:</span> <span class="s2">&quot;Ok all right.&quot;</span>
+    <span class="p">},</span>
+    <span class="s2">&quot;success&quot;</span><span class="o">:</span> <span class="kc">true</span>
 <span class="p">}</span>
 </pre></div>
 </div>
@@ -987,20 +1136,15 @@
     <span class="s2">&quot;data&quot;</span><span class="o">:</span> <span class="p">{</span>
         <span class="s2">&quot;k_1_None&quot;</span><span class="o">:</span> <span class="p">[</span>
             <span class="p">{</span>
-                <span class="s2">&quot;name&quot;</span><span class="o">:</span> <span class="s2">&quot;北京&quot;</span><span class="p">,</span>  <span class="c1">// 名称</span>
-                <span class="s2">&quot;oid&quot;</span><span class="o">:</span> <span class="mi">1</span><span class="p">,</span>  <span class="c1">// 城市代码</span>
-                <span class="s2">&quot;pid&quot;</span><span class="o">:</span> <span class="kc">null</span><span class="p">,</span>  <span class="c1">// 父id</span>
-                <span class="s2">&quot;sort_by&quot;</span><span class="o">:</span> <span class="mi">1</span><span class="p">,</span>
-                <span class="s2">&quot;status&quot;</span><span class="o">:</span> <span class="kc">true</span>  <span class="c1">// 状态：显示 True; 隐藏 False</span>
-            <span class="p">},</span>
-            <span class="p">{</span>
-                <span class="s2">&quot;name&quot;</span><span class="o">:</span> <span class="s2">&quot;天津&quot;</span><span class="p">,</span>
-                <span class="s2">&quot;oid&quot;</span><span class="o">:</span> <span class="mi">2</span><span class="p">,</span>
+                <span class="s2">&quot;area_scope&quot;</span><span class="o">:</span> <span class="kc">null</span><span class="p">,</span>
+                <span class="s2">&quot;name&quot;</span><span class="o">:</span> <span class="s2">&quot;北京&quot;</span><span class="p">,</span>
+                <span class="s2">&quot;oid&quot;</span><span class="o">:</span> <span class="mi">1</span><span class="p">,</span>
                 <span class="s2">&quot;pid&quot;</span><span class="o">:</span> <span class="kc">null</span><span class="p">,</span>
                 <span class="s2">&quot;sort_by&quot;</span><span class="o">:</span> <span class="mi">1</span><span class="p">,</span>
                 <span class="s2">&quot;status&quot;</span><span class="o">:</span> <span class="kc">true</span>
             <span class="p">},</span>
             <span class="p">{</span>
+                <span class="s2">&quot;area_scope&quot;</span><span class="o">:</span> <span class="kc">null</span><span class="p">,</span>
                 <span class="s2">&quot;name&quot;</span><span class="o">:</span> <span class="s2">&quot;山东&quot;</span><span class="p">,</span>
                 <span class="s2">&quot;oid&quot;</span><span class="o">:</span> <span class="mi">3</span><span class="p">,</span>
                 <span class="s2">&quot;pid&quot;</span><span class="o">:</span> <span class="kc">null</span><span class="p">,</span>
@@ -1010,13 +1154,7 @@
         <span class="p">],</span>
         <span class="s2">&quot;k_2_3&quot;</span><span class="o">:</span> <span class="p">[</span>
             <span class="p">{</span>
-                <span class="s2">&quot;name&quot;</span><span class="o">:</span> <span class="s2">&quot;淄博&quot;</span><span class="p">,</span>
-                <span class="s2">&quot;oid&quot;</span><span class="o">:</span> <span class="mi">4</span><span class="p">,</span>
-                <span class="s2">&quot;pid&quot;</span><span class="o">:</span> <span class="mi">3</span><span class="p">,</span>
-                <span class="s2">&quot;sort_by&quot;</span><span class="o">:</span> <span class="mi">1</span><span class="p">,</span>
-                <span class="s2">&quot;status&quot;</span><span class="o">:</span> <span class="kc">true</span>
-            <span class="p">},</span>
-            <span class="p">{</span>
+                <span class="s2">&quot;area_scope&quot;</span><span class="o">:</span> <span class="kc">null</span><span class="p">,</span>
                 <span class="s2">&quot;name&quot;</span><span class="o">:</span> <span class="s2">&quot;济南&quot;</span><span class="p">,</span>
                 <span class="s2">&quot;oid&quot;</span><span class="o">:</span> <span class="mi">5</span><span class="p">,</span>
                 <span class="s2">&quot;pid&quot;</span><span class="o">:</span> <span class="mi">3</span><span class="p">,</span>
@@ -1079,28 +1217,29 @@
 <p>JSON数据格式:</p>
 <p>请求 <strong>正确</strong> 返回结果：</p>
 <div class="highlight-javascript"><div class="highlight"><pre><span></span><span class="p">{</span>
-  <span class="s2">&quot;data&quot;</span><span class="o">:</span> <span class="p">[</span>
-    <span class="p">{</span>
-      <span class="s2">&quot;name&quot;</span><span class="o">:</span> <span class="s2">&quot;北京&quot;</span><span class="p">,</span>
-      <span class="s2">&quot;pid&quot;</span><span class="o">:</span> <span class="mi">0</span><span class="p">,</span>
-      <span class="s2">&quot;rid&quot;</span><span class="o">:</span> <span class="mi">1</span><span class="p">,</span>
-      <span class="s2">&quot;sort_by&quot;</span><span class="o">:</span> <span class="mi">1</span><span class="p">,</span>
-      <span class="s2">&quot;status&quot;</span><span class="o">:</span> <span class="kc">true</span>
+    <span class="s2">&quot;data&quot;</span><span class="o">:</span> <span class="p">[</span>
+        <span class="p">{</span>
+            <span class="s2">&quot;area_scope&quot;</span><span class="o">:</span> <span class="kc">null</span><span class="p">,</span>
+            <span class="s2">&quot;name&quot;</span><span class="o">:</span> <span class="s2">&quot;北京&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;oid&quot;</span><span class="o">:</span> <span class="mi">1</span><span class="p">,</span>
+            <span class="s2">&quot;pid&quot;</span><span class="o">:</span> <span class="kc">null</span><span class="p">,</span>
+            <span class="s2">&quot;sort_by&quot;</span><span class="o">:</span> <span class="mi">1</span><span class="p">,</span>
+            <span class="s2">&quot;status&quot;</span><span class="o">:</span> <span class="kc">true</span>
+        <span class="p">},</span>
+        <span class="p">{</span>
+            <span class="s2">&quot;area_scope&quot;</span><span class="o">:</span> <span class="kc">null</span><span class="p">,</span>
+            <span class="s2">&quot;name&quot;</span><span class="o">:</span> <span class="s2">&quot;山东&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;oid&quot;</span><span class="o">:</span> <span class="mi">3</span><span class="p">,</span>
+            <span class="s2">&quot;pid&quot;</span><span class="o">:</span> <span class="kc">null</span><span class="p">,</span>
+            <span class="s2">&quot;sort_by&quot;</span><span class="o">:</span> <span class="mi">1</span><span class="p">,</span>
+            <span class="s2">&quot;status&quot;</span><span class="o">:</span> <span class="kc">true</span>
+        <span class="p">}</span>
+    <span class="p">],</span>
+    <span class="s2">&quot;status&quot;</span><span class="o">:</span> <span class="p">{</span>
+        <span class="s2">&quot;code&quot;</span><span class="o">:</span> <span class="mi">200</span><span class="p">,</span>
+        <span class="s2">&quot;message&quot;</span><span class="o">:</span> <span class="s2">&quot;Ok all right.&quot;</span>
     <span class="p">},</span>
-    <span class="p">{</span>
-      <span class="s2">&quot;name&quot;</span><span class="o">:</span> <span class="s2">&quot;天津&quot;</span><span class="p">,</span>
-      <span class="s2">&quot;pid&quot;</span><span class="o">:</span> <span class="mi">0</span><span class="p">,</span>
-      <span class="s2">&quot;rid&quot;</span><span class="o">:</span> <span class="mi">8</span><span class="p">,</span>
-      <span class="s2">&quot;sort_by&quot;</span><span class="o">:</span> <span class="mi">1</span><span class="p">,</span>
-      <span class="s2">&quot;status&quot;</span><span class="o">:</span> <span class="kc">true</span>
-    <span class="p">},</span>
-    <span class="p">...</span>
-  <span class="p">],</span>
-  <span class="s2">&quot;status&quot;</span><span class="o">:</span> <span class="p">{</span>
-    <span class="s2">&quot;code&quot;</span><span class="o">:</span> <span class="mi">200</span><span class="p">,</span>
-    <span class="s2">&quot;message&quot;</span><span class="o">:</span> <span class="s2">&quot;Ok all right.&quot;</span>
-  <span class="p">},</span>
-  <span class="s2">&quot;success&quot;</span><span class="o">:</span> <span class="kc">true</span>
+    <span class="s2">&quot;success&quot;</span><span class="o">:</span> <span class="kc">true</span>
 <span class="p">}</span>
 </pre></div>
 </div>
@@ -1150,21 +1289,21 @@
 <p>JSON数据格式:</p>
 <p>请求 <strong>正确</strong> 返回结果：</p>
 <div class="highlight-javascript"><div class="highlight"><pre><span></span><span class="p">{</span>
-  <span class="s2">&quot;data&quot;</span><span class="o">:</span> <span class="p">[</span>
-    <span class="p">{</span>
-      <span class="s2">&quot;name&quot;</span><span class="o">:</span> <span class="s2">&quot;北京市&quot;</span><span class="p">,</span>
-      <span class="s2">&quot;pid&quot;</span><span class="o">:</span> <span class="mi">1</span><span class="p">,</span>
-      <span class="s2">&quot;rid&quot;</span><span class="o">:</span> <span class="mi">3</span><span class="p">,</span>
-      <span class="s2">&quot;sort_by&quot;</span><span class="o">:</span> <span class="mi">1</span><span class="p">,</span>
-      <span class="s2">&quot;status&quot;</span><span class="o">:</span> <span class="kc">true</span>
-    <span class="p">}</span>
-    <span class="p">...</span>
-  <span class="p">],</span>
-  <span class="s2">&quot;status&quot;</span><span class="o">:</span> <span class="p">{</span>
-    <span class="s2">&quot;code&quot;</span><span class="o">:</span> <span class="mi">200</span><span class="p">,</span>
-    <span class="s2">&quot;message&quot;</span><span class="o">:</span> <span class="s2">&quot;Ok all right.&quot;</span>
-  <span class="p">},</span>
-  <span class="s2">&quot;success&quot;</span><span class="o">:</span> <span class="kc">true</span>
+    <span class="s2">&quot;data&quot;</span><span class="o">:</span> <span class="p">[</span>
+        <span class="p">{</span>
+            <span class="s2">&quot;area_scope&quot;</span><span class="o">:</span> <span class="kc">null</span><span class="p">,</span>
+            <span class="s2">&quot;name&quot;</span><span class="o">:</span> <span class="s2">&quot;济南&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;oid&quot;</span><span class="o">:</span> <span class="mi">5</span><span class="p">,</span>
+            <span class="s2">&quot;pid&quot;</span><span class="o">:</span> <span class="mi">3</span><span class="p">,</span>
+            <span class="s2">&quot;sort_by&quot;</span><span class="o">:</span> <span class="kc">null</span><span class="p">,</span>
+            <span class="s2">&quot;status&quot;</span><span class="o">:</span> <span class="kc">true</span>
+        <span class="p">}</span>
+    <span class="p">],</span>
+    <span class="s2">&quot;status&quot;</span><span class="o">:</span> <span class="p">{</span>
+        <span class="s2">&quot;code&quot;</span><span class="o">:</span> <span class="mi">200</span><span class="p">,</span>
+        <span class="s2">&quot;message&quot;</span><span class="o">:</span> <span class="s2">&quot;Ok all right.&quot;</span>
+    <span class="p">},</span>
+    <span class="s2">&quot;success&quot;</span><span class="o">:</span> <span class="kc">true</span>
 <span class="p">}</span>
 </pre></div>
 </div>
@@ -1216,20 +1355,13 @@
 <div class="highlight-javascript"><div class="highlight"><pre><span></span><span class="p">{</span>
   <span class="s2">&quot;data&quot;</span><span class="o">:</span> <span class="p">[</span>
     <span class="p">{</span>
+      <span class="s2">&quot;area_scope&quot;</span><span class="o">:</span> <span class="kc">null</span><span class="p">,</span>
       <span class="s2">&quot;name&quot;</span><span class="o">:</span> <span class="s2">&quot;朝阳区&quot;</span><span class="p">,</span>
       <span class="s2">&quot;pid&quot;</span><span class="o">:</span> <span class="mi">3</span><span class="p">,</span>
       <span class="s2">&quot;rid&quot;</span><span class="o">:</span> <span class="mi">4</span><span class="p">,</span>
       <span class="s2">&quot;sort_by&quot;</span><span class="o">:</span> <span class="mi">1</span><span class="p">,</span>
       <span class="s2">&quot;status&quot;</span><span class="o">:</span> <span class="kc">true</span>
     <span class="p">},</span>
-    <span class="p">{</span>
-      <span class="s2">&quot;name&quot;</span><span class="o">:</span> <span class="s2">&quot;海淀区&quot;</span><span class="p">,</span>
-      <span class="s2">&quot;pid&quot;</span><span class="o">:</span> <span class="mi">3</span><span class="p">,</span>
-      <span class="s2">&quot;rid&quot;</span><span class="o">:</span> <span class="mi">6</span><span class="p">,</span>
-      <span class="s2">&quot;sort_by&quot;</span><span class="o">:</span> <span class="mi">1</span><span class="p">,</span>
-      <span class="s2">&quot;status&quot;</span><span class="o">:</span> <span class="kc">true</span>
-    <span class="p">},</span>
-    <span class="p">...</span>
   <span class="p">],</span>
   <span class="s2">&quot;status&quot;</span><span class="o">:</span> <span class="p">{</span>
     <span class="s2">&quot;code&quot;</span><span class="o">:</span> <span class="mi">200</span><span class="p">,</span>
@@ -1287,6 +1419,7 @@
 <div class="highlight-javascript"><div class="highlight"><pre><span></span><span class="p">{</span>
   <span class="s2">&quot;data&quot;</span><span class="o">:</span> <span class="p">[</span>
     <span class="p">{</span>
+      <span class="s2">&quot;area_scope&quot;</span><span class="o">:</span> <span class="kc">null</span><span class="p">,</span>
       <span class="s2">&quot;name&quot;</span><span class="o">:</span> <span class="s2">&quot;四环至五环之间&quot;</span><span class="p">,</span>
       <span class="s2">&quot;pid&quot;</span><span class="o">:</span> <span class="mi">4</span><span class="p">,</span>
       <span class="s2">&quot;rid&quot;</span><span class="o">:</span> <span class="mi">5</span><span class="p">,</span>
@@ -1306,47 +1439,18 @@
 </div>
 </div>
 <div class="section" id="id49">
-<h2>验证用户海关信息是否存在<a class="headerlink" href="#id49" title="永久链接至标题">¶</a></h2>
-<p>验证用户海关信息是否存在</p>
+<h2>新增地址海关信息<a class="headerlink" href="#id49" title="永久链接至标题">¶</a></h2>
+<p>某用户新增地址海关信息</p>
 <div class="section" id="id50">
 <h3>接口说明<a class="headerlink" href="#id50" title="永久链接至标题">¶</a></h3>
-<ul class="simple">
-<li>API接口请求地址：<code class="docutils literal"><span class="pre">/address/exists_custom</span></code></li>
-<li>API接口请求方法：<code class="docutils literal"><span class="pre">GET</span></code></li>
-<li>API接口用户授权：<code class="docutils literal"><span class="pre">token</span></code></li>
-</ul>
-</div>
-<div class="section" id="id51">
-<h3>返回示例<a class="headerlink" href="#id51" title="永久链接至标题">¶</a></h3>
-<p>JSON数据格式:</p>
-<p>请求 <strong>正确</strong> 返回结果：</p>
-<div class="highlight-javascript"><div class="highlight"><pre><span></span><span class="p">{</span>
-    <span class="s2">&quot;data&quot;</span><span class="o">:</span> <span class="p">{</span>
-        <span class="s2">&quot;exists&quot;</span><span class="o">:</span> <span class="kc">true</span>
-    <span class="p">},</span>
-    <span class="s2">&quot;status&quot;</span><span class="o">:</span> <span class="p">{</span>
-        <span class="s2">&quot;code&quot;</span><span class="o">:</span> <span class="mi">200</span><span class="p">,</span>
-        <span class="s2">&quot;message&quot;</span><span class="o">:</span> <span class="s2">&quot;Ok all right.&quot;</span>
-    <span class="p">},</span>
-    <span class="s2">&quot;success&quot;</span><span class="o">:</span> <span class="kc">true</span>
-<span class="p">}</span>
-</pre></div>
-</div>
-</div>
-</div>
-<div class="section" id="id52">
-<h2>新增地址海关信息<a class="headerlink" href="#id52" title="永久链接至标题">¶</a></h2>
-<p>某用户新增地址海关信息</p>
-<div class="section" id="id53">
-<h3>接口说明<a class="headerlink" href="#id53" title="永久链接至标题">¶</a></h3>
 <ul class="simple">
 <li>API接口请求地址：<code class="docutils literal"><span class="pre">/address/custom</span></code></li>
 <li>API接口请求方法：<code class="docutils literal"><span class="pre">POST</span></code></li>
 <li>API接口用户授权：<code class="docutils literal"><span class="pre">token</span></code></li>
 </ul>
 </div>
-<div class="section" id="id54">
-<h3>请求参数<a class="headerlink" href="#id54" title="永久链接至标题">¶</a></h3>
+<div class="section" id="id51">
+<h3>请求参数<a class="headerlink" href="#id51" title="永久链接至标题">¶</a></h3>
 <table border="1" class="docutils">
 <colgroup>
 <col width="27%" />
@@ -1364,19 +1468,25 @@
 </tr>
 </thead>
 <tbody valign="top">
-<tr class="row-even"><td>id_card</td>
+<tr class="row-even"><td>address_rid</td>
+<td>String</td>
+<td>必需</td>
+<td>&#160;</td>
+<td>收货地址rid</td>
+</tr>
+<tr class="row-odd"><td>id_card</td>
 <td>String</td>
 <td>必需</td>
 <td>&#160;</td>
 <td>身份证号</td>
 </tr>
-<tr class="row-odd"><td>id_card_front</td>
+<tr class="row-even"><td>id_card_front</td>
 <td>Integer</td>
 <td>必需</td>
 <td>&#160;</td>
 <td>身份证正面照片图片资源id</td>
 </tr>
-<tr class="row-even"><td>id_card_back</td>
+<tr class="row-odd"><td>id_card_back</td>
 <td>Integer</td>
 <td>必需</td>
 <td>&#160;</td>
@@ -1385,20 +1495,35 @@
 </tbody>
 </table>
 </div>
-<div class="section" id="id55">
-<h3>返回示例<a class="headerlink" href="#id55" title="永久链接至标题">¶</a></h3>
+<div class="section" id="id52">
+<h3>返回示例<a class="headerlink" href="#id52" title="永久链接至标题">¶</a></h3>
 <p>JSON数据格式:</p>
 <p>请求 <strong>正确</strong> 返回结果：</p>
 <div class="highlight-javascript"><div class="highlight"><pre><span></span><span class="p">{</span>
     <span class="s2">&quot;data&quot;</span><span class="o">:</span> <span class="p">{</span>
-        <span class="s2">&quot;id_card&quot;</span><span class="o">:</span> <span class="s2">&quot;13278989898&quot;</span><span class="p">,</span>
-        <span class="s2">&quot;id_card_back&quot;</span><span class="o">:</span> <span class="mi">2</span><span class="p">,</span>
-        <span class="s2">&quot;id_card_front&quot;</span><span class="o">:</span> <span class="mi">1</span><span class="p">,</span>
-        <span class="s2">&quot;user_id&quot;</span><span class="o">:</span> <span class="mi">1</span>
+        <span class="s2">&quot;address_rid&quot;</span><span class="o">:</span> <span class="s2">&quot;5608945713&quot;</span><span class="p">,</span>  <span class="c1">// 收货地址rid</span>
+        <span class="s2">&quot;id_card&quot;</span><span class="o">:</span> <span class="s2">&quot;27812768766&quot;</span><span class="p">,</span>  <span class="c1">// 身份证号</span>
+        <span class="s2">&quot;id_card_back&quot;</span><span class="o">:</span> <span class="p">{</span>  <span class="c1">// 身份证背面</span>
+            <span class="s2">&quot;created_at&quot;</span><span class="o">:</span> <span class="mi">3</span><span class="p">,</span>
+            <span class="s2">&quot;filename&quot;</span><span class="o">:</span> <span class="s2">&quot;3&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;filepath&quot;</span><span class="o">:</span> <span class="s2">&quot;3&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;id&quot;</span><span class="o">:</span> <span class="mi">3</span><span class="p">,</span>
+            <span class="s2">&quot;type&quot;</span><span class="o">:</span> <span class="mi">3</span><span class="p">,</span>
+            <span class="s2">&quot;view_url&quot;</span><span class="o">:</span> <span class="s2">&quot;http://0.0.0.0:9000/_uploads/photos/3&quot;</span>
+        <span class="p">},</span>
+        <span class="s2">&quot;id_card_front&quot;</span><span class="o">:</span> <span class="p">{</span>  <span class="c1">// 身份证后面</span>
+            <span class="s2">&quot;created_at&quot;</span><span class="o">:</span> <span class="mi">3</span><span class="p">,</span>
+            <span class="s2">&quot;filename&quot;</span><span class="o">:</span> <span class="s2">&quot;3&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;filepath&quot;</span><span class="o">:</span> <span class="s2">&quot;3&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;id&quot;</span><span class="o">:</span> <span class="mi">3</span><span class="p">,</span>
+            <span class="s2">&quot;type&quot;</span><span class="o">:</span> <span class="mi">3</span><span class="p">,</span>
+            <span class="s2">&quot;view_url&quot;</span><span class="o">:</span> <span class="s2">&quot;http://0.0.0.0:9000/_uploads/photos/3&quot;</span>
+        <span class="p">},</span>
+        <span class="s2">&quot;user_id&quot;</span><span class="o">:</span> <span class="mi">2</span>  <span class="c1">//</span>
     <span class="p">},</span>
     <span class="s2">&quot;status&quot;</span><span class="o">:</span> <span class="p">{</span>
-        <span class="s2">&quot;code&quot;</span><span class="o">:</span> <span class="mi">201</span><span class="p">,</span>
-        <span class="s2">&quot;message&quot;</span><span class="o">:</span> <span class="s2">&quot;All created.&quot;</span>
+        <span class="s2">&quot;code&quot;</span><span class="o">:</span> <span class="mi">200</span><span class="p">,</span>
+        <span class="s2">&quot;message&quot;</span><span class="o">:</span> <span class="s2">&quot;Ok all right.&quot;</span>
     <span class="p">},</span>
     <span class="s2">&quot;success&quot;</span><span class="o">:</span> <span class="kc">true</span>
 <span class="p">}</span>
@@ -1416,19 +1541,19 @@
 </div>
 </div>
 </div>
-<div class="section" id="id56">
-<h2>更新地址海关信息<a class="headerlink" href="#id56" title="永久链接至标题">¶</a></h2>
+<div class="section" id="id53">
+<h2>更新地址海关信息<a class="headerlink" href="#id53" title="永久链接至标题">¶</a></h2>
 <p>某用户更新地址海关信息</p>
-<div class="section" id="id57">
-<h3>接口说明<a class="headerlink" href="#id57" title="永久链接至标题">¶</a></h3>
+<div class="section" id="id54">
+<h3>接口说明<a class="headerlink" href="#id54" title="永久链接至标题">¶</a></h3>
 <ul class="simple">
 <li>API接口请求地址：<code class="docutils literal"><span class="pre">/address/custom</span></code></li>
 <li>API接口请求方法：<code class="docutils literal"><span class="pre">PUT</span></code></li>
 <li>API接口用户授权：<code class="docutils literal"><span class="pre">token</span></code></li>
 </ul>
 </div>
-<div class="section" id="id58">
-<h3>请求参数<a class="headerlink" href="#id58" title="永久链接至标题">¶</a></h3>
+<div class="section" id="id55">
+<h3>请求参数<a class="headerlink" href="#id55" title="永久链接至标题">¶</a></h3>
 <table border="1" class="docutils">
 <colgroup>
 <col width="27%" />
@@ -1446,41 +1571,62 @@
 </tr>
 </thead>
 <tbody valign="top">
-<tr class="row-even"><td>id_card</td>
+<tr class="row-even"><td>address_rid</td>
 <td>String</td>
 <td>必需</td>
 <td>&#160;</td>
+<td>地址rid</td>
+</tr>
+<tr class="row-odd"><td>id_card</td>
+<td>String</td>
+<td>可选</td>
+<td>&#160;</td>
 <td>身份证号</td>
 </tr>
-<tr class="row-odd"><td>id_card_front</td>
+<tr class="row-even"><td>id_card_front</td>
 <td>Integer</td>
-<td>必需</td>
+<td>可选</td>
 <td>&#160;</td>
 <td>身份证正面照片图片资源id</td>
 </tr>
-<tr class="row-even"><td>id_card_back</td>
+<tr class="row-odd"><td>id_card_back</td>
 <td>Integer</td>
-<td>必需</td>
+<td>可选</td>
 <td>&#160;</td>
 <td>身份证背面照片图片资源id</td>
 </tr>
 </tbody>
 </table>
 </div>
-<div class="section" id="id59">
-<h3>返回示例<a class="headerlink" href="#id59" title="永久链接至标题">¶</a></h3>
+<div class="section" id="id56">
+<h3>返回示例<a class="headerlink" href="#id56" title="永久链接至标题">¶</a></h3>
 <p>JSON数据格式:</p>
 <p>请求 <strong>正确</strong> 返回结果：</p>
 <div class="highlight-javascript"><div class="highlight"><pre><span></span><span class="p">{</span>
     <span class="s2">&quot;data&quot;</span><span class="o">:</span> <span class="p">{</span>
-        <span class="s2">&quot;id_card&quot;</span><span class="o">:</span> <span class="s2">&quot;13278989898&quot;</span><span class="p">,</span>
-        <span class="s2">&quot;id_card_back&quot;</span><span class="o">:</span> <span class="mi">2</span><span class="p">,</span>
-        <span class="s2">&quot;id_card_front&quot;</span><span class="o">:</span> <span class="mi">1</span><span class="p">,</span>
-        <span class="s2">&quot;user_id&quot;</span><span class="o">:</span> <span class="mi">1</span>
+        <span class="s2">&quot;address_rid&quot;</span><span class="o">:</span> <span class="s2">&quot;5608945713&quot;</span><span class="p">,</span>  <span class="c1">// 收货地址rid</span>
+        <span class="s2">&quot;id_card&quot;</span><span class="o">:</span> <span class="s2">&quot;27812768766&quot;</span><span class="p">,</span>  <span class="c1">// 身份证号</span>
+        <span class="s2">&quot;id_card_back&quot;</span><span class="o">:</span> <span class="p">{</span>  <span class="c1">// 身份证背面</span>
+            <span class="s2">&quot;created_at&quot;</span><span class="o">:</span> <span class="mi">3</span><span class="p">,</span>
+            <span class="s2">&quot;filename&quot;</span><span class="o">:</span> <span class="s2">&quot;3&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;filepath&quot;</span><span class="o">:</span> <span class="s2">&quot;3&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;id&quot;</span><span class="o">:</span> <span class="mi">3</span><span class="p">,</span>
+            <span class="s2">&quot;type&quot;</span><span class="o">:</span> <span class="mi">3</span><span class="p">,</span>
+            <span class="s2">&quot;view_url&quot;</span><span class="o">:</span> <span class="s2">&quot;http://0.0.0.0:9000/_uploads/photos/3&quot;</span>
+        <span class="p">},</span>
+        <span class="s2">&quot;id_card_front&quot;</span><span class="o">:</span> <span class="p">{</span>  <span class="c1">// 身份证后面</span>
+            <span class="s2">&quot;created_at&quot;</span><span class="o">:</span> <span class="mi">3</span><span class="p">,</span>
+            <span class="s2">&quot;filename&quot;</span><span class="o">:</span> <span class="s2">&quot;3&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;filepath&quot;</span><span class="o">:</span> <span class="s2">&quot;3&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;id&quot;</span><span class="o">:</span> <span class="mi">3</span><span class="p">,</span>
+            <span class="s2">&quot;type&quot;</span><span class="o">:</span> <span class="mi">3</span><span class="p">,</span>
+            <span class="s2">&quot;view_url&quot;</span><span class="o">:</span> <span class="s2">&quot;http://0.0.0.0:9000/_uploads/photos/3&quot;</span>
+        <span class="p">},</span>
+        <span class="s2">&quot;user_id&quot;</span><span class="o">:</span> <span class="mi">2</span>  <span class="c1">//</span>
     <span class="p">},</span>
     <span class="s2">&quot;status&quot;</span><span class="o">:</span> <span class="p">{</span>
-        <span class="s2">&quot;code&quot;</span><span class="o">:</span> <span class="mi">201</span><span class="p">,</span>
-        <span class="s2">&quot;message&quot;</span><span class="o">:</span> <span class="s2">&quot;All created.&quot;</span>
+        <span class="s2">&quot;code&quot;</span><span class="o">:</span> <span class="mi">200</span><span class="p">,</span>
+        <span class="s2">&quot;message&quot;</span><span class="o">:</span> <span class="s2">&quot;Ok all right.&quot;</span>
     <span class="p">},</span>
     <span class="s2">&quot;success&quot;</span><span class="o">:</span> <span class="kc">true</span>
 <span class="p">}</span>
@@ -1498,19 +1644,47 @@
 </div>
 </div>
 </div>
-<div class="section" id="id60">
-<h2>删除地址海关信息<a class="headerlink" href="#id60" title="永久链接至标题">¶</a></h2>
+<div class="section" id="id57">
+<h2>删除地址海关信息<a class="headerlink" href="#id57" title="永久链接至标题">¶</a></h2>
 <p>某用户删除地址海关信息</p>
-<div class="section" id="id61">
-<h3>接口说明<a class="headerlink" href="#id61" title="永久链接至标题">¶</a></h3>
+<div class="section" id="id58">
+<h3>接口说明<a class="headerlink" href="#id58" title="永久链接至标题">¶</a></h3>
 <ul class="simple">
 <li>API接口请求地址：<code class="docutils literal"><span class="pre">/address/custom</span></code></li>
 <li>API接口请求方法：<code class="docutils literal"><span class="pre">DELETE</span></code></li>
 <li>API接口用户授权：<code class="docutils literal"><span class="pre">token</span></code></li>
 </ul>
 </div>
-<div class="section" id="id62">
-<h3>返回示例<a class="headerlink" href="#id62" title="永久链接至标题">¶</a></h3>
+<div class="section" id="id59">
+<h3>请求参数<a class="headerlink" href="#id59" title="永久链接至标题">¶</a></h3>
+<table border="1" class="docutils">
+<colgroup>
+<col width="27%" />
+<col width="13%" />
+<col width="11%" />
+<col width="13%" />
+<col width="37%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">名称</th>
+<th class="head">类型</th>
+<th class="head">是否必须</th>
+<th class="head">默认值</th>
+<th class="head">描述说明</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>address_rid</td>
+<td>String</td>
+<td>必需</td>
+<td>&#160;</td>
+<td>地址rid</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="id60">
+<h3>返回示例<a class="headerlink" href="#id60" title="永久链接至标题">¶</a></h3>
 <p>JSON数据格式:</p>
 <p>请求 <strong>正确</strong> 返回结果：</p>
 <div class="highlight-javascript"><div class="highlight"><pre><span></span><span class="p">{</span>
@@ -1529,6 +1703,53 @@
         <span class="s2">&quot;message&quot;</span><span class="o">:</span> <span class="s2">&quot;Not Found&quot;</span>
     <span class="p">},</span>
     <span class="s2">&quot;success&quot;</span><span class="o">:</span> <span class="kc">false</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="id61">
+<h2>获取用户收货地址海关信息<a class="headerlink" href="#id61" title="永久链接至标题">¶</a></h2>
+<p>获取用户收货地址海关信息</p>
+<div class="section" id="id62">
+<h3>接口说明<a class="headerlink" href="#id62" title="永久链接至标题">¶</a></h3>
+<ul class="simple">
+<li>API接口请求地址：<code class="docutils literal"><span class="pre">/address/custom</span></code></li>
+<li>API接口请求方法：<code class="docutils literal"><span class="pre">GET</span></code></li>
+<li>API接口用户授权：<code class="docutils literal"><span class="pre">token</span></code></li>
+</ul>
+</div>
+<div class="section" id="id63">
+<h3>返回示例<a class="headerlink" href="#id63" title="永久链接至标题">¶</a></h3>
+<p>JSON数据格式:</p>
+<p>请求 <strong>正确</strong> 返回结果：</p>
+<div class="highlight-javascript"><div class="highlight"><pre><span></span><span class="p">{</span>
+    <span class="s2">&quot;data&quot;</span><span class="o">:</span> <span class="p">{</span>
+        <span class="s2">&quot;address_rid&quot;</span><span class="o">:</span> <span class="s2">&quot;5608945713&quot;</span><span class="p">,</span>  <span class="c1">// 收货地址rid</span>
+        <span class="s2">&quot;id_card&quot;</span><span class="o">:</span> <span class="s2">&quot;27812768766&quot;</span><span class="p">,</span>  <span class="c1">// 身份证号</span>
+        <span class="s2">&quot;id_card_back&quot;</span><span class="o">:</span> <span class="p">{</span>  <span class="c1">// 身份证背面</span>
+            <span class="s2">&quot;created_at&quot;</span><span class="o">:</span> <span class="mi">3</span><span class="p">,</span>
+            <span class="s2">&quot;filename&quot;</span><span class="o">:</span> <span class="s2">&quot;3&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;filepath&quot;</span><span class="o">:</span> <span class="s2">&quot;3&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;id&quot;</span><span class="o">:</span> <span class="mi">3</span><span class="p">,</span>
+            <span class="s2">&quot;type&quot;</span><span class="o">:</span> <span class="mi">3</span><span class="p">,</span>
+            <span class="s2">&quot;view_url&quot;</span><span class="o">:</span> <span class="s2">&quot;http://0.0.0.0:9000/_uploads/photos/3&quot;</span>
+        <span class="p">},</span>
+        <span class="s2">&quot;id_card_front&quot;</span><span class="o">:</span> <span class="p">{</span>  <span class="c1">// 身份证后面</span>
+            <span class="s2">&quot;created_at&quot;</span><span class="o">:</span> <span class="mi">3</span><span class="p">,</span>
+            <span class="s2">&quot;filename&quot;</span><span class="o">:</span> <span class="s2">&quot;3&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;filepath&quot;</span><span class="o">:</span> <span class="s2">&quot;3&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;id&quot;</span><span class="o">:</span> <span class="mi">3</span><span class="p">,</span>
+            <span class="s2">&quot;type&quot;</span><span class="o">:</span> <span class="mi">3</span><span class="p">,</span>
+            <span class="s2">&quot;view_url&quot;</span><span class="o">:</span> <span class="s2">&quot;http://0.0.0.0:9000/_uploads/photos/3&quot;</span>
+        <span class="p">},</span>
+        <span class="s2">&quot;user_id&quot;</span><span class="o">:</span> <span class="mi">2</span>  <span class="c1">//</span>
+    <span class="p">},</span>
+    <span class="s2">&quot;status&quot;</span><span class="o">:</span> <span class="p">{</span>
+        <span class="s2">&quot;code&quot;</span><span class="o">:</span> <span class="mi">200</span><span class="p">,</span>
+        <span class="s2">&quot;message&quot;</span><span class="o">:</span> <span class="s2">&quot;Ok all right.&quot;</span>
+    <span class="p">},</span>
+    <span class="s2">&quot;success&quot;</span><span class="o">:</span> <span class="kc">true</span>
 <span class="p">}</span>
 </pre></div>
 </div>
