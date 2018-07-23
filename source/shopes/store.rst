@@ -143,9 +143,10 @@ JSON数据格式
 
     {
         "data": {
-            "content": "床前明月光",
+            "content": "窗前明月光",
             "id": 1,
-            "store_rid": "99627015"
+            "store_rid": "97958360",
+            "updated_at": 1532163609
         },
         "status": {
             "code": 200,
