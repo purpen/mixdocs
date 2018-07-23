@@ -21,6 +21,8 @@ moebeast api 文档
    stats/index.rst
    users/index.rst
    wx_apps/index.rst
+   qa/index.rst
+   columns/index.rst
    公用接口模块 <common>
    系统相关配置文档 <setting>
 
