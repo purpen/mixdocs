@@ -2,6 +2,74 @@
 店铺模块
 ================
 
+获取品牌馆主信息
+------------------
+
+
+接口说明
+~~~~~~~~~~~~~~
+
+* API接口请求地址：``/store/info``
+* API接口请求方法：``GET``
+
+请求参数
+~~~~~~~~~~~~~~~
+
+返回示例
+~~~~~~~~~~~~~~~~
+
+JSON数据格式
+
+请求 **正确** 返回结果：
+
+.. code-block:: javascript
+
+    {
+        "data": {
+            "area": "", // 区域
+            "area_id": null, // 区域ID
+            "areacode": null,  // 区号
+            "avatar": {
+                "created_at": null,
+                "filename": "d",
+                "filepath": "static/img/default-logo-180x180.png",
+                "id": 1,
+                "type": null,
+                "view_url": "http://0.0.0.0:9000/_uploads/photos/static/img/default-logo-180x180.png"
+            },  // 头像url
+            "avatar_id": 1,  // 头像ID
+            "brand_name": null,
+            "city": "",  // 城市
+            "city_id": null,  // 城市ID
+            "country": "", // 国家
+            "country_id": null,  // 国家ID
+            "email": null,  // 邮箱
+            "id": 1,
+            "label_libraries": [], // 商品标签
+            "mobile": null, // 手机号
+            "name": "张飞", // 姓名
+            "province": "", // 省
+            "province_id": null
+        },
+        "status": {
+            "code": 200,
+            "message": "Ok all right."
+        },
+        "success": true
+    }
+
+请求 ``失败`` 返回结果：
+
+.. code-block:: javascript
+
+    {
+        "status": {
+            "code": 400,
+            "message": "商家未认证"
+        },
+        "success": false
+    }
+
 获取店铺信息
 ------------------
 
@@ -992,6 +1060,57 @@ JSON数据格式
         "success": false
     }
 
+
+获取小b商家馆主身份
+------------------------------
+**30天内完成3个订单成为达人馆主, 小b每次进入生活馆调用此接口**
+
+接口说明
+~~~~~~~~~~~~~~
+
+* API接口请求地址：``/store/finished_orders``
+* API接口请求方法：``GET``
+
+请求参数
+~~~~~~~~~~~~~~~
+
+=============  ========  =========  ========  ====================================
+名称            类型      是否必须    默认值     描述说明
+=============  ========  =========  ========  ====================================
+rid             String      必须                    店铺编号
+=============  ========  =========  ========  ====================================
+
+返回示例
+~~~~~~~~~~~~~~~~
+
+JSON数据格式
+
+请求 **正确** 返回结果：
+
+.. code-block:: javascript
+
+    {
+        "data": {
+            "is_finished": false   // false没完成3单, true为完成
+        },
+        "status": {
+            "code": 200,
+            "message": "Ok all right."
+        },
+        "success": true
+    }
+
+请求 ``失败`` 返回结果：
+
+.. code-block:: javascript
+
+    {
+        "status": {
+            "code": 400,
+            "message": "店铺不存在"
+        },
+        "success": false
+    }
 
 申请小程序
 -------------------
