@@ -1616,7 +1616,6 @@ JSON数据格式:
 current_pay       Number      必须                当次缴纳金额
 need_pay          Number      必须                需缴纳金额
 already_pay       Number      必须                已缴纳金额
-pay_at            String      必须                支付时间
 pay_way           Number      必须                支付方式：1、微信；2：支付宝；3、银联；
 ===============  ========  =========  ========  ====================================
 
