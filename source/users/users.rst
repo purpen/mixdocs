@@ -759,7 +759,6 @@ JSON数据格式
 
 * API接口请求地址：``/users/authenticate``
 * API接口请求方法：``GET``
-* API接口用户授权：``token``
 
 返回示例
 ~~~~~~~~~~~~~~~~
@@ -924,7 +923,6 @@ JSON数据格式
 
 * API接口请求地址：``/users/get_authenticate_status``
 * API接口请求方法：``GET``
-* API接口用户授权：``token``
 
 返回示例
 ~~~~~~~~~~~~~~~~
@@ -1616,7 +1614,6 @@ JSON数据格式:
 current_pay       Number      必须                当次缴纳金额
 need_pay          Number      必须                需缴纳金额
 already_pay       Number      必须                已缴纳金额
-pay_at            String      必须                支付时间
 pay_way           Number      必须                支付方式：1、微信；2：支付宝；3、银联；
 ===============  ========  =========  ========  ====================================
 
