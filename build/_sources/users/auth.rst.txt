@@ -46,6 +46,22 @@ JSON数据格式
         "success": true
     }
 
+    {
+    "data": {
+        "created_at": 1532416777,
+        "expiration": 2592000,
+        "is_distributor": false,  // 是否是小b商家(分销商)
+        "is_first_login": false,  // 是否为第一次登陆 ,是则需要跳转到完善个人资料页面, 不是则进入首页
+        "is_supplier": false,  // 是否是商家
+        "token": "eyJhbGciOiJIUzI1NiIsImlhdCI6MTUzMjQxNjc3NywiZXhwIjoxNTM1MDA4Nzc3fQ.eyJpZCI6MX0.8hX-07txybkYNPwDt4ADl8-Sed_fjqmmxppEtuN2-Ys"
+    },
+    "status": {
+        "code": 200,
+        "message": "Ok all right."
+    },
+    "success": true
+}
+
 错误结果格式::
 
     {
@@ -452,6 +468,7 @@ app注册
 =============  ========  =========  ========  ====================================
 areacode        String    可选        +86      区号
 email           String    必须                 手机号
+verify_code     String    必选                 验证码
 =============  ========  =========  ========  ====================================
 
 返回示例

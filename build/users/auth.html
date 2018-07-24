@@ -135,6 +135,14 @@
 <li class="toctree-l2"><a class="reference internal" href="../wx_apps/wx_app_design.html">小程序配置模块</a></li>
 </ul>
 </li>
+<li class="toctree-l1"><a class="reference internal" href="../qa/index.html">问答API模块</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../qa/qa.html">问答模块</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../columns/index.html">栏目API模块</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../columns/column_products.html">栏目商品模块</a></li>
+</ul>
+</li>
 <li class="toctree-l1"><a class="reference internal" href="../common.html">公用接口模块</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="../common.html#id2">幻灯图列表</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../common.html#id6">搜索关键词历史</a></li>
@@ -440,8 +448,24 @@
     <span class="p">},</span>
     <span class="s2">&quot;success&quot;</span><span class="p">:</span> <span class="n">true</span>
 <span class="p">}</span>
+
+<span class="p">{</span>
+<span class="s2">&quot;data&quot;</span><span class="p">:</span> <span class="p">{</span>
+    <span class="s2">&quot;created_at&quot;</span><span class="p">:</span> <span class="mi">1532416777</span><span class="p">,</span>
+    <span class="s2">&quot;expiration&quot;</span><span class="p">:</span> <span class="mi">2592000</span><span class="p">,</span>
+    <span class="s2">&quot;is_distributor&quot;</span><span class="p">:</span> <span class="n">false</span><span class="p">,</span>  <span class="o">//</span> <span class="n">是否是小b商家</span><span class="p">(</span><span class="n">分销商</span><span class="p">)</span>
+    <span class="s2">&quot;is_first_login&quot;</span><span class="p">:</span> <span class="n">false</span><span class="p">,</span>  <span class="o">//</span> <span class="n">是否为第一次登陆</span> <span class="p">,</span><span class="n">是则需要跳转到完善个人资料页面</span><span class="p">,</span> <span class="n">不是则进入首页</span>
+    <span class="s2">&quot;is_supplier&quot;</span><span class="p">:</span> <span class="n">false</span><span class="p">,</span>  <span class="o">//</span> <span class="n">是否是商家</span>
+    <span class="s2">&quot;token&quot;</span><span class="p">:</span> <span class="s2">&quot;eyJhbGciOiJIUzI1NiIsImlhdCI6MTUzMjQxNjc3NywiZXhwIjoxNTM1MDA4Nzc3fQ.eyJpZCI6MX0.8hX-07txybkYNPwDt4ADl8-Sed_fjqmmxppEtuN2-Ys&quot;</span>
+<span class="p">},</span>
+<span class="s2">&quot;status&quot;</span><span class="p">:</span> <span class="p">{</span>
+    <span class="s2">&quot;code&quot;</span><span class="p">:</span> <span class="mi">200</span><span class="p">,</span>
+    <span class="s2">&quot;message&quot;</span><span class="p">:</span> <span class="s2">&quot;Ok all right.&quot;</span>
+<span class="p">},</span>
+<span class="s2">&quot;success&quot;</span><span class="p">:</span> <span class="n">true</span>
 </pre></div>
 </div>
+<p>}</p>
 <p>错误结果格式:</p>
 <div class="highlight-default"><div class="highlight"><pre><span></span><span class="p">{</span>
   <span class="s2">&quot;status&quot;</span><span class="p">:</span> <span class="p">{</span>
@@ -1007,6 +1031,12 @@
 <td>必须</td>
 <td>&#160;</td>
 <td>手机号</td>
+</tr>
+<tr class="row-even"><td>verify_code</td>
+<td>String</td>
+<td>必选</td>
+<td>&#160;</td>
+<td>验证码</td>
 </tr>
 </tbody>
 </table>
