@@ -759,7 +759,6 @@ JSON数据格式
 
 * API接口请求地址：``/users/authenticate``
 * API接口请求方法：``GET``
-* API接口用户授权：``token``
 
 返回示例
 ~~~~~~~~~~~~~~~~
@@ -924,7 +923,6 @@ JSON数据格式
 
 * API接口请求地址：``/users/get_authenticate_status``
 * API接口请求方法：``GET``
-* API接口用户授权：``token``
 
 返回示例
 ~~~~~~~~~~~~~~~~
