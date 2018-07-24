@@ -60,7 +60,7 @@ JSON数据格式
         "message": "Ok all right."
     },
     "success": true
-}
+    }
 
 错误结果格式::
 
