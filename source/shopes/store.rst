@@ -9,7 +9,7 @@
 接口说明
 ~~~~~~~~~~~~~~
 
-* API接口请求地址：``/store/info``
+* API接口请求地址：``/store/master_info``
 * API接口请求方法：``GET``
 
 请求参数
