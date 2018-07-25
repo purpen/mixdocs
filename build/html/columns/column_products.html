@@ -119,6 +119,7 @@
 <li class="toctree-l1"><a class="reference internal" href="../market/index.html">营销API模块</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="../market/banners.html">营销工具/广告模块</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../market/coupons.html">营销工具/优惠券模块</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../market/bonus_question.html">营销工具/猜题赢现金</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="../stats/index.html">统计API模块</a><ul>
@@ -146,11 +147,12 @@
 <li class="toctree-l1"><a class="reference internal" href="../common.html">公用接口模块</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="../common.html#id2">幻灯图列表</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../common.html#id6">搜索关键词历史</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../common.html#id10">注册发送短信验证码</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../common.html#id15">登陆发送短信验证码</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../common.html#id19">动态登陆发送短信验证码</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../common.html#id23">账户编辑发送短信验证码</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../common.html#id27">发送邮件验证码</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../common.html#id10">小程序绑定手机号发送验证码</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../common.html#id15">注册发送短信验证码</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../common.html#id20">登陆发送短信验证码</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../common.html#id24">动态登陆发送短信验证码</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../common.html#id28">账户编辑发送短信验证码</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../common.html#id32">发送邮件验证码</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="../setting.html">系统相关配置文档</a><ul>
@@ -187,34 +189,28 @@
 <li><a class="reference internal" href="#id5">返回示例</a></li>
 </ul>
 </li>
-<li><a class="reference internal" href="#id6">商品推荐</a><ul>
+<li><a class="reference internal" href="#id6">精选–人气推荐</a><ul>
 <li><a class="reference internal" href="#id7">接口说明</a></li>
 <li><a class="reference internal" href="#id8">请求参数</a></li>
 <li><a class="reference internal" href="#id9">返回示例</a></li>
 </ul>
 </li>
-<li><a class="reference internal" href="#id10">编辑精选</a><ul>
+<li><a class="reference internal" href="#id10">精选–乐喜优选</a><ul>
 <li><a class="reference internal" href="#id11">接口说明</a></li>
 <li><a class="reference internal" href="#id12">请求参数</a></li>
 <li><a class="reference internal" href="#id13">返回示例</a></li>
 </ul>
 </li>
-<li><a class="reference internal" href="#id14">流行礼品</a><ul>
+<li><a class="reference internal" href="#id14">探索–编辑推荐</a><ul>
 <li><a class="reference internal" href="#id15">接口说明</a></li>
 <li><a class="reference internal" href="#id16">请求参数</a></li>
 <li><a class="reference internal" href="#id17">返回示例</a></li>
 </ul>
 </li>
-<li><a class="reference internal" href="#id18">特惠礼品</a><ul>
+<li><a class="reference internal" href="#id18">探索–优质新品</a><ul>
 <li><a class="reference internal" href="#id19">接口说明</a></li>
 <li><a class="reference internal" href="#id20">请求参数</a></li>
 <li><a class="reference internal" href="#id21">返回示例</a></li>
-</ul>
-</li>
-<li><a class="reference internal" href="#id22">最新</a><ul>
-<li><a class="reference internal" href="#id23">接口说明</a></li>
-<li><a class="reference internal" href="#id24">请求参数</a></li>
-<li><a class="reference internal" href="#id25">返回示例</a></li>
 </ul>
 </li>
 </ul>
@@ -255,34 +251,28 @@
 <li><a class="reference internal" href="#id5">返回示例</a></li>
 </ul>
 </li>
-<li><a class="reference internal" href="#id6">商品推荐</a><ul>
+<li><a class="reference internal" href="#id6">精选–人气推荐</a><ul>
 <li><a class="reference internal" href="#id7">接口说明</a></li>
 <li><a class="reference internal" href="#id8">请求参数</a></li>
 <li><a class="reference internal" href="#id9">返回示例</a></li>
 </ul>
 </li>
-<li><a class="reference internal" href="#id10">编辑精选</a><ul>
+<li><a class="reference internal" href="#id10">精选–乐喜优选</a><ul>
 <li><a class="reference internal" href="#id11">接口说明</a></li>
 <li><a class="reference internal" href="#id12">请求参数</a></li>
 <li><a class="reference internal" href="#id13">返回示例</a></li>
 </ul>
 </li>
-<li><a class="reference internal" href="#id14">流行礼品</a><ul>
+<li><a class="reference internal" href="#id14">探索–编辑推荐</a><ul>
 <li><a class="reference internal" href="#id15">接口说明</a></li>
 <li><a class="reference internal" href="#id16">请求参数</a></li>
 <li><a class="reference internal" href="#id17">返回示例</a></li>
 </ul>
 </li>
-<li><a class="reference internal" href="#id18">特惠礼品</a><ul>
+<li><a class="reference internal" href="#id18">探索–优质新品</a><ul>
 <li><a class="reference internal" href="#id19">接口说明</a></li>
 <li><a class="reference internal" href="#id20">请求参数</a></li>
 <li><a class="reference internal" href="#id21">返回示例</a></li>
-</ul>
-</li>
-<li><a class="reference internal" href="#id22">最新</a><ul>
-<li><a class="reference internal" href="#id23">接口说明</a></li>
-<li><a class="reference internal" href="#id24">请求参数</a></li>
-<li><a class="reference internal" href="#id25">返回示例</a></li>
 </ul>
 </li>
 </ul>
@@ -392,11 +382,11 @@
 </div>
 </div>
 <div class="section" id="id6">
-<h2>商品推荐<a class="headerlink" href="#id6" title="永久链接至标题">¶</a></h2>
+<h2>精选–人气推荐<a class="headerlink" href="#id6" title="永久链接至标题">¶</a></h2>
 <div class="section" id="id7">
 <h3>接口说明<a class="headerlink" href="#id7" title="永久链接至标题">¶</a></h3>
 <ul class="simple">
-<li>API接口请求地址：<code class="docutils literal"><span class="pre">/column/feature_products</span></code></li>
+<li>API接口请求地址：<code class="docutils literal"><span class="pre">/column/handpick_recommend</span></code></li>
 <li>API接口请求方法：<code class="docutils literal"><span class="pre">GET</span></code></li>
 </ul>
 </div>
@@ -440,11 +430,11 @@
 </div>
 </div>
 <div class="section" id="id10">
-<h2>编辑精选<a class="headerlink" href="#id10" title="永久链接至标题">¶</a></h2>
+<h2>精选–乐喜优选<a class="headerlink" href="#id10" title="永久链接至标题">¶</a></h2>
 <div class="section" id="id11">
 <h3>接口说明<a class="headerlink" href="#id11" title="永久链接至标题">¶</a></h3>
 <ul class="simple">
-<li>API接口请求地址：<code class="docutils literal"><span class="pre">/column/explore_select</span></code></li>
+<li>API接口请求地址：<code class="docutils literal"><span class="pre">/column/handpick_optimization</span></code></li>
 <li>API接口请求方法：<code class="docutils literal"><span class="pre">GET</span></code></li>
 </ul>
 </div>
@@ -488,11 +478,11 @@
 </div>
 </div>
 <div class="section" id="id14">
-<h2>流行礼品<a class="headerlink" href="#id14" title="永久链接至标题">¶</a></h2>
+<h2>探索–编辑推荐<a class="headerlink" href="#id14" title="永久链接至标题">¶</a></h2>
 <div class="section" id="id15">
 <h3>接口说明<a class="headerlink" href="#id15" title="永久链接至标题">¶</a></h3>
 <ul class="simple">
-<li>API接口请求地址：<code class="docutils literal"><span class="pre">/column/explore_popular</span></code></li>
+<li>API接口请求地址：<code class="docutils literal"><span class="pre">/column/explore_recommend</span></code></li>
 <li>API接口请求方法：<code class="docutils literal"><span class="pre">GET</span></code></li>
 </ul>
 </div>
@@ -536,11 +526,11 @@
 </div>
 </div>
 <div class="section" id="id18">
-<h2>特惠礼品<a class="headerlink" href="#id18" title="永久链接至标题">¶</a></h2>
+<h2>探索–优质新品<a class="headerlink" href="#id18" title="永久链接至标题">¶</a></h2>
 <div class="section" id="id19">
 <h3>接口说明<a class="headerlink" href="#id19" title="永久链接至标题">¶</a></h3>
 <ul class="simple">
-<li>API接口请求地址：<code class="docutils literal"><span class="pre">/column/explore_cheap</span></code></li>
+<li>API接口请求地址：<code class="docutils literal"><span class="pre">/column/explore_new</span></code></li>
 <li>API接口请求方法：<code class="docutils literal"><span class="pre">GET</span></code></li>
 </ul>
 </div>
@@ -580,54 +570,6 @@
 </div>
 <div class="section" id="id21">
 <h3>返回示例<a class="headerlink" href="#id21" title="永久链接至标题">¶</a></h3>
-<p>** 同上获取栏目商品 **</p>
-</div>
-</div>
-<div class="section" id="id22">
-<h2>最新<a class="headerlink" href="#id22" title="永久链接至标题">¶</a></h2>
-<div class="section" id="id23">
-<h3>接口说明<a class="headerlink" href="#id23" title="永久链接至标题">¶</a></h3>
-<ul class="simple">
-<li>API接口请求地址：<code class="docutils literal"><span class="pre">/column/explore_new</span></code></li>
-<li>API接口请求方法：<code class="docutils literal"><span class="pre">GET</span></code></li>
-</ul>
-</div>
-<div class="section" id="id24">
-<h3>请求参数<a class="headerlink" href="#id24" title="永久链接至标题">¶</a></h3>
-<table border="1" class="docutils">
-<colgroup>
-<col width="21%" />
-<col width="14%" />
-<col width="12%" />
-<col width="14%" />
-<col width="40%" />
-</colgroup>
-<thead valign="bottom">
-<tr class="row-odd"><th class="head">名称</th>
-<th class="head">类型</th>
-<th class="head">是否必须</th>
-<th class="head">默认值</th>
-<th class="head">描述说明</th>
-</tr>
-</thead>
-<tbody valign="top">
-<tr class="row-even"><td>page</td>
-<td>Number</td>
-<td>可选</td>
-<td>1</td>
-<td>当前页码</td>
-</tr>
-<tr class="row-odd"><td>per_page</td>
-<td>Number</td>
-<td>可选</td>
-<td>10</td>
-<td>每页数量</td>
-</tr>
-</tbody>
-</table>
-</div>
-<div class="section" id="id25">
-<h3>返回示例<a class="headerlink" href="#id25" title="永久链接至标题">¶</a></h3>
 <p>** 同上获取栏目商品 **</p>
 </div>
 </div>
