@@ -147,11 +147,12 @@
 <li class="toctree-l1"><a class="reference internal" href="../common.html">公用接口模块</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="../common.html#id2">幻灯图列表</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../common.html#id6">搜索关键词历史</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../common.html#id10">注册发送短信验证码</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../common.html#id15">登陆发送短信验证码</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../common.html#id19">动态登陆发送短信验证码</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../common.html#id23">账户编辑发送短信验证码</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../common.html#id27">发送邮件验证码</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../common.html#id10">小程序绑定手机号发送验证码</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../common.html#id15">注册发送短信验证码</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../common.html#id20">忘记密码发送短信验证码</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../common.html#id24">动态登陆发送短信验证码</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../common.html#id28">账户编辑发送短信验证码</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../common.html#id32">发送邮件验证码</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="../setting.html">系统相关配置文档</a><ul>
@@ -300,25 +301,13 @@
 <td>String</td>
 <td>必填</td>
 <td>&#160;</td>
-<td>店铺编号</td>
-</tr>
-<tr class="row-odd"><td>encrypted_data</td>
-<td>String</td>
-<td>必填</td>
-<td>&#160;</td>
-<td>&#160;</td>
-</tr>
-<tr class="row-even"><td>iv</td>
-<td>String</td>
-<td>必填</td>
-<td>&#160;</td>
-<td>&#160;</td>
+<td>临时登录凭证</td>
 </tr>
 <tr class="row-odd"><td>auth_app_id</td>
 <td>String</td>
 <td>必填</td>
 <td>&#160;</td>
-<td>&#160;</td>
+<td>小程序ID</td>
 </tr>
 </tbody>
 </table>
@@ -364,13 +353,19 @@
 <td>&#160;</td>
 <td>用户标识</td>
 </tr>
-<tr class="row-even"><td>mobile</td>
+<tr class="row-even"><td>area_code</td>
+<td>String</td>
+<td>必须</td>
+<td>&#160;</td>
+<td>区号</td>
+</tr>
+<tr class="row-odd"><td>mobile</td>
 <td>String</td>
 <td>必填</td>
 <td>&#160;</td>
 <td>手机号</td>
 </tr>
-<tr class="row-odd"><td>verify_code</td>
+<tr class="row-even"><td>verify_code</td>
 <td>String</td>
 <td>必填</td>
 <td>&#160;</td>
