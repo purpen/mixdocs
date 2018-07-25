@@ -621,7 +621,7 @@ JSON数据格式:
 接口说明
 ~~~~~~~~~~~~~~
 
-* API接口请求地址：``/auth/info``
+* API接口请求地址：``/auth/complete_info``
 * API接口请求方法：``POST``
 * API接口用户授权：``token``
 
