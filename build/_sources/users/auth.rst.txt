@@ -413,7 +413,7 @@ JSON数据格式:
 =============  ========  =========  ========  ====================================
 名称            类型      是否必须    默认值     描述说明
 =============  ========  =========  ========  ====================================
-password        String    必须                 密码
+password        String    必须                 手机验证码
 email           String    必须                 手机号
 =============  ========  =========  ========  ====================================
 
@@ -428,8 +428,9 @@ JSON数据格式:
 
     {
         "data": {
-            "areacode": "+86",
-            "email": "13001179400"
+            "created_at": 1532523429,
+            "expiration": 2592000,
+            "token": "eyJhbGciOiJIUzI1NiIsImlhdCI6MTUzMjUyMzQyOSwiZXhwIjoxNTM1MTE1NDI5fQ.eyJpZCI6NH0.d2Jza6ZRbPuvD6JuICCELHJd5F31e8HNMo5dsJY5Tuk"
         },
         "status": {
             "code": 200,
@@ -517,13 +518,15 @@ JSON数据格式:
 请求参数
 ~~~~~~~~~~~~~~~
 
-=============  ========  =========  ========  ====================================
-名称            类型      是否必须    默认值     描述说明
-=============  ========  =========  ========  ====================================
-areacode        String    可选        +86      区号
-password        String    必须                 密码
-email           String    必须                 手机号
-=============  ========  =========  ========  ====================================
+==================  ========  =========  ========  ====================================
+名称                 类型      是否必须    默认值     描述说明
+==================  ========  =========  ========  ====================================
+areacode             String    可选        +86      区号
+email                String    必须                 手机号
+password             String    必须                 密码
+affirm_password      String    必须                 确认密码
+==================  ========  =========  ========  ====================================
+
 
 返回示例
 ~~~~~~~~~~~~~~~~
@@ -536,12 +539,13 @@ JSON数据格式:
 
     {
         "data": {
-            "areacode": "+86",
-            "email": "13001179411"
+            "created_at": 1532522531,
+            "expiration": 2592000,
+            "token": "eyJhbGciOiJIUzI1NiIsImlhdCI6MTUzMjUyMjUzMSwiZXhwIjoxNTM1MTE0NTMxfQ.eyJpZCI6MTZ9._yfN5fiiN1hsn8kZttvHEHYwL_KbUEK1RljcLTHm6_I"
         },
         "status": {
-            "code": 200,
-            "message": "Ok all right."
+            "code": 201,
+            "message": "All created."
         },
         "success": true
     }
@@ -618,7 +622,7 @@ JSON数据格式:
 接口说明
 ~~~~~~~~~~~~~~
 
-* API接口请求地址：``/auth/info``
+* API接口请求地址：``/auth/complete_info``
 * API接口请求方法：``POST``
 * API接口用户授权：``token``
 

@@ -119,6 +119,7 @@
 <li class="toctree-l1"><a class="reference internal" href="../market/index.html">营销API模块</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="../market/banners.html">营销工具/广告模块</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../market/coupons.html">营销工具/优惠券模块</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../market/bonus_question.html">营销工具/猜题赢现金</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="../stats/index.html">统计API模块</a><ul>
@@ -146,11 +147,12 @@
 <li class="toctree-l1"><a class="reference internal" href="../common.html">公用接口模块</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="../common.html#id2">幻灯图列表</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../common.html#id6">搜索关键词历史</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../common.html#id10">注册发送短信验证码</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../common.html#id15">登陆发送短信验证码</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../common.html#id19">动态登陆发送短信验证码</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../common.html#id23">账户编辑发送短信验证码</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../common.html#id27">发送邮件验证码</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../common.html#id10">小程序绑定手机号发送验证码</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../common.html#id15">注册发送短信验证码</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../common.html#id20">忘记密码发送短信验证码</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../common.html#id24">动态登陆发送短信验证码</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../common.html#id28">账户编辑发送短信验证码</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../common.html#id32">发送邮件验证码</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="../setting.html">系统相关配置文档</a><ul>
@@ -952,7 +954,7 @@
 <td>String</td>
 <td>必须</td>
 <td>&#160;</td>
-<td>密码</td>
+<td>手机验证码</td>
 </tr>
 <tr class="row-odd"><td>email</td>
 <td>String</td>
@@ -969,8 +971,9 @@
 <p>请求 <strong>正确</strong> 返回结果：</p>
 <div class="highlight-javascript"><div class="highlight"><pre><span></span><span class="p">{</span>
     <span class="s2">&quot;data&quot;</span><span class="o">:</span> <span class="p">{</span>
-        <span class="s2">&quot;areacode&quot;</span><span class="o">:</span> <span class="s2">&quot;+86&quot;</span><span class="p">,</span>
-        <span class="s2">&quot;email&quot;</span><span class="o">:</span> <span class="s2">&quot;13001179400&quot;</span>
+        <span class="s2">&quot;created_at&quot;</span><span class="o">:</span> <span class="mi">1532523429</span><span class="p">,</span>
+        <span class="s2">&quot;expiration&quot;</span><span class="o">:</span> <span class="mi">2592000</span><span class="p">,</span>
+        <span class="s2">&quot;token&quot;</span><span class="o">:</span> <span class="s2">&quot;eyJhbGciOiJIUzI1NiIsImlhdCI6MTUzMjUyMzQyOSwiZXhwIjoxNTM1MTE1NDI5fQ.eyJpZCI6NH0.d2Jza6ZRbPuvD6JuICCELHJd5F31e8HNMo5dsJY5Tuk&quot;</span>
     <span class="p">},</span>
     <span class="s2">&quot;status&quot;</span><span class="o">:</span> <span class="p">{</span>
         <span class="s2">&quot;code&quot;</span><span class="o">:</span> <span class="mi">200</span><span class="p">,</span>
@@ -1083,11 +1086,11 @@
 <h3>请求参数<a class="headerlink" href="#id37" title="永久链接至标题">¶</a></h3>
 <table border="1" class="docutils">
 <colgroup>
-<col width="18%" />
+<col width="23%" />
+<col width="10%" />
 <col width="11%" />
-<col width="12%" />
-<col width="11%" />
-<col width="49%" />
+<col width="10%" />
+<col width="46%" />
 </colgroup>
 <thead valign="bottom">
 <tr class="row-odd"><th class="head">名称</th>
@@ -1104,17 +1107,23 @@
 <td>+86</td>
 <td>区号</td>
 </tr>
-<tr class="row-odd"><td>password</td>
+<tr class="row-odd"><td>email</td>
+<td>String</td>
+<td>必须</td>
+<td>&#160;</td>
+<td>手机号</td>
+</tr>
+<tr class="row-even"><td>password</td>
 <td>String</td>
 <td>必须</td>
 <td>&#160;</td>
 <td>密码</td>
 </tr>
-<tr class="row-even"><td>email</td>
+<tr class="row-odd"><td>affirm_password</td>
 <td>String</td>
 <td>必须</td>
 <td>&#160;</td>
-<td>手机号</td>
+<td>确认密码</td>
 </tr>
 </tbody>
 </table>
@@ -1125,12 +1134,13 @@
 <p>请求 <strong>正确</strong> 返回结果：</p>
 <div class="highlight-javascript"><div class="highlight"><pre><span></span><span class="p">{</span>
     <span class="s2">&quot;data&quot;</span><span class="o">:</span> <span class="p">{</span>
-        <span class="s2">&quot;areacode&quot;</span><span class="o">:</span> <span class="s2">&quot;+86&quot;</span><span class="p">,</span>
-        <span class="s2">&quot;email&quot;</span><span class="o">:</span> <span class="s2">&quot;13001179411&quot;</span>
+        <span class="s2">&quot;created_at&quot;</span><span class="o">:</span> <span class="mi">1532522531</span><span class="p">,</span>
+        <span class="s2">&quot;expiration&quot;</span><span class="o">:</span> <span class="mi">2592000</span><span class="p">,</span>
+        <span class="s2">&quot;token&quot;</span><span class="o">:</span> <span class="s2">&quot;eyJhbGciOiJIUzI1NiIsImlhdCI6MTUzMjUyMjUzMSwiZXhwIjoxNTM1MTE0NTMxfQ.eyJpZCI6MTZ9._yfN5fiiN1hsn8kZttvHEHYwL_KbUEK1RljcLTHm6_I&quot;</span>
     <span class="p">},</span>
     <span class="s2">&quot;status&quot;</span><span class="o">:</span> <span class="p">{</span>
-        <span class="s2">&quot;code&quot;</span><span class="o">:</span> <span class="mi">200</span><span class="p">,</span>
-        <span class="s2">&quot;message&quot;</span><span class="o">:</span> <span class="s2">&quot;Ok all right.&quot;</span>
+        <span class="s2">&quot;code&quot;</span><span class="o">:</span> <span class="mi">201</span><span class="p">,</span>
+        <span class="s2">&quot;message&quot;</span><span class="o">:</span> <span class="s2">&quot;All created.&quot;</span>
     <span class="p">},</span>
     <span class="s2">&quot;success&quot;</span><span class="o">:</span> <span class="kc">true</span>
 <span class="p">}</span>
@@ -1232,7 +1242,7 @@
 <div class="section" id="id44">
 <h3>接口说明<a class="headerlink" href="#id44" title="永久链接至标题">¶</a></h3>
 <ul class="simple">
-<li>API接口请求地址：<code class="docutils literal"><span class="pre">/auth/info</span></code></li>
+<li>API接口请求地址：<code class="docutils literal"><span class="pre">/auth/complete_info</span></code></li>
 <li>API接口请求方法：<code class="docutils literal"><span class="pre">POST</span></code></li>
 <li>API接口用户授权：<code class="docutils literal"><span class="pre">token</span></code></li>
 </ul>
