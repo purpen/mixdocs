@@ -227,14 +227,14 @@ JSON数据格式
         "success": false
     }
 
-登陆发送短信验证码
---------------------
+忘记密码发送短信验证码
+-----------------------
 
 
 接口说明
 ~~~~~~~~~~~~~~
 
-* API接口请求地址：``/users/login_verify_code``
+* API接口请求地址：``/users/find_pwd_verify_code``
 * API接口请求方法：``POST``
 
 请求参数
