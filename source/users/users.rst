@@ -103,56 +103,6 @@ JSON数据格式
       "success": false
     }
 
-获取商家头像
-----------------
-
-
-接口说明
-~~~~~~~~~~~~~~
-
-* API接口请求地址：``/users/avatar``
-* API接口请求方法：``GET``
-* API接口用户授权：``token``
-
-返回示例
-~~~~~~~~~~~~~~~~
-
-JSON数据格式
-
-请求 **正确** 返回结果：
-
-.. code-block:: javascript
-
-    {
-        "data": {
-            "avatar": {
-                "created_at": null,
-                "filename": "d",
-                "filepath": "static/img/default-logo-180x180.png",
-                "id": 1,
-                "type": null,
-                "view_url": "http://0.0.0.0:9000/_uploads/photos/static/img/default-logo-180x180.png" // 头像url
-            }
-        },
-        "status": {
-            "code": 200,
-            "message": "Ok all right."
-        },
-        "success": true
-    }
-
-请求 ``失败`` 返回结果：
-
-.. code-block:: javascript
-
-    {
-      "status": {
-        "code": 404,
-        "message": "Not Found"
-      },
-      "success": false
-    }
-
 获取合同附件
 ----------------
 
@@ -1237,7 +1187,7 @@ JSON数据格式:
             "about_me": "好人",
             "area": "鱼泉乡",
             "area_id": 10000,
-            "avatar": "http://0.0.0.0:9000/_uploads/photos/static/img/default-logo-180x180.png",
+            "avatar": "http://0.0.0.0:9000/_uploads/photos/static/img/default-logo-180x180.png",  // 头像url
             "avatar_id": 1,
             "city": "北京",
             "city_id": 1,
@@ -1250,10 +1200,11 @@ JSON数据格式:
             "gender": 0,  // 性别
             "last_seen": 1532055457,
             "mail": null,
-            "master_uid": 0,
+            "master_uid": 2,
             "mobile": "13001179400",
             "province": "北京",
             "province_id": 1,
+            "street_address": null,
             "uid": "17048395612",
             "username": "张飞"  // 用户名
         },
@@ -1325,6 +1276,31 @@ JSON数据格式:
 .. code-block:: javascript
 
     {
+        "data": {
+            "about_me": "好人",
+            "area": "",
+            "area_id": 0,
+            "avatar": "http://0.0.0.0:9000/_uploads/photos/static/img/default-logo-180x180.png",
+            "avatar_id": 1,
+            "city": "北京",
+            "city_id": 1,
+            "country": "中国",
+            "country_id": 1,
+            "created_at": 1532055457,
+            "date": "2000-02-02",
+            "description": null,
+            "email": "13001179400",
+            "gender": 0,
+            "last_seen": 1532055457,
+            "mail": "4568794@qq.com",
+            "master_uid": 2,
+            "mobile": "13645647894",
+            "province": "北京",
+            "province_id": 1,
+            "street_address": "天安门",
+            "uid": "17048395612",
+            "username": "张飞"
+        },
         "status": {
             "code": 200,
             "message": "Ok all right."
@@ -1368,113 +1344,29 @@ JSON数据格式:
 
     {
         "data": {
-            "authenticate": {
-                "area": "",
-                "area_id": 0,
-                "areacode": null,
-                "attachments": [
-                    {
-                        "created_at": null,
-                        "filename": "a",
-                        "filepath": "http://127.0.0.1:9000/_uploads/photos/222222/5d2812257b539aa.jpg",
-                        "id": 1,
-                        "type": null,
-                        "view_url": "http://0.0.0.0:9000/_uploads/photos/http://127.0.0.1:9000/_uploads/photos/222222/5d2812257b539aa.jpg"
-                    }
-                ],
-                "avatar": "http://0.0.0.0:9000/_uploads/photos/http://127.0.0  .1:9000/_uploads/photos/222222/5d2812257b539aa.jpg",  // 头像路径
-                "avatar_id": 1,  // 头像id
-                "brand_name": "jkss ",
-                "city": "北京",  // 城市
-                "city_id": 1,  // 城市id
-                "company_name": null,
-                "company_qualification": [],
-                "country": "中国", // 国家
-                "country_id": 1,  // 国家id
-                "customized": true,
-                "email": "45668794@qq.com", // 邮箱
-                "error_content": null,
-                "front_card_photo": "http://0.0.0.0:9000/_uploads/photos/http://127.0.0.1:9000/_uploads/photos/222222/5d2812257b539aa.jpg",
-                "front_card_photo_id": 1,
-                "holding_card_photo": "http://0.0.0.0:9000/_uploads/photos/http://127.0.0.1:9000/_uploads/photos/222222/5d2812257b539oo.jpg",
-                "holding_card_photo_id": 3,
-                "id": 32,
-                "id_card": "13082119921226801x",
-                "label_libraries": [],
-                "link": [
-                    "https://www.taobao.com",
-                    "https://www.jingdong.com",
-                    "https://www.tianmao.com"
-                ],
-                "mobile": "13645647895", // 手机号
-                "name": "毛爷",
-                "other_scope": "",
-                "own_brand": false,
-                "packaging": true,
-                "packaging_file": [
-                    {
-                        "created_at": null,
-                        "filename": "e",
-                        "filepath": "http://127.0.0.1:9000/_uploads/photos/222222/5d2812257b539bb.jpg",
-                        "id": 2,
-                        "type": null,
-                        "view_url": "http://0.0.0.0:9000/_uploads/photos/http://127.0.0.1:9000/_uploads/photos/222222/5d2812257b539bb.jpg"
-                    }
-                ],
-                "patent": true,
-                "patent_file": [
-                    {
-                        "created_at": null,
-                        "filename": "a",
-                        "filepath": "http://127.0.0.1:9000/_uploads/photos/222222/5d2812257b539aa.jpg",
-                        "id": 1,
-                        "type": null,
-                        "view_url": "http://0.0.0.0:9000/_uploads/photos/http://127.0.0.1:9000/_uploads/photos/222222/5d2812257b539aa.jpg"
-                    }
-                ],
-                "phone": "",  // 固话
-                "product_category": "无人机",
-                "product_price": "22,99",
-                "product_scope": 1,
-                "province": "北京",
-                "province_id": 1,
-                "qq": "",
-                "reverse_card_photo": "http://0.0.0.0:9000/_uploads/photos/http://127.0.0.1:9000/_uploads/photos/222222/5d2812257b539bb.jpg",
-                "reverse_card_photo_id": 2,
-                "sale_platform": [
-                    "京东",
-                    "淘宝",
-                    "天猫"
-                ],
-                "secured_trade": true,
-                "status": 1,
-                "street_address": "天安门",
-                "urgent_contact_mobile": null,
-                "urgent_contact_name": null,
-                "url": null,
-                "user_identity": 11,
-                "user_type": 3,
-                "wechat": null
-            },
-            "user": {
-                "about_me": "一个好孩子",
-                "avatar": "http://0.0.0.0:9000/_uploads/photos/http://127.0.0.1:9000/_uploads/photos/222222/5d2812257b539bb.jpg",
-                "city": "北京",
-                "country": "中国",
-                "created_at": 1529493576,
-                "date": "1992-12-26",  //生日
-                "description": null,
-                "email": "13001179400",
-                "gender": 0, // 性别
-                "last_seen": 1530855883,
-                "mail": null,
-                "master_uid": 2,
-                "mobile": null,
-                "name": null,
-                "province": "北京",
-                "uid": "19562310748",
-                "username": "雷军"  // 用户名
-            }
+            "about_me": "好人",
+            "area": "",  // 区域
+            "area_id": 0,
+            "avatar": "http://0.0.0.0:9000/_uploads/photos/static/img/default-logo-180x180.png",  // 头像url
+            "avatar_id": 1,  // 头像ID
+            "city": "北京",  // 城市
+            "city_id": 1,
+            "country": "中国", // 国家
+            "country_id": 1,
+            "created_at": 1532055457,
+            "date": "2000-02-02",  // 生日
+            "description": null,
+            "email": "13001179400",
+            "gender": 0,  // 性别
+            "last_seen": 1532055457,
+            "mail": "4568794@qq.com",  // 邮箱
+            "master_uid": 2,
+            "mobile": "13645647894",  // 手机号
+            "province": "北京",  // 省份
+            "province_id": 1,
+            "street_address": "天安门",  // 详细地址
+            "uid": "17048395612",
+            "username": "张飞"  // 用户名
         },
         "status": {
             "code": 200,
