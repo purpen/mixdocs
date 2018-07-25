@@ -428,8 +428,9 @@ JSON数据格式:
 
     {
         "data": {
-            "areacode": "+86",
-            "email": "13001179400"
+            "created_at": 1532523429,
+            "expiration": 2592000,
+            "token": "eyJhbGciOiJIUzI1NiIsImlhdCI6MTUzMjUyMzQyOSwiZXhwIjoxNTM1MTE1NDI5fQ.eyJpZCI6NH0.d2Jza6ZRbPuvD6JuICCELHJd5F31e8HNMo5dsJY5Tuk"
         },
         "status": {
             "code": 200,
