@@ -242,16 +242,22 @@
 <li><a class="reference internal" href="#id38">返回示例</a></li>
 </ul>
 </li>
-<li><a class="reference internal" href="#id39">获取手机号地区编码</a><ul>
+<li><a class="reference internal" href="#id39">app动态登陆</a><ul>
 <li><a class="reference internal" href="#id40">接口说明</a></li>
 <li><a class="reference internal" href="#id41">请求参数</a></li>
 <li><a class="reference internal" href="#id42">返回示例</a></li>
 </ul>
 </li>
-<li><a class="reference internal" href="#id43">首次注册后完善个人资料</a><ul>
+<li><a class="reference internal" href="#id43">获取手机号地区编码</a><ul>
 <li><a class="reference internal" href="#id44">接口说明</a></li>
 <li><a class="reference internal" href="#id45">请求参数</a></li>
 <li><a class="reference internal" href="#id46">返回示例</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#id47">首次注册后完善个人资料</a><ul>
+<li><a class="reference internal" href="#id48">接口说明</a></li>
+<li><a class="reference internal" href="#id49">请求参数</a></li>
+<li><a class="reference internal" href="#id50">返回示例</a></li>
 </ul>
 </li>
 </ul>
@@ -345,16 +351,22 @@
 <li><a class="reference internal" href="#id38">返回示例</a></li>
 </ul>
 </li>
-<li><a class="reference internal" href="#id39">获取手机号地区编码</a><ul>
+<li><a class="reference internal" href="#id39">app动态登陆</a><ul>
 <li><a class="reference internal" href="#id40">接口说明</a></li>
 <li><a class="reference internal" href="#id41">请求参数</a></li>
 <li><a class="reference internal" href="#id42">返回示例</a></li>
 </ul>
 </li>
-<li><a class="reference internal" href="#id43">首次注册后完善个人资料</a><ul>
+<li><a class="reference internal" href="#id43">获取手机号地区编码</a><ul>
 <li><a class="reference internal" href="#id44">接口说明</a></li>
 <li><a class="reference internal" href="#id45">请求参数</a></li>
 <li><a class="reference internal" href="#id46">返回示例</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#id47">首次注册后完善个人资料</a><ul>
+<li><a class="reference internal" href="#id48">接口说明</a></li>
+<li><a class="reference internal" href="#id49">请求参数</a></li>
+<li><a class="reference internal" href="#id50">返回示例</a></li>
 </ul>
 </li>
 </ul>
@@ -1159,17 +1171,101 @@
 </div>
 </div>
 <div class="section" id="id39">
-<h2>获取手机号地区编码<a class="headerlink" href="#id39" title="永久链接至标题">¶</a></h2>
-<p>获取手机号地区编码</p>
+<h2>app动态登陆<a class="headerlink" href="#id39" title="永久链接至标题">¶</a></h2>
 <div class="section" id="id40">
 <h3>接口说明<a class="headerlink" href="#id40" title="永久链接至标题">¶</a></h3>
+<ul class="simple">
+<li>API接口请求地址：<code class="docutils literal"><span class="pre">/auth/app_dynamic_login</span></code></li>
+<li>API接口请求方法：<code class="docutils literal"><span class="pre">POST</span></code></li>
+</ul>
+</div>
+<div class="section" id="id41">
+<h3>请求参数<a class="headerlink" href="#id41" title="永久链接至标题">¶</a></h3>
+<table border="1" class="docutils">
+<colgroup>
+<col width="23%" />
+<col width="10%" />
+<col width="11%" />
+<col width="10%" />
+<col width="46%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">名称</th>
+<th class="head">类型</th>
+<th class="head">是否必须</th>
+<th class="head">默认值</th>
+<th class="head">描述说明</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>areacode</td>
+<td>String</td>
+<td>可选</td>
+<td>+86</td>
+<td>区号</td>
+</tr>
+<tr class="row-odd"><td>email</td>
+<td>String</td>
+<td>必须</td>
+<td>&#160;</td>
+<td>手机号</td>
+</tr>
+<tr class="row-even"><td>verify_code</td>
+<td>String</td>
+<td>必须</td>
+<td>&#160;</td>
+<td>验证码</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="id42">
+<h3>返回示例<a class="headerlink" href="#id42" title="永久链接至标题">¶</a></h3>
+<p>JSON数据格式:</p>
+<p>请求 <strong>正确</strong> 返回结果：</p>
+<div class="highlight-javascript"><div class="highlight"><pre><span></span><span class="p">{</span>
+    <span class="s2">&quot;data&quot;</span><span class="o">:</span> <span class="p">{</span>
+        <span class="s2">&quot;avatar&quot;</span><span class="o">:</span> <span class="s2">&quot;http://kg.erp.taihuoniao.com/static/img/default-logo-180x180.png&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;created_at&quot;</span><span class="o">:</span> <span class="mi">1532585091</span><span class="p">,</span>
+        <span class="s2">&quot;expiration&quot;</span><span class="o">:</span> <span class="mi">2592000</span><span class="p">,</span>
+        <span class="s2">&quot;is_first_login&quot;</span><span class="o">:</span> <span class="kc">true</span><span class="p">,</span>  <span class="c1">// 是否为第一次登陆, 是则需要完善个人资料</span>
+        <span class="s2">&quot;mobile&quot;</span><span class="o">:</span> <span class="s2">&quot;15666666667&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;token&quot;</span><span class="o">:</span> <span class="s2">&quot;eyJhbGciOiJIUzI1NiIsImlhdCI6MTUzMjU4NTA5MSwiZXhwIjoxNTM1MTc3MDkxfQ.eyJpZCI6MjB9.Jcfl0_x2xxNrfwPQ9PYVpimRh0j8ZZUZ_HRLlG9WgWc&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;uid&quot;</span><span class="o">:</span> <span class="s2">&quot;18402396751&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;username&quot;</span><span class="o">:</span> <span class="s2">&quot;15666666667&quot;</span>
+    <span class="p">},</span>
+    <span class="s2">&quot;status&quot;</span><span class="o">:</span> <span class="p">{</span>
+        <span class="s2">&quot;code&quot;</span><span class="o">:</span> <span class="mi">200</span><span class="p">,</span>
+        <span class="s2">&quot;message&quot;</span><span class="o">:</span> <span class="s2">&quot;Ok all right.&quot;</span>
+    <span class="p">},</span>
+    <span class="s2">&quot;success&quot;</span><span class="o">:</span> <span class="kc">true</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<p>请求 <code class="docutils literal"><span class="pre">失败</span></code> 返回结果：</p>
+<div class="highlight-javascript"><div class="highlight"><pre><span></span><span class="p">{</span>
+    <span class="s2">&quot;status&quot;</span><span class="o">:</span> <span class="p">{</span>
+        <span class="s2">&quot;code&quot;</span><span class="o">:</span> <span class="mi">400</span><span class="p">,</span>
+        <span class="s2">&quot;message&quot;</span><span class="o">:</span> <span class="s2">&quot;验证码已过期&quot;</span>
+    <span class="p">},</span>
+    <span class="s2">&quot;success&quot;</span><span class="o">:</span> <span class="kc">false</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="id43">
+<h2>获取手机号地区编码<a class="headerlink" href="#id43" title="永久链接至标题">¶</a></h2>
+<p>获取手机号地区编码</p>
+<div class="section" id="id44">
+<h3>接口说明<a class="headerlink" href="#id44" title="永久链接至标题">¶</a></h3>
 <ul class="simple">
 <li>API接口请求地址：<code class="docutils literal"><span class="pre">/auth/area_code</span></code></li>
 <li>API接口请求方法：<code class="docutils literal"><span class="pre">GET</span></code></li>
 </ul>
 </div>
-<div class="section" id="id41">
-<h3>请求参数<a class="headerlink" href="#id41" title="永久链接至标题">¶</a></h3>
+<div class="section" id="id45">
+<h3>请求参数<a class="headerlink" href="#id45" title="永久链接至标题">¶</a></h3>
 <table border="1" class="docutils">
 <colgroup>
 <col width="15%" />
@@ -1208,8 +1304,8 @@
 </tbody>
 </table>
 </div>
-<div class="section" id="id42">
-<h3>返回示例<a class="headerlink" href="#id42" title="永久链接至标题">¶</a></h3>
+<div class="section" id="id46">
+<h3>返回示例<a class="headerlink" href="#id46" title="永久链接至标题">¶</a></h3>
 <p>JSON数据格式:</p>
 <div class="highlight-javascript"><div class="highlight"><pre><span></span><span class="p">{</span>
     <span class="s2">&quot;data&quot;</span><span class="o">:</span> <span class="p">{</span>
@@ -1237,18 +1333,18 @@
 </div>
 </div>
 </div>
-<div class="section" id="id43">
-<h2>首次注册后完善个人资料<a class="headerlink" href="#id43" title="永久链接至标题">¶</a></h2>
-<div class="section" id="id44">
-<h3>接口说明<a class="headerlink" href="#id44" title="永久链接至标题">¶</a></h3>
+<div class="section" id="id47">
+<h2>首次注册后完善个人资料<a class="headerlink" href="#id47" title="永久链接至标题">¶</a></h2>
+<div class="section" id="id48">
+<h3>接口说明<a class="headerlink" href="#id48" title="永久链接至标题">¶</a></h3>
 <ul class="simple">
 <li>API接口请求地址：<code class="docutils literal"><span class="pre">/auth/complete_info</span></code></li>
 <li>API接口请求方法：<code class="docutils literal"><span class="pre">POST</span></code></li>
 <li>API接口用户授权：<code class="docutils literal"><span class="pre">token</span></code></li>
 </ul>
 </div>
-<div class="section" id="id45">
-<h3>请求参数<a class="headerlink" href="#id45" title="永久链接至标题">¶</a></h3>
+<div class="section" id="id49">
+<h3>请求参数<a class="headerlink" href="#id49" title="永久链接至标题">¶</a></h3>
 <table border="1" class="docutils">
 <colgroup>
 <col width="15%" />
@@ -1293,8 +1389,8 @@
 </tbody>
 </table>
 </div>
-<div class="section" id="id46">
-<h3>返回示例<a class="headerlink" href="#id46" title="永久链接至标题">¶</a></h3>
+<div class="section" id="id50">
+<h3>返回示例<a class="headerlink" href="#id50" title="永久链接至标题">¶</a></h3>
 <p>JSON数据格式:</p>
 <p>请求 <strong>正确</strong> 返回结果：</p>
 <div class="highlight-javascript"><div class="highlight"><pre><span></span><span class="p">{</span>

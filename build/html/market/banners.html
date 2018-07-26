@@ -92,10 +92,13 @@
 <li class="toctree-l2"><a class="reference internal" href="../products/models.html">商品规格模块</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../products/labels.html">标签模块</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../products/return_policies.html">商家退换货规则模块</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../products/store_product_packet.html">商品组模块</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../products/distributions.html">分销模块</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../products/wish.html">心愿清单模块</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../products/user_record.html">用户商品记录模块</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../products/assets.html">附件模块</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../distributions/index.html">分销API模块</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../distributions/distributions.html">分销模块</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../distributions/store_product_packet.html">商品组模块</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="../customers/index.html">分销客户API模块</a><ul>
@@ -110,11 +113,13 @@
 <li class="toctree-l1"><a class="reference internal" href="../shopes/index.html">微商城API模块</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="../shopes/shopes.html">微商城模块</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../shopes/store.html">店铺模块</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../shopes/wxapp.html">小程序模块</a></li>
 </ul>
 </li>
 <li class="toctree-l1 current"><a class="reference internal" href="index.html">营销API模块</a><ul class="current">
 <li class="toctree-l2 current"><a class="current reference internal" href="#">营销工具/广告模块</a></li>
 <li class="toctree-l2"><a class="reference internal" href="coupons.html">营销工具/优惠券模块</a></li>
+<li class="toctree-l2"><a class="reference internal" href="bonus_question.html">营销工具/猜题赢现金</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="../stats/index.html">统计API模块</a><ul>
@@ -124,11 +129,30 @@
 <li class="toctree-l1"><a class="reference internal" href="../users/index.html">用户API模块</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="../users/users.html">用户模块</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../users/auth.html">用户认证模块</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../users/finance.html">账户模块</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../wx_apps/index.html">小程序API模块</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../wx_apps/wx_app_design.html">小程序配置模块</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../qa/index.html">问答API模块</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../qa/qa.html">问答模块</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../columns/index.html">栏目API模块</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../columns/column_products.html">栏目商品模块</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="../common.html">公用接口模块</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="../common.html#id2">幻灯图列表</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../common.html#id6">搜索关键词历史</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../common.html#id10">小程序绑定手机号发送验证码</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../common.html#id15">注册发送短信验证码</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../common.html#id20">忘记密码发送短信验证码</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../common.html#id24">动态登陆发送短信验证码</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../common.html#id28">账户编辑发送短信验证码</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../common.html#id32">发送邮件验证码</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="../setting.html">系统相关配置文档</a><ul>
@@ -183,16 +207,26 @@
 <li><a class="reference internal" href="#id17">返回示例</a></li>
 </ul>
 </li>
-<li><a class="reference internal" href="#id18">新增广告信息&lt;未开通&gt;</a><ul>
+<li><a class="reference internal" href="#id18">精选广告</a><ul>
 <li><a class="reference internal" href="#id19">接口说明</a></li>
+<li><a class="reference internal" href="#id20">返回示例</a></li>
 </ul>
 </li>
-<li><a class="reference internal" href="#id20">更新广告信息&lt;未开通&gt;</a><ul>
-<li><a class="reference internal" href="#id21">接口说明</a></li>
+<li><a class="reference internal" href="#id21">探索广告</a><ul>
+<li><a class="reference internal" href="#id22">接口说明</a></li>
+<li><a class="reference internal" href="#id23">返回示例</a></li>
 </ul>
 </li>
-<li><a class="reference internal" href="#id22">删除广告信息&lt;未开通&gt;</a><ul>
-<li><a class="reference internal" href="#id23">接口说明</a></li>
+<li><a class="reference internal" href="#id24">新增广告信息&lt;未开通&gt;</a><ul>
+<li><a class="reference internal" href="#id25">接口说明</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#id26">更新广告信息&lt;未开通&gt;</a><ul>
+<li><a class="reference internal" href="#id27">接口说明</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#id28">删除广告信息&lt;未开通&gt;</a><ul>
+<li><a class="reference internal" href="#id29">接口说明</a></li>
 </ul>
 </li>
 </ul>
@@ -251,16 +285,26 @@
 <li><a class="reference internal" href="#id17">返回示例</a></li>
 </ul>
 </li>
-<li><a class="reference internal" href="#id18">新增广告信息&lt;未开通&gt;</a><ul>
+<li><a class="reference internal" href="#id18">精选广告</a><ul>
 <li><a class="reference internal" href="#id19">接口说明</a></li>
+<li><a class="reference internal" href="#id20">返回示例</a></li>
 </ul>
 </li>
-<li><a class="reference internal" href="#id20">更新广告信息&lt;未开通&gt;</a><ul>
-<li><a class="reference internal" href="#id21">接口说明</a></li>
+<li><a class="reference internal" href="#id21">探索广告</a><ul>
+<li><a class="reference internal" href="#id22">接口说明</a></li>
+<li><a class="reference internal" href="#id23">返回示例</a></li>
 </ul>
 </li>
-<li><a class="reference internal" href="#id22">删除广告信息&lt;未开通&gt;</a><ul>
-<li><a class="reference internal" href="#id23">接口说明</a></li>
+<li><a class="reference internal" href="#id24">新增广告信息&lt;未开通&gt;</a><ul>
+<li><a class="reference internal" href="#id25">接口说明</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#id26">更新广告信息&lt;未开通&gt;</a><ul>
+<li><a class="reference internal" href="#id27">接口说明</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#id28">删除广告信息&lt;未开通&gt;</a><ul>
+<li><a class="reference internal" href="#id29">接口说明</a></li>
 </ul>
 </li>
 </ul>
@@ -441,7 +485,7 @@
 <div class="section" id="id11">
 <h3>接口说明<a class="headerlink" href="#id11" title="永久链接至标题">¶</a></h3>
 <ul class="simple">
-<li>API接口请求地址：<code class="docutils literal"><span class="pre">/market/banners</span></code></li>
+<li>API接口请求地址：<code class="docutils literal"><span class="pre">/banners</span></code></li>
 <li>API接口请求方法：<code class="docutils literal"><span class="pre">GET</span></code></li>
 </ul>
 </div>
@@ -520,7 +564,7 @@
 <div class="section" id="id15">
 <h3>接口说明<a class="headerlink" href="#id15" title="永久链接至标题">¶</a></h3>
 <ul class="simple">
-<li>API接口请求地址：<code class="docutils literal"><span class="pre">/market/banners/&lt;rid&gt;</span></code></li>
+<li>API接口请求地址：<code class="docutils literal"><span class="pre">/banners/&lt;rid&gt;</span></code></li>
 <li>API接口请求方法：<code class="docutils literal"><span class="pre">GET</span></code></li>
 </ul>
 </div>
@@ -543,23 +587,11 @@
 </tr>
 </thead>
 <tbody valign="top">
-<tr class="row-even"><td>page</td>
-<td>Number</td>
-<td>可选</td>
-<td>1</td>
-<td>当前页码</td>
-</tr>
-<tr class="row-odd"><td>per_page</td>
-<td>Number</td>
-<td>可选</td>
-<td>5</td>
-<td>每页数量</td>
-</tr>
-<tr class="row-even"><td>banner_type</td>
-<td>Number</td>
-<td>可选</td>
-<td>1</td>
-<td>广告类型</td>
+<tr class="row-even"><td>rid</td>
+<td>String</td>
+<td>必须</td>
+<td>&#160;</td>
+<td>广告编号</td>
 </tr>
 </tbody>
 </table>
@@ -590,10 +622,7 @@
                 <span class="s2">&quot;title&quot;</span><span class="o">:</span> <span class="s2">&quot;标题&quot;</span><span class="p">,</span>
                 <span class="s2">&quot;type&quot;</span><span class="o">:</span> <span class="mi">2</span>
             <span class="p">}</span>
-        <span class="p">],</span>
-        <span class="s2">&quot;count&quot;</span><span class="o">:</span> <span class="mi">2</span><span class="p">,</span>
-        <span class="s2">&quot;next&quot;</span><span class="o">:</span> <span class="kc">false</span><span class="p">,</span>
-        <span class="s2">&quot;prev&quot;</span><span class="o">:</span> <span class="kc">false</span>
+        <span class="p">]</span>
     <span class="p">},</span>
     <span class="s2">&quot;status&quot;</span><span class="o">:</span> <span class="p">{</span>
         <span class="s2">&quot;code&quot;</span><span class="o">:</span> <span class="mi">200</span><span class="p">,</span>
@@ -606,36 +635,64 @@
 </div>
 </div>
 <div class="section" id="id18">
-<h2>新增广告信息&lt;未开通&gt;<a class="headerlink" href="#id18" title="永久链接至标题">¶</a></h2>
-<p>新增广告信息</p>
+<h2>精选广告<a class="headerlink" href="#id18" title="永久链接至标题">¶</a></h2>
 <div class="section" id="id19">
 <h3>接口说明<a class="headerlink" href="#id19" title="永久链接至标题">¶</a></h3>
 <ul class="simple">
-<li>API接口请求地址：<code class="docutils literal"><span class="pre">/market/banners/create</span></code></li>
+<li>API接口请求地址：<code class="docutils literal"><span class="pre">/banners/handpick</span></code></li>
+<li>API接口请求方法：<code class="docutils literal"><span class="pre">GET</span></code></li>
+</ul>
+</div>
+<div class="section" id="id20">
+<h3>返回示例<a class="headerlink" href="#id20" title="永久链接至标题">¶</a></h3>
+<p>** 同上广告图列表返回示例 **</p>
+</div>
+</div>
+<div class="section" id="id21">
+<h2>探索广告<a class="headerlink" href="#id21" title="永久链接至标题">¶</a></h2>
+<div class="section" id="id22">
+<h3>接口说明<a class="headerlink" href="#id22" title="永久链接至标题">¶</a></h3>
+<ul class="simple">
+<li>API接口请求地址：<code class="docutils literal"><span class="pre">/banners/explore</span></code></li>
+<li>API接口请求方法：<code class="docutils literal"><span class="pre">GET</span></code></li>
+</ul>
+</div>
+<div class="section" id="id23">
+<h3>返回示例<a class="headerlink" href="#id23" title="永久链接至标题">¶</a></h3>
+<p>** 同上广告图列表返回示例 **</p>
+</div>
+</div>
+<div class="section" id="id24">
+<h2>新增广告信息&lt;未开通&gt;<a class="headerlink" href="#id24" title="永久链接至标题">¶</a></h2>
+<p>新增广告信息</p>
+<div class="section" id="id25">
+<h3>接口说明<a class="headerlink" href="#id25" title="永久链接至标题">¶</a></h3>
+<ul class="simple">
+<li>API接口请求地址：<code class="docutils literal"><span class="pre">/banners/create</span></code></li>
 <li>API接口请求方法：<code class="docutils literal"><span class="pre">POST</span></code></li>
 <li>API接口用户授权：<code class="docutils literal"><span class="pre">token</span></code></li>
 </ul>
 </div>
 </div>
-<div class="section" id="id20">
-<h2>更新广告信息&lt;未开通&gt;<a class="headerlink" href="#id20" title="永久链接至标题">¶</a></h2>
+<div class="section" id="id26">
+<h2>更新广告信息&lt;未开通&gt;<a class="headerlink" href="#id26" title="永久链接至标题">¶</a></h2>
 <p>更新广告信息</p>
-<div class="section" id="id21">
-<h3>接口说明<a class="headerlink" href="#id21" title="永久链接至标题">¶</a></h3>
+<div class="section" id="id27">
+<h3>接口说明<a class="headerlink" href="#id27" title="永久链接至标题">¶</a></h3>
 <ul class="simple">
-<li>API接口请求地址：<code class="docutils literal"><span class="pre">/market/banners/update</span></code></li>
+<li>API接口请求地址：<code class="docutils literal"><span class="pre">/banners/update</span></code></li>
 <li>API接口请求方法：<code class="docutils literal"><span class="pre">PUT</span></code></li>
 <li>API接口用户授权：<code class="docutils literal"><span class="pre">token</span></code></li>
 </ul>
 </div>
 </div>
-<div class="section" id="id22">
-<h2>删除广告信息&lt;未开通&gt;<a class="headerlink" href="#id22" title="永久链接至标题">¶</a></h2>
+<div class="section" id="id28">
+<h2>删除广告信息&lt;未开通&gt;<a class="headerlink" href="#id28" title="永久链接至标题">¶</a></h2>
 <p>删除广告信息</p>
-<div class="section" id="id23">
-<h3>接口说明<a class="headerlink" href="#id23" title="永久链接至标题">¶</a></h3>
+<div class="section" id="id29">
+<h3>接口说明<a class="headerlink" href="#id29" title="永久链接至标题">¶</a></h3>
 <ul class="simple">
-<li>API接口请求地址：<code class="docutils literal"><span class="pre">/market/banners/delete</span></code></li>
+<li>API接口请求地址：<code class="docutils literal"><span class="pre">/banners/delete</span></code></li>
 <li>API接口请求方法：<code class="docutils literal"><span class="pre">DELETE</span></code></li>
 <li>API接口用户授权：<code class="docutils literal"><span class="pre">token</span></code></li>
 </ul>
