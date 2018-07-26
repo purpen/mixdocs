@@ -562,6 +562,68 @@ JSON数据格式:
         "success": false
     }
 
+app动态登陆
+-------------
+
+
+接口说明
+~~~~~~~~~~~~~~
+
+* API接口请求地址：``/auth/app_dynamic_login``
+* API接口请求方法：``POST``
+
+请求参数
+~~~~~~~~~~~~~~~
+
+==================  ========  =========  ========  ====================================
+名称                 类型      是否必须    默认值     描述说明
+==================  ========  =========  ========  ====================================
+areacode             String    可选        +86      区号
+email                String    必须                 手机号
+verify_code          String    必须                 验证码
+==================  ========  =========  ========  ====================================
+
+
+返回示例
+~~~~~~~~~~~~~~~~
+
+JSON数据格式:
+
+请求 **正确** 返回结果：
+
+.. code-block:: javascript
+
+    {
+        "data": {
+            "avatar": "http://kg.erp.taihuoniao.com/static/img/default-logo-180x180.png",
+            "created_at": 1532585091,
+            "expiration": 2592000,
+            "is_first_login": true,  // 是否为第一次登陆, 是则需要完善个人资料
+            "mobile": "15666666667",
+            "token": "eyJhbGciOiJIUzI1NiIsImlhdCI6MTUzMjU4NTA5MSwiZXhwIjoxNTM1MTc3MDkxfQ.eyJpZCI6MjB9.Jcfl0_x2xxNrfwPQ9PYVpimRh0j8ZZUZ_HRLlG9WgWc",
+            "uid": "18402396751",
+            "username": "15666666667"
+        },
+        "status": {
+            "code": 200,
+            "message": "Ok all right."
+        },
+        "success": true
+    }
+
+请求 ``失败`` 返回结果：
+
+.. code-block:: javascript
+
+    {
+        "status": {
+            "code": 400,
+            "message": "验证码已过期"
+        },
+        "success": false
+    }
+
+
 获取手机号地区编码
 --------------------
 获取手机号地区编码
