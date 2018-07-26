@@ -147,11 +147,12 @@
 <li class="toctree-l1"><a class="reference internal" href="../common.html">公用接口模块</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="../common.html#id2">幻灯图列表</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../common.html#id6">搜索关键词历史</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../common.html#id10">注册发送短信验证码</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../common.html#id15">登陆发送短信验证码</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../common.html#id19">动态登陆发送短信验证码</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../common.html#id23">账户编辑发送短信验证码</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../common.html#id27">发送邮件验证码</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../common.html#id10">小程序绑定手机号发送验证码</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../common.html#id15">注册发送短信验证码</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../common.html#id20">忘记密码发送短信验证码</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../common.html#id24">动态登陆发送短信验证码</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../common.html#id28">账户编辑发送短信验证码</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../common.html#id32">发送邮件验证码</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="../setting.html">系统相关配置文档</a><ul>
@@ -517,6 +518,7 @@
         <span class="s2">&quot;rid&quot;</span><span class="o">:</span> <span class="s2">&quot;商品编号&quot;</span><span class="p">,</span>
         <span class="s2">&quot;second_category_id&quot;</span><span class="o">:</span> <span class="s2">&quot;二级分类id&quot;</span><span class="p">,</span>
         <span class="s2">&quot;status&quot;</span><span class="o">:</span> <span class="s2">&quot;商品状态: 0=仓库中, 1=出售中, 2=下架中&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;stick_text&quot;</span><span class="o">:</span> <span class="s2">&quot;分销推荐语&quot;</span><span class="p">,</span>
         <span class="s2">&quot;sticked&quot;</span><span class="o">:</span> <span class="s2">&quot;是否推荐&quot;</span><span class="p">,</span>
         <span class="s2">&quot;store_name&quot;</span><span class="o">:</span> <span class="s2">&quot;店铺名&quot;</span><span class="p">,</span>
         <span class="s2">&quot;store_rid&quot;</span><span class="o">:</span> <span class="s2">&quot;店铺编号&quot;</span><span class="p">,</span>
@@ -561,6 +563,7 @@
         <span class="s2">&quot;rid&quot;</span><span class="o">:</span> <span class="s2">&quot;117210372661&quot;</span><span class="p">,</span>
         <span class="s2">&quot;second_category_id&quot;</span><span class="o">:</span> <span class="mi">50</span><span class="p">,</span>
         <span class="s2">&quot;status&quot;</span><span class="o">:</span> <span class="mi">1</span><span class="p">,</span>
+        <span class="s2">&quot;stick_text&quot;</span><span class="o">:</span> <span class="s2">&quot;这里填写分销推荐语&quot;</span><span class="p">,</span>
         <span class="s2">&quot;sticked&quot;</span><span class="o">:</span> <span class="kc">null</span><span class="p">,</span>
         <span class="s2">&quot;store_name&quot;</span><span class="o">:</span> <span class="s2">&quot;太火鸟店铺&quot;</span><span class="p">,</span>
         <span class="s2">&quot;store_rid&quot;</span><span class="o">:</span> <span class="s2">&quot;6516561564&quot;</span><span class="p">,</span>
@@ -670,6 +673,7 @@
         <span class="s2">&quot;rid&quot;</span><span class="o">:</span> <span class="s2">&quot;商品编号&quot;</span><span class="p">,</span>
         <span class="s2">&quot;second_category_id&quot;</span><span class="o">:</span> <span class="s2">&quot;二级分类id&quot;</span><span class="p">,</span>
         <span class="s2">&quot;status&quot;</span><span class="o">:</span> <span class="s2">&quot;商品状态: 0=仓库中, 1=出售中, 2=下架中&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;stick_text&quot;</span><span class="o">:</span> <span class="s2">&quot;分销推荐语&quot;</span><span class="p">,</span>
         <span class="s2">&quot;sticked&quot;</span><span class="o">:</span> <span class="s2">&quot;是否推荐&quot;</span><span class="p">,</span>
         <span class="s2">&quot;store_name&quot;</span><span class="o">:</span> <span class="s2">&quot;店铺名&quot;</span><span class="p">,</span>
         <span class="s2">&quot;store_rid&quot;</span><span class="o">:</span> <span class="s2">&quot;店铺编号&quot;</span><span class="p">,</span>
@@ -714,6 +718,7 @@
         <span class="s2">&quot;rid&quot;</span><span class="o">:</span> <span class="s2">&quot;117210372661&quot;</span><span class="p">,</span>
         <span class="s2">&quot;second_category_id&quot;</span><span class="o">:</span> <span class="mi">50</span><span class="p">,</span>
         <span class="s2">&quot;status&quot;</span><span class="o">:</span> <span class="mi">1</span><span class="p">,</span>
+        <span class="s2">&quot;stick_text&quot;</span><span class="o">:</span> <span class="s2">&quot;这里填写分销推荐语&quot;</span><span class="p">,</span>
         <span class="s2">&quot;sticked&quot;</span><span class="o">:</span> <span class="kc">null</span><span class="p">,</span>
         <span class="s2">&quot;store_name&quot;</span><span class="o">:</span> <span class="s2">&quot;太火鸟店铺&quot;</span><span class="p">,</span>
         <span class="s2">&quot;store_rid&quot;</span><span class="o">:</span> <span class="s2">&quot;6516561564&quot;</span><span class="p">,</span>
@@ -823,6 +828,7 @@
         <span class="s2">&quot;rid&quot;</span><span class="o">:</span> <span class="s2">&quot;商品编号&quot;</span><span class="p">,</span>
         <span class="s2">&quot;second_category_id&quot;</span><span class="o">:</span> <span class="s2">&quot;二级分类id&quot;</span><span class="p">,</span>
         <span class="s2">&quot;status&quot;</span><span class="o">:</span> <span class="s2">&quot;商品状态: 0=仓库中, 1=出售中, 2=下架中&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;stick_text&quot;</span><span class="o">:</span> <span class="s2">&quot;分销推荐语&quot;</span><span class="p">,</span>
         <span class="s2">&quot;sticked&quot;</span><span class="o">:</span> <span class="s2">&quot;是否推荐&quot;</span><span class="p">,</span>
         <span class="s2">&quot;store_name&quot;</span><span class="o">:</span> <span class="s2">&quot;店铺名&quot;</span><span class="p">,</span>
         <span class="s2">&quot;store_rid&quot;</span><span class="o">:</span> <span class="s2">&quot;店铺编号&quot;</span><span class="p">,</span>
@@ -867,6 +873,7 @@
         <span class="s2">&quot;rid&quot;</span><span class="o">:</span> <span class="s2">&quot;117210372661&quot;</span><span class="p">,</span>
         <span class="s2">&quot;second_category_id&quot;</span><span class="o">:</span> <span class="mi">50</span><span class="p">,</span>
         <span class="s2">&quot;status&quot;</span><span class="o">:</span> <span class="mi">1</span><span class="p">,</span>
+        <span class="s2">&quot;stick_text&quot;</span><span class="o">:</span> <span class="s2">&quot;这里填写分销推荐语&quot;</span><span class="p">,</span>
         <span class="s2">&quot;sticked&quot;</span><span class="o">:</span> <span class="kc">null</span><span class="p">,</span>
         <span class="s2">&quot;store_name&quot;</span><span class="o">:</span> <span class="s2">&quot;太火鸟店铺&quot;</span><span class="p">,</span>
         <span class="s2">&quot;store_rid&quot;</span><span class="o">:</span> <span class="s2">&quot;6516561564&quot;</span><span class="p">,</span>
@@ -976,6 +983,7 @@
         <span class="s2">&quot;rid&quot;</span><span class="o">:</span> <span class="s2">&quot;商品编号&quot;</span><span class="p">,</span>
         <span class="s2">&quot;second_category_id&quot;</span><span class="o">:</span> <span class="s2">&quot;二级分类id&quot;</span><span class="p">,</span>
         <span class="s2">&quot;status&quot;</span><span class="o">:</span> <span class="s2">&quot;商品状态: 0=仓库中, 1=出售中, 2=下架中&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;stick_text&quot;</span><span class="o">:</span> <span class="s2">&quot;分销推荐语&quot;</span><span class="p">,</span>
         <span class="s2">&quot;sticked&quot;</span><span class="o">:</span> <span class="s2">&quot;是否推荐&quot;</span><span class="p">,</span>
         <span class="s2">&quot;store_name&quot;</span><span class="o">:</span> <span class="s2">&quot;店铺名&quot;</span><span class="p">,</span>
         <span class="s2">&quot;store_rid&quot;</span><span class="o">:</span> <span class="s2">&quot;店铺编号&quot;</span><span class="p">,</span>
@@ -1020,6 +1028,7 @@
         <span class="s2">&quot;rid&quot;</span><span class="o">:</span> <span class="s2">&quot;117210372661&quot;</span><span class="p">,</span>
         <span class="s2">&quot;second_category_id&quot;</span><span class="o">:</span> <span class="mi">50</span><span class="p">,</span>
         <span class="s2">&quot;status&quot;</span><span class="o">:</span> <span class="mi">1</span><span class="p">,</span>
+        <span class="s2">&quot;stick_text&quot;</span><span class="o">:</span> <span class="s2">&quot;这里填写分销推荐语&quot;</span><span class="p">,</span>
         <span class="s2">&quot;sticked&quot;</span><span class="o">:</span> <span class="kc">null</span><span class="p">,</span>
         <span class="s2">&quot;store_name&quot;</span><span class="o">:</span> <span class="s2">&quot;太火鸟店铺&quot;</span><span class="p">,</span>
         <span class="s2">&quot;store_rid&quot;</span><span class="o">:</span> <span class="s2">&quot;6516561564&quot;</span><span class="p">,</span>
@@ -1290,6 +1299,7 @@
         <span class="s2">&quot;rid&quot;</span><span class="o">:</span> <span class="s2">&quot;商品编号&quot;</span><span class="p">,</span>
         <span class="s2">&quot;second_category_id&quot;</span><span class="o">:</span> <span class="s2">&quot;二级分类id&quot;</span><span class="p">,</span>
         <span class="s2">&quot;status&quot;</span><span class="o">:</span> <span class="s2">&quot;商品状态: 0=仓库中, 1=出售中, 2=下架中&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;stick_text&quot;</span><span class="o">:</span> <span class="s2">&quot;分销推荐语&quot;</span><span class="p">,</span>
         <span class="s2">&quot;sticked&quot;</span><span class="o">:</span> <span class="s2">&quot;是否推荐&quot;</span><span class="p">,</span>
         <span class="s2">&quot;store_name&quot;</span><span class="o">:</span> <span class="s2">&quot;店铺名&quot;</span><span class="p">,</span>
         <span class="s2">&quot;store_rid&quot;</span><span class="o">:</span> <span class="s2">&quot;店铺编号&quot;</span><span class="p">,</span>
@@ -1334,6 +1344,7 @@
         <span class="s2">&quot;rid&quot;</span><span class="o">:</span> <span class="s2">&quot;117210372661&quot;</span><span class="p">,</span>
         <span class="s2">&quot;second_category_id&quot;</span><span class="o">:</span> <span class="mi">50</span><span class="p">,</span>
         <span class="s2">&quot;status&quot;</span><span class="o">:</span> <span class="mi">1</span><span class="p">,</span>
+        <span class="s2">&quot;stick_text&quot;</span><span class="o">:</span> <span class="s2">&quot;这里填写分销推荐语&quot;</span><span class="p">,</span>
         <span class="s2">&quot;sticked&quot;</span><span class="o">:</span> <span class="kc">null</span><span class="p">,</span>
         <span class="s2">&quot;store_name&quot;</span><span class="o">:</span> <span class="s2">&quot;太火鸟店铺&quot;</span><span class="p">,</span>
         <span class="s2">&quot;store_rid&quot;</span><span class="o">:</span> <span class="s2">&quot;6516561564&quot;</span><span class="p">,</span>
@@ -1456,6 +1467,7 @@
         <span class="s2">&quot;rid&quot;</span><span class="o">:</span> <span class="s2">&quot;商品编号&quot;</span><span class="p">,</span>
         <span class="s2">&quot;second_category_id&quot;</span><span class="o">:</span> <span class="s2">&quot;二级分类id&quot;</span><span class="p">,</span>
         <span class="s2">&quot;status&quot;</span><span class="o">:</span> <span class="s2">&quot;商品状态: 0=仓库中, 1=出售中, 2=下架中&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;stick_text&quot;</span><span class="o">:</span> <span class="s2">&quot;分销推荐语&quot;</span><span class="p">,</span>
         <span class="s2">&quot;sticked&quot;</span><span class="o">:</span> <span class="s2">&quot;是否推荐&quot;</span><span class="p">,</span>
         <span class="s2">&quot;store_name&quot;</span><span class="o">:</span> <span class="s2">&quot;店铺名&quot;</span><span class="p">,</span>
         <span class="s2">&quot;store_rid&quot;</span><span class="o">:</span> <span class="s2">&quot;店铺编号&quot;</span><span class="p">,</span>
@@ -1500,6 +1512,7 @@
         <span class="s2">&quot;rid&quot;</span><span class="o">:</span> <span class="s2">&quot;117210372661&quot;</span><span class="p">,</span>
         <span class="s2">&quot;second_category_id&quot;</span><span class="o">:</span> <span class="mi">50</span><span class="p">,</span>
         <span class="s2">&quot;status&quot;</span><span class="o">:</span> <span class="mi">1</span><span class="p">,</span>
+        <span class="s2">&quot;stick_text&quot;</span><span class="o">:</span> <span class="s2">&quot;这里填写分销推荐语&quot;</span><span class="p">,</span>
         <span class="s2">&quot;sticked&quot;</span><span class="o">:</span> <span class="kc">null</span><span class="p">,</span>
         <span class="s2">&quot;store_name&quot;</span><span class="o">:</span> <span class="s2">&quot;太火鸟店铺&quot;</span><span class="p">,</span>
         <span class="s2">&quot;store_rid&quot;</span><span class="o">:</span> <span class="s2">&quot;6516561564&quot;</span><span class="p">,</span>
@@ -1621,6 +1634,7 @@
         <span class="s2">&quot;rid&quot;</span><span class="o">:</span> <span class="s2">&quot;商品编号&quot;</span><span class="p">,</span>
         <span class="s2">&quot;second_category_id&quot;</span><span class="o">:</span> <span class="s2">&quot;二级分类id&quot;</span><span class="p">,</span>
         <span class="s2">&quot;status&quot;</span><span class="o">:</span> <span class="s2">&quot;商品状态: 0=仓库中, 1=出售中, 2=下架中&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;stick_text&quot;</span><span class="o">:</span> <span class="s2">&quot;分销推荐语&quot;</span><span class="p">,</span>
         <span class="s2">&quot;sticked&quot;</span><span class="o">:</span> <span class="s2">&quot;是否推荐&quot;</span><span class="p">,</span>
         <span class="s2">&quot;store_name&quot;</span><span class="o">:</span> <span class="s2">&quot;店铺名&quot;</span><span class="p">,</span>
         <span class="s2">&quot;store_rid&quot;</span><span class="o">:</span> <span class="s2">&quot;店铺编号&quot;</span><span class="p">,</span>
@@ -1665,6 +1679,7 @@
         <span class="s2">&quot;rid&quot;</span><span class="o">:</span> <span class="s2">&quot;117210372661&quot;</span><span class="p">,</span>
         <span class="s2">&quot;second_category_id&quot;</span><span class="o">:</span> <span class="mi">50</span><span class="p">,</span>
         <span class="s2">&quot;status&quot;</span><span class="o">:</span> <span class="mi">1</span><span class="p">,</span>
+        <span class="s2">&quot;stick_text&quot;</span><span class="o">:</span> <span class="s2">&quot;这里填写分销推荐语&quot;</span><span class="p">,</span>
         <span class="s2">&quot;sticked&quot;</span><span class="o">:</span> <span class="kc">null</span><span class="p">,</span>
         <span class="s2">&quot;store_name&quot;</span><span class="o">:</span> <span class="s2">&quot;太火鸟店铺&quot;</span><span class="p">,</span>
         <span class="s2">&quot;store_rid&quot;</span><span class="o">:</span> <span class="s2">&quot;6516561564&quot;</span><span class="p">,</span>
