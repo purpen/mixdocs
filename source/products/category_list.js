@@ -2,6 +2,7 @@
   "data": {
     "categories": [
       {
+        "browse_count": "分类浏览人数",
         "cover": "http://xxx/_uploads/photos/180530/72de0b9ca1ae5a3.jpg",
         "description": "",
         "id": 1,
@@ -11,6 +12,7 @@
         "status": 1
       },
       {
+        "browse_count": 1,
         "cover": "http://xxx/_uploads/photos/180530/72de0b9ca1ae5a3.jpg",
         "description": "",
         "id": 3,
@@ -20,6 +22,7 @@
         "status": 1
       },
       {
+        "browse_count": 1,
         "cover": "http://xxx/_uploads/photos/180530/72de0b9ca1ae5a3.jpg",
         "description": "",
         "id": 4,
@@ -29,6 +32,7 @@
         "status": 1
       },
       {
+        "browse_count": 1,
         "cover": "http://xxx/_uploads/photos/180530/72de0b9ca1ae5a3.jpg",
         "description": "",
         "id": 5,
