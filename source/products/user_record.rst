@@ -187,6 +187,72 @@ JSON数据格式:
     :language: javascript
 
 
+喜欢商品的用户
+----------------
+获取添加喜欢商品的用户
+
+接口说明
+~~~~~~~~~~~~~~
+
+* API接口请求地址：``/product/userlike``
+* API接口请求方法：``GET``
+
+请求参数
+~~~~~~~~~~~~~~~
+
+===========  ========  =========  ========  ====================================
+名称          类型      是否必须    默认值     描述说明
+===========  ========  =========  ========  ====================================
+page         Number    可选         1         当前页码
+per_page     Number    可选         10        每页数量
+rid          String    必须                   商品编号
+===========  ========  =========  ========  ====================================
+
+返回示例
+~~~~~~~~~~~~~~~~
+
+.. code-block:: javascript
+
+    {
+        "data": {
+            "count": 1,
+            "next": false,
+            "prev": false,
+            "product_like_users": [
+                {
+                    "about_me": "我是个好人",  // 关于我
+                    "area": "鱼泉乡",  // 区域
+                    "area_id": 10000,
+                    "avatar": "http://kg.erp.taihuoniao.com/static/img/default-logo-180x180.png", // 头像url
+                    "avatar_id": 0,  // 头像ID
+                    "city": "北京",
+                    "city_id": 1,
+                    "country": "",
+                    "country_id": null,
+                    "created_at": 1531125527,  // 创建时间
+                    "date": "1992-12-26",  // 生日
+                    "description": null,
+                    "email": "13001179400",
+                    "gender": 0,  // 性别 0默认为女
+                    "last_seen": 1531842343,
+                    "mail": "asd@163.com",  // 邮箱
+                    "master_uid": 2,
+                    "mobile": null,
+                    "province": "北京",
+                    "province_id": 1,
+                    "uid": "19138405762",
+                    "username": "超人啊"  // 用户名
+                }
+            ]
+        },
+        "status": {
+            "code": 200,
+            "message": "Ok all right."
+        },
+        "success": true
+    }
+
+
 添加用户喜欢
 ----------------
 添加商品到用户喜欢
@@ -370,7 +436,6 @@ rid          String    必须                  商品编号
 
 * API接口请求地址：``/user_browse_category``
 * API接口请求方法：``GET``
-* API接口用户授权：``token``
 
 请求参数
 ~~~~~~~~~~~~~~~
@@ -388,7 +453,7 @@ cid          Number    必须                  分类编号
 
     {
         "data": [
-            {
+            "users": {
                 "about_me": "我是个好人",  // 关于我
                 "area": "鱼泉乡",  // 区域
                 "area_id": 10000,

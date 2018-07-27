@@ -46,6 +46,8 @@
         "sticked": "是否推荐",
         "store_name": "店铺名",
         "store_rid": "店铺编号",
+        "style_id": "商品风格编号",
+        "style_name": "商品风格名",
         "top_category_id": "一级分类id",
         "total_stock": "库存数"
       },
@@ -91,6 +93,8 @@
         "sticked": null,
         "store_name": "太火鸟店铺",
         "store_rid": "6516561564",
+        "style_id": 2,
+        "style_name": "简约",
         "top_category_id": 1,
         "total_stock": 35
       },
