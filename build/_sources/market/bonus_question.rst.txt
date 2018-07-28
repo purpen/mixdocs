@@ -33,6 +33,14 @@ JSON数据格式:
                         },
                     ],
                     "difficult": 1,  // 问题难度
+                    "image": {  // 问题图片
+                        "created_at": 2,
+                        "filename": "2",
+                        "filepath": "2",
+                        "id": 2,
+                        "type": 2,
+                        "view_url": "http://0.0.0.0:9000/_uploads/photos/2"
+                    },
                     "question_id": 4,  // 问题id
                     "question": "第4题"  // 问题内容
                 }
