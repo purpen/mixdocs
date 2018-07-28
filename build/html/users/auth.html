@@ -947,11 +947,11 @@
 <h3>请求参数<a class="headerlink" href="#id30" title="永久链接至标题">¶</a></h3>
 <table border="1" class="docutils">
 <colgroup>
-<col width="18%" />
+<col width="23%" />
+<col width="10%" />
 <col width="11%" />
-<col width="12%" />
-<col width="11%" />
-<col width="49%" />
+<col width="10%" />
+<col width="46%" />
 </colgroup>
 <thead valign="bottom">
 <tr class="row-odd"><th class="head">名称</th>
@@ -962,17 +962,23 @@
 </tr>
 </thead>
 <tbody valign="top">
-<tr class="row-even"><td>password</td>
-<td>String</td>
-<td>必须</td>
-<td>&#160;</td>
-<td>手机验证码</td>
-</tr>
-<tr class="row-odd"><td>email</td>
+<tr class="row-even"><td>email</td>
 <td>String</td>
 <td>必须</td>
 <td>&#160;</td>
 <td>手机号</td>
+</tr>
+<tr class="row-odd"><td>password</td>
+<td>String</td>
+<td>必须</td>
+<td>&#160;</td>
+<td>密码</td>
+</tr>
+<tr class="row-even"><td>affirm_password</td>
+<td>String</td>
+<td>必须</td>
+<td>&#160;</td>
+<td>确认密码</td>
 </tr>
 </tbody>
 </table>
@@ -1378,13 +1384,13 @@
 <td>String</td>
 <td>可选</td>
 <td>&#160;</td>
-<td>生日</td>
+<td>生日;格式2000-02-02</td>
 </tr>
 <tr class="row-odd"><td>gender</td>
 <td>Integer</td>
 <td>可选</td>
 <td>0</td>
-<td>性别</td>
+<td>性别;0女1男</td>
 </tr>
 </tbody>
 </table>
