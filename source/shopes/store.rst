@@ -49,7 +49,8 @@ JSON数据格式
             "mobile": null, // 手机号
             "name": "张飞", // 姓名
             "province": "", // 省
-            "province_id": null
+            "province_id": null,
+            "user_identity": 1 // 用户身份, 1、独立设计师；2、艺术家；3、手做人；4、业余设计师(原创设计达人):11、原创商户经营
         },
         "status": {
             "code": 200,
