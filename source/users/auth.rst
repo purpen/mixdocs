@@ -51,7 +51,7 @@ JSON数据格式
         "created_at": 1532416777,
         "expiration": 2592000,
         "is_distributor": false,  // 是否是小b商家(分销商)
-        "is_first_login": false,  // 是否为第一次登陆 ,是则需要跳转到完善个人资料页面, 不是则进入首页
+        "is_first_login": false,  // 是否为第一次登陆
         "is_supplier": false,  // 是否是商家
         "token": "eyJhbGciOiJIUzI1NiIsImlhdCI6MTUzMjQxNjc3NywiZXhwIjoxNTM1MDA4Nzc3fQ.eyJpZCI6MX0.8hX-07txybkYNPwDt4ADl8-Sed_fjqmmxppEtuN2-Ys"
     },
@@ -596,12 +596,14 @@ JSON数据格式:
 
     {
         "data": {
-            "avatar": "http://kg.erp.taihuoniao.com/static/img/default-logo-180x180.png",
-            "created_at": 1532585091,
+            "avatar": "http://kg.erp.taihuoniao.com/static/img/default-logo-180x180.png", // 头像
+            "created_at": 1532761309,
             "expiration": 2592000,
-            "is_first_login": true,  // 是否为第一次登陆, 是则需要完善个人资料
+            "is_distributor": true, // 是不是小b
+            "is_first_login": false,
+            "is_supplier": false, // 是不是商家
             "mobile": "15666666667",
-            "token": "eyJhbGciOiJIUzI1NiIsImlhdCI6MTUzMjU4NTA5MSwiZXhwIjoxNTM1MTc3MDkxfQ.eyJpZCI6MjB9.Jcfl0_x2xxNrfwPQ9PYVpimRh0j8ZZUZ_HRLlG9WgWc",
+            "token": "eyJhbGciOiJIUzI1NiIsImlhdCI6MTUzMjc2MTMwOSwiZXhwIjoxNTM1MzUzMzA5fQ.eyJpZCI6MjB9.yUQsXp4j9lRgkxnsczGGPOLKRt1WpZbaN7bbBhzVj5k",
             "uid": "18402396751",
             "username": "15666666667"
         },
