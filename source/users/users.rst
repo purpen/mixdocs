@@ -833,7 +833,7 @@ gender           Integer    可选          0      性别
 area_id          Integer    可选                 区域ID
 province_id      Integer    可选                 省ID
 city_id          Integer    可选                 市ID
-email            String     可选                 邮箱
+mail             String     可选                 邮箱
 date             String     可选                 出生日期
 ===============  ========  =========  ========  ====================================
 
