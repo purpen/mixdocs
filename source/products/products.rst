@@ -508,6 +508,7 @@ JSON数据格式:
             "real_price": 3456.7,
             "real_sale_price": 3367,
             "return_policy_id": 1,
+            "return_policy_title": "7天退换货服务",
             "rid": "8527906841",
             "second_category_id": 628,
             "skus": [
@@ -1398,6 +1399,7 @@ JSON数据格式:
             "is_distributed": true,
             "product_return_policy": "退换货规则, 不能小于20个字符.",
             "return_policy_id": 1,
+            "return_policy_title": "7天退换货服务",
             "skus": [
                 {
                     "commission_price": 23.33,
@@ -1565,6 +1567,7 @@ JSON数据格式:
             "is_distributed": true,
             "product_return_policy": "退换货规则, 不能小于20个字符.",
             "return_policy_id": 1,
+            "return_policy_title": "7天退换货服务",
             "skus": [
                 {
                     "commission_rate": 2.34,
@@ -1727,6 +1730,7 @@ JSON数据格式:
             "real_price": 3456.7,
             "real_sale_price": 3367,
             "return_policy_id": 1,
+            "return_policy_title": "7天退换货服务",
             "rid": "8527906841",
             "second_category_id": 628,
             "skus": [
