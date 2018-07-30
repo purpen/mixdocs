@@ -175,7 +175,7 @@ JSON数据格式
             "avatar": "http://0.0.0.0:9000/_uploads/photos/static/img/default2-logo-180x180.png",  // 头像
             "followed_stores_counts": 2,  // 关注的店铺数量
             "followed_users_counts": 0,  // 关注的用户数量
-            "user_fans": 0,  // 粉丝数量
+            "fans_counts": 0,  // 粉丝数量
             "user_like_counts": 0,  // 喜欢的数量
             "username": "张飞",  // 用户名
             "wish_list_counts": 0  // 收藏的数量
@@ -313,6 +313,145 @@ JSON数据格式
         "success": true
     }
 
+获取用户喜欢的数量
+-----------------------
+
+接口说明
+~~~~~~~~~~~~~~
+
+* API接口请求地址：``/users/user_like_counts``
+* API接口请求方法：``GET``
+* API接口用户授权：``token``
+
+返回示例
+~~~~~~~~~~~~~~~~
+
+JSON数据格式:
+
+.. code-block:: javascript
+
+    {
+        "data": {
+            "user_like_counts": 1
+        },
+        "status": {
+            "code": 200,
+            "message": "Ok all right."
+        },
+        "success": true
+    }
+
+获取用户收藏数量
+-----------------------
+
+接口说明
+~~~~~~~~~~~~~~
+
+* API接口请求地址：``/users/wish_list_counts``
+* API接口请求方法：``GET``
+* API接口用户授权：``token``
+
+返回示例
+~~~~~~~~~~~~~~~~
+
+JSON数据格式:
+
+.. code-block:: javascript
+
+    {
+        "data": {
+            "wish_list_counts": 0
+        },
+        "status": {
+            "code": 200,
+            "message": "Ok all right."
+        },
+        "success": true
+    }
+
+获取用户关注的设计馆数量
+-----------------------
+
+接口说明
+~~~~~~~~~~~~~~
+
+* API接口请求地址：``/users/followed_stores_counts``
+* API接口请求方法：``GET``
+* API接口用户授权：``token``
+
+返回示例
+~~~~~~~~~~~~~~~~
+
+JSON数据格式:
+
+.. code-block:: javascript
+
+    {
+        "data": {
+            "followed_stores_counts": 0
+        },
+        "status": {
+            "code": 200,
+            "message": "Ok all right."
+        },
+        "success": true
+    }
+
+获取用户关注人数
+-----------------------
+
+接口说明
+~~~~~~~~~~~~~~
+
+* API接口请求地址：``/users/followed_users_counts``
+* API接口请求方法：``GET``
+* API接口用户授权：``token``
+
+返回示例
+~~~~~~~~~~~~~~~~
+
+JSON数据格式:
+
+.. code-block:: javascript
+
+    {
+        "data": {
+            "followed_users_counts": 2
+        },
+        "status": {
+            "code": 200,
+            "message": "Ok all right."
+        },
+        "success": true
+    }
+
+获取用户粉丝数
+-----------------------
+
+接口说明
+~~~~~~~~~~~~~~
+
+* API接口请求地址：``/users/fans_counts``
+* API接口请求方法：``GET``
+* API接口用户授权：``token``
+
+返回示例
+~~~~~~~~~~~~~~~~
+
+JSON数据格式:
+
+.. code-block:: javascript
+
+    {
+        "data": {
+            "fans_counts": 2
+        },
+        "status": {
+            "code": 200,
+            "message": "Ok all right."
+        },
+        "success": true
+    }
 
 用户资料
 ----------
@@ -694,7 +833,7 @@ gender           Integer    可选          0      性别
 area_id          Integer    可选                 区域ID
 province_id      Integer    可选                 省ID
 city_id          Integer    可选                 市ID
-email            String     可选                 邮箱
+mail             String     可选                 邮箱
 date             String     可选                 出生日期
 ===============  ========  =========  ========  ====================================
 
