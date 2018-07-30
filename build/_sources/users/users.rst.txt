@@ -370,7 +370,11 @@ JSON数据格式:
     }
 
 获取用户关注的设计馆数量
+<<<<<<< HEAD
 ----------------------------
+=======
+--------------------------
+>>>>>>> origin/qiu
 
 接口说明
 ~~~~~~~~~~~~~~
@@ -690,6 +694,9 @@ JSON数据格式
 .. code-block:: javascript
 
     {
+        "data": {
+            "mutual_followed": true  // 是否互相关注
+        },
         "status": {
             "code": 201,
             "message": "All created."
@@ -1846,19 +1853,21 @@ JSON数据格式:
 请求参数
 ~~~~~~~~~~~~~~~
 
-===============  ========  =========  ========  ====================================
-名称              类型      是否必须    默认值     描述说明
-===============  ========  =========  ========  ====================================
-country_id        Integer   必须                  国家ID
-province_id       Integer   必须                  省ID
-city_id           Integer   可选                  市ID
-area_id           Integer   可选                  区域ID
-street_address    String    必须                  详细地址
-areacode          String    可选          +86     区号
-mobile            String    必须                  手机号
-phone             String    可选          0       座机号
-email             String    必须                  邮箱
-===============  ========  =========  ========  ====================================
+=====================  ==========  =========  ==========  =============================
+名称                    类型        是否必须     默认值       描述说明
+=====================  ==========  =========  ==========  =============================
+country_id              Integer      必须                  国家ID
+province_id             Integer      必须                  省ID
+city_id                 Integer      可选                  市ID
+area_id                 Integer      可选                  区域ID
+street_address          String       必须                  详细地址
+areacode                String       可选          +86     区号
+mobile                  String       必须                  手机号
+phone                   String       可选          0       座机号
+mail                    String       必须                  邮箱
+verify_code             String       可选                  手机验证码
+email_verify_code       String       可选                  邮箱验证码
+=====================  ==========  =========  ==========  =============================
 
 请求示例
 ~~~~~~~~~~~~~~~~
@@ -1867,7 +1876,7 @@ JSON数据格式:
 
 .. code-block:: javascript
 
-    {"country_id":1,"province_id":1,"city_id":1,"street_address":"天安门","mobile":"13645647894","email":"4568794@qq.com"}
+    {"country_id":1,"province_id":1,"city_id":1,"street_address":"天安门","mobile":"13645647894","mail":"4568794@qq.com"}
 
 返回示例
 ~~~~~~~~~~~~~~~~
@@ -2152,4 +2161,3 @@ JSON数据格式:
 请求 ``失败`` 返回结果：
 
 .. code-block:: javascript
-
