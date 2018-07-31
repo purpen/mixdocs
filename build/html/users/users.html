@@ -716,7 +716,7 @@
                 <span class="s2">&quot;mail&quot;</span><span class="o">:</span> <span class="kc">null</span><span class="p">,</span>
                 <span class="s2">&quot;master_uid&quot;</span><span class="o">:</span> <span class="mi">0</span><span class="p">,</span>
                 <span class="s2">&quot;mobile&quot;</span><span class="o">:</span> <span class="kc">null</span><span class="p">,</span>
-                <span class="s2">&quot;mutual_followed&quot;</span><span class="o">:</span> <span class="kc">false</span><span class="p">,</span>  <span class="c1">// 是否相互关注</span>
+                <span class="s2">&quot;followed_status&quot;</span><span class="o">:</span> <span class="mi">2</span><span class="p">,</span>  <span class="c1">// 关注状态, 0:未关注, 1:已关注, 2:相互关注</span>
                 <span class="s2">&quot;phone&quot;</span><span class="o">:</span> <span class="kc">null</span><span class="p">,</span>
                 <span class="s2">&quot;province&quot;</span><span class="o">:</span> <span class="s2">&quot;&quot;</span><span class="p">,</span>
                 <span class="s2">&quot;province_id&quot;</span><span class="o">:</span> <span class="mi">0</span><span class="p">,</span>
@@ -814,7 +814,7 @@
                 <span class="s2">&quot;mail&quot;</span><span class="o">:</span> <span class="kc">null</span><span class="p">,</span>
                 <span class="s2">&quot;master_uid&quot;</span><span class="o">:</span> <span class="mi">0</span><span class="p">,</span>
                 <span class="s2">&quot;mobile&quot;</span><span class="o">:</span> <span class="kc">null</span><span class="p">,</span>
-                <span class="s2">&quot;mutual_followed&quot;</span><span class="o">:</span> <span class="kc">true</span><span class="p">,</span>  <span class="c1">// 是否相互关注</span>
+                <span class="s2">&quot;followed_status&quot;</span><span class="o">:</span> <span class="mi">2</span><span class="p">,</span>  <span class="c1">// 关注状态, 0:未关注, 1:已关注, 2:相互关注</span>
                 <span class="s2">&quot;phone&quot;</span><span class="o">:</span> <span class="kc">null</span><span class="p">,</span>
                 <span class="s2">&quot;province&quot;</span><span class="o">:</span> <span class="s2">&quot;&quot;</span><span class="p">,</span>
                 <span class="s2">&quot;province_id&quot;</span><span class="o">:</span> <span class="mi">0</span><span class="p">,</span>
@@ -1390,7 +1390,7 @@
 <p>请求 <strong>正确</strong> 返回结果：</p>
 <div class="highlight-javascript"><div class="highlight"><pre><span></span><span class="p">{</span>
     <span class="s2">&quot;data&quot;</span><span class="o">:</span> <span class="p">{</span>
-        <span class="s2">&quot;mutual_followed&quot;</span><span class="o">:</span> <span class="kc">true</span>  <span class="c1">// 是否互相关注</span>
+        <span class="s2">&quot;followed_status&quot;</span><span class="o">:</span> <span class="mi">2</span>
     <span class="p">},</span>
     <span class="s2">&quot;status&quot;</span><span class="o">:</span> <span class="p">{</span>
         <span class="s2">&quot;code&quot;</span><span class="o">:</span> <span class="mi">201</span><span class="p">,</span>
@@ -1455,6 +1455,9 @@
 <p>JSON数据格式</p>
 <p>请求 <strong>正确</strong> 返回结果：</p>
 <div class="highlight-javascript"><div class="highlight"><pre><span></span><span class="p">{</span>
+    <span class="s2">&quot;data&quot;</span><span class="o">:</span> <span class="p">{</span>
+        <span class="s2">&quot;followed_status&quot;</span><span class="o">:</span> <span class="mi">0</span>
+    <span class="p">},</span>
     <span class="s2">&quot;status&quot;</span><span class="o">:</span> <span class="p">{</span>
         <span class="s2">&quot;code&quot;</span><span class="o">:</span> <span class="mi">201</span><span class="p">,</span>
         <span class="s2">&quot;message&quot;</span><span class="o">:</span> <span class="s2">&quot;All created.&quot;</span>
@@ -1519,7 +1522,7 @@
 <p>请求 <strong>正确</strong> 返回结果：</p>
 <div class="highlight-javascript"><div class="highlight"><pre><span></span><span class="p">{</span>
     <span class="s2">&quot;data&quot;</span><span class="o">:</span> <span class="p">{</span>
-        <span class="s2">&quot;is_followed&quot;</span><span class="o">:</span> <span class="kc">false</span>  <span class="c1">// 是否关注</span>
+        <span class="s2">&quot;followed_status&quot;</span><span class="o">:</span> <span class="mi">2</span>
     <span class="p">},</span>
     <span class="s2">&quot;status&quot;</span><span class="o">:</span> <span class="p">{</span>
         <span class="s2">&quot;code&quot;</span><span class="o">:</span> <span class="mi">200</span><span class="p">,</span>
