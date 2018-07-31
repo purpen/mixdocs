@@ -56,7 +56,7 @@ JSON数据格式
                     "mail": null,
                     "master_uid": 0,
                     "mobile": null,
-                    "mutual_followed": false,  // 是否相互关注
+                    "followed_status": 2,  // 关注状态, 0:未关注, 1:已关注, 2:相互关注
                     "phone": null,
                     "province": "",
                     "province_id": 0,
@@ -132,7 +132,7 @@ JSON数据格式
                     "mail": null,
                     "master_uid": 0,
                     "mobile": null,
-                    "mutual_followed": true,  // 是否相互关注
+                    "followed_status": 2,  // 关注状态, 0:未关注, 1:已关注, 2:相互关注
                     "phone": null,
                     "province": "",
                     "province_id": 0,
@@ -691,7 +691,7 @@ JSON数据格式
 
     {
         "data": {
-            "mutual_followed": true  // 是否互相关注
+            "followed_status": 2
         },
         "status": {
             "code": 201,
@@ -741,6 +741,9 @@ JSON数据格式
 .. code-block:: javascript
 
     {
+        "data": {
+            "followed_status": 0
+        },
         "status": {
             "code": 201,
             "message": "All created."
@@ -790,7 +793,7 @@ JSON数据格式
 
     {
         "data": {
-            "is_followed": false  // 是否关注
+            "followed_status": 2
         },
         "status": {
             "code": 200,
