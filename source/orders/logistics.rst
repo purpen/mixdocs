@@ -1519,3 +1519,37 @@ JSON数据格式:
 
 
 
+验证该商户是否设置物流模板
+-----------------------------
+验证该商户是否设置物流模板
+
+接口说明
+~~~~~~~~~~~~~~
+
+* API接口请求地址：``/logistics/freight_template/is_set``
+* API接口请求方法：``GET``
+* API接口用户授权：``token``
+
+
+返回示例
+~~~~~~~~~~~~~~~~
+
+JSON数据格式:
+
+请求 **正确** 返回结果：
+
+.. code-block:: javascript
+
+    {
+        "data": {
+            "status": true  // true 已设置  false 未设置
+        },
+        "status": {
+            "code": 200,
+            "message": "Ok all right."
+        },
+        "success": true
+    }
+
+
+

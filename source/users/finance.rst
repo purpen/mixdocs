@@ -319,3 +319,37 @@ account                String      必需                    账户号
         },
         "success": true
     }
+
+
+验证该商户是否绑定银行卡
+============================
+验证该商户是否绑定银行卡
+
+接口说明
+~~~~~~~~~~~~~~
+
+* API接口请求地址：``/pay_account/is_set``
+* API接口请求方法：``GET``
+* API接口用户授权：``token``
+
+
+返回示例
+~~~~~~~~~~~~~~~~
+
+JSON数据格式:
+
+请求 **正确** 返回结果：
+
+.. code-block:: javascript
+
+    {
+        "data": {
+            "status": true  // true 已设置  false 未设置
+        },
+        "status": {
+            "code": 200,
+            "message": "Ok all right."
+        },
+        "success": true
+    }
+
