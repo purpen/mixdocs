@@ -178,7 +178,7 @@ page                Number    可选         1        当前页码
 per_page            Number    可选         10       每页数量
 min_price           Number    可选                  价格区间： 最小价格
 max_price           Number    可选                  价格区间： 最大价格
-sort_type           Number    可选         0        排序: 0=不限, 1=价格由低至高, 2=价格由高至低
+sort_type           Number    可选         0        排序: 0=不限, 2=价格由低至高, 3=价格由高至低
 is_free_postage     Number    可选         0        是否包邮: 0=全部, 1=包邮
 is_preferential     Number    可选         0        是否特惠: 0=全部, 1=特惠
 =================  ========  =========  ========  ====================================
