@@ -225,28 +225,37 @@ rid          String    必须                   商品编号
             "prev": false,
             "product_like_users": [
                 {
-                    "about_me": "我是个好人",  // 关于我
-                    "area": "鱼泉乡",  // 区域
-                    "area_id": 10000,
-                    "avatar": "http://kg.erp.taihuoniao.com/static/img/default-logo-180x180.png", // 头像url
-                    "avatar_id": 0,  // 头像ID
+                    "about_me": "好人",
+                    "area": "",
+                    "area_id": 0,
+                    "areacode": "+86",
+                    "avatar": "http://0.0.0.0:9000/_uploads/photos/static/img/default2-logo-180x180.png",
+                    "avatar_id": 1,
                     "city": "北京",
                     "city_id": 1,
-                    "country": "",
-                    "country_id": null,
-                    "created_at": 1531125527,  // 创建时间
-                    "date": "1992-12-26",  // 生日
+                    "country": "中国",
+                    "country_id": 1,
+                    "created_at": 1532055457,
+                    "date": "2000-02-02",
                     "description": null,
                     "email": "13001179400",
-                    "gender": 0,  // 性别 0默认为女
-                    "last_seen": 1531842343,
-                    "mail": "asd@163.com",  // 邮箱
+                    "followed_status": 0,  // 关注状态, 0:未关注; 1: 已关注; 2:相互关注
+                    "gender": 0,
+                    "is_distributor": false,
+                    "last_seen": 1532055457,
+                    "mail": "4568794@qq.com",
                     "master_uid": 2,
-                    "mobile": null,
+                    "mobile": "+86-13645647894",
+                    "phone": "",
                     "province": "北京",
                     "province_id": 1,
-                    "uid": "19138405762",
-                    "username": "超人啊"  // 用户名
+                    "street_address": "天安门",
+                    "uid": "17048395612",
+                    "user_areacode": [
+                        "+86",
+                        "13645647894"
+                    ],
+                    "username": "张飞"
                 }
             ]
         },
