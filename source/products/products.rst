@@ -2143,3 +2143,34 @@ JSON数据格式:
 
 .. literalinclude:: product_list.js
     :language: javascript
+
+
+商家商品数
+-----------------------
+获取商家发布的商品个数
+
+接口说明
+~~~~~~~~~~~~~~
+
+* API接口请求地址：``/products/publish_count``
+* API接口请求方法：``GET``
+
+返回示例
+~~~~~~~~~~~~~~~~
+
+JSON数据格式:
+
+.. code-block:: javascript
+
+    {
+        "data": {
+            "count": 16
+        },
+        "status": {
+            "code": 200,
+            "message": "Ok all right."
+        },
+        "success": true
+    }
+
+
