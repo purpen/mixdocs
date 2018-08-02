@@ -1,8 +1,16 @@
 {
-    "data": {
-        "count": 2,  // 总个数
-        "next": "http://0.0.0.0:9000/api/v1.0/orders?status=2&page=2",  // 下一页链接
-        "orders": [
+    "data"
+:
+    {
+        "count"
+    :
+        2,  // 总个数
+            "next"
+    :
+        "http://0.0.0.0:9000/api/v1.0/orders?status=2&page=2",  // 下一页链接
+            "orders"
+    :
+        [
             {
                 "buyer_address": "青年路",  // 买家地址
                 "buyer_city": "淄博",  //买家市
@@ -29,9 +37,20 @@
                 "rid": "D18070316803529",  // 订单编号
                 "ship_mode": 1,  // 运送方式
                 "status": 5,  // 订单状态
-                "store_name": "第一家(None)",  // 店铺名称
+                "store": {  // 店铺
+                    "store_logo": {  // logo
+                        "created_at": 1,
+                        "filename": "1",
+                        "filepath": "180523/8f51855eedae984.jpg",
+                        "id": 1,
+                        "type": 1,
+                        "view_url": "http://0.0.0.0:9000/_uploads/photos/180523/8f51855eedae984.jpg"
+                    },
+                    "store_name": "第一家",  // 店铺名称
+                    "store_rid": "2"  // 店铺编号
+                },
                 "total_amount": 3,  // 商品金额
-                "total_quantity": 3  // 商品总数量
+                "total_quantity": 3,  // 商品总数量
                 "items": [
                     {
                         "commission_price": 0,  // 佣金
@@ -54,15 +73,27 @@
                         "stock_count": 11020
                     }
                 ],
-        },
+            },
         ],
-        "prev": null  // 上一页链接
-    },
-    "status": {
-        "code": 200,
-        "message": "Ok all right."
-    },
-    "success": true
+            "prev"
+    :
+        null  // 上一页链接
+    }
+,
+    "status"
+:
+    {
+        "code"
+    :
+        200,
+            "message"
+    :
+        "Ok all right."
+    }
+,
+    "success"
+:
+    true
 }
 
 
