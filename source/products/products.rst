@@ -1143,6 +1143,8 @@ JSON数据格式:
             "sticked": false,
             "top_category_id": 1,
             "stock_count": null
+            "style_id": "商品风格编号",
+            "style_name": "商品风格名",
         },
         "status": {
             "code": 200,
@@ -1184,6 +1186,7 @@ labels                 Array       必填                     商品标签
 is_custom_made         Bool        必填                     是否接单定制
 made_cycle             Number      可选                     制作周期
 is_made_holiday        Bool        可选                     制作周期是否包含节假日
+style_id               Number      可选                     商品风格
 =====================  ==========  =========  ==========  =============================
 
 请求示例
@@ -1265,7 +1268,9 @@ JSON数据格式:
             "status": 0,
             "sticked": false,
             "top_category_id": 1,
-            "stock_count": null
+            "stock_count": null,
+            "style_id": 1,
+            "style_name": "可爱"
         },
         "status": {
             "code": 201,
