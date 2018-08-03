@@ -2,6 +2,96 @@
 店铺模块
 ================
 
+获取特色品牌馆列表
+--------------------
+
+
+接口说明
+~~~~~~~~~~~~~~
+
+* API接口请求地址：``/column/feature_store``
+* API接口请求方法：``GET``
+
+请求参数
+~~~~~~~~~~~~~~~
+
+===========  ========  =========  ========  ==============================================
+名称          类型      是否必须    默认值     描述说明
+===========  ========  =========  ========  ==============================================
+page         Number    可选         1        当前页码
+per_page     Number    可选         10       每页数量
+===========  ========  =========  ========  ==============================================
+
+返回示例
+~~~~~~~~~~~~~~~~
+
+JSON数据格式
+
+请求 **正确** 返回结果：
+
+.. code-block:: javascript
+
+    {
+        "data": {
+            "count": 2,
+            "next": false,
+            "prev": false,
+            "stores": [
+                {
+                    "area": "",
+                    "area_id": 0,
+                    "areacode": null, // 区号
+                    "begin_date": "",  // 休馆开始日期
+                    "bgcover": "http://kg.erp.taihuoniao.com",  // 背景图
+                    "bgcover_id": 0,
+                    "browse_number": 0,  // 浏览人数
+                    "categories": [],  // 商品分类
+                    "city": "",
+                    "city_id": "",
+                    "country": "中国",
+                    "country_id": 1,
+                    "created_at": 1532759899,
+                    "delivery_city": "",  // 发货城市
+                    "delivery_city_id": "",
+                    "delivery_country": "中国",  // 发货国家
+                    "delivery_country_id": 1,
+                    "delivery_date": "",  // 恢复发货日期
+                    "delivery_province": "",  // 发货省份
+                    "delivery_province_id": 0,
+                    "description": null,
+                    "detail": "",  // 品牌故事
+                    "distribution_type": 0,
+                    "end_date": "",  // 休馆结束日期
+                    "fans_count": 0,  // 粉丝数量
+                    "is_closed": false,  // 是否闭馆
+                    "is_followed": false,  // 是否关注过
+                    "logo": "http://kg.erp.taihuoniao.com",  // 店铺logo
+                    "logo_id": 0,
+                    "mobile": null,  // 手机号
+                    "name": "天猫",  // 店铺名
+                    "pattern": 1,  // 品牌馆营业模型
+                    "phone": null,  // 座机号
+                    "products_cover": [
+                        "http://0.0.0.0:9000/_uploads/photos/static/img/default2-logo-180x180.png"
+                    ],  // 山品封面图
+                    "province": "",
+                    "province_id": 0,
+                    "rid": "91708429",
+                    "status": 1,
+                    "store_products_counts": 1,  // 上架商品数量
+                    "tag_line": null,
+                    "type": 1
+                }
+            ],
+            "title": "特色品牌馆"
+        },
+        "status": {
+            "code": 200,
+            "message": "Ok all right."
+        },
+        "success": true
+    }
+
 获取品牌馆主信息
 ------------------
 
@@ -12,8 +102,6 @@
 * API接口请求地址：``/store/master_info``
 * API接口请求方法：``GET``
 
-请求参数
-~~~~~~~~~~~~~~~
 
 返回示例
 ~~~~~~~~~~~~~~~~
@@ -361,6 +449,7 @@ JSON数据格式
 
 * API接口请求地址：``/store/apply_life_store``
 * API接口请求方法：``POST``
+* API接口用户授权：``token``
 
 请求参数
 ~~~~~~~~~~~~~~~

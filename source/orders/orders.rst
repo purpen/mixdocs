@@ -66,7 +66,7 @@ JSON数据格式:
 ===========  ========  =========  ========  ==============================================
 名称          类型      是否必须    默认值     描述说明
 ===========  ========  =========  ========  ==============================================
-status	     Number	   可选	 	             订单状态 1、待发货 2、已发货 3、已完成 4、已取消
+status	     Number	   可选	                 订单状态 1、待发货 2、已发货 3、已完成 4、已取消
 no_pay       Number    可选                   未付款  0、未付款
 create_at    String    可选                   下单时间
 search       String    可选                   商品名称或订单编号
@@ -147,7 +147,18 @@ JSON数据格式:
             "rid": "D18070316803529",  // 订单编号
             "ship_mode": 1,  // 运送方式
             "status": 5,  // 订单状态
-            "store_name": "第一家(None)",  // 店铺名称
+            "store": {  // 店铺
+                "store_logo": {  // logo
+                    "created_at": 1,
+                    "filename": "1",
+                    "filepath": "180523/8f51855eedae984.jpg",
+                    "id": 1,
+                    "type": 1,
+                    "view_url": "http://0.0.0.0:9000/_uploads/photos/180523/8f51855eedae984.jpg"
+                },
+                "store_name": "第一家",  // 店铺名称
+                "store_rid": "2"  // 店铺编号
+            },
             "total_amount": 3,  // 商品金额
             "total_quantity": 3,  // 商品总数量
             "blessing_utterance": "嘿嘿嘿",  // 买家寄语
@@ -235,7 +246,7 @@ store_items            Array       必需                     店铺商品信息
 名称                    类型        是否必须     默认值       描述说明
 =====================  ==========  =========  ==========  =============================
 store_items:
-store_rid	           String      必需	 	              当前店铺rid
+store_rid	           String      必需	                  当前店铺rid
 is_distribute          Integer     可选          0         是否分销 0、否 1、是
 original_store_rid     String      可选                    原店铺rid
 buyer_remark           String      可选                    买家备注
@@ -316,7 +327,18 @@ JSON数据格式:
                     "rid": "D18070316803529",  // 订单编号
                     "ship_mode": 1,  // 运送方式
                     "status": 5,  // 订单状态
-                    "store_name": "第一家(None)",  // 店铺名称
+                    "store": {  // 店铺
+                        "store_logo": {  // logo
+                            "created_at": 1,
+                            "filename": "1",
+                            "filepath": "180523/8f51855eedae984.jpg",
+                            "id": 1,
+                            "type": 1,
+                            "view_url": "http://0.0.0.0:9000/_uploads/photos/180523/8f51855eedae984.jpg"
+                        },
+                        "store_name": "第一家",  // 店铺名称
+                        "store_rid": "2"  // 店铺编号
+                    },
                     "total_amount": 3,  // 商品金额
                     "total_quantity": 3,  // 商品总数量
                     "blessing_utterance": "嘿嘿嘿",  // 买家寄语
@@ -565,7 +587,18 @@ JSON数据格式:
                 "rid": "D18070316803529",  // 订单编号
                 "ship_mode": 1,  // 运送方式
                 "status": 20,  // 订单状态
-                "store_name": "第一家(None)",  // 店铺名称
+                "store": {  // 店铺
+                    "store_logo": {  // logo
+                        "created_at": 1,
+                        "filename": "1",
+                        "filepath": "180523/8f51855eedae984.jpg",
+                        "id": 1,
+                        "type": 1,
+                        "view_url": "http://0.0.0.0:9000/_uploads/photos/180523/8f51855eedae984.jpg"
+                    },
+                    "store_name": "第一家",  // 店铺名称
+                    "store_rid": "2"  // 店铺编号
+                },
                 "total_amount": 3,  // 商品金额
                 "total_quantity": 3,  // 商品总数量
                 "blessing_utterance": "嘿嘿嘿",  // 买家寄语
@@ -696,7 +729,18 @@ JSON数据格式:
                     "rid": "D18070316803529",  // 订单编号
                     "ship_mode": 1,  // 运送方式
                     "status": 10,  // 订单状态
-                    "store_name": "第一家(None)",  // 店铺名称
+                    "store": {  // 店铺
+                        "store_logo": {  // logo
+                            "created_at": 1,
+                            "filename": "1",
+                            "filepath": "180523/8f51855eedae984.jpg",
+                            "id": 1,
+                            "type": 1,
+                            "view_url": "http://0.0.0.0:9000/_uploads/photos/180523/8f51855eedae984.jpg"
+                        },
+                        "store_name": "第一家",  // 店铺名称
+                        "store_rid": "2"  // 店铺编号
+                    },
                     "total_amount": 3,  // 商品金额
                     "total_quantity": 3,  // 商品总数量
                     "blessing_utterance": "嘿嘿嘿",  // 买家寄语
@@ -791,7 +835,18 @@ JSON数据格式:
                     "rid": "D18070316803529",  // 订单编号
                     "ship_mode": 1,  // 运送方式
                     "status": 12,  // 订单状态
-                    "store_name": "第一家(None)",  // 店铺名称
+                    "store": {  // 店铺
+                        "store_logo": {  // logo
+                            "created_at": 1,
+                            "filename": "1",
+                            "filepath": "180523/8f51855eedae984.jpg",
+                            "id": 1,
+                            "type": 1,
+                            "view_url": "http://0.0.0.0:9000/_uploads/photos/180523/8f51855eedae984.jpg"
+                        },
+                        "store_name": "第一家",  // 店铺名称
+                        "store_rid": "2"  // 店铺编号
+                    },
                     "total_amount": 3,  // 商品金额
                     "total_quantity": 3,  // 商品总数量
                     "blessing_utterance": "嘿嘿嘿",  // 买家寄语
@@ -886,7 +941,18 @@ JSON数据格式:
                     "rid": "D18070316803529",  // 订单编号
                     "ship_mode": 1,  // 运送方式
                     "status": 13,  // 订单状态
-                    "store_name": "第一家(None)",  // 店铺名称
+                    "store": {  // 店铺
+                        "store_logo": {  // logo
+                            "created_at": 1,
+                            "filename": "1",
+                            "filepath": "180523/8f51855eedae984.jpg",
+                            "id": 1,
+                            "type": 1,
+                            "view_url": "http://0.0.0.0:9000/_uploads/photos/180523/8f51855eedae984.jpg"
+                        },
+                        "store_name": "第一家",  // 店铺名称
+                        "store_rid": "2"  // 店铺编号
+                    },
                     "total_amount": 3,  // 商品金额
                     "total_quantity": 3,  // 商品总数量
                     "blessing_utterance": "嘿嘿嘿",  // 买家寄语
@@ -981,7 +1047,18 @@ JSON数据格式:
                     "rid": "D18070316803529",  // 订单编号
                     "ship_mode": 1,  // 运送方式
                     "status": 16,  // 订单状态
-                    "store_name": "第一家(None)",  // 店铺名称
+                    "store": {  // 店铺
+                        "store_logo": {  // logo
+                            "created_at": 1,
+                            "filename": "1",
+                            "filepath": "180523/8f51855eedae984.jpg",
+                            "id": 1,
+                            "type": 1,
+                            "view_url": "http://0.0.0.0:9000/_uploads/photos/180523/8f51855eedae984.jpg"
+                        },
+                        "store_name": "第一家",  // 店铺名称
+                        "store_rid": "2"  // 店铺编号
+                    },
                     "total_amount": 3,  // 商品金额
                     "total_quantity": 3,  // 商品总数量
                     "blessing_utterance": "嘿嘿嘿",  // 买家寄语
@@ -1076,7 +1153,18 @@ JSON数据格式:
                     "rid": "D18070316803529",  // 订单编号
                     "ship_mode": 1,  // 运送方式
                     "status": 40,  // 订单状态
-                    "store_name": "第一家(None)",  // 店铺名称
+                    "store": {  // 店铺
+                        "store_logo": {  // logo
+                            "created_at": 1,
+                            "filename": "1",
+                            "filepath": "180523/8f51855eedae984.jpg",
+                            "id": 1,
+                            "type": 1,
+                            "view_url": "http://0.0.0.0:9000/_uploads/photos/180523/8f51855eedae984.jpg"
+                        },
+                        "store_name": "第一家",  // 店铺名称
+                        "store_rid": "2"  // 店铺编号
+                    },
                     "total_amount": 3,  // 商品金额
                     "total_quantity": 3,  // 商品总数量
                     "blessing_utterance": "嘿嘿嘿",  // 买家寄语
@@ -1172,7 +1260,18 @@ JSON数据格式:
                     "rid": "D18070316803529",  // 订单编号
                     "ship_mode": 1,  // 运送方式
                     "status": 45,  // 订单状态
-                    "store_name": "第一家(None)",  // 店铺名称
+                    "store": {  // 店铺
+                        "store_logo": {  // logo
+                            "created_at": 1,
+                            "filename": "1",
+                            "filepath": "180523/8f51855eedae984.jpg",
+                            "id": 1,
+                            "type": 1,
+                            "view_url": "http://0.0.0.0:9000/_uploads/photos/180523/8f51855eedae984.jpg"
+                        },
+                        "store_name": "第一家",  // 店铺名称
+                        "store_rid": "2"  // 店铺编号
+                    },
                     "total_amount": 3,  // 商品金额
                     "total_quantity": 3,  // 商品总数量
                     "blessing_utterance": "嘿嘿嘿",  // 买家寄语
@@ -1267,7 +1366,18 @@ JSON数据格式:
                 "rid": "D18070316803529",  // 订单编号
                 "ship_mode": 1,  // 运送方式
                 "status": 30,  // 订单状态
-                "store_name": "第一家(None)",  // 店铺名称
+                "store": {  // 店铺
+                    "store_logo": {  // logo
+                        "created_at": 1,
+                        "filename": "1",
+                        "filepath": "180523/8f51855eedae984.jpg",
+                        "id": 1,
+                        "type": 1,
+                        "view_url": "http://0.0.0.0:9000/_uploads/photos/180523/8f51855eedae984.jpg"
+                    },
+                    "store_name": "第一家",  // 店铺名称
+                    "store_rid": "2"  // 店铺编号
+                },
                 "total_amount": 3,  // 商品金额
                 "total_quantity": 3,  // 商品总数量
                 "blessing_utterance": "嘿嘿嘿",  // 买家寄语

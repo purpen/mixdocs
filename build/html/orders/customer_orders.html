@@ -339,10 +339,18 @@
 <h3>返回示例<a class="headerlink" href="#id5" title="永久链接至标题">¶</a></h3>
 <p>JSON数据格式:</p>
 <div class="highlight-default"><div class="highlight"><pre><span></span><span class="p">{</span>
-    <span class="s2">&quot;data&quot;</span><span class="p">:</span> <span class="p">{</span>
-        <span class="s2">&quot;count&quot;</span><span class="p">:</span> <span class="mi">2</span><span class="p">,</span>  <span class="o">//</span> <span class="n">总个数</span>
-        <span class="s2">&quot;next&quot;</span><span class="p">:</span> <span class="s2">&quot;http://0.0.0.0:9000/api/v1.0/orders?status=2&amp;page=2&quot;</span><span class="p">,</span>  <span class="o">//</span> <span class="n">下一页链接</span>
-        <span class="s2">&quot;orders&quot;</span><span class="p">:</span> <span class="p">[</span>
+    <span class="s2">&quot;data&quot;</span>
+<span class="p">:</span>
+    <span class="p">{</span>
+        <span class="s2">&quot;count&quot;</span>
+    <span class="p">:</span>
+        <span class="mi">2</span><span class="p">,</span>  <span class="o">//</span> <span class="n">总个数</span>
+            <span class="s2">&quot;next&quot;</span>
+    <span class="p">:</span>
+        <span class="s2">&quot;http://0.0.0.0:9000/api/v1.0/orders?status=2&amp;page=2&quot;</span><span class="p">,</span>  <span class="o">//</span> <span class="n">下一页链接</span>
+            <span class="s2">&quot;orders&quot;</span>
+    <span class="p">:</span>
+        <span class="p">[</span>
             <span class="p">{</span>
                 <span class="s2">&quot;buyer_address&quot;</span><span class="p">:</span> <span class="s2">&quot;青年路&quot;</span><span class="p">,</span>  <span class="o">//</span> <span class="n">买家地址</span>
                 <span class="s2">&quot;buyer_city&quot;</span><span class="p">:</span> <span class="s2">&quot;淄博&quot;</span><span class="p">,</span>  <span class="o">//</span><span class="n">买家市</span>
@@ -369,9 +377,20 @@
                 <span class="s2">&quot;rid&quot;</span><span class="p">:</span> <span class="s2">&quot;D18070316803529&quot;</span><span class="p">,</span>  <span class="o">//</span> <span class="n">订单编号</span>
                 <span class="s2">&quot;ship_mode&quot;</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span>  <span class="o">//</span> <span class="n">运送方式</span>
                 <span class="s2">&quot;status&quot;</span><span class="p">:</span> <span class="mi">5</span><span class="p">,</span>  <span class="o">//</span> <span class="n">订单状态</span>
-                <span class="s2">&quot;store_name&quot;</span><span class="p">:</span> <span class="s2">&quot;第一家(None)&quot;</span><span class="p">,</span>  <span class="o">//</span> <span class="n">店铺名称</span>
+                <span class="s2">&quot;store&quot;</span><span class="p">:</span> <span class="p">{</span>  <span class="o">//</span> <span class="n">店铺</span>
+                    <span class="s2">&quot;store_logo&quot;</span><span class="p">:</span> <span class="p">{</span>  <span class="o">//</span> <span class="n">logo</span>
+                        <span class="s2">&quot;created_at&quot;</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span>
+                        <span class="s2">&quot;filename&quot;</span><span class="p">:</span> <span class="s2">&quot;1&quot;</span><span class="p">,</span>
+                        <span class="s2">&quot;filepath&quot;</span><span class="p">:</span> <span class="s2">&quot;180523/8f51855eedae984.jpg&quot;</span><span class="p">,</span>
+                        <span class="s2">&quot;id&quot;</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span>
+                        <span class="s2">&quot;type&quot;</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span>
+                        <span class="s2">&quot;view_url&quot;</span><span class="p">:</span> <span class="s2">&quot;http://0.0.0.0:9000/_uploads/photos/180523/8f51855eedae984.jpg&quot;</span>
+                    <span class="p">},</span>
+                    <span class="s2">&quot;store_name&quot;</span><span class="p">:</span> <span class="s2">&quot;第一家&quot;</span><span class="p">,</span>  <span class="o">//</span> <span class="n">店铺名称</span>
+                    <span class="s2">&quot;store_rid&quot;</span><span class="p">:</span> <span class="s2">&quot;2&quot;</span>  <span class="o">//</span> <span class="n">店铺编号</span>
+                <span class="p">},</span>
                 <span class="s2">&quot;total_amount&quot;</span><span class="p">:</span> <span class="mi">3</span><span class="p">,</span>  <span class="o">//</span> <span class="n">商品金额</span>
-                <span class="s2">&quot;total_quantity&quot;</span><span class="p">:</span> <span class="mi">3</span>  <span class="o">//</span> <span class="n">商品总数量</span>
+                <span class="s2">&quot;total_quantity&quot;</span><span class="p">:</span> <span class="mi">3</span><span class="p">,</span>  <span class="o">//</span> <span class="n">商品总数量</span>
                 <span class="s2">&quot;items&quot;</span><span class="p">:</span> <span class="p">[</span>
                     <span class="p">{</span>
                         <span class="s2">&quot;commission_price&quot;</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span>  <span class="o">//</span> <span class="n">佣金</span>
@@ -394,15 +413,27 @@
                         <span class="s2">&quot;stock_count&quot;</span><span class="p">:</span> <span class="mi">11020</span>
                     <span class="p">}</span>
                 <span class="p">],</span>
-        <span class="p">},</span>
+            <span class="p">},</span>
         <span class="p">],</span>
-        <span class="s2">&quot;prev&quot;</span><span class="p">:</span> <span class="n">null</span>  <span class="o">//</span> <span class="n">上一页链接</span>
-    <span class="p">},</span>
-    <span class="s2">&quot;status&quot;</span><span class="p">:</span> <span class="p">{</span>
-        <span class="s2">&quot;code&quot;</span><span class="p">:</span> <span class="mi">200</span><span class="p">,</span>
-        <span class="s2">&quot;message&quot;</span><span class="p">:</span> <span class="s2">&quot;Ok all right.&quot;</span>
-    <span class="p">},</span>
-    <span class="s2">&quot;success&quot;</span><span class="p">:</span> <span class="n">true</span>
+            <span class="s2">&quot;prev&quot;</span>
+    <span class="p">:</span>
+        <span class="n">null</span>  <span class="o">//</span> <span class="n">上一页链接</span>
+    <span class="p">}</span>
+<span class="p">,</span>
+    <span class="s2">&quot;status&quot;</span>
+<span class="p">:</span>
+    <span class="p">{</span>
+        <span class="s2">&quot;code&quot;</span>
+    <span class="p">:</span>
+        <span class="mi">200</span><span class="p">,</span>
+            <span class="s2">&quot;message&quot;</span>
+    <span class="p">:</span>
+        <span class="s2">&quot;Ok all right.&quot;</span>
+    <span class="p">}</span>
+<span class="p">,</span>
+    <span class="s2">&quot;success&quot;</span>
+<span class="p">:</span>
+    <span class="n">true</span>
 <span class="p">}</span>
 
 
