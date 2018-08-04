@@ -35,7 +35,7 @@ JSON数据格式:
 
     {
         "data": {
-            "audit_status": "0: 待审核  1: 审核通过  2: 审核不通过",
+            "audit_status": "1: 待审核  2: 审核通过  3: 审核不通过",
             "channel_id": 2,
             "channel_name": "创作人专访",
             "content": "正文...",
@@ -49,9 +49,9 @@ JSON数据格式:
                 "原创"
             ],
             "published_at": "发布时间",
-            "status": "0: 草稿箱  1: 发布  2: 禁用",
+            "status": "1: 草稿箱  2: 发布  3: 禁用",
             "title": "她手绘出来的童话馆的小公主居然偷偷跑出来了",
-            "type": "0: 文章  1: 种草  2: 视频"
+            "type": "1: 文章  2: 种草  3: 视频"
         },
         "status": {
             "code": 201,
@@ -125,7 +125,7 @@ JSON数据格式:
 
     {
         "data": {
-            "audit_status": "0: 待审核  1: 审核通过  2: 审核不通过",
+            "audit_status": "1: 待审核  2: 审核通过  3: 审核不通过",
             "channel_id": 2,
             "channel_name": "创作人专访",
             "content": "正文...",
@@ -139,9 +139,9 @@ JSON数据格式:
                 "原创"
             ],
             "published_at": "发布时间",
-            "status": "0: 草稿箱  1: 发布  2: 禁用",
+            "status": "1: 草稿箱  2: 发布  3: 禁用",
             "title": "她手绘出来的童话馆的小公主居然偷偷跑出来了",
-            "type": "0: 文章  1: 种草  2: 视频"
+            "type": "1: 文章  2: 种草  3: 视频"
         },
         "status": {
             "code": 201,
@@ -213,7 +213,7 @@ JSON数据格式:
 
     {
         "data": {
-            "audit_status": 0,
+            "audit_status": 1,
             "content": "<div><p>描述信息</p><p><img src='https://kg.erp.taihuoniao.com/20180719/0056FmbFmpYVJhfRzC-6_IlweYXCB26b.jpg'></p><p><a href='' target='_blank' lexivip='true' rid='29308342245'>产品：女神挎包</a></p></div>",
             "deal_content": [
                 {
@@ -355,7 +355,7 @@ JSON数据格式:
 
     {
         "data": {
-            "audit_status": 0,
+            "audit_status": 1,
             "content": "正文...",
             "cover": "http://127.0.0.1:9000/_uploads/photos/180707/77409c8ab9b0abf.jpg",
             "cover_id": 2,
@@ -365,7 +365,7 @@ JSON数据格式:
             "rid": 5,
             "status": 1,
             "title": "她手绘出来的童话馆的小公主居然偷偷跑出来了",
-            "type": 1
+            "type": 2
         },
         "status": {
             "code": 201,
@@ -472,7 +472,7 @@ JSON数据格式:
             "count": 2,
             "life_records": [
                 {
-                    "audit_status": 1,
+                    "audit_status": 2,
                     "channel_id": 4,
                     "channel_name": "手作教学",
                     "content": "saf",
@@ -483,12 +483,12 @@ JSON数据格式:
                     "published_at": 1533290214,
                     "refuse_reason": null,
                     "rid": 1,
-                    "status": 1,
+                    "status": 2,
                     "title": "哈是否哈哈",
-                    "type": 0
+                    "type": 1
                 },
                 {
-                    "audit_status": 1,
+                    "audit_status": 2,
                     "content": "新正文...",
                     "cover": "http://127.0.0.1:9000/_uploads/photos/180707/77409c8ab9b0abf.jpg",
                     "cover_id": 2,
@@ -496,7 +496,7 @@ JSON数据格式:
                     "published_at": 1533353214,
                     "refuse_reason": null,
                     "rid": 4,
-                    "status": 1,
+                    "status": 2,
                     "title": "她手绘出来的童话馆的小公主居然偷偷跑出来了",
                     "type": 1
                 }
@@ -556,12 +556,12 @@ JSON数据格式:
                     "published_at": 1533290214,
                     "refuse_reason": null,
                     "rid": 1,
-                    "status": 1,
+                    "status": 2,
                     "title": "标题...",
-                    "type": 0
+                    "type": 1
                 },
                 {
-                    "audit_status": 1,
+                    "audit_status": 2,
                     "content": "新正文...",
                     "cover": "http://127.0.0.1:9000/_uploads/photos/180707/77409c8ab9b0abf.jpg",
                     "cover_id": 2,
@@ -569,7 +569,7 @@ JSON数据格式:
                     "published_at": 1533353214,
                     "refuse_reason": null,
                     "rid": 4,
-                    "status": 1,
+                    "status": 2,
                     "title": "她手绘出来的童话馆的小公主居然偷偷跑出来了",
                     "type": 1
                 }
@@ -631,7 +631,7 @@ JSON数据格式:
                     "rid": 1,
                     "status": 1,
                     "title": "标题...",
-                    "type": 0
+                    "type": 1
                 },
                 {
                     "audit_status": 1,
@@ -686,7 +686,7 @@ JSON数据格式:
 
     {
         "data": {
-            "audit_status": 1,
+            "audit_status": 2,
             "channel_id": 4,
             "channel_name": "手作教学",
             "content": "saf",
@@ -759,9 +759,9 @@ JSON数据格式:
             "published_at": 1533290214,
             "refuse_reason": null,
             "rid": 1,
-            "status": 1,
+            "status": 2,
             "title": "标题...",
-            "type": 0
+            "type": 2
         },
         "status": {
             "code": 200,
@@ -803,7 +803,7 @@ JSON数据格式:
             "count": 2,
             "life_records": [
                 {
-                    "audit_status": 1,
+                    "audit_status": 2,
                     "content": "正文...",
                     "cover": "http://127.0.0.1:9000/_uploads/photos/180707/77409c8ab9b0abf.jpg",
                     "cover_id": 2,
@@ -811,12 +811,12 @@ JSON数据格式:
                     "published_at": 1533353944,
                     "refuse_reason": null,
                     "rid": 5,
-                    "status": 1,
+                    "status": 2,
                     "title": "她手绘出来的童话馆的小公主居然偷偷跑出来了",
-                    "type": 1
+                    "type": 2
                 },
                 {
-                    "audit_status": 1,
+                    "audit_status": 2,
                     "content": "新正文...",
                     "cover": "http://127.0.0.1:9000/_uploads/photos/180707/77409c8ab9b0abf.jpg",
                     "cover_id": 2,
@@ -824,9 +824,9 @@ JSON数据格式:
                     "published_at": 1533353214,
                     "refuse_reason": null,
                     "rid": 4,
-                    "status": 1,
+                    "status": 2,
                     "title": "她手绘出来的童话馆的小公主居然偷偷跑出来了",
-                    "type": 1
+                    "type": 2
                 }
             ],
             "next": false,
@@ -855,7 +855,7 @@ JSON数据格式:
 ===============  ==========  =========  ==========  =============================
 名称              类型        是否必须     默认值       描述说明
 ===============  ==========  =========  ==========  =============================
-type             Number      可选         1          频道类型: 0=全部, 1=官方频道, 2=商家频道
+type             Number      可选         2          频道类型: 0=全部, 1=官方频道, 2=商家频道
 ===============  ==========  =========  ==========  =============================
 
 返回示例
@@ -881,7 +881,7 @@ JSON数据格式:
                 {
                     "id": 5,
                     "name": "创作人专访",
-                    "type": 1
+                    "type": 2
                 }
             ]
         },
@@ -909,7 +909,7 @@ JSON数据格式:
 ===============  ==========  =========  ==========  =============================
 名称              类型        是否必须     默认值       描述说明
 ===============  ==========  =========  ==========  =============================
-type             Number      可选         1          频道类型: 0=官方频道, 1=商家频道
+type             Number      可选         2          频道类型: 1=官方频道, 2=商家频道
 name             String      必须                    频道名
 sort_order       Number      可选         1          频道序号
 status           Bool        可选         False      是否可以: True=可用  False=禁用
@@ -926,7 +926,7 @@ JSON数据格式:
         "data": {
             "id": 6,
             "name": "创作专访",
-            "type": "频道类型 0=官方频道, 1=商家频道"
+            "type": "频道类型 1=官方频道, 2=商家频道"
         },
         "status": {
             "code": 201,
@@ -952,7 +952,7 @@ JSON数据格式:
 ===============  ==========  =========  ==========  =============================
 名称              类型        是否必须     默认值       描述说明
 ===============  ==========  =========  ==========  =============================
-type             Number      可选         1          频道类型: 0=官方频道, 1=商家频道
+type             Number      可选         2          频道类型: 1=官方频道, 2=商家频道
 name             String      必须                    频道名
 sort_order       Number      可选         1          频道序号
 status           Bool        可选         False      是否可以: True=可用  False=禁用
@@ -969,7 +969,7 @@ JSON数据格式:
         "data": {
             "id": 6,
             "name": "新创作专访",
-            "type": "频道类型 0=官方频道, 1=商家频道"
+            "type": "频道类型 1=官方频道, 2=商家频道"
         },
         "status": {
             "code": 201,
