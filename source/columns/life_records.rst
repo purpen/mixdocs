@@ -214,7 +214,69 @@ JSON数据格式:
     {
         "data": {
             "audit_status": 0,
-            "content": "<div><p>描述信息</p><p><img src='https://kg.erp.taihuoniao.com/20180719/0056FmbFmpYVJhfRzC-6_IlweYXCB26b.jpg'></p><p><a name='fx_product' rid='8241530769'>商品名称</a></p></div>",
+            "content": "<div><p>描述信息</p><p><img src='https://kg.erp.taihuoniao.com/20180719/0056FmbFmpYVJhfRzC-6_IlweYXCB26b.jpg'></p><p><a href='' target='_blank' lexivip='true' rid='29308342245'>产品：女神挎包</a></p></div>",
+            "deal_content": [
+                {
+                    "content": "高性能游戏独立显卡厚度",
+                    "rid": "3817596",
+                    "type": "text"
+                },
+                {
+                    "content": "https://kg.erp.taihuoniao.com/20180719/0056FmbFmpYVJhfRzC-6_IlweYXCB26b.jpg",
+                    "rid": "6058134",
+                    "type": "image"
+                },
+                {
+                    "content": {
+                        "category_id": 0,
+                        "commission_price": 246.68,
+                        "commission_rate": 13.5,
+                        "cover": "http://127.0.0.1:9000/_uploads/photos/180718/f1a30ad8b52107c.gif",
+                        "cover_id": 14,
+                        "custom_details": "",
+                        "delivery_country": "",
+                        "delivery_country_id": null,
+                        "features": "价格超值(5) 大小合适(4) 面料舒适(4) 尺码精准(3) 尺码合适(3) 做工精良(2) 简单得体(2) 使命必达 简约大方",
+                        "have_distributed": false,
+                        "id_code": "",
+                        "is_custom_made": false,
+                        "is_custom_service": false,
+                        "is_distributed": true,
+                        "is_free_postage": false,
+                        "is_made_holiday": false,
+                        "is_proprietary": true,
+                        "is_sold_out": false,
+                        "like_count": 0,
+                        "made_cycle": 0,
+                        "material_id": 4,
+                        "material_name": "毛线",
+                        "max_price": 2234.5,
+                        "max_sale_price": 2145,
+                        "min_price": 1234.5,
+                        "min_sale_price": 1145,
+                        "modes": [
+                            "大 白色23",
+                            "小 白色22"
+                        ],
+                        "name": "1夏季新款修身短袖t恤男韩版潮流男士翻领polo衫男体恤",
+                        "published_at": 1532325331,
+                        "real_price": 2234.5,
+                        "real_sale_price": 2145,
+                        "rid": "8241530769",
+                        "second_category_id": 0,
+                        "status": 1,
+                        "sticked": false,
+                        "store_name": "店铺名",
+                        "store_rid": "1234567891",
+                        "style_id": null,
+                        "style_name": "",
+                        "top_category_id": 0,
+                        "total_stock": 10
+                    },
+                    "rid": "8241530769",
+                    "type": "product"
+                }
+            ],
             "cover": "http://127.0.0.1:9000/_uploads/photos/180707/77409c8ab9b0abf.jpg",
             "cover_id": 2,
             "description": "摘要...",
