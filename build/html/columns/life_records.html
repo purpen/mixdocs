@@ -268,22 +268,28 @@
 <li><a class="reference internal" href="#id57">返回示例</a></li>
 </ul>
 </li>
-<li><a class="reference internal" href="#id58">添加频道</a><ul>
+<li><a class="reference internal" href="#id58">频道列表</a><ul>
 <li><a class="reference internal" href="#id59">接口说明</a></li>
 <li><a class="reference internal" href="#id60">请求参数</a></li>
 <li><a class="reference internal" href="#id61">返回示例</a></li>
 </ul>
 </li>
-<li><a class="reference internal" href="#id62">修改频道</a><ul>
+<li><a class="reference internal" href="#id62">添加频道</a><ul>
 <li><a class="reference internal" href="#id63">接口说明</a></li>
 <li><a class="reference internal" href="#id64">请求参数</a></li>
 <li><a class="reference internal" href="#id65">返回示例</a></li>
 </ul>
 </li>
-<li><a class="reference internal" href="#id66">删除频道</a><ul>
+<li><a class="reference internal" href="#id66">修改频道</a><ul>
 <li><a class="reference internal" href="#id67">接口说明</a></li>
 <li><a class="reference internal" href="#id68">请求参数</a></li>
 <li><a class="reference internal" href="#id69">返回示例</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#id70">删除频道</a><ul>
+<li><a class="reference internal" href="#id71">接口说明</a></li>
+<li><a class="reference internal" href="#id72">请求参数</a></li>
+<li><a class="reference internal" href="#id73">返回示例</a></li>
 </ul>
 </li>
 </ul>
@@ -402,22 +408,28 @@
 <li><a class="reference internal" href="#id57">返回示例</a></li>
 </ul>
 </li>
-<li><a class="reference internal" href="#id58">添加频道</a><ul>
+<li><a class="reference internal" href="#id58">频道列表</a><ul>
 <li><a class="reference internal" href="#id59">接口说明</a></li>
 <li><a class="reference internal" href="#id60">请求参数</a></li>
 <li><a class="reference internal" href="#id61">返回示例</a></li>
 </ul>
 </li>
-<li><a class="reference internal" href="#id62">修改频道</a><ul>
+<li><a class="reference internal" href="#id62">添加频道</a><ul>
 <li><a class="reference internal" href="#id63">接口说明</a></li>
 <li><a class="reference internal" href="#id64">请求参数</a></li>
 <li><a class="reference internal" href="#id65">返回示例</a></li>
 </ul>
 </li>
-<li><a class="reference internal" href="#id66">删除频道</a><ul>
+<li><a class="reference internal" href="#id66">修改频道</a><ul>
 <li><a class="reference internal" href="#id67">接口说明</a></li>
 <li><a class="reference internal" href="#id68">请求参数</a></li>
 <li><a class="reference internal" href="#id69">返回示例</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#id70">删除频道</a><ul>
+<li><a class="reference internal" href="#id71">接口说明</a></li>
+<li><a class="reference internal" href="#id72">请求参数</a></li>
+<li><a class="reference internal" href="#id73">返回示例</a></li>
 </ul>
 </li>
 </ul>
@@ -874,7 +886,7 @@
 <div class="highlight-javascript"><div class="highlight"><pre><span></span><span class="p">{</span>
     <span class="s2">&quot;data&quot;</span><span class="o">:</span> <span class="p">{</span>
         <span class="s2">&quot;audit_status&quot;</span><span class="o">:</span> <span class="mi">0</span><span class="p">,</span>
-        <span class="s2">&quot;content&quot;</span><span class="o">:</span> <span class="s2">&quot;正文...&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;content&quot;</span><span class="o">:</span> <span class="s2">&quot;&lt;div&gt;&lt;p&gt;描述信息&lt;/p&gt;&lt;p&gt;&lt;img src=&#39;https://kg.erp.taihuoniao.com/20180719/0056FmbFmpYVJhfRzC-6_IlweYXCB26b.jpg&#39;&gt;&lt;/p&gt;&lt;p&gt;&lt;a name=&#39;fx_product&#39; rid=&#39;8241530769&#39;&gt;商品名称&lt;/a&gt;&lt;/p&gt;&lt;/div&gt;&quot;</span><span class="p">,</span>
         <span class="s2">&quot;cover&quot;</span><span class="o">:</span> <span class="s2">&quot;http://127.0.0.1:9000/_uploads/photos/180707/77409c8ab9b0abf.jpg&quot;</span><span class="p">,</span>
         <span class="s2">&quot;cover_id&quot;</span><span class="o">:</span> <span class="mi">2</span><span class="p">,</span>
         <span class="s2">&quot;description&quot;</span><span class="o">:</span> <span class="s2">&quot;摘要...&quot;</span><span class="p">,</span>
@@ -1513,6 +1525,68 @@
         <span class="s2">&quot;content&quot;</span><span class="o">:</span> <span class="s2">&quot;saf&quot;</span><span class="p">,</span>
         <span class="s2">&quot;cover&quot;</span><span class="o">:</span> <span class="s2">&quot;http://127.0.0.1:9000/_uploads/photos/180707/77409c8ab9b0abf.jpg&quot;</span><span class="p">,</span>
         <span class="s2">&quot;cover_id&quot;</span><span class="o">:</span> <span class="mi">2</span><span class="p">,</span>
+        <span class="s2">&quot;deal_content&quot;</span><span class="o">:</span> <span class="p">[</span>
+            <span class="p">{</span>
+                <span class="s2">&quot;content&quot;</span><span class="o">:</span> <span class="s2">&quot;商品名称：Apple苹果MacBookPro13英寸i5(15英寸i7)超薄笔记本电脑2017年新款15.4英寸i716G1TB固态BAR【官方标配】灰色2017年新款商品编号：29534568036店铺：黑海数码全球购旗舰店商品毛重：2.5kg货号：笔记本系统：其他显卡类别：高性能游戏独立显卡厚度&quot;</span><span class="p">,</span>
+                <span class="s2">&quot;rid&quot;</span><span class="o">:</span> <span class="s2">&quot;3817596&quot;</span><span class="p">,</span>
+                <span class="s2">&quot;type&quot;</span><span class="o">:</span> <span class="s2">&quot;text&quot;</span>
+            <span class="p">},</span>
+            <span class="p">{</span>
+                <span class="s2">&quot;content&quot;</span><span class="o">:</span> <span class="s2">&quot;https://kg.erp.taihuoniao.com/20180719/0056FmbFmpYVJhfRzC-6_IlweYXCB26b.jpg&quot;</span><span class="p">,</span>
+                <span class="s2">&quot;rid&quot;</span><span class="o">:</span> <span class="s2">&quot;6058134&quot;</span><span class="p">,</span>
+                <span class="s2">&quot;type&quot;</span><span class="o">:</span> <span class="s2">&quot;image&quot;</span>
+            <span class="p">},</span>
+            <span class="p">{</span>
+                <span class="s2">&quot;content&quot;</span><span class="o">:</span> <span class="p">{</span>
+                    <span class="s2">&quot;category_id&quot;</span><span class="o">:</span> <span class="mi">0</span><span class="p">,</span>
+                    <span class="s2">&quot;commission_price&quot;</span><span class="o">:</span> <span class="mf">246.68</span><span class="p">,</span>
+                    <span class="s2">&quot;commission_rate&quot;</span><span class="o">:</span> <span class="mf">13.5</span><span class="p">,</span>
+                    <span class="s2">&quot;cover&quot;</span><span class="o">:</span> <span class="s2">&quot;http://127.0.0.1:9000/_uploads/photos/180718/f1a30ad8b52107c.gif&quot;</span><span class="p">,</span>
+                    <span class="s2">&quot;cover_id&quot;</span><span class="o">:</span> <span class="mi">14</span><span class="p">,</span>
+                    <span class="s2">&quot;custom_details&quot;</span><span class="o">:</span> <span class="s2">&quot;&quot;</span><span class="p">,</span>
+                    <span class="s2">&quot;delivery_country&quot;</span><span class="o">:</span> <span class="s2">&quot;&quot;</span><span class="p">,</span>
+                    <span class="s2">&quot;delivery_country_id&quot;</span><span class="o">:</span> <span class="kc">null</span><span class="p">,</span>
+                    <span class="s2">&quot;features&quot;</span><span class="o">:</span> <span class="s2">&quot;价格超值(5) 大小合适(4) 面料舒适(4) 尺码精准(3) 尺码合适(3) 做工精良(2) 简单得体(2) 使命必达 简约大方&quot;</span><span class="p">,</span>
+                    <span class="s2">&quot;have_distributed&quot;</span><span class="o">:</span> <span class="kc">false</span><span class="p">,</span>
+                    <span class="s2">&quot;id_code&quot;</span><span class="o">:</span> <span class="s2">&quot;&quot;</span><span class="p">,</span>
+                    <span class="s2">&quot;is_custom_made&quot;</span><span class="o">:</span> <span class="kc">false</span><span class="p">,</span>
+                    <span class="s2">&quot;is_custom_service&quot;</span><span class="o">:</span> <span class="kc">false</span><span class="p">,</span>
+                    <span class="s2">&quot;is_distributed&quot;</span><span class="o">:</span> <span class="kc">true</span><span class="p">,</span>
+                    <span class="s2">&quot;is_free_postage&quot;</span><span class="o">:</span> <span class="kc">false</span><span class="p">,</span>
+                    <span class="s2">&quot;is_made_holiday&quot;</span><span class="o">:</span> <span class="kc">false</span><span class="p">,</span>
+                    <span class="s2">&quot;is_proprietary&quot;</span><span class="o">:</span> <span class="kc">true</span><span class="p">,</span>
+                    <span class="s2">&quot;is_sold_out&quot;</span><span class="o">:</span> <span class="kc">false</span><span class="p">,</span>
+                    <span class="s2">&quot;like_count&quot;</span><span class="o">:</span> <span class="mi">0</span><span class="p">,</span>
+                    <span class="s2">&quot;made_cycle&quot;</span><span class="o">:</span> <span class="mi">0</span><span class="p">,</span>
+                    <span class="s2">&quot;material_id&quot;</span><span class="o">:</span> <span class="mi">4</span><span class="p">,</span>
+                    <span class="s2">&quot;material_name&quot;</span><span class="o">:</span> <span class="s2">&quot;毛线&quot;</span><span class="p">,</span>
+                    <span class="s2">&quot;max_price&quot;</span><span class="o">:</span> <span class="mf">2234.5</span><span class="p">,</span>
+                    <span class="s2">&quot;max_sale_price&quot;</span><span class="o">:</span> <span class="mi">2145</span><span class="p">,</span>
+                    <span class="s2">&quot;min_price&quot;</span><span class="o">:</span> <span class="mf">1234.5</span><span class="p">,</span>
+                    <span class="s2">&quot;min_sale_price&quot;</span><span class="o">:</span> <span class="mi">1145</span><span class="p">,</span>
+                    <span class="s2">&quot;modes&quot;</span><span class="o">:</span> <span class="p">[</span>
+                        <span class="s2">&quot;大 白色23&quot;</span><span class="p">,</span>
+                        <span class="s2">&quot;小 白色22&quot;</span>
+                    <span class="p">],</span>
+                    <span class="s2">&quot;name&quot;</span><span class="o">:</span> <span class="s2">&quot;1夏季新款修身短袖t恤男韩版潮流男士翻领polo衫男体恤&quot;</span><span class="p">,</span>
+                    <span class="s2">&quot;published_at&quot;</span><span class="o">:</span> <span class="mi">1532325331</span><span class="p">,</span>
+                    <span class="s2">&quot;real_price&quot;</span><span class="o">:</span> <span class="mf">2234.5</span><span class="p">,</span>
+                    <span class="s2">&quot;real_sale_price&quot;</span><span class="o">:</span> <span class="mi">2145</span><span class="p">,</span>
+                    <span class="s2">&quot;rid&quot;</span><span class="o">:</span> <span class="s2">&quot;8241530769&quot;</span><span class="p">,</span>
+                    <span class="s2">&quot;second_category_id&quot;</span><span class="o">:</span> <span class="mi">0</span><span class="p">,</span>
+                    <span class="s2">&quot;status&quot;</span><span class="o">:</span> <span class="mi">1</span><span class="p">,</span>
+                    <span class="s2">&quot;sticked&quot;</span><span class="o">:</span> <span class="kc">false</span><span class="p">,</span>
+                    <span class="s2">&quot;store_name&quot;</span><span class="o">:</span> <span class="s2">&quot;店铺名&quot;</span><span class="p">,</span>
+                    <span class="s2">&quot;store_rid&quot;</span><span class="o">:</span> <span class="s2">&quot;1234567891&quot;</span><span class="p">,</span>
+                    <span class="s2">&quot;style_id&quot;</span><span class="o">:</span> <span class="kc">null</span><span class="p">,</span>
+                    <span class="s2">&quot;style_name&quot;</span><span class="o">:</span> <span class="s2">&quot;&quot;</span><span class="p">,</span>
+                    <span class="s2">&quot;top_category_id&quot;</span><span class="o">:</span> <span class="mi">0</span><span class="p">,</span>
+                    <span class="s2">&quot;total_stock&quot;</span><span class="o">:</span> <span class="mi">10</span>
+                <span class="p">},</span>
+                <span class="s2">&quot;rid&quot;</span><span class="o">:</span> <span class="s2">&quot;8241530769&quot;</span><span class="p">,</span>
+                <span class="s2">&quot;type&quot;</span><span class="o">:</span> <span class="s2">&quot;product&quot;</span>
+            <span class="p">}</span>
+        <span class="p">],</span>
         <span class="s2">&quot;description&quot;</span><span class="o">:</span> <span class="s2">&quot;摘要...&quot;</span><span class="p">,</span>
         <span class="s2">&quot;labels&quot;</span><span class="o">:</span> <span class="p">[</span><span class="s2">&quot;手作&quot;</span><span class="p">],</span>
         <span class="s2">&quot;published_at&quot;</span><span class="o">:</span> <span class="mi">1533290214</span><span class="p">,</span>
@@ -1624,13 +1698,12 @@
 </div>
 </div>
 <div class="section" id="id58">
-<h2>添加频道<a class="headerlink" href="#id58" title="永久链接至标题">¶</a></h2>
+<h2>频道列表<a class="headerlink" href="#id58" title="永久链接至标题">¶</a></h2>
 <div class="section" id="id59">
 <h3>接口说明<a class="headerlink" href="#id59" title="永久链接至标题">¶</a></h3>
 <ul class="simple">
 <li>API接口请求地址：<code class="docutils literal"><span class="pre">/life_records/channels</span></code></li>
-<li>API接口请求方法：<code class="docutils literal"><span class="pre">POST</span></code></li>
-<li>API接口用户授权：<code class="docutils literal"><span class="pre">token</span></code></li>
+<li>API接口请求方法：<code class="docutils literal"><span class="pre">GET</span></code></li>
 </ul>
 </div>
 <div class="section" id="id60">
@@ -1658,24 +1731,6 @@
 <td>1</td>
 <td>频道类型: 0=官方频道, 1=商家频道</td>
 </tr>
-<tr class="row-odd"><td>name</td>
-<td>String</td>
-<td>必须</td>
-<td>&#160;</td>
-<td>频道名</td>
-</tr>
-<tr class="row-even"><td>sort_order</td>
-<td>Number</td>
-<td>可选</td>
-<td>1</td>
-<td>频道序号</td>
-</tr>
-<tr class="row-odd"><td>status</td>
-<td>Bool</td>
-<td>可选</td>
-<td>False</td>
-<td>是否可以: True=可用  False=禁用</td>
-</tr>
 </tbody>
 </table>
 </div>
@@ -1684,13 +1739,27 @@
 <p>JSON数据格式:</p>
 <div class="highlight-javascript"><div class="highlight"><pre><span></span><span class="p">{</span>
     <span class="s2">&quot;data&quot;</span><span class="o">:</span> <span class="p">{</span>
-        <span class="s2">&quot;id&quot;</span><span class="o">:</span> <span class="mi">6</span><span class="p">,</span>
-        <span class="s2">&quot;name&quot;</span><span class="o">:</span> <span class="s2">&quot;创作专访&quot;</span><span class="p">,</span>
-        <span class="s2">&quot;type&quot;</span><span class="o">:</span> <span class="s2">&quot;频道类型 0=官方频道, 1=商家频道&quot;</span>
+        <span class="s2">&quot;channels&quot;</span><span class="o">:</span> <span class="p">[</span>
+            <span class="p">{</span>
+                <span class="s2">&quot;id&quot;</span><span class="o">:</span> <span class="mi">3</span><span class="p">,</span>
+                <span class="s2">&quot;name&quot;</span><span class="o">:</span> <span class="s2">&quot;生活记事&quot;</span><span class="p">,</span>
+                <span class="s2">&quot;type&quot;</span><span class="o">:</span> <span class="mi">1</span>
+            <span class="p">},</span>
+            <span class="p">{</span>
+                <span class="s2">&quot;id&quot;</span><span class="o">:</span> <span class="mi">4</span><span class="p">,</span>
+                <span class="s2">&quot;name&quot;</span><span class="o">:</span> <span class="s2">&quot;手作教学&quot;</span><span class="p">,</span>
+                <span class="s2">&quot;type&quot;</span><span class="o">:</span> <span class="mi">1</span>
+            <span class="p">},</span>
+            <span class="p">{</span>
+                <span class="s2">&quot;id&quot;</span><span class="o">:</span> <span class="mi">5</span><span class="p">,</span>
+                <span class="s2">&quot;name&quot;</span><span class="o">:</span> <span class="s2">&quot;创作人专访&quot;</span><span class="p">,</span>
+                <span class="s2">&quot;type&quot;</span><span class="o">:</span> <span class="mi">1</span>
+            <span class="p">}</span>
+        <span class="p">]</span>
     <span class="p">},</span>
     <span class="s2">&quot;status&quot;</span><span class="o">:</span> <span class="p">{</span>
-        <span class="s2">&quot;code&quot;</span><span class="o">:</span> <span class="mi">201</span><span class="p">,</span>
-        <span class="s2">&quot;message&quot;</span><span class="o">:</span> <span class="s2">&quot;All created.&quot;</span>
+        <span class="s2">&quot;code&quot;</span><span class="o">:</span> <span class="mi">200</span><span class="p">,</span>
+        <span class="s2">&quot;message&quot;</span><span class="o">:</span> <span class="s2">&quot;Ok all right.&quot;</span>
     <span class="p">},</span>
     <span class="s2">&quot;success&quot;</span><span class="o">:</span> <span class="kc">true</span>
 <span class="p">}</span>
@@ -1699,12 +1768,12 @@
 </div>
 </div>
 <div class="section" id="id62">
-<h2>修改频道<a class="headerlink" href="#id62" title="永久链接至标题">¶</a></h2>
+<h2>添加频道<a class="headerlink" href="#id62" title="永久链接至标题">¶</a></h2>
 <div class="section" id="id63">
 <h3>接口说明<a class="headerlink" href="#id63" title="永久链接至标题">¶</a></h3>
 <ul class="simple">
 <li>API接口请求地址：<code class="docutils literal"><span class="pre">/life_records/channels</span></code></li>
-<li>API接口请求方法：<code class="docutils literal"><span class="pre">PUT</span></code></li>
+<li>API接口请求方法：<code class="docutils literal"><span class="pre">POST</span></code></li>
 <li>API接口用户授权：<code class="docutils literal"><span class="pre">token</span></code></li>
 </ul>
 </div>
@@ -1760,7 +1829,7 @@
 <div class="highlight-javascript"><div class="highlight"><pre><span></span><span class="p">{</span>
     <span class="s2">&quot;data&quot;</span><span class="o">:</span> <span class="p">{</span>
         <span class="s2">&quot;id&quot;</span><span class="o">:</span> <span class="mi">6</span><span class="p">,</span>
-        <span class="s2">&quot;name&quot;</span><span class="o">:</span> <span class="s2">&quot;新创作专访&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;name&quot;</span><span class="o">:</span> <span class="s2">&quot;创作专访&quot;</span><span class="p">,</span>
         <span class="s2">&quot;type&quot;</span><span class="o">:</span> <span class="s2">&quot;频道类型 0=官方频道, 1=商家频道&quot;</span>
     <span class="p">},</span>
     <span class="s2">&quot;status&quot;</span><span class="o">:</span> <span class="p">{</span>
@@ -1774,17 +1843,92 @@
 </div>
 </div>
 <div class="section" id="id66">
-<h2>删除频道<a class="headerlink" href="#id66" title="永久链接至标题">¶</a></h2>
+<h2>修改频道<a class="headerlink" href="#id66" title="永久链接至标题">¶</a></h2>
 <div class="section" id="id67">
 <h3>接口说明<a class="headerlink" href="#id67" title="永久链接至标题">¶</a></h3>
+<ul class="simple">
+<li>API接口请求地址：<code class="docutils literal"><span class="pre">/life_records/channels</span></code></li>
+<li>API接口请求方法：<code class="docutils literal"><span class="pre">PUT</span></code></li>
+<li>API接口用户授权：<code class="docutils literal"><span class="pre">token</span></code></li>
+</ul>
+</div>
+<div class="section" id="id68">
+<h3>请求参数<a class="headerlink" href="#id68" title="永久链接至标题">¶</a></h3>
+<table border="1" class="docutils">
+<colgroup>
+<col width="19%" />
+<col width="13%" />
+<col width="12%" />
+<col width="13%" />
+<col width="43%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">名称</th>
+<th class="head">类型</th>
+<th class="head">是否必须</th>
+<th class="head">默认值</th>
+<th class="head">描述说明</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>type</td>
+<td>Number</td>
+<td>可选</td>
+<td>1</td>
+<td>频道类型: 0=官方频道, 1=商家频道</td>
+</tr>
+<tr class="row-odd"><td>name</td>
+<td>String</td>
+<td>必须</td>
+<td>&#160;</td>
+<td>频道名</td>
+</tr>
+<tr class="row-even"><td>sort_order</td>
+<td>Number</td>
+<td>可选</td>
+<td>1</td>
+<td>频道序号</td>
+</tr>
+<tr class="row-odd"><td>status</td>
+<td>Bool</td>
+<td>可选</td>
+<td>False</td>
+<td>是否可以: True=可用  False=禁用</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="id69">
+<h3>返回示例<a class="headerlink" href="#id69" title="永久链接至标题">¶</a></h3>
+<p>JSON数据格式:</p>
+<div class="highlight-javascript"><div class="highlight"><pre><span></span><span class="p">{</span>
+    <span class="s2">&quot;data&quot;</span><span class="o">:</span> <span class="p">{</span>
+        <span class="s2">&quot;id&quot;</span><span class="o">:</span> <span class="mi">6</span><span class="p">,</span>
+        <span class="s2">&quot;name&quot;</span><span class="o">:</span> <span class="s2">&quot;新创作专访&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;type&quot;</span><span class="o">:</span> <span class="s2">&quot;频道类型 0=官方频道, 1=商家频道&quot;</span>
+    <span class="p">},</span>
+    <span class="s2">&quot;status&quot;</span><span class="o">:</span> <span class="p">{</span>
+        <span class="s2">&quot;code&quot;</span><span class="o">:</span> <span class="mi">201</span><span class="p">,</span>
+        <span class="s2">&quot;message&quot;</span><span class="o">:</span> <span class="s2">&quot;All created.&quot;</span>
+    <span class="p">},</span>
+    <span class="s2">&quot;success&quot;</span><span class="o">:</span> <span class="kc">true</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="id70">
+<h2>删除频道<a class="headerlink" href="#id70" title="永久链接至标题">¶</a></h2>
+<div class="section" id="id71">
+<h3>接口说明<a class="headerlink" href="#id71" title="永久链接至标题">¶</a></h3>
 <ul class="simple">
 <li>API接口请求地址：<code class="docutils literal"><span class="pre">/life_records/channels</span></code></li>
 <li>API接口请求方法：<code class="docutils literal"><span class="pre">DELETE</span></code></li>
 <li>API接口用户授权：<code class="docutils literal"><span class="pre">token</span></code></li>
 </ul>
 </div>
-<div class="section" id="id68">
-<h3>请求参数<a class="headerlink" href="#id68" title="永久链接至标题">¶</a></h3>
+<div class="section" id="id72">
+<h3>请求参数<a class="headerlink" href="#id72" title="永久链接至标题">¶</a></h3>
 <table border="1" class="docutils">
 <colgroup>
 <col width="21%" />
@@ -1811,8 +1955,8 @@
 </tbody>
 </table>
 </div>
-<div class="section" id="id69">
-<h3>返回示例<a class="headerlink" href="#id69" title="永久链接至标题">¶</a></h3>
+<div class="section" id="id73">
+<h3>返回示例<a class="headerlink" href="#id73" title="永久链接至标题">¶</a></h3>
 <p>JSON数据格式:</p>
 <div class="highlight-javascript"><div class="highlight"><pre><span></span><span class="p">{</span>
     <span class="s2">&quot;status&quot;</span><span class="o">:</span> <span class="p">{</span>
