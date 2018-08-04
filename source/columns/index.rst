@@ -7,3 +7,4 @@
     :maxdepth: 2
 
     column_products.rst
+    life_records.rst
