@@ -1618,3 +1618,49 @@ JSON数据格式:
         "success": true
     }
 
+
+领券中心
+--------------------
+领券中心
+
+接口说明
+~~~~~~~~~~~~~~
+
+* API接口请求地址：``/market/coupon_center``
+* API接口请求方法：``GET``
+
+
+返回示例
+~~~~~~~~~~~~~~~~
+
+JSON数据格式:
+
+.. code-block:: javascript
+
+
+    {
+        "data": {
+            "coupons": [
+                {
+                    "amount": 10,  // 面值
+                    "code": "UHAOSIWFUVZ",  // 优惠券code
+                    "count": 100,
+                    "created_at": 1531742069,  //
+                    "days": 7,  // 有效期
+                    "min_amount": 99,  // 最小金额
+                    "products": [],
+                    "reach_amount": 0,
+                    "type": 1,  // 类型
+                    "type_text": "全店通用"
+                }
+            ]
+        },
+        "status": {
+            "code": 200,
+            "message": "Ok all right."
+        },
+        "success": true
+    }
+
+
+
