@@ -35,12 +35,13 @@ JSON数据格式:
 
     {
         "data": {
-            "audit_status": "0: 待审核  1: 审核通过  2: 审核不通过",
+            "audit_status": "1: 待审核  2: 审核通过  3: 审核不通过",
             "channel_id": 2,
             "channel_name": "创作人专访",
             "content": "正文...",
             "cover": "http://127.0.0.1:9000/_uploads/photos/180707/77409c8ab9b0abf.jpg",
             "cover_id": 2,
+            "created_at": "创建时间",
             "description": "摘要...",
             "rid": 4,
             "refuse_reason": "审核不通过的原因",
@@ -49,9 +50,9 @@ JSON数据格式:
                 "原创"
             ],
             "published_at": "发布时间",
-            "status": "0: 草稿箱  1: 发布  2: 禁用",
+            "status": "1: 草稿箱  2: 发布  3: 禁用",
             "title": "她手绘出来的童话馆的小公主居然偷偷跑出来了",
-            "type": "0: 文章  1: 种草  2: 视频"
+            "type": "1: 文章  2: 种草  3: 视频"
         },
         "status": {
             "code": 201,
@@ -125,12 +126,13 @@ JSON数据格式:
 
     {
         "data": {
-            "audit_status": "0: 待审核  1: 审核通过  2: 审核不通过",
+            "audit_status": "1: 待审核  2: 审核通过  3: 审核不通过",
             "channel_id": 2,
             "channel_name": "创作人专访",
             "content": "正文...",
             "cover": "http://127.0.0.1:9000/_uploads/photos/180707/77409c8ab9b0abf.jpg",
             "cover_id": 2,
+            "created_at": "创建时间",
             "description": "摘要...",
             "rid": 4,
             "refuse_reason": "审核不通过的原因",
@@ -139,9 +141,9 @@ JSON数据格式:
                 "原创"
             ],
             "published_at": "发布时间",
-            "status": "0: 草稿箱  1: 发布  2: 禁用",
+            "status": "1: 草稿箱  2: 发布  3: 禁用",
             "title": "她手绘出来的童话馆的小公主居然偷偷跑出来了",
-            "type": "0: 文章  1: 种草  2: 视频"
+            "type": "1: 文章  2: 种草  3: 视频"
         },
         "status": {
             "code": 201,
@@ -213,8 +215,70 @@ JSON数据格式:
 
     {
         "data": {
-            "audit_status": 0,
-            "content": "<div><p>描述信息</p><p><img src='https://kg.erp.taihuoniao.com/20180719/0056FmbFmpYVJhfRzC-6_IlweYXCB26b.jpg'></p><p><a name='fx_product' rid='8241530769'>商品名称</a></p></div>",
+            "audit_status": 1,
+            "content": "<div><p>描述信息</p><p><img src='https://kg.erp.taihuoniao.com/20180719/0056FmbFmpYVJhfRzC-6_IlweYXCB26b.jpg'></p><p><a href='' target='_blank' lexivip='true' rid='29308342245'>产品：女神挎包</a></p></div>",
+            "deal_content": [
+                {
+                    "content": "高性能游戏独立显卡厚度",
+                    "rid": "3817596",
+                    "type": "text"
+                },
+                {
+                    "content": "https://kg.erp.taihuoniao.com/20180719/0056FmbFmpYVJhfRzC-6_IlweYXCB26b.jpg",
+                    "rid": "6058134",
+                    "type": "image"
+                },
+                {
+                    "content": {
+                        "category_id": 0,
+                        "commission_price": 246.68,
+                        "commission_rate": 13.5,
+                        "cover": "http://127.0.0.1:9000/_uploads/photos/180718/f1a30ad8b52107c.gif",
+                        "cover_id": 14,
+                        "custom_details": "",
+                        "delivery_country": "",
+                        "delivery_country_id": null,
+                        "features": "价格超值(5) 大小合适(4) 面料舒适(4) 尺码精准(3) 尺码合适(3) 做工精良(2) 简单得体(2) 使命必达 简约大方",
+                        "have_distributed": false,
+                        "id_code": "",
+                        "is_custom_made": false,
+                        "is_custom_service": false,
+                        "is_distributed": true,
+                        "is_free_postage": false,
+                        "is_made_holiday": false,
+                        "is_proprietary": true,
+                        "is_sold_out": false,
+                        "like_count": 0,
+                        "made_cycle": 0,
+                        "material_id": 4,
+                        "material_name": "毛线",
+                        "max_price": 2234.5,
+                        "max_sale_price": 2145,
+                        "min_price": 1234.5,
+                        "min_sale_price": 1145,
+                        "modes": [
+                            "大 白色23",
+                            "小 白色22"
+                        ],
+                        "name": "1夏季新款修身短袖t恤男韩版潮流男士翻领polo衫男体恤",
+                        "published_at": 1532325331,
+                        "real_price": 2234.5,
+                        "real_sale_price": 2145,
+                        "rid": "8241530769",
+                        "second_category_id": 0,
+                        "status": 1,
+                        "sticked": false,
+                        "store_name": "店铺名",
+                        "store_rid": "1234567891",
+                        "style_id": null,
+                        "style_name": "",
+                        "top_category_id": 0,
+                        "total_stock": 10
+                    },
+                    "rid": "8241530769",
+                    "type": "product"
+                }
+            ],
             "cover": "http://127.0.0.1:9000/_uploads/photos/180707/77409c8ab9b0abf.jpg",
             "cover_id": 2,
             "description": "摘要...",
@@ -293,17 +357,18 @@ JSON数据格式:
 
     {
         "data": {
-            "audit_status": 0,
+            "audit_status": 1,
             "content": "正文...",
             "cover": "http://127.0.0.1:9000/_uploads/photos/180707/77409c8ab9b0abf.jpg",
             "cover_id": 2,
+            "created_at": "创建时间",
             "description": "摘要...",
             "published_at": 1533353944,
             "refuse_reason": null,
             "rid": 5,
             "status": 1,
             "title": "她手绘出来的童话馆的小公主居然偷偷跑出来了",
-            "type": 1
+            "type": 2
         },
         "status": {
             "code": 201,
@@ -377,6 +442,82 @@ JSON数据格式:
     }
 
 
+所有生活志列表
+----------------------
+
+接口说明
+~~~~~~~~~~~~~~
+
+* API接口请求地址：``/life_records/all``
+* API接口请求方法：``GET``
+
+请求参数
+~~~~~~~~~~~~~~~
+
+===============  ==========  =========  ==========  =============================
+名称              类型        是否必须     默认值       描述说明
+===============  ==========  =========  ==========  =============================
+page             Number      可选         1          当前页码
+per_page         Number      可选         10         每页数量
+type             Number      可选         0          生活志类型: 0=全部, 1=文章, 2=种草清单
+status           Number      可选         0          生活志类型: 0=全部, 1=草稿箱, 2=发布, 3=禁用
+audit_status     Number      可选         0          生活志类型: 0=全部, 1: 待审核  2: 审核通过  3: 审核不通过
+===============  ==========  =========  ==========  =============================
+
+返回示例
+~~~~~~~~~~~~~~~~
+
+JSON数据格式:
+
+.. code-block:: javascript
+
+    {
+        "data": {
+            "count": 2,
+            "life_records": [
+                {
+                    "audit_status": 2,
+                    "channel_id": 4,
+                    "channel_name": "手作教学",
+                    "content": "saf",
+                    "cover": "http://127.0.0.1:9000/_uploads/photos/180707/77409c8ab9b0abf.jpg",
+                    "cover_id": 2,
+                    "created_at": 1533290214,
+                    "description": "还是飞机沙发斯蒂芬但是发生的发生偶师傅师傅",
+                    "labels": ["手作"],
+                    "published_at": 1533290214,
+                    "refuse_reason": null,
+                    "rid": 1,
+                    "status": 2,
+                    "title": "哈是否哈哈",
+                    "type": 1
+                },
+                {
+                    "audit_status": 2,
+                    "content": "新正文...",
+                    "cover": "http://127.0.0.1:9000/_uploads/photos/180707/77409c8ab9b0abf.jpg",
+                    "cover_id": 2,
+                    "created_at": 1533353214,
+                    "description": "新摘要...",
+                    "published_at": 1533353214,
+                    "refuse_reason": null,
+                    "rid": 4,
+                    "status": 2,
+                    "title": "她手绘出来的童话馆的小公主居然偷偷跑出来了",
+                    "type": 1
+                }
+            ],
+            "next": false,
+            "prev": false
+        },
+        "status": {
+            "code": 200,
+            "message": "Ok all right."
+        },
+        "success": true
+    }
+
+
 生活志列表
 ----------------------
 获取发布且审核通过的文章/种草一下
@@ -410,31 +551,33 @@ JSON数据格式:
             "count": 2,
             "life_records": [
                 {
-                    "audit_status": 1,
+                    "audit_status": 2,
                     "channel_id": 4,
                     "channel_name": "手作教学",
                     "content": "saf",
                     "cover": "http://127.0.0.1:9000/_uploads/photos/180707/77409c8ab9b0abf.jpg",
                     "cover_id": 2,
+                    "created_at": 1533290214,
                     "description": "还是飞机沙发斯蒂芬但是发生的发生偶师傅师傅",
                     "labels": ["手作"],
                     "published_at": 1533290214,
                     "refuse_reason": null,
                     "rid": 1,
-                    "status": 1,
+                    "status": 2,
                     "title": "哈是否哈哈",
-                    "type": 0
+                    "type": 1
                 },
                 {
-                    "audit_status": 1,
+                    "audit_status": 2,
                     "content": "新正文...",
                     "cover": "http://127.0.0.1:9000/_uploads/photos/180707/77409c8ab9b0abf.jpg",
                     "cover_id": 2,
+                    "created_at": 1533353214,
                     "description": "新摘要...",
                     "published_at": 1533353214,
                     "refuse_reason": null,
                     "rid": 4,
-                    "status": 1,
+                    "status": 2,
                     "title": "她手绘出来的童话馆的小公主居然偷偷跑出来了",
                     "type": 1
                 }
@@ -489,25 +632,27 @@ JSON数据格式:
                     "content": "saf",
                     "cover": "http://127.0.0.1:9000/_uploads/photos/180707/77409c8ab9b0abf.jpg",
                     "cover_id": 2,
+                    "created_at": 1533353214,
                     "description": "摘要...",
                     "labels": ["手作"],
                     "published_at": 1533290214,
                     "refuse_reason": null,
                     "rid": 1,
-                    "status": 1,
+                    "status": 2,
                     "title": "标题...",
-                    "type": 0
+                    "type": 1
                 },
                 {
-                    "audit_status": 1,
+                    "audit_status": 2,
                     "content": "新正文...",
                     "cover": "http://127.0.0.1:9000/_uploads/photos/180707/77409c8ab9b0abf.jpg",
                     "cover_id": 2,
+                    "created_at": 1533353214,
                     "description": "新摘要...",
                     "published_at": 1533353214,
                     "refuse_reason": null,
                     "rid": 4,
-                    "status": 1,
+                    "status": 2,
                     "title": "她手绘出来的童话馆的小公主居然偷偷跑出来了",
                     "type": 1
                 }
@@ -562,6 +707,7 @@ JSON数据格式:
                     "content": "saf",
                     "cover": "http://127.0.0.1:9000/_uploads/photos/180707/77409c8ab9b0abf.jpg",
                     "cover_id": 2,
+                    "created_at": 1533353214,
                     "description": "摘要...",
                     "labels": ["手作"],
                     "published_at": 1533290214,
@@ -569,13 +715,14 @@ JSON数据格式:
                     "rid": 1,
                     "status": 1,
                     "title": "标题...",
-                    "type": 0
+                    "type": 1
                 },
                 {
                     "audit_status": 1,
                     "content": "新正文...",
                     "cover": "http://127.0.0.1:9000/_uploads/photos/180707/77409c8ab9b0abf.jpg",
                     "cover_id": 2,
+                    "created_at": 1533353214,
                     "description": "新摘要...",
                     "published_at": 1533353214,
                     "refuse_reason": null,
@@ -624,72 +771,85 @@ JSON数据格式:
 
     {
         "data": {
-            "audit_status": 1,
+            "audit_status": 2,
             "channel_id": 4,
             "channel_name": "手作教学",
             "content": "saf",
             "cover": "http://127.0.0.1:9000/_uploads/photos/180707/77409c8ab9b0abf.jpg",
             "cover_id": 2,
+            "created_at": 1533353214,
             "deal_content": [
                 {
-                    "content": "商品名称：Apple苹果MacBookPro13英寸i5(15英寸i7)超薄笔记本电脑2017年新款15.4英寸i716G1TB固态BAR【官方标配】灰色2017年新款商品编号：29534568036店铺：黑海数码全球购旗舰店商品毛重：2.5kg货号：笔记本系统：其他显卡类别：高性能游戏独立显卡厚度",
-                    "rid": "3817596",
+                    "content": "心仪的<span class=\"ql-size-large\">文具</span>对你来说是什么?我记得 我<strong>18岁之前</strong>,屯文具是我的毕生追求。",
+                    "rid": "4263718",
                     "type": "text"
                 },
                 {
                     "content": "https://kg.erp.taihuoniao.com/20180719/0056FmbFmpYVJhfRzC-6_IlweYXCB26b.jpg",
-                    "rid": "6058134",
+                    "rid": "7894125",
                     "type": "image"
                 },
                 {
                     "content": {
-                        "category_id": 0,
-                        "commission_price": 246.68,
-                        "commission_rate": 13.5,
-                        "cover": "http://127.0.0.1:9000/_uploads/photos/180718/f1a30ad8b52107c.gif",
-                        "cover_id": 14,
-                        "custom_details": "",
+                        "category_id": 628,
+                        "cover": "http://127.0.0.1:9000/_uploads/photos/180707/77409c8ab9b0abf.jpg",
+                        "cover_id": 2,
+                        "custom_details": "可以刻名字,生辰八字",
                         "delivery_country": "",
                         "delivery_country_id": null,
-                        "features": "价格超值(5) 大小合适(4) 面料舒适(4) 尺码精准(3) 尺码合适(3) 做工精良(2) 简单得体(2) 使命必达 简约大方",
-                        "have_distributed": false,
-                        "id_code": "",
-                        "is_custom_made": false,
-                        "is_custom_service": false,
-                        "is_distributed": true,
+                        "features": "获得更多的成长值，加速商铺成长获取更多特权：发布三星级及以上的产品可以获得与星级数量等额的成长值，每日上限为20点；",
+                        "id_code": "88888888",
+                        "is_custom_made": true,
+                        "is_custom_service": true,
+                        "is_distributed": false,
                         "is_free_postage": false,
                         "is_made_holiday": false,
-                        "is_proprietary": true,
-                        "is_sold_out": false,
+                        "is_sold_out": true,
                         "like_count": 0,
-                        "made_cycle": 0,
-                        "material_id": 4,
-                        "material_name": "毛线",
-                        "max_price": 2234.5,
-                        "max_sale_price": 2145,
-                        "min_price": 1234.5,
-                        "min_sale_price": 1145,
-                        "modes": [
-                            "大 白色23",
-                            "小 白色22"
-                        ],
-                        "name": "1夏季新款修身短袖t恤男韩版潮流男士翻领polo衫男体恤",
-                        "published_at": 1532325331,
-                        "real_price": 2234.5,
-                        "real_sale_price": 2145,
-                        "rid": "8241530769",
-                        "second_category_id": 0,
-                        "status": 1,
+                        "made_cycle": 5,
+                        "material_id": 2,
+                        "material_name": "皮革",
+                        "max_price": 0,
+                        "max_sale_price": 0,
+                        "min_price": 0,
+                        "min_sale_price": 0,
+                        "modes": [],
+                        "name": "分销客户2-商品13",
+                        "published_at": 0,
+                        "rid": "8753906124",
+                        "second_category_id": 628,
+                        "status": 0,
                         "sticked": false,
-                        "store_name": "店铺名",
+                        "store_name": "分销商品2",
                         "store_rid": "1234567891",
                         "style_id": null,
                         "style_name": "",
-                        "top_category_id": 0,
-                        "total_stock": 10
+                        "top_category_id": 600,
+                        "total_stock": 0
                     },
-                    "rid": "8241530769",
+                    "rid": "8753906124",
                     "type": "product"
+                },
+                {
+                    "content": "作品的",
+                    "rid": "7632508",
+                    "type": "blockquote"
+                },
+                {
+                    "content": [
+                        {
+                            "content": "是现在美的东",
+                            "rid": "0967584",
+                            "type": "li"
+                        },
+                        {
+                            "content": "西太多了。",
+                            "rid": "3156924",
+                            "type": "li"
+                        }
+                    ],
+                    "rid": "5261378",
+                    "type": "ol"
                 }
             ],
             "description": "摘要...",
@@ -697,9 +857,9 @@ JSON数据格式:
             "published_at": 1533290214,
             "refuse_reason": null,
             "rid": 1,
-            "status": 1,
+            "status": 2,
             "title": "标题...",
-            "type": 0
+            "type": 2
         },
         "status": {
             "code": 200,
@@ -741,30 +901,32 @@ JSON数据格式:
             "count": 2,
             "life_records": [
                 {
-                    "audit_status": 1,
+                    "audit_status": 2,
                     "content": "正文...",
                     "cover": "http://127.0.0.1:9000/_uploads/photos/180707/77409c8ab9b0abf.jpg",
                     "cover_id": 2,
+                    "created_at": 1533353214,
                     "description": "摘要...",
                     "published_at": 1533353944,
                     "refuse_reason": null,
                     "rid": 5,
-                    "status": 1,
+                    "status": 2,
                     "title": "她手绘出来的童话馆的小公主居然偷偷跑出来了",
-                    "type": 1
+                    "type": 2
                 },
                 {
-                    "audit_status": 1,
+                    "audit_status": 2,
                     "content": "新正文...",
                     "cover": "http://127.0.0.1:9000/_uploads/photos/180707/77409c8ab9b0abf.jpg",
                     "cover_id": 2,
+                    "created_at": 1533353214,
                     "description": "新摘要...",
                     "published_at": 1533353214,
                     "refuse_reason": null,
                     "rid": 4,
-                    "status": 1,
+                    "status": 2,
                     "title": "她手绘出来的童话馆的小公主居然偷偷跑出来了",
-                    "type": 1
+                    "type": 2
                 }
             ],
             "next": false,
@@ -793,7 +955,7 @@ JSON数据格式:
 ===============  ==========  =========  ==========  =============================
 名称              类型        是否必须     默认值       描述说明
 ===============  ==========  =========  ==========  =============================
-type             Number      可选         1          频道类型: 0=官方频道, 1=商家频道
+type             Number      可选         2          频道类型: 0=全部, 1=官方频道, 2=商家频道
 ===============  ==========  =========  ==========  =============================
 
 返回示例
@@ -819,7 +981,7 @@ JSON数据格式:
                 {
                     "id": 5,
                     "name": "创作人专访",
-                    "type": 1
+                    "type": 2
                 }
             ]
         },
@@ -847,7 +1009,7 @@ JSON数据格式:
 ===============  ==========  =========  ==========  =============================
 名称              类型        是否必须     默认值       描述说明
 ===============  ==========  =========  ==========  =============================
-type             Number      可选         1          频道类型: 0=官方频道, 1=商家频道
+type             Number      可选         2          频道类型: 1=官方频道, 2=商家频道
 name             String      必须                    频道名
 sort_order       Number      可选         1          频道序号
 status           Bool        可选         False      是否可以: True=可用  False=禁用
@@ -864,7 +1026,7 @@ JSON数据格式:
         "data": {
             "id": 6,
             "name": "创作专访",
-            "type": "频道类型 0=官方频道, 1=商家频道"
+            "type": "频道类型 1=官方频道, 2=商家频道"
         },
         "status": {
             "code": 201,
@@ -890,7 +1052,7 @@ JSON数据格式:
 ===============  ==========  =========  ==========  =============================
 名称              类型        是否必须     默认值       描述说明
 ===============  ==========  =========  ==========  =============================
-type             Number      可选         1          频道类型: 0=官方频道, 1=商家频道
+type             Number      可选         2          频道类型: 1=官方频道, 2=商家频道
 name             String      必须                    频道名
 sort_order       Number      可选         1          频道序号
 status           Bool        可选         False      是否可以: True=可用  False=禁用
@@ -907,7 +1069,7 @@ JSON数据格式:
         "data": {
             "id": 6,
             "name": "新创作专访",
-            "type": "频道类型 0=官方频道, 1=商家频道"
+            "type": "频道类型 1=官方频道, 2=商家频道"
         },
         "status": {
             "code": 201,
