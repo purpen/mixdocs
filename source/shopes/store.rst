@@ -2,6 +2,37 @@
 店铺模块
 ================
 
+获取开馆指引
+--------------------
+
+
+接口说明
+~~~~~~~~~~~~~~
+
+* API接口请求地址：``/store/store_headline``
+* API接口请求方法：``GET``
+
+返回示例
+~~~~~~~~~~~~~~~~
+
+JSON数据格式
+
+
+.. code-block:: javascript
+
+    {
+        "data": {
+            "order_count": 85,  // 售出的订单数
+            "username_one": "关羽",  // 用户名
+            "username_two": "孙权"  // 用户名
+        },
+        "status": {
+            "code": 200,
+            "message": "Ok all right."
+        },
+        "success": true
+    }
+
 获取特色品牌馆列表
 --------------------
 
