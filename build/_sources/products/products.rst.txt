@@ -508,6 +508,7 @@ JSON数据格式:
             "real_price": 3456.7,
             "real_sale_price": 3367,
             "return_policy_id": 1,
+            "return_policy_title": "7天退换货服务",
             "rid": "8527906841",
             "second_category_id": 628,
             "skus": [
@@ -1142,6 +1143,8 @@ JSON数据格式:
             "sticked": false,
             "top_category_id": 1,
             "stock_count": null
+            "style_id": "商品风格编号",
+            "style_name": "商品风格名",
         },
         "status": {
             "code": 200,
@@ -1183,6 +1186,7 @@ labels                 Array       必填                     商品标签
 is_custom_made         Bool        必填                     是否接单定制
 made_cycle             Number      可选                     制作周期
 is_made_holiday        Bool        可选                     制作周期是否包含节假日
+style_id               Number      可选                     商品风格
 =====================  ==========  =========  ==========  =============================
 
 请求示例
@@ -1264,7 +1268,9 @@ JSON数据格式:
             "status": 0,
             "sticked": false,
             "top_category_id": 1,
-            "stock_count": null
+            "stock_count": null,
+            "style_id": 1,
+            "style_name": "可爱"
         },
         "status": {
             "code": 201,
@@ -1398,6 +1404,7 @@ JSON数据格式:
             "is_distributed": true,
             "product_return_policy": "退换货规则, 不能小于20个字符.",
             "return_policy_id": 1,
+            "return_policy_title": "7天退换货服务",
             "skus": [
                 {
                     "commission_price": 23.33,
@@ -1565,6 +1572,7 @@ JSON数据格式:
             "is_distributed": true,
             "product_return_policy": "退换货规则, 不能小于20个字符.",
             "return_policy_id": 1,
+            "return_policy_title": "7天退换货服务",
             "skus": [
                 {
                     "commission_rate": 2.34,
@@ -1625,6 +1633,177 @@ JSON数据格式:
 ~~~~~~~~~~~~~~~
 
 ** 同上发布或更新商品第二步, 放入仓库 **
+
+
+拷贝商品
+------------------
+拷贝商品的全部信息
+
+接口说明
+~~~~~~~~~~~~~~
+
+* API接口请求地址：``/products/copy``
+* API接口请求方法：``POST``
+* API接口用户授权：``token``
+
+请求参数
+~~~~~~~~~~~~~~~
+
+=====================  ==========  =========  ==========  =============================
+名称                    类型        是否必须     默认值       描述说明
+=====================  ==========  =========  ==========  =============================
+sid                    String      可选                     店铺编号
+rid                    String      必须                     商品编号
+=====================  ==========  =========  ==========  =============================
+
+返回示例
+~~~~~~~~~~~~~~~~
+
+JSON数据格式:
+
+请求 **正确** 返回结果：
+
+.. code-block:: javascript
+
+    {
+        "data": {
+            "assets": [
+                {
+                    "created_at": 1530933787,
+                    "filename": "z.jpg",
+                    "filepath": "180707/77409c8ab9b0abf.jpg",
+                    "id": 2,
+                    "type": 1,
+                    "view_url": "http://127.0.0.1:9000/_uploads/photos/180707/77409c8ab9b0abf.jpg"
+                }
+            ],
+            "category_id": 628,
+            "commission_price": 117.84,
+            "commission_rate": 3.5,
+            "content": "商品图文详情",
+            "cover": "http://127.0.0.1:9000/_uploads/photos/180707/77409c8ab9b0abf.jpg",
+            "cover_id": 2,
+            "custom_details": "可以刻名字,生辰八字",
+            "features": "商品特点",
+            "fid": "11111",
+            "id_code": "",
+            "is_custom_made": true,
+            "is_custom_service": true,
+            "is_distributed": true,
+            "is_free_postage": false,
+            "is_made_holiday": false,
+            "is_proprietary": true,
+            "is_sold_out": false,
+            "keywords": "苹果,明星,博客,象棋",
+            "labels": [
+                {
+                    "id": 1,
+                    "name": "独家贩售",
+                    "sort_order": 109
+                },
+                {
+                    "id": 2,
+                    "name": "环保有机",
+                    "sort_order": 108
+                },
+                {
+                    "id": 3,
+                    "name": "手工制作",
+                    "sort_order": 107
+                },
+                {
+                    "id": 4,
+                    "name": "机械制作",
+                    "sort_order": 107
+                }
+            ],
+            "like_count": 0,
+            "made_cycle": 5,
+            "material_id": 1,
+            "max_price": 3456.7,
+            "max_sale_price": 3367,
+            "min_price": 1234.5,
+            "min_sale_price": 1145,
+            "modes": [
+                "大 白色",
+                "中 黑色",
+                "小 蓝色"
+            ],
+            "name": "商品2",
+            "product_return_policy": "退换货规则",
+            "published_at": 1530949344,
+            "real_price": 3456.7,
+            "real_sale_price": 3367,
+            "return_policy_id": 1,
+            "return_policy_title": "7天退换货服务",
+            "rid": "8527906841",
+            "second_category_id": 628,
+            "skus": [
+                {
+                    "commission_price": 17.18,
+                    "commission_rate": 1.5,
+                    "cover": "http://kg.erp.taihuoniao.com/static/img/default-logo-180x180.png",
+                    "cover_id": null,
+                    "id_code": null,
+                    "mode": "大 白色",
+                    "price": 1234.5,
+                    "product_name": "商品2",
+                    "rid": "8085694327",
+                    "s_color": "白色",
+                    "s_model": "大",
+                    "s_weight": 2.5,
+                    "sale_price": 1145,
+                    "stock_count": 5,
+                    "stock_quantity": 5
+                },
+                {
+                    "commission_price": 56.4,
+                    "commission_rate": 2.5,
+                    "cover": "http://kg.erp.taihuoniao.com/static/img/default-logo-180x180.png",
+                    "cover_id": null,
+                    "id_code": null,
+                    "mode": "中 黑色",
+                    "price": 2345.6,
+                    "product_name": "商品2",
+                    "rid": "8568012439",
+                    "s_color": "黑色",
+                    "s_model": "中",
+                    "s_weight": 2.5,
+                    "sale_price": 2256,
+                    "stock_count": 15,
+                    "stock_quantity": 15
+                },
+                {
+                    "commission_price": 117.84,
+                    "commission_rate": 3.5,
+                    "cover": "http://kg.erp.taihuoniao.com/static/img/default-logo-180x180.png",
+                    "cover_id": null,
+                    "id_code": null,
+                    "mode": "小 蓝色",
+                    "price": 3456.7,
+                    "product_name": "商品2",
+                    "rid": "8493850612",
+                    "s_color": "蓝色",
+                    "s_model": "小",
+                    "s_weight": 2.5,
+                    "sale_price": 3367,
+                    "stock_count": 25,
+                    "stock_quantity": 25
+                }
+            ],
+            "status": 1,
+            "sticked": false,
+            "stock_count": 45,
+            "top_category_id": 600,
+            "total_stock": 45
+        },
+        "status": {
+            "code": 200,
+            "message": "Ok all right."
+        },
+        "success": true
+    }
+
 
 删除商品
 ------------------
@@ -1927,6 +2106,70 @@ JSON数据格式:
                     "name": "简约"
                 }
             ]
+        },
+        "status": {
+            "code": 200,
+            "message": "Ok all right."
+        },
+        "success": true
+    }
+
+
+我的作品
+-----------------------
+获取商家发布的商品
+
+接口说明
+~~~~~~~~~~~~~~
+
+* API接口请求地址：``/products/index``
+* API接口请求方法：``GET``
+* API接口用户授权：``token``
+
+请求参数
+~~~~~~~~~~~~~~~
+
+==============  ========  =========  ========  ====================================
+名称             类型      是否必须    默认值     描述说明
+==============  ========  =========  ========  ====================================
+page            Number    可选         1         当前页码
+per_page        Number    可选         10        每页数量
+sort_type       Number    可选         0         排序: 0=默认排序, 1=最新, 2=价格由低至高, 3=价格由高至低
+cids            String    可选                   分类编号， 多个用, 隔开
+min_price       Number    可选                   价格区间： 最小价格
+max_price       Number    可选                   价格区间： 最大价格
+status          Number    可选         1         商品状态： 0： 全部 , 1: 上架中, 2: 下架中, 3: 仓库中, 4: 已售罄
+==============  ========  =========  ========  ====================================
+
+返回示例
+~~~~~~~~~~~~~~~~
+
+JSON数据格式:
+
+.. literalinclude:: product_list.js
+    :language: javascript
+
+
+商家商品数
+-----------------------
+获取商家发布的商品个数
+
+接口说明
+~~~~~~~~~~~~~~
+
+* API接口请求地址：``/products/publish_count``
+* API接口请求方法：``GET``
+
+返回示例
+~~~~~~~~~~~~~~~~
+
+JSON数据格式:
+
+.. code-block:: javascript
+
+    {
+        "data": {
+            "count": 16
         },
         "status": {
             "code": 200,

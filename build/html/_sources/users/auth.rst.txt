@@ -34,32 +34,19 @@ JSON数据格式
 
     {
         "data": {
-            "created_at": 1532098157,
+            "created_at": 1533179299,
             "expiration": 2592000,
-            "is_first_login": false,  // 是否为第一次登陆 ,是则需要跳转到完善个人资料页面, 不是则进入首页
-            "token": "eyJhbGciOiJIUzI1NiIsImlhdCI6MTUzMjA5ODE1NywiZXhwIjoxNTM0NjkwMTU3fQ.eyJpZCI6MX0.mBUXUc4VUUFS-yVEOj8E1mV12LLu9ObF_onpwyjr4CQ"
+            "is_distributor": true, // 是不是分销
+            "is_first_login": false,
+            "is_supplier": false, // 是不是商家
+            "store_rid": "97958360",  // 店铺id
+            "token": "eyJhbGciOiJIUzI1NiIsImlhdCI6MTUzMzE3OTI5OSwiZXhwIjoxNTM1NzcxMjk5fQ.eyJpZCI6Mn0.oVhyK3aLIRU9WpqF3wfHYm-fMIVGwYZBUyqs2C3GEns"
         },
         "status": {
             "code": 200,
             "message": "Ok all right."
         },
         "success": true
-    }
-
-    {
-    "data": {
-        "created_at": 1532416777,
-        "expiration": 2592000,
-        "is_distributor": false,  // 是否是小b商家(分销商)
-        "is_first_login": false,  // 是否为第一次登陆 ,是则需要跳转到完善个人资料页面, 不是则进入首页
-        "is_supplier": false,  // 是否是商家
-        "token": "eyJhbGciOiJIUzI1NiIsImlhdCI6MTUzMjQxNjc3NywiZXhwIjoxNTM1MDA4Nzc3fQ.eyJpZCI6MX0.8hX-07txybkYNPwDt4ADl8-Sed_fjqmmxppEtuN2-Ys"
-    },
-    "status": {
-        "code": 200,
-        "message": "Ok all right."
-    },
-    "success": true
     }
 
 错误结果格式::
@@ -410,12 +397,13 @@ JSON数据格式:
 请求参数
 ~~~~~~~~~~~~~~~
 
-=============  ========  =========  ========  ====================================
-名称            类型      是否必须    默认值     描述说明
-=============  ========  =========  ========  ====================================
-password        String    必须                 手机验证码
-email           String    必须                 手机号
-=============  ========  =========  ========  ====================================
+==================  ========  =========  ========  ====================================
+名称                 类型      是否必须    默认值     描述说明
+==================  ========  =========  ========  ====================================
+email                String    必须                 手机号
+password             String    必须                 密码
+affirm_password      String    必须                 确认密码
+==================  ========  =========  ========  ====================================
 
 返回示例
 ~~~~~~~~~~~~~~~~
@@ -595,14 +583,17 @@ JSON数据格式:
 
     {
         "data": {
-            "avatar": "http://kg.erp.taihuoniao.com/static/img/default-logo-180x180.png",
-            "created_at": 1532585091,
+            "avatar": "http://0.0.0.0:9000/_uploads/photos/static/img/default2-logo-180x180.png",  // 头像
+            "created_at": 1533178967,
             "expiration": 2592000,
-            "is_first_login": true,  // 是否为第一次登陆, 是则需要完善个人资料
-            "mobile": "15666666667",
-            "token": "eyJhbGciOiJIUzI1NiIsImlhdCI6MTUzMjU4NTA5MSwiZXhwIjoxNTM1MTc3MDkxfQ.eyJpZCI6MjB9.Jcfl0_x2xxNrfwPQ9PYVpimRh0j8ZZUZ_HRLlG9WgWc",
-            "uid": "18402396751",
-            "username": "15666666667"
+            "is_distributor": false,  // 是不是小b
+            "is_first_login": false,
+            "is_supplier": false,  // 是不是商家
+            "mobile": "+86-13645647894",
+            "store_rid": "",  // 店铺id
+            "token": "eyJhbGciOiJIUzI1NiIsImlhdCI6MTUzMzE3ODk2NywiZXhwIjoxNTM1NzcwOTY3fQ.eyJpZCI6Mn0.YGTBoGb8OZS_S98OOwviDA9fwZC8Brni8mIAiGFzRq4",
+            "uid": "17048395612",
+            "username": "wdd"  // 用户名
         },
         "status": {
             "code": 200,
@@ -697,8 +688,8 @@ JSON数据格式:
 ===========  ========  =========  ========  ====================================
 avatar_id     Integer    必须                   头像ID
 username      String     必须                   用户名
-date          String     可选                   生日
-gender        Integer    可选         0         性别
+date          String     可选                   生日;格式2000-02-02
+gender        Integer    可选         0         性别;0女1男
 ===========  ========  =========  ========  ====================================
 
 返回示例

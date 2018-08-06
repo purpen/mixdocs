@@ -133,6 +133,7 @@
 </li>
 <li class="toctree-l1"><a class="reference internal" href="../columns/index.html">栏目API模块</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="../columns/column_products.html">栏目商品模块</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../columns/life_records.html">生活志模块</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="../common.html">公用接口模块</a><ul>
@@ -303,10 +304,11 @@
     <span class="s2">&quot;data&quot;</span><span class="o">:</span> <span class="p">{</span>
         <span class="s2">&quot;comments&quot;</span><span class="o">:</span> <span class="p">[</span>
             <span class="p">{</span>
-                <span class="s2">&quot;comment_query&quot;</span><span class="o">:</span> <span class="mi">2</span><span class="p">,</span>
-                <span class="s2">&quot;score&quot;</span><span class="o">:</span> <span class="mi">4</span><span class="p">,</span>
-                <span class="s2">&quot;sku_rid&quot;</span><span class="o">:</span> <span class="mi">2</span>
-            <span class="p">}</span>
+                <span class="s2">&quot;comment_query&quot;</span><span class="o">:</span> <span class="mi">2</span><span class="p">,</span>  <span class="c1">// 评价个数</span>
+                <span class="s2">&quot;product_name&quot;</span><span class="o">:</span> <span class="s2">&quot;汽车&quot;</span><span class="p">,</span> <span class="c1">// 商品名</span>
+                <span class="s2">&quot;score&quot;</span><span class="o">:</span> <span class="mi">4</span><span class="p">,</span> <span class="c1">// 平均分</span>
+                <span class="s2">&quot;sku_rid&quot;</span><span class="o">:</span> <span class="s2">&quot;2&quot;</span>  <span class="c1">// sku_rid</span>
+            <span class="p">},</span>
         <span class="p">],</span>
         <span class="s2">&quot;count&quot;</span><span class="o">:</span> <span class="mi">2</span><span class="p">,</span>
         <span class="s2">&quot;next&quot;</span><span class="o">:</span> <span class="s2">&quot;http://0.0.0.0:9000/api/v1.0/orders/comment/manage?page=2&quot;</span><span class="p">,</span>

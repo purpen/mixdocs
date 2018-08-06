@@ -750,11 +750,11 @@
 <h3>请求参数<a class="headerlink" href="#id20" title="永久链接至标题">¶</a></h3>
 <table border="1" class="docutils">
 <colgroup>
-<col width="15%" />
-<col width="11%" />
-<col width="13%" />
-<col width="11%" />
-<col width="50%" />
+<col width="19%" />
+<col width="9%" />
+<col width="10%" />
+<col width="9%" />
+<col width="52%" />
 </colgroup>
 <thead valign="bottom">
 <tr class="row-odd"><th class="head">名称</th>
@@ -776,6 +776,36 @@
 <td>可选</td>
 <td>10</td>
 <td>每页数量</td>
+</tr>
+<tr class="row-even"><td>min_price</td>
+<td>Number</td>
+<td>可选</td>
+<td>&#160;</td>
+<td>价格区间： 最小价格</td>
+</tr>
+<tr class="row-odd"><td>max_price</td>
+<td>Number</td>
+<td>可选</td>
+<td>&#160;</td>
+<td>价格区间： 最大价格</td>
+</tr>
+<tr class="row-even"><td>sort_type</td>
+<td>Number</td>
+<td>可选</td>
+<td>0</td>
+<td>排序: 0=不限, 2=价格由低至高, 3=价格由高至低</td>
+</tr>
+<tr class="row-odd"><td>is_free_postage</td>
+<td>Number</td>
+<td>可选</td>
+<td>0</td>
+<td>是否包邮: 0=全部, 1=包邮</td>
+</tr>
+<tr class="row-even"><td>is_preferential</td>
+<td>Number</td>
+<td>可选</td>
+<td>0</td>
+<td>是否特惠: 0=全部, 1=特惠</td>
 </tr>
 </tbody>
 </table>
@@ -954,28 +984,37 @@
         <span class="s2">&quot;prev&quot;</span><span class="o">:</span> <span class="kc">false</span><span class="p">,</span>
         <span class="s2">&quot;product_like_users&quot;</span><span class="o">:</span> <span class="p">[</span>
             <span class="p">{</span>
-                <span class="s2">&quot;about_me&quot;</span><span class="o">:</span> <span class="s2">&quot;我是个好人&quot;</span><span class="p">,</span>  <span class="c1">// 关于我</span>
-                <span class="s2">&quot;area&quot;</span><span class="o">:</span> <span class="s2">&quot;鱼泉乡&quot;</span><span class="p">,</span>  <span class="c1">// 区域</span>
-                <span class="s2">&quot;area_id&quot;</span><span class="o">:</span> <span class="mi">10000</span><span class="p">,</span>
-                <span class="s2">&quot;avatar&quot;</span><span class="o">:</span> <span class="s2">&quot;http://kg.erp.taihuoniao.com/static/img/default-logo-180x180.png&quot;</span><span class="p">,</span> <span class="c1">// 头像url</span>
-                <span class="s2">&quot;avatar_id&quot;</span><span class="o">:</span> <span class="mi">0</span><span class="p">,</span>  <span class="c1">// 头像ID</span>
+                <span class="s2">&quot;about_me&quot;</span><span class="o">:</span> <span class="s2">&quot;好人&quot;</span><span class="p">,</span>
+                <span class="s2">&quot;area&quot;</span><span class="o">:</span> <span class="s2">&quot;&quot;</span><span class="p">,</span>
+                <span class="s2">&quot;area_id&quot;</span><span class="o">:</span> <span class="mi">0</span><span class="p">,</span>
+                <span class="s2">&quot;areacode&quot;</span><span class="o">:</span> <span class="s2">&quot;+86&quot;</span><span class="p">,</span>
+                <span class="s2">&quot;avatar&quot;</span><span class="o">:</span> <span class="s2">&quot;http://0.0.0.0:9000/_uploads/photos/static/img/default2-logo-180x180.png&quot;</span><span class="p">,</span>
+                <span class="s2">&quot;avatar_id&quot;</span><span class="o">:</span> <span class="mi">1</span><span class="p">,</span>
                 <span class="s2">&quot;city&quot;</span><span class="o">:</span> <span class="s2">&quot;北京&quot;</span><span class="p">,</span>
                 <span class="s2">&quot;city_id&quot;</span><span class="o">:</span> <span class="mi">1</span><span class="p">,</span>
-                <span class="s2">&quot;country&quot;</span><span class="o">:</span> <span class="s2">&quot;&quot;</span><span class="p">,</span>
-                <span class="s2">&quot;country_id&quot;</span><span class="o">:</span> <span class="kc">null</span><span class="p">,</span>
-                <span class="s2">&quot;created_at&quot;</span><span class="o">:</span> <span class="mi">1531125527</span><span class="p">,</span>  <span class="c1">// 创建时间</span>
-                <span class="s2">&quot;date&quot;</span><span class="o">:</span> <span class="s2">&quot;1992-12-26&quot;</span><span class="p">,</span>  <span class="c1">// 生日</span>
+                <span class="s2">&quot;country&quot;</span><span class="o">:</span> <span class="s2">&quot;中国&quot;</span><span class="p">,</span>
+                <span class="s2">&quot;country_id&quot;</span><span class="o">:</span> <span class="mi">1</span><span class="p">,</span>
+                <span class="s2">&quot;created_at&quot;</span><span class="o">:</span> <span class="mi">1532055457</span><span class="p">,</span>
+                <span class="s2">&quot;date&quot;</span><span class="o">:</span> <span class="s2">&quot;2000-02-02&quot;</span><span class="p">,</span>
                 <span class="s2">&quot;description&quot;</span><span class="o">:</span> <span class="kc">null</span><span class="p">,</span>
                 <span class="s2">&quot;email&quot;</span><span class="o">:</span> <span class="s2">&quot;13001179400&quot;</span><span class="p">,</span>
-                <span class="s2">&quot;gender&quot;</span><span class="o">:</span> <span class="mi">0</span><span class="p">,</span>  <span class="c1">// 性别 0默认为女</span>
-                <span class="s2">&quot;last_seen&quot;</span><span class="o">:</span> <span class="mi">1531842343</span><span class="p">,</span>
-                <span class="s2">&quot;mail&quot;</span><span class="o">:</span> <span class="s2">&quot;asd@163.com&quot;</span><span class="p">,</span>  <span class="c1">// 邮箱</span>
+                <span class="s2">&quot;followed_status&quot;</span><span class="o">:</span> <span class="mi">0</span><span class="p">,</span>  <span class="c1">// 关注状态, 0:未关注; 1: 已关注; 2:相互关注</span>
+                <span class="s2">&quot;gender&quot;</span><span class="o">:</span> <span class="mi">0</span><span class="p">,</span>
+                <span class="s2">&quot;is_distributor&quot;</span><span class="o">:</span> <span class="kc">false</span><span class="p">,</span>
+                <span class="s2">&quot;last_seen&quot;</span><span class="o">:</span> <span class="mi">1532055457</span><span class="p">,</span>
+                <span class="s2">&quot;mail&quot;</span><span class="o">:</span> <span class="s2">&quot;4568794@qq.com&quot;</span><span class="p">,</span>
                 <span class="s2">&quot;master_uid&quot;</span><span class="o">:</span> <span class="mi">2</span><span class="p">,</span>
-                <span class="s2">&quot;mobile&quot;</span><span class="o">:</span> <span class="kc">null</span><span class="p">,</span>
+                <span class="s2">&quot;mobile&quot;</span><span class="o">:</span> <span class="s2">&quot;+86-13645647894&quot;</span><span class="p">,</span>
+                <span class="s2">&quot;phone&quot;</span><span class="o">:</span> <span class="s2">&quot;&quot;</span><span class="p">,</span>
                 <span class="s2">&quot;province&quot;</span><span class="o">:</span> <span class="s2">&quot;北京&quot;</span><span class="p">,</span>
                 <span class="s2">&quot;province_id&quot;</span><span class="o">:</span> <span class="mi">1</span><span class="p">,</span>
-                <span class="s2">&quot;uid&quot;</span><span class="o">:</span> <span class="s2">&quot;19138405762&quot;</span><span class="p">,</span>
-                <span class="s2">&quot;username&quot;</span><span class="o">:</span> <span class="s2">&quot;超人啊&quot;</span>  <span class="c1">// 用户名</span>
+                <span class="s2">&quot;street_address&quot;</span><span class="o">:</span> <span class="s2">&quot;天安门&quot;</span><span class="p">,</span>
+                <span class="s2">&quot;uid&quot;</span><span class="o">:</span> <span class="s2">&quot;17048395612&quot;</span><span class="p">,</span>
+                <span class="s2">&quot;user_areacode&quot;</span><span class="o">:</span> <span class="p">[</span>
+                    <span class="s2">&quot;+86&quot;</span><span class="p">,</span>
+                    <span class="s2">&quot;13645647894&quot;</span>
+                <span class="p">],</span>
+                <span class="s2">&quot;username&quot;</span><span class="o">:</span> <span class="s2">&quot;张飞&quot;</span>
             <span class="p">}</span>
         <span class="p">]</span>
     <span class="p">},</span>

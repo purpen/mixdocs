@@ -2,6 +2,461 @@
 用户模块
 =========
 
+获取关注的用户列表
+-----------------------
+
+接口说明
+~~~~~~~~~~~~~~
+
+* API接口请求地址：``/users/followed_users``
+* API接口请求方法：``GET``
+* API接口用户授权：``token``
+
+请求参数
+~~~~~~~~~~~~~~~
+
+===========  ========  =========  ========  ==============================================
+名称          类型      是否必须    默认值     描述说明
+===========  ========  =========  ========  ==============================================
+page         Number    可选         1        当前页码
+per_page     Number    可选         10       每页数量
+===========  ========  =========  ========  ==============================================
+
+返回示例
+~~~~~~~~~~~~~~~~
+
+JSON数据格式
+
+请求 **正确** 返回结果：
+
+.. code-block:: javascript
+
+    {
+        "data": {
+            "count": 2,
+            "followed_users": [
+                {
+                    "about_me": null,
+                    "area": "",
+                    "area_id": 0,
+                    "areacode": "+86",
+                    "avatar": "http://kg.erp.taihuoniao.com/static/img/default-logo-180x180.png",
+                    "avatar_id": 0,
+                    "city": "",
+                    "city_id": 0,
+                    "country": "",
+                    "country_id": null,
+                    "created_at": 1532574628,
+                    "date": "",
+                    "description": null,
+                    "email": "13001179499",
+                    "gender": 0,
+                    "is_distributor": false,
+                    "last_seen": 1532574628,
+                    "mail": null,
+                    "master_uid": 0,
+                    "mobile": null,
+                    "followed_status": 2,  // 关注状态, 0:未关注, 1:已关注, 2:相互关注
+                    "phone": null,
+                    "province": "",
+                    "province_id": 0,
+                    "street_address": null,
+                    "uid": "14519608273",
+                    "user_areacode": null,
+                    "username": "13001179499"
+                }
+            ],
+            "next": false,
+            "prev": false
+        },
+        "status": {
+            "code": 200,
+            "message": "Ok all right."
+        },
+        "success": true
+    }
+
+获取用户的粉丝列表
+-----------------------
+
+接口说明
+~~~~~~~~~~~~~~
+
+* API接口请求地址：``/users/user_fans``
+* API接口请求方法：``GET``
+* API接口用户授权：``token``
+
+请求参数
+~~~~~~~~~~~~~~~
+
+===========  ========  =========  ========  ==============================================
+名称          类型      是否必须    默认值     描述说明
+===========  ========  =========  ========  ==============================================
+page         Number    可选         1        当前页码
+per_page     Number    可选         10       每页数量
+===========  ========  =========  ========  ==============================================
+
+返回示例
+~~~~~~~~~~~~~~~~
+
+JSON数据格式
+
+请求 **正确** 返回结果：
+
+.. code-block:: javascript
+
+    {
+        "data": {
+            "count": 1,
+            "next": false,
+            "prev": false,
+            "user_fans": [
+                {
+                    "about_me": null,
+                    "area": "",
+                    "area_id": 0,
+                    "areacode": "+86",
+                    "avatar": "http://kg.erp.taihuoniao.com/static/img/default-logo-180x180.png",
+                    "avatar_id": 0,
+                    "city": "",
+                    "city_id": 0,
+                    "country": "",
+                    "country_id": null,
+                    "created_at": 1532574628,
+                    "date": "",
+                    "description": null,
+                    "email": "13001179499",
+                    "gender": 0,
+                    "is_distributor": false,
+                    "last_seen": 1532574628,
+                    "mail": null,
+                    "master_uid": 0,
+                    "mobile": null,
+                    "followed_status": 2,  // 关注状态, 0:未关注, 1:已关注, 2:相互关注
+                    "phone": null,
+                    "province": "",
+                    "province_id": 0,
+                    "street_address": null,
+                    "uid": "14519608273",
+                    "user_areacode": null,
+                    "username": "13001179499"
+                }
+            ]
+        },
+        "status": {
+            "code": 200,
+            "message": "Ok all right."
+        },
+        "success": true
+    }
+
+
+获取用户个人中心
+-----------------------
+
+接口说明
+~~~~~~~~~~~~~~
+
+* API接口请求地址：``/users/user_center``
+* API接口请求方法：``GET``
+* API接口用户授权：``token``
+
+返回示例
+~~~~~~~~~~~~~~~~
+
+JSON数据格式
+
+请求 **正确** 返回结果：
+
+.. code-block:: javascript
+
+    {
+        "data": {
+            "avatar": "http://0.0.0.0:9000/_uploads/photos/static/img/default2-logo-180x180.png",  // 头像
+            "followed_stores_counts": 2,  // 关注的店铺数量
+            "followed_users_counts": 0,  // 关注的用户数量
+            "fans_counts": 0,  // 粉丝数量
+            "user_like_counts": 0,  // 喜欢的数量
+            "username": "张飞",  // 用户名
+            "wish_list_counts": 0  // 收藏的数量
+        },
+        "status": {
+            "code": 200,
+            "message": "Ok all right."
+        },
+        "success": true
+    }
+
+获取用户关注的店铺列表
+-----------------------
+
+接口说明
+~~~~~~~~~~~~~~
+
+* API接口请求地址：``/users/followed_stores``
+* API接口请求方法：``GET``
+* API接口用户授权：``token``
+
+请求参数
+~~~~~~~~~~~~~~~
+
+===========  ========  =========  ========  ==============================================
+名称          类型      是否必须    默认值     描述说明
+===========  ========  =========  ========  ==============================================
+page         Number    可选         1        当前页码
+per_page     Number    可选         10       每页数量
+===========  ========  =========  ========  ==============================================
+
+返回示例
+~~~~~~~~~~~~~~~~
+
+JSON数据格式
+
+请求 **正确** 返回结果：
+
+.. code-block:: javascript
+
+    {
+        "data": {
+            "count": 2,
+            "next": false,
+            "prev": false,
+            "stores": [
+                {
+                    "area": "",
+                    "area_id": 0,
+                    "areacode": null,
+                    "begin_date": "",
+                    "bgcover": "http://kg.erp.taihuoniao.com",
+                    "bgcover_id": 0,
+                    "browse_number": 0,
+                    "categories": [],
+                    "city": "",
+                    "city_id": "",
+                    "country": "中国",
+                    "country_id": 1,
+                    "created_at": 1532759838,
+                    "delivery_city": "",
+                    "delivery_city_id": "",
+                    "delivery_country": "中国",
+                    "delivery_country_id": 1,
+                    "delivery_date": "",
+                    "delivery_province": "",
+                    "delivery_province_id": 0,
+                    "description": null,
+                    "detail": "",
+                    "distribution_type": 0,
+                    "end_date": "",
+                    "fans_count": 0,
+                    "is_closed": false,
+                    "logo": "http://kg.erp.taihuoniao.com",
+                    "logo_id": 0,
+                    "mobile": null,
+                    "name": "京东",
+                    "pattern": 1,
+                    "phone": null,
+                    "products_count": 0,
+                    "province": "",
+                    "province_id": 0,
+                    "rid": "95492837",
+                    "status": 1,
+                    "tag_line": null,
+                    "type": 1
+                },
+                {
+                    "area": "",
+                    "area_id": 0,
+                    "areacode": null,
+                    "begin_date": "",
+                    "bgcover": "http://kg.erp.taihuoniao.com",
+                    "bgcover_id": 0,
+                    "browse_number": 0,
+                    "categories": [],
+                    "city": "",
+                    "city_id": "",
+                    "country": "中国",
+                    "country_id": 1,
+                    "created_at": 1532760796,
+                    "delivery_city": "",
+                    "delivery_city_id": "",
+                    "delivery_country": "中国",
+                    "delivery_country_id": 1,
+                    "delivery_date": "",
+                    "delivery_province": "",
+                    "delivery_province_id": 0,
+                    "description": null,
+                    "detail": "",
+                    "distribution_type": 0,
+                    "end_date": "",
+                    "fans_count": 0,
+                    "is_closed": false,
+                    "logo": "http://kg.erp.taihuoniao.com",
+                    "logo_id": 0,
+                    "mobile": null,
+                    "name": "拼多多",
+                    "pattern": 1,
+                    "phone": null,
+                    "products_count": 0,
+                    "province": "",
+                    "province_id": 0,
+                    "rid": "93921078",
+                    "status": 1,
+                    "tag_line": null,
+                    "type": 1
+                }
+            ]
+        },
+        "status": {
+            "code": 200,
+            "message": "Ok all right."
+        },
+        "success": true
+    }
+
+获取用户喜欢的数量
+-----------------------
+
+接口说明
+~~~~~~~~~~~~~~
+
+* API接口请求地址：``/users/user_like_counts``
+* API接口请求方法：``GET``
+* API接口用户授权：``token``
+
+返回示例
+~~~~~~~~~~~~~~~~
+
+JSON数据格式:
+
+.. code-block:: javascript
+
+    {
+        "data": {
+            "user_like_counts": 1
+        },
+        "status": {
+            "code": 200,
+            "message": "Ok all right."
+        },
+        "success": true
+    }
+
+获取用户收藏数量
+-----------------------
+
+接口说明
+~~~~~~~~~~~~~~
+
+* API接口请求地址：``/users/wish_list_counts``
+* API接口请求方法：``GET``
+* API接口用户授权：``token``
+
+返回示例
+~~~~~~~~~~~~~~~~
+
+JSON数据格式:
+
+.. code-block:: javascript
+
+    {
+        "data": {
+            "wish_list_counts": 0
+        },
+        "status": {
+            "code": 200,
+            "message": "Ok all right."
+        },
+        "success": true
+    }
+
+获取用户关注的设计馆数量
+<<<<<<< HEAD
+----------------------------
+=======
+--------------------------
+>>>>>>> origin/qiu
+
+接口说明
+~~~~~~~~~~~~~~
+
+* API接口请求地址：``/users/followed_stores_counts``
+* API接口请求方法：``GET``
+* API接口用户授权：``token``
+
+返回示例
+~~~~~~~~~~~~~~~~
+
+JSON数据格式:
+
+.. code-block:: javascript
+
+    {
+        "data": {
+            "followed_stores_counts": 0
+        },
+        "status": {
+            "code": 200,
+            "message": "Ok all right."
+        },
+        "success": true
+    }
+
+获取用户关注人数
+-----------------------
+
+接口说明
+~~~~~~~~~~~~~~
+
+* API接口请求地址：``/users/followed_users_counts``
+* API接口请求方法：``GET``
+* API接口用户授权：``token``
+
+返回示例
+~~~~~~~~~~~~~~~~
+
+JSON数据格式:
+
+.. code-block:: javascript
+
+    {
+        "data": {
+            "followed_users_counts": 2
+        },
+        "status": {
+            "code": 200,
+            "message": "Ok all right."
+        },
+        "success": true
+    }
+
+获取用户粉丝数
+-----------------------
+
+接口说明
+~~~~~~~~~~~~~~
+
+* API接口请求地址：``/users/fans_counts``
+* API接口请求方法：``GET``
+* API接口用户授权：``token``
+
+返回示例
+~~~~~~~~~~~~~~~~
+
+JSON数据格式:
+
+.. code-block:: javascript
+
+    {
+        "data": {
+            "fans_counts": 2
+        },
+        "status": {
+            "code": 200,
+            "message": "Ok all right."
+        },
+        "success": true
+    }
+
 用户资料
 ----------
 获取当前登录账户的用户资料
@@ -210,6 +665,159 @@ JSON数据格式
       "success": false
     }
 
+关注用户
+-------------
+
+接口说明
+~~~~~~~~~~~~~~
+
+* API接口请求地址：``/follow/user``
+* API接口请求方法：``POST``
+* API接口用户授权：``token``
+
+请求参数
+~~~~~~~~~~~~~~~
+
+===============  ========  =========  ========  ====================================
+名称              类型      是否必须    默认值     描述说明
+===============  ========  =========  ========  ====================================
+uid              String     必须                 被关注用户ID
+===============  ========  =========  ========  ====================================
+
+返回示例
+~~~~~~~~~~~~~~~~
+
+JSON数据格式
+
+请求 **正确** 返回结果：
+
+.. code-block:: javascript
+
+    {
+        "data": {
+            "followed_status": 2
+        },
+        "status": {
+            "code": 201,
+            "message": "All created."
+        },
+        "success": true
+    }
+
+请求 ``失败`` 返回结果：
+
+.. code-block:: javascript
+
+    {
+        "status": {
+            "code": 400,
+            "message": "用户不存在"
+        },
+        "success": false
+    }
+
+取消关注用户
+-------------
+
+接口说明
+~~~~~~~~~~~~~~
+
+* API接口请求地址：``/unfollow/user``
+* API接口请求方法：``POST``
+* API接口用户授权：``token``
+
+请求参数
+~~~~~~~~~~~~~~~
+
+===============  ========  =========  ========  ====================================
+名称              类型      是否必须    默认值     描述说明
+===============  ========  =========  ========  ====================================
+uid              String     必须                 被关注用户ID
+===============  ========  =========  ========  ====================================
+
+返回示例
+~~~~~~~~~~~~~~~~
+
+JSON数据格式
+
+请求 **正确** 返回结果：
+
+.. code-block:: javascript
+
+    {
+        "data": {
+            "followed_status": 0
+        },
+        "status": {
+            "code": 201,
+            "message": "All created."
+        },
+        "success": true
+    }
+
+请求 ``失败`` 返回结果：
+
+.. code-block:: javascript
+
+    {
+        "status": {
+            "code": 400,
+            "message": "用户不存在"
+        },
+        "success": false
+    }
+
+获取用户是否被关注
+---------------------
+
+接口说明
+~~~~~~~~~~~~~~
+
+* API接口请求地址：``/users/get_followed_status``
+* API接口请求方法：``GET``
+* API接口用户授权：``token``
+
+请求参数
+~~~~~~~~~~~~~~~
+
+===============  ========  =========  ========  ====================================
+名称              类型      是否必须    默认值     描述说明
+===============  ========  =========  ========  ====================================
+uid              String     必须                 被关注用户ID
+===============  ========  =========  ========  ====================================
+
+返回示例
+~~~~~~~~~~~~~~~~
+
+JSON数据格式
+
+请求 **正确** 返回结果：
+
+.. code-block:: javascript
+
+    {
+        "data": {
+            "followed_status": 2
+        },
+        "status": {
+            "code": 200,
+            "message": "Ok all right."
+        },
+        "success": true
+    }
+
+请求 ``失败`` 返回结果：
+
+.. code-block:: javascript
+
+    {
+        "status": {
+            "code": 400,
+            "message": "用户不存在"
+        },
+        "success": false
+    }
+
 更新用户信息
 -------------
 
@@ -235,7 +843,7 @@ gender           Integer    可选          0      性别
 area_id          Integer    可选                 区域ID
 province_id      Integer    可选                 省ID
 city_id          Integer    可选                 市ID
-email            String     可选                 邮箱
+mail             String     可选                 邮箱
 date             String     可选                 出生日期
 ===============  ========  =========  ========  ====================================
 
@@ -1248,19 +1856,21 @@ JSON数据格式:
 请求参数
 ~~~~~~~~~~~~~~~
 
-===============  ========  =========  ========  ====================================
-名称              类型      是否必须    默认值     描述说明
-===============  ========  =========  ========  ====================================
-country_id        Integer   必须                  国家ID
-province_id       Integer   必须                  省ID
-city_id           Integer   可选                  市ID
-area_id           Integer   可选                  区域ID
-street_address    String    必须                  详细地址
-areacode          String    可选          +86     区号
-mobile            String    必须                  手机号
-phone             String    可选          0       座机号
-email             String    必须                  邮箱
-===============  ========  =========  ========  ====================================
+=====================  ==========  =========  ==========  =============================
+名称                    类型        是否必须     默认值       描述说明
+=====================  ==========  =========  ==========  =============================
+country_id              Integer      必须                  国家ID
+province_id             Integer      必须                  省ID
+city_id                 Integer      可选                  市ID
+area_id                 Integer      可选                  区域ID
+street_address          String       必须                  详细地址
+areacode                String       可选          +86     区号
+mobile                  String       必须                  手机号
+phone                   String       可选          0       座机号
+mail                    String       必须                  邮箱
+verify_code             String       可选                  手机验证码
+email_verify_code       String       可选                  邮箱验证码
+=====================  ==========  =========  ==========  =============================
 
 请求示例
 ~~~~~~~~~~~~~~~~
@@ -1269,7 +1879,7 @@ JSON数据格式:
 
 .. code-block:: javascript
 
-    {"country_id":1,"province_id":1,"city_id":1,"street_address":"天安门","mobile":"13645647894","email":"4568794@qq.com"}
+    {"country_id":1,"province_id":1,"city_id":1,"street_address":"天安门","mobile":"13645647894","mail":"4568794@qq.com"}
 
 返回示例
 ~~~~~~~~~~~~~~~~
@@ -1554,4 +2164,3 @@ JSON数据格式:
 请求 ``失败`` 返回结果：
 
 .. code-block:: javascript
-

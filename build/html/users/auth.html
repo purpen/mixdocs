@@ -451,32 +451,19 @@
 <p>正确结果格式:</p>
 <div class="highlight-default"><div class="highlight"><pre><span></span><span class="p">{</span>
     <span class="s2">&quot;data&quot;</span><span class="p">:</span> <span class="p">{</span>
-        <span class="s2">&quot;created_at&quot;</span><span class="p">:</span> <span class="mi">1532098157</span><span class="p">,</span>
+        <span class="s2">&quot;created_at&quot;</span><span class="p">:</span> <span class="mi">1533179299</span><span class="p">,</span>
         <span class="s2">&quot;expiration&quot;</span><span class="p">:</span> <span class="mi">2592000</span><span class="p">,</span>
-        <span class="s2">&quot;is_first_login&quot;</span><span class="p">:</span> <span class="n">false</span><span class="p">,</span>  <span class="o">//</span> <span class="n">是否为第一次登陆</span> <span class="p">,</span><span class="n">是则需要跳转到完善个人资料页面</span><span class="p">,</span> <span class="n">不是则进入首页</span>
-        <span class="s2">&quot;token&quot;</span><span class="p">:</span> <span class="s2">&quot;eyJhbGciOiJIUzI1NiIsImlhdCI6MTUzMjA5ODE1NywiZXhwIjoxNTM0NjkwMTU3fQ.eyJpZCI6MX0.mBUXUc4VUUFS-yVEOj8E1mV12LLu9ObF_onpwyjr4CQ&quot;</span>
+        <span class="s2">&quot;is_distributor&quot;</span><span class="p">:</span> <span class="n">true</span><span class="p">,</span> <span class="o">//</span> <span class="n">是不是分销</span>
+        <span class="s2">&quot;is_first_login&quot;</span><span class="p">:</span> <span class="n">false</span><span class="p">,</span>
+        <span class="s2">&quot;is_supplier&quot;</span><span class="p">:</span> <span class="n">false</span><span class="p">,</span> <span class="o">//</span> <span class="n">是不是商家</span>
+        <span class="s2">&quot;store_rid&quot;</span><span class="p">:</span> <span class="s2">&quot;97958360&quot;</span><span class="p">,</span>  <span class="o">//</span> <span class="n">店铺id</span>
+        <span class="s2">&quot;token&quot;</span><span class="p">:</span> <span class="s2">&quot;eyJhbGciOiJIUzI1NiIsImlhdCI6MTUzMzE3OTI5OSwiZXhwIjoxNTM1NzcxMjk5fQ.eyJpZCI6Mn0.oVhyK3aLIRU9WpqF3wfHYm-fMIVGwYZBUyqs2C3GEns&quot;</span>
     <span class="p">},</span>
     <span class="s2">&quot;status&quot;</span><span class="p">:</span> <span class="p">{</span>
         <span class="s2">&quot;code&quot;</span><span class="p">:</span> <span class="mi">200</span><span class="p">,</span>
         <span class="s2">&quot;message&quot;</span><span class="p">:</span> <span class="s2">&quot;Ok all right.&quot;</span>
     <span class="p">},</span>
     <span class="s2">&quot;success&quot;</span><span class="p">:</span> <span class="n">true</span>
-<span class="p">}</span>
-
-<span class="p">{</span>
-<span class="s2">&quot;data&quot;</span><span class="p">:</span> <span class="p">{</span>
-    <span class="s2">&quot;created_at&quot;</span><span class="p">:</span> <span class="mi">1532416777</span><span class="p">,</span>
-    <span class="s2">&quot;expiration&quot;</span><span class="p">:</span> <span class="mi">2592000</span><span class="p">,</span>
-    <span class="s2">&quot;is_distributor&quot;</span><span class="p">:</span> <span class="n">false</span><span class="p">,</span>  <span class="o">//</span> <span class="n">是否是小b商家</span><span class="p">(</span><span class="n">分销商</span><span class="p">)</span>
-    <span class="s2">&quot;is_first_login&quot;</span><span class="p">:</span> <span class="n">false</span><span class="p">,</span>  <span class="o">//</span> <span class="n">是否为第一次登陆</span> <span class="p">,</span><span class="n">是则需要跳转到完善个人资料页面</span><span class="p">,</span> <span class="n">不是则进入首页</span>
-    <span class="s2">&quot;is_supplier&quot;</span><span class="p">:</span> <span class="n">false</span><span class="p">,</span>  <span class="o">//</span> <span class="n">是否是商家</span>
-    <span class="s2">&quot;token&quot;</span><span class="p">:</span> <span class="s2">&quot;eyJhbGciOiJIUzI1NiIsImlhdCI6MTUzMjQxNjc3NywiZXhwIjoxNTM1MDA4Nzc3fQ.eyJpZCI6MX0.8hX-07txybkYNPwDt4ADl8-Sed_fjqmmxppEtuN2-Ys&quot;</span>
-<span class="p">},</span>
-<span class="s2">&quot;status&quot;</span><span class="p">:</span> <span class="p">{</span>
-    <span class="s2">&quot;code&quot;</span><span class="p">:</span> <span class="mi">200</span><span class="p">,</span>
-    <span class="s2">&quot;message&quot;</span><span class="p">:</span> <span class="s2">&quot;Ok all right.&quot;</span>
-<span class="p">},</span>
-<span class="s2">&quot;success&quot;</span><span class="p">:</span> <span class="n">true</span>
 <span class="p">}</span>
 </pre></div>
 </div>
@@ -947,11 +934,11 @@
 <h3>请求参数<a class="headerlink" href="#id30" title="永久链接至标题">¶</a></h3>
 <table border="1" class="docutils">
 <colgroup>
-<col width="18%" />
+<col width="23%" />
+<col width="10%" />
 <col width="11%" />
-<col width="12%" />
-<col width="11%" />
-<col width="49%" />
+<col width="10%" />
+<col width="46%" />
 </colgroup>
 <thead valign="bottom">
 <tr class="row-odd"><th class="head">名称</th>
@@ -962,17 +949,23 @@
 </tr>
 </thead>
 <tbody valign="top">
-<tr class="row-even"><td>password</td>
-<td>String</td>
-<td>必须</td>
-<td>&#160;</td>
-<td>手机验证码</td>
-</tr>
-<tr class="row-odd"><td>email</td>
+<tr class="row-even"><td>email</td>
 <td>String</td>
 <td>必须</td>
 <td>&#160;</td>
 <td>手机号</td>
+</tr>
+<tr class="row-odd"><td>password</td>
+<td>String</td>
+<td>必须</td>
+<td>&#160;</td>
+<td>密码</td>
+</tr>
+<tr class="row-even"><td>affirm_password</td>
+<td>String</td>
+<td>必须</td>
+<td>&#160;</td>
+<td>确认密码</td>
 </tr>
 </tbody>
 </table>
@@ -1225,14 +1218,17 @@
 <p>请求 <strong>正确</strong> 返回结果：</p>
 <div class="highlight-javascript"><div class="highlight"><pre><span></span><span class="p">{</span>
     <span class="s2">&quot;data&quot;</span><span class="o">:</span> <span class="p">{</span>
-        <span class="s2">&quot;avatar&quot;</span><span class="o">:</span> <span class="s2">&quot;http://kg.erp.taihuoniao.com/static/img/default-logo-180x180.png&quot;</span><span class="p">,</span>
-        <span class="s2">&quot;created_at&quot;</span><span class="o">:</span> <span class="mi">1532585091</span><span class="p">,</span>
+        <span class="s2">&quot;avatar&quot;</span><span class="o">:</span> <span class="s2">&quot;http://0.0.0.0:9000/_uploads/photos/static/img/default2-logo-180x180.png&quot;</span><span class="p">,</span>  <span class="c1">// 头像</span>
+        <span class="s2">&quot;created_at&quot;</span><span class="o">:</span> <span class="mi">1533178967</span><span class="p">,</span>
         <span class="s2">&quot;expiration&quot;</span><span class="o">:</span> <span class="mi">2592000</span><span class="p">,</span>
-        <span class="s2">&quot;is_first_login&quot;</span><span class="o">:</span> <span class="kc">true</span><span class="p">,</span>  <span class="c1">// 是否为第一次登陆, 是则需要完善个人资料</span>
-        <span class="s2">&quot;mobile&quot;</span><span class="o">:</span> <span class="s2">&quot;15666666667&quot;</span><span class="p">,</span>
-        <span class="s2">&quot;token&quot;</span><span class="o">:</span> <span class="s2">&quot;eyJhbGciOiJIUzI1NiIsImlhdCI6MTUzMjU4NTA5MSwiZXhwIjoxNTM1MTc3MDkxfQ.eyJpZCI6MjB9.Jcfl0_x2xxNrfwPQ9PYVpimRh0j8ZZUZ_HRLlG9WgWc&quot;</span><span class="p">,</span>
-        <span class="s2">&quot;uid&quot;</span><span class="o">:</span> <span class="s2">&quot;18402396751&quot;</span><span class="p">,</span>
-        <span class="s2">&quot;username&quot;</span><span class="o">:</span> <span class="s2">&quot;15666666667&quot;</span>
+        <span class="s2">&quot;is_distributor&quot;</span><span class="o">:</span> <span class="kc">false</span><span class="p">,</span>  <span class="c1">// 是不是小b</span>
+        <span class="s2">&quot;is_first_login&quot;</span><span class="o">:</span> <span class="kc">false</span><span class="p">,</span>
+        <span class="s2">&quot;is_supplier&quot;</span><span class="o">:</span> <span class="kc">false</span><span class="p">,</span>  <span class="c1">// 是不是商家</span>
+        <span class="s2">&quot;mobile&quot;</span><span class="o">:</span> <span class="s2">&quot;+86-13645647894&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;store_rid&quot;</span><span class="o">:</span> <span class="s2">&quot;&quot;</span><span class="p">,</span>  <span class="c1">// 店铺id</span>
+        <span class="s2">&quot;token&quot;</span><span class="o">:</span> <span class="s2">&quot;eyJhbGciOiJIUzI1NiIsImlhdCI6MTUzMzE3ODk2NywiZXhwIjoxNTM1NzcwOTY3fQ.eyJpZCI6Mn0.YGTBoGb8OZS_S98OOwviDA9fwZC8Brni8mIAiGFzRq4&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;uid&quot;</span><span class="o">:</span> <span class="s2">&quot;17048395612&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;username&quot;</span><span class="o">:</span> <span class="s2">&quot;wdd&quot;</span>  <span class="c1">// 用户名</span>
     <span class="p">},</span>
     <span class="s2">&quot;status&quot;</span><span class="o">:</span> <span class="p">{</span>
         <span class="s2">&quot;code&quot;</span><span class="o">:</span> <span class="mi">200</span><span class="p">,</span>
@@ -1378,13 +1374,13 @@
 <td>String</td>
 <td>可选</td>
 <td>&#160;</td>
-<td>生日</td>
+<td>生日;格式2000-02-02</td>
 </tr>
 <tr class="row-odd"><td>gender</td>
 <td>Integer</td>
 <td>可选</td>
 <td>0</td>
-<td>性别</td>
+<td>性别;0女1男</td>
 </tr>
 </tbody>
 </table>

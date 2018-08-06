@@ -27,10 +27,11 @@ JSON数据格式:
         "data": {
             "comments": [
                 {
-                    "comment_query": 2,
-                    "score": 4,
-                    "sku_rid": 2
-                }
+                    "comment_query": 2,  // 评价个数
+                    "product_name": "汽车", // 商品名
+                    "score": 4, // 平均分
+                    "sku_rid": "2"  // sku_rid
+                },
             ],
             "count": 2,
             "next": "http://0.0.0.0:9000/api/v1.0/orders/comment/manage?page=2",
