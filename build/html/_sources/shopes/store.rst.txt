@@ -1515,7 +1515,6 @@ JSON数据格式
 
 * API接口请求地址：``/store/life_store``
 * API接口请求方法：``GET``
-* API接口用户授权：``token``
 
 请求参数
 ~~~~~~~~~~~~~~~
@@ -1539,6 +1538,50 @@ JSON数据格式
         "data": {
             "description": "大雨还在下,你的心里怕不怕",
             "name": "雨一直下"
+        },
+        "status": {
+            "code": 200,
+            "message": "Ok all right."
+        },
+        "success": true
+    }
+
+请求 ``失败`` 返回结果：
+
+.. code-block:: javascript
+
+    {
+        "status": {
+            "code": 404,
+            "message": "Not Found"
+        },
+        "success": false
+    }
+
+
+获取小b商家头像
+---------------------
+
+
+接口说明
+~~~~~~~~~~~~~~
+
+* API接口请求地址：``/store/small_b_avatar``
+* API接口请求方法：``GET``
+
+
+返回示例
+~~~~~~~~~~~~~~~~
+
+JSON数据格式
+
+请求 **正确** 返回结果：
+
+.. code-block:: javascript
+
+    {
+        "data": {
+            "avatar": "http://0.0.0.0:9000/_uploads/photos/static/img/default2-logo-180x180.png"  // 头像
         },
         "status": {
             "code": 200,

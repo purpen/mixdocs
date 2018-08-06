@@ -36,7 +36,7 @@ JSON数据格式
         "data": {
             "created_at": 1533179299,
             "expiration": 2592000,
-            "is_distributor": true, // 是不是分销
+            "is_small_b": true, // 是不是小b
             "is_first_login": false,
             "is_supplier": false, // 是不是商家
             "store_rid": "97958360",  // 店铺id
@@ -586,7 +586,7 @@ JSON数据格式:
             "avatar": "http://0.0.0.0:9000/_uploads/photos/static/img/default2-logo-180x180.png",  // 头像
             "created_at": 1533178967,
             "expiration": 2592000,
-            "is_distributor": false,  // 是不是小b
+            "is_small_b": false,  // 是不是小b
             "is_first_login": false,
             "is_supplier": false,  // 是不是商家
             "mobile": "+86-13645647894",

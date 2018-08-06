@@ -328,6 +328,11 @@
 <li><a class="reference internal" href="#id94">返回示例</a></li>
 </ul>
 </li>
+<li><a class="reference internal" href="#id95">获取小b商家头像</a><ul>
+<li><a class="reference internal" href="#id96">接口说明</a></li>
+<li><a class="reference internal" href="#id97">返回示例</a></li>
+</ul>
+</li>
 </ul>
 </li>
 </ul>
@@ -502,6 +507,11 @@
 <li><a class="reference internal" href="#id92">接口说明</a></li>
 <li><a class="reference internal" href="#id93">请求参数</a></li>
 <li><a class="reference internal" href="#id94">返回示例</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#id95">获取小b商家头像</a><ul>
+<li><a class="reference internal" href="#id96">接口说明</a></li>
+<li><a class="reference internal" href="#id97">返回示例</a></li>
 </ul>
 </li>
 </ul>
@@ -2431,7 +2441,6 @@
 <ul class="simple">
 <li>API接口请求地址：<code class="docutils literal"><span class="pre">/store/life_store</span></code></li>
 <li>API接口请求方法：<code class="docutils literal"><span class="pre">GET</span></code></li>
-<li>API接口用户授权：<code class="docutils literal"><span class="pre">token</span></code></li>
 </ul>
 </div>
 <div class="section" id="id93">
@@ -2470,6 +2479,43 @@
     <span class="s2">&quot;data&quot;</span><span class="o">:</span> <span class="p">{</span>
         <span class="s2">&quot;description&quot;</span><span class="o">:</span> <span class="s2">&quot;大雨还在下,你的心里怕不怕&quot;</span><span class="p">,</span>
         <span class="s2">&quot;name&quot;</span><span class="o">:</span> <span class="s2">&quot;雨一直下&quot;</span>
+    <span class="p">},</span>
+    <span class="s2">&quot;status&quot;</span><span class="o">:</span> <span class="p">{</span>
+        <span class="s2">&quot;code&quot;</span><span class="o">:</span> <span class="mi">200</span><span class="p">,</span>
+        <span class="s2">&quot;message&quot;</span><span class="o">:</span> <span class="s2">&quot;Ok all right.&quot;</span>
+    <span class="p">},</span>
+    <span class="s2">&quot;success&quot;</span><span class="o">:</span> <span class="kc">true</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<p>请求 <code class="docutils literal"><span class="pre">失败</span></code> 返回结果：</p>
+<div class="highlight-javascript"><div class="highlight"><pre><span></span><span class="p">{</span>
+    <span class="s2">&quot;status&quot;</span><span class="o">:</span> <span class="p">{</span>
+        <span class="s2">&quot;code&quot;</span><span class="o">:</span> <span class="mi">404</span><span class="p">,</span>
+        <span class="s2">&quot;message&quot;</span><span class="o">:</span> <span class="s2">&quot;Not Found&quot;</span>
+    <span class="p">},</span>
+    <span class="s2">&quot;success&quot;</span><span class="o">:</span> <span class="kc">false</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="id95">
+<h2>获取小b商家头像<a class="headerlink" href="#id95" title="永久链接至标题">¶</a></h2>
+<div class="section" id="id96">
+<h3>接口说明<a class="headerlink" href="#id96" title="永久链接至标题">¶</a></h3>
+<ul class="simple">
+<li>API接口请求地址：<code class="docutils literal"><span class="pre">/store/small_b_avatar</span></code></li>
+<li>API接口请求方法：<code class="docutils literal"><span class="pre">GET</span></code></li>
+</ul>
+</div>
+<div class="section" id="id97">
+<h3>返回示例<a class="headerlink" href="#id97" title="永久链接至标题">¶</a></h3>
+<p>JSON数据格式</p>
+<p>请求 <strong>正确</strong> 返回结果：</p>
+<div class="highlight-javascript"><div class="highlight"><pre><span></span><span class="p">{</span>
+    <span class="s2">&quot;data&quot;</span><span class="o">:</span> <span class="p">{</span>
+        <span class="s2">&quot;avatar&quot;</span><span class="o">:</span> <span class="s2">&quot;http://0.0.0.0:9000/_uploads/photos/static/img/default2-logo-180x180.png&quot;</span>  <span class="c1">// 头像</span>
     <span class="p">},</span>
     <span class="s2">&quot;status&quot;</span><span class="o">:</span> <span class="p">{</span>
         <span class="s2">&quot;code&quot;</span><span class="o">:</span> <span class="mi">200</span><span class="p">,</span>
