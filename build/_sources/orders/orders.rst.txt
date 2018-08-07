@@ -237,6 +237,7 @@ from_client            String      可选                     来源客户端，
 affiliate_code         String      可选                     推广码
 bonus_code             String      可选                     官方红包码
 sync_pay               Integer     可选           0         是否同步返回支付参数 0、否 1、是
+share_code             {}          可选                     分享者信息 {product_rid:user_id}
 store_items            Array       必需                     店铺商品信息
 =====================  ==========  =========  ==========  =============================
 
