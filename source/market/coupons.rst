@@ -276,7 +276,9 @@ JSON数据格式:
                     "reach_amount": 0,
                     "status": 1,  // 是否领取 0、未领取 1、已领取
                     "type": 1,  // 类型
-                    "type_text": "全店通用"
+                    "type_text": "全店通用",
+                    "end_date": 1538582400,  // 结束时间
+                    "start_date": 1531670400,  // 开始时间
                 }
             ]
         },
@@ -320,7 +322,9 @@ JSON数据格式:
                     "products": [],
                     "reach_amount": 0,
                     "type": 1,  // 类型
-                    "type_text": "全店通用"
+                    "type_text": "全店通用",
+                    "end_date": 1538582400,  // 结束时间
+                    "start_date": 1531670400,  // 开始时间
                 }
             ]
         },
@@ -376,7 +380,9 @@ JSON数据格式:
                     "reach_amount": 0,
                     "status": 1,  // 是否领取 0、未领取 1、已领取
                     "type": 1,  // 类型
-                    "type_text": "全店通用"
+                    "type_text": "全店通用",
+                    "end_date": 1538582400,  // 结束时间
+                    "start_date": 1531670400,  // 开始时间
                 }
             ]
         },
