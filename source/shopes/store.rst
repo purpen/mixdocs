@@ -489,6 +489,7 @@ JSON数据格式
 名称                 类型      是否必须    默认值     描述说明
 ==================  ========  =========  ========  ====================================
 name                 String    必须                 真实姓名
+profession           String    必须                 职业
 areacode             String    可选        +86      区号
 mobile               String    必须                 手机号
 verify_code          String    必须                 验证码
