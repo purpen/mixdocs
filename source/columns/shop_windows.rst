@@ -100,7 +100,9 @@ JSON数据格式:
                         }
                     ],
                     "rid": "橱窗编号",
-                    "title": "橱窗标题"
+                    "title": "橱窗标题",
+                    "user_avatar": "http://kg.erp.taihuoniao.com/static/img/default-logo.png",
+                    "user_name": "用户名"
                 }
             ]
         },
@@ -190,7 +192,9 @@ JSON数据格式:
                 }
             ],
             "rid": 1,
-            "title": "橱窗标题"
+            "title": "橱窗标题",
+            "user_avatar": "http://kg.erp.taihuoniao.com/static/img/default-logo.png",
+            "user_name": "用户名"
         },
         "status": {
             "code": 200,
@@ -257,7 +261,9 @@ JSON数据格式:
                 }
             ],
             "rid": 1,
-            "title": "橱窗标题"
+            "title": "橱窗标题",
+            "user_avatar": "http://kg.erp.taihuoniao.com/static/img/default-logo.png",
+            "user_name": "用户名"
         },
         "status": {
             "code": 200,
@@ -325,7 +331,9 @@ JSON数据格式:
                 }
             ],
             "rid": 1,
-            "title": "新橱窗标题"
+            "title": "新橱窗标题",
+            "user_avatar": "http://kg.erp.taihuoniao.com/static/img/default-logo.png",
+            "user_name": "用户名"
         },
         "status": {
             "code": 200,
