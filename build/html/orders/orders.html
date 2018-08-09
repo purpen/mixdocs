@@ -143,6 +143,7 @@
 <li class="toctree-l1"><a class="reference internal" href="../columns/index.html">栏目API模块</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="../columns/column_products.html">栏目商品模块</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../columns/life_records.html">生活志模块</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../columns/shop_windows.html">橱窗模块</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="../common.html">公用接口模块</a><ul>
@@ -1041,7 +1042,13 @@
 <td>0</td>
 <td>是否同步返回支付参数 0、否 1、是</td>
 </tr>
-<tr class="row-odd"><td>store_items</td>
+<tr class="row-odd"><td>share_code</td>
+<td>{}</td>
+<td>可选</td>
+<td>&#160;</td>
+<td>分享者信息 {product_rid:user_id}</td>
+</tr>
+<tr class="row-even"><td>store_items</td>
 <td>Array</td>
 <td>必需</td>
 <td>&#160;</td>
@@ -2065,6 +2072,12 @@
 <td>必需</td>
 <td>&#160;</td>
 <td>订单号</td>
+</tr>
+<tr class="row-odd"><td>sku_dict</td>
+<td>{}</td>
+<td>必需</td>
+<td>&#160;</td>
+<td>{商品sku_rid: 运单编号}</td>
 </tr>
 </tbody>
 </table>

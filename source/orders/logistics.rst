@@ -1002,6 +1002,7 @@ JSON数据格式:
 ===========  ========  =========  ========  ====================================
 page         Number    可选         1         当前页码
 per_page     Number    可选         10        每页数量
+rid          String    可选                   模板rid
 ===========  ========  =========  ========  ====================================
 
 
@@ -1084,14 +1085,100 @@ JSON数据格式:
 
 
 
-查询运费模板详情
-------------------
-某商家查询运费模板详情
+用户查询运费模板详情
+--------------------
+用户查询运费模板详情
 
 接口说明
 ~~~~~~~~~~~~~~
 
 * API接口请求地址：``/logistics/freight_template/<string:rid>``
+* API接口请求方法：``GET``
+
+请求参数
+~~~~~~~~~~~~~~~
+
+=====================  ===========  ==========  ===========  ==============================
+名称                    类型          是否必须      默认值        描述说明
+=====================  ===========  ==========  ===========  ==============================
+rid                    String        必需                      模板rid
+product_rid            String        必需                      商品rid
+=====================  ===========  ==========  ===========  ==============================
+
+返回示例
+~~~~~~~~~~~~~~~~
+
+JSON数据格式:
+
+请求 **正确** 返回结果：
+
+.. code-block:: javascript
+
+    {
+        "data": {
+            "name": "运费模板3",  // 运费模板Id
+            "pricing_method": 1,  // 计费方式
+            "rid": "Ft726918503",  // 模板rid
+            "update_at": 1528707342, //最后修改时间
+            "items": [
+                {
+                    "continuous_amount": 20,  // 续费
+                    "continuous_item": 1,  // 续件
+                    "continuous_weight": 0,  // 续重
+                    "express_code": "YTO",  // 物流公司code
+                    "express_id": 4,  // 物流公司id
+                    "express_name": "圆通",  // 物流公司名
+                    "first_amount": 10,  // 首费
+                    "first_item": 1,  // 首件
+                    "first_weight": 0,  // 首重
+                    "is_default": true,  // 是否默认
+                    "max_days": 5,  // 最长天数
+                    "min_days": 3,  // 最小天数
+                    "place_items": [
+                        {
+                            "continuous_amount": 20,
+                            "continuous_item": 1,
+                            "continuous_weight": 0,
+                            "first_amount": 10,
+                            "first_item": 1,
+                            "first_weight": 0,
+                            "is_default": false,
+                            "places": [
+                                {
+                                    "area_scope": 1,  // 区域范围
+                                    "place_name": "北京",
+                                    "place_oid": 1
+                                },
+                                {
+                                    "area_scope": 1,  // 区域范围
+                                    "place_name": "天津",
+                                    "place_oid": 2
+                                }
+                            ],
+                            "rid": "Fi153042768"  // item_rid
+                        },
+                    ],
+                    "rid": "Fi618937502"  // item_rid
+                },
+            ],
+
+        },
+        "status": {
+            "code": 200,
+            "message": "Ok all right."
+        },
+        "success": true
+    }
+
+
+商家查询运费模板详情
+-----------------------
+某商家查询运费模板详情
+
+接口说明
+~~~~~~~~~~~~~~
+
+* API接口请求地址：``/logistics/master_freight_template/<string:rid>``
 * API接口请求方法：``GET``
 * API接口用户授权：``token``
 

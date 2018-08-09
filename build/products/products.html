@@ -143,6 +143,7 @@
 <li class="toctree-l1"><a class="reference internal" href="../columns/index.html">栏目API模块</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="../columns/column_products.html">栏目商品模块</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../columns/life_records.html">生活志模块</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../columns/shop_windows.html">橱窗模块</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="../common.html">公用接口模块</a><ul>
@@ -359,7 +360,8 @@
 </li>
 <li><a class="reference internal" href="#id116">商家商品数</a><ul>
 <li><a class="reference internal" href="#id117">接口说明</a></li>
-<li><a class="reference internal" href="#id118">返回示例</a></li>
+<li><a class="reference internal" href="#id118">请求参数</a></li>
+<li><a class="reference internal" href="#id119">返回示例</a></li>
 </ul>
 </li>
 </ul>
@@ -569,7 +571,8 @@
 </li>
 <li><a class="reference internal" href="#id116">商家商品数</a><ul>
 <li><a class="reference internal" href="#id117">接口说明</a></li>
-<li><a class="reference internal" href="#id118">返回示例</a></li>
+<li><a class="reference internal" href="#id118">请求参数</a></li>
+<li><a class="reference internal" href="#id119">返回示例</a></li>
 </ul>
 </li>
 </ul>
@@ -4219,7 +4222,7 @@
 </div>
 <div class="section" id="id116">
 <h2>商家商品数<a class="headerlink" href="#id116" title="永久链接至标题">¶</a></h2>
-<p>获取商家发布的商品个数</p>
+<p>获取商家店铺中发布的商品个数</p>
 <div class="section" id="id117">
 <h3>接口说明<a class="headerlink" href="#id117" title="永久链接至标题">¶</a></h3>
 <ul class="simple">
@@ -4228,7 +4231,35 @@
 </ul>
 </div>
 <div class="section" id="id118">
-<h3>返回示例<a class="headerlink" href="#id118" title="永久链接至标题">¶</a></h3>
+<h3>请求参数<a class="headerlink" href="#id118" title="永久链接至标题">¶</a></h3>
+<table border="1" class="docutils">
+<colgroup>
+<col width="17%" />
+<col width="10%" />
+<col width="11%" />
+<col width="10%" />
+<col width="54%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">名称</th>
+<th class="head">类型</th>
+<th class="head">是否必须</th>
+<th class="head">默认值</th>
+<th class="head">描述说明</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>type</td>
+<td>Number</td>
+<td>可选</td>
+<td>1</td>
+<td>商品类型: 0=全部商品, 1=自营商品, 2=分销商品</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="id119">
+<h3>返回示例<a class="headerlink" href="#id119" title="永久链接至标题">¶</a></h3>
 <p>JSON数据格式:</p>
 <div class="highlight-javascript"><div class="highlight"><pre><span></span><span class="p">{</span>
     <span class="s2">&quot;data&quot;</span><span class="o">:</span> <span class="p">{</span>
