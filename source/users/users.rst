@@ -172,6 +172,7 @@ JSON数据格式
 
     {
         "data": {
+            "about_me": "肚子好饿",  // 签名
             "avatar": "http://0.0.0.0:9000/_uploads/photos/static/img/default2-logo-180x180.png",  // 头像
             "followed_stores_counts": 2,  // 关注的店铺数量
             "followed_users_counts": 0,  // 关注的用户数量
@@ -186,6 +187,43 @@ JSON数据格式
         },
         "success": true
     }
+
+获取别人个人中心
+-----------------------
+
+接口说明
+~~~~~~~~~~~~~~
+
+* API接口请求地址：``/users/get_other_user_center``
+* API接口请求方法：``GET``
+
+返回示例
+~~~~~~~~~~~~~~~~
+
+JSON数据格式
+
+请求 **正确** 返回结果：
+
+.. code-block:: javascript
+
+    {
+        "data": {
+            "about_me": "肚子好饿",  // 签名
+            "avatar": "http://0.0.0.0:9000/_uploads/photos/static/img/default2-logo-180x180.png",  // 头像
+            "followed_stores_counts": 2,  // 关注的店铺数量
+            "followed_users_counts": 0,  // 关注的用户数量
+            "fans_counts": 0,  // 粉丝数量
+            "user_like_counts": 0,  // 喜欢的数量
+            "username": "张飞",  // 用户名
+            "wish_list_counts": 0  // 收藏的数量
+        },
+        "status": {
+            "code": 200,
+            "message": "Ok all right."
+        },
+        "success": true
+    }
+
 
 获取用户关注的店铺列表
 -----------------------
@@ -691,7 +729,7 @@ JSON数据格式
 
     {
         "data": {
-            "followed_status": 2
+            "followed_status": 2  //关注状态, 0:未关注; 1:已关注; 2:相互关注
         },
         "status": {
             "code": 201,
@@ -793,7 +831,7 @@ JSON数据格式
 
     {
         "data": {
-            "followed_status": 2
+            "followed_status": 1
         },
         "status": {
             "code": 200,

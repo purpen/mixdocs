@@ -1512,6 +1512,10 @@ JSON数据格式
 .. code-block:: javascript
 
     {
+        "data": {
+            "description": "富士山下",  // 描述
+            "name": "樱花"  // 生活馆名
+        },
         "status": {
             "code": 200,
             "message": "Ok all right."
