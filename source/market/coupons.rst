@@ -1729,3 +1729,51 @@ JSON数据格式:
 
 
 
+优惠券头条动态
+--------------------
+优惠券头条动态
+
+接口说明
+~~~~~~~~~~~~~~
+
+* API接口请求地址：``/market/coupon_lines``
+* API接口请求方法：``GET``
+
+
+返回示例
+~~~~~~~~~~~~~~~~
+
+JSON数据格式:
+
+.. code-block:: javascript
+
+    {
+        "data": {
+            "coupon_lines": [
+                {
+                    "activity_id": 2,  // 1、猜图赢现金 2、分享红包 3、官方 4、店铺
+                    "activity_type": 2,  // 1、活动 2、游戏
+                    "amount": 2,  // 金额
+                    "coupon_line_id": 1,  // 动态id
+                    "coupon_type": 2,  // 1: 红包; 2: 官方优惠券; 3: 店铺优惠券 4: 现金
+                    "created_at": 1530781909,  // 创建时间
+                    "event": 2,  // 1: 抢; 2: 被赠送; 3: 领取;
+                    "line_text": "888小时前小黑在分享红包游戏中被赠送2元官方优惠券",  // 动态信息
+                    "quantity": 2,  // 数量
+                    "store_name": "第一家",  // 店铺名
+                    "user_name": '小黑'  // 用户名
+                }
+            ]
+        },
+        "status": {
+            "code": 200,
+            "message": "Ok all right."
+        },
+        "success": true
+    }
+
+
+
+
+
+
