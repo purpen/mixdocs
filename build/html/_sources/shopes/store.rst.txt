@@ -22,9 +22,34 @@ JSON数据格式
 
     {
         "data": {
-            "order_count": 85,  // 售出的订单数
-            "username_one": "关羽",  // 用户名
-            "username_two": "孙权"  // 用户名
+            "headlines": [  // 默认返回十条数据
+                [
+                    {  // 第一个动态
+                        "line_text": "傻逼网友24小时前开通了自己的设计馆",
+                        "time": 24,
+                        "username": "傻逼网友"
+                    },
+                    {  // 第二个动态
+                        "hour": 3,
+                        "line_text": "行号的设计馆3小时售出22单",
+                        "quantity": 22,
+                        "username": "行号"
+                    }
+                ],
+                [
+                    {
+                        "line_text": "",
+                        "time": 94400,
+                        "username": "行行重行行"
+                    },
+                    {
+                        "hour": 1,
+                        "line_text": "八戒的设计馆1小时售出77单",
+                        "quantity": 77,
+                        "username": "八戒"
+                    }
+                ]
+            ]
         },
         "status": {
             "code": 200,

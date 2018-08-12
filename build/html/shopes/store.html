@@ -563,9 +563,34 @@
 <p>JSON数据格式</p>
 <div class="highlight-javascript"><div class="highlight"><pre><span></span><span class="p">{</span>
     <span class="s2">&quot;data&quot;</span><span class="o">:</span> <span class="p">{</span>
-        <span class="s2">&quot;order_count&quot;</span><span class="o">:</span> <span class="mi">85</span><span class="p">,</span>  <span class="c1">// 售出的订单数</span>
-        <span class="s2">&quot;username_one&quot;</span><span class="o">:</span> <span class="s2">&quot;关羽&quot;</span><span class="p">,</span>  <span class="c1">// 用户名</span>
-        <span class="s2">&quot;username_two&quot;</span><span class="o">:</span> <span class="s2">&quot;孙权&quot;</span>  <span class="c1">// 用户名</span>
+        <span class="s2">&quot;headlines&quot;</span><span class="o">:</span> <span class="p">[</span>  <span class="c1">// 默认返回十条数据</span>
+            <span class="p">[</span>
+                <span class="p">{</span>  <span class="c1">// 第一个动态</span>
+                    <span class="s2">&quot;line_text&quot;</span><span class="o">:</span> <span class="s2">&quot;傻逼网友24小时前开通了自己的设计馆&quot;</span><span class="p">,</span>
+                    <span class="s2">&quot;time&quot;</span><span class="o">:</span> <span class="mi">24</span><span class="p">,</span>
+                    <span class="s2">&quot;username&quot;</span><span class="o">:</span> <span class="s2">&quot;傻逼网友&quot;</span>
+                <span class="p">},</span>
+                <span class="p">{</span>  <span class="c1">// 第二个动态</span>
+                    <span class="s2">&quot;hour&quot;</span><span class="o">:</span> <span class="mi">3</span><span class="p">,</span>
+                    <span class="s2">&quot;line_text&quot;</span><span class="o">:</span> <span class="s2">&quot;行号的设计馆3小时售出22单&quot;</span><span class="p">,</span>
+                    <span class="s2">&quot;quantity&quot;</span><span class="o">:</span> <span class="mi">22</span><span class="p">,</span>
+                    <span class="s2">&quot;username&quot;</span><span class="o">:</span> <span class="s2">&quot;行号&quot;</span>
+                <span class="p">}</span>
+            <span class="p">],</span>
+            <span class="p">[</span>
+                <span class="p">{</span>
+                    <span class="s2">&quot;line_text&quot;</span><span class="o">:</span> <span class="s2">&quot;&quot;</span><span class="p">,</span>
+                    <span class="s2">&quot;time&quot;</span><span class="o">:</span> <span class="mi">94400</span><span class="p">,</span>
+                    <span class="s2">&quot;username&quot;</span><span class="o">:</span> <span class="s2">&quot;行行重行行&quot;</span>
+                <span class="p">},</span>
+                <span class="p">{</span>
+                    <span class="s2">&quot;hour&quot;</span><span class="o">:</span> <span class="mi">1</span><span class="p">,</span>
+                    <span class="s2">&quot;line_text&quot;</span><span class="o">:</span> <span class="s2">&quot;八戒的设计馆1小时售出77单&quot;</span><span class="p">,</span>
+                    <span class="s2">&quot;quantity&quot;</span><span class="o">:</span> <span class="mi">77</span><span class="p">,</span>
+                    <span class="s2">&quot;username&quot;</span><span class="o">:</span> <span class="s2">&quot;八戒&quot;</span>
+                <span class="p">}</span>
+            <span class="p">]</span>
+        <span class="p">]</span>
     <span class="p">},</span>
     <span class="s2">&quot;status&quot;</span><span class="o">:</span> <span class="p">{</span>
         <span class="s2">&quot;code&quot;</span><span class="o">:</span> <span class="mi">200</span><span class="p">,</span>
