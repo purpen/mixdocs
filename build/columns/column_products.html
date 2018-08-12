@@ -233,6 +233,12 @@
 <li><a class="reference internal" href="#id33">返回示例</a></li>
 </ul>
 </li>
+<li><a class="reference internal" href="#id34">精选–今日推荐</a><ul>
+<li><a class="reference internal" href="#id35">接口说明</a></li>
+<li><a class="reference internal" href="#id36">请求参数</a></li>
+<li><a class="reference internal" href="#id37">返回示例</a></li>
+</ul>
+</li>
 </ul>
 </li>
 </ul>
@@ -311,6 +317,12 @@
 <li><a class="reference internal" href="#id31">接口说明</a></li>
 <li><a class="reference internal" href="#id32">请求参数</a></li>
 <li><a class="reference internal" href="#id33">返回示例</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#id34">精选–今日推荐</a><ul>
+<li><a class="reference internal" href="#id35">接口说明</a></li>
+<li><a class="reference internal" href="#id36">请求参数</a></li>
+<li><a class="reference internal" href="#id37">返回示例</a></li>
 </ul>
 </li>
 </ul>
@@ -831,6 +843,122 @@
 <div class="section" id="id33">
 <h3>返回示例<a class="headerlink" href="#id33" title="永久链接至标题">¶</a></h3>
 <p>** 同上获取栏目商品 **</p>
+</div>
+</div>
+<div class="section" id="id34">
+<h2>精选–今日推荐<a class="headerlink" href="#id34" title="永久链接至标题">¶</a></h2>
+<div class="section" id="id35">
+<h3>接口说明<a class="headerlink" href="#id35" title="永久链接至标题">¶</a></h3>
+<ul class="simple">
+<li>API接口请求地址：<code class="docutils literal"><span class="pre">/column/daily_recommends</span></code></li>
+<li>API接口请求方法：<code class="docutils literal"><span class="pre">GET</span></code></li>
+</ul>
+</div>
+<div class="section" id="id36">
+<h3>请求参数<a class="headerlink" href="#id36" title="永久链接至标题">¶</a></h3>
+<table border="1" class="docutils">
+<colgroup>
+<col width="21%" />
+<col width="14%" />
+<col width="12%" />
+<col width="14%" />
+<col width="40%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">名称</th>
+<th class="head">类型</th>
+<th class="head">是否必须</th>
+<th class="head">默认值</th>
+<th class="head">描述说明</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>page</td>
+<td>Number</td>
+<td>可选</td>
+<td>1</td>
+<td>当前页码</td>
+</tr>
+<tr class="row-odd"><td>per_page</td>
+<td>Number</td>
+<td>可选</td>
+<td>10</td>
+<td>每页数量</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="id37">
+<h3>返回示例<a class="headerlink" href="#id37" title="永久链接至标题">¶</a></h3>
+<p>JSON数据格式:</p>
+<div class="highlight-javascript"><div class="highlight"><pre><span></span><span class="p">{</span>
+    <span class="s2">&quot;data&quot;</span><span class="o">:</span> <span class="p">{</span>
+        <span class="s2">&quot;count&quot;</span><span class="o">:</span> <span class="mi">2</span><span class="p">,</span>
+        <span class="s2">&quot;daily_recommends&quot;</span><span class="o">:</span> <span class="p">[</span>
+            <span class="p">{</span>
+                <span class="s2">&quot;cover&quot;</span><span class="o">:</span> <span class="s2">&quot;封面图&quot;</span><span class="p">,</span>
+                <span class="s2">&quot;cover_id&quot;</span><span class="o">:</span> <span class="mi">2</span><span class="p">,</span>
+                <span class="s2">&quot;id&quot;</span><span class="o">:</span> <span class="mi">2</span><span class="p">,</span>
+                <span class="s2">&quot;mask_color&quot;</span><span class="o">:</span> <span class="s2">&quot;#ffffff&quot;</span><span class="p">,</span>
+                <span class="s2">&quot;name&quot;</span><span class="o">:</span> <span class="s2">&quot;主题002&quot;</span><span class="p">,</span>
+                <span class="s2">&quot;products&quot;</span><span class="o">:</span> <span class="p">[</span>
+                    <span class="p">{</span>
+                        <span class="s2">&quot;主题商品基本信息&quot;</span>
+                    <span class="p">},</span>
+                    <span class="p">{</span>
+                        <span class="s2">&quot;主题商品基本信息&quot;</span>
+                    <span class="p">}</span>
+                <span class="p">],</span>
+                <span class="s2">&quot;recommend_description&quot;</span><span class="o">:</span> <span class="s2">&quot;推荐描述内容&quot;</span><span class="p">,</span>
+                <span class="s2">&quot;recommend_id&quot;</span><span class="o">:</span> <span class="s2">&quot;今日推荐编号&quot;</span><span class="p">,</span>
+                <span class="s2">&quot;recommend_label&quot;</span><span class="o">:</span> <span class="s2">&quot;推荐标签&quot;</span><span class="p">,</span>
+                <span class="s2">&quot;recommend_title&quot;</span><span class="o">:</span> <span class="s2">&quot;推荐标题&quot;</span><span class="p">,</span>
+                <span class="s2">&quot;rids&quot;</span><span class="o">:</span> <span class="p">[</span>
+                    <span class="s2">&quot;8265498731&quot;</span><span class="p">,</span>
+                    <span class="s2">&quot;8698317405&quot;</span>
+                <span class="p">],</span>
+                <span class="s2">&quot;sort_order&quot;</span><span class="o">:</span> <span class="mi">12</span><span class="p">,</span>
+                <span class="s2">&quot;sub_name&quot;</span><span class="o">:</span> <span class="s2">&quot;&quot;</span><span class="p">,</span>
+                <span class="s2">&quot;target_type&quot;</span><span class="o">:</span> <span class="s2">&quot;推荐类型: 1=生活志文章, 2=种草清单 3=主题&quot;</span>
+            <span class="p">},</span>
+            <span class="p">{</span>
+                <span class="s2">&quot;recommend_description&quot;</span><span class="o">:</span> <span class="s2">&quot;推荐描述&quot;</span><span class="p">,</span>
+                <span class="s2">&quot;recommend_id&quot;</span><span class="o">:</span> <span class="mi">3</span><span class="p">,</span>
+                <span class="s2">&quot;recommend_label&quot;</span><span class="o">:</span> <span class="s2">&quot;推荐标签&quot;</span><span class="p">,</span>
+                <span class="s2">&quot;recommend_title&quot;</span><span class="o">:</span> <span class="s2">&quot;推荐标题&quot;</span><span class="p">,</span>
+                <span class="s2">&quot;target_type&quot;</span><span class="o">:</span> <span class="s2">&quot;推荐类型: 1=生活志文章, 2=种草清单 3=主题&quot;</span><span class="p">,</span>
+                <span class="s2">&quot;audit_status&quot;</span><span class="o">:</span> <span class="mi">3</span><span class="p">,</span>
+                <span class="s2">&quot;content&quot;</span><span class="o">:</span> <span class="s2">&quot;正文&quot;</span><span class="p">,</span>
+                <span class="s2">&quot;cover&quot;</span><span class="o">:</span> <span class="s2">&quot;http://127.0.0.1:9000/_uploads/photos/180707/912fc59a8199d04.jpg&quot;</span><span class="p">,</span>
+                <span class="s2">&quot;cover_id&quot;</span><span class="o">:</span> <span class="mi">4</span><span class="p">,</span>
+                <span class="s2">&quot;created_at&quot;</span><span class="o">:</span> <span class="mi">1533384818</span><span class="p">,</span>
+                <span class="s2">&quot;deal_content&quot;</span><span class="o">:</span> <span class="p">[</span>
+                    <span class="s2">&quot;正文处理之后内容&quot;</span>
+                <span class="p">],</span>
+                <span class="s2">&quot;description&quot;</span><span class="o">:</span> <span class="s2">&quot;摘要...&quot;</span><span class="p">,</span>
+                <span class="s2">&quot;published_at&quot;</span><span class="o">:</span> <span class="mi">1533384903</span><span class="p">,</span>
+                <span class="s2">&quot;refuse_reason&quot;</span><span class="o">:</span> <span class="s2">&quot;拒绝原因&quot;</span><span class="p">,</span>
+                <span class="s2">&quot;rid&quot;</span><span class="o">:</span> <span class="mi">11</span><span class="p">,</span>
+                <span class="s2">&quot;status&quot;</span><span class="o">:</span> <span class="mi">1</span><span class="p">,</span>
+                <span class="s2">&quot;store_name&quot;</span><span class="o">:</span> <span class="s2">&quot;店铺名&quot;</span><span class="p">,</span>
+                <span class="s2">&quot;title&quot;</span><span class="o">:</span> <span class="s2">&quot;标题&quot;</span><span class="p">,</span>
+                <span class="s2">&quot;type&quot;</span><span class="o">:</span> <span class="mi">2</span><span class="p">,</span>
+                <span class="s2">&quot;user_avator&quot;</span><span class="o">:</span> <span class="s2">&quot;用户头像&quot;</span><span class="p">,</span>
+                <span class="s2">&quot;user_name&quot;</span><span class="o">:</span> <span class="s2">&quot;用户名&quot;</span>
+            <span class="p">}</span>
+        <span class="p">],</span>
+        <span class="s2">&quot;next&quot;</span><span class="o">:</span> <span class="kc">false</span><span class="p">,</span>
+        <span class="s2">&quot;prev&quot;</span><span class="o">:</span> <span class="kc">false</span><span class="p">,</span>
+        <span class="s2">&quot;title&quot;</span><span class="o">:</span> <span class="s2">&quot;今日推荐&quot;</span>
+    <span class="p">},</span>
+    <span class="s2">&quot;status&quot;</span><span class="o">:</span> <span class="p">{</span>
+        <span class="s2">&quot;code&quot;</span><span class="o">:</span> <span class="mi">200</span><span class="p">,</span>
+        <span class="s2">&quot;message&quot;</span><span class="o">:</span> <span class="s2">&quot;Ok all right.&quot;</span>
+    <span class="p">},</span>
+    <span class="s2">&quot;success&quot;</span><span class="o">:</span> <span class="kc">true</span>
+<span class="p">}</span>
+</pre></div>
+</div>
 </div>
 </div>
 </div>

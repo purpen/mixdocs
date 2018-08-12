@@ -23,6 +23,7 @@
                 "buyer_zipcode": "255300",  // 买家邮编
                 "coupon_amount": 0,  // 优惠券金额
                 "created_at": 1530608616,  // 创建时间
+                "current_time": 1533813725,  // 当前时间
                 "customer_order_id": null,  // 分销商订单编号
                 "discount_amount": 0,  // 店铺优惠金额 = 首单优惠 + 满减 + 优惠券
                 "first_discount": 0,  // 首单优惠

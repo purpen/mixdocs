@@ -52,7 +52,9 @@ JSON数据格式:
             "published_at": "发布时间",
             "status": "1: 草稿箱  2: 发布  3: 禁用",
             "title": "她手绘出来的童话馆的小公主居然偷偷跑出来了",
-            "type": "1: 文章  2: 种草  3: 视频"
+            "type": "1: 文章  2: 种草  3: 视频",
+            "user_avator": "用户头像",
+            "user_name": "用户名"
         },
         "status": {
             "code": 201,
@@ -143,7 +145,9 @@ JSON数据格式:
             "published_at": "发布时间",
             "status": "1: 草稿箱  2: 发布  3: 禁用",
             "title": "她手绘出来的童话馆的小公主居然偷偷跑出来了",
-            "type": "1: 文章  2: 种草  3: 视频"
+            "type": "1: 文章  2: 种草  3: 视频",
+            "user_avator": "用户头像",
+            "user_name": "用户名"
         },
         "status": {
             "code": 201,
@@ -287,7 +291,9 @@ JSON数据格式:
             "rid": 5,
             "status": 1,
             "title": "她手绘出来的童话馆的小公主居然偷偷跑出来了",
-            "type": 1
+            "type": 1,
+            "user_avator": "用户头像",
+            "user_name": "用户名"
         },
         "status": {
             "code": 201,
@@ -368,7 +374,9 @@ JSON数据格式:
             "rid": 5,
             "status": 1,
             "title": "她手绘出来的童话馆的小公主居然偷偷跑出来了",
-            "type": 2
+            "type": 2,
+            "user_avator": "用户头像",
+            "user_name": "用户名"
         },
         "status": {
             "code": 201,
@@ -490,7 +498,9 @@ JSON数据格式:
                     "rid": 1,
                     "status": 2,
                     "title": "哈是否哈哈",
-                    "type": 1
+                    "type": 1,
+                    "user_avator": "用户头像",
+                    "user_name": "用户名"
                 },
                 {
                     "audit_status": 2,
@@ -504,7 +514,9 @@ JSON数据格式:
                     "rid": 4,
                     "status": 2,
                     "title": "她手绘出来的童话馆的小公主居然偷偷跑出来了",
-                    "type": 1
+                    "type": 1,
+                    "user_avator": "用户头像",
+                    "user_name": "用户名"
                 }
             ],
             "next": false,
@@ -565,7 +577,9 @@ JSON数据格式:
                     "rid": 1,
                     "status": 2,
                     "title": "哈是否哈哈",
-                    "type": 1
+                    "type": 1,
+                    "user_avator": "用户头像",
+                    "user_name": "用户名"
                 },
                 {
                     "audit_status": 2,
@@ -579,7 +593,9 @@ JSON数据格式:
                     "rid": 4,
                     "status": 2,
                     "title": "她手绘出来的童话馆的小公主居然偷偷跑出来了",
-                    "type": 1
+                    "type": 1,
+                    "user_avator": "用户头像",
+                    "user_name": "用户名"
                 }
             ],
             "next": false,
@@ -640,7 +656,9 @@ JSON数据格式:
                     "rid": 1,
                     "status": 2,
                     "title": "标题...",
-                    "type": 1
+                    "type": 1,
+                    "user_avator": "用户头像",
+                    "user_name": "用户名"
                 },
                 {
                     "audit_status": 2,
@@ -654,7 +672,9 @@ JSON数据格式:
                     "rid": 4,
                     "status": 2,
                     "title": "她手绘出来的童话馆的小公主居然偷偷跑出来了",
-                    "type": 1
+                    "type": 1,
+                    "user_avator": "用户头像",
+                    "user_name": "用户名"
                 }
             ],
             "next": false,
@@ -715,7 +735,9 @@ JSON数据格式:
                     "rid": 1,
                     "status": 1,
                     "title": "标题...",
-                    "type": 1
+                    "type": 1,
+                    "user_avator": "用户头像",
+                    "user_name": "用户名"
                 },
                 {
                     "audit_status": 1,
@@ -729,7 +751,9 @@ JSON数据格式:
                     "rid": 4,
                     "status": 1,
                     "title": "她手绘出来的童话馆的小公主居然偷偷跑出来了",
-                    "type": 1
+                    "type": 1,
+                    "user_avator": "用户头像",
+                    "user_name": "用户名"
                 }
             ],
             "next": false,
@@ -912,7 +936,9 @@ JSON数据格式:
                     "rid": 5,
                     "status": 2,
                     "title": "她手绘出来的童话馆的小公主居然偷偷跑出来了",
-                    "type": 2
+                    "type": 2,
+                    "user_avator": "用户头像",
+                    "user_name": "用户名"
                 },
                 {
                     "audit_status": 2,
@@ -926,7 +952,9 @@ JSON数据格式:
                     "rid": 4,
                     "status": 2,
                     "title": "她手绘出来的童话馆的小公主居然偷偷跑出来了",
-                    "type": 2
+                    "type": 2,
+                    "user_avator": "用户头像",
+                    "user_name": "用户名"
                 }
             ],
             "next": false,

@@ -77,8 +77,6 @@ per_page     Number    可选         10        每页数量
 返回示例
 ~~~~~~~~~~~~~~~~
 
-
-
 JSON数据格式:
 
 .. code-block:: javascript
@@ -86,8 +84,8 @@ JSON数据格式:
     {
         "data": {
             "count": 1,
-            "next": null,
-            "prev": null,
+            "next": true,
+            "prev": false,
             "search_items": [
                 {
                     "query_word": "电源",

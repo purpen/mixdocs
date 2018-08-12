@@ -44,6 +44,14 @@ JSON数据格式:
                         "橱窗关键词二"
                     ],
                     "like_count": "橱窗喜欢数",
+                    "product_count": 5,
+                    "product_covers": [
+                        "http://127.0.0.1:9000/_uploads/photos/180718/f1a30ad8b52107c.gif",
+                        "http://127.0.0.1:9000/_uploads/photos/180718/f1a30ad8b52107c.gif",
+                        "http://127.0.0.1:9000/_uploads/photos/180718/f1a30ad8b52107c.gif",
+                        "http://127.0.0.1:9000/_uploads/photos/180707/77409c8ab9b0abf.jpg",
+                        "http://127.0.0.1:9000/_uploads/photos/180707/77409c8ab9b0abf.jpg"
+                    ],
                     "products": [
                         {
                             "category_id": 18,
@@ -174,6 +182,14 @@ JSON数据格式:
                 "人工智能"
             ],
             "like_count": 2,
+            "product_count": 5,
+            "product_covers": [
+                "http://127.0.0.1:9000/_uploads/photos/180718/f1a30ad8b52107c.gif",
+                "http://127.0.0.1:9000/_uploads/photos/180718/f1a30ad8b52107c.gif",
+                "http://127.0.0.1:9000/_uploads/photos/180718/f1a30ad8b52107c.gif",
+                "http://127.0.0.1:9000/_uploads/photos/180707/77409c8ab9b0abf.jpg",
+                "http://127.0.0.1:9000/_uploads/photos/180707/77409c8ab9b0abf.jpg"
+            ],
             "products": [
                 {
                     商品基本信息...
@@ -243,6 +259,14 @@ JSON数据格式:
                 "人工智能"
             ],
             "like_count": 2,
+            "product_count": 5,
+            "product_covers": [
+                "http://127.0.0.1:9000/_uploads/photos/180718/f1a30ad8b52107c.gif",
+                "http://127.0.0.1:9000/_uploads/photos/180718/f1a30ad8b52107c.gif",
+                "http://127.0.0.1:9000/_uploads/photos/180718/f1a30ad8b52107c.gif",
+                "http://127.0.0.1:9000/_uploads/photos/180707/77409c8ab9b0abf.jpg",
+                "http://127.0.0.1:9000/_uploads/photos/180707/77409c8ab9b0abf.jpg"
+            ],
             "products": [
                 {
                     商品基本信息...
@@ -313,6 +337,14 @@ JSON数据格式:
                 "人工智能"
             ],
             "like_count": 2,
+            "product_count": 5,
+            "product_covers": [
+                "http://127.0.0.1:9000/_uploads/photos/180718/f1a30ad8b52107c.gif",
+                "http://127.0.0.1:9000/_uploads/photos/180718/f1a30ad8b52107c.gif",
+                "http://127.0.0.1:9000/_uploads/photos/180718/f1a30ad8b52107c.gif",
+                "http://127.0.0.1:9000/_uploads/photos/180707/77409c8ab9b0abf.jpg",
+                "http://127.0.0.1:9000/_uploads/photos/180707/77409c8ab9b0abf.jpg"
+            ],
             "products": [
                 {
                     商品基本信息...
@@ -448,7 +480,7 @@ JSON数据格式:
     }
 
 
-橱窗评论
+评论橱窗
 ----------------------
 
 接口说明
@@ -527,7 +559,7 @@ JSON数据格式:
     }
 
 
-评论点赞
+对评论点赞
 ----------------------
 
 接口说明
@@ -562,7 +594,7 @@ JSON数据格式:
     }
 
 
-评论删除点赞
+删除评论点赞
 ----------------------
 
 接口说明
@@ -597,7 +629,7 @@ JSON数据格式:
     }
 
 
-橱窗评论
+获取橱窗评论
 ----------------------
 
 接口说明
@@ -679,7 +711,7 @@ JSON数据格式:
     }
 
 
-评论子评论
+获取评论的子评论
 ----------------------
 
 接口说明
@@ -737,6 +769,8 @@ JSON数据格式:
 
 橱窗可选商品列表
 ----------------------
+获取用户添加喜欢和心愿单的商品
+
 
 接口说明
 ~~~~~~~~~~~~~~
