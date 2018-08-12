@@ -301,3 +301,96 @@ per_page         Number      可选         10         每页数量
 ~~~~~~~~~~~~~~~~
 
 ** 同上获取栏目商品 **
+
+精选--今日推荐
+----------------------
+
+接口说明
+~~~~~~~~~~~~~~
+
+* API接口请求地址：``/column/daily_recommends``
+* API接口请求方法：``GET``
+
+请求参数
+~~~~~~~~~~~~~~~
+
+===============  ==========  =========  ==========  =============================
+名称              类型        是否必须     默认值       描述说明
+===============  ==========  =========  ==========  =============================
+page             Number      可选         1          当前页码
+per_page         Number      可选         10         每页数量
+===============  ==========  =========  ==========  =============================
+
+返回示例
+~~~~~~~~~~~~~~~~
+
+JSON数据格式:
+
+.. code-block:: javascript
+
+    {
+        "data": {
+            "count": 2,
+            "daily_recommends": [
+                {
+                    "cover": "封面图",
+                    "cover_id": 2,
+                    "id": 2,
+                    "mask_color": "#ffffff",
+                    "name": "主题002",
+                    "products": [
+                        {
+                            "主题商品基本信息"
+                        },
+                        {
+                            "主题商品基本信息"
+                        }
+                    ],
+                    "recommend_description": "推荐描述内容",
+                    "recommend_id": "今日推荐编号",
+                    "recommend_label": "推荐标签",
+                    "recommend_title": "推荐标题",
+                    "rids": [
+                        "8265498731",
+                        "8698317405"
+                    ],
+                    "sort_order": 12,
+                    "sub_name": "",
+                    "target_type": "推荐类型: 1=生活志文章, 2=种草清单 3=主题"
+                },
+                {
+                    "recommend_description": "推荐描述",
+                    "recommend_id": 3,
+                    "recommend_label": "推荐标签",
+                    "recommend_title": "推荐标题",
+                    "target_type": "推荐类型: 1=生活志文章, 2=种草清单 3=主题",
+                    "audit_status": 3,
+                    "content": "正文",
+                    "cover": "http://127.0.0.1:9000/_uploads/photos/180707/912fc59a8199d04.jpg",
+                    "cover_id": 4,
+                    "created_at": 1533384818,
+                    "deal_content": [
+                        "正文处理之后内容"
+                    ],
+                    "description": "摘要...",
+                    "published_at": 1533384903,
+                    "refuse_reason": "拒绝原因",
+                    "rid": 11,
+                    "status": 1,
+                    "store_name": "店铺名",
+                    "title": "标题",
+                    "type": 2,
+                    "user_avator": "用户头像",
+                    "user_name": "用户名"
+                }
+            ],
+            "next": false,
+            "prev": false,
+            "title": "今日推荐"
+        },
+        "status": {
+            "code": 200,
+            "message": "Ok all right."
+        },
+        "success": true
+    }
