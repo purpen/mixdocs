@@ -229,7 +229,7 @@ JSON数据格式:
 接口说明
 ~~~~~~~~~~~~~~
 
-* API接口请求地址：``/userlike``
+* API接口请求地址：``/other_userlike``
 * API接口请求方法：``GET``
 
 请求参数
