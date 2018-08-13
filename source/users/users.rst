@@ -146,70 +146,69 @@ JSON数据格式
 
     {
         "data": {
-            "avatar": "http://0.0.0.0:9000/_uploads/photos/FlHKgXPzqwjPC7pD5Z_SfdL0R8hE",  // 用户头像
             "count": 5,
-            "followed_status": 0,  // 关注状态, 0:未关注; 1:已关注; 2:相互关注
             "lines": [
                 {
                     "created_at": 1534094558,  // 发布时间
-                    "shop_window": {   // 橱窗信息
+                    "shop_window": {  // 橱窗信息
                         "comment_count": null,  // 评论数
-                        "covers": [  // 橱窗商品封面图
+                        "description": "去去去去去去去去去去",  // 描述
+                        "is_follow": false,  // 是否关注过
+                        "keywords": [],
+                        "like_count": null,  // 喜欢的人数
+                        "product_count": 5,  // 商品数量
+                        "product_covers": [  // 商品图片
                             "http://0.0.0.0:9000/_uploads/photos/static/img/default2-logo-180x180.png",
                             "http://0.0.0.0:9000/_uploads/photos/static/img/default2-logo-180x180.png",
                             "http://0.0.0.0:9000/_uploads/photos/static/img/default2-logo-180x180.png",
                             "http://0.0.0.0:9000/_uploads/photos/static/img/default2-logo-180x180.png",
                             "http://0.0.0.0:9000/_uploads/photos/static/img/default2-logo-180x180.png"
                         ],
-                        "description": "去去去去去去去去去去",  // 描述
-                        "like_count": null,  // 喜欢的人数
-                        "title": "啊啊啊啊啊啊啊啊啊"  // 标题
+                        "products": [  // 商品
+                            {
+                                "category_id": 0,
+                                "cover": "http://0.0.0.0:9000/_uploads/photos/static/img/default2-logo-180x180.png",
+                                "cover_id": 1,
+                                "custom_details": null,
+                                "features": null,
+                                "id_code": null,
+                                "is_custom_made": null,
+                                "is_custom_service": null,
+                                "is_distributed": null,
+                                "is_free_postage": null,
+                                "is_made_holiday": null,
+                                "is_sold_out": false,
+                                "like_count": null,
+                                "made_cycle": null,
+                                "material_id": null,
+                                "material_name": "",
+                                "max_price": 0,
+                                "max_sale_price": 0,
+                                "min_price": 0,
+                                "min_sale_price": 0,
+                                "modes": [],
+                                "name": "飞机",
+                                "published_at": null,
+                                "rid": "97958360",
+                                "second_category_id": 0,
+                                "status": 1,
+                                "sticked": null,
+                                "style_id": null,
+                                "style_name": "",
+                                "top_category_id": 0,
+                                "total_stock": null
+                            }
+
+                        ],
+                        "rid": 1,
+                        "title": "啊啊啊啊啊啊啊啊啊",  // 标题
+                        "user_avatar": "http://0.0.0.0:9000/_uploads/photos/FlHKgXPzqwjPC7pD5Z_SfdL0R8hE",  // 用户头像
+                        "user_name": "亮晶晶"  // 用户名
                     }
                 },
-                {
-                    "created_at": 1534094558,
-                    "shop_window": {
-                        "comment_count": null,
-                        "covers": [],
-                        "description": "去去去去去去去去去去",
-                        "like_count": null,
-                        "title": "达到顶顶顶顶顶顶顶顶顶顶顶"
-                    }
-                },
-                {
-                    "created_at": 1534094558,
-                    "shop_window": {
-                        "comment_count": null,
-                        "covers": [],
-                        "description": "去去去去去去去去去去",
-                        "like_count": null,
-                        "title": "灌灌灌灌灌刚刚"
-                    }
-                },
-                {
-                    "created_at": 1534094558,
-                    "shop_window": {
-                        "comment_count": null,
-                        "covers": [],
-                        "description": "去去去去去去去去去去",
-                        "like_count": null,
-                        "title": "鹅鹅鹅饿鹅鹅鹅饿"
-                    }
-                },
-                {
-                    "created_at": 1534094558,
-                    "shop_window": {
-                        "comment_count": null,
-                        "covers": [],
-                        "description": "去去去去去去去去去去",
-                        "like_count": null,
-                        "title": "天天天天天天天天天"
-                    }
-                }
             ],
             "next": false,
-            "prev": false,
-            "username": "wdd"  // 用户名
+            "prev": false
         },
         "status": {
             "code": 200,
