@@ -2,6 +2,242 @@
 用户模块
 =========
 
+更新用户最后进入的生活馆
+--------------------------
+
+接口说明
+~~~~~~~~~~~~~~
+
+* API接口请求地址：``/users/update_last_store_rid``
+* API接口请求方法：``POST``
+* API接口用户授权：``token``
+
+请求参数
+~~~~~~~~~~~~~~~
+
+=====================  ==========  =========  ==========  =============================
+名称                    类型        是否必须     默认值       描述说明
+=====================  ==========  =========  ==========  =============================
+last_store_rid            String     是                   用户最后所停留的生活馆编号
+=====================  ==========  =========  ==========  =============================
+
+JSON数据格式
+
+请求 **正确** 返回结果：
+
+.. code-block:: javascript
+
+    {
+        "status": {
+            "code": 200,
+            "message": "Ok all right."
+        },
+        "success": true
+    }
+
+获取关注的生活馆
+-----------------------
+
+接口说明
+~~~~~~~~~~~~~~
+
+* API接口请求地址：``/users/followed_life_stores``
+* API接口请求方法：``GET``
+* API接口用户授权：``token``
+
+请求参数
+~~~~~~~~~~~~~~~
+
+===========  ========  =========  ========  ==============================================
+名称          类型      是否必须    默认值     描述说明
+===========  ========  =========  ========  ==============================================
+page         Number    可选         1        当前页码
+per_page     Number    可选         10       每页数量
+===========  ========  =========  ========  ==============================================
+
+JSON数据格式
+
+请求 **正确** 返回结果：
+
+.. code-block:: javascript
+
+    {
+        "data": {
+            "count": 2,
+            "next": false,
+            "prev": false,
+            "stores": [
+                {
+                    "created_at": 1532759861,
+                    "followed_status": 1,  // 是否关注过, 0:未关注, 1:关注
+                    "kind": 2,  // 店铺种类: 1、品牌馆  2、生活馆
+                    "logo": "http://kg.erp.taihuoniao.com/static/img/default-logo.png",  // 生活馆logo
+                    "logo_id": 0,
+                    "phases": 1,  // 生活馆所处阶段: 1、实习馆主  2、达人馆主
+                    "products": [],
+                    "store_name": "淘宝",  // 生活馆名称
+                    "store_rid": "93914762"  // 生活馆编号
+                },
+                {
+                    "created_at": 1532759899,
+                    "followed_status": 1,
+                    "kind": 2,
+                    "logo": "http://kg.erp.taihuoniao.com/static/img/default-logo.png",
+                    "logo_id": 0,
+                    "phases": 2,
+                    "products": [],
+                    "store_name": "天猫",
+                    "store_rid": "91708429"
+                }
+            ]
+        },
+        "status": {
+            "code": 200,
+            "message": "Ok all right."
+        },
+        "success": true
+    }
+
+获取别人关注的生活馆
+-----------------------
+
+接口说明
+~~~~~~~~~~~~~~
+
+* API接口请求地址：``/users/other_followed_life_stores``
+* API接口请求方法：``GET``
+
+请求参数
+~~~~~~~~~~~~~~~
+
+===========  ========  =========  ========  ==============================================
+名称          类型      是否必须    默认值     描述说明
+===========  ========  =========  ========  ==============================================
+uid          String    必须                  被查看用户编号
+page         Number    可选         1        当前页码
+per_page     Number    可选         10       每页数量
+===========  ========  =========  ========  ==============================================
+
+获取生活馆动态
+-----------------------
+
+接口说明
+~~~~~~~~~~~~~~
+
+* API接口请求地址：``/users/user_dynamic``
+* API接口请求方法：``GET``
+* API接口用户授权：``token``
+
+请求参数
+~~~~~~~~~~~~~~~
+
+===========  ========  =========  ========  ==============================================
+名称          类型      是否必须    默认值     描述说明
+===========  ========  =========  ========  ==============================================
+page         Number    可选         1        当前页码
+per_page     Number    可选         10       每页数量
+===========  ========  =========  ========  ==============================================
+
+JSON数据格式
+
+请求 **正确** 返回结果：
+
+.. code-block:: javascript
+
+    {
+        "data": {
+            "avatar": "http://0.0.0.0:9000/_uploads/photos/FlHKgXPzqwjPC7pD5Z_SfdL0R8hE",  // 用户头像
+            "count": 5,
+            "followed_status": 0,  // 关注状态, 0:未关注; 1:已关注; 2:相互关注
+            "lines": [
+                {
+                    "created_at": 1534094558,  // 发布时间
+                    "shop_window": {   // 橱窗信息
+                        "comment_count": null,  // 评论数
+                        "covers": [  // 橱窗商品封面图
+                            "http://0.0.0.0:9000/_uploads/photos/static/img/default2-logo-180x180.png",
+                            "http://0.0.0.0:9000/_uploads/photos/static/img/default2-logo-180x180.png",
+                            "http://0.0.0.0:9000/_uploads/photos/static/img/default2-logo-180x180.png",
+                            "http://0.0.0.0:9000/_uploads/photos/static/img/default2-logo-180x180.png",
+                            "http://0.0.0.0:9000/_uploads/photos/static/img/default2-logo-180x180.png"
+                        ],
+                        "description": "去去去去去去去去去去",  // 描述
+                        "like_count": null,  // 喜欢的人数
+                        "title": "啊啊啊啊啊啊啊啊啊"  // 标题
+                    }
+                },
+                {
+                    "created_at": 1534094558,
+                    "shop_window": {
+                        "comment_count": null,
+                        "covers": [],
+                        "description": "去去去去去去去去去去",
+                        "like_count": null,
+                        "title": "达到顶顶顶顶顶顶顶顶顶顶顶"
+                    }
+                },
+                {
+                    "created_at": 1534094558,
+                    "shop_window": {
+                        "comment_count": null,
+                        "covers": [],
+                        "description": "去去去去去去去去去去",
+                        "like_count": null,
+                        "title": "灌灌灌灌灌刚刚"
+                    }
+                },
+                {
+                    "created_at": 1534094558,
+                    "shop_window": {
+                        "comment_count": null,
+                        "covers": [],
+                        "description": "去去去去去去去去去去",
+                        "like_count": null,
+                        "title": "鹅鹅鹅饿鹅鹅鹅饿"
+                    }
+                },
+                {
+                    "created_at": 1534094558,
+                    "shop_window": {
+                        "comment_count": null,
+                        "covers": [],
+                        "description": "去去去去去去去去去去",
+                        "like_count": null,
+                        "title": "天天天天天天天天天"
+                    }
+                }
+            ],
+            "next": false,
+            "prev": false,
+            "username": "wdd"  // 用户名
+        },
+        "status": {
+            "code": 200,
+            "message": "Ok all right."
+        },
+        "success": true
+    }
+
+获取别人生活馆动态
+-----------------------
+
+接口说明
+~~~~~~~~~~~~~~
+
+* API接口请求地址：``/users/other_user_dynamic``
+* API接口请求方法：``GET``
+
+请求参数
+~~~~~~~~~~~~~~~
+
+===========  ========  =========  ========  ==============================================
+名称          类型      是否必须    默认值     描述说明
+===========  ========  =========  ========  ==============================================
+uid          String    必须                  被查看用户编号
+page         Number    可选         1        当前页码
+per_page     Number    可选         10       每页数量
+===========  ========  =========  ========  ==============================================
+
 获取关注的用户列表
 -----------------------
 
