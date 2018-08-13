@@ -410,6 +410,246 @@ JSON数据格式:
     }
 
 
+用户喜欢橱窗列表
+----------------------
+
+接口说明
+~~~~~~~~~~~~~~
+
+* API接口请求地址：``/shop_windows/user_likes``
+* API接口请求方法：``GET``
+* API接口用户授权：``token``
+
+请求参数
+~~~~~~~~~~~~~~~
+
+===============  ==========  =========  ==========  =============================
+名称              类型        是否必须     默认值       描述说明
+===============  ==========  =========  ==========  =============================
+page             Number      可选         1          当前页码
+per_page         Number      可选         10         每页数量
+===============  ==========  =========  ==========  =============================
+
+返回示例
+~~~~~~~~~~~~~~~~
+
+JSON数据格式:
+
+.. code-block:: javascript
+
+    {
+        "data": {
+            "count": 8,
+            "next": false,
+            "prev": false,
+            "shop_windows": [
+                {
+                    "comment_count": "评论数",
+                    "description": "橱窗详情",
+                    "is_follow": "是否关注过该橱窗",
+                    "keywords": [
+                        "橱窗关键词一",
+                        "橱窗关键词二"
+                    ],
+                    "like_count": "橱窗喜欢数",
+                    "product_count": 5,
+                    "product_covers": [
+                        "http://127.0.0.1:9000/_uploads/photos/180718/f1a30ad8b52107c.gif",
+                        "http://127.0.0.1:9000/_uploads/photos/180718/f1a30ad8b52107c.gif",
+                        "http://127.0.0.1:9000/_uploads/photos/180718/f1a30ad8b52107c.gif",
+                        "http://127.0.0.1:9000/_uploads/photos/180707/77409c8ab9b0abf.jpg",
+                        "http://127.0.0.1:9000/_uploads/photos/180707/77409c8ab9b0abf.jpg"
+                    ],
+                    "products": [
+                        {
+                            "category_id": 18,
+                            "commission_price": 846.89,
+                            "commission_rate": 24.5,
+                            "cover": "http://127.0.0.1:9000/_uploads/photos/180710/fbba50f0da91a7a.jpg",
+                            "cover_id": 10,
+                            "custom_details": "可以刻名字,生辰八字",
+                            "delivery_country": "",
+                            "delivery_country_id": null,
+                            "features": "获得更多的成长值，加速商铺成长获取更多特权：发布三星级及以上的产品可以获得与星级数量等额的成长值，每日上限为20点；",
+                            "have_distributed": true,
+                            "id_code": "",
+                            "is_custom_made": true,
+                            "is_custom_service": true,
+                            "is_distributed": true,
+                            "is_free_postage": false,
+                            "is_made_holiday": false,
+                            "is_proprietary": false,
+                            "is_sold_out": false,
+                            "like_count": 1,
+                            "made_cycle": 5,
+                            "material_id": 4,
+                            "material_name": "毛线",
+                            "max_price": 5456.7,
+                            "max_sale_price": 0,
+                            "min_price": 3234.5,
+                            "min_sale_price": 2245,
+                            "modes": [
+                                "3*1 白色",
+                                "3*2 绿色",
+                                "3*3 紫色"
+                            ],
+                            "name": "商品名",
+                            "published_at": 1531213666,
+                            "real_price": 5456.7,
+                            "real_sale_price": 0,
+                            "rid": "8479032186",
+                            "second_category_id": 17,
+                            "status": 1,
+                            "sticked": false,
+                            "store_name": "店铺名",
+                            "store_rid": "店铺编号",
+                            "style_id": "商品风格编号",
+                            "style_name": "商品风格名",
+                            "top_category_id": 1,
+                            "total_stock": 45
+                        },
+                        {
+                            同上商品基本信息...
+                        },
+                        {
+                            同上商品基本信息...
+                        }
+                    ],
+                    "rid": "橱窗编号",
+                    "title": "橱窗标题",
+                    "user_avatar": "http://kg.erp.taihuoniao.com/static/img/default-logo.png",
+                    "user_name": "用户名"
+                }
+            ]
+        },
+        "status": {
+            "code": 200,
+            "message": "Ok all right."
+        },
+        "success": true
+    }
+
+
+其他用户喜欢橱窗列表
+----------------------
+
+接口说明
+~~~~~~~~~~~~~~
+
+* API接口请求地址：``/shop_windows/other_user_likes``
+* API接口请求方法：``GET``
+
+请求参数
+~~~~~~~~~~~~~~~
+
+===============  ==========  =========  ==========  =============================
+名称              类型        是否必须     默认值       描述说明
+===============  ==========  =========  ==========  =============================
+page             Number      可选         1          当前页码
+per_page         Number      可选         10         每页数量
+uid              String      必须                    用户编号
+===============  ==========  =========  ==========  =============================
+
+返回示例
+~~~~~~~~~~~~~~~~
+
+JSON数据格式:
+
+.. code-block:: javascript
+
+    {
+        "data": {
+            "count": 8,
+            "next": false,
+            "prev": false,
+            "shop_windows": [
+                {
+                    "comment_count": "评论数",
+                    "description": "橱窗详情",
+                    "is_follow": "是否关注过该橱窗",
+                    "keywords": [
+                        "橱窗关键词一",
+                        "橱窗关键词二"
+                    ],
+                    "like_count": "橱窗喜欢数",
+                    "product_count": 5,
+                    "product_covers": [
+                        "http://127.0.0.1:9000/_uploads/photos/180718/f1a30ad8b52107c.gif",
+                        "http://127.0.0.1:9000/_uploads/photos/180718/f1a30ad8b52107c.gif",
+                        "http://127.0.0.1:9000/_uploads/photos/180718/f1a30ad8b52107c.gif",
+                        "http://127.0.0.1:9000/_uploads/photos/180707/77409c8ab9b0abf.jpg",
+                        "http://127.0.0.1:9000/_uploads/photos/180707/77409c8ab9b0abf.jpg"
+                    ],
+                    "products": [
+                        {
+                            "category_id": 18,
+                            "commission_price": 846.89,
+                            "commission_rate": 24.5,
+                            "cover": "http://127.0.0.1:9000/_uploads/photos/180710/fbba50f0da91a7a.jpg",
+                            "cover_id": 10,
+                            "custom_details": "可以刻名字,生辰八字",
+                            "delivery_country": "",
+                            "delivery_country_id": null,
+                            "features": "获得更多的成长值，加速商铺成长获取更多特权：发布三星级及以上的产品可以获得与星级数量等额的成长值，每日上限为20点；",
+                            "have_distributed": true,
+                            "id_code": "",
+                            "is_custom_made": true,
+                            "is_custom_service": true,
+                            "is_distributed": true,
+                            "is_free_postage": false,
+                            "is_made_holiday": false,
+                            "is_proprietary": false,
+                            "is_sold_out": false,
+                            "like_count": 1,
+                            "made_cycle": 5,
+                            "material_id": 4,
+                            "material_name": "毛线",
+                            "max_price": 5456.7,
+                            "max_sale_price": 0,
+                            "min_price": 3234.5,
+                            "min_sale_price": 2245,
+                            "modes": [
+                                "3*1 白色",
+                                "3*2 绿色",
+                                "3*3 紫色"
+                            ],
+                            "name": "商品名",
+                            "published_at": 1531213666,
+                            "real_price": 5456.7,
+                            "real_sale_price": 0,
+                            "rid": "8479032186",
+                            "second_category_id": 17,
+                            "status": 1,
+                            "sticked": false,
+                            "store_name": "店铺名",
+                            "store_rid": "店铺编号",
+                            "style_id": "商品风格编号",
+                            "style_name": "商品风格名",
+                            "top_category_id": 1,
+                            "total_stock": 45
+                        },
+                        {
+                            同上商品基本信息...
+                        },
+                        {
+                            同上商品基本信息...
+                        }
+                    ],
+                    "rid": "橱窗编号",
+                    "title": "橱窗标题",
+                    "user_avatar": "http://kg.erp.taihuoniao.com/static/img/default-logo.png",
+                    "user_name": "用户名"
+                }
+            ]
+        },
+        "status": {
+            "code": 200,
+            "message": "Ok all right."
+        },
+        "success": true
+    }
+
+
 喜欢橱窗
 ----------------------
 
@@ -821,4 +1061,238 @@ JSON数据格式:
         },
         "success": true
     }
+
+
+橱窗可选商品列表
+----------------------
+获取用户添加喜欢和心愿单的商品
+
+
+接口说明
+~~~~~~~~~~~~~~
+
+* API接口请求地址：``/shop_windows/optional_products``
+* API接口请求方法：``GET``
+
+请求参数
+~~~~~~~~~~~~~~~
+
+===============  ==========  =========  ==========  =============================
+名称              类型        是否必须     默认值       描述说明
+===============  ==========  =========  ==========  =============================
+page             Number      可选         1          当前页码
+per_page         Number      可选         10         每页数量
+===============  ==========  =========  ==========  =============================
+
+返回示例
+~~~~~~~~~~~~~~~~
+
+JSON数据格式:
+
+.. code-block:: javascript
+
+    {
+        "data": {
+            "count": 4,
+            "next": false,
+            "prev": false,
+            "products": [
+                {
+                    商品基本信息...
+                },
+                {
+                    商品基本信息...
+                },
+                {
+                    商品基本信息...
+                },
+                {
+                    商品基本信息...
+                }
+            ]
+        },
+        "status": {
+            "code": 200,
+            "message": "Ok all right."
+        },
+        "success": true
+    }
+
+
+猜你喜欢
+----------------------
+
+接口说明
+~~~~~~~~~~~~~~
+
+* API接口请求地址：``/shop_windows/guess_like``
+* API接口请求方法：``GET``
+* API接口用户授权：``token``
+
+请求参数
+~~~~~~~~~~~~~~~
+
+===============  ==========  =========  ==========  =============================
+名称              类型        是否必须     默认值       描述说明
+===============  ==========  =========  ==========  =============================
+page             Number      可选         1          当前页码
+per_page         Number      可选         10         每页数量
+rid              Number      必须                    当前浏览的橱窗编号
+===============  ==========  =========  ==========  =============================
+
+返回示例
+~~~~~~~~~~~~~~~~
+
+JSON数据格式:
+
+.. code-block:: javascript
+
+    {
+        "data": {
+            "count": 4,
+            "next": false,
+            "prev": false,
+            "products": [
+                {
+                    商品基本信息...
+                },
+                {
+                    商品基本信息...
+                },
+                {
+                    商品基本信息...
+                },
+                {
+                    商品基本信息...
+                }
+            ]
+        },
+        "status": {
+            "code": 200,
+            "message": "Ok all right."
+        },
+        "success": true
+    }
+
+
+相似橱窗
+----------------------
+
+接口说明
+~~~~~~~~~~~~~~
+
+* API接口请求地址：``/shop_windows/similar``
+* API接口请求方法：``GET``
+* API接口用户授权：``token``
+
+请求参数
+~~~~~~~~~~~~~~~
+
+===============  ==========  =========  ==========  =============================
+名称              类型        是否必须     默认值       描述说明
+===============  ==========  =========  ==========  =============================
+page             Number      可选         1          当前页码
+per_page         Number      可选         10         每页数量
+rid              Number      必须                    当前浏览的橱窗编号
+===============  ==========  =========  ==========  =============================
+
+返回示例
+~~~~~~~~~~~~~~~~
+
+JSON数据格式:
+
+.. code-block:: javascript
+
+    {
+        "data": {
+            "count": 8,
+            "next": false,
+            "prev": false,
+            "shop_windows": [
+                {
+                    "comment_count": "评论数",
+                    "description": "橱窗详情",
+                    "is_follow": "是否关注过该橱窗",
+                    "keywords": [
+                        "橱窗关键词一",
+                        "橱窗关键词二"
+                    ],
+                    "like_count": "橱窗喜欢数",
+                    "product_count": 5,
+                    "product_covers": [
+                        "http://127.0.0.1:9000/_uploads/photos/180718/f1a30ad8b52107c.gif",
+                        "http://127.0.0.1:9000/_uploads/photos/180718/f1a30ad8b52107c.gif",
+                        "http://127.0.0.1:9000/_uploads/photos/180718/f1a30ad8b52107c.gif",
+                        "http://127.0.0.1:9000/_uploads/photos/180707/77409c8ab9b0abf.jpg",
+                        "http://127.0.0.1:9000/_uploads/photos/180707/77409c8ab9b0abf.jpg"
+                    ],
+                    "products": [
+                        {
+                            "category_id": 18,
+                            "commission_price": 846.89,
+                            "commission_rate": 24.5,
+                            "cover": "http://127.0.0.1:9000/_uploads/photos/180710/fbba50f0da91a7a.jpg",
+                            "cover_id": 10,
+                            "custom_details": "可以刻名字,生辰八字",
+                            "delivery_country": "",
+                            "delivery_country_id": null,
+                            "features": "获得更多的成长值，加速商铺成长获取更多特权：发布三星级及以上的产品可以获得与星级数量等额的成长值，每日上限为20点；",
+                            "have_distributed": true,
+                            "id_code": "",
+                            "is_custom_made": true,
+                            "is_custom_service": true,
+                            "is_distributed": true,
+                            "is_free_postage": false,
+                            "is_made_holiday": false,
+                            "is_proprietary": false,
+                            "is_sold_out": false,
+                            "like_count": 1,
+                            "made_cycle": 5,
+                            "material_id": 4,
+                            "material_name": "毛线",
+                            "max_price": 5456.7,
+                            "max_sale_price": 0,
+                            "min_price": 3234.5,
+                            "min_sale_price": 2245,
+                            "modes": [
+                                "3*1 白色",
+                                "3*2 绿色",
+                                "3*3 紫色"
+                            ],
+                            "name": "商品名",
+                            "published_at": 1531213666,
+                            "real_price": 5456.7,
+                            "real_sale_price": 0,
+                            "rid": "8479032186",
+                            "second_category_id": 17,
+                            "status": 1,
+                            "sticked": false,
+                            "store_name": "店铺名",
+                            "store_rid": "店铺编号",
+                            "style_id": "商品风格编号",
+                            "style_name": "商品风格名",
+                            "top_category_id": 1,
+                            "total_stock": 45
+                        },
+                        {
+                            同上商品基本信息...
+                        },
+                        {
+                            同上商品基本信息...
+                        }
+                    ],
+                    "rid": "橱窗编号",
+                    "title": "橱窗标题",
+                    "user_avatar": "http://kg.erp.taihuoniao.com/static/img/default-logo.png",
+                    "user_name": "用户名"
+                }
+            ]
+        },
+        "status": {
+            "code": 200,
+            "message": "Ok all right."
+        },
+        "success": true
+    }
+
 
