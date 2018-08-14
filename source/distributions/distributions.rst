@@ -153,6 +153,25 @@ JSON数据格式:
     :language: javascript
 
 
+选品中心最新发布商品
+---------------------
+获取选品中心最新发布的3个商品
+
+接口说明
+~~~~~~~~~~~~~~
+
+* API接口请求地址：``/core_platforms/fx_distribute/latest``
+* API接口请求方法：``GET``
+
+返回示例
+~~~~~~~~~~~~~~~~
+
+JSON数据格式:
+
+.. literalinclude:: ../products/product_list.js
+    :language: javascript
+
+
 放入仓库
 --------------------
 将分销池中的商品放入店铺仓库中
@@ -434,7 +453,7 @@ JSON数据格式:
 接口说明
 ~~~~~~~~~~~~~~
 
-* API接口请求地址：``/fx_distribute/remove``
+* API接口请求地址：``/core_platforms/fx_distribute/remove``
 * API接口请求方法：``DELETE``
 * API接口用户授权：``token``
 
