@@ -593,33 +593,42 @@
 <p>JSON数据格式</p>
 <div class="highlight-javascript"><div class="highlight"><pre><span></span><span class="p">{</span>
     <span class="s2">&quot;data&quot;</span><span class="o">:</span> <span class="p">{</span>
-        <span class="s2">&quot;headlines&quot;</span><span class="o">:</span> <span class="p">[</span>  <span class="c1">// 默认返回10条数据</span>
+        <span class="s2">&quot;headlines&quot;</span><span class="o">:</span> <span class="p">[</span>
             <span class="p">{</span>
-                <span class="s2">&quot;line_text&quot;</span><span class="o">:</span> <span class="s2">&quot;你得温柔71小时前售出3单成为正式馆主&quot;</span><span class="p">,</span>
-                <span class="s2">&quot;quantity&quot;</span><span class="o">:</span> <span class="mi">3</span><span class="p">,</span>
-                <span class="s2">&quot;time&quot;</span><span class="o">:</span> <span class="mi">71</span><span class="p">,</span>
+                <span class="s2">&quot;event&quot;</span><span class="o">:</span> <span class="mi">1</span><span class="p">,</span>   <span class="c1">//事件类型 1: 开通生活馆; 2: 售出3单成为正式馆主; 3: 售出1个订单 4: 售出数量单</span>
+                <span class="s2">&quot;time&quot;</span><span class="o">:</span> <span class="mi">33</span><span class="p">,</span>   <span class="c1">// 时间</span>
+                <span class="s2">&quot;time_info&quot;</span><span class="o">:</span> <span class="s2">&quot;分钟前&quot;</span><span class="p">,</span>  <span class="c1">// 时间后缀</span>
+                <span class="s2">&quot;username&quot;</span><span class="o">:</span> <span class="s2">&quot;wdd&quot;</span>  <span class="c1">//  // 用户名</span>
+            <span class="p">},</span>
+            <span class="p">{</span>
+                <span class="s2">&quot;event&quot;</span><span class="o">:</span> <span class="mi">2</span><span class="p">,</span>
+                <span class="s2">&quot;quantity&quot;</span><span class="o">:</span> <span class="mi">3</span><span class="p">,</span>   <span class="c1">// 售出的订单数量</span>
+                <span class="s2">&quot;time&quot;</span><span class="o">:</span> <span class="mi">72</span><span class="p">,</span>
+                <span class="s2">&quot;time_info&quot;</span><span class="o">:</span> <span class="s2">&quot;小时前&quot;</span><span class="p">,</span>
                 <span class="s2">&quot;username&quot;</span><span class="o">:</span> <span class="s2">&quot;你得温柔&quot;</span>
             <span class="p">},</span>
             <span class="p">{</span>
-                <span class="s2">&quot;hour&quot;</span><span class="o">:</span> <span class="mi">1</span><span class="p">,</span>
-                <span class="s2">&quot;line_text&quot;</span><span class="o">:</span> <span class="s2">&quot;法费尔的设计馆1小时售出77单&quot;</span><span class="p">,</span>
+                <span class="s2">&quot;event&quot;</span><span class="o">:</span> <span class="mi">4</span><span class="p">,</span>
+                <span class="s2">&quot;time&quot;</span><span class="o">:</span> <span class="mi">2</span><span class="p">,</span>
                 <span class="s2">&quot;quantity&quot;</span><span class="o">:</span> <span class="mi">77</span><span class="p">,</span>
                 <span class="s2">&quot;username&quot;</span><span class="o">:</span> <span class="s2">&quot;法费尔&quot;</span>
             <span class="p">},</span>
             <span class="p">{</span>
-                <span class="s2">&quot;line_text&quot;</span><span class="o">:</span> <span class="s2">&quot;感情骗子71小时前开通了自己的设计馆&quot;</span><span class="p">,</span>
-                <span class="s2">&quot;time&quot;</span><span class="o">:</span> <span class="mi">71</span><span class="p">,</span>
+                <span class="s2">&quot;event&quot;</span><span class="o">:</span> <span class="mi">1</span><span class="p">,</span>
+                <span class="s2">&quot;time&quot;</span><span class="o">:</span> <span class="mi">72</span><span class="p">,</span>
+                <span class="s2">&quot;time_info&quot;</span><span class="o">:</span> <span class="s2">&quot;小时前&quot;</span><span class="p">,</span>
                 <span class="s2">&quot;username&quot;</span><span class="o">:</span> <span class="s2">&quot;感情骗子&quot;</span>
             <span class="p">},</span>
             <span class="p">{</span>
-                <span class="s2">&quot;hour&quot;</span><span class="o">:</span> <span class="mi">1</span><span class="p">,</span>
-                <span class="s2">&quot;line_text&quot;</span><span class="o">:</span> <span class="s2">&quot;公告的设计馆1小时售出3单&quot;</span><span class="p">,</span>
+                <span class="s2">&quot;event&quot;</span><span class="o">:</span> <span class="mi">4</span><span class="p">,</span>
+                <span class="s2">&quot;time&quot;</span><span class="o">:</span> <span class="mi">3</span><span class="p">,</span>
                 <span class="s2">&quot;quantity&quot;</span><span class="o">:</span> <span class="mi">3</span><span class="p">,</span>
                 <span class="s2">&quot;username&quot;</span><span class="o">:</span> <span class="s2">&quot;公告&quot;</span>
             <span class="p">},</span>
             <span class="p">{</span>
-                <span class="s2">&quot;line_text&quot;</span><span class="o">:</span> <span class="s2">&quot;独莪zZ74小时前开通了自己的设计馆&quot;</span><span class="p">,</span>
-                <span class="s2">&quot;time&quot;</span><span class="o">:</span> <span class="mi">74</span><span class="p">,</span>
+                <span class="s2">&quot;event&quot;</span><span class="o">:</span> <span class="mi">1</span><span class="p">,</span>
+                <span class="s2">&quot;time&quot;</span><span class="o">:</span> <span class="mi">76</span><span class="p">,</span>
+                <span class="s2">&quot;time_info&quot;</span><span class="o">:</span> <span class="s2">&quot;小时前&quot;</span><span class="p">,</span>
                 <span class="s2">&quot;username&quot;</span><span class="o">:</span> <span class="s2">&quot;独莪zZ&quot;</span>
             <span class="p">}</span>
         <span class="p">]</span>
