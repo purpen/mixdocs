@@ -33,38 +33,38 @@ JSON数据格式
         "data": {
             "headlines": [
                 {
-                    "event": "开通",   //事件类型 1: 开通生活馆; 2: 售出3单成为正式馆主; 3: 售出1个订单 4: 售出数量单
+                    "event": 1,   //事件类型 1: 开通生活馆; 2: 售出3单成为正式馆主; 3: 售出1个订单 4: 售出数量单
                     "time": 33,   // 时间
                     "time_info": "分钟前",  // 时间后缀
                     "username": "wdd"  //  // 用户名
                 },
                 {
-                    "event": "成为正式",
+                    "event": 2,
                     "quantity": 3,   // 售出的订单数量
                     "time": 72,
                     "time_info": "小时前",
                     "username": "你得温柔"
                 },
                 {
-                    "event": "售出",
+                    "event": 4,
                     "time": 2,
                     "quantity": 77,
                     "username": "法费尔"
                 },
                 {
-                    "event": "开通",
+                    "event": 1,
                     "time": 72,
                     "time_info": "小时前",
                     "username": "感情骗子"
                 },
                 {
-                    "event": "售出",
+                    "event": 4,
                     "time": 3,
                     "quantity": 3,
                     "username": "公告"
                 },
                 {
-                    "event": "开通",
+                    "event": 1,
                     "time": 76,
                     "time_info": "小时前",
                     "username": "独莪zZ"
