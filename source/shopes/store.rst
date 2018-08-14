@@ -31,33 +31,42 @@ JSON数据格式
 
     {
         "data": {
-            "headlines": [  // 默认返回10条数据
+            "headlines": [
                 {
-                    "line_text": "你得温柔71小时前售出3单成为正式馆主",
-                    "quantity": 3,
-                    "time": 71,
+                    "event": "开通",   //事件类型 1: 开通生活馆; 2: 售出3单成为正式馆主; 3: 售出1个订单 4: 售出数量单
+                    "time": 33,   // 时间
+                    "time_info": "分钟前",  // 时间后缀
+                    "username": "wdd"  //  // 用户名
+                },
+                {
+                    "event": "成为正式",
+                    "quantity": 3,   // 售出的订单数量
+                    "time": 72,
+                    "time_info": "小时前",
                     "username": "你得温柔"
                 },
                 {
-                    "hour": 1,
-                    "line_text": "法费尔的设计馆1小时售出77单",
+                    "event": "售出",
+                    "hour": 2,
                     "quantity": 77,
                     "username": "法费尔"
                 },
                 {
-                    "line_text": "感情骗子71小时前开通了自己的设计馆",
-                    "time": 71,
+                    "event": "开通",
+                    "time": 72,
+                    "time_info": "小时前",
                     "username": "感情骗子"
                 },
                 {
-                    "hour": 1,
-                    "line_text": "公告的设计馆1小时售出3单",
+                    "event": "售出",
+                    "hour": 3,
                     "quantity": 3,
                     "username": "公告"
                 },
                 {
-                    "line_text": "独莪zZ74小时前开通了自己的设计馆",
-                    "time": 74,
+                    "event": "开通",
+                    "time": 76,
+                    "time_info": "小时前",
                     "username": "独莪zZ"
                 }
             ]
