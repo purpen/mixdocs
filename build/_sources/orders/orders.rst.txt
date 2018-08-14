@@ -238,7 +238,7 @@ from_client            String      可选                     来源客户端，
 affiliate_code         String      可选                     推广码
 bonus_code             String      可选                     官方红包码
 sync_pay               Integer     可选           0         是否同步返回支付参数 0、否 1、是
-share_code             {}          可选                     分享者信息 {product_rid:user_id}
+last_store_rid         String      可选                     上一次浏览的小b店铺rid
 store_items            Array       必需                     店铺商品信息
 =====================  ==========  =========  ==========  =============================
 
@@ -393,34 +393,7 @@ JSON数据格式:
       "success": false
     }
 
-订单邮费
-=============
-根据物流地址获取订单邮费标准
 
-接口说明
-~~~~~~~~~~~~~~
-
-* API接口请求地址：``/orders/freight``
-* API接口请求方法：``GET``
-* API接口用户授权：``token``
-
-返回示例
-~~~~~~~~~~~~~~~~
-
-JSON数据格式:
-
-.. code-block:: javascript
-
-    {
-      "data": {
-        "freight": 0
-      },
-      "status": {
-        "code": 200,
-        "message": "Ok all right."
-      },
-      "success": true
-    }
 
 订单备注
 =============
@@ -536,9 +509,9 @@ JSON数据格式:
         "success": true
     }
 
-用户确认收货状态
-================
-用户更新确认收货状态
+用户确认收货状态、已完成
+============================
+用户更新确认收货、已完成状态
 
 接口说明
 ~~~~~~~~~~~~~~
@@ -590,7 +563,7 @@ JSON数据格式:
                 "remark": null,  // 卖家备注
                 "rid": "D18070316803529",  // 订单编号
                 "ship_mode": 1,  // 运送方式
-                "status": 20,  // 订单状态
+                "status": 40,  // 订单状态
                 "store": {  // 店铺
                     "store_logo": {  // logo
                         "created_at": 1,
@@ -1311,113 +1284,6 @@ JSON数据格式:
                             "stock_count": 11020
                         }
                     ],
-
-            },
-            "rid": "D18061015836402"
-        },
-        "status": {
-            "code": 200,
-            "message": "Ok all right."
-        },
-        "success": true
-    }
-
-
-已完成订单状态
-================
-更新订单为已完成状态
-
-接口说明
-~~~~~~~~~~~~~~
-
-* API接口请求地址：``/orders/up_finished_status``
-* API接口请求方法：``POST``
-* API接口用户授权：``token``
-
-请求参数
-~~~~~~~~~~~~~~~
-
-=====================  ==========  =========  ==========  =============================
-名称                    类型        是否必须     默认值       描述说明
-=====================  ==========  =========  ==========  =============================
-rid                    String      必需                    订单号
-=====================  ==========  =========  ==========  =============================
-
-返回示例
-~~~~~~~~~~~~~~~~
-
-JSON数据格式:
-
-.. code-block:: javascript
-
-    {
-        "data": {
-            "order": {
-                "buyer_address": "青年路",  // 买家地址
-                "buyer_city": "淄博",  //买家市
-                "buyer_country": "中国",  // 买家国家
-                "buyer_name": "ZT-2",
-                "buyer_phone": "13260180689",  // 买家电话
-                "buyer_province": "山东",  // 买家省
-                "buyer_remark": null,  // 买家备注
-                "buyer_tel": "13260180689",  // 买家手机
-                "buyer_zipcode": "255300",  // 买家邮编
-                "coupon_amount": 0,  // 优惠券金额
-                "created_at": 1530608616,  // 创建时间
-                "current_time": 1533813725,  // 当前时间
-                "customer_order_id": null,  // 分销商订单编号
-                "discount_amount": 0,  // 店铺优惠金额 = 首单优惠 + 满减 + 优惠券
-                "first_discount": 0,  // 首单优惠
-                "freight": 14,  // 运费
-                "official_order_id": null,  // 官方平台订单号
-                "outside_target_id": "D18070316803529",  // 第三方平台订单号
-                "pay_amount": 17,  // 支付金额
-                "reach_minus": 0,  // 满减金额
-                "distributed": false,  // 分销订单
-                "remark": null,  // 卖家备注
-                "rid": "D18070316803529",  // 订单编号
-                "ship_mode": 1,  // 运送方式
-                "status": 30,  // 订单状态
-                "store": {  // 店铺
-                    "store_logo": {  // logo
-                        "created_at": 1,
-                        "filename": "1",
-                        "filepath": "180523/8f51855eedae984.jpg",
-                        "id": 1,
-                        "type": 1,
-                        "view_url": "http://0.0.0.0:9000/_uploads/photos/180523/8f51855eedae984.jpg"
-                    },
-                    "store_name": "第一家",  // 店铺名称
-                    "store_rid": "2"  // 店铺编号
-                },
-                "total_amount": 3,  // 商品金额
-                "total_quantity": 3,  // 商品总数量
-                "blessing_utterance": "嘿嘿嘿",  // 买家寄语
-                "buyer_remark": "哈哈哈",  // 买家备注
-                "payed_at": 12321312,  // 付款时间
-                "received_at": 12321312,  // 签收时间
-                "items": [
-                    {
-                        "commission_price": 0,  // 佣金
-                        "commission_rate": 0,  // 佣金比
-                        "cover": "http://0.0.0.0:9000/_uploads/photos/1",
-                        "deal_price": 1,  // 交易价格
-                        "express": 4,  // 快递公司ID
-                        "express_at": 0,  // 发货时间
-                        "express_no": null,  // 运单号
-                        "id_code": "1",
-                        "mode": "1 1",
-                        "price": 1,
-                        "product_name": "摩托",  // 商品名
-                        "quantity": 3,  // 数量
-                        "rid": "1",  // sku
-                        "s_color": "1",
-                        "s_model": "1",
-                        "s_weight": 1,
-                        "sale_price": 1,
-                        "stock_count": 11020
-                    }
-                ],
 
             },
             "rid": "D18061015836402"
