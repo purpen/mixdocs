@@ -4,6 +4,7 @@
 
 更新用户最后进入的生活馆
 --------------------------
+**核心小程序会用到, 移动端不需要**
 
 接口说明
 ~~~~~~~~~~~~~~
@@ -35,88 +36,6 @@ JSON数据格式
         "success": true
     }
 
-获取关注的生活馆
------------------------
-
-接口说明
-~~~~~~~~~~~~~~
-
-* API接口请求地址：``/users/followed_life_stores``
-* API接口请求方法：``GET``
-* API接口用户授权：``token``
-
-请求参数
-~~~~~~~~~~~~~~~
-
-===========  ========  =========  ========  ==============================================
-名称          类型      是否必须    默认值     描述说明
-===========  ========  =========  ========  ==============================================
-page         Number    可选         1        当前页码
-per_page     Number    可选         10       每页数量
-===========  ========  =========  ========  ==============================================
-
-JSON数据格式
-
-请求 **正确** 返回结果：
-
-.. code-block:: javascript
-
-    {
-        "data": {
-            "count": 2,
-            "next": false,
-            "prev": false,
-            "stores": [
-                {
-                    "created_at": 1532759861,
-                    "followed_status": 1,  // 是否关注过, 0:未关注, 1:关注
-                    "kind": 2,  // 店铺种类: 1、品牌馆  2、生活馆
-                    "logo": "http://kg.erp.taihuoniao.com/static/img/default-logo.png",  // 生活馆logo
-                    "logo_id": 0,
-                    "phases": 1,  // 生活馆所处阶段: 1、实习馆主  2、达人馆主
-                    "products": [],
-                    "store_name": "淘宝",  // 生活馆名称
-                    "store_rid": "93914762"  // 生活馆编号
-                },
-                {
-                    "created_at": 1532759899,
-                    "followed_status": 1,
-                    "kind": 2,
-                    "logo": "http://kg.erp.taihuoniao.com/static/img/default-logo.png",
-                    "logo_id": 0,
-                    "phases": 2,
-                    "products": [],
-                    "store_name": "天猫",
-                    "store_rid": "91708429"
-                }
-            ]
-        },
-        "status": {
-            "code": 200,
-            "message": "Ok all right."
-        },
-        "success": true
-    }
-
-获取别人关注的生活馆
------------------------
-
-接口说明
-~~~~~~~~~~~~~~
-
-* API接口请求地址：``/users/other_followed_life_stores``
-* API接口请求方法：``GET``
-
-请求参数
-~~~~~~~~~~~~~~~
-
-===========  ========  =========  ========  ==============================================
-名称          类型      是否必须    默认值     描述说明
-===========  ========  =========  ========  ==============================================
-uid          String    必须                  被查看用户编号
-page         Number    可选         1        当前页码
-per_page     Number    可选         10       每页数量
-===========  ========  =========  ========  ==============================================
 
 获取生活馆动态
 -----------------------
@@ -574,11 +493,12 @@ JSON数据格式
                     "distribution_type": 0,
                     "end_date": "",
                     "fans_count": 0,
+                    "followed_status": 1,  // 是否关注过, 0:未关注; 1:已关注
                     "is_closed": false,
-                    "logo": "http://kg.erp.taihuoniao.com",
+                    "logo": "http://kg.erp.taihuoniao.com/static/img/default-logo.png",
                     "logo_id": 0,
                     "mobile": null,
-                    "name": "京东",
+                    "name": "京东",  // 设计馆名称
                     "pattern": 1,
                     "phone": null,
                     "products_count": 0,
@@ -615,11 +535,12 @@ JSON数据格式
                     "distribution_type": 0,
                     "end_date": "",
                     "fans_count": 0,
+                    "followed_status": 1,  // 是否关注过, 0:未关注; 1:已关注
                     "is_closed": false,
-                    "logo": "http://kg.erp.taihuoniao.com",
+                    "logo": "http://kg.erp.taihuoniao.com/static/img/default-logo.png",
                     "logo_id": 0,
                     "mobile": null,
-                    "name": "拼多多",
+                    "name": "拼多多",  // 设计馆名称
                     "pattern": 1,
                     "phone": null,
                     "products_count": 0,
