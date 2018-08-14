@@ -47,7 +47,7 @@ JSON数据格式
                 },
                 {
                     "event": "售出",
-                    "hour": 2,
+                    "time": 2,
                     "quantity": 77,
                     "username": "法费尔"
                 },
@@ -59,7 +59,7 @@ JSON数据格式
                 },
                 {
                     "event": "售出",
-                    "hour": 3,
+                    "time": 3,
                     "quantity": 3,
                     "username": "公告"
                 },
