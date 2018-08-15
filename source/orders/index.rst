@@ -10,6 +10,5 @@
     customer_orders.rst
     carts.rst
     addresses.rst
-    stats.rst
     comment.rst
     logistics.rst

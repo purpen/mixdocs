@@ -97,9 +97,9 @@ JSON数据格式:
     {
         "data": {
             "EBusinessID": "1302778",
-            "LogisticCode": "1199965242414",
-            "ShipperCode": "EMS",
-            "State": "3",
+            "LogisticCode": "1199965242414",  // 物流运单号
+            "ShipperCode": "EMS",  // 快递公司编码
+            "State": "3",  // 物流状态：2-在途中,3-签收,4-问题件
             "Success": true,
             "Traces": [
                 {
