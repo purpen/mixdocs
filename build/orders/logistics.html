@@ -124,6 +124,7 @@
 </li>
 <li class="toctree-l1"><a class="reference internal" href="../stats/index.html">统计API模块</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="../stats/report.html">报表模块</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../stats/order_stats.html">订单统计模块</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="../users/index.html">用户API模块</a><ul>
@@ -581,9 +582,9 @@
 <div class="highlight-javascript"><div class="highlight"><pre><span></span><span class="p">{</span>
     <span class="s2">&quot;data&quot;</span><span class="o">:</span> <span class="p">{</span>
         <span class="s2">&quot;EBusinessID&quot;</span><span class="o">:</span> <span class="s2">&quot;1302778&quot;</span><span class="p">,</span>
-        <span class="s2">&quot;LogisticCode&quot;</span><span class="o">:</span> <span class="s2">&quot;1199965242414&quot;</span><span class="p">,</span>
-        <span class="s2">&quot;ShipperCode&quot;</span><span class="o">:</span> <span class="s2">&quot;EMS&quot;</span><span class="p">,</span>
-        <span class="s2">&quot;State&quot;</span><span class="o">:</span> <span class="s2">&quot;3&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;LogisticCode&quot;</span><span class="o">:</span> <span class="s2">&quot;1199965242414&quot;</span><span class="p">,</span>  <span class="c1">// 物流运单号</span>
+        <span class="s2">&quot;ShipperCode&quot;</span><span class="o">:</span> <span class="s2">&quot;EMS&quot;</span><span class="p">,</span>  <span class="c1">// 快递公司编码</span>
+        <span class="s2">&quot;State&quot;</span><span class="o">:</span> <span class="s2">&quot;3&quot;</span><span class="p">,</span>  <span class="c1">// 物流状态：2-在途中,3-签收,4-问题件</span>
         <span class="s2">&quot;Success&quot;</span><span class="o">:</span> <span class="kc">true</span><span class="p">,</span>
         <span class="s2">&quot;Traces&quot;</span><span class="o">:</span> <span class="p">[</span>
             <span class="p">{</span>
