@@ -278,3 +278,64 @@ JSON数据格式:
     }
 
 
+搜索解答列表
+----------------
+
+接口说明
+~~~~~~~~~~~~~~
+
+* API接口请求地址：``/qa/solutions/search``
+* API接口请求方法：``GET``
+
+请求参数
+~~~~~~~~~~~~~~~
+
+===========  ========  =========  ========  ====================================
+名称          类型      是否必须    默认值     描述说明
+===========  ========  =========  ========  ====================================
+page         Number    可选         1         当前页码
+per_page     Number    可选         10        每页数量
+qk           String    必须                   关键词
+===========  ========  =========  ========  ====================================
+
+返回示例
+~~~~~~~~~~~~~~~~
+
+JSON数据格式:
+
+.. code-block:: javascript
+
+    {
+        "data": {
+            "count": 2,
+            "next": false,
+            "prev": false,
+            "solutions": [
+                {
+                    "content": "解答内容",
+                    "id": 2,
+                    "question_id": 7,
+                    "question_name": "问题名",
+                    "title": "解答标题",
+                    "useful_count": 0,
+                    "useless_count": 0
+                },
+                {
+                    "content": "解答内容",
+                    "id": 4,
+                    "question_id": 3,
+                    "question_name": "问题名",
+                    "title": "解答标题",
+                    "useful_count": 2,
+                    "useless_count": 7
+                }
+            ]
+        },
+        "status": {
+            "code": 200,
+            "message": "Ok all right."
+        },
+        "success": true
+    }
+
+
