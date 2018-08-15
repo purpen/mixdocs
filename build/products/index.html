@@ -78,7 +78,6 @@
 <li class="toctree-l2"><a class="reference internal" href="../orders/customer_orders.html">分销商订单模块</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../orders/carts.html">购物车模块</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../orders/addresses.html">收货地址模块</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../orders/stats.html">统计模块</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../orders/comment.html">订单评价模块</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../orders/logistics.html">物流运费模块</a></li>
 </ul>
@@ -124,7 +123,9 @@
 </li>
 <li class="toctree-l1"><a class="reference internal" href="../stats/index.html">统计API模块</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="../stats/report.html">报表模块</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../stats/order_stats.html">订单统计模块</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../stats/order_sale_stats.html">订单销售统计模块</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../stats/order_stats.html">订单结算统计模块</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../stats/small_b_order_stats.html">小b订单结算统计模块</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="../users/index.html">用户API模块</a><ul>
@@ -150,12 +151,15 @@
 <li class="toctree-l1"><a class="reference internal" href="../common.html">公用接口模块</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="../common.html#id2">幻灯图列表</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../common.html#id6">搜索关键词历史</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../common.html#id10">小程序绑定手机号发送验证码</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../common.html#id15">注册发送短信验证码</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../common.html#id20">忘记密码发送短信验证码</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../common.html#id24">动态登陆发送短信验证码</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../common.html#id28">账户编辑发送短信验证码</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../common.html#id32">发送邮件验证码</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../common.html#id10">核心平台–搜索关键词历史</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../common.html#id14">核心平台–热门搜索</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../common.html#id18">核心平台–搜索</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../common.html#id22">小程序绑定手机号发送验证码</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../common.html#id27">注册发送短信验证码</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../common.html#id32">忘记密码发送短信验证码</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../common.html#id36">动态登陆发送短信验证码</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../common.html#id40">账户编辑发送短信验证码</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../common.html#id44">发送邮件验证码</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="../setting.html">系统相关配置文档</a><ul>
@@ -253,48 +257,50 @@
 <li class="toctree-l2"><a class="reference internal" href="products.html#id6">最新商品列表（新品上市）</a></li>
 <li class="toctree-l2"><a class="reference internal" href="products.html#id10">推荐商品列表</a></li>
 <li class="toctree-l2"><a class="reference internal" href="products.html#id14">搜索商品列表</a></li>
-<li class="toctree-l2"><a class="reference internal" href="products.html#id18">品牌的商品列表</a></li>
-<li class="toctree-l2"><a class="reference internal" href="products.html#id22">店铺授权商品列表</a></li>
-<li class="toctree-l2"><a class="reference internal" href="products.html#id26">核心平台–店铺授权商品列表</a></li>
-<li class="toctree-l2"><a class="reference internal" href="products.html#id30">多个商品基本信息</a></li>
-<li class="toctree-l2"><a class="reference internal" href="products.html#id34">商品基本信息</a></li>
-<li class="toctree-l2"><a class="reference internal" href="products.html#id37">商品全部信息</a></li>
-<li class="toctree-l2"><a class="reference internal" href="products.html#id40">商品详情内容</a></li>
+<li class="toctree-l2"><a class="reference internal" href="products.html#id18">核心平台–搜索商品列表</a></li>
+<li class="toctree-l2"><a class="reference internal" href="products.html#id22">品牌的商品列表</a></li>
+<li class="toctree-l2"><a class="reference internal" href="products.html#id26">店铺授权商品列表</a></li>
+<li class="toctree-l2"><a class="reference internal" href="products.html#id30">核心平台–店铺授权商品列表</a></li>
+<li class="toctree-l2"><a class="reference internal" href="products.html#id34">多个商品基本信息</a></li>
+<li class="toctree-l2"><a class="reference internal" href="products.html#id38">商品基本信息</a></li>
+<li class="toctree-l2"><a class="reference internal" href="products.html#id41">商品全部信息</a></li>
+<li class="toctree-l2"><a class="reference internal" href="products.html#id44">商品详情内容</a></li>
 <li class="toctree-l2"><a class="reference internal" href="products.html#sku">SKU信息</a></li>
-<li class="toctree-l2"><a class="reference internal" href="products.html#id46">店铺SKU信息</a></li>
-<li class="toctree-l2"><a class="reference internal" href="products.html#id50">商品SKU信息</a></li>
-<li class="toctree-l2"><a class="reference internal" href="products.html#id54">商品SKU列表</a></li>
-<li class="toctree-l2"><a class="reference internal" href="products.html#id58">获取商品基本信息</a></li>
-<li class="toctree-l2"><a class="reference internal" href="products.html#id62">发布商品第一步</a></li>
-<li class="toctree-l2"><a class="reference internal" href="products.html#id67">更新商品第一步</a></li>
-<li class="toctree-l2"><a class="reference internal" href="products.html#id71">获取商品详细信息</a></li>
-<li class="toctree-l2"><a class="reference internal" href="products.html#id75">发布或更新商品第二步: 放入仓库</a></li>
-<li class="toctree-l2"><a class="reference internal" href="products.html#id80">发布或更新商品第二步: 发布</a></li>
-<li class="toctree-l2"><a class="reference internal" href="products.html#id84">拷贝商品</a></li>
-<li class="toctree-l2"><a class="reference internal" href="products.html#id88">删除商品</a></li>
-<li class="toctree-l2"><a class="reference internal" href="products.html#id92">商品状态统计</a></li>
-<li class="toctree-l2"><a class="reference internal" href="products.html#id96">分销设置</a></li>
-<li class="toctree-l2"><a class="reference internal" href="products.html#id101">商品上架</a></li>
-<li class="toctree-l2"><a class="reference internal" href="products.html#id105">商品下架</a></li>
-<li class="toctree-l2"><a class="reference internal" href="products.html#id109">用户商品记录</a></li>
-<li class="toctree-l2"><a class="reference internal" href="products.html#id113">商品风格列表</a></li>
-<li class="toctree-l2"><a class="reference internal" href="products.html#id116">我的作品</a></li>
-<li class="toctree-l2"><a class="reference internal" href="products.html#id120">商家商品数</a></li>
-<li class="toctree-l2"><a class="reference internal" href="products.html#id124">接单定制商品</a></li>
+<li class="toctree-l2"><a class="reference internal" href="products.html#id50">店铺SKU信息</a></li>
+<li class="toctree-l2"><a class="reference internal" href="products.html#id54">商品SKU信息</a></li>
+<li class="toctree-l2"><a class="reference internal" href="products.html#id58">商品SKU列表</a></li>
+<li class="toctree-l2"><a class="reference internal" href="products.html#id62">获取商品基本信息</a></li>
+<li class="toctree-l2"><a class="reference internal" href="products.html#id66">发布商品第一步</a></li>
+<li class="toctree-l2"><a class="reference internal" href="products.html#id71">更新商品第一步</a></li>
+<li class="toctree-l2"><a class="reference internal" href="products.html#id75">获取商品详细信息</a></li>
+<li class="toctree-l2"><a class="reference internal" href="products.html#id79">发布或更新商品第二步: 放入仓库</a></li>
+<li class="toctree-l2"><a class="reference internal" href="products.html#id84">发布或更新商品第二步: 发布</a></li>
+<li class="toctree-l2"><a class="reference internal" href="products.html#id88">拷贝商品</a></li>
+<li class="toctree-l2"><a class="reference internal" href="products.html#id92">删除商品</a></li>
+<li class="toctree-l2"><a class="reference internal" href="products.html#id96">商品状态统计</a></li>
+<li class="toctree-l2"><a class="reference internal" href="products.html#id100">分销设置</a></li>
+<li class="toctree-l2"><a class="reference internal" href="products.html#id105">商品上架</a></li>
+<li class="toctree-l2"><a class="reference internal" href="products.html#id109">商品下架</a></li>
+<li class="toctree-l2"><a class="reference internal" href="products.html#id113">用户商品记录</a></li>
+<li class="toctree-l2"><a class="reference internal" href="products.html#id117">商品风格列表</a></li>
+<li class="toctree-l2"><a class="reference internal" href="products.html#id120">我的作品</a></li>
+<li class="toctree-l2"><a class="reference internal" href="products.html#id124">商家商品数</a></li>
+<li class="toctree-l2"><a class="reference internal" href="products.html#id128">接单定制商品</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="category.html">分类模块</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="category.html#id2">全部分类列表</a></li>
-<li class="toctree-l2"><a class="reference internal" href="category.html#id5">分类列表</a></li>
-<li class="toctree-l2"><a class="reference internal" href="category.html#id9">相邻分类列表</a></li>
-<li class="toctree-l2"><a class="reference internal" href="category.html#id13">新增分类</a></li>
-<li class="toctree-l2"><a class="reference internal" href="category.html#id18">更新分类</a></li>
-<li class="toctree-l2"><a class="reference internal" href="category.html#id23">删除分类</a></li>
-<li class="toctree-l2"><a class="reference internal" href="category.html#id27">全部官方分类列表</a></li>
-<li class="toctree-l2"><a class="reference internal" href="category.html#id30">官方分类列表</a></li>
-<li class="toctree-l2"><a class="reference internal" href="category.html#id34">新增官方分类</a></li>
-<li class="toctree-l2"><a class="reference internal" href="category.html#id39">更新官方分类</a></li>
-<li class="toctree-l2"><a class="reference internal" href="category.html#id44">删除官方分类</a></li>
+<li class="toctree-l2"><a class="reference internal" href="category.html#id5">店铺分类列表</a></li>
+<li class="toctree-l2"><a class="reference internal" href="category.html#id9">分类列表</a></li>
+<li class="toctree-l2"><a class="reference internal" href="category.html#id13">相邻分类列表</a></li>
+<li class="toctree-l2"><a class="reference internal" href="category.html#id17">新增分类</a></li>
+<li class="toctree-l2"><a class="reference internal" href="category.html#id22">更新分类</a></li>
+<li class="toctree-l2"><a class="reference internal" href="category.html#id27">删除分类</a></li>
+<li class="toctree-l2"><a class="reference internal" href="category.html#id31">全部官方分类列表</a></li>
+<li class="toctree-l2"><a class="reference internal" href="category.html#id34">官方分类列表</a></li>
+<li class="toctree-l2"><a class="reference internal" href="category.html#id38">新增官方分类</a></li>
+<li class="toctree-l2"><a class="reference internal" href="category.html#id43">更新官方分类</a></li>
+<li class="toctree-l2"><a class="reference internal" href="category.html#id48">删除官方分类</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="brands.html">供应商/品牌模块</a><ul>

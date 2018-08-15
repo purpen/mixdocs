@@ -78,7 +78,6 @@
 <li class="toctree-l2"><a class="reference internal" href="../orders/customer_orders.html">分销商订单模块</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../orders/carts.html">购物车模块</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../orders/addresses.html">收货地址模块</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../orders/stats.html">统计模块</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../orders/comment.html">订单评价模块</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../orders/logistics.html">物流运费模块</a></li>
 </ul>
@@ -124,6 +123,9 @@
 </li>
 <li class="toctree-l1"><a class="reference internal" href="../stats/index.html">统计API模块</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="../stats/report.html">报表模块</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../stats/order_sale_stats.html">订单销售统计模块</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../stats/order_stats.html">订单结算统计模块</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../stats/small_b_order_stats.html">小b订单结算统计模块</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="../users/index.html">用户API模块</a><ul>
@@ -149,12 +151,15 @@
 <li class="toctree-l1"><a class="reference internal" href="../common.html">公用接口模块</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="../common.html#id2">幻灯图列表</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../common.html#id6">搜索关键词历史</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../common.html#id10">小程序绑定手机号发送验证码</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../common.html#id15">注册发送短信验证码</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../common.html#id20">忘记密码发送短信验证码</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../common.html#id24">动态登陆发送短信验证码</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../common.html#id28">账户编辑发送短信验证码</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../common.html#id32">发送邮件验证码</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../common.html#id10">核心平台–搜索关键词历史</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../common.html#id14">核心平台–热门搜索</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../common.html#id18">核心平台–搜索</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../common.html#id22">小程序绑定手机号发送验证码</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../common.html#id27">注册发送短信验证码</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../common.html#id32">忘记密码发送短信验证码</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../common.html#id36">动态登陆发送短信验证码</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../common.html#id40">账户编辑发送短信验证码</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../common.html#id44">发送邮件验证码</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="../setting.html">系统相关配置文档</a><ul>
@@ -190,67 +195,73 @@
 <li><a class="reference internal" href="#id4">返回示例</a></li>
 </ul>
 </li>
-<li><a class="reference internal" href="#id5">分类列表</a><ul>
+<li><a class="reference internal" href="#id5">店铺分类列表</a><ul>
 <li><a class="reference internal" href="#id6">接口说明</a></li>
 <li><a class="reference internal" href="#id7">请求参数</a></li>
 <li><a class="reference internal" href="#id8">返回示例</a></li>
 </ul>
 </li>
-<li><a class="reference internal" href="#id9">相邻分类列表</a><ul>
+<li><a class="reference internal" href="#id9">分类列表</a><ul>
 <li><a class="reference internal" href="#id10">接口说明</a></li>
 <li><a class="reference internal" href="#id11">请求参数</a></li>
 <li><a class="reference internal" href="#id12">返回示例</a></li>
 </ul>
 </li>
-<li><a class="reference internal" href="#id13">新增分类</a><ul>
+<li><a class="reference internal" href="#id13">相邻分类列表</a><ul>
 <li><a class="reference internal" href="#id14">接口说明</a></li>
 <li><a class="reference internal" href="#id15">请求参数</a></li>
-<li><a class="reference internal" href="#id16">请求示例</a></li>
-<li><a class="reference internal" href="#id17">返回示例</a></li>
+<li><a class="reference internal" href="#id16">返回示例</a></li>
 </ul>
 </li>
-<li><a class="reference internal" href="#id18">更新分类</a><ul>
-<li><a class="reference internal" href="#id19">接口说明</a></li>
-<li><a class="reference internal" href="#id20">请求参数</a></li>
-<li><a class="reference internal" href="#id21">请求示例</a></li>
-<li><a class="reference internal" href="#id22">返回示例</a></li>
+<li><a class="reference internal" href="#id17">新增分类</a><ul>
+<li><a class="reference internal" href="#id18">接口说明</a></li>
+<li><a class="reference internal" href="#id19">请求参数</a></li>
+<li><a class="reference internal" href="#id20">请求示例</a></li>
+<li><a class="reference internal" href="#id21">返回示例</a></li>
 </ul>
 </li>
-<li><a class="reference internal" href="#id23">删除分类</a><ul>
-<li><a class="reference internal" href="#id24">接口说明</a></li>
-<li><a class="reference internal" href="#id25">请求参数</a></li>
+<li><a class="reference internal" href="#id22">更新分类</a><ul>
+<li><a class="reference internal" href="#id23">接口说明</a></li>
+<li><a class="reference internal" href="#id24">请求参数</a></li>
+<li><a class="reference internal" href="#id25">请求示例</a></li>
 <li><a class="reference internal" href="#id26">返回示例</a></li>
 </ul>
 </li>
-<li><a class="reference internal" href="#id27">全部官方分类列表</a><ul>
+<li><a class="reference internal" href="#id27">删除分类</a><ul>
 <li><a class="reference internal" href="#id28">接口说明</a></li>
-<li><a class="reference internal" href="#id29">返回示例</a></li>
+<li><a class="reference internal" href="#id29">请求参数</a></li>
+<li><a class="reference internal" href="#id30">返回示例</a></li>
 </ul>
 </li>
-<li><a class="reference internal" href="#id30">官方分类列表</a><ul>
-<li><a class="reference internal" href="#id31">接口说明</a></li>
-<li><a class="reference internal" href="#id32">请求参数</a></li>
+<li><a class="reference internal" href="#id31">全部官方分类列表</a><ul>
+<li><a class="reference internal" href="#id32">接口说明</a></li>
 <li><a class="reference internal" href="#id33">返回示例</a></li>
 </ul>
 </li>
-<li><a class="reference internal" href="#id34">新增官方分类</a><ul>
+<li><a class="reference internal" href="#id34">官方分类列表</a><ul>
 <li><a class="reference internal" href="#id35">接口说明</a></li>
 <li><a class="reference internal" href="#id36">请求参数</a></li>
-<li><a class="reference internal" href="#id37">请求示例</a></li>
-<li><a class="reference internal" href="#id38">返回示例</a></li>
+<li><a class="reference internal" href="#id37">返回示例</a></li>
 </ul>
 </li>
-<li><a class="reference internal" href="#id39">更新官方分类</a><ul>
-<li><a class="reference internal" href="#id40">接口说明</a></li>
-<li><a class="reference internal" href="#id41">请求参数</a></li>
-<li><a class="reference internal" href="#id42">请求示例</a></li>
-<li><a class="reference internal" href="#id43">返回示例</a></li>
+<li><a class="reference internal" href="#id38">新增官方分类</a><ul>
+<li><a class="reference internal" href="#id39">接口说明</a></li>
+<li><a class="reference internal" href="#id40">请求参数</a></li>
+<li><a class="reference internal" href="#id41">请求示例</a></li>
+<li><a class="reference internal" href="#id42">返回示例</a></li>
 </ul>
 </li>
-<li><a class="reference internal" href="#id44">删除官方分类</a><ul>
-<li><a class="reference internal" href="#id45">接口说明</a></li>
-<li><a class="reference internal" href="#id46">请求参数</a></li>
+<li><a class="reference internal" href="#id43">更新官方分类</a><ul>
+<li><a class="reference internal" href="#id44">接口说明</a></li>
+<li><a class="reference internal" href="#id45">请求参数</a></li>
+<li><a class="reference internal" href="#id46">请求示例</a></li>
 <li><a class="reference internal" href="#id47">返回示例</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#id48">删除官方分类</a><ul>
+<li><a class="reference internal" href="#id49">接口说明</a></li>
+<li><a class="reference internal" href="#id50">请求参数</a></li>
+<li><a class="reference internal" href="#id51">返回示例</a></li>
 </ul>
 </li>
 </ul>
@@ -290,67 +301,73 @@
 <li><a class="reference internal" href="#id4">返回示例</a></li>
 </ul>
 </li>
-<li><a class="reference internal" href="#id5">分类列表</a><ul>
+<li><a class="reference internal" href="#id5">店铺分类列表</a><ul>
 <li><a class="reference internal" href="#id6">接口说明</a></li>
 <li><a class="reference internal" href="#id7">请求参数</a></li>
 <li><a class="reference internal" href="#id8">返回示例</a></li>
 </ul>
 </li>
-<li><a class="reference internal" href="#id9">相邻分类列表</a><ul>
+<li><a class="reference internal" href="#id9">分类列表</a><ul>
 <li><a class="reference internal" href="#id10">接口说明</a></li>
 <li><a class="reference internal" href="#id11">请求参数</a></li>
 <li><a class="reference internal" href="#id12">返回示例</a></li>
 </ul>
 </li>
-<li><a class="reference internal" href="#id13">新增分类</a><ul>
+<li><a class="reference internal" href="#id13">相邻分类列表</a><ul>
 <li><a class="reference internal" href="#id14">接口说明</a></li>
 <li><a class="reference internal" href="#id15">请求参数</a></li>
-<li><a class="reference internal" href="#id16">请求示例</a></li>
-<li><a class="reference internal" href="#id17">返回示例</a></li>
+<li><a class="reference internal" href="#id16">返回示例</a></li>
 </ul>
 </li>
-<li><a class="reference internal" href="#id18">更新分类</a><ul>
-<li><a class="reference internal" href="#id19">接口说明</a></li>
-<li><a class="reference internal" href="#id20">请求参数</a></li>
-<li><a class="reference internal" href="#id21">请求示例</a></li>
-<li><a class="reference internal" href="#id22">返回示例</a></li>
+<li><a class="reference internal" href="#id17">新增分类</a><ul>
+<li><a class="reference internal" href="#id18">接口说明</a></li>
+<li><a class="reference internal" href="#id19">请求参数</a></li>
+<li><a class="reference internal" href="#id20">请求示例</a></li>
+<li><a class="reference internal" href="#id21">返回示例</a></li>
 </ul>
 </li>
-<li><a class="reference internal" href="#id23">删除分类</a><ul>
-<li><a class="reference internal" href="#id24">接口说明</a></li>
-<li><a class="reference internal" href="#id25">请求参数</a></li>
+<li><a class="reference internal" href="#id22">更新分类</a><ul>
+<li><a class="reference internal" href="#id23">接口说明</a></li>
+<li><a class="reference internal" href="#id24">请求参数</a></li>
+<li><a class="reference internal" href="#id25">请求示例</a></li>
 <li><a class="reference internal" href="#id26">返回示例</a></li>
 </ul>
 </li>
-<li><a class="reference internal" href="#id27">全部官方分类列表</a><ul>
+<li><a class="reference internal" href="#id27">删除分类</a><ul>
 <li><a class="reference internal" href="#id28">接口说明</a></li>
-<li><a class="reference internal" href="#id29">返回示例</a></li>
+<li><a class="reference internal" href="#id29">请求参数</a></li>
+<li><a class="reference internal" href="#id30">返回示例</a></li>
 </ul>
 </li>
-<li><a class="reference internal" href="#id30">官方分类列表</a><ul>
-<li><a class="reference internal" href="#id31">接口说明</a></li>
-<li><a class="reference internal" href="#id32">请求参数</a></li>
+<li><a class="reference internal" href="#id31">全部官方分类列表</a><ul>
+<li><a class="reference internal" href="#id32">接口说明</a></li>
 <li><a class="reference internal" href="#id33">返回示例</a></li>
 </ul>
 </li>
-<li><a class="reference internal" href="#id34">新增官方分类</a><ul>
+<li><a class="reference internal" href="#id34">官方分类列表</a><ul>
 <li><a class="reference internal" href="#id35">接口说明</a></li>
 <li><a class="reference internal" href="#id36">请求参数</a></li>
-<li><a class="reference internal" href="#id37">请求示例</a></li>
-<li><a class="reference internal" href="#id38">返回示例</a></li>
+<li><a class="reference internal" href="#id37">返回示例</a></li>
 </ul>
 </li>
-<li><a class="reference internal" href="#id39">更新官方分类</a><ul>
-<li><a class="reference internal" href="#id40">接口说明</a></li>
-<li><a class="reference internal" href="#id41">请求参数</a></li>
-<li><a class="reference internal" href="#id42">请求示例</a></li>
-<li><a class="reference internal" href="#id43">返回示例</a></li>
+<li><a class="reference internal" href="#id38">新增官方分类</a><ul>
+<li><a class="reference internal" href="#id39">接口说明</a></li>
+<li><a class="reference internal" href="#id40">请求参数</a></li>
+<li><a class="reference internal" href="#id41">请求示例</a></li>
+<li><a class="reference internal" href="#id42">返回示例</a></li>
 </ul>
 </li>
-<li><a class="reference internal" href="#id44">删除官方分类</a><ul>
-<li><a class="reference internal" href="#id45">接口说明</a></li>
-<li><a class="reference internal" href="#id46">请求参数</a></li>
+<li><a class="reference internal" href="#id43">更新官方分类</a><ul>
+<li><a class="reference internal" href="#id44">接口说明</a></li>
+<li><a class="reference internal" href="#id45">请求参数</a></li>
+<li><a class="reference internal" href="#id46">请求示例</a></li>
 <li><a class="reference internal" href="#id47">返回示例</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#id48">删除官方分类</a><ul>
+<li><a class="reference internal" href="#id49">接口说明</a></li>
+<li><a class="reference internal" href="#id50">请求参数</a></li>
+<li><a class="reference internal" href="#id51">返回示例</a></li>
 </ul>
 </li>
 </ul>
@@ -442,12 +459,12 @@
 </div>
 </div>
 <div class="section" id="id5">
-<h2>分类列表<a class="headerlink" href="#id5" title="永久链接至标题">¶</a></h2>
-<p>获取商品有效的分类列表</p>
+<h2>店铺分类列表<a class="headerlink" href="#id5" title="永久链接至标题">¶</a></h2>
+<p>获取商申请品牌馆授权的分类列表</p>
 <div class="section" id="id6">
 <h3>接口说明<a class="headerlink" href="#id6" title="永久链接至标题">¶</a></h3>
 <ul class="simple">
-<li>API接口请求地址：<code class="docutils literal"><span class="pre">/categories</span></code></li>
+<li>API接口请求地址：<code class="docutils literal"><span class="pre">/store/categories</span></code></li>
 <li>API接口请求方法：<code class="docutils literal"><span class="pre">GET</span></code></li>
 </ul>
 </div>
@@ -470,23 +487,11 @@
 </tr>
 </thead>
 <tbody valign="top">
-<tr class="row-even"><td>page</td>
-<td>Number</td>
+<tr class="row-even"><td>sid</td>
+<td>String</td>
 <td>可选</td>
-<td>1</td>
-<td>当前页码</td>
-</tr>
-<tr class="row-odd"><td>per_page</td>
-<td>Number</td>
-<td>可选</td>
-<td>100</td>
-<td>每页数量</td>
-</tr>
-<tr class="row-even"><td>pid</td>
-<td>Number</td>
-<td>可选</td>
-<td>0</td>
-<td>父级ID</td>
+<td>&#160;</td>
+<td>店铺编号</td>
 </tr>
 </tbody>
 </table>
@@ -552,12 +557,12 @@
 </div>
 </div>
 <div class="section" id="id9">
-<h2>相邻分类列表<a class="headerlink" href="#id9" title="永久链接至标题">¶</a></h2>
-<p>获取相邻（同级）分类列表</p>
+<h2>分类列表<a class="headerlink" href="#id9" title="永久链接至标题">¶</a></h2>
+<p>获取商品有效的分类列表</p>
 <div class="section" id="id10">
 <h3>接口说明<a class="headerlink" href="#id10" title="永久链接至标题">¶</a></h3>
 <ul class="simple">
-<li>API接口请求地址：<code class="docutils literal"><span class="pre">/categories/siblings</span></code></li>
+<li>API接口请求地址：<code class="docutils literal"><span class="pre">/categories</span></code></li>
 <li>API接口请求方法：<code class="docutils literal"><span class="pre">GET</span></code></li>
 </ul>
 </div>
@@ -592,11 +597,11 @@
 <td>100</td>
 <td>每页数量</td>
 </tr>
-<tr class="row-even"><td>cid</td>
+<tr class="row-even"><td>pid</td>
 <td>Number</td>
 <td>可选</td>
 <td>0</td>
-<td>分类ID</td>
+<td>父级ID</td>
 </tr>
 </tbody>
 </table>
@@ -662,311 +667,17 @@
 </div>
 </div>
 <div class="section" id="id13">
-<h2>新增分类<a class="headerlink" href="#id13" title="永久链接至标题">¶</a></h2>
-<p>商家自定义分类</p>
+<h2>相邻分类列表<a class="headerlink" href="#id13" title="永久链接至标题">¶</a></h2>
+<p>获取相邻（同级）分类列表</p>
 <div class="section" id="id14">
 <h3>接口说明<a class="headerlink" href="#id14" title="永久链接至标题">¶</a></h3>
 <ul class="simple">
-<li>API接口请求地址：<code class="docutils literal"><span class="pre">/categories</span></code></li>
-<li>API接口请求方法：<code class="docutils literal"><span class="pre">POST</span></code></li>
-<li>API接口用户授权：<code class="docutils literal"><span class="pre">token</span></code></li>
+<li>API接口请求地址：<code class="docutils literal"><span class="pre">/categories/siblings</span></code></li>
+<li>API接口请求方法：<code class="docutils literal"><span class="pre">GET</span></code></li>
 </ul>
 </div>
 <div class="section" id="id15">
 <h3>请求参数<a class="headerlink" href="#id15" title="永久链接至标题">¶</a></h3>
-<table border="1" class="docutils">
-<colgroup>
-<col width="18%" />
-<col width="11%" />
-<col width="12%" />
-<col width="11%" />
-<col width="49%" />
-</colgroup>
-<thead valign="bottom">
-<tr class="row-odd"><th class="head">名称</th>
-<th class="head">类型</th>
-<th class="head">是否必须</th>
-<th class="head">默认值</th>
-<th class="head">描述说明</th>
-</tr>
-</thead>
-<tbody valign="top">
-<tr class="row-even"><td>pid</td>
-<td>Number</td>
-<td>可选</td>
-<td>0</td>
-<td>父级ID</td>
-</tr>
-<tr class="row-odd"><td>name</td>
-<td>String</td>
-<td>必填</td>
-<td>&#160;</td>
-<td>分类名称</td>
-</tr>
-<tr class="row-even"><td>description</td>
-<td>String</td>
-<td>可选</td>
-<td>&#160;</td>
-<td>分类描述</td>
-</tr>
-<tr class="row-odd"><td>sort_order</td>
-<td>Number</td>
-<td>可选</td>
-<td>0</td>
-<td>排序，数字越大越靠前</td>
-</tr>
-</tbody>
-</table>
-</div>
-<div class="section" id="id16">
-<h3>请求示例<a class="headerlink" href="#id16" title="永久链接至标题">¶</a></h3>
-<p class="text-danger">
-    <small><span class="glyphicon glyphicon-star"></span></small>
-    请求参数必须以 JSON 格式形式，服务端才会获取请求的数据。
-</p><div class="highlight-javascript"><div class="highlight"><pre><span></span><span class="p">{</span><span class="s2">&quot;name&quot;</span><span class="o">:</span> <span class="s2">&quot;新分类名称&quot;</span><span class="p">,</span> <span class="s2">&quot;sort_order&quot;</span><span class="o">:</span> <span class="mi">5</span><span class="p">,</span> <span class="s2">&quot;description&quot;</span><span class="o">:</span> <span class="s2">&quot;新分类描述说明&quot;</span><span class="p">}</span>
-</pre></div>
-</div>
-</div>
-<div class="section" id="id17">
-<h3>返回示例<a class="headerlink" href="#id17" title="永久链接至标题">¶</a></h3>
-<p>JSON数据格式:</p>
-<div class="highlight-javascript"><div class="highlight"><pre><span></span><span class="p">{</span>
-  <span class="s2">&quot;data&quot;</span><span class="o">:</span> <span class="p">{</span>
-    <span class="s2">&quot;cover&quot;</span><span class="o">:</span> <span class="s2">&quot;http://kg.erp.taihuoniao.com/static/img/default-logo-180x180.png&quot;</span><span class="p">,</span>
-    <span class="s2">&quot;description&quot;</span><span class="o">:</span> <span class="s2">&quot;新分类描述说明&quot;</span><span class="p">,</span>
-    <span class="s2">&quot;id&quot;</span><span class="o">:</span> <span class="mi">21</span><span class="p">,</span>
-    <span class="s2">&quot;name&quot;</span><span class="o">:</span> <span class="s2">&quot;新分类名称&quot;</span><span class="p">,</span>
-    <span class="s2">&quot;pid&quot;</span><span class="o">:</span> <span class="mi">0</span><span class="p">,</span>
-    <span class="s2">&quot;sort_order&quot;</span><span class="o">:</span> <span class="mi">5</span><span class="p">,</span>
-    <span class="s2">&quot;status&quot;</span><span class="o">:</span> <span class="mi">1</span>
-  <span class="p">},</span>
-  <span class="s2">&quot;status&quot;</span><span class="o">:</span> <span class="p">{</span>
-    <span class="s2">&quot;code&quot;</span><span class="o">:</span> <span class="mi">201</span><span class="p">,</span>
-    <span class="s2">&quot;message&quot;</span><span class="o">:</span> <span class="s2">&quot;All created.&quot;</span>
-  <span class="p">}</span>
-<span class="p">}</span>
-</pre></div>
-</div>
-</div>
-</div>
-<div class="section" id="id18">
-<h2>更新分类<a class="headerlink" href="#id18" title="永久链接至标题">¶</a></h2>
-<p>商家修改自定义分类</p>
-<div class="section" id="id19">
-<h3>接口说明<a class="headerlink" href="#id19" title="永久链接至标题">¶</a></h3>
-<ul class="simple">
-<li>API接口请求地址：<code class="docutils literal"><span class="pre">/categories/&lt;id&gt;</span></code></li>
-<li>API接口请求方法：<code class="docutils literal"><span class="pre">PUT</span></code></li>
-<li>API接口用户授权：<code class="docutils literal"><span class="pre">token</span></code></li>
-</ul>
-</div>
-<div class="section" id="id20">
-<h3>请求参数<a class="headerlink" href="#id20" title="永久链接至标题">¶</a></h3>
-<table border="1" class="docutils">
-<colgroup>
-<col width="18%" />
-<col width="11%" />
-<col width="12%" />
-<col width="11%" />
-<col width="49%" />
-</colgroup>
-<thead valign="bottom">
-<tr class="row-odd"><th class="head">名称</th>
-<th class="head">类型</th>
-<th class="head">是否必须</th>
-<th class="head">默认值</th>
-<th class="head">描述说明</th>
-</tr>
-</thead>
-<tbody valign="top">
-<tr class="row-even"><td>pid</td>
-<td>Number</td>
-<td>可选</td>
-<td>0</td>
-<td>父级ID</td>
-</tr>
-<tr class="row-odd"><td>name</td>
-<td>String</td>
-<td>必填</td>
-<td>&#160;</td>
-<td>分类名称</td>
-</tr>
-<tr class="row-even"><td>description</td>
-<td>String</td>
-<td>可选</td>
-<td>&#160;</td>
-<td>分类描述</td>
-</tr>
-<tr class="row-odd"><td>sort_order</td>
-<td>Number</td>
-<td>可选</td>
-<td>1</td>
-<td>排序，数字越大越靠前</td>
-</tr>
-</tbody>
-</table>
-</div>
-<div class="section" id="id21">
-<h3>请求示例<a class="headerlink" href="#id21" title="永久链接至标题">¶</a></h3>
-<p>参数要求参考 <em>新增分类</em> 示例</p>
-<div class="highlight-javascript"><div class="highlight"><pre><span></span><span class="p">{</span><span class="s2">&quot;name&quot;</span><span class="o">:</span> <span class="s2">&quot;新分类名称-更新&quot;</span><span class="p">}</span>
-</pre></div>
-</div>
-</div>
-<div class="section" id="id22">
-<h3>返回示例<a class="headerlink" href="#id22" title="永久链接至标题">¶</a></h3>
-<p>JSON数据格式:</p>
-<div class="highlight-javascript"><div class="highlight"><pre><span></span><span class="p">{</span>
-   <span class="s2">&quot;data&quot;</span><span class="o">:</span> <span class="p">{</span>
-     <span class="s2">&quot;cover&quot;</span><span class="o">:</span> <span class="s2">&quot;http://kg.erp.taihuoniao.com/static/img/default-logo-180x180.png&quot;</span><span class="p">,</span>
-     <span class="s2">&quot;description&quot;</span><span class="o">:</span> <span class="s2">&quot;新分类描述说明&quot;</span><span class="p">,</span>
-     <span class="s2">&quot;id&quot;</span><span class="o">:</span> <span class="mi">21</span><span class="p">,</span>
-     <span class="s2">&quot;name&quot;</span><span class="o">:</span> <span class="s2">&quot;新分类名称-更新&quot;</span><span class="p">,</span>
-     <span class="s2">&quot;pid&quot;</span><span class="o">:</span> <span class="mi">0</span><span class="p">,</span>
-     <span class="s2">&quot;sort_order&quot;</span><span class="o">:</span> <span class="mi">5</span><span class="p">,</span>
-     <span class="s2">&quot;status&quot;</span><span class="o">:</span> <span class="mi">1</span>
-   <span class="p">},</span>
-   <span class="s2">&quot;status&quot;</span><span class="o">:</span> <span class="p">{</span>
-     <span class="s2">&quot;code&quot;</span><span class="o">:</span> <span class="mi">200</span><span class="p">,</span>
-     <span class="s2">&quot;message&quot;</span><span class="o">:</span> <span class="s2">&quot;Ok all right.&quot;</span>
-   <span class="p">}</span>
- <span class="p">}</span>
-</pre></div>
-</div>
-</div>
-</div>
-<div class="section" id="id23">
-<h2>删除分类<a class="headerlink" href="#id23" title="永久链接至标题">¶</a></h2>
-<p>删除商家自定义分类</p>
-<div class="section" id="id24">
-<h3>接口说明<a class="headerlink" href="#id24" title="永久链接至标题">¶</a></h3>
-<ul class="simple">
-<li>API接口请求地址：<code class="docutils literal"><span class="pre">/categories/&lt;id&gt;</span></code></li>
-<li>API接口请求方法：<code class="docutils literal"><span class="pre">DELETE</span></code></li>
-<li>API接口用户授权：<code class="docutils literal"><span class="pre">token</span></code></li>
-</ul>
-</div>
-<div class="section" id="id25">
-<h3>请求参数<a class="headerlink" href="#id25" title="永久链接至标题">¶</a></h3>
-<table border="1" class="docutils">
-<colgroup>
-<col width="15%" />
-<col width="11%" />
-<col width="13%" />
-<col width="11%" />
-<col width="50%" />
-</colgroup>
-<thead valign="bottom">
-<tr class="row-odd"><th class="head">名称</th>
-<th class="head">类型</th>
-<th class="head">是否必须</th>
-<th class="head">默认值</th>
-<th class="head">描述说明</th>
-</tr>
-</thead>
-<tbody valign="top">
-<tr class="row-even"><td>id</td>
-<td>Number</td>
-<td>必须</td>
-<td>&#160;</td>
-<td>分类ID</td>
-</tr>
-</tbody>
-</table>
-</div>
-<div class="section" id="id26">
-<h3>返回示例<a class="headerlink" href="#id26" title="永久链接至标题">¶</a></h3>
-<p>JSON数据格式:</p>
-<p>请求 <strong>正确</strong> 返回结果：</p>
-<div class="highlight-javascript"><div class="highlight"><pre><span></span><span class="p">{</span>
-    <span class="s2">&quot;status&quot;</span><span class="o">:</span> <span class="p">{</span>
-        <span class="s2">&quot;code&quot;</span><span class="o">:</span> <span class="mi">204</span><span class="p">,</span>
-        <span class="s2">&quot;message&quot;</span><span class="o">:</span> <span class="s2">&quot;All deleted.&quot;</span>
-    <span class="p">},</span>
-    <span class="s2">&quot;success&quot;</span><span class="o">:</span> <span class="kc">true</span>
-<span class="p">}</span>
-</pre></div>
-</div>
-<p>请求 <code class="docutils literal"><span class="pre">失败</span></code> 返回结果：</p>
-<div class="highlight-javascript"><div class="highlight"><pre><span></span><span class="p">{</span>
-    <span class="s2">&quot;status&quot;</span><span class="o">:</span> <span class="p">{</span>
-        <span class="s2">&quot;code&quot;</span><span class="o">:</span> <span class="mi">403</span><span class="p">,</span>
-        <span class="s2">&quot;message&quot;</span><span class="o">:</span> <span class="s2">&quot;该分类包含商品, 不能删除！&quot;</span>
-    <span class="p">},</span>
-    <span class="s2">&quot;success&quot;</span><span class="o">:</span> <span class="kc">false</span>
-<span class="p">}</span>
-</pre></div>
-</div>
-</div>
-</div>
-<div class="section" id="id27">
-<h2>全部官方分类列表<a class="headerlink" href="#id27" title="永久链接至标题">¶</a></h2>
-<p>获取官方全部有效的分类列表</p>
-<div class="section" id="id28">
-<h3>接口说明<a class="headerlink" href="#id28" title="永久链接至标题">¶</a></h3>
-<ul class="simple">
-<li>API接口请求地址：<code class="docutils literal"><span class="pre">/official/all_categories</span></code></li>
-<li>API接口请求方法：<code class="docutils literal"><span class="pre">GET</span></code></li>
-</ul>
-</div>
-<div class="section" id="id29">
-<h3>返回示例<a class="headerlink" href="#id29" title="永久链接至标题">¶</a></h3>
-<div class="highlight-javascript"><div class="highlight"><pre><span></span><span class="p">{</span>
-    <span class="s2">&quot;data&quot;</span><span class="o">:</span> <span class="p">{</span>
-        <span class="s2">&quot;k_1_0&quot;</span><span class="o">:</span> <span class="p">[</span>
-            <span class="p">{</span>
-                <span class="s2">&quot;cover&quot;</span><span class="o">:</span> <span class="s2">&quot;http://kg.erp.taihuoniao.com/static/img/default-logo-180x180.png&quot;</span><span class="p">,</span>
-                <span class="s2">&quot;description&quot;</span><span class="o">:</span> <span class="s2">&quot;&quot;</span><span class="p">,</span>
-                <span class="s2">&quot;id&quot;</span><span class="o">:</span> <span class="mi">1</span><span class="p">,</span>
-                <span class="s2">&quot;name&quot;</span><span class="o">:</span> <span class="s2">&quot;箱包&amp;包袋&quot;</span><span class="p">,</span>
-                <span class="s2">&quot;pid&quot;</span><span class="o">:</span> <span class="mi">0</span><span class="p">,</span>
-                <span class="s2">&quot;sort_order&quot;</span><span class="o">:</span> <span class="mi">1</span><span class="p">,</span>
-                <span class="s2">&quot;status&quot;</span><span class="o">:</span> <span class="mi">1</span>
-            <span class="p">},</span>
-            <span class="p">{</span>
-                <span class="s2">&quot;cover&quot;</span><span class="o">:</span> <span class="s2">&quot;http://127.0.0.1:9000/_uploads/photos/180530/72de0b9ca1ae5a3.jpg&quot;</span><span class="p">,</span>
-                <span class="s2">&quot;description&quot;</span><span class="o">:</span> <span class="s2">&quot;&quot;</span><span class="p">,</span>
-                <span class="s2">&quot;id&quot;</span><span class="o">:</span> <span class="mi">2</span><span class="p">,</span>
-                <span class="s2">&quot;name&quot;</span><span class="o">:</span> <span class="s2">&quot;玩具&amp;娱乐&quot;</span><span class="p">,</span>
-                <span class="s2">&quot;pid&quot;</span><span class="o">:</span> <span class="mi">0</span><span class="p">,</span>
-                <span class="s2">&quot;sort_order&quot;</span><span class="o">:</span> <span class="mi">6</span><span class="p">,</span>
-                <span class="s2">&quot;status&quot;</span><span class="o">:</span> <span class="mi">1</span>
-            <span class="p">}</span>
-        <span class="p">],</span>
-        <span class="s2">&quot;k_1_1&quot;</span><span class="o">:</span> <span class="p">[</span>
-            <span class="p">{</span>
-                <span class="s2">&quot;cover&quot;</span><span class="o">:</span> <span class="s2">&quot;http://127.0.0.1:9000/_uploads/photos/180530/72de0b9ca1ae5a3.jpg&quot;</span><span class="p">,</span>
-                <span class="s2">&quot;description&quot;</span><span class="o">:</span> <span class="s2">&quot;&quot;</span><span class="p">,</span>
-                <span class="s2">&quot;id&quot;</span><span class="o">:</span> <span class="mi">16</span><span class="p">,</span>
-                <span class="s2">&quot;name&quot;</span><span class="o">:</span> <span class="s2">&quot;儿童手工艺&quot;</span><span class="p">,</span>
-                <span class="s2">&quot;pid&quot;</span><span class="o">:</span> <span class="mi">1</span><span class="p">,</span>
-                <span class="s2">&quot;sort_order&quot;</span><span class="o">:</span> <span class="mi">11</span><span class="p">,</span>
-                <span class="s2">&quot;status&quot;</span><span class="o">:</span> <span class="mi">1</span>
-            <span class="p">}</span>
-        <span class="p">]</span>
-    <span class="p">},</span>
-    <span class="s2">&quot;status&quot;</span><span class="o">:</span> <span class="p">{</span>
-        <span class="s2">&quot;code&quot;</span><span class="o">:</span> <span class="mi">200</span><span class="p">,</span>
-        <span class="s2">&quot;message&quot;</span><span class="o">:</span> <span class="s2">&quot;Ok all right.&quot;</span>
-    <span class="p">},</span>
-    <span class="s2">&quot;success&quot;</span><span class="o">:</span> <span class="kc">true</span>
-<span class="p">}</span>
-</pre></div>
-</div>
-</div>
-</div>
-<div class="section" id="id30">
-<h2>官方分类列表<a class="headerlink" href="#id30" title="永久链接至标题">¶</a></h2>
-<p>获取商品有效的分类列表</p>
-<div class="section" id="id31">
-<h3>接口说明<a class="headerlink" href="#id31" title="永久链接至标题">¶</a></h3>
-<ul class="simple">
-<li>API接口请求地址：<code class="docutils literal"><span class="pre">/official/categories</span></code></li>
-<li>API接口请求方法：<code class="docutils literal"><span class="pre">GET</span></code></li>
-</ul>
-</div>
-<div class="section" id="id32">
-<h3>请求参数<a class="headerlink" href="#id32" title="永久链接至标题">¶</a></h3>
 <table border="1" class="docutils">
 <colgroup>
 <col width="15%" />
@@ -996,17 +707,17 @@
 <td>100</td>
 <td>每页数量</td>
 </tr>
-<tr class="row-even"><td>pid</td>
+<tr class="row-even"><td>cid</td>
 <td>Number</td>
 <td>可选</td>
 <td>0</td>
-<td>父级ID</td>
+<td>分类ID</td>
 </tr>
 </tbody>
 </table>
 </div>
-<div class="section" id="id33">
-<h3>返回示例<a class="headerlink" href="#id33" title="永久链接至标题">¶</a></h3>
+<div class="section" id="id16">
+<h3>返回示例<a class="headerlink" href="#id16" title="永久链接至标题">¶</a></h3>
 <p>JSON数据格式:</p>
 <div class="highlight-javascript"><div class="highlight"><pre><span></span><span class="p">{</span>
   <span class="s2">&quot;data&quot;</span><span class="o">:</span> <span class="p">{</span>
@@ -1065,18 +776,19 @@
 </div>
 </div>
 </div>
-<div class="section" id="id34">
-<h2>新增官方分类<a class="headerlink" href="#id34" title="永久链接至标题">¶</a></h2>
-<p>增加官方分类, 所有商家都使用</p>
-<div class="section" id="id35">
-<h3>接口说明<a class="headerlink" href="#id35" title="永久链接至标题">¶</a></h3>
+<div class="section" id="id17">
+<h2>新增分类<a class="headerlink" href="#id17" title="永久链接至标题">¶</a></h2>
+<p>商家自定义分类</p>
+<div class="section" id="id18">
+<h3>接口说明<a class="headerlink" href="#id18" title="永久链接至标题">¶</a></h3>
 <ul class="simple">
-<li>API接口请求地址：<code class="docutils literal"><span class="pre">/official/categories</span></code></li>
+<li>API接口请求地址：<code class="docutils literal"><span class="pre">/categories</span></code></li>
 <li>API接口请求方法：<code class="docutils literal"><span class="pre">POST</span></code></li>
+<li>API接口用户授权：<code class="docutils literal"><span class="pre">token</span></code></li>
 </ul>
 </div>
-<div class="section" id="id36">
-<h3>请求参数<a class="headerlink" href="#id36" title="永久链接至标题">¶</a></h3>
+<div class="section" id="id19">
+<h3>请求参数<a class="headerlink" href="#id19" title="永久链接至标题">¶</a></h3>
 <table border="1" class="docutils">
 <colgroup>
 <col width="18%" />
@@ -1121,21 +833,24 @@
 </tbody>
 </table>
 </div>
-<div class="section" id="id37">
-<h3>请求示例<a class="headerlink" href="#id37" title="永久链接至标题">¶</a></h3>
-<div class="highlight-javascript"><div class="highlight"><pre><span></span><span class="p">{</span><span class="s2">&quot;name&quot;</span><span class="o">:</span> <span class="s2">&quot;新官方分类名称&quot;</span><span class="p">,</span> <span class="s2">&quot;sort_order&quot;</span><span class="o">:</span> <span class="mi">5</span><span class="p">,</span> <span class="s2">&quot;description&quot;</span><span class="o">:</span> <span class="s2">&quot;新分类描述说明&quot;</span><span class="p">}</span>
+<div class="section" id="id20">
+<h3>请求示例<a class="headerlink" href="#id20" title="永久链接至标题">¶</a></h3>
+<p class="text-danger">
+    <small><span class="glyphicon glyphicon-star"></span></small>
+    请求参数必须以 JSON 格式形式，服务端才会获取请求的数据。
+</p><div class="highlight-javascript"><div class="highlight"><pre><span></span><span class="p">{</span><span class="s2">&quot;name&quot;</span><span class="o">:</span> <span class="s2">&quot;新分类名称&quot;</span><span class="p">,</span> <span class="s2">&quot;sort_order&quot;</span><span class="o">:</span> <span class="mi">5</span><span class="p">,</span> <span class="s2">&quot;description&quot;</span><span class="o">:</span> <span class="s2">&quot;新分类描述说明&quot;</span><span class="p">}</span>
 </pre></div>
 </div>
 </div>
-<div class="section" id="id38">
-<h3>返回示例<a class="headerlink" href="#id38" title="永久链接至标题">¶</a></h3>
+<div class="section" id="id21">
+<h3>返回示例<a class="headerlink" href="#id21" title="永久链接至标题">¶</a></h3>
 <p>JSON数据格式:</p>
 <div class="highlight-javascript"><div class="highlight"><pre><span></span><span class="p">{</span>
   <span class="s2">&quot;data&quot;</span><span class="o">:</span> <span class="p">{</span>
     <span class="s2">&quot;cover&quot;</span><span class="o">:</span> <span class="s2">&quot;http://kg.erp.taihuoniao.com/static/img/default-logo-180x180.png&quot;</span><span class="p">,</span>
     <span class="s2">&quot;description&quot;</span><span class="o">:</span> <span class="s2">&quot;新分类描述说明&quot;</span><span class="p">,</span>
     <span class="s2">&quot;id&quot;</span><span class="o">:</span> <span class="mi">21</span><span class="p">,</span>
-    <span class="s2">&quot;name&quot;</span><span class="o">:</span> <span class="s2">&quot;新官方分类名称&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;name&quot;</span><span class="o">:</span> <span class="s2">&quot;新分类名称&quot;</span><span class="p">,</span>
     <span class="s2">&quot;pid&quot;</span><span class="o">:</span> <span class="mi">0</span><span class="p">,</span>
     <span class="s2">&quot;sort_order&quot;</span><span class="o">:</span> <span class="mi">5</span><span class="p">,</span>
     <span class="s2">&quot;status&quot;</span><span class="o">:</span> <span class="mi">1</span>
@@ -1149,18 +864,19 @@
 </div>
 </div>
 </div>
-<div class="section" id="id39">
-<h2>更新官方分类<a class="headerlink" href="#id39" title="永久链接至标题">¶</a></h2>
-<p>官方修改分类, 同步所有商家</p>
-<div class="section" id="id40">
-<h3>接口说明<a class="headerlink" href="#id40" title="永久链接至标题">¶</a></h3>
+<div class="section" id="id22">
+<h2>更新分类<a class="headerlink" href="#id22" title="永久链接至标题">¶</a></h2>
+<p>商家修改自定义分类</p>
+<div class="section" id="id23">
+<h3>接口说明<a class="headerlink" href="#id23" title="永久链接至标题">¶</a></h3>
 <ul class="simple">
-<li>API接口请求地址：<code class="docutils literal"><span class="pre">/official/categories/&lt;id&gt;</span></code></li>
+<li>API接口请求地址：<code class="docutils literal"><span class="pre">/categories/&lt;id&gt;</span></code></li>
 <li>API接口请求方法：<code class="docutils literal"><span class="pre">PUT</span></code></li>
+<li>API接口用户授权：<code class="docutils literal"><span class="pre">token</span></code></li>
 </ul>
 </div>
-<div class="section" id="id41">
-<h3>请求参数<a class="headerlink" href="#id41" title="永久链接至标题">¶</a></h3>
+<div class="section" id="id24">
+<h3>请求参数<a class="headerlink" href="#id24" title="永久链接至标题">¶</a></h3>
 <table border="1" class="docutils">
 <colgroup>
 <col width="18%" />
@@ -1205,22 +921,22 @@
 </tbody>
 </table>
 </div>
-<div class="section" id="id42">
-<h3>请求示例<a class="headerlink" href="#id42" title="永久链接至标题">¶</a></h3>
-<p>参数要求参考 <em>新增官方分类</em> 示例</p>
-<div class="highlight-javascript"><div class="highlight"><pre><span></span><span class="p">{</span><span class="s2">&quot;name&quot;</span><span class="o">:</span> <span class="s2">&quot;新官方分类名称-更新&quot;</span><span class="p">}</span>
+<div class="section" id="id25">
+<h3>请求示例<a class="headerlink" href="#id25" title="永久链接至标题">¶</a></h3>
+<p>参数要求参考 <em>新增分类</em> 示例</p>
+<div class="highlight-javascript"><div class="highlight"><pre><span></span><span class="p">{</span><span class="s2">&quot;name&quot;</span><span class="o">:</span> <span class="s2">&quot;新分类名称-更新&quot;</span><span class="p">}</span>
 </pre></div>
 </div>
 </div>
-<div class="section" id="id43">
-<h3>返回示例<a class="headerlink" href="#id43" title="永久链接至标题">¶</a></h3>
+<div class="section" id="id26">
+<h3>返回示例<a class="headerlink" href="#id26" title="永久链接至标题">¶</a></h3>
 <p>JSON数据格式:</p>
 <div class="highlight-javascript"><div class="highlight"><pre><span></span><span class="p">{</span>
    <span class="s2">&quot;data&quot;</span><span class="o">:</span> <span class="p">{</span>
      <span class="s2">&quot;cover&quot;</span><span class="o">:</span> <span class="s2">&quot;http://kg.erp.taihuoniao.com/static/img/default-logo-180x180.png&quot;</span><span class="p">,</span>
      <span class="s2">&quot;description&quot;</span><span class="o">:</span> <span class="s2">&quot;新分类描述说明&quot;</span><span class="p">,</span>
      <span class="s2">&quot;id&quot;</span><span class="o">:</span> <span class="mi">21</span><span class="p">,</span>
-     <span class="s2">&quot;name&quot;</span><span class="o">:</span> <span class="s2">&quot;新官方分类名称-更新&quot;</span><span class="p">,</span>
+     <span class="s2">&quot;name&quot;</span><span class="o">:</span> <span class="s2">&quot;新分类名称-更新&quot;</span><span class="p">,</span>
      <span class="s2">&quot;pid&quot;</span><span class="o">:</span> <span class="mi">0</span><span class="p">,</span>
      <span class="s2">&quot;sort_order&quot;</span><span class="o">:</span> <span class="mi">5</span><span class="p">,</span>
      <span class="s2">&quot;status&quot;</span><span class="o">:</span> <span class="mi">1</span>
@@ -1234,18 +950,19 @@
 </div>
 </div>
 </div>
-<div class="section" id="id44">
-<h2>删除官方分类<a class="headerlink" href="#id44" title="永久链接至标题">¶</a></h2>
-<p>官方删除分类, 同步所有商家</p>
-<div class="section" id="id45">
-<h3>接口说明<a class="headerlink" href="#id45" title="永久链接至标题">¶</a></h3>
+<div class="section" id="id27">
+<h2>删除分类<a class="headerlink" href="#id27" title="永久链接至标题">¶</a></h2>
+<p>删除商家自定义分类</p>
+<div class="section" id="id28">
+<h3>接口说明<a class="headerlink" href="#id28" title="永久链接至标题">¶</a></h3>
 <ul class="simple">
-<li>API接口请求地址：<code class="docutils literal"><span class="pre">/official/categories/&lt;id&gt;</span></code></li>
+<li>API接口请求地址：<code class="docutils literal"><span class="pre">/categories/&lt;id&gt;</span></code></li>
 <li>API接口请求方法：<code class="docutils literal"><span class="pre">DELETE</span></code></li>
+<li>API接口用户授权：<code class="docutils literal"><span class="pre">token</span></code></li>
 </ul>
 </div>
-<div class="section" id="id46">
-<h3>请求参数<a class="headerlink" href="#id46" title="永久链接至标题">¶</a></h3>
+<div class="section" id="id29">
+<h3>请求参数<a class="headerlink" href="#id29" title="永久链接至标题">¶</a></h3>
 <table border="1" class="docutils">
 <colgroup>
 <col width="15%" />
@@ -1272,8 +989,406 @@
 </tbody>
 </table>
 </div>
+<div class="section" id="id30">
+<h3>返回示例<a class="headerlink" href="#id30" title="永久链接至标题">¶</a></h3>
+<p>JSON数据格式:</p>
+<p>请求 <strong>正确</strong> 返回结果：</p>
+<div class="highlight-javascript"><div class="highlight"><pre><span></span><span class="p">{</span>
+    <span class="s2">&quot;status&quot;</span><span class="o">:</span> <span class="p">{</span>
+        <span class="s2">&quot;code&quot;</span><span class="o">:</span> <span class="mi">204</span><span class="p">,</span>
+        <span class="s2">&quot;message&quot;</span><span class="o">:</span> <span class="s2">&quot;All deleted.&quot;</span>
+    <span class="p">},</span>
+    <span class="s2">&quot;success&quot;</span><span class="o">:</span> <span class="kc">true</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<p>请求 <code class="docutils literal"><span class="pre">失败</span></code> 返回结果：</p>
+<div class="highlight-javascript"><div class="highlight"><pre><span></span><span class="p">{</span>
+    <span class="s2">&quot;status&quot;</span><span class="o">:</span> <span class="p">{</span>
+        <span class="s2">&quot;code&quot;</span><span class="o">:</span> <span class="mi">403</span><span class="p">,</span>
+        <span class="s2">&quot;message&quot;</span><span class="o">:</span> <span class="s2">&quot;该分类包含商品, 不能删除！&quot;</span>
+    <span class="p">},</span>
+    <span class="s2">&quot;success&quot;</span><span class="o">:</span> <span class="kc">false</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="id31">
+<h2>全部官方分类列表<a class="headerlink" href="#id31" title="永久链接至标题">¶</a></h2>
+<p>获取官方全部有效的分类列表</p>
+<div class="section" id="id32">
+<h3>接口说明<a class="headerlink" href="#id32" title="永久链接至标题">¶</a></h3>
+<ul class="simple">
+<li>API接口请求地址：<code class="docutils literal"><span class="pre">/official/all_categories</span></code></li>
+<li>API接口请求方法：<code class="docutils literal"><span class="pre">GET</span></code></li>
+</ul>
+</div>
+<div class="section" id="id33">
+<h3>返回示例<a class="headerlink" href="#id33" title="永久链接至标题">¶</a></h3>
+<div class="highlight-javascript"><div class="highlight"><pre><span></span><span class="p">{</span>
+    <span class="s2">&quot;data&quot;</span><span class="o">:</span> <span class="p">{</span>
+        <span class="s2">&quot;k_1_0&quot;</span><span class="o">:</span> <span class="p">[</span>
+            <span class="p">{</span>
+                <span class="s2">&quot;cover&quot;</span><span class="o">:</span> <span class="s2">&quot;http://kg.erp.taihuoniao.com/static/img/default-logo-180x180.png&quot;</span><span class="p">,</span>
+                <span class="s2">&quot;description&quot;</span><span class="o">:</span> <span class="s2">&quot;&quot;</span><span class="p">,</span>
+                <span class="s2">&quot;id&quot;</span><span class="o">:</span> <span class="mi">1</span><span class="p">,</span>
+                <span class="s2">&quot;name&quot;</span><span class="o">:</span> <span class="s2">&quot;箱包&amp;包袋&quot;</span><span class="p">,</span>
+                <span class="s2">&quot;pid&quot;</span><span class="o">:</span> <span class="mi">0</span><span class="p">,</span>
+                <span class="s2">&quot;sort_order&quot;</span><span class="o">:</span> <span class="mi">1</span><span class="p">,</span>
+                <span class="s2">&quot;status&quot;</span><span class="o">:</span> <span class="mi">1</span>
+            <span class="p">},</span>
+            <span class="p">{</span>
+                <span class="s2">&quot;cover&quot;</span><span class="o">:</span> <span class="s2">&quot;http://127.0.0.1:9000/_uploads/photos/180530/72de0b9ca1ae5a3.jpg&quot;</span><span class="p">,</span>
+                <span class="s2">&quot;description&quot;</span><span class="o">:</span> <span class="s2">&quot;&quot;</span><span class="p">,</span>
+                <span class="s2">&quot;id&quot;</span><span class="o">:</span> <span class="mi">2</span><span class="p">,</span>
+                <span class="s2">&quot;name&quot;</span><span class="o">:</span> <span class="s2">&quot;玩具&amp;娱乐&quot;</span><span class="p">,</span>
+                <span class="s2">&quot;pid&quot;</span><span class="o">:</span> <span class="mi">0</span><span class="p">,</span>
+                <span class="s2">&quot;sort_order&quot;</span><span class="o">:</span> <span class="mi">6</span><span class="p">,</span>
+                <span class="s2">&quot;status&quot;</span><span class="o">:</span> <span class="mi">1</span>
+            <span class="p">}</span>
+        <span class="p">],</span>
+        <span class="s2">&quot;k_1_1&quot;</span><span class="o">:</span> <span class="p">[</span>
+            <span class="p">{</span>
+                <span class="s2">&quot;cover&quot;</span><span class="o">:</span> <span class="s2">&quot;http://127.0.0.1:9000/_uploads/photos/180530/72de0b9ca1ae5a3.jpg&quot;</span><span class="p">,</span>
+                <span class="s2">&quot;description&quot;</span><span class="o">:</span> <span class="s2">&quot;&quot;</span><span class="p">,</span>
+                <span class="s2">&quot;id&quot;</span><span class="o">:</span> <span class="mi">16</span><span class="p">,</span>
+                <span class="s2">&quot;name&quot;</span><span class="o">:</span> <span class="s2">&quot;儿童手工艺&quot;</span><span class="p">,</span>
+                <span class="s2">&quot;pid&quot;</span><span class="o">:</span> <span class="mi">1</span><span class="p">,</span>
+                <span class="s2">&quot;sort_order&quot;</span><span class="o">:</span> <span class="mi">11</span><span class="p">,</span>
+                <span class="s2">&quot;status&quot;</span><span class="o">:</span> <span class="mi">1</span>
+            <span class="p">}</span>
+        <span class="p">]</span>
+    <span class="p">},</span>
+    <span class="s2">&quot;status&quot;</span><span class="o">:</span> <span class="p">{</span>
+        <span class="s2">&quot;code&quot;</span><span class="o">:</span> <span class="mi">200</span><span class="p">,</span>
+        <span class="s2">&quot;message&quot;</span><span class="o">:</span> <span class="s2">&quot;Ok all right.&quot;</span>
+    <span class="p">},</span>
+    <span class="s2">&quot;success&quot;</span><span class="o">:</span> <span class="kc">true</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="id34">
+<h2>官方分类列表<a class="headerlink" href="#id34" title="永久链接至标题">¶</a></h2>
+<p>获取商品有效的分类列表</p>
+<div class="section" id="id35">
+<h3>接口说明<a class="headerlink" href="#id35" title="永久链接至标题">¶</a></h3>
+<ul class="simple">
+<li>API接口请求地址：<code class="docutils literal"><span class="pre">/official/categories</span></code></li>
+<li>API接口请求方法：<code class="docutils literal"><span class="pre">GET</span></code></li>
+</ul>
+</div>
+<div class="section" id="id36">
+<h3>请求参数<a class="headerlink" href="#id36" title="永久链接至标题">¶</a></h3>
+<table border="1" class="docutils">
+<colgroup>
+<col width="15%" />
+<col width="11%" />
+<col width="13%" />
+<col width="11%" />
+<col width="50%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">名称</th>
+<th class="head">类型</th>
+<th class="head">是否必须</th>
+<th class="head">默认值</th>
+<th class="head">描述说明</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>page</td>
+<td>Number</td>
+<td>可选</td>
+<td>1</td>
+<td>当前页码</td>
+</tr>
+<tr class="row-odd"><td>per_page</td>
+<td>Number</td>
+<td>可选</td>
+<td>100</td>
+<td>每页数量</td>
+</tr>
+<tr class="row-even"><td>pid</td>
+<td>Number</td>
+<td>可选</td>
+<td>0</td>
+<td>父级ID</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="id37">
+<h3>返回示例<a class="headerlink" href="#id37" title="永久链接至标题">¶</a></h3>
+<p>JSON数据格式:</p>
+<div class="highlight-javascript"><div class="highlight"><pre><span></span><span class="p">{</span>
+  <span class="s2">&quot;data&quot;</span><span class="o">:</span> <span class="p">{</span>
+    <span class="s2">&quot;categories&quot;</span><span class="o">:</span> <span class="p">[</span>
+      <span class="p">{</span>
+        <span class="s2">&quot;browse_count&quot;</span><span class="o">:</span> <span class="s2">&quot;分类浏览人数&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;cover&quot;</span><span class="o">:</span> <span class="s2">&quot;http://xxx/_uploads/photos/180530/72de0b9ca1ae5a3.jpg&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;description&quot;</span><span class="o">:</span> <span class="s2">&quot;&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;id&quot;</span><span class="o">:</span> <span class="mi">1</span><span class="p">,</span>
+        <span class="s2">&quot;name&quot;</span><span class="o">:</span> <span class="s2">&quot;家居&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;pid&quot;</span><span class="o">:</span> <span class="mi">0</span><span class="p">,</span>
+        <span class="s2">&quot;sort_order&quot;</span><span class="o">:</span> <span class="mi">4</span><span class="p">,</span>
+        <span class="s2">&quot;status&quot;</span><span class="o">:</span> <span class="mi">1</span>
+      <span class="p">},</span>
+      <span class="p">{</span>
+        <span class="s2">&quot;browse_count&quot;</span><span class="o">:</span> <span class="mi">1</span><span class="p">,</span>
+        <span class="s2">&quot;cover&quot;</span><span class="o">:</span> <span class="s2">&quot;http://xxx/_uploads/photos/180530/72de0b9ca1ae5a3.jpg&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;description&quot;</span><span class="o">:</span> <span class="s2">&quot;&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;id&quot;</span><span class="o">:</span> <span class="mi">3</span><span class="p">,</span>
+        <span class="s2">&quot;name&quot;</span><span class="o">:</span> <span class="s2">&quot;创意设计&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;pid&quot;</span><span class="o">:</span> <span class="mi">0</span><span class="p">,</span>
+        <span class="s2">&quot;sort_order&quot;</span><span class="o">:</span> <span class="mi">3</span><span class="p">,</span>
+        <span class="s2">&quot;status&quot;</span><span class="o">:</span> <span class="mi">1</span>
+      <span class="p">},</span>
+      <span class="p">{</span>
+        <span class="s2">&quot;browse_count&quot;</span><span class="o">:</span> <span class="mi">1</span><span class="p">,</span>
+        <span class="s2">&quot;cover&quot;</span><span class="o">:</span> <span class="s2">&quot;http://xxx/_uploads/photos/180530/72de0b9ca1ae5a3.jpg&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;description&quot;</span><span class="o">:</span> <span class="s2">&quot;&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;id&quot;</span><span class="o">:</span> <span class="mi">4</span><span class="p">,</span>
+        <span class="s2">&quot;name&quot;</span><span class="o">:</span> <span class="s2">&quot;杯子&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;pid&quot;</span><span class="o">:</span> <span class="mi">0</span><span class="p">,</span>
+        <span class="s2">&quot;sort_order&quot;</span><span class="o">:</span> <span class="mi">2</span><span class="p">,</span>
+        <span class="s2">&quot;status&quot;</span><span class="o">:</span> <span class="mi">1</span>
+      <span class="p">},</span>
+      <span class="p">{</span>
+        <span class="s2">&quot;browse_count&quot;</span><span class="o">:</span> <span class="mi">1</span><span class="p">,</span>
+        <span class="s2">&quot;cover&quot;</span><span class="o">:</span> <span class="s2">&quot;http://xxx/_uploads/photos/180530/72de0b9ca1ae5a3.jpg&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;description&quot;</span><span class="o">:</span> <span class="s2">&quot;&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;id&quot;</span><span class="o">:</span> <span class="mi">5</span><span class="p">,</span>
+        <span class="s2">&quot;name&quot;</span><span class="o">:</span> <span class="s2">&quot;智能硬件&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;pid&quot;</span><span class="o">:</span> <span class="mi">0</span><span class="p">,</span>
+        <span class="s2">&quot;sort_order&quot;</span><span class="o">:</span> <span class="mi">1</span><span class="p">,</span>
+        <span class="s2">&quot;status&quot;</span><span class="o">:</span> <span class="mi">1</span>
+      <span class="p">}</span>
+    <span class="p">],</span>
+    <span class="s2">&quot;count&quot;</span><span class="o">:</span> <span class="mi">17</span><span class="p">,</span>
+    <span class="s2">&quot;next&quot;</span><span class="o">:</span> <span class="kc">false</span><span class="p">,</span>
+    <span class="s2">&quot;prev&quot;</span><span class="o">:</span> <span class="kc">false</span>
+  <span class="p">},</span>
+  <span class="s2">&quot;status&quot;</span><span class="o">:</span> <span class="p">{</span>
+    <span class="s2">&quot;code&quot;</span><span class="o">:</span> <span class="mi">200</span><span class="p">,</span>
+    <span class="s2">&quot;message&quot;</span><span class="o">:</span> <span class="s2">&quot;Ok all right.&quot;</span>
+  <span class="p">}</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="id38">
+<h2>新增官方分类<a class="headerlink" href="#id38" title="永久链接至标题">¶</a></h2>
+<p>增加官方分类, 所有商家都使用</p>
+<div class="section" id="id39">
+<h3>接口说明<a class="headerlink" href="#id39" title="永久链接至标题">¶</a></h3>
+<ul class="simple">
+<li>API接口请求地址：<code class="docutils literal"><span class="pre">/official/categories</span></code></li>
+<li>API接口请求方法：<code class="docutils literal"><span class="pre">POST</span></code></li>
+</ul>
+</div>
+<div class="section" id="id40">
+<h3>请求参数<a class="headerlink" href="#id40" title="永久链接至标题">¶</a></h3>
+<table border="1" class="docutils">
+<colgroup>
+<col width="18%" />
+<col width="11%" />
+<col width="12%" />
+<col width="11%" />
+<col width="49%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">名称</th>
+<th class="head">类型</th>
+<th class="head">是否必须</th>
+<th class="head">默认值</th>
+<th class="head">描述说明</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>pid</td>
+<td>Number</td>
+<td>可选</td>
+<td>0</td>
+<td>父级ID</td>
+</tr>
+<tr class="row-odd"><td>name</td>
+<td>String</td>
+<td>必填</td>
+<td>&#160;</td>
+<td>分类名称</td>
+</tr>
+<tr class="row-even"><td>description</td>
+<td>String</td>
+<td>可选</td>
+<td>&#160;</td>
+<td>分类描述</td>
+</tr>
+<tr class="row-odd"><td>sort_order</td>
+<td>Number</td>
+<td>可选</td>
+<td>0</td>
+<td>排序，数字越大越靠前</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="id41">
+<h3>请求示例<a class="headerlink" href="#id41" title="永久链接至标题">¶</a></h3>
+<div class="highlight-javascript"><div class="highlight"><pre><span></span><span class="p">{</span><span class="s2">&quot;name&quot;</span><span class="o">:</span> <span class="s2">&quot;新官方分类名称&quot;</span><span class="p">,</span> <span class="s2">&quot;sort_order&quot;</span><span class="o">:</span> <span class="mi">5</span><span class="p">,</span> <span class="s2">&quot;description&quot;</span><span class="o">:</span> <span class="s2">&quot;新分类描述说明&quot;</span><span class="p">}</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="id42">
+<h3>返回示例<a class="headerlink" href="#id42" title="永久链接至标题">¶</a></h3>
+<p>JSON数据格式:</p>
+<div class="highlight-javascript"><div class="highlight"><pre><span></span><span class="p">{</span>
+  <span class="s2">&quot;data&quot;</span><span class="o">:</span> <span class="p">{</span>
+    <span class="s2">&quot;cover&quot;</span><span class="o">:</span> <span class="s2">&quot;http://kg.erp.taihuoniao.com/static/img/default-logo-180x180.png&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;description&quot;</span><span class="o">:</span> <span class="s2">&quot;新分类描述说明&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;id&quot;</span><span class="o">:</span> <span class="mi">21</span><span class="p">,</span>
+    <span class="s2">&quot;name&quot;</span><span class="o">:</span> <span class="s2">&quot;新官方分类名称&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;pid&quot;</span><span class="o">:</span> <span class="mi">0</span><span class="p">,</span>
+    <span class="s2">&quot;sort_order&quot;</span><span class="o">:</span> <span class="mi">5</span><span class="p">,</span>
+    <span class="s2">&quot;status&quot;</span><span class="o">:</span> <span class="mi">1</span>
+  <span class="p">},</span>
+  <span class="s2">&quot;status&quot;</span><span class="o">:</span> <span class="p">{</span>
+    <span class="s2">&quot;code&quot;</span><span class="o">:</span> <span class="mi">201</span><span class="p">,</span>
+    <span class="s2">&quot;message&quot;</span><span class="o">:</span> <span class="s2">&quot;All created.&quot;</span>
+  <span class="p">}</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="id43">
+<h2>更新官方分类<a class="headerlink" href="#id43" title="永久链接至标题">¶</a></h2>
+<p>官方修改分类, 同步所有商家</p>
+<div class="section" id="id44">
+<h3>接口说明<a class="headerlink" href="#id44" title="永久链接至标题">¶</a></h3>
+<ul class="simple">
+<li>API接口请求地址：<code class="docutils literal"><span class="pre">/official/categories/&lt;id&gt;</span></code></li>
+<li>API接口请求方法：<code class="docutils literal"><span class="pre">PUT</span></code></li>
+</ul>
+</div>
+<div class="section" id="id45">
+<h3>请求参数<a class="headerlink" href="#id45" title="永久链接至标题">¶</a></h3>
+<table border="1" class="docutils">
+<colgroup>
+<col width="18%" />
+<col width="11%" />
+<col width="12%" />
+<col width="11%" />
+<col width="49%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">名称</th>
+<th class="head">类型</th>
+<th class="head">是否必须</th>
+<th class="head">默认值</th>
+<th class="head">描述说明</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>pid</td>
+<td>Number</td>
+<td>可选</td>
+<td>0</td>
+<td>父级ID</td>
+</tr>
+<tr class="row-odd"><td>name</td>
+<td>String</td>
+<td>必填</td>
+<td>&#160;</td>
+<td>分类名称</td>
+</tr>
+<tr class="row-even"><td>description</td>
+<td>String</td>
+<td>可选</td>
+<td>&#160;</td>
+<td>分类描述</td>
+</tr>
+<tr class="row-odd"><td>sort_order</td>
+<td>Number</td>
+<td>可选</td>
+<td>1</td>
+<td>排序，数字越大越靠前</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="id46">
+<h3>请求示例<a class="headerlink" href="#id46" title="永久链接至标题">¶</a></h3>
+<p>参数要求参考 <em>新增官方分类</em> 示例</p>
+<div class="highlight-javascript"><div class="highlight"><pre><span></span><span class="p">{</span><span class="s2">&quot;name&quot;</span><span class="o">:</span> <span class="s2">&quot;新官方分类名称-更新&quot;</span><span class="p">}</span>
+</pre></div>
+</div>
+</div>
 <div class="section" id="id47">
 <h3>返回示例<a class="headerlink" href="#id47" title="永久链接至标题">¶</a></h3>
+<p>JSON数据格式:</p>
+<div class="highlight-javascript"><div class="highlight"><pre><span></span><span class="p">{</span>
+   <span class="s2">&quot;data&quot;</span><span class="o">:</span> <span class="p">{</span>
+     <span class="s2">&quot;cover&quot;</span><span class="o">:</span> <span class="s2">&quot;http://kg.erp.taihuoniao.com/static/img/default-logo-180x180.png&quot;</span><span class="p">,</span>
+     <span class="s2">&quot;description&quot;</span><span class="o">:</span> <span class="s2">&quot;新分类描述说明&quot;</span><span class="p">,</span>
+     <span class="s2">&quot;id&quot;</span><span class="o">:</span> <span class="mi">21</span><span class="p">,</span>
+     <span class="s2">&quot;name&quot;</span><span class="o">:</span> <span class="s2">&quot;新官方分类名称-更新&quot;</span><span class="p">,</span>
+     <span class="s2">&quot;pid&quot;</span><span class="o">:</span> <span class="mi">0</span><span class="p">,</span>
+     <span class="s2">&quot;sort_order&quot;</span><span class="o">:</span> <span class="mi">5</span><span class="p">,</span>
+     <span class="s2">&quot;status&quot;</span><span class="o">:</span> <span class="mi">1</span>
+   <span class="p">},</span>
+   <span class="s2">&quot;status&quot;</span><span class="o">:</span> <span class="p">{</span>
+     <span class="s2">&quot;code&quot;</span><span class="o">:</span> <span class="mi">200</span><span class="p">,</span>
+     <span class="s2">&quot;message&quot;</span><span class="o">:</span> <span class="s2">&quot;Ok all right.&quot;</span>
+   <span class="p">}</span>
+ <span class="p">}</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="id48">
+<h2>删除官方分类<a class="headerlink" href="#id48" title="永久链接至标题">¶</a></h2>
+<p>官方删除分类, 同步所有商家</p>
+<div class="section" id="id49">
+<h3>接口说明<a class="headerlink" href="#id49" title="永久链接至标题">¶</a></h3>
+<ul class="simple">
+<li>API接口请求地址：<code class="docutils literal"><span class="pre">/official/categories/&lt;id&gt;</span></code></li>
+<li>API接口请求方法：<code class="docutils literal"><span class="pre">DELETE</span></code></li>
+</ul>
+</div>
+<div class="section" id="id50">
+<h3>请求参数<a class="headerlink" href="#id50" title="永久链接至标题">¶</a></h3>
+<table border="1" class="docutils">
+<colgroup>
+<col width="15%" />
+<col width="11%" />
+<col width="13%" />
+<col width="11%" />
+<col width="50%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">名称</th>
+<th class="head">类型</th>
+<th class="head">是否必须</th>
+<th class="head">默认值</th>
+<th class="head">描述说明</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>id</td>
+<td>Number</td>
+<td>必须</td>
+<td>&#160;</td>
+<td>分类ID</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="id51">
+<h3>返回示例<a class="headerlink" href="#id51" title="永久链接至标题">¶</a></h3>
 <p>JSON数据格式:</p>
 <p>请求 <strong>正确</strong> 返回结果：</p>
 <div class="highlight-javascript"><div class="highlight"><pre><span></span><span class="p">{</span>
