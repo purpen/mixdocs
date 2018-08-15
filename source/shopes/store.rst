@@ -78,6 +78,123 @@ JSON数据格式
         "success": true
     }
 
+获取精选品牌馆
+--------------------
+**返回10条数据**
+
+接口说明
+~~~~~~~~~~~~~~
+
+* API接口请求地址：``/column/handpick_store``
+* API接口请求方法：``GET``
+
+返回示例
+~~~~~~~~~~~~~~~~
+
+JSON数据格式
+
+请求 **正确** 返回结果：
+
+.. code-block:: javascript
+
+    {
+        "data": {
+            "handpick_store": [
+                {
+                    "area": "",
+                    "area_id": null,
+                    "areacode": null,
+                    "begin_date": "",
+                    "bgcover": "http://kg.erp.taihuoniao.com/static/img/default-logo-540x540.png",
+                    "bgcover_id": null,
+                    "browse_number": null,
+                    "categories": [],
+                    "city": "",
+                    "city_id": "",
+                    "country": "",
+                    "country_id": null,
+                    "created_at": 1533973927,
+                    "delivery_city": "",
+                    "delivery_city_id": "",
+                    "delivery_country": "",
+                    "delivery_country_id": null,
+                    "delivery_date": "",
+                    "delivery_province": "",
+                    "delivery_province_id": null,
+                    "description": null,
+                    "detail": {},
+                    "distribution_type": null,
+                    "end_date": "",
+                    "fans_count": null,
+                    "is_closed": null,
+                    "kind": 2,
+                    "logo": "http://kg.erp.taihuoniao.com/static/img/default-logo.png",  // 品牌馆logo
+                    "logo_id": 0,
+                    "mobile": null,
+                    "name": "方法",  // 品牌馆名称
+                    "pattern": null,
+                    "phases": null,
+                    "phone": null,
+                    "province": "",
+                    "province_id": null,
+                    "rid": "91769542",
+                    "status": 1,
+                    "store_products_counts": 0,  // 品牌馆上架的商品数量
+                    "tag_line": null,
+                    "type": 1
+                },
+                {
+                    "area": "",
+                    "area_id": null,
+                    "areacode": null,
+                    "begin_date": "",
+                    "bgcover": "http://kg.erp.taihuoniao.com/static/img/default-logo-540x540.png",
+                    "bgcover_id": null,
+                    "browse_number": null,
+                    "categories": [],
+                    "city": "",
+                    "city_id": "",
+                    "country": "",
+                    "country_id": null,
+                    "created_at": 1533973927,
+                    "delivery_city": "",
+                    "delivery_city_id": "",
+                    "delivery_country": "",
+                    "delivery_country_id": null,
+                    "delivery_date": "",
+                    "delivery_province": "",
+                    "delivery_province_id": null,
+                    "description": null,
+                    "detail": {},
+                    "distribution_type": null,
+                    "end_date": "",
+                    "fans_count": null,
+                    "is_closed": null,
+                    "kind": 2,
+                    "logo": "http://kg.erp.taihuoniao.com/static/img/default-logo.png",
+                    "logo_id": 0,
+                    "mobile": null,
+                    "name": "订单",
+                    "pattern": null,
+                    "phases": null,
+                    "phone": null,
+                    "province": "",
+                    "province_id": null,
+                    "rid": "91769541",
+                    "status": 1,
+                    "store_products_counts": 3,
+                    "tag_line": null,
+                    "type": 1
+                }
+            ]
+        },
+        "status": {
+            "code": 200,
+            "message": "Ok all right."
+        },
+        "success": true
+    }
+
 获取特色品牌馆列表
 --------------------
 
