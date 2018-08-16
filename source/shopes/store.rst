@@ -424,6 +424,8 @@ JSON数据格式
             "end_date": "",  // 休馆结束日期
             "fans_count": 0,  // 粉丝数
             "is_closed": false,  // 是否休馆
+            "kind": 1,  // 店铺类型, 1: 品牌馆; 2: 生活馆
+            "life_record_count": 3,   // 发布的文章数量
             "logo": {
                 "created_at": null,
                 "filename": "a",
@@ -437,6 +439,7 @@ JSON数据格式
             "name": "雨一直下",  // 名称
             "pattern": 1,
             "phone": "0314-7894561",
+            "product_count": 0,   // 商品数量
             "province": "北京",
             "province_id": 1,
             "rid": "97409251",
