@@ -78,7 +78,6 @@
 <li class="toctree-l2"><a class="reference internal" href="../orders/customer_orders.html">分销商订单模块</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../orders/carts.html">购物车模块</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../orders/addresses.html">收货地址模块</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../orders/stats.html">统计模块</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../orders/comment.html">订单评价模块</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../orders/logistics.html">物流运费模块</a></li>
 </ul>
@@ -124,6 +123,9 @@
 </li>
 <li class="toctree-l1"><a class="reference internal" href="../stats/index.html">统计API模块</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="../stats/report.html">报表模块</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../stats/order_sale_stats.html">订单销售统计模块</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../stats/order_stats.html">订单结算统计模块</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../stats/small_b_order_stats.html">小b订单结算统计模块</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="../users/index.html">用户API模块</a><ul>
@@ -149,12 +151,15 @@
 <li class="toctree-l1"><a class="reference internal" href="../common.html">公用接口模块</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="../common.html#id2">幻灯图列表</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../common.html#id6">搜索关键词历史</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../common.html#id10">小程序绑定手机号发送验证码</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../common.html#id15">注册发送短信验证码</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../common.html#id20">忘记密码发送短信验证码</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../common.html#id24">动态登陆发送短信验证码</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../common.html#id28">账户编辑发送短信验证码</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../common.html#id32">发送邮件验证码</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../common.html#id10">核心平台–搜索关键词历史</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../common.html#id14">核心平台–热门搜索</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../common.html#id18">核心平台–搜索</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../common.html#id22">小程序绑定手机号发送验证码</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../common.html#id27">注册发送短信验证码</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../common.html#id32">忘记密码发送短信验证码</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../common.html#id36">动态登陆发送短信验证码</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../common.html#id40">账户编辑发送短信验证码</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../common.html#id44">发送邮件验证码</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="../setting.html">系统相关配置文档</a><ul>
@@ -1495,8 +1500,12 @@
     <span class="s2">&quot;data&quot;</span><span class="o">:</span> <span class="p">{</span>
         <span class="s2">&quot;comment_id&quot;</span><span class="o">:</span> <span class="s2">&quot;评论编号&quot;</span><span class="p">,</span>
         <span class="s2">&quot;content&quot;</span><span class="o">:</span> <span class="s2">&quot;评论内容&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;created_at&quot;</span><span class="o">:</span> <span class="s2">&quot;评论时间&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;is_praise&quot;</span><span class="o">:</span> <span class="s2">&quot;是否点过赞: true=点过赞,false=未点过赞&quot;</span><span class="p">,</span>
         <span class="s2">&quot;pid&quot;</span><span class="o">:</span> <span class="s2">&quot;上级评论编号&quot;</span><span class="p">,</span>
         <span class="s2">&quot;praise_count&quot;</span><span class="o">:</span> <span class="s2">&quot;评论点赞数&quot;</span>
+        <span class="s2">&quot;user_avatar&quot;</span><span class="o">:</span> <span class="s2">&quot;评论用户头像&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;user_name&quot;</span><span class="o">:</span> <span class="s2">&quot;评论用户名&quot;</span>
     <span class="p">},</span>
     <span class="s2">&quot;status&quot;</span><span class="o">:</span> <span class="p">{</span>
         <span class="s2">&quot;code&quot;</span><span class="o">:</span> <span class="mi">201</span><span class="p">,</span>
@@ -1730,14 +1739,22 @@
                     <span class="p">{</span>
                         <span class="s2">&quot;comment_id&quot;</span><span class="o">:</span> <span class="mi">1</span><span class="p">,</span>
                         <span class="s2">&quot;content&quot;</span><span class="o">:</span> <span class="s2">&quot;评论&quot;</span><span class="p">,</span>
+                        <span class="s2">&quot;created_at&quot;</span><span class="o">:</span> <span class="mi">1533095600</span><span class="p">,</span>
+                        <span class="s2">&quot;is_praise&quot;</span><span class="o">:</span> <span class="kc">true</span><span class="p">,</span>
                         <span class="s2">&quot;pid&quot;</span><span class="o">:</span> <span class="mi">0</span><span class="p">,</span>
-                        <span class="s2">&quot;praise_count&quot;</span><span class="o">:</span> <span class="mi">1</span>
+                        <span class="s2">&quot;praise_count&quot;</span><span class="o">:</span> <span class="mi">1</span><span class="p">,</span>
+                        <span class="s2">&quot;user_avatar&quot;</span><span class="o">:</span> <span class="s2">&quot;http://kg.erp.taihuoniao.com/static/img/default-logo.png&quot;</span><span class="p">,</span>
+                        <span class="s2">&quot;user_name&quot;</span><span class="o">:</span> <span class="s2">&quot;评论用户名&quot;</span>
                     <span class="p">},</span>
                     <span class="p">{</span>
                         <span class="s2">&quot;comment_id&quot;</span><span class="o">:</span> <span class="mi">2</span><span class="p">,</span>
                         <span class="s2">&quot;content&quot;</span><span class="o">:</span> <span class="s2">&quot;评论&quot;</span><span class="p">,</span>
+                        <span class="s2">&quot;created_at&quot;</span><span class="o">:</span> <span class="mi">1533095600</span><span class="p">,</span>
+                        <span class="s2">&quot;is_praise&quot;</span><span class="o">:</span> <span class="kc">false</span><span class="p">,</span>
                         <span class="s2">&quot;pid&quot;</span><span class="o">:</span> <span class="mi">0</span><span class="p">,</span>
-                        <span class="s2">&quot;praise_count&quot;</span><span class="o">:</span> <span class="mi">0</span>
+                        <span class="s2">&quot;praise_count&quot;</span><span class="o">:</span> <span class="mi">0</span><span class="p">,</span>
+                        <span class="s2">&quot;user_avatar&quot;</span><span class="o">:</span> <span class="s2">&quot;http://kg.erp.taihuoniao.com/static/img/default-logo.png&quot;</span><span class="p">,</span>
+                        <span class="s2">&quot;user_name&quot;</span><span class="o">:</span> <span class="s2">&quot;评论用户名&quot;</span>
                     <span class="p">}</span>
                 <span class="p">],</span>
                 <span class="s2">&quot;count&quot;</span><span class="o">:</span> <span class="mi">2</span>
@@ -1747,8 +1764,12 @@
                     <span class="p">{</span>
                         <span class="s2">&quot;comment_id&quot;</span><span class="o">:</span> <span class="mi">11</span><span class="p">,</span>
                         <span class="s2">&quot;content&quot;</span><span class="o">:</span> <span class="s2">&quot;评论&quot;</span><span class="p">,</span>
+                        <span class="s2">&quot;created_at&quot;</span><span class="o">:</span> <span class="mi">1533095600</span><span class="p">,</span>
+                        <span class="s2">&quot;is_praise&quot;</span><span class="o">:</span> <span class="kc">false</span><span class="p">,</span>
                         <span class="s2">&quot;pid&quot;</span><span class="o">:</span> <span class="mi">1</span><span class="p">,</span>
-                        <span class="s2">&quot;praise_count&quot;</span><span class="o">:</span> <span class="mi">0</span>
+                        <span class="s2">&quot;praise_count&quot;</span><span class="o">:</span> <span class="mi">0</span><span class="p">,</span>
+                        <span class="s2">&quot;user_avatar&quot;</span><span class="o">:</span> <span class="s2">&quot;http://kg.erp.taihuoniao.com/static/img/default-logo.png&quot;</span><span class="p">,</span>
+                        <span class="s2">&quot;user_name&quot;</span><span class="o">:</span> <span class="s2">&quot;评论用户名&quot;</span>
                     <span class="p">}</span>
                 <span class="p">],</span>
                 <span class="s2">&quot;count&quot;</span><span class="o">:</span> <span class="mi">4</span>
@@ -1758,8 +1779,12 @@
                     <span class="p">{</span>
                         <span class="s2">&quot;comment_id&quot;</span><span class="o">:</span> <span class="mi">7</span><span class="p">,</span>
                         <span class="s2">&quot;content&quot;</span><span class="o">:</span> <span class="s2">&quot;评论&quot;</span><span class="p">,</span>
+                        <span class="s2">&quot;created_at&quot;</span><span class="o">:</span> <span class="mi">1533095600</span><span class="p">,</span>
+                        <span class="s2">&quot;is_praise&quot;</span><span class="o">:</span> <span class="kc">false</span><span class="p">,</span>
                         <span class="s2">&quot;pid&quot;</span><span class="o">:</span> <span class="mi">2</span><span class="p">,</span>
-                        <span class="s2">&quot;praise_count&quot;</span><span class="o">:</span> <span class="mi">0</span>
+                        <span class="s2">&quot;praise_count&quot;</span><span class="o">:</span> <span class="mi">0</span><span class="p">,</span>
+                        <span class="s2">&quot;user_avatar&quot;</span><span class="o">:</span> <span class="s2">&quot;http://kg.erp.taihuoniao.com/static/img/default-logo.png&quot;</span><span class="p">,</span>
+                        <span class="s2">&quot;user_name&quot;</span><span class="o">:</span> <span class="s2">&quot;评论用户名&quot;</span>
                     <span class="p">}</span>
                 <span class="p">],</span>
                 <span class="s2">&quot;count&quot;</span><span class="o">:</span> <span class="mi">4</span>
@@ -1843,14 +1868,22 @@
             <span class="p">{</span>
                 <span class="s2">&quot;comment_id&quot;</span><span class="o">:</span> <span class="mi">7</span><span class="p">,</span>
                 <span class="s2">&quot;content&quot;</span><span class="o">:</span> <span class="s2">&quot;评论&quot;</span><span class="p">,</span>
+                <span class="s2">&quot;created_at&quot;</span><span class="o">:</span> <span class="mi">1533095600</span><span class="p">,</span>
+                <span class="s2">&quot;is_praise&quot;</span><span class="o">:</span> <span class="kc">false</span><span class="p">,</span>
                 <span class="s2">&quot;pid&quot;</span><span class="o">:</span> <span class="mi">2</span><span class="p">,</span>
-                <span class="s2">&quot;praise_count&quot;</span><span class="o">:</span> <span class="mi">0</span>
+                <span class="s2">&quot;praise_count&quot;</span><span class="o">:</span> <span class="mi">0</span><span class="p">,</span>
+                <span class="s2">&quot;user_avatar&quot;</span><span class="o">:</span> <span class="s2">&quot;http://kg.erp.taihuoniao.com/static/img/default-logo.png&quot;</span><span class="p">,</span>
+                <span class="s2">&quot;user_name&quot;</span><span class="o">:</span> <span class="s2">&quot;评论用户名&quot;</span>
             <span class="p">},</span>
             <span class="p">{</span>
                 <span class="s2">&quot;comment_id&quot;</span><span class="o">:</span> <span class="mi">8</span><span class="p">,</span>
                 <span class="s2">&quot;content&quot;</span><span class="o">:</span> <span class="s2">&quot;评论&quot;</span><span class="p">,</span>
+                <span class="s2">&quot;created_at&quot;</span><span class="o">:</span> <span class="mi">1533095600</span><span class="p">,</span>
+                <span class="s2">&quot;is_praise&quot;</span><span class="o">:</span> <span class="kc">false</span><span class="p">,</span>
                 <span class="s2">&quot;pid&quot;</span><span class="o">:</span> <span class="mi">2</span><span class="p">,</span>
-                <span class="s2">&quot;praise_count&quot;</span><span class="o">:</span> <span class="mi">0</span>
+                <span class="s2">&quot;praise_count&quot;</span><span class="o">:</span> <span class="mi">0</span><span class="p">,</span>
+                <span class="s2">&quot;user_avatar&quot;</span><span class="o">:</span> <span class="s2">&quot;http://kg.erp.taihuoniao.com/static/img/default-logo.png&quot;</span><span class="p">,</span>
+                <span class="s2">&quot;user_name&quot;</span><span class="o">:</span> <span class="s2">&quot;评论用户名&quot;</span>
             <span class="p">}</span>
         <span class="p">],</span>
         <span class="s2">&quot;count&quot;</span><span class="o">:</span> <span class="mi">4</span><span class="p">,</span>

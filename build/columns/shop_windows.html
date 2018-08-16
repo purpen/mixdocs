@@ -1500,8 +1500,12 @@
     <span class="s2">&quot;data&quot;</span><span class="o">:</span> <span class="p">{</span>
         <span class="s2">&quot;comment_id&quot;</span><span class="o">:</span> <span class="s2">&quot;评论编号&quot;</span><span class="p">,</span>
         <span class="s2">&quot;content&quot;</span><span class="o">:</span> <span class="s2">&quot;评论内容&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;created_at&quot;</span><span class="o">:</span> <span class="s2">&quot;评论时间&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;is_praise&quot;</span><span class="o">:</span> <span class="s2">&quot;是否点过赞: true=点过赞,false=未点过赞&quot;</span><span class="p">,</span>
         <span class="s2">&quot;pid&quot;</span><span class="o">:</span> <span class="s2">&quot;上级评论编号&quot;</span><span class="p">,</span>
         <span class="s2">&quot;praise_count&quot;</span><span class="o">:</span> <span class="s2">&quot;评论点赞数&quot;</span>
+        <span class="s2">&quot;user_avatar&quot;</span><span class="o">:</span> <span class="s2">&quot;评论用户头像&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;user_name&quot;</span><span class="o">:</span> <span class="s2">&quot;评论用户名&quot;</span>
     <span class="p">},</span>
     <span class="s2">&quot;status&quot;</span><span class="o">:</span> <span class="p">{</span>
         <span class="s2">&quot;code&quot;</span><span class="o">:</span> <span class="mi">201</span><span class="p">,</span>
@@ -1735,14 +1739,22 @@
                     <span class="p">{</span>
                         <span class="s2">&quot;comment_id&quot;</span><span class="o">:</span> <span class="mi">1</span><span class="p">,</span>
                         <span class="s2">&quot;content&quot;</span><span class="o">:</span> <span class="s2">&quot;评论&quot;</span><span class="p">,</span>
+                        <span class="s2">&quot;created_at&quot;</span><span class="o">:</span> <span class="mi">1533095600</span><span class="p">,</span>
+                        <span class="s2">&quot;is_praise&quot;</span><span class="o">:</span> <span class="kc">true</span><span class="p">,</span>
                         <span class="s2">&quot;pid&quot;</span><span class="o">:</span> <span class="mi">0</span><span class="p">,</span>
-                        <span class="s2">&quot;praise_count&quot;</span><span class="o">:</span> <span class="mi">1</span>
+                        <span class="s2">&quot;praise_count&quot;</span><span class="o">:</span> <span class="mi">1</span><span class="p">,</span>
+                        <span class="s2">&quot;user_avatar&quot;</span><span class="o">:</span> <span class="s2">&quot;http://kg.erp.taihuoniao.com/static/img/default-logo.png&quot;</span><span class="p">,</span>
+                        <span class="s2">&quot;user_name&quot;</span><span class="o">:</span> <span class="s2">&quot;评论用户名&quot;</span>
                     <span class="p">},</span>
                     <span class="p">{</span>
                         <span class="s2">&quot;comment_id&quot;</span><span class="o">:</span> <span class="mi">2</span><span class="p">,</span>
                         <span class="s2">&quot;content&quot;</span><span class="o">:</span> <span class="s2">&quot;评论&quot;</span><span class="p">,</span>
+                        <span class="s2">&quot;created_at&quot;</span><span class="o">:</span> <span class="mi">1533095600</span><span class="p">,</span>
+                        <span class="s2">&quot;is_praise&quot;</span><span class="o">:</span> <span class="kc">false</span><span class="p">,</span>
                         <span class="s2">&quot;pid&quot;</span><span class="o">:</span> <span class="mi">0</span><span class="p">,</span>
-                        <span class="s2">&quot;praise_count&quot;</span><span class="o">:</span> <span class="mi">0</span>
+                        <span class="s2">&quot;praise_count&quot;</span><span class="o">:</span> <span class="mi">0</span><span class="p">,</span>
+                        <span class="s2">&quot;user_avatar&quot;</span><span class="o">:</span> <span class="s2">&quot;http://kg.erp.taihuoniao.com/static/img/default-logo.png&quot;</span><span class="p">,</span>
+                        <span class="s2">&quot;user_name&quot;</span><span class="o">:</span> <span class="s2">&quot;评论用户名&quot;</span>
                     <span class="p">}</span>
                 <span class="p">],</span>
                 <span class="s2">&quot;count&quot;</span><span class="o">:</span> <span class="mi">2</span>
@@ -1752,8 +1764,12 @@
                     <span class="p">{</span>
                         <span class="s2">&quot;comment_id&quot;</span><span class="o">:</span> <span class="mi">11</span><span class="p">,</span>
                         <span class="s2">&quot;content&quot;</span><span class="o">:</span> <span class="s2">&quot;评论&quot;</span><span class="p">,</span>
+                        <span class="s2">&quot;created_at&quot;</span><span class="o">:</span> <span class="mi">1533095600</span><span class="p">,</span>
+                        <span class="s2">&quot;is_praise&quot;</span><span class="o">:</span> <span class="kc">false</span><span class="p">,</span>
                         <span class="s2">&quot;pid&quot;</span><span class="o">:</span> <span class="mi">1</span><span class="p">,</span>
-                        <span class="s2">&quot;praise_count&quot;</span><span class="o">:</span> <span class="mi">0</span>
+                        <span class="s2">&quot;praise_count&quot;</span><span class="o">:</span> <span class="mi">0</span><span class="p">,</span>
+                        <span class="s2">&quot;user_avatar&quot;</span><span class="o">:</span> <span class="s2">&quot;http://kg.erp.taihuoniao.com/static/img/default-logo.png&quot;</span><span class="p">,</span>
+                        <span class="s2">&quot;user_name&quot;</span><span class="o">:</span> <span class="s2">&quot;评论用户名&quot;</span>
                     <span class="p">}</span>
                 <span class="p">],</span>
                 <span class="s2">&quot;count&quot;</span><span class="o">:</span> <span class="mi">4</span>
@@ -1763,8 +1779,12 @@
                     <span class="p">{</span>
                         <span class="s2">&quot;comment_id&quot;</span><span class="o">:</span> <span class="mi">7</span><span class="p">,</span>
                         <span class="s2">&quot;content&quot;</span><span class="o">:</span> <span class="s2">&quot;评论&quot;</span><span class="p">,</span>
+                        <span class="s2">&quot;created_at&quot;</span><span class="o">:</span> <span class="mi">1533095600</span><span class="p">,</span>
+                        <span class="s2">&quot;is_praise&quot;</span><span class="o">:</span> <span class="kc">false</span><span class="p">,</span>
                         <span class="s2">&quot;pid&quot;</span><span class="o">:</span> <span class="mi">2</span><span class="p">,</span>
-                        <span class="s2">&quot;praise_count&quot;</span><span class="o">:</span> <span class="mi">0</span>
+                        <span class="s2">&quot;praise_count&quot;</span><span class="o">:</span> <span class="mi">0</span><span class="p">,</span>
+                        <span class="s2">&quot;user_avatar&quot;</span><span class="o">:</span> <span class="s2">&quot;http://kg.erp.taihuoniao.com/static/img/default-logo.png&quot;</span><span class="p">,</span>
+                        <span class="s2">&quot;user_name&quot;</span><span class="o">:</span> <span class="s2">&quot;评论用户名&quot;</span>
                     <span class="p">}</span>
                 <span class="p">],</span>
                 <span class="s2">&quot;count&quot;</span><span class="o">:</span> <span class="mi">4</span>
@@ -1848,14 +1868,22 @@
             <span class="p">{</span>
                 <span class="s2">&quot;comment_id&quot;</span><span class="o">:</span> <span class="mi">7</span><span class="p">,</span>
                 <span class="s2">&quot;content&quot;</span><span class="o">:</span> <span class="s2">&quot;评论&quot;</span><span class="p">,</span>
+                <span class="s2">&quot;created_at&quot;</span><span class="o">:</span> <span class="mi">1533095600</span><span class="p">,</span>
+                <span class="s2">&quot;is_praise&quot;</span><span class="o">:</span> <span class="kc">false</span><span class="p">,</span>
                 <span class="s2">&quot;pid&quot;</span><span class="o">:</span> <span class="mi">2</span><span class="p">,</span>
-                <span class="s2">&quot;praise_count&quot;</span><span class="o">:</span> <span class="mi">0</span>
+                <span class="s2">&quot;praise_count&quot;</span><span class="o">:</span> <span class="mi">0</span><span class="p">,</span>
+                <span class="s2">&quot;user_avatar&quot;</span><span class="o">:</span> <span class="s2">&quot;http://kg.erp.taihuoniao.com/static/img/default-logo.png&quot;</span><span class="p">,</span>
+                <span class="s2">&quot;user_name&quot;</span><span class="o">:</span> <span class="s2">&quot;评论用户名&quot;</span>
             <span class="p">},</span>
             <span class="p">{</span>
                 <span class="s2">&quot;comment_id&quot;</span><span class="o">:</span> <span class="mi">8</span><span class="p">,</span>
                 <span class="s2">&quot;content&quot;</span><span class="o">:</span> <span class="s2">&quot;评论&quot;</span><span class="p">,</span>
+                <span class="s2">&quot;created_at&quot;</span><span class="o">:</span> <span class="mi">1533095600</span><span class="p">,</span>
+                <span class="s2">&quot;is_praise&quot;</span><span class="o">:</span> <span class="kc">false</span><span class="p">,</span>
                 <span class="s2">&quot;pid&quot;</span><span class="o">:</span> <span class="mi">2</span><span class="p">,</span>
-                <span class="s2">&quot;praise_count&quot;</span><span class="o">:</span> <span class="mi">0</span>
+                <span class="s2">&quot;praise_count&quot;</span><span class="o">:</span> <span class="mi">0</span><span class="p">,</span>
+                <span class="s2">&quot;user_avatar&quot;</span><span class="o">:</span> <span class="s2">&quot;http://kg.erp.taihuoniao.com/static/img/default-logo.png&quot;</span><span class="p">,</span>
+                <span class="s2">&quot;user_name&quot;</span><span class="o">:</span> <span class="s2">&quot;评论用户名&quot;</span>
             <span class="p">}</span>
         <span class="p">],</span>
         <span class="s2">&quot;count&quot;</span><span class="o">:</span> <span class="mi">4</span><span class="p">,</span>
