@@ -752,8 +752,12 @@ JSON数据格式:
         "data": {
             "comment_id": "评论编号",
             "content": "评论内容",
+            "created_at": "评论时间",
+            "is_praise": "是否点过赞: true=点过赞,false=未点过赞",
             "pid": "上级评论编号",
             "praise_count": "评论点赞数"
+            "user_avatar": "评论用户头像",
+            "user_name": "评论用户名"
         },
         "status": {
             "code": 201,
@@ -904,14 +908,22 @@ JSON数据格式:
                         {
                             "comment_id": 1,
                             "content": "评论",
+                            "created_at": 1533095600,
+                            "is_praise": true,
                             "pid": 0,
-                            "praise_count": 1
+                            "praise_count": 1,
+                            "user_avatar": "http://kg.erp.taihuoniao.com/static/img/default-logo.png",
+                            "user_name": "评论用户名"
                         },
                         {
                             "comment_id": 2,
                             "content": "评论",
+                            "created_at": 1533095600,
+                            "is_praise": false,
                             "pid": 0,
-                            "praise_count": 0
+                            "praise_count": 0,
+                            "user_avatar": "http://kg.erp.taihuoniao.com/static/img/default-logo.png",
+                            "user_name": "评论用户名"
                         }
                     ],
                     "count": 2
@@ -921,8 +933,12 @@ JSON数据格式:
                         {
                             "comment_id": 11,
                             "content": "评论",
+                            "created_at": 1533095600,
+                            "is_praise": false,
                             "pid": 1,
-                            "praise_count": 0
+                            "praise_count": 0,
+                            "user_avatar": "http://kg.erp.taihuoniao.com/static/img/default-logo.png",
+                            "user_name": "评论用户名"
                         }
                     ],
                     "count": 4
@@ -932,8 +948,12 @@ JSON数据格式:
                         {
                             "comment_id": 7,
                             "content": "评论",
+                            "created_at": 1533095600,
+                            "is_praise": false,
                             "pid": 2,
-                            "praise_count": 0
+                            "praise_count": 0,
+                            "user_avatar": "http://kg.erp.taihuoniao.com/static/img/default-logo.png",
+                            "user_name": "评论用户名"
                         }
                     ],
                     "count": 4
@@ -985,14 +1005,22 @@ JSON数据格式:
                 {
                     "comment_id": 7,
                     "content": "评论",
+                    "created_at": 1533095600,
+                    "is_praise": false,
                     "pid": 2,
-                    "praise_count": 0
+                    "praise_count": 0,
+                    "user_avatar": "http://kg.erp.taihuoniao.com/static/img/default-logo.png",
+                    "user_name": "评论用户名"
                 },
                 {
                     "comment_id": 8,
                     "content": "评论",
+                    "created_at": 1533095600,
+                    "is_praise": false,
                     "pid": 2,
-                    "praise_count": 0
+                    "praise_count": 0,
+                    "user_avatar": "http://kg.erp.taihuoniao.com/static/img/default-logo.png",
+                    "user_name": "评论用户名"
                 }
             ],
             "count": 4,
