@@ -369,11 +369,13 @@ JSON数据格式
 
     {
         "data": {
+            "ID": "17048395612",  // 用户ID
             "about_me": "肚子好饿",  // 签名
             "avatar": "http://0.0.0.0:9000/_uploads/photos/static/img/default2-logo-180x180.png",  // 头像
             "followed_stores_counts": 2,  // 关注的店铺数量
             "followed_users_counts": 0,  // 关注的用户数量
             "fans_counts": 0,  // 粉丝数量
+            "store_phases": 1,  // 生活馆阶段, 1:实习; 2:正式
             "user_like_counts": 0,  // 喜欢的数量
             "username": "张飞",  // 用户名
             "wish_list_counts": 0  // 收藏的数量
