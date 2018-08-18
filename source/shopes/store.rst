@@ -304,6 +304,7 @@ JSON数据格式
                     "name": "天猫",  // 店铺名
                     "pattern": 1,  // 品牌馆营业模型
                     "phone": null,  // 座机号
+                    "products": [],  // 店铺商品, 默认十条
                     "products_cover": [
                         "http://0.0.0.0:9000/_uploads/photos/static/img/default2-logo-180x180.png"
                     ],  // 山品封面图
@@ -422,6 +423,7 @@ JSON数据格式
 
     {
         "data": {
+            "announcement": "公告",  // 公告
             "area": "",
             "area_id": 0,
             "areacode": "+86",
