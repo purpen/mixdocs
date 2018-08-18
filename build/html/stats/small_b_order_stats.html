@@ -214,6 +214,18 @@
 <li><a class="reference internal" href="#id16">返回示例</a></li>
 </ul>
 </li>
+<li><a class="reference internal" href="#id17">生活馆对账单</a><ul>
+<li><a class="reference internal" href="#id18">接口说明</a></li>
+<li><a class="reference internal" href="#id19">请求参数</a></li>
+<li><a class="reference internal" href="#id20">返回示例</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#id21">生活馆对账单详情</a><ul>
+<li><a class="reference internal" href="#id22">接口说明</a></li>
+<li><a class="reference internal" href="#id23">请求参数</a></li>
+<li><a class="reference internal" href="#id24">返回示例</a></li>
+</ul>
+</li>
 </ul>
 </li>
 </ul>
@@ -268,6 +280,18 @@
 <li><a class="reference internal" href="#id14">接口说明</a></li>
 <li><a class="reference internal" href="#id15">请求参数</a></li>
 <li><a class="reference internal" href="#id16">返回示例</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#id17">生活馆对账单</a><ul>
+<li><a class="reference internal" href="#id18">接口说明</a></li>
+<li><a class="reference internal" href="#id19">请求参数</a></li>
+<li><a class="reference internal" href="#id20">返回示例</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#id21">生活馆对账单详情</a><ul>
+<li><a class="reference internal" href="#id22">接口说明</a></li>
+<li><a class="reference internal" href="#id23">请求参数</a></li>
+<li><a class="reference internal" href="#id24">返回示例</a></li>
 </ul>
 </li>
 </ul>
@@ -508,7 +532,7 @@
 <td>String</td>
 <td>必需</td>
 <td>&#160;</td>
-<td>统计日期 ‘2018-01-09’ ‘week’:近7天  ‘month’:近一月</td>
+<td>统计日期 ‘2018-01’ ‘week’:近7天  ‘month’:近一月</td>
 </tr>
 <tr class="row-odd"><td>store_rid</td>
 <td>String</td>
@@ -552,6 +576,175 @@
                 <span class="s2">&quot;status&quot;</span><span class="o">:</span> <span class="mi">1</span>  <span class="c1">// 状态 1、待结算 2、成功 3、退款</span>
             <span class="p">},</span>
         <span class="p">]</span>
+    <span class="p">},</span>
+    <span class="s2">&quot;status&quot;</span><span class="o">:</span> <span class="p">{</span>
+        <span class="s2">&quot;code&quot;</span><span class="o">:</span> <span class="mi">200</span><span class="p">,</span>
+        <span class="s2">&quot;message&quot;</span><span class="o">:</span> <span class="s2">&quot;Ok all right.&quot;</span>
+    <span class="p">},</span>
+    <span class="s2">&quot;success&quot;</span><span class="o">:</span> <span class="kc">true</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="id17">
+<h2>生活馆对账单<a class="headerlink" href="#id17" title="永久链接至标题">¶</a></h2>
+<p>生活馆对账单</p>
+<div class="section" id="id18">
+<h3>接口说明<a class="headerlink" href="#id18" title="永久链接至标题">¶</a></h3>
+<ul class="simple">
+<li>API接口请求地址：<code class="docutils literal"><span class="pre">/stats/life_orders/statements</span></code></li>
+<li>API接口请求方法：<code class="docutils literal"><span class="pre">GET</span></code></li>
+<li>API接口用户授权：<code class="docutils literal"><span class="pre">token</span></code></li>
+</ul>
+</div>
+<div class="section" id="id19">
+<h3>请求参数<a class="headerlink" href="#id19" title="永久链接至标题">¶</a></h3>
+<table border="1" class="docutils">
+<colgroup>
+<col width="21%" />
+<col width="10%" />
+<col width="9%" />
+<col width="10%" />
+<col width="51%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">名称</th>
+<th class="head">类型</th>
+<th class="head">是否必须</th>
+<th class="head">默认值</th>
+<th class="head">描述说明</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>store_rid</td>
+<td>String</td>
+<td>必需</td>
+<td>&#160;</td>
+<td>生活馆rid</td>
+</tr>
+<tr class="row-odd"><td>page</td>
+<td>Number</td>
+<td>可选</td>
+<td>1</td>
+<td>当前页码</td>
+</tr>
+<tr class="row-even"><td>per_page</td>
+<td>Number</td>
+<td>可选</td>
+<td>10</td>
+<td>每页数量</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="id20">
+<h3>返回示例<a class="headerlink" href="#id20" title="永久链接至标题">¶</a></h3>
+<p>JSON数据格式:</p>
+<div class="highlight-javascript"><div class="highlight"><pre><span></span><span class="p">{</span>
+    <span class="s2">&quot;data&quot;</span><span class="o">:</span> <span class="p">{</span>
+        <span class="s2">&quot;statements&quot;</span><span class="o">:</span> <span class="p">{</span>
+            <span class="s2">&quot;2018&quot;</span><span class="o">:</span> <span class="p">{</span>
+                <span class="s2">&quot;7&quot;</span><span class="o">:</span> <span class="p">{</span>
+                    <span class="s2">&quot;statements&quot;</span><span class="o">:</span> <span class="p">[</span>
+                        <span class="p">{</span>
+                            <span class="s2">&quot;actual_amount&quot;</span><span class="o">:</span> <span class="mi">11</span><span class="p">,</span>  <span class="c1">// 提现金额</span>
+                            <span class="s2">&quot;created_at&quot;</span><span class="o">:</span> <span class="mi">1534581237</span><span class="p">,</span>  <span class="c1">// 提现时间</span>
+                            <span class="s2">&quot;receive_target&quot;</span><span class="o">:</span> <span class="mi">1</span><span class="p">,</span>  <span class="c1">// 提现到 1、微信零钱包</span>
+                            <span class="s2">&quot;record_id&quot;</span><span class="o">:</span> <span class="mi">3</span><span class="p">,</span>  <span class="c1">// 记录id</span>
+                            <span class="s2">&quot;service_fee&quot;</span><span class="o">:</span> <span class="mi">0</span><span class="p">,</span>  <span class="c1">// 服务费</span>
+                            <span class="s2">&quot;status&quot;</span><span class="o">:</span> <span class="mi">2</span><span class="p">,</span>  <span class="c1">// 提现状态 1、审核中 2、成功 3、失败</span>
+                            <span class="s2">&quot;store_rid&quot;</span><span class="o">:</span> <span class="s2">&quot;2&quot;</span>  <span class="c1">//  生活馆rid</span>
+                        <span class="p">}</span>
+                    <span class="p">],</span>
+                    <span class="s2">&quot;total_amount&quot;</span><span class="o">:</span> <span class="mi">11</span>
+                <span class="p">},</span>
+            <span class="p">}</span>
+        <span class="p">}</span>
+    <span class="p">},</span>
+    <span class="s2">&quot;status&quot;</span><span class="o">:</span> <span class="p">{</span>
+        <span class="s2">&quot;code&quot;</span><span class="o">:</span> <span class="mi">200</span><span class="p">,</span>
+        <span class="s2">&quot;message&quot;</span><span class="o">:</span> <span class="s2">&quot;Ok all right.&quot;</span>
+    <span class="p">},</span>
+    <span class="s2">&quot;success&quot;</span><span class="o">:</span> <span class="kc">true</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="id21">
+<h2>生活馆对账单详情<a class="headerlink" href="#id21" title="永久链接至标题">¶</a></h2>
+<p>生活馆对账单详情</p>
+<div class="section" id="id22">
+<h3>接口说明<a class="headerlink" href="#id22" title="永久链接至标题">¶</a></h3>
+<ul class="simple">
+<li>API接口请求地址：<code class="docutils literal"><span class="pre">/stats/life_orders/statement_items</span></code></li>
+<li>API接口请求方法：<code class="docutils literal"><span class="pre">GET</span></code></li>
+<li>API接口用户授权：<code class="docutils literal"><span class="pre">token</span></code></li>
+</ul>
+</div>
+<div class="section" id="id23">
+<h3>请求参数<a class="headerlink" href="#id23" title="永久链接至标题">¶</a></h3>
+<table border="1" class="docutils">
+<colgroup>
+<col width="21%" />
+<col width="10%" />
+<col width="9%" />
+<col width="10%" />
+<col width="51%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">名称</th>
+<th class="head">类型</th>
+<th class="head">是否必须</th>
+<th class="head">默认值</th>
+<th class="head">描述说明</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>store_rid</td>
+<td>String</td>
+<td>必需</td>
+<td>&#160;</td>
+<td>生活馆rid</td>
+</tr>
+<tr class="row-odd"><td>record_id</td>
+<td>String</td>
+<td>必需</td>
+<td>&#160;</td>
+<td>对账单id</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="id24">
+<h3>返回示例<a class="headerlink" href="#id24" title="永久链接至标题">¶</a></h3>
+<p>JSON数据格式:</p>
+<div class="highlight-javascript"><div class="highlight"><pre><span></span><span class="p">{</span>
+    <span class="s2">&quot;data&quot;</span><span class="o">:</span> <span class="p">{</span>
+        <span class="s2">&quot;life_cash_record_dict&quot;</span><span class="o">:</span> <span class="p">{</span>
+            <span class="s2">&quot;actual_amount&quot;</span><span class="o">:</span> <span class="mi">22</span><span class="p">,</span>  <span class="c1">// 提现金额</span>
+            <span class="s2">&quot;created_at&quot;</span><span class="o">:</span> <span class="mi">1534582337</span><span class="p">,</span>  <span class="c1">// 提现时间</span>
+            <span class="s2">&quot;order_info&quot;</span><span class="o">:</span> <span class="p">{</span>
+                <span class="s2">&quot;1970&quot;</span><span class="o">:</span> <span class="p">{</span>
+                    <span class="s2">&quot;1&quot;</span><span class="o">:</span> <span class="p">{</span>
+                        <span class="s2">&quot;D18080663458120&quot;</span><span class="o">:</span> <span class="p">{</span>
+                            <span class="s2">&quot;commission_price&quot;</span><span class="o">:</span> <span class="mi">1</span><span class="p">,</span>  <span class="c1">// 收益</span>
+                            <span class="s2">&quot;created_at&quot;</span><span class="o">:</span> <span class="mi">1533542675</span>  <span class="c1">// 时间</span>
+                        <span class="p">},</span>
+                        <span class="s2">&quot;D18080692057183&quot;</span><span class="o">:</span> <span class="p">{</span>
+                            <span class="s2">&quot;commission_price&quot;</span><span class="o">:</span> <span class="mi">1</span><span class="p">,</span>
+                            <span class="s2">&quot;created_at&quot;</span><span class="o">:</span> <span class="mi">1533542835</span>
+                        <span class="p">}</span>
+                    <span class="p">}</span>
+                <span class="p">}</span>
+            <span class="p">},</span>
+            <span class="s2">&quot;receive_target&quot;</span><span class="o">:</span> <span class="mi">1</span><span class="p">,</span>  <span class="c1">// 提现到 1、微信零钱包</span>
+            <span class="s2">&quot;record_id&quot;</span><span class="o">:</span> <span class="mi">1</span><span class="p">,</span>  <span class="c1">// 记录id</span>
+            <span class="s2">&quot;service_fee&quot;</span><span class="o">:</span> <span class="mi">0</span><span class="p">,</span>  <span class="c1">// 服务费</span>
+            <span class="s2">&quot;status&quot;</span><span class="o">:</span> <span class="mi">2</span><span class="p">,</span>  <span class="c1">// 提现状态 1、审核中 2、成功 3、失败</span>
+            <span class="s2">&quot;store_rid&quot;</span><span class="o">:</span> <span class="s2">&quot;2&quot;</span>  <span class="c1">//  生活馆rid</span>
+        <span class="p">}</span>
     <span class="p">},</span>
     <span class="s2">&quot;status&quot;</span><span class="o">:</span> <span class="p">{</span>
         <span class="s2">&quot;code&quot;</span><span class="o">:</span> <span class="mi">200</span><span class="p">,</span>
