@@ -2580,7 +2580,9 @@
 <div class="highlight-javascript"><div class="highlight"><pre><span></span><span class="p">{</span>
     <span class="s2">&quot;data&quot;</span><span class="o">:</span> <span class="p">{</span>
         <span class="s2">&quot;count&quot;</span><span class="o">:</span> <span class="mi">1</span><span class="p">,</span>
-        <span class="s2">&quot;next&quot;</span><span class="o">:</span> <span class="kc">null</span><span class="p">,</span>
+        <span class="s2">&quot;finish_not_read&quot;</span><span class="o">:</span> <span class="mi">0</span><span class="p">,</span>  <span class="c1">// 已完成未读数量</span>
+        <span class="s2">&quot;pending_shipment_not_read&quot;</span><span class="o">:</span> <span class="mi">0</span><span class="p">,</span>  <span class="c1">// 待发货未读数量</span>
+        <span class="s2">&quot;shipment_not_read&quot;</span><span class="o">:</span> <span class="mi">0</span><span class="p">,</span>  <span class="c1">// 已发货未读数量</span>
         <span class="s2">&quot;orders&quot;</span><span class="o">:</span> <span class="p">[</span>
             <span class="p">{</span>
                 <span class="s2">&quot;buyer_address&quot;</span><span class="o">:</span> <span class="s2">&quot;青年路&quot;</span><span class="p">,</span>  <span class="c1">// 买家地址</span>
@@ -2652,7 +2654,6 @@
                 <span class="s2">&quot;total_quantity&quot;</span><span class="o">:</span> <span class="mi">10</span>
             <span class="p">}</span>
         <span class="p">],</span>
-        <span class="s2">&quot;prev&quot;</span><span class="o">:</span> <span class="kc">null</span>
     <span class="p">},</span>
     <span class="s2">&quot;status&quot;</span><span class="o">:</span> <span class="p">{</span>
         <span class="s2">&quot;code&quot;</span><span class="o">:</span> <span class="mi">200</span><span class="p">,</span>
