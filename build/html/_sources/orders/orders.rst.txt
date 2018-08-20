@@ -1429,7 +1429,9 @@ JSON数据格式:
     {
         "data": {
             "count": 1,
-            "next": null,
+            "finish_not_read": 0,  // 已完成未读数量
+            "pending_shipment_not_read": 0,  // 待发货未读数量
+            "shipment_not_read": 0,  // 已发货未读数量
             "orders": [
                 {
                     "buyer_address": "青年路",  // 买家地址
@@ -1501,7 +1503,6 @@ JSON数据格式:
                     "total_quantity": 10
                 }
             ],
-            "prev": null
         },
         "status": {
             "code": 200,

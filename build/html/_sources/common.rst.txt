@@ -162,16 +162,6 @@ JSON数据格式:
 * API接口请求地址：``/core_platforms/search/week_hot``
 * API接口请求方法：``GET``
 
-请求参数
-~~~~~~~~~~~~~~~
-
-===========  ========  =========  ========  ====================================
-名称          类型      是否必须    默认值     描述说明
-===========  ========  =========  ========  ====================================
-page         Number    可选         1         当前页码
-per_page     Number    可选         10        每页数量
-===========  ========  =========  ========  ====================================
-
 返回示例
 ~~~~~~~~~~~~~~~~
 
@@ -206,6 +196,59 @@ JSON数据格式:
         "success": true
     }
 
+
+核心平台--热门搜索
+----------------------------
+获取一周内搜索次数最多的6个关键词
+
+接口说明
+~~~~~~~~~~~~~~
+
+* API接口请求地址：``/core_platforms/search/hot_recommend``
+* API接口请求方法：``GET``
+
+返回示例
+~~~~~~~~~~~~~~~~
+
+JSON数据格式:
+
+.. code-block:: javascript
+
+    {
+        "data": {
+            "hot_recommends": [
+                {
+                    "recommend_cover": "设置的封面图",
+                    "recommend_cover_id": "封面图编号",
+                    "recommend_id": "热门推荐编号",
+                    "recommend_title": "设置的标题",
+                    "target_type": "1=商品, 2=店铺",
+                    "店铺基本信息, 参考店铺说明..."
+                },
+                {
+                    "recommend_cover": "设置的封面图",
+                    "recommend_cover_id": "封面图编号",
+                    "recommend_id": "热门推荐编号",
+                    "recommend_title": "设置的标题",
+                    "target_type": "1=商品, 2=店铺",
+                    "商品基本信息, 参考店铺说明..."
+                },
+                {
+                    "recommend_cover": "设置的封面图",
+                    "recommend_cover_id": "封面图编号",
+                    "recommend_id": "热门推荐编号",
+                    "recommend_title": "设置的标题",
+                    "target_type": "1=商品, 2=店铺",
+                    "商品基本信息, 参考店铺说明..."
+                },
+            ]
+        },
+        "status": {
+            "code": 200,
+            "message": "Ok all right."
+        },
+        "success": true
+    }
 
 核心平台--搜索
 ----------------------------

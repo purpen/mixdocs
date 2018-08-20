@@ -153,13 +153,14 @@
 <li class="toctree-l2"><a class="reference internal" href="../common.html#id6">搜索关键词历史</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../common.html#id10">核心平台–搜索关键词历史</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../common.html#id14">核心平台–热门搜索</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../common.html#id18">核心平台–搜索</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../common.html#id22">小程序绑定手机号发送验证码</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../common.html#id27">注册发送短信验证码</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../common.html#id32">忘记密码发送短信验证码</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../common.html#id36">动态登陆发送短信验证码</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../common.html#id40">账户编辑发送短信验证码</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../common.html#id44">发送邮件验证码</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../common.html#id17">核心平台–热门搜索</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../common.html#id20">核心平台–搜索</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../common.html#id24">小程序绑定手机号发送验证码</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../common.html#id29">注册发送短信验证码</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../common.html#id34">忘记密码发送短信验证码</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../common.html#id38">动态登陆发送短信验证码</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../common.html#id42">账户编辑发送短信验证码</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../common.html#id46">发送邮件验证码</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="../setting.html">系统相关配置文档</a><ul>
@@ -2580,7 +2581,9 @@
 <div class="highlight-javascript"><div class="highlight"><pre><span></span><span class="p">{</span>
     <span class="s2">&quot;data&quot;</span><span class="o">:</span> <span class="p">{</span>
         <span class="s2">&quot;count&quot;</span><span class="o">:</span> <span class="mi">1</span><span class="p">,</span>
-        <span class="s2">&quot;next&quot;</span><span class="o">:</span> <span class="kc">null</span><span class="p">,</span>
+        <span class="s2">&quot;finish_not_read&quot;</span><span class="o">:</span> <span class="mi">0</span><span class="p">,</span>  <span class="c1">// 已完成未读数量</span>
+        <span class="s2">&quot;pending_shipment_not_read&quot;</span><span class="o">:</span> <span class="mi">0</span><span class="p">,</span>  <span class="c1">// 待发货未读数量</span>
+        <span class="s2">&quot;shipment_not_read&quot;</span><span class="o">:</span> <span class="mi">0</span><span class="p">,</span>  <span class="c1">// 已发货未读数量</span>
         <span class="s2">&quot;orders&quot;</span><span class="o">:</span> <span class="p">[</span>
             <span class="p">{</span>
                 <span class="s2">&quot;buyer_address&quot;</span><span class="o">:</span> <span class="s2">&quot;青年路&quot;</span><span class="p">,</span>  <span class="c1">// 买家地址</span>
@@ -2652,7 +2655,6 @@
                 <span class="s2">&quot;total_quantity&quot;</span><span class="o">:</span> <span class="mi">10</span>
             <span class="p">}</span>
         <span class="p">],</span>
-        <span class="s2">&quot;prev&quot;</span><span class="o">:</span> <span class="kc">null</span>
     <span class="p">},</span>
     <span class="s2">&quot;status&quot;</span><span class="o">:</span> <span class="p">{</span>
         <span class="s2">&quot;code&quot;</span><span class="o">:</span> <span class="mi">200</span><span class="p">,</span>
