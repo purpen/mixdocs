@@ -319,8 +319,8 @@ JSON数据格式
                 "id": 1,
                 "type": null,
                 "view_url": "http://0.0.0.0:9000/_uploads/photos/static/img/default-logo-180x180.png"
-            },  // 头像url
-            "avatar_id": 1,  // 头像ID
+            },  // 认证头像url
+            "avatar_id": 1,  // 认证头像ID
             "brand_name": null,
             "city": "",  // 城市
             "city_id": null,  // 城市ID
@@ -330,10 +330,12 @@ JSON数据格式
             "id": 1,
             "label_libraries": [], // 商品标签
             "mobile": null, // 手机号
-            "name": "张飞", // 姓名
+            "name": "张飞", // 认证姓名
             "province": "", // 省
             "province_id": null,
             "user_identity": 1 // 用户身份, 1、独立设计师；2、艺术家；3、手做人；4、业余设计师(原创设计达人):11、原创商户经营
+            "user_avatar": "http://0.0.0.0:9000/_uploads/photos/FlHKgXPzqwjPC7pD5Z_SfdL0R8hE",  // 用户头像
+            "username": "wdd"  // 用户名称
         },
         "status": {
             "code": 200,
@@ -428,6 +430,7 @@ JSON数据格式
         "data": {
             "city": "北京",
             "country": "中国",
+            "is_followed": false,   // 是否关注过  true: 关注; false: 未关注
             "fans_count": 0,  // 粉丝数
             "life_record_count": 3,  //文章数
             "logo": "http://0.0.0.0:9000/_uploads/photos/static/img/default2-logo-180x180.png",  // logo
