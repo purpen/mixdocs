@@ -53,7 +53,7 @@ JSON数据格式:
 cids                String    可选                 分类Id, 多个用, 分割
 page                Number    可选        1        当前页码
 per_page            Number    可选        10       每页数量
-sort_type           Number    可选                 排序方式 0=默认排序, 1=综合排序, 2=价格由低至高, 3=价格由高至低
+sort_type           Number    可选                 排序方式 1=综合排序, 2=价格由低至高, 3=价格由高至低
 profit_type         Number    可选                 利润排序 0=不限, 1=由低至高,  2=由高至低
 qk                  String    可选                 筛选条件
 min_price           Number    可选                 价格区间: 最小价格
