@@ -579,6 +579,7 @@ JSON数据格式
                     "rid": "93921078",
                     "status": 1,
                     "tag_line": null,
+                    "store_products_counts": 0,  // 店铺上架商品数量
                     "type": 1
                 }
             ]

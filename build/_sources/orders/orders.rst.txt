@@ -168,8 +168,11 @@ JSON数据格式:
             "received_at": 12321312,  // 签收时间
             "items": [
                 {
-                    "commission_price": 0,  // 佣金
-                    "commission_rate": 0,  // 佣金比
+
+                    "order_sku_commission_price": 6,// 分销佣金
+                    "order_sku_commission_rate": 5,// 佣金比例
+                    "commission_price": null,
+                    "commission_rate": 5,
                     "cover": "http://0.0.0.0:9000/_uploads/photos/1",
                     "deal_price": 1,  // 交易价格
                     "express": 4,  // 快递公司ID
@@ -350,8 +353,10 @@ JSON数据格式:
                     "received_at": 12321312,  // 签收时间
                     "items": [
                         {
-                            "commission_price": 0,  // 佣金
-                            "commission_rate": 0,  // 佣金比
+                            "order_sku_commission_price": 6,// 分销佣金
+                            "order_sku_commission_rate": 5,// 佣金比例
+                            "commission_price": null,
+                            "commission_rate": 5,
                             "cover": "http://0.0.0.0:9000/_uploads/photos/1",
                             "deal_price": 1,  // 交易价格
                             "express": 4,  // 快递公司ID
@@ -584,8 +589,10 @@ JSON数据格式:
                 "received_at": 12321312,  // 签收时间
                 "items": [
                     {
-                        "commission_price": 0,  // 佣金
-                        "commission_rate": 0,  // 佣金比
+                        "order_sku_commission_price": 6,// 分销佣金
+                        "order_sku_commission_rate": 5,// 佣金比例
+                        "commission_price": null,
+                        "commission_rate": 5,
                         "cover": "http://0.0.0.0:9000/_uploads/photos/1",
                         "deal_price": 1,  // 交易价格
                         "express": 4,  // 快递公司ID
@@ -727,8 +734,10 @@ JSON数据格式:
                     "received_at": 12321312,  // 签收时间
                     "items": [
                         {
-                            "commission_price": 0,  // 佣金
-                            "commission_rate": 0,  // 佣金比
+                            "order_sku_commission_price": 6,// 分销佣金
+                            "order_sku_commission_rate": 5,// 佣金比例
+                            "commission_price": null,
+                            "commission_rate": 5,
                             "cover": "http://0.0.0.0:9000/_uploads/photos/1",
                             "deal_price": 1,  // 交易价格
                             "express": 4,  // 快递公司ID
@@ -834,8 +843,10 @@ JSON数据格式:
                     "received_at": 12321312,  // 签收时间
                     "items": [
                         {
-                            "commission_price": 0,  // 佣金
-                            "commission_rate": 0,  // 佣金比
+                            "order_sku_commission_price": 6,// 分销佣金
+                            "order_sku_commission_rate": 5,// 佣金比例
+                            "commission_price": null,
+                            "commission_rate": 5,
                             "cover": "http://0.0.0.0:9000/_uploads/photos/1",
                             "deal_price": 1,  // 交易价格
                             "express": 4,  // 快递公司ID
@@ -941,8 +952,10 @@ JSON数据格式:
                     "received_at": 12321312,  // 签收时间
                     "items": [
                         {
-                            "commission_price": 0,  // 佣金
-                            "commission_rate": 0,  // 佣金比
+                            "order_sku_commission_price": 6,// 分销佣金
+                            "order_sku_commission_rate": 5,// 佣金比例
+                            "commission_price": null,
+                            "commission_rate": 5,
                             "cover": "http://0.0.0.0:9000/_uploads/photos/1",
                             "deal_price": 1,  // 交易价格
                             "express": 4,  // 快递公司ID
@@ -1049,8 +1062,10 @@ JSON数据格式:
                     "received_at": 12321312,  // 签收时间
                     "items": [
                         {
-                            "commission_price": 0,  // 佣金
-                            "commission_rate": 0,  // 佣金比
+                            "order_sku_commission_price": 6,// 分销佣金
+                            "order_sku_commission_rate": 5,// 佣金比例
+                            "commission_price": null,
+                            "commission_rate": 5,
                             "cover": "http://0.0.0.0:9000/_uploads/photos/1",
                             "deal_price": 1,  // 交易价格
                             "express": 4,  // 快递公司ID
@@ -1156,8 +1171,10 @@ JSON数据格式:
                     "received_at": 12321312,  // 签收时间
                     "items": [
                         {
-                            "commission_price": 0,  // 佣金
-                            "commission_rate": 0,  // 佣金比
+                            "order_sku_commission_price": 6,// 分销佣金
+                            "order_sku_commission_rate": 5,// 佣金比例
+                            "commission_price": null,
+                            "commission_rate": 5,
                             "cover": "http://0.0.0.0:9000/_uploads/photos/1",
                             "deal_price": 1,  // 交易价格
                             "express": 4,  // 快递公司ID
@@ -1264,8 +1281,10 @@ JSON数据格式:
                     "received_at": 12321312,  // 签收时间
                     "items": [
                         {
-                            "commission_price": 0,  // 佣金
-                            "commission_rate": 0,  // 佣金比
+                            "order_sku_commission_price": 6,// 分销佣金
+                            "order_sku_commission_rate": 5,// 佣金比例
+                            "commission_price": null,
+                            "commission_rate": 5,
                             "cover": "http://0.0.0.0:9000/_uploads/photos/1",
                             "deal_price": 1,  // 交易价格
                             "express": 4,  // 快递公司ID
@@ -1452,8 +1471,10 @@ JSON数据格式:
                     "freight": 14,  // 运费
                     "items": [
                         {
-                            "commission_price": null,  // 分销佣金
-                            "commission_rate": 10,  // 佣金比例
+                            "order_sku_commission_price": 6,// 分销佣金
+                            "order_sku_commission_rate": 5,// 佣金比例
+                            "commission_price": null,
+                            "commission_rate": 5,
                             "cover": "http://0.0.0.0:9000/_uploads/photos/180523/8f51855eedae984.jpg",
                             "cover_id": 1,
                             "deal_price": 3,
