@@ -1,0 +1,835 @@
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml" lang="zh_CN">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>营销工具/广告模块 &#8212; mixdocs 0.1.0 文档</title>
+    <link rel="stylesheet" href="../_static/bootstrap-sphinx.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/mixpus.css" type="text/css" />
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '../',
+        VERSION:     '0.1.0',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true,
+        SOURCELINK_SUFFIX: '.txt'
+      };
+    </script>
+    <script type="text/javascript" src="../_static/jquery.js"></script>
+    <script type="text/javascript" src="../_static/underscore.js"></script>
+    <script type="text/javascript" src="../_static/doctools.js"></script>
+    <script type="text/javascript" src="../_static/translations.js"></script>
+    <script type="text/javascript" src="../_static/js/jquery-1.11.0.min.js"></script>
+    <script type="text/javascript" src="../_static/js/jquery-fix.js"></script>
+    <script type="text/javascript" src="../_static/bootstrap-3.3.7/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="../_static/bootstrap-sphinx.js"></script>
+    <link rel="index" title="索引" href="../genindex.html" />
+    <link rel="search" title="搜索" href="../search.html" />
+    <link rel="next" title="营销工具/优惠券模块" href="coupons.html" />
+    <link rel="prev" title="营销API模块" href="index.html" />
+<meta charset='utf-8'>
+<meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'>
+<meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1'>
+<meta name="apple-mobile-web-app-capable" content="yes">
+
+  </head>
+  <body>
+
+  <div id="navbar" class="navbar navbar-inverse navbar-default navbar-fixed-top">
+    <div class="container">
+      <div class="navbar-header">
+        <!-- .btn-navbar is used as the toggle for collapsed navbar content -->
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".nav-collapse">
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="../index.html">
+          moebeast</a>
+        <span class="navbar-text navbar-version pull-left"><b>0.1.0</b></span>
+      </div>
+
+        <div class="collapse navbar-collapse nav-collapse">
+          <ul class="nav navbar-nav">
+            
+            
+              <li class="dropdown globaltoc-container">
+  <a role="button"
+     id="dLabelGlobalToc"
+     data-toggle="dropdown"
+     data-target="#"
+     href="../index.html">API文档 <b class="caret"></b></a>
+  <ul class="dropdown-menu globaltoc"
+      role="menu"
+      aria-labelledby="dLabelGlobalToc"><ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../intro.html">开放平台文档说明</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../intro.html#id2">开发入门</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../intro.html#id3">系统级请求参数</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../intro.html#id4">开发帮助文档</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../intro.html#id5">公共返回状态码说明</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../intro.html#oauth2-0">OAuth2.0协议介绍</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../intro.html#id6">参考资料链接</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../orders/index.html">销售API模块</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../orders/orders.html">订单模块</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../orders/customer_orders.html">分销商订单模块</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../orders/carts.html">购物车模块</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../orders/addresses.html">收货地址模块</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../orders/comment.html">订单评价模块</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../orders/logistics.html">物流运费模块</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../products/index.html">商品API模块</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../products/products.html">商品模块</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../products/category.html">分类模块</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../products/brands.html">供应商/品牌模块</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../products/materials.html">商品材料模块</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../products/colors.html">商品颜色模块</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../products/models.html">商品规格模块</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../products/labels.html">标签模块</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../products/return_policies.html">商家退换货规则模块</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../products/user_record.html">用户商品记录模块</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../products/assets.html">附件模块</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../distributions/index.html">分销API模块</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../distributions/distributions.html">分销模块</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../distributions/store_product_packet.html">商品组模块</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../customers/index.html">分销客户API模块</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../customers/customers.html">分销客户模块</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../customers/grades.html">客户等级模块</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../warehouses/index.html">采购仓储API模块</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../warehouses/purchase.html">采购API模块</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../shopes/index.html">微商城API模块</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../shopes/shopes.html">微商城模块</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../shopes/store.html">店铺模块</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../shopes/wxapp.html">小程序模块</a></li>
+</ul>
+</li>
+<li class="toctree-l1 current"><a class="reference internal" href="index.html">营销API模块</a><ul class="current">
+<li class="toctree-l2 current"><a class="current reference internal" href="#">营销工具/广告模块</a></li>
+<li class="toctree-l2"><a class="reference internal" href="coupons.html">营销工具/优惠券模块</a></li>
+<li class="toctree-l2"><a class="reference internal" href="bonus_question.html">营销工具/猜题赢现金</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../stats/index.html">统计API模块</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../stats/report.html">报表模块</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../stats/order_sale_stats.html">订单销售统计模块</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../stats/order_stats.html">订单结算统计模块</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../stats/small_b_order_stats.html">小b订单结算统计模块</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../users/index.html">用户API模块</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../users/users.html">用户模块</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../users/auth.html">用户认证模块</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../users/finance.html">账户模块</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../wx_apps/index.html">小程序API模块</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../wx_apps/wx_app_design.html">小程序配置模块</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../qa/index.html">问答API模块</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../qa/qa.html">问答模块</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../columns/index.html">栏目API模块</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../columns/column_products.html">栏目商品模块</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../columns/life_records.html">生活志模块</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../columns/shop_windows.html">橱窗模块</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../common.html">公用接口模块</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../common.html#id2">幻灯图列表</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../common.html#id6">搜索关键词历史</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../common.html#id10">核心平台–搜索关键词历史</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../common.html#id14">核心平台–热门搜索</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../common.html#id17">核心平台–热门推荐</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../common.html#id20">核心平台–搜索</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../common.html#id24">小程序绑定手机号发送验证码</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../common.html#id29">注册发送短信验证码</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../common.html#id34">忘记密码发送短信验证码</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../common.html#id38">动态登陆发送短信验证码</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../common.html#id42">账户编辑发送短信验证码</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../common.html#id46">发送邮件验证码</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../setting.html">系统相关配置文档</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../setting.html#id2">开放国家列表</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../setting.html#id5">支持的语言</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../setting.html#id6">支持的币种</a></li>
+</ul>
+</li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../faq.html">常见问题</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../history.html">版本历史</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../history.html#v0-1-0">v0.1.0</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../todos.html">未来新功能</a></li>
+</ul>
+</ul>
+</li>
+              
+                <li class="dropdown">
+  <a role="button"
+     id="dLabelLocalToc"
+     data-toggle="dropdown"
+     data-target="#"
+     href="#">Page <b class="caret"></b></a>
+  <ul class="dropdown-menu localtoc"
+      role="menu"
+      aria-labelledby="dLabelLocalToc"><ul>
+<li><a class="reference internal" href="#">营销工具/广告模块</a><ul>
+<li><a class="reference internal" href="#id2">生成推广图</a><ul>
+<li><a class="reference internal" href="#id3">接口说明</a></li>
+<li><a class="reference internal" href="#id4">请求参数</a></li>
+<li><a class="reference internal" href="#id5">返回示例</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#id6">生成小程序码</a><ul>
+<li><a class="reference internal" href="#id7">接口说明</a></li>
+<li><a class="reference internal" href="#id8">请求参数</a></li>
+<li><a class="reference internal" href="#id9">返回示例</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#id10">生成分享海报图</a><ul>
+<li><a class="reference internal" href="#id11">接口说明</a></li>
+<li><a class="reference internal" href="#id12">请求参数</a></li>
+<li><a class="reference internal" href="#id13">返回示例</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#id14">广告列表</a><ul>
+<li><a class="reference internal" href="#id15">接口说明</a></li>
+<li><a class="reference internal" href="#id16">请求参数</a></li>
+<li><a class="reference internal" href="#id17">返回示例</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#id18">广告图列表</a><ul>
+<li><a class="reference internal" href="#id19">接口说明</a></li>
+<li><a class="reference internal" href="#id20">请求参数</a></li>
+<li><a class="reference internal" href="#id21">返回示例</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#id22">精选顶部广告</a><ul>
+<li><a class="reference internal" href="#id23">接口说明</a></li>
+<li><a class="reference internal" href="#id24">返回示例</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#id25">精选内容区广告</a><ul>
+<li><a class="reference internal" href="#id26">接口说明</a></li>
+<li><a class="reference internal" href="#id27">返回示例</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#id28">探索顶部广告</a><ul>
+<li><a class="reference internal" href="#id29">接口说明</a></li>
+<li><a class="reference internal" href="#id30">返回示例</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#id31">新增广告信息&lt;未开通&gt;</a><ul>
+<li><a class="reference internal" href="#id32">接口说明</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#id33">更新广告信息&lt;未开通&gt;</a><ul>
+<li><a class="reference internal" href="#id34">接口说明</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#id35">删除广告信息&lt;未开通&gt;</a><ul>
+<li><a class="reference internal" href="#id36">接口说明</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</ul>
+</li>
+              
+            
+            
+            
+            
+            
+          </ul>
+
+          
+            
+<form class="navbar-form navbar-right" action="../search.html" method="get">
+ <div class="form-group">
+  <input type="text" name="q" class="form-control" placeholder="Search" />
+ </div>
+  <input type="hidden" name="check_keywords" value="yes" />
+  <input type="hidden" name="area" value="default" />
+</form>
+          
+        </div>
+    </div>
+  </div>
+
+<div class="container">
+  <div class="row">
+      <div class="col-md-3">
+        <div id="sidebar" class="bs-sidenav" role="complementary"><ul>
+<li><a class="reference internal" href="#">营销工具/广告模块</a><ul>
+<li><a class="reference internal" href="#id2">生成推广图</a><ul>
+<li><a class="reference internal" href="#id3">接口说明</a></li>
+<li><a class="reference internal" href="#id4">请求参数</a></li>
+<li><a class="reference internal" href="#id5">返回示例</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#id6">生成小程序码</a><ul>
+<li><a class="reference internal" href="#id7">接口说明</a></li>
+<li><a class="reference internal" href="#id8">请求参数</a></li>
+<li><a class="reference internal" href="#id9">返回示例</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#id10">生成分享海报图</a><ul>
+<li><a class="reference internal" href="#id11">接口说明</a></li>
+<li><a class="reference internal" href="#id12">请求参数</a></li>
+<li><a class="reference internal" href="#id13">返回示例</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#id14">广告列表</a><ul>
+<li><a class="reference internal" href="#id15">接口说明</a></li>
+<li><a class="reference internal" href="#id16">请求参数</a></li>
+<li><a class="reference internal" href="#id17">返回示例</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#id18">广告图列表</a><ul>
+<li><a class="reference internal" href="#id19">接口说明</a></li>
+<li><a class="reference internal" href="#id20">请求参数</a></li>
+<li><a class="reference internal" href="#id21">返回示例</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#id22">精选顶部广告</a><ul>
+<li><a class="reference internal" href="#id23">接口说明</a></li>
+<li><a class="reference internal" href="#id24">返回示例</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#id25">精选内容区广告</a><ul>
+<li><a class="reference internal" href="#id26">接口说明</a></li>
+<li><a class="reference internal" href="#id27">返回示例</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#id28">探索顶部广告</a><ul>
+<li><a class="reference internal" href="#id29">接口说明</a></li>
+<li><a class="reference internal" href="#id30">返回示例</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#id31">新增广告信息&lt;未开通&gt;</a><ul>
+<li><a class="reference internal" href="#id32">接口说明</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#id33">更新广告信息&lt;未开通&gt;</a><ul>
+<li><a class="reference internal" href="#id34">接口说明</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#id35">删除广告信息&lt;未开通&gt;</a><ul>
+<li><a class="reference internal" href="#id36">接口说明</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+
+<ul class="nav nav-list">
+  <li>
+    <a href="index.html" title="Previous Chapter: 营销API模块"><span class="glyphicon glyphicon-chevron-left visible-sm"></span><span class="hidden-sm hidden-tablet">&raquo; 营销API模块</span>
+    </a>
+  </li>
+  <li>
+    <a href="coupons.html" title="Next Chapter: 营销工具/优惠券模块"><span class="glyphicon glyphicon-chevron-right visible-sm"></span><span class="hidden-sm hidden-tablet">&raquo; 营销工具/优惠券模块</span>
+    </a>
+  </li>
+</ul>
+<div id="sourcelink">
+  <a href="../_sources/market/banners.rst.txt"
+     rel="nofollow">Source</a>
+</div>
+<form action="../search.html" method="get">
+ <div class="form-group">
+  <input type="text" name="q" class="form-control" placeholder="Search" />
+ </div>
+  <input type="hidden" name="check_keywords" value="yes" />
+  <input type="hidden" name="area" value="default" />
+</form>
+        </div>
+      </div>
+    <div class="col-md-9 content">
+      
+  <div class="section" id="id1">
+<h1>营销工具/广告模块<a class="headerlink" href="#id1" title="永久链接至标题">¶</a></h1>
+<div class="section" id="id2">
+<h2>生成推广图<a class="headerlink" href="#id2" title="永久链接至标题">¶</a></h2>
+<p>生成带有小程序码宣传图</p>
+<div class="section" id="id3">
+<h3>接口说明<a class="headerlink" href="#id3" title="永久链接至标题">¶</a></h3>
+<ul class="simple">
+<li>API接口请求地址：<code class="docutils literal"><span class="pre">/market/wxa_card</span></code></li>
+<li>API接口请求方法：<code class="docutils literal"><span class="pre">POST</span></code></li>
+</ul>
+</div>
+<div class="section" id="id4">
+<h3>请求参数<a class="headerlink" href="#id4" title="永久链接至标题">¶</a></h3>
+<table border="1" class="docutils">
+<colgroup>
+<col width="18%" />
+<col width="11%" />
+<col width="12%" />
+<col width="11%" />
+<col width="49%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">名称</th>
+<th class="head">类型</th>
+<th class="head">是否必须</th>
+<th class="head">默认值</th>
+<th class="head">描述说明</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>auth_app_id</td>
+<td>String</td>
+<td>必填</td>
+<td>&#160;</td>
+<td>小程序id</td>
+</tr>
+<tr class="row-odd"><td>path</td>
+<td>String</td>
+<td>必填</td>
+<td>&#160;</td>
+<td>访问路径</td>
+</tr>
+<tr class="row-even"><td>rid</td>
+<td>String</td>
+<td>必填</td>
+<td>&#160;</td>
+<td>场景参数</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="id5">
+<h3>返回示例<a class="headerlink" href="#id5" title="永久链接至标题">¶</a></h3>
+<p>JSON数据格式:</p>
+<div class="highlight-javascript"><div class="highlight"><pre><span></span><span class="p">{</span>
+    <span class="s2">&quot;data&quot;</span><span class="o">:</span> <span class="p">{</span>
+        <span class="s2">&quot;wxa_image&quot;</span><span class="o">:</span> <span class="s2">&quot;https://kg.erp.taihuoniao.com/20180314/Fk1vEAP_tIVwmPRfHRfl8jpn07CZ.png&quot;</span>
+    <span class="p">},</span>
+    <span class="s2">&quot;status&quot;</span><span class="o">:</span> <span class="p">{</span>
+        <span class="s2">&quot;code&quot;</span><span class="o">:</span> <span class="mi">200</span><span class="p">,</span>
+        <span class="s2">&quot;message&quot;</span><span class="o">:</span> <span class="s2">&quot;Ok all right.&quot;</span>
+    <span class="p">},</span>
+    <span class="s2">&quot;success&quot;</span><span class="o">:</span> <span class="kc">true</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="id6">
+<h2>生成小程序码<a class="headerlink" href="#id6" title="永久链接至标题">¶</a></h2>
+<p>生成不同大小的小程序码</p>
+<div class="section" id="id7">
+<h3>接口说明<a class="headerlink" href="#id7" title="永久链接至标题">¶</a></h3>
+<ul class="simple">
+<li>API接口请求地址：<code class="docutils literal"><span class="pre">/market/wxa_code</span></code></li>
+<li>API接口请求方法：<code class="docutils literal"><span class="pre">POST</span></code></li>
+</ul>
+</div>
+<div class="section" id="id8">
+<h3>请求参数<a class="headerlink" href="#id8" title="永久链接至标题">¶</a></h3>
+<table border="1" class="docutils">
+<colgroup>
+<col width="18%" />
+<col width="11%" />
+<col width="12%" />
+<col width="11%" />
+<col width="49%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">名称</th>
+<th class="head">类型</th>
+<th class="head">是否必须</th>
+<th class="head">默认值</th>
+<th class="head">描述说明</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>auth_app_id</td>
+<td>String</td>
+<td>必填</td>
+<td>&#160;</td>
+<td>小程序id</td>
+</tr>
+<tr class="row-odd"><td>path</td>
+<td>String</td>
+<td>必填</td>
+<td>&#160;</td>
+<td>访问路径</td>
+</tr>
+<tr class="row-even"><td>rid</td>
+<td>String</td>
+<td>必填</td>
+<td>&#160;</td>
+<td>场景参数</td>
+</tr>
+<tr class="row-odd"><td>width</td>
+<td>Number</td>
+<td>必填</td>
+<td>&#160;</td>
+<td>小程序码宽度</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="id9">
+<h3>返回示例<a class="headerlink" href="#id9" title="永久链接至标题">¶</a></h3>
+<p>JSON数据格式:</p>
+<div class="highlight-javascript"><div class="highlight"><pre><span></span><span class="p">{</span>
+    <span class="s2">&quot;data&quot;</span><span class="o">:</span> <span class="p">{</span>
+        <span class="s2">&quot;wxa_image&quot;</span><span class="o">:</span> <span class="s2">&quot;https://kg.erp.taihuoniao.com/20180314/Fk1vEAP_tIVwmPRfHRfl8jpn07CZ.png&quot;</span>
+    <span class="p">},</span>
+    <span class="s2">&quot;status&quot;</span><span class="o">:</span> <span class="p">{</span>
+        <span class="s2">&quot;code&quot;</span><span class="o">:</span> <span class="mi">200</span><span class="p">,</span>
+        <span class="s2">&quot;message&quot;</span><span class="o">:</span> <span class="s2">&quot;Ok all right.&quot;</span>
+    <span class="p">},</span>
+    <span class="s2">&quot;success&quot;</span><span class="o">:</span> <span class="kc">true</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="id10">
+<h2>生成分享海报图<a class="headerlink" href="#id10" title="永久链接至标题">¶</a></h2>
+<p>乐喜平台生生成分享海海报图片</p>
+<div class="section" id="id11">
+<h3>接口说明<a class="headerlink" href="#id11" title="永久链接至标题">¶</a></h3>
+<ul class="simple">
+<li>API接口请求地址：<code class="docutils literal"><span class="pre">/market/wxa_poster</span></code></li>
+<li>API接口请求方法：<code class="docutils literal"><span class="pre">POST</span></code></li>
+<li>API接口用户授权：<code class="docutils literal"><span class="pre">token</span></code></li>
+</ul>
+</div>
+<div class="section" id="id12">
+<h3>请求参数<a class="headerlink" href="#id12" title="永久链接至标题">¶</a></h3>
+<table border="1" class="docutils">
+<colgroup>
+<col width="12%" />
+<col width="7%" />
+<col width="8%" />
+<col width="7%" />
+<col width="65%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">名称</th>
+<th class="head">类型</th>
+<th class="head">是否必须</th>
+<th class="head">默认值</th>
+<th class="head">描述说明</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>auth_app_id</td>
+<td>String</td>
+<td>必填</td>
+<td>&#160;</td>
+<td>小程序id</td>
+</tr>
+<tr class="row-odd"><td>path</td>
+<td>String</td>
+<td>必填</td>
+<td>&#160;</td>
+<td>访问路径</td>
+</tr>
+<tr class="row-even"><td>type</td>
+<td>Number</td>
+<td>必填</td>
+<td>&#160;</td>
+<td>平台类型  1=品牌馆, 2=生活馆, 3=独立小程序分享商品, 4=核心平台分享商品</td>
+</tr>
+<tr class="row-odd"><td>rid</td>
+<td>String</td>
+<td>必填</td>
+<td>&#160;</td>
+<td>场景参数</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="id13">
+<h3>返回示例<a class="headerlink" href="#id13" title="永久链接至标题">¶</a></h3>
+<p>JSON数据格式:</p>
+<div class="highlight-javascript"><div class="highlight"><pre><span></span><span class="p">{</span>
+    <span class="s2">&quot;data&quot;</span><span class="o">:</span> <span class="p">{</span>
+        <span class="s2">&quot;image_url&quot;</span><span class="o">:</span> <span class="s2">&quot;https://kg.erp.taihuoniao.com/20180314/Fk1vEAP_tIVwmPRfHRfl8jpn07CZ.png&quot;</span>
+    <span class="p">},</span>
+    <span class="s2">&quot;status&quot;</span><span class="o">:</span> <span class="p">{</span>
+        <span class="s2">&quot;code&quot;</span><span class="o">:</span> <span class="mi">200</span><span class="p">,</span>
+        <span class="s2">&quot;message&quot;</span><span class="o">:</span> <span class="s2">&quot;Ok all right.&quot;</span>
+    <span class="p">},</span>
+    <span class="s2">&quot;success&quot;</span><span class="o">:</span> <span class="kc">true</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="id14">
+<h2>广告列表<a class="headerlink" href="#id14" title="永久链接至标题">¶</a></h2>
+<p>获取广告列表</p>
+<div class="section" id="id15">
+<h3>接口说明<a class="headerlink" href="#id15" title="永久链接至标题">¶</a></h3>
+<ul class="simple">
+<li>API接口请求地址：<code class="docutils literal"><span class="pre">/banners</span></code></li>
+<li>API接口请求方法：<code class="docutils literal"><span class="pre">GET</span></code></li>
+</ul>
+</div>
+<div class="section" id="id16">
+<h3>请求参数<a class="headerlink" href="#id16" title="永久链接至标题">¶</a></h3>
+<table border="1" class="docutils">
+<colgroup>
+<col width="15%" />
+<col width="11%" />
+<col width="13%" />
+<col width="11%" />
+<col width="50%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">名称</th>
+<th class="head">类型</th>
+<th class="head">是否必须</th>
+<th class="head">默认值</th>
+<th class="head">描述说明</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>page</td>
+<td>Number</td>
+<td>可选</td>
+<td>1</td>
+<td>当前页码</td>
+</tr>
+<tr class="row-odd"><td>per_page</td>
+<td>Number</td>
+<td>可选</td>
+<td>10</td>
+<td>每页数量</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="id17">
+<h3>返回示例<a class="headerlink" href="#id17" title="永久链接至标题">¶</a></h3>
+<p>JSON数据格式:</p>
+<div class="highlight-javascript"><div class="highlight"><pre><span></span><span class="p">{</span>
+    <span class="s2">&quot;data&quot;</span><span class="o">:</span> <span class="p">{</span>
+        <span class="s2">&quot;banners&quot;</span><span class="o">:</span> <span class="p">[</span>
+            <span class="p">{</span>
+                <span class="s2">&quot;height&quot;</span><span class="o">:</span> <span class="mi">40</span><span class="p">,</span>
+                <span class="s2">&quot;name&quot;</span><span class="o">:</span> <span class="s2">&quot;广告&quot;</span><span class="p">,</span>
+                <span class="s2">&quot;rid&quot;</span><span class="o">:</span> <span class="s2">&quot;8548462054&quot;</span><span class="p">,</span>
+                <span class="s2">&quot;status&quot;</span><span class="o">:</span> <span class="mi">1</span><span class="p">,</span>
+                <span class="s2">&quot;width&quot;</span><span class="o">:</span> <span class="mi">30</span>
+            <span class="p">},</span>
+            <span class="p">{</span>
+                <span class="s2">&quot;height&quot;</span><span class="o">:</span> <span class="mi">20</span><span class="p">,</span>
+                <span class="s2">&quot;name&quot;</span><span class="o">:</span> <span class="s2">&quot;001&quot;</span><span class="p">,</span>
+                <span class="s2">&quot;rid&quot;</span><span class="o">:</span> <span class="s2">&quot;8946315464&quot;</span><span class="p">,</span>
+                <span class="s2">&quot;status&quot;</span><span class="o">:</span> <span class="mi">1</span><span class="p">,</span>
+                <span class="s2">&quot;width&quot;</span><span class="o">:</span> <span class="mi">20</span>
+            <span class="p">}</span>
+        <span class="p">],</span>
+        <span class="s2">&quot;count&quot;</span><span class="o">:</span> <span class="mi">2</span><span class="p">,</span>
+        <span class="s2">&quot;next&quot;</span><span class="o">:</span> <span class="kc">false</span><span class="p">,</span>
+        <span class="s2">&quot;prev&quot;</span><span class="o">:</span> <span class="kc">false</span>
+    <span class="p">},</span>
+    <span class="s2">&quot;status&quot;</span><span class="o">:</span> <span class="p">{</span>
+        <span class="s2">&quot;code&quot;</span><span class="o">:</span> <span class="mi">200</span><span class="p">,</span>
+        <span class="s2">&quot;message&quot;</span><span class="o">:</span> <span class="s2">&quot;Ok all right.&quot;</span>
+    <span class="p">},</span>
+    <span class="s2">&quot;success&quot;</span><span class="o">:</span> <span class="kc">true</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="id18">
+<h2>广告图列表<a class="headerlink" href="#id18" title="永久链接至标题">¶</a></h2>
+<p>获取广告位中广告图列表</p>
+<div class="section" id="id19">
+<h3>接口说明<a class="headerlink" href="#id19" title="永久链接至标题">¶</a></h3>
+<ul class="simple">
+<li>API接口请求地址：<code class="docutils literal"><span class="pre">/banners/&lt;rid&gt;</span></code></li>
+<li>API接口请求方法：<code class="docutils literal"><span class="pre">GET</span></code></li>
+</ul>
+</div>
+<div class="section" id="id20">
+<h3>请求参数<a class="headerlink" href="#id20" title="永久链接至标题">¶</a></h3>
+<table border="1" class="docutils">
+<colgroup>
+<col width="19%" />
+<col width="11%" />
+<col width="12%" />
+<col width="11%" />
+<col width="48%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">名称</th>
+<th class="head">类型</th>
+<th class="head">是否必须</th>
+<th class="head">默认值</th>
+<th class="head">描述说明</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>rid</td>
+<td>String</td>
+<td>必须</td>
+<td>&#160;</td>
+<td>广告编号</td>
+</tr>
+</tbody>
+</table>
+<p><code class="docutils literal"><span class="pre">目前支持的编号:</span> <span class="pre">精选顶部广告=hotpick_ad,</span> <span class="pre">探索顶部广告=explore_ad,</span> <span class="pre">精选内容区广告=content_ad,</span> <span class="pre">选品中心推荐=center_ad,</span> <span class="pre">发现头部广告=discover_ad</span></code></p>
+</div>
+<div class="section" id="id21">
+<h3>返回示例<a class="headerlink" href="#id21" title="永久链接至标题">¶</a></h3>
+<p>JSON数据格式:</p>
+<div class="highlight-javascript"><div class="highlight"><pre><span></span><span class="p">{</span>
+    <span class="s2">&quot;data&quot;</span><span class="o">:</span> <span class="p">{</span>
+        <span class="s2">&quot;banner_images&quot;</span><span class="o">:</span> <span class="p">[</span>
+            <span class="p">{</span>
+                <span class="s2">&quot;description&quot;</span><span class="o">:</span> <span class="s2">&quot;广告图描述&quot;</span><span class="p">,</span>
+                <span class="s2">&quot;image&quot;</span><span class="o">:</span> <span class="s2">&quot;http://127.0.0.1:9000/_uploads/photos/180530/72de0b9ca1ae5a3.jpg&quot;</span><span class="p">,</span>
+                <span class="s2">&quot;link&quot;</span><span class="o">:</span> <span class="s2">&quot;链接地址&quot;</span><span class="p">,</span>
+                <span class="s2">&quot;rid&quot;</span><span class="o">:</span> <span class="mi">4</span><span class="p">,</span>
+                <span class="s2">&quot;sort_order&quot;</span><span class="o">:</span> <span class="s2">&quot;排序&quot;</span><span class="p">,</span>
+                <span class="s2">&quot;status&quot;</span><span class="o">:</span> <span class="kc">true</span><span class="p">,</span>
+                <span class="s2">&quot;title&quot;</span><span class="o">:</span> <span class="s2">&quot;标题&quot;</span><span class="p">,</span>
+                <span class="s2">&quot;type&quot;</span><span class="o">:</span> <span class="s2">&quot;0=全部, 1=链接地址, 2=商品, 3=分类, 4=品牌, 5=专题&quot;</span>
+            <span class="p">},</span>
+            <span class="p">{</span>
+                <span class="s2">&quot;description&quot;</span><span class="o">:</span> <span class="s2">&quot;广告图描述&quot;</span><span class="p">,</span>
+                <span class="s2">&quot;image&quot;</span><span class="o">:</span> <span class="s2">&quot;http://127.0.0.1:9000/_uploads/photos/180530/72de0b9ca1ae5a3.jpg&quot;</span><span class="p">,</span>
+                <span class="s2">&quot;link&quot;</span><span class="o">:</span> <span class="s2">&quot;链接地址&quot;</span><span class="p">,</span>
+                <span class="s2">&quot;rid&quot;</span><span class="o">:</span> <span class="mi">3</span><span class="p">,</span>
+                <span class="s2">&quot;sort_order&quot;</span><span class="o">:</span> <span class="mi">1</span><span class="p">,</span>
+                <span class="s2">&quot;status&quot;</span><span class="o">:</span> <span class="kc">true</span><span class="p">,</span>
+                <span class="s2">&quot;title&quot;</span><span class="o">:</span> <span class="s2">&quot;标题&quot;</span><span class="p">,</span>
+                <span class="s2">&quot;type&quot;</span><span class="o">:</span> <span class="mi">2</span>
+            <span class="p">}</span>
+        <span class="p">]</span>
+    <span class="p">},</span>
+    <span class="s2">&quot;status&quot;</span><span class="o">:</span> <span class="p">{</span>
+        <span class="s2">&quot;code&quot;</span><span class="o">:</span> <span class="mi">200</span><span class="p">,</span>
+        <span class="s2">&quot;message&quot;</span><span class="o">:</span> <span class="s2">&quot;Ok all right.&quot;</span>
+    <span class="p">},</span>
+    <span class="s2">&quot;success&quot;</span><span class="o">:</span> <span class="kc">true</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="id22">
+<h2>精选顶部广告<a class="headerlink" href="#id22" title="永久链接至标题">¶</a></h2>
+<div class="section" id="id23">
+<h3>接口说明<a class="headerlink" href="#id23" title="永久链接至标题">¶</a></h3>
+<ul class="simple">
+<li>API接口请求地址：<code class="docutils literal"><span class="pre">/banners/handpick</span></code></li>
+<li>API接口请求方法：<code class="docutils literal"><span class="pre">GET</span></code></li>
+</ul>
+</div>
+<div class="section" id="id24">
+<h3>返回示例<a class="headerlink" href="#id24" title="永久链接至标题">¶</a></h3>
+<p>** 同上广告图列表返回示例 **</p>
+</div>
+</div>
+<div class="section" id="id25">
+<h2>精选内容区广告<a class="headerlink" href="#id25" title="永久链接至标题">¶</a></h2>
+<div class="section" id="id26">
+<h3>接口说明<a class="headerlink" href="#id26" title="永久链接至标题">¶</a></h3>
+<ul class="simple">
+<li>API接口请求地址：<code class="docutils literal"><span class="pre">/banners/handpick_content</span></code></li>
+<li>API接口请求方法：<code class="docutils literal"><span class="pre">GET</span></code></li>
+</ul>
+</div>
+<div class="section" id="id27">
+<h3>返回示例<a class="headerlink" href="#id27" title="永久链接至标题">¶</a></h3>
+<p>** 同上广告图列表返回示例 **</p>
+</div>
+</div>
+<div class="section" id="id28">
+<h2>探索顶部广告<a class="headerlink" href="#id28" title="永久链接至标题">¶</a></h2>
+<div class="section" id="id29">
+<h3>接口说明<a class="headerlink" href="#id29" title="永久链接至标题">¶</a></h3>
+<ul class="simple">
+<li>API接口请求地址：<code class="docutils literal"><span class="pre">/banners/explore</span></code></li>
+<li>API接口请求方法：<code class="docutils literal"><span class="pre">GET</span></code></li>
+</ul>
+</div>
+<div class="section" id="id30">
+<h3>返回示例<a class="headerlink" href="#id30" title="永久链接至标题">¶</a></h3>
+<p>** 同上广告图列表返回示例 **</p>
+</div>
+</div>
+<div class="section" id="id31">
+<h2>新增广告信息&lt;未开通&gt;<a class="headerlink" href="#id31" title="永久链接至标题">¶</a></h2>
+<p>新增广告信息</p>
+<div class="section" id="id32">
+<h3>接口说明<a class="headerlink" href="#id32" title="永久链接至标题">¶</a></h3>
+<ul class="simple">
+<li>API接口请求地址：<code class="docutils literal"><span class="pre">/banners/create</span></code></li>
+<li>API接口请求方法：<code class="docutils literal"><span class="pre">POST</span></code></li>
+<li>API接口用户授权：<code class="docutils literal"><span class="pre">token</span></code></li>
+</ul>
+</div>
+</div>
+<div class="section" id="id33">
+<h2>更新广告信息&lt;未开通&gt;<a class="headerlink" href="#id33" title="永久链接至标题">¶</a></h2>
+<p>更新广告信息</p>
+<div class="section" id="id34">
+<h3>接口说明<a class="headerlink" href="#id34" title="永久链接至标题">¶</a></h3>
+<ul class="simple">
+<li>API接口请求地址：<code class="docutils literal"><span class="pre">/banners/update</span></code></li>
+<li>API接口请求方法：<code class="docutils literal"><span class="pre">PUT</span></code></li>
+<li>API接口用户授权：<code class="docutils literal"><span class="pre">token</span></code></li>
+</ul>
+</div>
+</div>
+<div class="section" id="id35">
+<h2>删除广告信息&lt;未开通&gt;<a class="headerlink" href="#id35" title="永久链接至标题">¶</a></h2>
+<p>删除广告信息</p>
+<div class="section" id="id36">
+<h3>接口说明<a class="headerlink" href="#id36" title="永久链接至标题">¶</a></h3>
+<ul class="simple">
+<li>API接口请求地址：<code class="docutils literal"><span class="pre">/banners/delete</span></code></li>
+<li>API接口请求方法：<code class="docutils literal"><span class="pre">DELETE</span></code></li>
+<li>API接口用户授权：<code class="docutils literal"><span class="pre">token</span></code></li>
+</ul>
+</div>
+</div>
+</div>
+
+
+    </div>
+      
+  </div>
+</div>
+<footer class="footer">
+    <div class="container">
+        <p>© Copyright 2018 moebeast.com.</p>
+        <p>Created using <a href="http://sphinx.pocoo.org/" target="_blank">Sphinx</a>.</p>
+    </div>
+</footer>
+
+  </body>
+</html>

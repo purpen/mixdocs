@@ -1,0 +1,2882 @@
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml" lang="zh_CN">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>物流运费模块 &#8212; mixdocs 0.1.0 文档</title>
+    <link rel="stylesheet" href="../_static/bootstrap-sphinx.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/mixpus.css" type="text/css" />
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '../',
+        VERSION:     '0.1.0',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true,
+        SOURCELINK_SUFFIX: '.txt'
+      };
+    </script>
+    <script type="text/javascript" src="../_static/jquery.js"></script>
+    <script type="text/javascript" src="../_static/underscore.js"></script>
+    <script type="text/javascript" src="../_static/doctools.js"></script>
+    <script type="text/javascript" src="../_static/translations.js"></script>
+    <script type="text/javascript" src="../_static/js/jquery-1.11.0.min.js"></script>
+    <script type="text/javascript" src="../_static/js/jquery-fix.js"></script>
+    <script type="text/javascript" src="../_static/bootstrap-3.3.7/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="../_static/bootstrap-sphinx.js"></script>
+    <link rel="index" title="索引" href="../genindex.html" />
+    <link rel="search" title="搜索" href="../search.html" />
+    <link rel="next" title="商品API模块" href="../products/index.html" />
+    <link rel="prev" title="订单评价模块" href="comment.html" />
+<meta charset='utf-8'>
+<meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'>
+<meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1'>
+<meta name="apple-mobile-web-app-capable" content="yes">
+
+  </head>
+  <body>
+
+  <div id="navbar" class="navbar navbar-inverse navbar-default navbar-fixed-top">
+    <div class="container">
+      <div class="navbar-header">
+        <!-- .btn-navbar is used as the toggle for collapsed navbar content -->
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".nav-collapse">
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="../index.html">
+          moebeast</a>
+        <span class="navbar-text navbar-version pull-left"><b>0.1.0</b></span>
+      </div>
+
+        <div class="collapse navbar-collapse nav-collapse">
+          <ul class="nav navbar-nav">
+            
+            
+              <li class="dropdown globaltoc-container">
+  <a role="button"
+     id="dLabelGlobalToc"
+     data-toggle="dropdown"
+     data-target="#"
+     href="../index.html">API文档 <b class="caret"></b></a>
+  <ul class="dropdown-menu globaltoc"
+      role="menu"
+      aria-labelledby="dLabelGlobalToc"><ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../intro.html">开放平台文档说明</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../intro.html#id2">开发入门</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../intro.html#id3">系统级请求参数</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../intro.html#id4">开发帮助文档</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../intro.html#id5">公共返回状态码说明</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../intro.html#oauth2-0">OAuth2.0协议介绍</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../intro.html#id6">参考资料链接</a></li>
+</ul>
+</li>
+<li class="toctree-l1 current"><a class="reference internal" href="index.html">销售API模块</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="orders.html">订单模块</a></li>
+<li class="toctree-l2"><a class="reference internal" href="customer_orders.html">分销商订单模块</a></li>
+<li class="toctree-l2"><a class="reference internal" href="carts.html">购物车模块</a></li>
+<li class="toctree-l2"><a class="reference internal" href="addresses.html">收货地址模块</a></li>
+<li class="toctree-l2"><a class="reference internal" href="comment.html">订单评价模块</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">物流运费模块</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../products/index.html">商品API模块</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../products/products.html">商品模块</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../products/category.html">分类模块</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../products/brands.html">供应商/品牌模块</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../products/materials.html">商品材料模块</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../products/colors.html">商品颜色模块</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../products/models.html">商品规格模块</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../products/labels.html">标签模块</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../products/return_policies.html">商家退换货规则模块</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../products/user_record.html">用户商品记录模块</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../products/assets.html">附件模块</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../distributions/index.html">分销API模块</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../distributions/distributions.html">分销模块</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../distributions/store_product_packet.html">商品组模块</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../customers/index.html">分销客户API模块</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../customers/customers.html">分销客户模块</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../customers/grades.html">客户等级模块</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../warehouses/index.html">采购仓储API模块</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../warehouses/purchase.html">采购API模块</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../shopes/index.html">微商城API模块</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../shopes/shopes.html">微商城模块</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../shopes/store.html">店铺模块</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../shopes/wxapp.html">小程序模块</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../market/index.html">营销API模块</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../market/banners.html">营销工具/广告模块</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../market/coupons.html">营销工具/优惠券模块</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../market/bonus_question.html">营销工具/猜题赢现金</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../stats/index.html">统计API模块</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../stats/report.html">报表模块</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../stats/order_sale_stats.html">订单销售统计模块</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../stats/order_stats.html">订单结算统计模块</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../stats/small_b_order_stats.html">小b订单结算统计模块</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../users/index.html">用户API模块</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../users/users.html">用户模块</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../users/auth.html">用户认证模块</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../users/finance.html">账户模块</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../wx_apps/index.html">小程序API模块</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../wx_apps/wx_app_design.html">小程序配置模块</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../qa/index.html">问答API模块</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../qa/qa.html">问答模块</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../columns/index.html">栏目API模块</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../columns/column_products.html">栏目商品模块</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../columns/life_records.html">生活志模块</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../columns/shop_windows.html">橱窗模块</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../common.html">公用接口模块</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../common.html#id2">幻灯图列表</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../common.html#id6">搜索关键词历史</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../common.html#id10">核心平台–搜索关键词历史</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../common.html#id14">核心平台–热门搜索</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../common.html#id17">核心平台–热门推荐</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../common.html#id20">核心平台–搜索</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../common.html#id24">小程序绑定手机号发送验证码</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../common.html#id29">注册发送短信验证码</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../common.html#id34">忘记密码发送短信验证码</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../common.html#id38">动态登陆发送短信验证码</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../common.html#id42">账户编辑发送短信验证码</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../common.html#id46">发送邮件验证码</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../setting.html">系统相关配置文档</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../setting.html#id2">开放国家列表</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../setting.html#id5">支持的语言</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../setting.html#id6">支持的币种</a></li>
+</ul>
+</li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../faq.html">常见问题</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../history.html">版本历史</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../history.html#v0-1-0">v0.1.0</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../todos.html">未来新功能</a></li>
+</ul>
+</ul>
+</li>
+              
+                <li class="dropdown">
+  <a role="button"
+     id="dLabelLocalToc"
+     data-toggle="dropdown"
+     data-target="#"
+     href="#">Page <b class="caret"></b></a>
+  <ul class="dropdown-menu localtoc"
+      role="menu"
+      aria-labelledby="dLabelLocalToc"><ul>
+<li><a class="reference internal" href="#">物流运费模块</a><ul>
+<li><a class="reference internal" href="#id2">获取快递鸟物流公司编码列表</a><ul>
+<li><a class="reference internal" href="#id3">接口说明</a></li>
+<li><a class="reference internal" href="#id4">返回示例</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#id5">获取物流信息</a><ul>
+<li><a class="reference internal" href="#id6">接口说明</a></li>
+<li><a class="reference internal" href="#id7">请求参数</a></li>
+<li><a class="reference internal" href="#id8">返回示例</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#id9">添加物流公司信息</a><ul>
+<li><a class="reference internal" href="#id10">接口说明</a></li>
+<li><a class="reference internal" href="#id11">请求参数</a></li>
+<li><a class="reference internal" href="#id12">返回示例</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#id13">修改物流公司信息</a><ul>
+<li><a class="reference internal" href="#id14">接口说明</a></li>
+<li><a class="reference internal" href="#id15">请求参数</a></li>
+<li><a class="reference internal" href="#id16">返回示例</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#id17">查询物流公司列表</a><ul>
+<li><a class="reference internal" href="#id18">接口说明</a></li>
+<li><a class="reference internal" href="#id19">请求参数</a></li>
+<li><a class="reference internal" href="#id20">返回示例</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#id21">查询物流公司详情</a><ul>
+<li><a class="reference internal" href="#id22">接口说明</a></li>
+<li><a class="reference internal" href="#id23">请求参数</a></li>
+<li><a class="reference internal" href="#id24">返回示例</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#id25">删除物流公司信息</a><ul>
+<li><a class="reference internal" href="#id26">接口说明</a></li>
+<li><a class="reference internal" href="#id27">请求参数</a></li>
+<li><a class="reference internal" href="#id28">返回示例</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#id29">设置默认物流公司</a><ul>
+<li><a class="reference internal" href="#id30">接口说明</a></li>
+<li><a class="reference internal" href="#id31">请求参数</a></li>
+<li><a class="reference internal" href="#id32">返回示例</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#id33">添加运费模板信息</a><ul>
+<li><a class="reference internal" href="#id34">接口说明</a></li>
+<li><a class="reference internal" href="#id35">请求参数</a></li>
+<li><a class="reference internal" href="#id36">返回示例</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#id37">复制运费模板信息</a><ul>
+<li><a class="reference internal" href="#id38">接口说明</a></li>
+<li><a class="reference internal" href="#id39">请求参数</a></li>
+<li><a class="reference internal" href="#id40">返回示例</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#id41">修改运费模板信息</a><ul>
+<li><a class="reference internal" href="#id42">接口说明</a></li>
+<li><a class="reference internal" href="#id43">请求参数</a></li>
+<li><a class="reference internal" href="#id44">返回示例</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#id45">查询运费模板信息列表</a><ul>
+<li><a class="reference internal" href="#id46">接口说明</a></li>
+<li><a class="reference internal" href="#id47">请求参数</a></li>
+<li><a class="reference internal" href="#id48">返回示例</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#id49">用户查询运费模板详情</a><ul>
+<li><a class="reference internal" href="#id50">接口说明</a></li>
+<li><a class="reference internal" href="#id51">请求参数</a></li>
+<li><a class="reference internal" href="#id52">返回示例</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#id53">商家查询运费模板详情</a><ul>
+<li><a class="reference internal" href="#id54">接口说明</a></li>
+<li><a class="reference internal" href="#id55">请求参数</a></li>
+<li><a class="reference internal" href="#id56">返回示例</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#id57">删除运费模板信息</a><ul>
+<li><a class="reference internal" href="#id58">接口说明</a></li>
+<li><a class="reference internal" href="#id59">请求参数</a></li>
+<li><a class="reference internal" href="#id60">返回示例</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#id61">选择合适的运费模板</a><ul>
+<li><a class="reference internal" href="#id62">接口说明</a></li>
+<li><a class="reference internal" href="#id63">请求参数</a></li>
+<li><a class="reference internal" href="#id64">返回示例</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#id65">获取每件商品的物流公司列表</a><ul>
+<li><a class="reference internal" href="#id66">接口说明</a></li>
+<li><a class="reference internal" href="#id67">请求参数</a></li>
+<li><a class="reference internal" href="#id68">返回示例</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#id69">计算运费</a><ul>
+<li><a class="reference internal" href="#id70">接口说明</a></li>
+<li><a class="reference internal" href="#id71">请求参数</a></li>
+<li><a class="reference internal" href="#id72">返回示例</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#id73">验证该商户是否设置物流模板</a><ul>
+<li><a class="reference internal" href="#id74">接口说明</a></li>
+<li><a class="reference internal" href="#id75">返回示例</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</ul>
+</li>
+              
+            
+            
+            
+            
+            
+          </ul>
+
+          
+            
+<form class="navbar-form navbar-right" action="../search.html" method="get">
+ <div class="form-group">
+  <input type="text" name="q" class="form-control" placeholder="Search" />
+ </div>
+  <input type="hidden" name="check_keywords" value="yes" />
+  <input type="hidden" name="area" value="default" />
+</form>
+          
+        </div>
+    </div>
+  </div>
+
+<div class="container">
+  <div class="row">
+      <div class="col-md-3">
+        <div id="sidebar" class="bs-sidenav" role="complementary"><ul>
+<li><a class="reference internal" href="#">物流运费模块</a><ul>
+<li><a class="reference internal" href="#id2">获取快递鸟物流公司编码列表</a><ul>
+<li><a class="reference internal" href="#id3">接口说明</a></li>
+<li><a class="reference internal" href="#id4">返回示例</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#id5">获取物流信息</a><ul>
+<li><a class="reference internal" href="#id6">接口说明</a></li>
+<li><a class="reference internal" href="#id7">请求参数</a></li>
+<li><a class="reference internal" href="#id8">返回示例</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#id9">添加物流公司信息</a><ul>
+<li><a class="reference internal" href="#id10">接口说明</a></li>
+<li><a class="reference internal" href="#id11">请求参数</a></li>
+<li><a class="reference internal" href="#id12">返回示例</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#id13">修改物流公司信息</a><ul>
+<li><a class="reference internal" href="#id14">接口说明</a></li>
+<li><a class="reference internal" href="#id15">请求参数</a></li>
+<li><a class="reference internal" href="#id16">返回示例</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#id17">查询物流公司列表</a><ul>
+<li><a class="reference internal" href="#id18">接口说明</a></li>
+<li><a class="reference internal" href="#id19">请求参数</a></li>
+<li><a class="reference internal" href="#id20">返回示例</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#id21">查询物流公司详情</a><ul>
+<li><a class="reference internal" href="#id22">接口说明</a></li>
+<li><a class="reference internal" href="#id23">请求参数</a></li>
+<li><a class="reference internal" href="#id24">返回示例</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#id25">删除物流公司信息</a><ul>
+<li><a class="reference internal" href="#id26">接口说明</a></li>
+<li><a class="reference internal" href="#id27">请求参数</a></li>
+<li><a class="reference internal" href="#id28">返回示例</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#id29">设置默认物流公司</a><ul>
+<li><a class="reference internal" href="#id30">接口说明</a></li>
+<li><a class="reference internal" href="#id31">请求参数</a></li>
+<li><a class="reference internal" href="#id32">返回示例</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#id33">添加运费模板信息</a><ul>
+<li><a class="reference internal" href="#id34">接口说明</a></li>
+<li><a class="reference internal" href="#id35">请求参数</a></li>
+<li><a class="reference internal" href="#id36">返回示例</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#id37">复制运费模板信息</a><ul>
+<li><a class="reference internal" href="#id38">接口说明</a></li>
+<li><a class="reference internal" href="#id39">请求参数</a></li>
+<li><a class="reference internal" href="#id40">返回示例</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#id41">修改运费模板信息</a><ul>
+<li><a class="reference internal" href="#id42">接口说明</a></li>
+<li><a class="reference internal" href="#id43">请求参数</a></li>
+<li><a class="reference internal" href="#id44">返回示例</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#id45">查询运费模板信息列表</a><ul>
+<li><a class="reference internal" href="#id46">接口说明</a></li>
+<li><a class="reference internal" href="#id47">请求参数</a></li>
+<li><a class="reference internal" href="#id48">返回示例</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#id49">用户查询运费模板详情</a><ul>
+<li><a class="reference internal" href="#id50">接口说明</a></li>
+<li><a class="reference internal" href="#id51">请求参数</a></li>
+<li><a class="reference internal" href="#id52">返回示例</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#id53">商家查询运费模板详情</a><ul>
+<li><a class="reference internal" href="#id54">接口说明</a></li>
+<li><a class="reference internal" href="#id55">请求参数</a></li>
+<li><a class="reference internal" href="#id56">返回示例</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#id57">删除运费模板信息</a><ul>
+<li><a class="reference internal" href="#id58">接口说明</a></li>
+<li><a class="reference internal" href="#id59">请求参数</a></li>
+<li><a class="reference internal" href="#id60">返回示例</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#id61">选择合适的运费模板</a><ul>
+<li><a class="reference internal" href="#id62">接口说明</a></li>
+<li><a class="reference internal" href="#id63">请求参数</a></li>
+<li><a class="reference internal" href="#id64">返回示例</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#id65">获取每件商品的物流公司列表</a><ul>
+<li><a class="reference internal" href="#id66">接口说明</a></li>
+<li><a class="reference internal" href="#id67">请求参数</a></li>
+<li><a class="reference internal" href="#id68">返回示例</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#id69">计算运费</a><ul>
+<li><a class="reference internal" href="#id70">接口说明</a></li>
+<li><a class="reference internal" href="#id71">请求参数</a></li>
+<li><a class="reference internal" href="#id72">返回示例</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#id73">验证该商户是否设置物流模板</a><ul>
+<li><a class="reference internal" href="#id74">接口说明</a></li>
+<li><a class="reference internal" href="#id75">返回示例</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+
+<ul class="nav nav-list">
+  <li>
+    <a href="comment.html" title="Previous Chapter: 订单评价模块"><span class="glyphicon glyphicon-chevron-left visible-sm"></span><span class="hidden-sm hidden-tablet">&raquo; 订单评价模块</span>
+    </a>
+  </li>
+  <li>
+    <a href="../products/index.html" title="Next Chapter: 商品API模块"><span class="glyphicon glyphicon-chevron-right visible-sm"></span><span class="hidden-sm hidden-tablet">&raquo; 商品API模块</span>
+    </a>
+  </li>
+</ul>
+<div id="sourcelink">
+  <a href="../_sources/orders/logistics.rst.txt"
+     rel="nofollow">Source</a>
+</div>
+<form action="../search.html" method="get">
+ <div class="form-group">
+  <input type="text" name="q" class="form-control" placeholder="Search" />
+ </div>
+  <input type="hidden" name="check_keywords" value="yes" />
+  <input type="hidden" name="area" value="default" />
+</form>
+        </div>
+      </div>
+    <div class="col-md-9 content">
+      
+  <div class="section" id="id1">
+<h1>物流运费模块<a class="headerlink" href="#id1" title="永久链接至标题">¶</a></h1>
+<div class="section" id="id2">
+<h2>获取快递鸟物流公司编码列表<a class="headerlink" href="#id2" title="永久链接至标题">¶</a></h2>
+<p>获取物流公司的快递鸟编码</p>
+<div class="section" id="id3">
+<h3>接口说明<a class="headerlink" href="#id3" title="永久链接至标题">¶</a></h3>
+<ul class="simple">
+<li>API接口请求地址：<code class="docutils literal"><span class="pre">/logistics/kdniao_code</span></code></li>
+<li>API接口请求方法：<code class="docutils literal"><span class="pre">GET</span></code></li>
+</ul>
+</div>
+<div class="section" id="id4">
+<h3>返回示例<a class="headerlink" href="#id4" title="永久链接至标题">¶</a></h3>
+<p>JSON数据格式:</p>
+<p>请求 <strong>正确</strong> 返回结果：</p>
+<div class="highlight-javascript"><div class="highlight"><pre><span></span><span class="p">{</span>
+    <span class="s2">&quot;data&quot;</span><span class="o">:</span> <span class="p">{</span>
+        <span class="s2">&quot;kdniao_code&quot;</span><span class="o">:</span> <span class="p">[</span>
+            <span class="p">{</span>
+                <span class="s2">&quot;code&quot;</span><span class="o">:</span> <span class="s2">&quot;ZTO&quot;</span><span class="p">,</span>
+                <span class="s2">&quot;id&quot;</span><span class="o">:</span> <span class="mi">1</span><span class="p">,</span>
+                <span class="s2">&quot;name&quot;</span><span class="o">:</span> <span class="s2">&quot;中通快递&quot;</span>
+            <span class="p">},</span>
+            <span class="p">{</span>
+                <span class="s2">&quot;code&quot;</span><span class="o">:</span> <span class="s2">&quot;YTO&quot;</span><span class="p">,</span>
+                <span class="s2">&quot;id&quot;</span><span class="o">:</span> <span class="mi">2</span><span class="p">,</span>
+                <span class="s2">&quot;name&quot;</span><span class="o">:</span> <span class="s2">&quot;圆通速递&quot;</span>
+            <span class="p">},</span>
+            <span class="p">{</span>
+                <span class="s2">&quot;code&quot;</span><span class="o">:</span> <span class="s2">&quot;EMS&quot;</span><span class="p">,</span>
+                <span class="s2">&quot;id&quot;</span><span class="o">:</span> <span class="mi">3</span><span class="p">,</span>
+                <span class="s2">&quot;name&quot;</span><span class="o">:</span> <span class="s2">&quot;EMS&quot;</span>
+            <span class="p">},</span>
+            <span class="p">{</span>
+                <span class="s2">&quot;code&quot;</span><span class="o">:</span> <span class="s2">&quot;JD&quot;</span><span class="p">,</span>
+                <span class="s2">&quot;id&quot;</span><span class="o">:</span> <span class="mi">4</span><span class="p">,</span>
+                <span class="s2">&quot;name&quot;</span><span class="o">:</span> <span class="s2">&quot;京东物流&quot;</span>
+            <span class="p">}</span>
+        <span class="p">]</span>
+    <span class="p">},</span>
+    <span class="s2">&quot;status&quot;</span><span class="o">:</span> <span class="p">{</span>
+        <span class="s2">&quot;code&quot;</span><span class="o">:</span> <span class="mi">200</span><span class="p">,</span>
+        <span class="s2">&quot;message&quot;</span><span class="o">:</span> <span class="s2">&quot;Ok all right.&quot;</span>
+    <span class="p">},</span>
+    <span class="s2">&quot;success&quot;</span><span class="o">:</span> <span class="kc">true</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="id5">
+<h2>获取物流信息<a class="headerlink" href="#id5" title="永久链接至标题">¶</a></h2>
+<p>获取商品物流实时信息</p>
+<div class="section" id="id6">
+<h3>接口说明<a class="headerlink" href="#id6" title="永久链接至标题">¶</a></h3>
+<ul class="simple">
+<li>API接口请求地址：<code class="docutils literal"><span class="pre">/logistics/information</span></code></li>
+<li>API接口请求方法：<code class="docutils literal"><span class="pre">POST</span></code></li>
+<li>API接口用户授权：<code class="docutils literal"><span class="pre">token</span></code></li>
+</ul>
+</div>
+<div class="section" id="id7">
+<h3>请求参数<a class="headerlink" href="#id7" title="永久链接至标题">¶</a></h3>
+<table border="1" class="docutils">
+<colgroup>
+<col width="25%" />
+<col width="13%" />
+<col width="12%" />
+<col width="13%" />
+<col width="36%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">名称</th>
+<th class="head">类型</th>
+<th class="head">是否必须</th>
+<th class="head">默认值</th>
+<th class="head">描述说明</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>logistic_code</td>
+<td>String</td>
+<td>必需</td>
+<td>&#160;</td>
+<td>运单编号</td>
+</tr>
+<tr class="row-odd"><td>kdn_company_code</td>
+<td>String</td>
+<td>必需</td>
+<td>&#160;</td>
+<td>快递鸟物流公司编码</td>
+</tr>
+</tbody>
+</table>
+<p>参考示例：</p>
+<div class="highlight-javascript"><div class="highlight"><pre><span></span><span class="p">{</span>
+    <span class="s2">&quot;logistic_code&quot;</span><span class="o">:</span><span class="s2">&quot;1199965242414&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;kdn_company_code&quot;</span><span class="o">:</span><span class="s2">&quot;EMS&quot;</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="id8">
+<h3>返回示例<a class="headerlink" href="#id8" title="永久链接至标题">¶</a></h3>
+<p>JSON数据格式:</p>
+<p>请求 <strong>正确</strong> 返回结果：</p>
+<div class="highlight-javascript"><div class="highlight"><pre><span></span><span class="p">{</span>
+    <span class="s2">&quot;data&quot;</span><span class="o">:</span> <span class="p">{</span>
+        <span class="s2">&quot;EBusinessID&quot;</span><span class="o">:</span> <span class="s2">&quot;1302778&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;LogisticCode&quot;</span><span class="o">:</span> <span class="s2">&quot;1199965242414&quot;</span><span class="p">,</span>  <span class="c1">// 物流运单号</span>
+        <span class="s2">&quot;ShipperCode&quot;</span><span class="o">:</span> <span class="s2">&quot;EMS&quot;</span><span class="p">,</span>  <span class="c1">// 快递公司编码</span>
+        <span class="s2">&quot;State&quot;</span><span class="o">:</span> <span class="s2">&quot;3&quot;</span><span class="p">,</span>  <span class="c1">// 物流状态：2-在途中,3-签收,4-问题件</span>
+        <span class="s2">&quot;Success&quot;</span><span class="o">:</span> <span class="kc">true</span><span class="p">,</span>
+        <span class="s2">&quot;Traces&quot;</span><span class="o">:</span> <span class="p">[</span>
+            <span class="p">{</span>
+                <span class="s2">&quot;AcceptStation&quot;</span><span class="o">:</span> <span class="s2">&quot;天津市邮政速递物流公司武清区分公司崔黄口揽投部已收件（揽投员姓名：李静,联系电话:）&quot;</span><span class="p">,</span>
+                <span class="s2">&quot;AcceptTime&quot;</span><span class="o">:</span> <span class="s2">&quot;2018-05-21 07:46:00&quot;</span>
+            <span class="p">},</span>
+            <span class="p">{</span>
+                <span class="s2">&quot;AcceptStation&quot;</span><span class="o">:</span> <span class="s2">&quot;已离开天津市邮政速递物流公司武清区分公司崔黄口揽投部，发往天津处理中心&quot;</span><span class="p">,</span>
+                <span class="s2">&quot;AcceptTime&quot;</span><span class="o">:</span> <span class="s2">&quot;2018-05-21 08:39:17&quot;</span>
+            <span class="p">},</span>
+            <span class="p">{</span>
+                <span class="s2">&quot;AcceptStation&quot;</span><span class="o">:</span> <span class="s2">&quot;离开天津市 发往北京市&quot;</span><span class="p">,</span>
+                <span class="s2">&quot;AcceptTime&quot;</span><span class="o">:</span> <span class="s2">&quot;2018-05-21 20:35:42&quot;</span>
+            <span class="p">},</span>
+            <span class="p">{</span>
+                <span class="s2">&quot;AcceptStation&quot;</span><span class="o">:</span> <span class="s2">&quot;到达  中国邮政速递物流股份有限公司北京市国货航航空邮件处 处理中心&quot;</span><span class="p">,</span>
+                <span class="s2">&quot;AcceptTime&quot;</span><span class="o">:</span> <span class="s2">&quot;2018-05-21 23:15:00&quot;</span>
+            <span class="p">},</span>
+            <span class="p">{</span>
+                <span class="s2">&quot;AcceptStation&quot;</span><span class="o">:</span> <span class="s2">&quot;离开中国邮政速递物流股份有限公司北京市国货航航空邮件处 发往北京邮政速递安定门区域分公司北苑营投部&quot;</span><span class="p">,</span>
+                <span class="s2">&quot;AcceptTime&quot;</span><span class="o">:</span> <span class="s2">&quot;2018-05-22 05:15:05&quot;</span>
+            <span class="p">},</span>
+            <span class="p">{</span>
+                <span class="s2">&quot;AcceptStation&quot;</span><span class="o">:</span> <span class="s2">&quot;北京邮政速递安定门区域分公司北苑营投部安排投递，预计23:59:00前投递（投递员姓名：韩方朋;联系电话：18519363520）&quot;</span><span class="p">,</span>
+                <span class="s2">&quot;AcceptTime&quot;</span><span class="o">:</span> <span class="s2">&quot;2018-05-22 07:54:02&quot;</span>
+            <span class="p">},</span>
+            <span class="p">{</span>
+                <span class="s2">&quot;AcceptStation&quot;</span><span class="o">:</span> <span class="s2">&quot;投递并签收，签收人：他人收 超市&quot;</span><span class="p">,</span>
+                <span class="s2">&quot;AcceptTime&quot;</span><span class="o">:</span> <span class="s2">&quot;2018-05-22 12:49:50&quot;</span>
+            <span class="p">}</span>
+        <span class="p">]</span>
+    <span class="p">},</span>
+    <span class="s2">&quot;status&quot;</span><span class="o">:</span> <span class="p">{</span>
+        <span class="s2">&quot;code&quot;</span><span class="o">:</span> <span class="mi">200</span><span class="p">,</span>
+        <span class="s2">&quot;message&quot;</span><span class="o">:</span> <span class="s2">&quot;Ok all right.&quot;</span>
+    <span class="p">},</span>
+    <span class="s2">&quot;success&quot;</span><span class="o">:</span> <span class="kc">true</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="id9">
+<h2>添加物流公司信息<a class="headerlink" href="#id9" title="永久链接至标题">¶</a></h2>
+<p>某商家添加物流公司信息</p>
+<div class="section" id="id10">
+<h3>接口说明<a class="headerlink" href="#id10" title="永久链接至标题">¶</a></h3>
+<ul class="simple">
+<li>API接口请求地址：<code class="docutils literal"><span class="pre">/logistics/express</span></code></li>
+<li>API接口请求方法：<code class="docutils literal"><span class="pre">POST</span></code></li>
+<li>API接口用户授权：<code class="docutils literal"><span class="pre">token</span></code></li>
+</ul>
+</div>
+<div class="section" id="id11">
+<h3>请求参数<a class="headerlink" href="#id11" title="永久链接至标题">¶</a></h3>
+<table border="1" class="docutils">
+<colgroup>
+<col width="25%" />
+<col width="13%" />
+<col width="12%" />
+<col width="13%" />
+<col width="36%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">名称</th>
+<th class="head">类型</th>
+<th class="head">是否必须</th>
+<th class="head">默认值</th>
+<th class="head">描述说明</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>name</td>
+<td>String</td>
+<td>必需</td>
+<td>&#160;</td>
+<td>模板名称</td>
+</tr>
+<tr class="row-odd"><td>code</td>
+<td>String</td>
+<td>必需</td>
+<td>&#160;</td>
+<td>物流公司编码</td>
+</tr>
+<tr class="row-even"><td>contact_name</td>
+<td>String</td>
+<td>必需</td>
+<td>&#160;</td>
+<td>联系人姓名</td>
+</tr>
+<tr class="row-odd"><td>contact_mobile</td>
+<td>String</td>
+<td>可选</td>
+<td>&#160;</td>
+<td>联系人手机</td>
+</tr>
+<tr class="row-even"><td>contact_phone</td>
+<td>String</td>
+<td>可选</td>
+<td>&#160;</td>
+<td>联系人电话</td>
+</tr>
+<tr class="row-odd"><td>description</td>
+<td>String</td>
+<td>可选</td>
+<td>&#160;</td>
+<td>描述</td>
+</tr>
+<tr class="row-even"><td>is_default</td>
+<td>Bool</td>
+<td>可选</td>
+<td>&#160;</td>
+<td>是否默认</td>
+</tr>
+<tr class="row-odd"><td>customer_name</td>
+<td>String</td>
+<td>可选</td>
+<td>&#160;</td>
+<td>电子面单账号</td>
+</tr>
+<tr class="row-even"><td>customer_pwd</td>
+<td>String</td>
+<td>可选</td>
+<td>&#160;</td>
+<td>电子面单密码</td>
+</tr>
+<tr class="row-odd"><td>send_site</td>
+<td>String</td>
+<td>可选</td>
+<td>&#160;</td>
+<td>发送网站</td>
+</tr>
+</tbody>
+</table>
+<p>参考示例：</p>
+<div class="highlight-javascript"><div class="highlight"><pre><span></span><span class="p">{</span>
+    <span class="s2">&quot;name&quot;</span><span class="o">:</span><span class="s2">&quot;EMS&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;code&quot;</span><span class="o">:</span><span class="s2">&quot;EMS&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;contact_name&quot;</span><span class="o">:</span><span class="s2">&quot;田帅&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;is_default&quot;</span><span class="o">:</span><span class="kc">true</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="id12">
+<h3>返回示例<a class="headerlink" href="#id12" title="永久链接至标题">¶</a></h3>
+<p>JSON数据格式:</p>
+<p>请求 <strong>正确</strong> 返回结果：</p>
+<div class="highlight-javascript"><div class="highlight"><pre><span></span><span class="p">{</span>
+    <span class="s2">&quot;data&quot;</span><span class="o">:</span> <span class="p">{</span>
+        <span class="s2">&quot;code&quot;</span><span class="o">:</span> <span class="s2">&quot;EMS&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;contact_mobile&quot;</span><span class="o">:</span> <span class="kc">null</span><span class="p">,</span>
+        <span class="s2">&quot;contact_name&quot;</span><span class="o">:</span> <span class="s2">&quot;田帅&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;contact_phone&quot;</span><span class="o">:</span> <span class="kc">null</span><span class="p">,</span>
+        <span class="s2">&quot;created_at&quot;</span><span class="o">:</span> <span class="mi">1528703231</span><span class="p">,</span>
+        <span class="s2">&quot;customer_name&quot;</span><span class="o">:</span> <span class="kc">null</span><span class="p">,</span>
+        <span class="s2">&quot;customer_pwd&quot;</span><span class="o">:</span> <span class="kc">null</span><span class="p">,</span>
+        <span class="s2">&quot;description&quot;</span><span class="o">:</span> <span class="kc">null</span><span class="p">,</span>
+        <span class="s2">&quot;id&quot;</span><span class="o">:</span> <span class="mi">6</span><span class="p">,</span>
+        <span class="s2">&quot;is_default&quot;</span><span class="o">:</span> <span class="kc">true</span><span class="p">,</span>
+        <span class="s2">&quot;name&quot;</span><span class="o">:</span> <span class="s2">&quot;EMS&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;send_site&quot;</span><span class="o">:</span> <span class="kc">null</span><span class="p">,</span>
+        <span class="s2">&quot;updated_at&quot;</span><span class="o">:</span> <span class="mi">1528703231</span>
+    <span class="p">},</span>
+    <span class="s2">&quot;status&quot;</span><span class="o">:</span> <span class="p">{</span>
+        <span class="s2">&quot;code&quot;</span><span class="o">:</span> <span class="mi">201</span><span class="p">,</span>
+        <span class="s2">&quot;message&quot;</span><span class="o">:</span> <span class="s2">&quot;All created.&quot;</span>
+    <span class="p">},</span>
+    <span class="s2">&quot;success&quot;</span><span class="o">:</span> <span class="kc">true</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="id13">
+<h2>修改物流公司信息<a class="headerlink" href="#id13" title="永久链接至标题">¶</a></h2>
+<p>某商家修改物流公司信息</p>
+<div class="section" id="id14">
+<h3>接口说明<a class="headerlink" href="#id14" title="永久链接至标题">¶</a></h3>
+<ul class="simple">
+<li>API接口请求地址：<code class="docutils literal"><span class="pre">/logistics/express</span></code></li>
+<li>API接口请求方法：<code class="docutils literal"><span class="pre">PUT</span></code></li>
+<li>API接口用户授权：<code class="docutils literal"><span class="pre">token</span></code></li>
+</ul>
+</div>
+<div class="section" id="id15">
+<h3>请求参数<a class="headerlink" href="#id15" title="永久链接至标题">¶</a></h3>
+<table border="1" class="docutils">
+<colgroup>
+<col width="25%" />
+<col width="13%" />
+<col width="12%" />
+<col width="13%" />
+<col width="36%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">名称</th>
+<th class="head">类型</th>
+<th class="head">是否必须</th>
+<th class="head">默认值</th>
+<th class="head">描述说明</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>rid</td>
+<td>Integer</td>
+<td>必需</td>
+<td>&#160;</td>
+<td>物流公司id</td>
+</tr>
+<tr class="row-odd"><td>name</td>
+<td>String</td>
+<td>可选</td>
+<td>&#160;</td>
+<td>模板名称</td>
+</tr>
+<tr class="row-even"><td>code</td>
+<td>String</td>
+<td>可选</td>
+<td>&#160;</td>
+<td>物流公司编码</td>
+</tr>
+<tr class="row-odd"><td>contact_name</td>
+<td>String</td>
+<td>可选</td>
+<td>&#160;</td>
+<td>联系人姓名</td>
+</tr>
+<tr class="row-even"><td>contact_mobile</td>
+<td>String</td>
+<td>可选</td>
+<td>&#160;</td>
+<td>联系人手机</td>
+</tr>
+<tr class="row-odd"><td>contact_phone</td>
+<td>String</td>
+<td>可选</td>
+<td>&#160;</td>
+<td>联系人电话</td>
+</tr>
+<tr class="row-even"><td>description</td>
+<td>String</td>
+<td>可选</td>
+<td>&#160;</td>
+<td>描述</td>
+</tr>
+<tr class="row-odd"><td>is_default</td>
+<td>Bool</td>
+<td>可选</td>
+<td>&#160;</td>
+<td>是否默认</td>
+</tr>
+<tr class="row-even"><td>customer_name</td>
+<td>String</td>
+<td>可选</td>
+<td>&#160;</td>
+<td>电子面单账号</td>
+</tr>
+<tr class="row-odd"><td>customer_pwd</td>
+<td>String</td>
+<td>可选</td>
+<td>&#160;</td>
+<td>电子面单密码</td>
+</tr>
+<tr class="row-even"><td>send_site</td>
+<td>String</td>
+<td>可选</td>
+<td>&#160;</td>
+<td>发送网站</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="id16">
+<h3>返回示例<a class="headerlink" href="#id16" title="永久链接至标题">¶</a></h3>
+<p>JSON数据格式:</p>
+<p>请求 <strong>正确</strong> 返回结果：</p>
+<div class="highlight-javascript"><div class="highlight"><pre><span></span><span class="p">{</span>
+    <span class="s2">&quot;data&quot;</span><span class="o">:</span> <span class="p">{</span>
+        <span class="s2">&quot;code&quot;</span><span class="o">:</span> <span class="s2">&quot;EMS&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;contact_mobile&quot;</span><span class="o">:</span> <span class="kc">null</span><span class="p">,</span>
+        <span class="s2">&quot;contact_name&quot;</span><span class="o">:</span> <span class="s2">&quot;用户&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;contact_phone&quot;</span><span class="o">:</span> <span class="kc">null</span><span class="p">,</span>
+        <span class="s2">&quot;created_at&quot;</span><span class="o">:</span> <span class="mi">1528703231</span><span class="p">,</span>
+        <span class="s2">&quot;customer_name&quot;</span><span class="o">:</span> <span class="kc">null</span><span class="p">,</span>
+        <span class="s2">&quot;customer_pwd&quot;</span><span class="o">:</span> <span class="kc">null</span><span class="p">,</span>
+        <span class="s2">&quot;description&quot;</span><span class="o">:</span> <span class="kc">null</span><span class="p">,</span>
+        <span class="s2">&quot;id&quot;</span><span class="o">:</span> <span class="mi">6</span><span class="p">,</span>
+        <span class="s2">&quot;is_default&quot;</span><span class="o">:</span> <span class="kc">false</span><span class="p">,</span>
+        <span class="s2">&quot;name&quot;</span><span class="o">:</span> <span class="s2">&quot;EMS&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;send_site&quot;</span><span class="o">:</span> <span class="kc">null</span><span class="p">,</span>
+        <span class="s2">&quot;updated_at&quot;</span><span class="o">:</span> <span class="mi">1528704875</span>
+    <span class="p">},</span>
+    <span class="s2">&quot;status&quot;</span><span class="o">:</span> <span class="p">{</span>
+        <span class="s2">&quot;code&quot;</span><span class="o">:</span> <span class="mi">200</span><span class="p">,</span>
+        <span class="s2">&quot;message&quot;</span><span class="o">:</span> <span class="s2">&quot;Ok all right.&quot;</span>
+    <span class="p">},</span>
+    <span class="s2">&quot;success&quot;</span><span class="o">:</span> <span class="kc">true</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<p>返回错误格式：</p>
+<div class="highlight-javascript"><div class="highlight"><pre><span></span><span class="p">{</span>
+  <span class="s2">&quot;status&quot;</span><span class="o">:</span> <span class="p">{</span>
+    <span class="s2">&quot;code&quot;</span><span class="o">:</span> <span class="mi">404</span><span class="p">,</span>
+    <span class="s2">&quot;message&quot;</span><span class="o">:</span> <span class="s2">&quot;Not Found&quot;</span>
+  <span class="p">},</span>
+  <span class="s2">&quot;success&quot;</span><span class="o">:</span> <span class="kc">false</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="id17">
+<h2>查询物流公司列表<a class="headerlink" href="#id17" title="永久链接至标题">¶</a></h2>
+<p>某商家查询物流公司列表</p>
+<div class="section" id="id18">
+<h3>接口说明<a class="headerlink" href="#id18" title="永久链接至标题">¶</a></h3>
+<ul class="simple">
+<li>API接口请求地址：<code class="docutils literal"><span class="pre">/logistics/express</span></code></li>
+<li>API接口请求方法：<code class="docutils literal"><span class="pre">GET</span></code></li>
+<li>API接口用户授权：<code class="docutils literal"><span class="pre">token</span></code></li>
+</ul>
+</div>
+<div class="section" id="id19">
+<h3>请求参数<a class="headerlink" href="#id19" title="永久链接至标题">¶</a></h3>
+<table border="1" class="docutils">
+<colgroup>
+<col width="15%" />
+<col width="11%" />
+<col width="13%" />
+<col width="11%" />
+<col width="50%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">名称</th>
+<th class="head">类型</th>
+<th class="head">是否必须</th>
+<th class="head">默认值</th>
+<th class="head">描述说明</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>page</td>
+<td>Number</td>
+<td>可选</td>
+<td>1</td>
+<td>当前页码</td>
+</tr>
+<tr class="row-odd"><td>per_page</td>
+<td>Number</td>
+<td>可选</td>
+<td>10</td>
+<td>每页数量</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="id20">
+<h3>返回示例<a class="headerlink" href="#id20" title="永久链接至标题">¶</a></h3>
+<p>JSON数据格式:</p>
+<p>请求 <strong>正确</strong> 返回结果：</p>
+<div class="highlight-javascript"><div class="highlight"><pre><span></span><span class="p">{</span>
+    <span class="s2">&quot;data&quot;</span><span class="o">:</span> <span class="p">{</span>
+        <span class="s2">&quot;count&quot;</span><span class="o">:</span> <span class="mi">3</span><span class="p">,</span>
+        <span class="s2">&quot;next&quot;</span><span class="o">:</span> <span class="s2">&quot;http://0.0.0.0:9000/api/v1.0/logistics/express?page=2&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;expresses&quot;</span><span class="o">:</span> <span class="p">[</span>
+            <span class="p">{</span>
+                <span class="s2">&quot;code&quot;</span><span class="o">:</span> <span class="s2">&quot;EMS&quot;</span><span class="p">,</span>
+                <span class="s2">&quot;contact_mobile&quot;</span><span class="o">:</span> <span class="kc">null</span><span class="p">,</span>
+                <span class="s2">&quot;contact_name&quot;</span><span class="o">:</span> <span class="s2">&quot;EMS&quot;</span><span class="p">,</span>
+                <span class="s2">&quot;contact_phone&quot;</span><span class="o">:</span> <span class="kc">null</span><span class="p">,</span>
+                <span class="s2">&quot;created_at&quot;</span><span class="o">:</span> <span class="mi">1528703231</span><span class="p">,</span>
+                <span class="s2">&quot;customer_name&quot;</span><span class="o">:</span> <span class="kc">null</span><span class="p">,</span>
+                <span class="s2">&quot;customer_pwd&quot;</span><span class="o">:</span> <span class="kc">null</span><span class="p">,</span>
+                <span class="s2">&quot;description&quot;</span><span class="o">:</span> <span class="kc">null</span><span class="p">,</span>
+                <span class="s2">&quot;id&quot;</span><span class="o">:</span> <span class="mi">6</span><span class="p">,</span>
+                <span class="s2">&quot;is_default&quot;</span><span class="o">:</span> <span class="kc">false</span><span class="p">,</span>
+                <span class="s2">&quot;name&quot;</span><span class="o">:</span> <span class="s2">&quot;EMS&quot;</span><span class="p">,</span>
+                <span class="s2">&quot;send_site&quot;</span><span class="o">:</span> <span class="kc">null</span><span class="p">,</span>
+                <span class="s2">&quot;updated_at&quot;</span><span class="o">:</span> <span class="mi">1528704875</span>
+            <span class="p">}</span>
+        <span class="p">],</span>
+        <span class="s2">&quot;prev&quot;</span><span class="o">:</span> <span class="kc">null</span>
+    <span class="p">},</span>
+    <span class="s2">&quot;status&quot;</span><span class="o">:</span> <span class="p">{</span>
+        <span class="s2">&quot;code&quot;</span><span class="o">:</span> <span class="mi">200</span><span class="p">,</span>
+        <span class="s2">&quot;message&quot;</span><span class="o">:</span> <span class="s2">&quot;Ok all right.&quot;</span>
+    <span class="p">},</span>
+    <span class="s2">&quot;success&quot;</span><span class="o">:</span> <span class="kc">true</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="id21">
+<h2>查询物流公司详情<a class="headerlink" href="#id21" title="永久链接至标题">¶</a></h2>
+<p>某商家查询物流公司详情</p>
+<div class="section" id="id22">
+<h3>接口说明<a class="headerlink" href="#id22" title="永久链接至标题">¶</a></h3>
+<ul class="simple">
+<li>API接口请求地址：<code class="docutils literal"><span class="pre">/logistics/express/&lt;string:id&gt;</span></code></li>
+<li>API接口请求方法：<code class="docutils literal"><span class="pre">GET</span></code></li>
+<li>API接口用户授权：<code class="docutils literal"><span class="pre">token</span></code></li>
+</ul>
+</div>
+<div class="section" id="id23">
+<h3>请求参数<a class="headerlink" href="#id23" title="永久链接至标题">¶</a></h3>
+<table border="1" class="docutils">
+<colgroup>
+<col width="25%" />
+<col width="13%" />
+<col width="12%" />
+<col width="13%" />
+<col width="36%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">名称</th>
+<th class="head">类型</th>
+<th class="head">是否必须</th>
+<th class="head">默认值</th>
+<th class="head">描述说明</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>rid</td>
+<td>String</td>
+<td>必需</td>
+<td>&#160;</td>
+<td>模板rid</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="id24">
+<h3>返回示例<a class="headerlink" href="#id24" title="永久链接至标题">¶</a></h3>
+<p>JSON数据格式:</p>
+<p>请求 <strong>正确</strong> 返回结果：</p>
+<div class="highlight-javascript"><div class="highlight"><pre><span></span><span class="p">{</span>
+    <span class="s2">&quot;data&quot;</span><span class="o">:</span> <span class="p">{</span>
+        <span class="s2">&quot;count&quot;</span><span class="o">:</span> <span class="mi">3</span><span class="p">,</span>
+        <span class="s2">&quot;next&quot;</span><span class="o">:</span> <span class="s2">&quot;http://0.0.0.0:9000/api/v1.0/logistics/express?page=2&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;expresses&quot;</span><span class="o">:</span> <span class="p">[</span>
+            <span class="p">{</span>
+                <span class="s2">&quot;code&quot;</span><span class="o">:</span> <span class="s2">&quot;EMS&quot;</span><span class="p">,</span>
+                <span class="s2">&quot;contact_mobile&quot;</span><span class="o">:</span> <span class="kc">null</span><span class="p">,</span>
+                <span class="s2">&quot;contact_name&quot;</span><span class="o">:</span> <span class="s2">&quot;EMS&quot;</span><span class="p">,</span>
+                <span class="s2">&quot;contact_phone&quot;</span><span class="o">:</span> <span class="kc">null</span><span class="p">,</span>
+                <span class="s2">&quot;created_at&quot;</span><span class="o">:</span> <span class="mi">1528703231</span><span class="p">,</span>
+                <span class="s2">&quot;customer_name&quot;</span><span class="o">:</span> <span class="kc">null</span><span class="p">,</span>
+                <span class="s2">&quot;customer_pwd&quot;</span><span class="o">:</span> <span class="kc">null</span><span class="p">,</span>
+                <span class="s2">&quot;description&quot;</span><span class="o">:</span> <span class="kc">null</span><span class="p">,</span>
+                <span class="s2">&quot;id&quot;</span><span class="o">:</span> <span class="mi">6</span><span class="p">,</span>
+                <span class="s2">&quot;is_default&quot;</span><span class="o">:</span> <span class="kc">false</span><span class="p">,</span>
+                <span class="s2">&quot;name&quot;</span><span class="o">:</span> <span class="s2">&quot;EMS&quot;</span><span class="p">,</span>
+                <span class="s2">&quot;send_site&quot;</span><span class="o">:</span> <span class="kc">null</span><span class="p">,</span>
+                <span class="s2">&quot;updated_at&quot;</span><span class="o">:</span> <span class="mi">1528704875</span>
+            <span class="p">}</span>
+        <span class="p">],</span>
+        <span class="s2">&quot;prev&quot;</span><span class="o">:</span> <span class="kc">null</span>
+    <span class="p">},</span>
+    <span class="s2">&quot;status&quot;</span><span class="o">:</span> <span class="p">{</span>
+        <span class="s2">&quot;code&quot;</span><span class="o">:</span> <span class="mi">200</span><span class="p">,</span>
+        <span class="s2">&quot;message&quot;</span><span class="o">:</span> <span class="s2">&quot;Ok all right.&quot;</span>
+    <span class="p">},</span>
+    <span class="s2">&quot;success&quot;</span><span class="o">:</span> <span class="kc">true</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="id25">
+<h2>删除物流公司信息<a class="headerlink" href="#id25" title="永久链接至标题">¶</a></h2>
+<p>某商家删除物流公司信息</p>
+<div class="section" id="id26">
+<h3>接口说明<a class="headerlink" href="#id26" title="永久链接至标题">¶</a></h3>
+<ul class="simple">
+<li>API接口请求地址：<code class="docutils literal"><span class="pre">/logistics/express</span></code></li>
+<li>API接口请求方法：<code class="docutils literal"><span class="pre">DELETE</span></code></li>
+<li>API接口用户授权：<code class="docutils literal"><span class="pre">token</span></code></li>
+</ul>
+</div>
+<div class="section" id="id27">
+<h3>请求参数<a class="headerlink" href="#id27" title="永久链接至标题">¶</a></h3>
+<table border="1" class="docutils">
+<colgroup>
+<col width="25%" />
+<col width="13%" />
+<col width="12%" />
+<col width="13%" />
+<col width="36%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">名称</th>
+<th class="head">类型</th>
+<th class="head">是否必须</th>
+<th class="head">默认值</th>
+<th class="head">描述说明</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>rid</td>
+<td>Integer</td>
+<td>必需</td>
+<td>&#160;</td>
+<td>物流公司id</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="id28">
+<h3>返回示例<a class="headerlink" href="#id28" title="永久链接至标题">¶</a></h3>
+<p>JSON数据格式:</p>
+<p>请求 <strong>正确</strong> 返回结果：</p>
+<div class="highlight-javascript"><div class="highlight"><pre><span></span><span class="p">{</span>
+    <span class="s2">&quot;status&quot;</span><span class="o">:</span> <span class="p">{</span>
+        <span class="s2">&quot;code&quot;</span><span class="o">:</span> <span class="mi">200</span><span class="p">,</span>
+        <span class="s2">&quot;message&quot;</span><span class="o">:</span> <span class="s2">&quot;Ok all right.&quot;</span>
+    <span class="p">},</span>
+    <span class="s2">&quot;success&quot;</span><span class="o">:</span> <span class="kc">true</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<p>返回错误格式：</p>
+<div class="highlight-javascript"><div class="highlight"><pre><span></span><span class="p">{</span>
+    <span class="s2">&quot;status&quot;</span><span class="o">:</span> <span class="p">{</span>
+        <span class="s2">&quot;code&quot;</span><span class="o">:</span> <span class="mi">400</span><span class="p">,</span>
+        <span class="s2">&quot;message&quot;</span><span class="o">:</span> <span class="s2">&quot;Freight template quote this information!&quot;</span> <span class="c1">// 运费模板引用该信息</span>
+    <span class="p">},</span>
+    <span class="s2">&quot;success&quot;</span><span class="o">:</span> <span class="kc">false</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="id29">
+<h2>设置默认物流公司<a class="headerlink" href="#id29" title="永久链接至标题">¶</a></h2>
+<p>某商家设置默认物流公司</p>
+<div class="section" id="id30">
+<h3>接口说明<a class="headerlink" href="#id30" title="永久链接至标题">¶</a></h3>
+<ul class="simple">
+<li>API接口请求地址：<code class="docutils literal"><span class="pre">/logistics/express/set_default</span></code></li>
+<li>API接口请求方法：<code class="docutils literal"><span class="pre">PUT</span></code></li>
+<li>API接口用户授权：<code class="docutils literal"><span class="pre">token</span></code></li>
+</ul>
+</div>
+<div class="section" id="id31">
+<h3>请求参数<a class="headerlink" href="#id31" title="永久链接至标题">¶</a></h3>
+<table border="1" class="docutils">
+<colgroup>
+<col width="25%" />
+<col width="13%" />
+<col width="12%" />
+<col width="13%" />
+<col width="36%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">名称</th>
+<th class="head">类型</th>
+<th class="head">是否必须</th>
+<th class="head">默认值</th>
+<th class="head">描述说明</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>rid</td>
+<td>Integer</td>
+<td>必需</td>
+<td>&#160;</td>
+<td>物流公司id</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="id32">
+<h3>返回示例<a class="headerlink" href="#id32" title="永久链接至标题">¶</a></h3>
+<p>JSON数据格式:</p>
+<p>请求 <strong>正确</strong> 返回结果：</p>
+<div class="highlight-javascript"><div class="highlight"><pre><span></span><span class="p">{</span>
+    <span class="s2">&quot;data&quot;</span><span class="o">:</span> <span class="p">{</span>
+        <span class="s2">&quot;code&quot;</span><span class="o">:</span> <span class="s2">&quot;EMS&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;contact_mobile&quot;</span><span class="o">:</span> <span class="kc">null</span><span class="p">,</span>
+        <span class="s2">&quot;contact_name&quot;</span><span class="o">:</span> <span class="s2">&quot;田帅&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;contact_phone&quot;</span><span class="o">:</span> <span class="kc">null</span><span class="p">,</span>
+        <span class="s2">&quot;created_at&quot;</span><span class="o">:</span> <span class="mi">1528439830</span><span class="p">,</span>
+        <span class="s2">&quot;customer_name&quot;</span><span class="o">:</span> <span class="kc">null</span><span class="p">,</span>
+        <span class="s2">&quot;customer_pwd&quot;</span><span class="o">:</span> <span class="kc">null</span><span class="p">,</span>
+        <span class="s2">&quot;description&quot;</span><span class="o">:</span> <span class="kc">null</span><span class="p">,</span>
+        <span class="s2">&quot;id&quot;</span><span class="o">:</span> <span class="mi">5</span><span class="p">,</span>
+        <span class="s2">&quot;is_default&quot;</span><span class="o">:</span> <span class="kc">true</span><span class="p">,</span>
+        <span class="s2">&quot;name&quot;</span><span class="o">:</span> <span class="s2">&quot;EMS&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;send_site&quot;</span><span class="o">:</span> <span class="kc">null</span><span class="p">,</span>
+        <span class="s2">&quot;updated_at&quot;</span><span class="o">:</span> <span class="mi">1528707342</span>
+    <span class="p">},</span>
+    <span class="s2">&quot;status&quot;</span><span class="o">:</span> <span class="p">{</span>
+        <span class="s2">&quot;code&quot;</span><span class="o">:</span> <span class="mi">200</span><span class="p">,</span>
+        <span class="s2">&quot;message&quot;</span><span class="o">:</span> <span class="s2">&quot;Ok all right.&quot;</span>
+    <span class="p">},</span>
+    <span class="s2">&quot;success&quot;</span><span class="o">:</span> <span class="kc">true</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<p>返回错误格式：</p>
+<div class="highlight-javascript"><div class="highlight"><pre><span></span><span class="p">{</span>
+  <span class="s2">&quot;status&quot;</span><span class="o">:</span> <span class="p">{</span>
+    <span class="s2">&quot;code&quot;</span><span class="o">:</span> <span class="mi">404</span><span class="p">,</span>
+    <span class="s2">&quot;message&quot;</span><span class="o">:</span> <span class="s2">&quot;Not Found&quot;</span>
+  <span class="p">},</span>
+  <span class="s2">&quot;success&quot;</span><span class="o">:</span> <span class="kc">false</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="id33">
+<h2>添加运费模板信息<a class="headerlink" href="#id33" title="永久链接至标题">¶</a></h2>
+<p>某商家添加运费模板信息</p>
+<div class="section" id="id34">
+<h3>接口说明<a class="headerlink" href="#id34" title="永久链接至标题">¶</a></h3>
+<ul class="simple">
+<li>API接口请求地址：<code class="docutils literal"><span class="pre">/logistics/freight_template</span></code></li>
+<li>API接口请求方法：<code class="docutils literal"><span class="pre">POST</span></code></li>
+<li>API接口用户授权：<code class="docutils literal"><span class="pre">token</span></code></li>
+</ul>
+</div>
+<div class="section" id="id35">
+<h3>请求参数<a class="headerlink" href="#id35" title="永久链接至标题">¶</a></h3>
+<p><strong>运费模板基本参数:</strong></p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="25%" />
+<col width="13%" />
+<col width="12%" />
+<col width="13%" />
+<col width="36%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">名称</th>
+<th class="head">类型</th>
+<th class="head">是否必须</th>
+<th class="head">默认值</th>
+<th class="head">描述说明</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>name</td>
+<td>String</td>
+<td>必需</td>
+<td>&#160;</td>
+<td>模板名称</td>
+</tr>
+<tr class="row-odd"><td>pricing_method</td>
+<td>Integer</td>
+<td>可选</td>
+<td>1</td>
+<td>计价方式 1、按件数 2、按重量</td>
+</tr>
+<tr class="row-even"><td>items</td>
+<td>Array</td>
+<td>可选</td>
+<td>[]</td>
+<td>物流公司默认信息</td>
+</tr>
+</tbody>
+</table>
+<p><strong>物流公司默认信息:</strong></p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="25%" />
+<col width="13%" />
+<col width="12%" />
+<col width="13%" />
+<col width="36%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">名称</th>
+<th class="head">类型</th>
+<th class="head">是否必须</th>
+<th class="head">默认值</th>
+<th class="head">描述说明</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>items:</td>
+<td>&#160;</td>
+<td>&#160;</td>
+<td>&#160;</td>
+<td>&#160;</td>
+</tr>
+<tr class="row-odd"><td>express_id</td>
+<td>Integer</td>
+<td>必须</td>
+<td>&#160;</td>
+<td>物流公司id</td>
+</tr>
+<tr class="row-even"><td>first_item</td>
+<td>Integer</td>
+<td>可选</td>
+<td>1</td>
+<td>首件</td>
+</tr>
+<tr class="row-odd"><td>first_weight</td>
+<td>Numeric</td>
+<td>可选</td>
+<td>0</td>
+<td>首重</td>
+</tr>
+<tr class="row-even"><td>first_amount</td>
+<td>Numeric</td>
+<td>可选</td>
+<td>0</td>
+<td>首费</td>
+</tr>
+<tr class="row-odd"><td>continuous_item</td>
+<td>Integer</td>
+<td>可选</td>
+<td>1</td>
+<td>续件</td>
+</tr>
+<tr class="row-even"><td>continuous_weight</td>
+<td>Numeric</td>
+<td>可选</td>
+<td>0</td>
+<td>续费</td>
+</tr>
+<tr class="row-odd"><td>continuous_amount</td>
+<td>Numeric</td>
+<td>可选</td>
+<td>0</td>
+<td>续重</td>
+</tr>
+<tr class="row-even"><td>min_days</td>
+<td>Integer</td>
+<td>可选</td>
+<td>0</td>
+<td>最少天数</td>
+</tr>
+<tr class="row-odd"><td>max_days</td>
+<td>Integer</td>
+<td>可选</td>
+<td>0</td>
+<td>最多天数</td>
+</tr>
+<tr class="row-even"><td>place_items</td>
+<td>Array</td>
+<td>可选</td>
+<td>[]</td>
+<td>指定城市设置</td>
+</tr>
+</tbody>
+</table>
+<p><strong>指定城市设置:</strong></p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="25%" />
+<col width="13%" />
+<col width="12%" />
+<col width="13%" />
+<col width="36%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">名称</th>
+<th class="head">类型</th>
+<th class="head">是否必须</th>
+<th class="head">默认值</th>
+<th class="head">描述说明</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>place_items:</td>
+<td>&#160;</td>
+<td>&#160;</td>
+<td>&#160;</td>
+<td>&#160;</td>
+</tr>
+<tr class="row-odd"><td>first_item</td>
+<td>Integer</td>
+<td>可选</td>
+<td>1</td>
+<td>首件</td>
+</tr>
+<tr class="row-even"><td>first_weight</td>
+<td>Numeric</td>
+<td>可选</td>
+<td>0</td>
+<td>首重</td>
+</tr>
+<tr class="row-odd"><td>first_amount</td>
+<td>Numeric</td>
+<td>可选</td>
+<td>0</td>
+<td>首费</td>
+</tr>
+<tr class="row-even"><td>continuous_item</td>
+<td>Integer</td>
+<td>可选</td>
+<td>1</td>
+<td>续件</td>
+</tr>
+<tr class="row-odd"><td>continuous_weight</td>
+<td>Numeric</td>
+<td>可选</td>
+<td>0</td>
+<td>续费</td>
+</tr>
+<tr class="row-even"><td>continuous_amount</td>
+<td>Numeric</td>
+<td>可选</td>
+<td>0</td>
+<td>续重</td>
+</tr>
+<tr class="row-odd"><td>place_oid</td>
+<td>Array</td>
+<td>可选</td>
+<td>[]</td>
+<td>运送地区oid,元素为Integer</td>
+</tr>
+</tbody>
+</table>
+<p>参考示例：</p>
+<div class="highlight-javascript"><div class="highlight"><pre><span></span><span class="p">{</span>
+    <span class="s2">&quot;name&quot;</span><span class="o">:</span><span class="s2">&quot;运费模板2&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;pricing_method&quot;</span><span class="o">:</span><span class="mi">1</span><span class="p">,</span>
+    <span class="s2">&quot;items&quot;</span><span class="o">:</span><span class="p">[</span>
+        <span class="p">{</span>
+            <span class="s2">&quot;express_id&quot;</span><span class="o">:</span><span class="mi">4</span><span class="p">,</span>
+            <span class="s2">&quot;min_days&quot;</span><span class="o">:</span><span class="mi">3</span><span class="p">,</span>
+            <span class="s2">&quot;max_days&quot;</span><span class="o">:</span><span class="mi">5</span><span class="p">,</span>
+            <span class="s2">&quot;first_item&quot;</span><span class="o">:</span><span class="mi">1</span><span class="p">,</span>
+            <span class="s2">&quot;first_amount&quot;</span><span class="o">:</span><span class="mi">10</span><span class="p">,</span>
+            <span class="s2">&quot;continuous_item&quot;</span><span class="o">:</span><span class="mi">1</span><span class="p">,</span>
+            <span class="s2">&quot;continuous_amount&quot;</span><span class="o">:</span><span class="mi">20</span><span class="p">,</span>
+            <span class="s2">&quot;place_items&quot;</span><span class="o">:</span><span class="p">[</span>
+                <span class="p">{</span>
+                    <span class="s2">&quot;first_item&quot;</span><span class="o">:</span><span class="mi">1</span><span class="p">,</span>
+                    <span class="s2">&quot;first_amount&quot;</span><span class="o">:</span><span class="mi">10</span><span class="p">,</span>
+                    <span class="s2">&quot;continuous_item&quot;</span><span class="o">:</span><span class="mi">1</span><span class="p">,</span>
+                    <span class="s2">&quot;continuous_amount&quot;</span><span class="o">:</span><span class="mi">20</span><span class="p">,</span>
+                    <span class="s2">&quot;place_oid&quot;</span><span class="o">:</span><span class="p">[</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">]</span>
+                <span class="p">},</span>
+                <span class="p">{</span>
+                    <span class="s2">&quot;first_item&quot;</span><span class="o">:</span><span class="mi">2</span><span class="p">,</span>
+                    <span class="s2">&quot;first_amount&quot;</span><span class="o">:</span><span class="mi">20</span><span class="p">,</span>
+                    <span class="s2">&quot;continuous_item&quot;</span><span class="o">:</span><span class="mi">1</span><span class="p">,</span>
+                    <span class="s2">&quot;continuous_amount&quot;</span><span class="o">:</span><span class="mi">20</span><span class="p">,</span>
+                    <span class="s2">&quot;place_oid&quot;</span><span class="o">:</span><span class="p">[</span><span class="mi">3</span><span class="p">]</span>
+                <span class="p">}</span>
+            <span class="p">]</span>
+        <span class="p">},</span>
+        <span class="p">{</span>
+            <span class="s2">&quot;express_id&quot;</span><span class="o">:</span><span class="mi">5</span><span class="p">,</span>
+            <span class="s2">&quot;min_days&quot;</span><span class="o">:</span><span class="mi">3</span><span class="p">,</span>
+            <span class="s2">&quot;max_days&quot;</span><span class="o">:</span><span class="mi">5</span><span class="p">,</span>
+            <span class="s2">&quot;first_item&quot;</span><span class="o">:</span><span class="mi">1</span><span class="p">,</span>
+            <span class="s2">&quot;first_amount&quot;</span><span class="o">:</span><span class="mi">10</span><span class="p">,</span>
+            <span class="s2">&quot;continuous_item&quot;</span><span class="o">:</span><span class="mi">1</span><span class="p">,</span>
+            <span class="s2">&quot;continuous_amount&quot;</span><span class="o">:</span><span class="mi">20</span><span class="p">,</span>
+            <span class="s2">&quot;place_items&quot;</span><span class="o">:</span><span class="p">[</span>
+                <span class="p">{</span>
+                    <span class="s2">&quot;first_item&quot;</span><span class="o">:</span><span class="mi">1</span><span class="p">,</span>
+                    <span class="s2">&quot;first_amount&quot;</span><span class="o">:</span><span class="mi">10</span><span class="p">,</span>
+                    <span class="s2">&quot;continuous_item&quot;</span><span class="o">:</span><span class="mi">1</span><span class="p">,</span>
+                    <span class="s2">&quot;continuous_amount&quot;</span><span class="o">:</span><span class="mi">20</span><span class="p">,</span>
+                    <span class="s2">&quot;place_oid&quot;</span><span class="o">:</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span>
+                <span class="p">}</span>
+            <span class="p">]</span>
+        <span class="p">}</span>
+
+    <span class="p">]</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="id36">
+<h3>返回示例<a class="headerlink" href="#id36" title="永久链接至标题">¶</a></h3>
+<p>JSON数据格式:</p>
+<p>请求 <strong>正确</strong> 返回结果：</p>
+<div class="highlight-javascript"><div class="highlight"><pre><span></span><span class="p">{</span>
+    <span class="s2">&quot;data&quot;</span><span class="o">:</span> <span class="p">{</span>
+        <span class="s2">&quot;name&quot;</span><span class="o">:</span> <span class="s2">&quot;运费模板3&quot;</span><span class="p">,</span>  <span class="c1">// 运费模板Id</span>
+        <span class="s2">&quot;pricing_method&quot;</span><span class="o">:</span> <span class="mi">1</span><span class="p">,</span>  <span class="c1">// 计费方式</span>
+        <span class="s2">&quot;rid&quot;</span><span class="o">:</span> <span class="s2">&quot;Ft726918503&quot;</span><span class="p">,</span>  <span class="c1">// 模板rid</span>
+        <span class="s2">&quot;update_at&quot;</span><span class="o">:</span> <span class="mi">1528707342</span><span class="p">,</span> <span class="c1">//最后修改时间</span>
+        <span class="s2">&quot;items&quot;</span><span class="o">:</span> <span class="p">[</span>
+            <span class="p">{</span>
+                <span class="s2">&quot;continuous_amount&quot;</span><span class="o">:</span> <span class="mi">20</span><span class="p">,</span>  <span class="c1">// 续费</span>
+                <span class="s2">&quot;continuous_item&quot;</span><span class="o">:</span> <span class="mi">1</span><span class="p">,</span>  <span class="c1">// 续件</span>
+                <span class="s2">&quot;continuous_weight&quot;</span><span class="o">:</span> <span class="mi">0</span><span class="p">,</span>  <span class="c1">// 续重</span>
+                <span class="s2">&quot;express_code&quot;</span><span class="o">:</span> <span class="s2">&quot;YTO&quot;</span><span class="p">,</span>  <span class="c1">// 物流公司code</span>
+                <span class="s2">&quot;express_id&quot;</span><span class="o">:</span> <span class="mi">4</span><span class="p">,</span>  <span class="c1">// 物流公司id</span>
+                <span class="s2">&quot;express_name&quot;</span><span class="o">:</span> <span class="s2">&quot;圆通&quot;</span><span class="p">,</span>  <span class="c1">// 物流公司名</span>
+                <span class="s2">&quot;first_amount&quot;</span><span class="o">:</span> <span class="mi">10</span><span class="p">,</span>  <span class="c1">// 首费</span>
+                <span class="s2">&quot;first_item&quot;</span><span class="o">:</span> <span class="mi">1</span><span class="p">,</span>  <span class="c1">// 首件</span>
+                <span class="s2">&quot;first_weight&quot;</span><span class="o">:</span> <span class="mi">0</span><span class="p">,</span>  <span class="c1">// 首重</span>
+                <span class="s2">&quot;is_default&quot;</span><span class="o">:</span> <span class="kc">true</span><span class="p">,</span>  <span class="c1">// 是否默认</span>
+                <span class="s2">&quot;max_days&quot;</span><span class="o">:</span> <span class="mi">5</span><span class="p">,</span>  <span class="c1">// 最长天数</span>
+                <span class="s2">&quot;min_days&quot;</span><span class="o">:</span> <span class="mi">3</span><span class="p">,</span>  <span class="c1">// 最小天数</span>
+                <span class="s2">&quot;place_items&quot;</span><span class="o">:</span> <span class="p">[</span>
+                    <span class="p">{</span>
+                        <span class="s2">&quot;continuous_amount&quot;</span><span class="o">:</span> <span class="mi">20</span><span class="p">,</span>
+                        <span class="s2">&quot;continuous_item&quot;</span><span class="o">:</span> <span class="mi">1</span><span class="p">,</span>
+                        <span class="s2">&quot;continuous_weight&quot;</span><span class="o">:</span> <span class="mi">0</span><span class="p">,</span>
+                        <span class="s2">&quot;first_amount&quot;</span><span class="o">:</span> <span class="mi">10</span><span class="p">,</span>
+                        <span class="s2">&quot;first_item&quot;</span><span class="o">:</span> <span class="mi">1</span><span class="p">,</span>
+                        <span class="s2">&quot;first_weight&quot;</span><span class="o">:</span> <span class="mi">0</span><span class="p">,</span>
+                        <span class="s2">&quot;is_default&quot;</span><span class="o">:</span> <span class="kc">false</span><span class="p">,</span>
+                        <span class="s2">&quot;places&quot;</span><span class="o">:</span> <span class="p">[</span>
+                            <span class="p">{</span>
+                                <span class="s2">&quot;area_scope&quot;</span><span class="o">:</span> <span class="mi">1</span><span class="p">,</span>  <span class="c1">// 区域范围</span>
+                                <span class="s2">&quot;place_name&quot;</span><span class="o">:</span> <span class="s2">&quot;北京&quot;</span><span class="p">,</span>
+                                <span class="s2">&quot;place_oid&quot;</span><span class="o">:</span> <span class="mi">1</span>
+                            <span class="p">},</span>
+                            <span class="p">{</span>
+                                <span class="s2">&quot;area_scope&quot;</span><span class="o">:</span> <span class="mi">1</span><span class="p">,</span>  <span class="c1">// 区域范围</span>
+                                <span class="s2">&quot;place_name&quot;</span><span class="o">:</span> <span class="s2">&quot;天津&quot;</span><span class="p">,</span>
+                                <span class="s2">&quot;place_oid&quot;</span><span class="o">:</span> <span class="mi">2</span>
+                            <span class="p">}</span>
+                        <span class="p">],</span>
+                        <span class="s2">&quot;rid&quot;</span><span class="o">:</span> <span class="s2">&quot;Fi153042768&quot;</span>  <span class="c1">// item_rid</span>
+                    <span class="p">},</span>
+                <span class="p">],</span>
+                <span class="s2">&quot;rid&quot;</span><span class="o">:</span> <span class="s2">&quot;Fi618937502&quot;</span>  <span class="c1">// item_rid</span>
+            <span class="p">},</span>
+        <span class="p">],</span>
+
+    <span class="p">},</span>
+    <span class="s2">&quot;status&quot;</span><span class="o">:</span> <span class="p">{</span>
+        <span class="s2">&quot;code&quot;</span><span class="o">:</span> <span class="mi">201</span><span class="p">,</span>
+        <span class="s2">&quot;message&quot;</span><span class="o">:</span> <span class="s2">&quot;All created.&quot;</span>
+    <span class="p">},</span>
+    <span class="s2">&quot;success&quot;</span><span class="o">:</span> <span class="kc">true</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="id37">
+<h2>复制运费模板信息<a class="headerlink" href="#id37" title="永久链接至标题">¶</a></h2>
+<p>某商家复制运费模板信息</p>
+<div class="section" id="id38">
+<h3>接口说明<a class="headerlink" href="#id38" title="永久链接至标题">¶</a></h3>
+<ul class="simple">
+<li>API接口请求地址：<code class="docutils literal"><span class="pre">/logistics/freight_template/copy</span></code></li>
+<li>API接口请求方法：<code class="docutils literal"><span class="pre">POST</span></code></li>
+<li>API接口用户授权：<code class="docutils literal"><span class="pre">token</span></code></li>
+</ul>
+</div>
+<div class="section" id="id39">
+<h3>请求参数<a class="headerlink" href="#id39" title="永久链接至标题">¶</a></h3>
+<table border="1" class="docutils">
+<colgroup>
+<col width="25%" />
+<col width="13%" />
+<col width="12%" />
+<col width="13%" />
+<col width="36%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">名称</th>
+<th class="head">类型</th>
+<th class="head">是否必须</th>
+<th class="head">默认值</th>
+<th class="head">描述说明</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>rid</td>
+<td>String</td>
+<td>必需</td>
+<td>&#160;</td>
+<td>模板rid</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="id40">
+<h3>返回示例<a class="headerlink" href="#id40" title="永久链接至标题">¶</a></h3>
+<p>JSON数据格式:</p>
+<p>请求 <strong>正确</strong> 返回结果：</p>
+<div class="highlight-javascript"><div class="highlight"><pre><span></span><span class="p">{</span>
+    <span class="s2">&quot;data&quot;</span><span class="o">:</span> <span class="p">{</span>
+        <span class="s2">&quot;name&quot;</span><span class="o">:</span> <span class="s2">&quot;运费模板3&quot;</span><span class="p">,</span>  <span class="c1">// 运费模板Id</span>
+        <span class="s2">&quot;pricing_method&quot;</span><span class="o">:</span> <span class="mi">1</span><span class="p">,</span>  <span class="c1">// 计费方式</span>
+        <span class="s2">&quot;rid&quot;</span><span class="o">:</span> <span class="s2">&quot;Ft726918503&quot;</span><span class="p">,</span>  <span class="c1">// 模板rid</span>
+        <span class="s2">&quot;update_at&quot;</span><span class="o">:</span> <span class="mi">1528707342</span><span class="p">,</span> <span class="c1">//最后修改时间</span>
+        <span class="s2">&quot;items&quot;</span><span class="o">:</span> <span class="p">[</span>
+            <span class="p">{</span>
+                <span class="s2">&quot;continuous_amount&quot;</span><span class="o">:</span> <span class="mi">20</span><span class="p">,</span>  <span class="c1">// 续费</span>
+                <span class="s2">&quot;continuous_item&quot;</span><span class="o">:</span> <span class="mi">1</span><span class="p">,</span>  <span class="c1">// 续件</span>
+                <span class="s2">&quot;continuous_weight&quot;</span><span class="o">:</span> <span class="mi">0</span><span class="p">,</span>  <span class="c1">// 续重</span>
+                <span class="s2">&quot;express_code&quot;</span><span class="o">:</span> <span class="s2">&quot;YTO&quot;</span><span class="p">,</span>  <span class="c1">// 物流公司code</span>
+                <span class="s2">&quot;express_id&quot;</span><span class="o">:</span> <span class="mi">4</span><span class="p">,</span>  <span class="c1">// 物流公司id</span>
+                <span class="s2">&quot;express_name&quot;</span><span class="o">:</span> <span class="s2">&quot;圆通&quot;</span><span class="p">,</span>  <span class="c1">// 物流公司名</span>
+                <span class="s2">&quot;first_amount&quot;</span><span class="o">:</span> <span class="mi">10</span><span class="p">,</span>  <span class="c1">// 首费</span>
+                <span class="s2">&quot;first_item&quot;</span><span class="o">:</span> <span class="mi">1</span><span class="p">,</span>  <span class="c1">// 首件</span>
+                <span class="s2">&quot;first_weight&quot;</span><span class="o">:</span> <span class="mi">0</span><span class="p">,</span>  <span class="c1">// 首重</span>
+                <span class="s2">&quot;is_default&quot;</span><span class="o">:</span> <span class="kc">true</span><span class="p">,</span>  <span class="c1">// 是否默认</span>
+                <span class="s2">&quot;max_days&quot;</span><span class="o">:</span> <span class="mi">5</span><span class="p">,</span>  <span class="c1">// 最长天数</span>
+                <span class="s2">&quot;min_days&quot;</span><span class="o">:</span> <span class="mi">3</span><span class="p">,</span>  <span class="c1">// 最小天数</span>
+                <span class="s2">&quot;place_items&quot;</span><span class="o">:</span> <span class="p">[</span>
+                    <span class="p">{</span>
+                        <span class="s2">&quot;continuous_amount&quot;</span><span class="o">:</span> <span class="mi">20</span><span class="p">,</span>
+                        <span class="s2">&quot;continuous_item&quot;</span><span class="o">:</span> <span class="mi">1</span><span class="p">,</span>
+                        <span class="s2">&quot;continuous_weight&quot;</span><span class="o">:</span> <span class="mi">0</span><span class="p">,</span>
+                        <span class="s2">&quot;first_amount&quot;</span><span class="o">:</span> <span class="mi">10</span><span class="p">,</span>
+                        <span class="s2">&quot;first_item&quot;</span><span class="o">:</span> <span class="mi">1</span><span class="p">,</span>
+                        <span class="s2">&quot;first_weight&quot;</span><span class="o">:</span> <span class="mi">0</span><span class="p">,</span>
+                        <span class="s2">&quot;is_default&quot;</span><span class="o">:</span> <span class="kc">false</span><span class="p">,</span>
+                        <span class="s2">&quot;places&quot;</span><span class="o">:</span> <span class="p">[</span>
+                            <span class="p">{</span>
+                                <span class="s2">&quot;area_scope&quot;</span><span class="o">:</span> <span class="mi">1</span><span class="p">,</span>  <span class="c1">// 区域范围</span>
+                                <span class="s2">&quot;place_name&quot;</span><span class="o">:</span> <span class="s2">&quot;北京&quot;</span><span class="p">,</span>
+                                <span class="s2">&quot;place_oid&quot;</span><span class="o">:</span> <span class="mi">1</span>
+                            <span class="p">},</span>
+                            <span class="p">{</span>
+                                <span class="s2">&quot;area_scope&quot;</span><span class="o">:</span> <span class="mi">1</span><span class="p">,</span>  <span class="c1">// 区域范围</span>
+                                <span class="s2">&quot;place_name&quot;</span><span class="o">:</span> <span class="s2">&quot;天津&quot;</span><span class="p">,</span>
+                                <span class="s2">&quot;place_oid&quot;</span><span class="o">:</span> <span class="mi">2</span>
+                            <span class="p">}</span>
+                        <span class="p">],</span>
+                        <span class="s2">&quot;rid&quot;</span><span class="o">:</span> <span class="s2">&quot;Fi153042768&quot;</span>  <span class="c1">// item_rid</span>
+                    <span class="p">},</span>
+                <span class="p">],</span>
+                <span class="s2">&quot;rid&quot;</span><span class="o">:</span> <span class="s2">&quot;Fi618937502&quot;</span>  <span class="c1">// item_rid</span>
+            <span class="p">},</span>
+        <span class="p">],</span>
+
+    <span class="p">},</span>
+    <span class="s2">&quot;status&quot;</span><span class="o">:</span> <span class="p">{</span>
+        <span class="s2">&quot;code&quot;</span><span class="o">:</span> <span class="mi">201</span><span class="p">,</span>
+        <span class="s2">&quot;message&quot;</span><span class="o">:</span> <span class="s2">&quot;All created.&quot;</span>
+    <span class="p">},</span>
+    <span class="s2">&quot;success&quot;</span><span class="o">:</span> <span class="kc">true</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="id41">
+<h2>修改运费模板信息<a class="headerlink" href="#id41" title="永久链接至标题">¶</a></h2>
+<p>某商家修改运费模板信息</p>
+<div class="section" id="id42">
+<h3>接口说明<a class="headerlink" href="#id42" title="永久链接至标题">¶</a></h3>
+<ul class="simple">
+<li>API接口请求地址：<code class="docutils literal"><span class="pre">/logistics/freight_template</span></code></li>
+<li>API接口请求方法：<code class="docutils literal"><span class="pre">PUT</span></code></li>
+<li>API接口用户授权：<code class="docutils literal"><span class="pre">token</span></code></li>
+</ul>
+</div>
+<div class="section" id="id43">
+<h3>请求参数<a class="headerlink" href="#id43" title="永久链接至标题">¶</a></h3>
+<p><strong>运费模板基本参数:</strong></p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="25%" />
+<col width="13%" />
+<col width="12%" />
+<col width="13%" />
+<col width="36%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">名称</th>
+<th class="head">类型</th>
+<th class="head">是否必须</th>
+<th class="head">默认值</th>
+<th class="head">描述说明</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>rid</td>
+<td>String</td>
+<td>必需</td>
+<td>&#160;</td>
+<td>运费模板rid</td>
+</tr>
+<tr class="row-odd"><td>name</td>
+<td>String</td>
+<td>可选</td>
+<td>&#160;</td>
+<td>模板名称</td>
+</tr>
+<tr class="row-even"><td>pricing_method</td>
+<td>Integer</td>
+<td>可选</td>
+<td>1</td>
+<td>计价方式 1、按件数 2、按重量</td>
+</tr>
+<tr class="row-odd"><td>items</td>
+<td>Array</td>
+<td>可选</td>
+<td>[]</td>
+<td>物流公司默认信息</td>
+</tr>
+</tbody>
+</table>
+<p><strong>物流公司默认信息:</strong></p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="25%" />
+<col width="13%" />
+<col width="12%" />
+<col width="13%" />
+<col width="36%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">名称</th>
+<th class="head">类型</th>
+<th class="head">是否必须</th>
+<th class="head">默认值</th>
+<th class="head">描述说明</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>items:</td>
+<td>&#160;</td>
+<td>&#160;</td>
+<td>&#160;</td>
+<td>&#160;</td>
+</tr>
+<tr class="row-odd"><td>rid</td>
+<td>String</td>
+<td>必需</td>
+<td>&#160;</td>
+<td>运费模板明细rid</td>
+</tr>
+<tr class="row-even"><td>express_id</td>
+<td>String</td>
+<td>可选</td>
+<td>&#160;</td>
+<td>物流公司id</td>
+</tr>
+<tr class="row-odd"><td>first_item</td>
+<td>Integer</td>
+<td>可选</td>
+<td>1</td>
+<td>首件</td>
+</tr>
+<tr class="row-even"><td>first_weight</td>
+<td>Numeric</td>
+<td>可选</td>
+<td>0</td>
+<td>首重</td>
+</tr>
+<tr class="row-odd"><td>first_amount</td>
+<td>Numeric</td>
+<td>可选</td>
+<td>0</td>
+<td>首费</td>
+</tr>
+<tr class="row-even"><td>continuous_item</td>
+<td>Integer</td>
+<td>可选</td>
+<td>1</td>
+<td>续件</td>
+</tr>
+<tr class="row-odd"><td>continuous_weight</td>
+<td>Numeric</td>
+<td>可选</td>
+<td>0</td>
+<td>续费</td>
+</tr>
+<tr class="row-even"><td>continuous_amount</td>
+<td>Numeric</td>
+<td>可选</td>
+<td>0</td>
+<td>续重</td>
+</tr>
+<tr class="row-odd"><td>min_days</td>
+<td>Integer</td>
+<td>可选</td>
+<td>0</td>
+<td>最少天数</td>
+</tr>
+<tr class="row-even"><td>max_days</td>
+<td>Integer</td>
+<td>可选</td>
+<td>0</td>
+<td>最多天数</td>
+</tr>
+<tr class="row-odd"><td>place_items</td>
+<td>Array</td>
+<td>可选</td>
+<td>[]</td>
+<td>指定城市设置</td>
+</tr>
+</tbody>
+</table>
+<p><strong>指定城市设置:</strong></p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="25%" />
+<col width="13%" />
+<col width="12%" />
+<col width="13%" />
+<col width="36%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">名称</th>
+<th class="head">类型</th>
+<th class="head">是否必须</th>
+<th class="head">默认值</th>
+<th class="head">描述说明</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>place_items:</td>
+<td>&#160;</td>
+<td>&#160;</td>
+<td>&#160;</td>
+<td>&#160;</td>
+</tr>
+<tr class="row-odd"><td>rid</td>
+<td>String</td>
+<td>必需</td>
+<td>&#160;</td>
+<td>运费模板明细rid</td>
+</tr>
+<tr class="row-even"><td>first_item</td>
+<td>Integer</td>
+<td>可选</td>
+<td>1</td>
+<td>首件</td>
+</tr>
+<tr class="row-odd"><td>first_weight</td>
+<td>Numeric</td>
+<td>可选</td>
+<td>0</td>
+<td>首重</td>
+</tr>
+<tr class="row-even"><td>first_amount</td>
+<td>Numeric</td>
+<td>可选</td>
+<td>0</td>
+<td>首费</td>
+</tr>
+<tr class="row-odd"><td>continuous_item</td>
+<td>Integer</td>
+<td>可选</td>
+<td>1</td>
+<td>续件</td>
+</tr>
+<tr class="row-even"><td>continuous_weight</td>
+<td>Numeric</td>
+<td>可选</td>
+<td>0</td>
+<td>续费</td>
+</tr>
+<tr class="row-odd"><td>continuous_amount</td>
+<td>Numeric</td>
+<td>可选</td>
+<td>0</td>
+<td>续重</td>
+</tr>
+<tr class="row-even"><td>place_oid</td>
+<td>Array</td>
+<td>可选</td>
+<td>[]</td>
+<td>运送地区oid,元素为Integer</td>
+</tr>
+</tbody>
+</table>
+<p>参考示例：</p>
+<div class="highlight-javascript"><div class="highlight"><pre><span></span><span class="p">{</span>
+    <span class="s2">&quot;rid&quot;</span><span class="o">:</span><span class="s2">&quot;Ft415967803&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;name&quot;</span><span class="o">:</span><span class="s2">&quot;运费模板777&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;pricing_method&quot;</span><span class="o">:</span><span class="mi">1</span><span class="p">,</span>
+    <span class="s2">&quot;items&quot;</span><span class="o">:</span><span class="p">[</span>
+        <span class="p">{</span>
+            <span class="s2">&quot;rid&quot;</span><span class="o">:</span><span class="s2">&quot;Fi804531692&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;express_id&quot;</span><span class="o">:</span><span class="mi">4</span><span class="p">,</span>
+            <span class="s2">&quot;min_days&quot;</span><span class="o">:</span><span class="mi">3</span><span class="p">,</span>
+            <span class="s2">&quot;max_days&quot;</span><span class="o">:</span><span class="mi">5</span><span class="p">,</span>
+            <span class="s2">&quot;first_item&quot;</span><span class="o">:</span><span class="mi">1</span><span class="p">,</span>
+            <span class="s2">&quot;first_amount&quot;</span><span class="o">:</span><span class="mi">10</span><span class="p">,</span>
+            <span class="s2">&quot;continuous_item&quot;</span><span class="o">:</span><span class="mi">1</span><span class="p">,</span>
+            <span class="s2">&quot;continuous_amount&quot;</span><span class="o">:</span><span class="mi">20</span><span class="p">,</span>
+            <span class="s2">&quot;place_items&quot;</span><span class="o">:</span><span class="p">[</span>
+                <span class="p">{</span>
+                    <span class="s2">&quot;rid&quot;</span><span class="o">:</span><span class="s2">&quot;Fi174680952&quot;</span><span class="p">,</span>
+                    <span class="s2">&quot;first_item&quot;</span><span class="o">:</span><span class="mi">1</span><span class="p">,</span>
+                    <span class="s2">&quot;first_amount&quot;</span><span class="o">:</span><span class="mi">10</span><span class="p">,</span>
+                    <span class="s2">&quot;continuous_item&quot;</span><span class="o">:</span><span class="mi">1</span><span class="p">,</span>
+                    <span class="s2">&quot;continuous_amount&quot;</span><span class="o">:</span><span class="mi">20</span><span class="p">,</span>
+                    <span class="s2">&quot;place_oid&quot;</span><span class="o">:</span><span class="p">[</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">]</span>
+                <span class="p">},</span>
+                <span class="p">{</span>
+                    <span class="s2">&quot;rid&quot;</span><span class="o">:</span><span class="mi">11111</span><span class="p">,</span>
+                    <span class="s2">&quot;first_item&quot;</span><span class="o">:</span><span class="mi">2</span><span class="p">,</span>
+                    <span class="s2">&quot;first_amount&quot;</span><span class="o">:</span><span class="mi">20</span><span class="p">,</span>
+                    <span class="s2">&quot;continuous_item&quot;</span><span class="o">:</span><span class="mi">1</span><span class="p">,</span>
+                    <span class="s2">&quot;continuous_amount&quot;</span><span class="o">:</span><span class="mi">20</span><span class="p">,</span>
+                    <span class="s2">&quot;place_oid&quot;</span><span class="o">:</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span>
+                <span class="p">}</span>
+            <span class="p">]</span>
+        <span class="p">},</span>
+        <span class="p">{</span>
+            <span class="s2">&quot;rid&quot;</span><span class="o">:</span><span class="mi">2222222</span><span class="p">,</span>
+            <span class="s2">&quot;express_id&quot;</span><span class="o">:</span><span class="mi">5</span><span class="p">,</span>
+            <span class="s2">&quot;min_days&quot;</span><span class="o">:</span><span class="mi">3</span><span class="p">,</span>
+            <span class="s2">&quot;max_days&quot;</span><span class="o">:</span><span class="mi">5</span><span class="p">,</span>
+            <span class="s2">&quot;first_item&quot;</span><span class="o">:</span><span class="mi">1</span><span class="p">,</span>
+            <span class="s2">&quot;first_amount&quot;</span><span class="o">:</span><span class="mi">10</span><span class="p">,</span>
+            <span class="s2">&quot;continuous_item&quot;</span><span class="o">:</span><span class="mi">1</span><span class="p">,</span>
+            <span class="s2">&quot;continuous_amount&quot;</span><span class="o">:</span><span class="mi">20</span><span class="p">,</span>
+            <span class="s2">&quot;place_items&quot;</span><span class="o">:</span><span class="p">[</span>
+                <span class="p">{</span>
+                    <span class="s2">&quot;rid&quot;</span><span class="o">:</span><span class="mi">333333</span><span class="p">,</span>
+                    <span class="s2">&quot;first_item&quot;</span><span class="o">:</span><span class="mi">1</span><span class="p">,</span>
+                    <span class="s2">&quot;first_amount&quot;</span><span class="o">:</span><span class="mi">10</span><span class="p">,</span>
+                    <span class="s2">&quot;continuous_item&quot;</span><span class="o">:</span><span class="mi">1</span><span class="p">,</span>
+                    <span class="s2">&quot;continuous_amount&quot;</span><span class="o">:</span><span class="mi">20</span><span class="p">,</span>
+                    <span class="s2">&quot;place_oid&quot;</span><span class="o">:</span><span class="p">[</span><span class="mi">3</span><span class="p">]</span>
+                <span class="p">}</span>
+            <span class="p">]</span>
+        <span class="p">}</span>
+
+    <span class="p">]</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="id44">
+<h3>返回示例<a class="headerlink" href="#id44" title="永久链接至标题">¶</a></h3>
+<p>JSON数据格式:</p>
+<p>请求 <strong>正确</strong> 返回结果：</p>
+<div class="highlight-javascript"><div class="highlight"><pre><span></span><span class="p">{</span>
+    <span class="s2">&quot;data&quot;</span><span class="o">:</span> <span class="p">{</span>
+        <span class="s2">&quot;name&quot;</span><span class="o">:</span> <span class="s2">&quot;运费模板3&quot;</span><span class="p">,</span>  <span class="c1">// 运费模板Id</span>
+        <span class="s2">&quot;pricing_method&quot;</span><span class="o">:</span> <span class="mi">1</span><span class="p">,</span>  <span class="c1">// 计费方式</span>
+        <span class="s2">&quot;rid&quot;</span><span class="o">:</span> <span class="s2">&quot;Ft726918503&quot;</span><span class="p">,</span>  <span class="c1">// 模板rid</span>
+        <span class="s2">&quot;update_at&quot;</span><span class="o">:</span> <span class="mi">1528707342</span><span class="p">,</span> <span class="c1">//最后修改时间</span>
+        <span class="s2">&quot;items&quot;</span><span class="o">:</span> <span class="p">[</span>
+            <span class="p">{</span>
+                <span class="s2">&quot;continuous_amount&quot;</span><span class="o">:</span> <span class="mi">20</span><span class="p">,</span>  <span class="c1">// 续费</span>
+                <span class="s2">&quot;continuous_item&quot;</span><span class="o">:</span> <span class="mi">1</span><span class="p">,</span>  <span class="c1">// 续件</span>
+                <span class="s2">&quot;continuous_weight&quot;</span><span class="o">:</span> <span class="mi">0</span><span class="p">,</span>  <span class="c1">// 续重</span>
+                <span class="s2">&quot;express_code&quot;</span><span class="o">:</span> <span class="s2">&quot;YTO&quot;</span><span class="p">,</span>  <span class="c1">// 物流公司code</span>
+                <span class="s2">&quot;express_id&quot;</span><span class="o">:</span> <span class="mi">4</span><span class="p">,</span>  <span class="c1">// 物流公司id</span>
+                <span class="s2">&quot;express_name&quot;</span><span class="o">:</span> <span class="s2">&quot;圆通&quot;</span><span class="p">,</span>  <span class="c1">// 物流公司名</span>
+                <span class="s2">&quot;first_amount&quot;</span><span class="o">:</span> <span class="mi">10</span><span class="p">,</span>  <span class="c1">// 首费</span>
+                <span class="s2">&quot;first_item&quot;</span><span class="o">:</span> <span class="mi">1</span><span class="p">,</span>  <span class="c1">// 首件</span>
+                <span class="s2">&quot;first_weight&quot;</span><span class="o">:</span> <span class="mi">0</span><span class="p">,</span>  <span class="c1">// 首重</span>
+                <span class="s2">&quot;is_default&quot;</span><span class="o">:</span> <span class="kc">true</span><span class="p">,</span>  <span class="c1">// 是否默认</span>
+                <span class="s2">&quot;max_days&quot;</span><span class="o">:</span> <span class="mi">5</span><span class="p">,</span>  <span class="c1">// 最长天数</span>
+                <span class="s2">&quot;min_days&quot;</span><span class="o">:</span> <span class="mi">3</span><span class="p">,</span>  <span class="c1">// 最小天数</span>
+                <span class="s2">&quot;place_items&quot;</span><span class="o">:</span> <span class="p">[</span>
+                    <span class="p">{</span>
+                        <span class="s2">&quot;continuous_amount&quot;</span><span class="o">:</span> <span class="mi">20</span><span class="p">,</span>
+                        <span class="s2">&quot;continuous_item&quot;</span><span class="o">:</span> <span class="mi">1</span><span class="p">,</span>
+                        <span class="s2">&quot;continuous_weight&quot;</span><span class="o">:</span> <span class="mi">0</span><span class="p">,</span>
+                        <span class="s2">&quot;first_amount&quot;</span><span class="o">:</span> <span class="mi">10</span><span class="p">,</span>
+                        <span class="s2">&quot;first_item&quot;</span><span class="o">:</span> <span class="mi">1</span><span class="p">,</span>
+                        <span class="s2">&quot;first_weight&quot;</span><span class="o">:</span> <span class="mi">0</span><span class="p">,</span>
+                        <span class="s2">&quot;is_default&quot;</span><span class="o">:</span> <span class="kc">false</span><span class="p">,</span>
+                        <span class="s2">&quot;places&quot;</span><span class="o">:</span> <span class="p">[</span>
+                            <span class="p">{</span>
+                                <span class="s2">&quot;area_scope&quot;</span><span class="o">:</span> <span class="mi">1</span><span class="p">,</span>  <span class="c1">// 区域范围</span>
+                                <span class="s2">&quot;place_name&quot;</span><span class="o">:</span> <span class="s2">&quot;北京&quot;</span><span class="p">,</span>
+                                <span class="s2">&quot;place_oid&quot;</span><span class="o">:</span> <span class="mi">1</span>
+                            <span class="p">},</span>
+                            <span class="p">{</span>
+                                <span class="s2">&quot;area_scope&quot;</span><span class="o">:</span> <span class="mi">1</span><span class="p">,</span>  <span class="c1">// 区域范围</span>
+                                <span class="s2">&quot;place_name&quot;</span><span class="o">:</span> <span class="s2">&quot;天津&quot;</span><span class="p">,</span>
+                                <span class="s2">&quot;place_oid&quot;</span><span class="o">:</span> <span class="mi">2</span>
+                            <span class="p">}</span>
+                        <span class="p">],</span>
+                        <span class="s2">&quot;rid&quot;</span><span class="o">:</span> <span class="s2">&quot;Fi153042768&quot;</span>  <span class="c1">// item_rid</span>
+                    <span class="p">},</span>
+                <span class="p">],</span>
+                <span class="s2">&quot;rid&quot;</span><span class="o">:</span> <span class="s2">&quot;Fi618937502&quot;</span>  <span class="c1">// item_rid</span>
+            <span class="p">},</span>
+        <span class="p">],</span>
+
+    <span class="p">},</span>
+    <span class="s2">&quot;status&quot;</span><span class="o">:</span> <span class="p">{</span>
+        <span class="s2">&quot;code&quot;</span><span class="o">:</span> <span class="mi">200</span><span class="p">,</span>
+        <span class="s2">&quot;message&quot;</span><span class="o">:</span> <span class="s2">&quot;Ok all right.&quot;</span>
+    <span class="p">},</span>
+    <span class="s2">&quot;success&quot;</span><span class="o">:</span> <span class="kc">true</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="id45">
+<h2>查询运费模板信息列表<a class="headerlink" href="#id45" title="永久链接至标题">¶</a></h2>
+<p>某商家查询运费模板信息列表</p>
+<div class="section" id="id46">
+<h3>接口说明<a class="headerlink" href="#id46" title="永久链接至标题">¶</a></h3>
+<ul class="simple">
+<li>API接口请求地址：<code class="docutils literal"><span class="pre">/logistics/freight_template</span></code></li>
+<li>API接口请求方法：<code class="docutils literal"><span class="pre">GET</span></code></li>
+<li>API接口用户授权：<code class="docutils literal"><span class="pre">token</span></code></li>
+</ul>
+</div>
+<div class="section" id="id47">
+<h3>请求参数<a class="headerlink" href="#id47" title="永久链接至标题">¶</a></h3>
+<table border="1" class="docutils">
+<colgroup>
+<col width="15%" />
+<col width="11%" />
+<col width="13%" />
+<col width="11%" />
+<col width="50%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">名称</th>
+<th class="head">类型</th>
+<th class="head">是否必须</th>
+<th class="head">默认值</th>
+<th class="head">描述说明</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>page</td>
+<td>Number</td>
+<td>可选</td>
+<td>1</td>
+<td>当前页码</td>
+</tr>
+<tr class="row-odd"><td>per_page</td>
+<td>Number</td>
+<td>可选</td>
+<td>10</td>
+<td>每页数量</td>
+</tr>
+<tr class="row-even"><td>rid</td>
+<td>String</td>
+<td>可选</td>
+<td>&#160;</td>
+<td>模板rid</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="id48">
+<h3>返回示例<a class="headerlink" href="#id48" title="永久链接至标题">¶</a></h3>
+<p>JSON数据格式:</p>
+<p>请求 <strong>正确</strong> 返回结果：</p>
+<div class="highlight-javascript"><div class="highlight"><pre><span></span><span class="p">{</span>
+    <span class="s2">&quot;data&quot;</span><span class="o">:</span> <span class="p">{</span>
+        <span class="s2">&quot;count&quot;</span><span class="o">:</span> <span class="mi">14</span><span class="p">,</span>
+        <span class="s2">&quot;freight_template&quot;</span><span class="o">:</span> <span class="p">[</span>
+            <span class="p">{</span>
+                <span class="s2">&quot;items&quot;</span><span class="o">:</span> <span class="p">[</span>
+                    <span class="s2">&quot;name&quot;</span><span class="o">:</span> <span class="s2">&quot;运费模板3&quot;</span><span class="p">,</span>  <span class="c1">// 运费模板Id</span>
+                    <span class="s2">&quot;pricing_method&quot;</span><span class="o">:</span> <span class="mi">1</span><span class="p">,</span>  <span class="c1">// 计费方式</span>
+                    <span class="s2">&quot;rid&quot;</span><span class="o">:</span> <span class="s2">&quot;Ft726918503&quot;</span><span class="p">,</span>  <span class="c1">// 模板rid</span>
+                    <span class="s2">&quot;update_at&quot;</span><span class="o">:</span> <span class="mi">1528707342</span><span class="p">,</span> <span class="c1">//最后修改时间</span>
+                    <span class="s2">&quot;items&quot;</span><span class="o">:</span> <span class="p">[</span>
+                        <span class="p">{</span>
+                            <span class="s2">&quot;continuous_amount&quot;</span><span class="o">:</span> <span class="mi">20</span><span class="p">,</span>  <span class="c1">// 续费</span>
+                            <span class="s2">&quot;continuous_item&quot;</span><span class="o">:</span> <span class="mi">1</span><span class="p">,</span>  <span class="c1">// 续件</span>
+                            <span class="s2">&quot;continuous_weight&quot;</span><span class="o">:</span> <span class="mi">0</span><span class="p">,</span>  <span class="c1">// 续重</span>
+                            <span class="s2">&quot;express_code&quot;</span><span class="o">:</span> <span class="s2">&quot;YTO&quot;</span><span class="p">,</span>  <span class="c1">// 物流公司code</span>
+                            <span class="s2">&quot;express_id&quot;</span><span class="o">:</span> <span class="mi">4</span><span class="p">,</span>  <span class="c1">// 物流公司id</span>
+                            <span class="s2">&quot;express_name&quot;</span><span class="o">:</span> <span class="s2">&quot;圆通&quot;</span><span class="p">,</span>  <span class="c1">// 物流公司名</span>
+                            <span class="s2">&quot;first_amount&quot;</span><span class="o">:</span> <span class="mi">10</span><span class="p">,</span>  <span class="c1">// 首费</span>
+                            <span class="s2">&quot;first_item&quot;</span><span class="o">:</span> <span class="mi">1</span><span class="p">,</span>  <span class="c1">// 首件</span>
+                            <span class="s2">&quot;first_weight&quot;</span><span class="o">:</span> <span class="mi">0</span><span class="p">,</span>  <span class="c1">// 首重</span>
+                            <span class="s2">&quot;is_default&quot;</span><span class="o">:</span> <span class="kc">true</span><span class="p">,</span>  <span class="c1">// 是否默认</span>
+                            <span class="s2">&quot;max_days&quot;</span><span class="o">:</span> <span class="mi">5</span><span class="p">,</span>  <span class="c1">// 最长天数</span>
+                            <span class="s2">&quot;min_days&quot;</span><span class="o">:</span> <span class="mi">3</span><span class="p">,</span>  <span class="c1">// 最小天数</span>
+                            <span class="s2">&quot;place_items&quot;</span><span class="o">:</span> <span class="p">[</span>
+                                <span class="p">{</span>
+                                    <span class="s2">&quot;continuous_amount&quot;</span><span class="o">:</span> <span class="mi">20</span><span class="p">,</span>
+                                    <span class="s2">&quot;continuous_item&quot;</span><span class="o">:</span> <span class="mi">1</span><span class="p">,</span>
+                                    <span class="s2">&quot;continuous_weight&quot;</span><span class="o">:</span> <span class="mi">0</span><span class="p">,</span>
+                                    <span class="s2">&quot;first_amount&quot;</span><span class="o">:</span> <span class="mi">10</span><span class="p">,</span>
+                                    <span class="s2">&quot;first_item&quot;</span><span class="o">:</span> <span class="mi">1</span><span class="p">,</span>
+                                    <span class="s2">&quot;first_weight&quot;</span><span class="o">:</span> <span class="mi">0</span><span class="p">,</span>
+                                    <span class="s2">&quot;is_default&quot;</span><span class="o">:</span> <span class="kc">false</span><span class="p">,</span>
+                                    <span class="s2">&quot;places&quot;</span><span class="o">:</span> <span class="p">[</span>
+                                        <span class="p">{</span>
+                                            <span class="s2">&quot;area_scope&quot;</span><span class="o">:</span> <span class="mi">1</span><span class="p">,</span>  <span class="c1">// 区域范围</span>
+                                            <span class="s2">&quot;place_name&quot;</span><span class="o">:</span> <span class="s2">&quot;北京&quot;</span><span class="p">,</span>
+                                            <span class="s2">&quot;place_oid&quot;</span><span class="o">:</span> <span class="mi">1</span>
+                                        <span class="p">},</span>
+                                        <span class="p">{</span>
+                                            <span class="s2">&quot;area_scope&quot;</span><span class="o">:</span> <span class="mi">1</span><span class="p">,</span>  <span class="c1">// 区域范围</span>
+                                            <span class="s2">&quot;place_name&quot;</span><span class="o">:</span> <span class="s2">&quot;天津&quot;</span><span class="p">,</span>
+                                            <span class="s2">&quot;place_oid&quot;</span><span class="o">:</span> <span class="mi">2</span>
+                                        <span class="p">}</span>
+                                    <span class="p">],</span>
+                                    <span class="s2">&quot;rid&quot;</span><span class="o">:</span> <span class="s2">&quot;Fi153042768&quot;</span>  <span class="c1">// item_rid</span>
+                                <span class="p">},</span>
+                            <span class="p">],</span>
+                            <span class="s2">&quot;rid&quot;</span><span class="o">:</span> <span class="s2">&quot;Fi618937502&quot;</span>  <span class="c1">// item_rid</span>
+                        <span class="p">},</span>
+                    <span class="p">],</span>
+                <span class="p">],</span>
+                <span class="s2">&quot;name&quot;</span><span class="o">:</span> <span class="s2">&quot;运费模板2&quot;</span><span class="p">,</span>
+                <span class="s2">&quot;pricing_method&quot;</span><span class="o">:</span> <span class="mi">1</span><span class="p">,</span>
+                <span class="s2">&quot;rid&quot;</span><span class="o">:</span> <span class="s2">&quot;Ft290486375&quot;</span><span class="p">,</span>
+                <span class="s2">&quot;update_at&quot;</span><span class="o">:</span> <span class="mi">1529927222</span>
+            <span class="p">}</span>
+        <span class="p">],</span>
+        <span class="s2">&quot;next&quot;</span><span class="o">:</span> <span class="s2">&quot;http://0.0.0.0:9000/api/v1.0/logistics/freight_template?page=2&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;prev&quot;</span><span class="o">:</span> <span class="kc">null</span>
+    <span class="p">},</span>
+    <span class="s2">&quot;status&quot;</span><span class="o">:</span> <span class="p">{</span>
+        <span class="s2">&quot;code&quot;</span><span class="o">:</span> <span class="mi">200</span><span class="p">,</span>
+        <span class="s2">&quot;message&quot;</span><span class="o">:</span> <span class="s2">&quot;Ok all right.&quot;</span>
+    <span class="p">},</span>
+    <span class="s2">&quot;success&quot;</span><span class="o">:</span> <span class="kc">true</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="id49">
+<h2>用户查询运费模板详情<a class="headerlink" href="#id49" title="永久链接至标题">¶</a></h2>
+<p>用户查询运费模板详情</p>
+<div class="section" id="id50">
+<h3>接口说明<a class="headerlink" href="#id50" title="永久链接至标题">¶</a></h3>
+<ul class="simple">
+<li>API接口请求地址：<code class="docutils literal"><span class="pre">/logistics/freight_template/&lt;string:rid&gt;</span></code></li>
+<li>API接口请求方法：<code class="docutils literal"><span class="pre">GET</span></code></li>
+</ul>
+</div>
+<div class="section" id="id51">
+<h3>请求参数<a class="headerlink" href="#id51" title="永久链接至标题">¶</a></h3>
+<table border="1" class="docutils">
+<colgroup>
+<col width="25%" />
+<col width="13%" />
+<col width="12%" />
+<col width="13%" />
+<col width="36%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">名称</th>
+<th class="head">类型</th>
+<th class="head">是否必须</th>
+<th class="head">默认值</th>
+<th class="head">描述说明</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>rid</td>
+<td>String</td>
+<td>必需</td>
+<td>&#160;</td>
+<td>模板rid</td>
+</tr>
+<tr class="row-odd"><td>product_rid</td>
+<td>String</td>
+<td>必需</td>
+<td>&#160;</td>
+<td>商品rid</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="id52">
+<h3>返回示例<a class="headerlink" href="#id52" title="永久链接至标题">¶</a></h3>
+<p>JSON数据格式:</p>
+<p>请求 <strong>正确</strong> 返回结果：</p>
+<div class="highlight-javascript"><div class="highlight"><pre><span></span><span class="p">{</span>
+    <span class="s2">&quot;data&quot;</span><span class="o">:</span> <span class="p">{</span>
+        <span class="s2">&quot;name&quot;</span><span class="o">:</span> <span class="s2">&quot;运费模板3&quot;</span><span class="p">,</span>  <span class="c1">// 运费模板Id</span>
+        <span class="s2">&quot;pricing_method&quot;</span><span class="o">:</span> <span class="mi">1</span><span class="p">,</span>  <span class="c1">// 计费方式</span>
+        <span class="s2">&quot;rid&quot;</span><span class="o">:</span> <span class="s2">&quot;Ft726918503&quot;</span><span class="p">,</span>  <span class="c1">// 模板rid</span>
+        <span class="s2">&quot;update_at&quot;</span><span class="o">:</span> <span class="mi">1528707342</span><span class="p">,</span> <span class="c1">//最后修改时间</span>
+        <span class="s2">&quot;items&quot;</span><span class="o">:</span> <span class="p">[</span>
+            <span class="p">{</span>
+                <span class="s2">&quot;continuous_amount&quot;</span><span class="o">:</span> <span class="mi">20</span><span class="p">,</span>  <span class="c1">// 续费</span>
+                <span class="s2">&quot;continuous_item&quot;</span><span class="o">:</span> <span class="mi">1</span><span class="p">,</span>  <span class="c1">// 续件</span>
+                <span class="s2">&quot;continuous_weight&quot;</span><span class="o">:</span> <span class="mi">0</span><span class="p">,</span>  <span class="c1">// 续重</span>
+                <span class="s2">&quot;express_code&quot;</span><span class="o">:</span> <span class="s2">&quot;YTO&quot;</span><span class="p">,</span>  <span class="c1">// 物流公司code</span>
+                <span class="s2">&quot;express_id&quot;</span><span class="o">:</span> <span class="mi">4</span><span class="p">,</span>  <span class="c1">// 物流公司id</span>
+                <span class="s2">&quot;express_name&quot;</span><span class="o">:</span> <span class="s2">&quot;圆通&quot;</span><span class="p">,</span>  <span class="c1">// 物流公司名</span>
+                <span class="s2">&quot;first_amount&quot;</span><span class="o">:</span> <span class="mi">10</span><span class="p">,</span>  <span class="c1">// 首费</span>
+                <span class="s2">&quot;first_item&quot;</span><span class="o">:</span> <span class="mi">1</span><span class="p">,</span>  <span class="c1">// 首件</span>
+                <span class="s2">&quot;first_weight&quot;</span><span class="o">:</span> <span class="mi">0</span><span class="p">,</span>  <span class="c1">// 首重</span>
+                <span class="s2">&quot;is_default&quot;</span><span class="o">:</span> <span class="kc">true</span><span class="p">,</span>  <span class="c1">// 是否默认</span>
+                <span class="s2">&quot;max_days&quot;</span><span class="o">:</span> <span class="mi">5</span><span class="p">,</span>  <span class="c1">// 最长天数</span>
+                <span class="s2">&quot;min_days&quot;</span><span class="o">:</span> <span class="mi">3</span><span class="p">,</span>  <span class="c1">// 最小天数</span>
+                <span class="s2">&quot;place_items&quot;</span><span class="o">:</span> <span class="p">[</span>
+                    <span class="p">{</span>
+                        <span class="s2">&quot;continuous_amount&quot;</span><span class="o">:</span> <span class="mi">20</span><span class="p">,</span>
+                        <span class="s2">&quot;continuous_item&quot;</span><span class="o">:</span> <span class="mi">1</span><span class="p">,</span>
+                        <span class="s2">&quot;continuous_weight&quot;</span><span class="o">:</span> <span class="mi">0</span><span class="p">,</span>
+                        <span class="s2">&quot;first_amount&quot;</span><span class="o">:</span> <span class="mi">10</span><span class="p">,</span>
+                        <span class="s2">&quot;first_item&quot;</span><span class="o">:</span> <span class="mi">1</span><span class="p">,</span>
+                        <span class="s2">&quot;first_weight&quot;</span><span class="o">:</span> <span class="mi">0</span><span class="p">,</span>
+                        <span class="s2">&quot;is_default&quot;</span><span class="o">:</span> <span class="kc">false</span><span class="p">,</span>
+                        <span class="s2">&quot;places&quot;</span><span class="o">:</span> <span class="p">[</span>
+                            <span class="p">{</span>
+                                <span class="s2">&quot;area_scope&quot;</span><span class="o">:</span> <span class="mi">1</span><span class="p">,</span>  <span class="c1">// 区域范围</span>
+                                <span class="s2">&quot;place_name&quot;</span><span class="o">:</span> <span class="s2">&quot;北京&quot;</span><span class="p">,</span>
+                                <span class="s2">&quot;place_oid&quot;</span><span class="o">:</span> <span class="mi">1</span>
+                            <span class="p">},</span>
+                            <span class="p">{</span>
+                                <span class="s2">&quot;area_scope&quot;</span><span class="o">:</span> <span class="mi">1</span><span class="p">,</span>  <span class="c1">// 区域范围</span>
+                                <span class="s2">&quot;place_name&quot;</span><span class="o">:</span> <span class="s2">&quot;天津&quot;</span><span class="p">,</span>
+                                <span class="s2">&quot;place_oid&quot;</span><span class="o">:</span> <span class="mi">2</span>
+                            <span class="p">}</span>
+                        <span class="p">],</span>
+                        <span class="s2">&quot;rid&quot;</span><span class="o">:</span> <span class="s2">&quot;Fi153042768&quot;</span>  <span class="c1">// item_rid</span>
+                    <span class="p">},</span>
+                <span class="p">],</span>
+                <span class="s2">&quot;rid&quot;</span><span class="o">:</span> <span class="s2">&quot;Fi618937502&quot;</span>  <span class="c1">// item_rid</span>
+            <span class="p">},</span>
+        <span class="p">],</span>
+
+    <span class="p">},</span>
+    <span class="s2">&quot;status&quot;</span><span class="o">:</span> <span class="p">{</span>
+        <span class="s2">&quot;code&quot;</span><span class="o">:</span> <span class="mi">200</span><span class="p">,</span>
+        <span class="s2">&quot;message&quot;</span><span class="o">:</span> <span class="s2">&quot;Ok all right.&quot;</span>
+    <span class="p">},</span>
+    <span class="s2">&quot;success&quot;</span><span class="o">:</span> <span class="kc">true</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="id53">
+<h2>商家查询运费模板详情<a class="headerlink" href="#id53" title="永久链接至标题">¶</a></h2>
+<p>某商家查询运费模板详情</p>
+<div class="section" id="id54">
+<h3>接口说明<a class="headerlink" href="#id54" title="永久链接至标题">¶</a></h3>
+<ul class="simple">
+<li>API接口请求地址：<code class="docutils literal"><span class="pre">/logistics/master_freight_template/&lt;string:rid&gt;</span></code></li>
+<li>API接口请求方法：<code class="docutils literal"><span class="pre">GET</span></code></li>
+<li>API接口用户授权：<code class="docutils literal"><span class="pre">token</span></code></li>
+</ul>
+</div>
+<div class="section" id="id55">
+<h3>请求参数<a class="headerlink" href="#id55" title="永久链接至标题">¶</a></h3>
+<table border="1" class="docutils">
+<colgroup>
+<col width="25%" />
+<col width="13%" />
+<col width="12%" />
+<col width="13%" />
+<col width="36%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">名称</th>
+<th class="head">类型</th>
+<th class="head">是否必须</th>
+<th class="head">默认值</th>
+<th class="head">描述说明</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>rid</td>
+<td>String</td>
+<td>必需</td>
+<td>&#160;</td>
+<td>模板rid</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="id56">
+<h3>返回示例<a class="headerlink" href="#id56" title="永久链接至标题">¶</a></h3>
+<p>JSON数据格式:</p>
+<p>请求 <strong>正确</strong> 返回结果：</p>
+<div class="highlight-javascript"><div class="highlight"><pre><span></span><span class="p">{</span>
+    <span class="s2">&quot;data&quot;</span><span class="o">:</span> <span class="p">{</span>
+        <span class="s2">&quot;name&quot;</span><span class="o">:</span> <span class="s2">&quot;运费模板3&quot;</span><span class="p">,</span>  <span class="c1">// 运费模板Id</span>
+        <span class="s2">&quot;pricing_method&quot;</span><span class="o">:</span> <span class="mi">1</span><span class="p">,</span>  <span class="c1">// 计费方式</span>
+        <span class="s2">&quot;rid&quot;</span><span class="o">:</span> <span class="s2">&quot;Ft726918503&quot;</span><span class="p">,</span>  <span class="c1">// 模板rid</span>
+        <span class="s2">&quot;update_at&quot;</span><span class="o">:</span> <span class="mi">1528707342</span><span class="p">,</span> <span class="c1">//最后修改时间</span>
+        <span class="s2">&quot;items&quot;</span><span class="o">:</span> <span class="p">[</span>
+            <span class="p">{</span>
+                <span class="s2">&quot;continuous_amount&quot;</span><span class="o">:</span> <span class="mi">20</span><span class="p">,</span>  <span class="c1">// 续费</span>
+                <span class="s2">&quot;continuous_item&quot;</span><span class="o">:</span> <span class="mi">1</span><span class="p">,</span>  <span class="c1">// 续件</span>
+                <span class="s2">&quot;continuous_weight&quot;</span><span class="o">:</span> <span class="mi">0</span><span class="p">,</span>  <span class="c1">// 续重</span>
+                <span class="s2">&quot;express_code&quot;</span><span class="o">:</span> <span class="s2">&quot;YTO&quot;</span><span class="p">,</span>  <span class="c1">// 物流公司code</span>
+                <span class="s2">&quot;express_id&quot;</span><span class="o">:</span> <span class="mi">4</span><span class="p">,</span>  <span class="c1">// 物流公司id</span>
+                <span class="s2">&quot;express_name&quot;</span><span class="o">:</span> <span class="s2">&quot;圆通&quot;</span><span class="p">,</span>  <span class="c1">// 物流公司名</span>
+                <span class="s2">&quot;first_amount&quot;</span><span class="o">:</span> <span class="mi">10</span><span class="p">,</span>  <span class="c1">// 首费</span>
+                <span class="s2">&quot;first_item&quot;</span><span class="o">:</span> <span class="mi">1</span><span class="p">,</span>  <span class="c1">// 首件</span>
+                <span class="s2">&quot;first_weight&quot;</span><span class="o">:</span> <span class="mi">0</span><span class="p">,</span>  <span class="c1">// 首重</span>
+                <span class="s2">&quot;is_default&quot;</span><span class="o">:</span> <span class="kc">true</span><span class="p">,</span>  <span class="c1">// 是否默认</span>
+                <span class="s2">&quot;max_days&quot;</span><span class="o">:</span> <span class="mi">5</span><span class="p">,</span>  <span class="c1">// 最长天数</span>
+                <span class="s2">&quot;min_days&quot;</span><span class="o">:</span> <span class="mi">3</span><span class="p">,</span>  <span class="c1">// 最小天数</span>
+                <span class="s2">&quot;place_items&quot;</span><span class="o">:</span> <span class="p">[</span>
+                    <span class="p">{</span>
+                        <span class="s2">&quot;continuous_amount&quot;</span><span class="o">:</span> <span class="mi">20</span><span class="p">,</span>
+                        <span class="s2">&quot;continuous_item&quot;</span><span class="o">:</span> <span class="mi">1</span><span class="p">,</span>
+                        <span class="s2">&quot;continuous_weight&quot;</span><span class="o">:</span> <span class="mi">0</span><span class="p">,</span>
+                        <span class="s2">&quot;first_amount&quot;</span><span class="o">:</span> <span class="mi">10</span><span class="p">,</span>
+                        <span class="s2">&quot;first_item&quot;</span><span class="o">:</span> <span class="mi">1</span><span class="p">,</span>
+                        <span class="s2">&quot;first_weight&quot;</span><span class="o">:</span> <span class="mi">0</span><span class="p">,</span>
+                        <span class="s2">&quot;is_default&quot;</span><span class="o">:</span> <span class="kc">false</span><span class="p">,</span>
+                        <span class="s2">&quot;places&quot;</span><span class="o">:</span> <span class="p">[</span>
+                            <span class="p">{</span>
+                                <span class="s2">&quot;area_scope&quot;</span><span class="o">:</span> <span class="mi">1</span><span class="p">,</span>  <span class="c1">// 区域范围</span>
+                                <span class="s2">&quot;place_name&quot;</span><span class="o">:</span> <span class="s2">&quot;北京&quot;</span><span class="p">,</span>
+                                <span class="s2">&quot;place_oid&quot;</span><span class="o">:</span> <span class="mi">1</span>
+                            <span class="p">},</span>
+                            <span class="p">{</span>
+                                <span class="s2">&quot;area_scope&quot;</span><span class="o">:</span> <span class="mi">1</span><span class="p">,</span>  <span class="c1">// 区域范围</span>
+                                <span class="s2">&quot;place_name&quot;</span><span class="o">:</span> <span class="s2">&quot;天津&quot;</span><span class="p">,</span>
+                                <span class="s2">&quot;place_oid&quot;</span><span class="o">:</span> <span class="mi">2</span>
+                            <span class="p">}</span>
+                        <span class="p">],</span>
+                        <span class="s2">&quot;rid&quot;</span><span class="o">:</span> <span class="s2">&quot;Fi153042768&quot;</span>  <span class="c1">// item_rid</span>
+                    <span class="p">},</span>
+                <span class="p">],</span>
+                <span class="s2">&quot;rid&quot;</span><span class="o">:</span> <span class="s2">&quot;Fi618937502&quot;</span>  <span class="c1">// item_rid</span>
+            <span class="p">},</span>
+        <span class="p">],</span>
+
+    <span class="p">},</span>
+    <span class="s2">&quot;status&quot;</span><span class="o">:</span> <span class="p">{</span>
+        <span class="s2">&quot;code&quot;</span><span class="o">:</span> <span class="mi">200</span><span class="p">,</span>
+        <span class="s2">&quot;message&quot;</span><span class="o">:</span> <span class="s2">&quot;Ok all right.&quot;</span>
+    <span class="p">},</span>
+    <span class="s2">&quot;success&quot;</span><span class="o">:</span> <span class="kc">true</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="id57">
+<h2>删除运费模板信息<a class="headerlink" href="#id57" title="永久链接至标题">¶</a></h2>
+<p>某商家删除运费模板信息</p>
+<div class="section" id="id58">
+<h3>接口说明<a class="headerlink" href="#id58" title="永久链接至标题">¶</a></h3>
+<ul class="simple">
+<li>API接口请求地址：<code class="docutils literal"><span class="pre">/logistics/freight_template</span></code></li>
+<li>API接口请求方法：<code class="docutils literal"><span class="pre">DELETE</span></code></li>
+<li>API接口用户授权：<code class="docutils literal"><span class="pre">token</span></code></li>
+</ul>
+</div>
+<div class="section" id="id59">
+<h3>请求参数<a class="headerlink" href="#id59" title="永久链接至标题">¶</a></h3>
+<table border="1" class="docutils">
+<colgroup>
+<col width="25%" />
+<col width="13%" />
+<col width="12%" />
+<col width="13%" />
+<col width="36%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">名称</th>
+<th class="head">类型</th>
+<th class="head">是否必须</th>
+<th class="head">默认值</th>
+<th class="head">描述说明</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>rid</td>
+<td>String</td>
+<td>必需</td>
+<td>&#160;</td>
+<td>模板rid</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="id60">
+<h3>返回示例<a class="headerlink" href="#id60" title="永久链接至标题">¶</a></h3>
+<p>JSON数据格式:</p>
+<p>请求 <strong>正确</strong> 返回结果：</p>
+<div class="highlight-javascript"><div class="highlight"><pre><span></span><span class="p">{</span>
+    <span class="s2">&quot;status&quot;</span><span class="o">:</span> <span class="p">{</span>
+        <span class="s2">&quot;code&quot;</span><span class="o">:</span> <span class="mi">200</span><span class="p">,</span>
+        <span class="s2">&quot;message&quot;</span><span class="o">:</span> <span class="s2">&quot;Ok all right.&quot;</span>
+    <span class="p">},</span>
+    <span class="s2">&quot;success&quot;</span><span class="o">:</span> <span class="kc">true</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<p>返回错误格式：</p>
+<div class="highlight-javascript"><div class="highlight"><pre><span></span><span class="p">{</span>
+  <span class="s2">&quot;status&quot;</span><span class="o">:</span> <span class="p">{</span>
+    <span class="s2">&quot;code&quot;</span><span class="o">:</span> <span class="mi">404</span><span class="p">,</span>
+    <span class="s2">&quot;message&quot;</span><span class="o">:</span> <span class="s2">&quot;Not Found&quot;</span>
+  <span class="p">},</span>
+  <span class="s2">&quot;success&quot;</span><span class="o">:</span> <span class="kc">false</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="id61">
+<h2>选择合适的运费模板<a class="headerlink" href="#id61" title="永久链接至标题">¶</a></h2>
+<p>选择合适的运费模板</p>
+<div class="section" id="id62">
+<h3>接口说明<a class="headerlink" href="#id62" title="永久链接至标题">¶</a></h3>
+<ul class="simple">
+<li>API接口请求地址：<code class="docutils literal"><span class="pre">/logistics/freight/available</span></code></li>
+<li>API接口请求方法：<code class="docutils literal"><span class="pre">POST</span></code></li>
+<li>API接口用户授权：<code class="docutils literal"><span class="pre">token</span></code></li>
+</ul>
+</div>
+<div class="section" id="id63">
+<h3>请求参数<a class="headerlink" href="#id63" title="永久链接至标题">¶</a></h3>
+<p><strong>运费信息基本参数:</strong></p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="25%" />
+<col width="13%" />
+<col width="12%" />
+<col width="13%" />
+<col width="36%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">名称</th>
+<th class="head">类型</th>
+<th class="head">是否必须</th>
+<th class="head">默认值</th>
+<th class="head">描述说明</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>address_rid</td>
+<td>String</td>
+<td>必须</td>
+<td>&#160;</td>
+<td>地址rid</td>
+</tr>
+<tr class="row-odd"><td>product_items</td>
+<td>Array</td>
+<td>必须</td>
+<td>&#160;</td>
+<td>商品信息列表</td>
+</tr>
+</tbody>
+</table>
+<p><strong>商品信息:</strong></p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="25%" />
+<col width="13%" />
+<col width="12%" />
+<col width="13%" />
+<col width="36%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">名称</th>
+<th class="head">类型</th>
+<th class="head">是否必须</th>
+<th class="head">默认值</th>
+<th class="head">描述说明</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>product_items:</td>
+<td>&#160;</td>
+<td>&#160;</td>
+<td>&#160;</td>
+<td>&#160;</td>
+</tr>
+<tr class="row-odd"><td>sku_rid</td>
+<td>String</td>
+<td>必须</td>
+<td>&#160;</td>
+<td>sku_rid</td>
+</tr>
+<tr class="row-even"><td>quantity</td>
+<td>Integer</td>
+<td>必须</td>
+<td>1</td>
+<td>购买数量</td>
+</tr>
+<tr class="row-odd"><td>freight_template_id</td>
+<td>String</td>
+<td>必须</td>
+<td>&#160;</td>
+<td>运费模板rid</td>
+</tr>
+</tbody>
+</table>
+<p>参考示例：</p>
+<div class="highlight-javascript"><div class="highlight"><pre><span></span><span class="p">{</span>
+    <span class="s2">&quot;address_rid&quot;</span><span class="o">:</span><span class="s2">&quot;5125783409&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;product_items&quot;</span><span class="o">:</span><span class="p">[</span>
+        <span class="p">{</span>
+            <span class="s2">&quot;sku_rid&quot;</span><span class="o">:</span><span class="s2">&quot;1&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;quantity&quot;</span><span class="o">:</span><span class="mi">2</span><span class="p">,</span>
+            <span class="s2">&quot;freight_template_id&quot;</span><span class="o">:</span> <span class="s2">&quot;Ft304291658&quot;</span>
+        <span class="p">},</span>
+        <span class="p">{</span>
+            <span class="s2">&quot;sku_rid&quot;</span><span class="o">:</span><span class="s2">&quot;4&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;quantity&quot;</span><span class="o">:</span><span class="mi">2</span><span class="p">,</span>
+            <span class="s2">&quot;freight_template_id&quot;</span><span class="o">:</span> <span class="s2">&quot;Ft304291658&quot;</span>
+
+        <span class="p">}</span>
+
+        <span class="p">]</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="id64">
+<h3>返回示例<a class="headerlink" href="#id64" title="永久链接至标题">¶</a></h3>
+<p>JSON数据格式:</p>
+<p>请求 <strong>正确</strong> 返回结果：</p>
+<div class="highlight-javascript"><div class="highlight"><pre><span></span><span class="p">{</span>
+    <span class="s2">&quot;data&quot;</span><span class="o">:</span> <span class="p">{</span>
+        <span class="s2">&quot;express_info&quot;</span><span class="o">:</span> <span class="p">[</span>
+            <span class="p">{</span>
+                <span class="s2">&quot;continuous_amount&quot;</span><span class="o">:</span> <span class="mi">20</span><span class="p">,</span>
+                <span class="s2">&quot;continuous_item&quot;</span><span class="o">:</span> <span class="mi">1</span><span class="p">,</span>
+                <span class="s2">&quot;continuous_weight&quot;</span><span class="o">:</span> <span class="mi">0</span><span class="p">,</span>
+                <span class="s2">&quot;created_at&quot;</span><span class="o">:</span> <span class="mi">1530251099</span><span class="p">,</span>
+                <span class="s2">&quot;express&quot;</span><span class="o">:</span> <span class="p">{</span>  <span class="c1">//物流公司</span>
+                    <span class="s2">&quot;express_code&quot;</span><span class="o">:</span> <span class="s2">&quot;YTO&quot;</span><span class="p">,</span>  <span class="c1">//物流公司</span>
+                    <span class="s2">&quot;express_id&quot;</span><span class="o">:</span> <span class="mi">4</span><span class="p">,</span>
+                    <span class="s2">&quot;express_name&quot;</span><span class="o">:</span> <span class="s2">&quot;圆通&quot;</span>
+                <span class="p">},</span>
+                <span class="s2">&quot;first_amount&quot;</span><span class="o">:</span> <span class="mi">10</span><span class="p">,</span>
+                <span class="s2">&quot;first_item&quot;</span><span class="o">:</span> <span class="mi">1</span><span class="p">,</span>
+                <span class="s2">&quot;first_weight&quot;</span><span class="o">:</span> <span class="mi">0</span><span class="p">,</span>
+                <span class="s2">&quot;freight&quot;</span><span class="o">:</span> <span class="mi">23</span><span class="p">,</span>  <span class="c1">// 运费</span>
+                <span class="s2">&quot;is_default&quot;</span><span class="o">:</span> <span class="kc">true</span><span class="p">,</span>
+                <span class="s2">&quot;max_days&quot;</span><span class="o">:</span> <span class="mi">5</span><span class="p">,</span>  <span class="c1">// 最大天数</span>
+                <span class="s2">&quot;min_days&quot;</span><span class="o">:</span> <span class="mi">3</span><span class="p">,</span>  <span class="c1">// 最小天数</span>
+                <span class="s2">&quot;place&quot;</span><span class="o">:</span> <span class="p">[],</span>
+                <span class="s2">&quot;rid&quot;</span><span class="o">:</span> <span class="s2">&quot;Fi278194536&quot;</span><span class="p">,</span>
+                <span class="s2">&quot;updated_at&quot;</span><span class="o">:</span> <span class="mi">1530251099</span>
+            <span class="p">},</span>
+        <span class="p">],</span>
+        <span class="s2">&quot;min_express&quot;</span><span class="o">:</span> <span class="mi">4</span><span class="p">,</span>  <span class="c1">// 最小运费公司</span>
+        <span class="s2">&quot;min_freight&quot;</span><span class="o">:</span> <span class="mi">23</span>  <span class="c1">// 最小运费</span>
+    <span class="p">},</span>
+    <span class="s2">&quot;status&quot;</span><span class="o">:</span> <span class="p">{</span>
+        <span class="s2">&quot;code&quot;</span><span class="o">:</span> <span class="mi">200</span><span class="p">,</span>
+        <span class="s2">&quot;message&quot;</span><span class="o">:</span> <span class="s2">&quot;Ok all right.&quot;</span>
+    <span class="p">},</span>
+    <span class="s2">&quot;success&quot;</span><span class="o">:</span> <span class="kc">true</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="id65">
+<h2>获取每件商品的物流公司列表<a class="headerlink" href="#id65" title="永久链接至标题">¶</a></h2>
+<p>获取每件商品的物流公司列表</p>
+<div class="section" id="id66">
+<h3>接口说明<a class="headerlink" href="#id66" title="永久链接至标题">¶</a></h3>
+<ul class="simple">
+<li>API接口请求地址：<code class="docutils literal"><span class="pre">/logistics/product/express</span></code></li>
+<li>API接口请求方法：<code class="docutils literal"><span class="pre">POST</span></code></li>
+<li>API接口用户授权：<code class="docutils literal"><span class="pre">token</span></code></li>
+</ul>
+</div>
+<div class="section" id="id67">
+<h3>请求参数<a class="headerlink" href="#id67" title="永久链接至标题">¶</a></h3>
+<p><strong>运费信息基本参数:</strong></p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="25%" />
+<col width="13%" />
+<col width="12%" />
+<col width="13%" />
+<col width="36%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">名称</th>
+<th class="head">类型</th>
+<th class="head">是否必须</th>
+<th class="head">默认值</th>
+<th class="head">描述说明</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>items</td>
+<td>Array</td>
+<td>必须</td>
+<td>&#160;</td>
+<td>店铺详情</td>
+</tr>
+</tbody>
+</table>
+<p><strong>店铺详情:</strong></p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="25%" />
+<col width="13%" />
+<col width="12%" />
+<col width="13%" />
+<col width="36%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">名称</th>
+<th class="head">类型</th>
+<th class="head">是否必须</th>
+<th class="head">默认值</th>
+<th class="head">描述说明</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>items:</td>
+<td>&#160;</td>
+<td>&#160;</td>
+<td>&#160;</td>
+<td>&#160;</td>
+</tr>
+<tr class="row-odd"><td>rid</td>
+<td>String</td>
+<td>必须</td>
+<td>&#160;</td>
+<td>店铺rid</td>
+</tr>
+<tr class="row-even"><td>sku_items</td>
+<td>Array</td>
+<td>必须</td>
+<td>1</td>
+<td>商品详情</td>
+</tr>
+</tbody>
+</table>
+<p><strong>商品详情:</strong></p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="25%" />
+<col width="13%" />
+<col width="12%" />
+<col width="13%" />
+<col width="36%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">名称</th>
+<th class="head">类型</th>
+<th class="head">是否必须</th>
+<th class="head">默认值</th>
+<th class="head">描述说明</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>sku</td>
+<td>String</td>
+<td>必须</td>
+<td>&#160;</td>
+<td>sku</td>
+</tr>
+</tbody>
+</table>
+<p>参考示例：</p>
+<div class="highlight-javascript"><div class="highlight"><pre><span></span><span class="p">{</span>
+    <span class="s2">&quot;items&quot;</span><span class="o">:</span><span class="p">[</span>
+        <span class="p">{</span>
+            <span class="s2">&quot;rid&quot;</span><span class="o">:</span><span class="s2">&quot;2&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;sku_items&quot;</span><span class="o">:</span><span class="p">[</span>
+                <span class="p">{</span>
+                    <span class="s2">&quot;sku&quot;</span><span class="o">:</span><span class="s2">&quot;2&quot;</span>
+                <span class="p">}</span>
+
+                <span class="p">]</span>
+        <span class="p">}</span>
+    <span class="p">]</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="id68">
+<h3>返回示例<a class="headerlink" href="#id68" title="永久链接至标题">¶</a></h3>
+<p>JSON数据格式:</p>
+<p>请求 <strong>正确</strong> 返回结果：</p>
+<div class="highlight-javascript"><div class="highlight"><pre><span></span><span class="p">{</span>
+    <span class="s2">&quot;data&quot;</span><span class="o">:</span> <span class="p">{</span>
+        <span class="s2">&quot;2&quot;</span><span class="o">:</span> <span class="p">{</span>  <span class="c1">// 店铺rid</span>
+            <span class="s2">&quot;2&quot;</span><span class="o">:</span> <span class="p">{</span>  <span class="c1">// 商品sku</span>
+                <span class="s2">&quot;express&quot;</span><span class="o">:</span> <span class="p">[</span>
+                    <span class="p">{</span>
+                        <span class="s2">&quot;express_code&quot;</span><span class="o">:</span> <span class="s2">&quot;YTO&quot;</span><span class="p">,</span>  <span class="c1">// 物流公司code</span>
+                        <span class="s2">&quot;express_id&quot;</span><span class="o">:</span> <span class="mi">4</span><span class="p">,</span>  <span class="c1">// 物流公司id</span>
+                        <span class="s2">&quot;express_name&quot;</span><span class="o">:</span> <span class="s2">&quot;圆通&quot;</span><span class="p">,</span>  <span class="c1">// 物流公司名称</span>
+                        <span class="s2">&quot;is_default&quot;</span><span class="o">:</span> <span class="kc">true</span><span class="p">,</span>  <span class="c1">// 是否默认物流公司</span>
+                        <span class="s2">&quot;max_days&quot;</span><span class="o">:</span> <span class="mi">5</span><span class="p">,</span>  <span class="c1">// 最大天数</span>
+                        <span class="s2">&quot;min_days&quot;</span><span class="o">:</span> <span class="mi">3</span>  <span class="c1">// 最小天数</span>
+                    <span class="p">}</span>
+                <span class="p">]</span>
+            <span class="p">}</span>
+        <span class="p">}</span>
+    <span class="p">},</span>
+    <span class="s2">&quot;status&quot;</span><span class="o">:</span> <span class="p">{</span>
+        <span class="s2">&quot;code&quot;</span><span class="o">:</span> <span class="mi">200</span><span class="p">,</span>
+        <span class="s2">&quot;message&quot;</span><span class="o">:</span> <span class="s2">&quot;Ok all right.&quot;</span>
+    <span class="p">},</span>
+    <span class="s2">&quot;success&quot;</span><span class="o">:</span> <span class="kc">true</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="id69">
+<h2>计算运费<a class="headerlink" href="#id69" title="永久链接至标题">¶</a></h2>
+<p>计算运费</p>
+<div class="section" id="id70">
+<h3>接口说明<a class="headerlink" href="#id70" title="永久链接至标题">¶</a></h3>
+<ul class="simple">
+<li>API接口请求地址：<code class="docutils literal"><span class="pre">/logistics/freight/calculate</span></code></li>
+<li>API接口请求方法：<code class="docutils literal"><span class="pre">POST</span></code></li>
+<li>API接口用户授权：<code class="docutils literal"><span class="pre">token</span></code></li>
+</ul>
+</div>
+<div class="section" id="id71">
+<h3>请求参数<a class="headerlink" href="#id71" title="永久链接至标题">¶</a></h3>
+<p><strong>运费信息基本参数:</strong></p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="25%" />
+<col width="13%" />
+<col width="12%" />
+<col width="13%" />
+<col width="36%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">名称</th>
+<th class="head">类型</th>
+<th class="head">是否必须</th>
+<th class="head">默认值</th>
+<th class="head">描述说明</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>address_rid</td>
+<td>String</td>
+<td>必须</td>
+<td>&#160;</td>
+<td>地址rid</td>
+</tr>
+<tr class="row-odd"><td>items</td>
+<td>Array</td>
+<td>必须</td>
+<td>&#160;</td>
+<td>店铺详情</td>
+</tr>
+</tbody>
+</table>
+<p><strong>店铺详情:</strong></p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="25%" />
+<col width="13%" />
+<col width="12%" />
+<col width="13%" />
+<col width="36%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">名称</th>
+<th class="head">类型</th>
+<th class="head">是否必须</th>
+<th class="head">默认值</th>
+<th class="head">描述说明</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>items:</td>
+<td>&#160;</td>
+<td>&#160;</td>
+<td>&#160;</td>
+<td>&#160;</td>
+</tr>
+<tr class="row-odd"><td>rid</td>
+<td>String</td>
+<td>必须</td>
+<td>&#160;</td>
+<td>店铺rid</td>
+</tr>
+<tr class="row-even"><td>sku_items</td>
+<td>Array</td>
+<td>必须</td>
+<td>1</td>
+<td>商品详情</td>
+</tr>
+</tbody>
+</table>
+<p><strong>商品详情:</strong></p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="25%" />
+<col width="13%" />
+<col width="12%" />
+<col width="13%" />
+<col width="36%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">名称</th>
+<th class="head">类型</th>
+<th class="head">是否必须</th>
+<th class="head">默认值</th>
+<th class="head">描述说明</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>sku</td>
+<td>String</td>
+<td>必须</td>
+<td>&#160;</td>
+<td>sku</td>
+</tr>
+<tr class="row-odd"><td>quantity</td>
+<td>Integer</td>
+<td>必须</td>
+<td>&#160;</td>
+<td>数量</td>
+</tr>
+<tr class="row-even"><td>express_id</td>
+<td>Integer</td>
+<td>必须</td>
+<td>&#160;</td>
+<td>物流公司id</td>
+</tr>
+</tbody>
+</table>
+<p>参考示例：</p>
+<div class="highlight-javascript"><div class="highlight"><pre><span></span><span class="p">{</span>
+    <span class="s2">&quot;address_rid&quot;</span><span class="o">:</span><span class="s2">&quot;5125783409&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;items&quot;</span><span class="o">:</span><span class="p">[</span>
+                <span class="p">{</span>
+                    <span class="s2">&quot;rid&quot;</span><span class="o">:</span><span class="s2">&quot;2&quot;</span><span class="p">,</span>
+                    <span class="s2">&quot;sku_items&quot;</span><span class="o">:</span><span class="p">[</span>
+                        <span class="p">{</span>
+                            <span class="s2">&quot;sku&quot;</span><span class="o">:</span><span class="s2">&quot;2&quot;</span><span class="p">,</span>
+                            <span class="s2">&quot;quantity&quot;</span><span class="o">:</span><span class="mi">20</span><span class="p">,</span>
+                            <span class="s2">&quot;express_id&quot;</span><span class="o">:</span><span class="mi">4</span>
+                        <span class="p">}</span>
+
+                    <span class="p">]</span>
+                <span class="p">}</span>
+        <span class="p">]</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="id72">
+<h3>返回示例<a class="headerlink" href="#id72" title="永久链接至标题">¶</a></h3>
+<p>JSON数据格式:</p>
+<p>请求 <strong>正确</strong> 返回结果：</p>
+<div class="highlight-javascript"><div class="highlight"><pre><span></span><span class="p">{</span>
+    <span class="s2">&quot;data&quot;</span><span class="o">:</span> <span class="p">{</span>
+        <span class="s2">&quot;2&quot;</span><span class="o">:</span> <span class="mi">65</span>  <span class="c1">// 每家店铺的运费</span>
+    <span class="p">},</span>
+    <span class="s2">&quot;status&quot;</span><span class="o">:</span> <span class="p">{</span>
+        <span class="s2">&quot;code&quot;</span><span class="o">:</span> <span class="mi">200</span><span class="p">,</span>
+        <span class="s2">&quot;message&quot;</span><span class="o">:</span> <span class="s2">&quot;Ok all right.&quot;</span>
+    <span class="p">},</span>
+    <span class="s2">&quot;success&quot;</span><span class="o">:</span> <span class="kc">true</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="id73">
+<h2>验证该商户是否设置物流模板<a class="headerlink" href="#id73" title="永久链接至标题">¶</a></h2>
+<p>验证该商户是否设置物流模板</p>
+<div class="section" id="id74">
+<h3>接口说明<a class="headerlink" href="#id74" title="永久链接至标题">¶</a></h3>
+<ul class="simple">
+<li>API接口请求地址：<code class="docutils literal"><span class="pre">/logistics/freight_template/is_set</span></code></li>
+<li>API接口请求方法：<code class="docutils literal"><span class="pre">GET</span></code></li>
+<li>API接口用户授权：<code class="docutils literal"><span class="pre">token</span></code></li>
+</ul>
+</div>
+<div class="section" id="id75">
+<h3>返回示例<a class="headerlink" href="#id75" title="永久链接至标题">¶</a></h3>
+<p>JSON数据格式:</p>
+<p>请求 <strong>正确</strong> 返回结果：</p>
+<div class="highlight-javascript"><div class="highlight"><pre><span></span><span class="p">{</span>
+    <span class="s2">&quot;data&quot;</span><span class="o">:</span> <span class="p">{</span>
+        <span class="s2">&quot;status&quot;</span><span class="o">:</span> <span class="kc">true</span>  <span class="c1">// true 已设置  false 未设置</span>
+    <span class="p">},</span>
+    <span class="s2">&quot;status&quot;</span><span class="o">:</span> <span class="p">{</span>
+        <span class="s2">&quot;code&quot;</span><span class="o">:</span> <span class="mi">200</span><span class="p">,</span>
+        <span class="s2">&quot;message&quot;</span><span class="o">:</span> <span class="s2">&quot;Ok all right.&quot;</span>
+    <span class="p">},</span>
+    <span class="s2">&quot;success&quot;</span><span class="o">:</span> <span class="kc">true</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+
+
+    </div>
+      
+  </div>
+</div>
+<footer class="footer">
+    <div class="container">
+        <p>© Copyright 2018 moebeast.com.</p>
+        <p>Created using <a href="http://sphinx.pocoo.org/" target="_blank">Sphinx</a>.</p>
+    </div>
+</footer>
+
+  </body>
+</html>
