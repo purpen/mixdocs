@@ -1871,5 +1871,5 @@ rid          Number    必须                   生活志编号
 
 JSON数据格式:
 
-.. literalinclude:: product_list.js
+.. literalinclude:: ../products/product_list.js
     :language: javascript
