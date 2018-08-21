@@ -233,6 +233,12 @@
 <li><a class="reference internal" href="#id28">返回示例</a></li>
 </ul>
 </li>
+<li><a class="reference internal" href="#b">小b商家提现</a><ul>
+<li><a class="reference internal" href="#id29">接口说明</a></li>
+<li><a class="reference internal" href="#id30">请求参数</a></li>
+<li><a class="reference internal" href="#id31">返回示例</a></li>
+</ul>
+</li>
 </ul>
 </li>
 </ul>
@@ -306,6 +312,12 @@
 <li><a class="reference internal" href="#id26">验证该商户是否绑定银行卡</a><ul>
 <li><a class="reference internal" href="#id27">接口说明</a></li>
 <li><a class="reference internal" href="#id28">返回示例</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#b">小b商家提现</a><ul>
+<li><a class="reference internal" href="#id29">接口说明</a></li>
+<li><a class="reference internal" href="#id30">请求参数</a></li>
+<li><a class="reference internal" href="#id31">返回示例</a></li>
 </ul>
 </li>
 </ul>
@@ -776,6 +788,68 @@
 <div class="highlight-javascript"><div class="highlight"><pre><span></span><span class="p">{</span>
     <span class="s2">&quot;data&quot;</span><span class="o">:</span> <span class="p">{</span>
         <span class="s2">&quot;status&quot;</span><span class="o">:</span> <span class="kc">true</span>  <span class="c1">// true 已设置  false 未设置</span>
+    <span class="p">},</span>
+    <span class="s2">&quot;status&quot;</span><span class="o">:</span> <span class="p">{</span>
+        <span class="s2">&quot;code&quot;</span><span class="o">:</span> <span class="mi">200</span><span class="p">,</span>
+        <span class="s2">&quot;message&quot;</span><span class="o">:</span> <span class="s2">&quot;Ok all right.&quot;</span>
+    <span class="p">},</span>
+    <span class="s2">&quot;success&quot;</span><span class="o">:</span> <span class="kc">true</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="b">
+<h2>小b商家提现<a class="headerlink" href="#b" title="永久链接至标题">¶</a></h2>
+<p>小b商家提现</p>
+<div class="section" id="id29">
+<h3>接口说明<a class="headerlink" href="#id29" title="永久链接至标题">¶</a></h3>
+<ul class="simple">
+<li>API接口请求地址：<code class="docutils literal"><span class="pre">/pay_account/life_cash_money</span></code></li>
+<li>API接口请求方法：<code class="docutils literal"><span class="pre">POST</span></code></li>
+<li>API接口用户授权：<code class="docutils literal"><span class="pre">token</span></code></li>
+</ul>
+</div>
+<div class="section" id="id30">
+<h3>请求参数<a class="headerlink" href="#id30" title="永久链接至标题">¶</a></h3>
+<table border="1" class="docutils">
+<colgroup>
+<col width="27%" />
+<col width="13%" />
+<col width="11%" />
+<col width="13%" />
+<col width="37%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">名称</th>
+<th class="head">类型</th>
+<th class="head">是否必须</th>
+<th class="head">默认值</th>
+<th class="head">描述说明</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>store_rid</td>
+<td>String</td>
+<td>必需</td>
+<td>&#160;</td>
+<td>店铺rid</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="id31">
+<h3>返回示例<a class="headerlink" href="#id31" title="永久链接至标题">¶</a></h3>
+<div class="highlight-javascript"><div class="highlight"><pre><span></span><span class="p">{</span>
+    <span class="s2">&quot;data&quot;</span><span class="o">:</span> <span class="p">{</span>
+        <span class="s2">&quot;actual_account_amount&quot;</span><span class="o">:</span> <span class="mi">11</span><span class="p">,</span>  <span class="c1">// 实际提现金额</span>
+        <span class="s2">&quot;actual_amount&quot;</span><span class="o">:</span> <span class="mi">11</span><span class="p">,</span>  <span class="c1">// 提现金额</span>
+        <span class="s2">&quot;created_at&quot;</span><span class="o">:</span> <span class="mi">1534581237</span><span class="p">,</span>  <span class="c1">// 提现时间</span>
+        <span class="s2">&quot;receive_target&quot;</span><span class="o">:</span> <span class="mi">1</span><span class="p">,</span>  <span class="c1">// 提现到 1、微信零钱包</span>
+        <span class="s2">&quot;record_id&quot;</span><span class="o">:</span> <span class="mi">3</span><span class="p">,</span>  <span class="c1">// 记录id</span>
+        <span class="s2">&quot;service_fee&quot;</span><span class="o">:</span> <span class="mi">0</span><span class="p">,</span>  <span class="c1">// 服务费</span>
+        <span class="s2">&quot;status&quot;</span><span class="o">:</span> <span class="mi">2</span><span class="p">,</span>  <span class="c1">// 提现状态 1、审核中 2、成功 3、失败</span>
+        <span class="s2">&quot;store_rid&quot;</span><span class="o">:</span> <span class="s2">&quot;2&quot;</span>  <span class="c1">//  生活馆rid</span>
     <span class="p">},</span>
     <span class="s2">&quot;status&quot;</span><span class="o">:</span> <span class="p">{</span>
         <span class="s2">&quot;code&quot;</span><span class="o">:</span> <span class="mi">200</span><span class="p">,</span>
