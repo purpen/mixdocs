@@ -285,18 +285,48 @@ JSON数据格式:
             "qk": "商品分享",
             "search_items": [
                 {
+                    "matches": [
+                        {
+                            "match": "false, 该关键词是否匹true为匹配, false则没匹配到",
+                            "word": "商品"
+                        },
+                        {
+                            "match": true,
+                            "word": "分享"
+                        }
+                    ],
                     "name": "商品名",
                     "serial_no": "8208961374",
                     "target_type": "1=商品, 2=原创品牌设计馆, 3=用户",
                     "title": "商品"
                 },
                 {
+                    "matches": [
+                        {
+                            "match": false,
+                            "word": "商品"
+                        },
+                        {
+                            "match": true,
+                            "word": "分享"
+                        }
+                    ],
                     "name": "品牌馆名",
                     "serial_no": "19620734815",
                     "target_type": 2,
                     "title": "品牌馆"
                 }
                 {
+                    "matches": [
+                        {
+                            "match": false,
+                            "word": "商品"
+                        },
+                        {
+                            "match": true,
+                            "word": "分享"
+                        }
+                    ],
                     "name": "用户名",
                     "serial_no": "19620734815",
                     "target_type": 3,
