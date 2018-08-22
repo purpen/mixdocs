@@ -156,7 +156,7 @@ per_page         Number      可选         10         每页数量
 ~~~~~~~~~~~~~~
 
 * API接口请求地址：``/shop_windows/detail``
-* API接口用户授权：``token``
+* API接口请求方法：``GET``
 
 请求参数
 ~~~~~~~~~~~~~~~
