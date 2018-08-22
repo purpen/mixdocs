@@ -23,7 +23,7 @@ title            String      必须                    标题
 description      String      可选                    摘要, 最多120个字符
 content          String      必须                    正文
 cover_id         Number      必须                    头图编号
-labels           Array       可选                    标签
+label_id         Number      可选                    标签编号
 sid              String      可选                    店铺编号
 ===============  ==========  =========  ==========  =============================
 
@@ -46,10 +46,8 @@ JSON数据格式:
             "description": "摘要...",
             "rid": 4,
             "refuse_reason": "审核不通过的原因",
-            "labels": [
-                "手作",
-                "原创"
-            ],
+            "label_id": 2,
+            "label_name": "文化",
             "published_at": "发布时间",
             "status": "1: 草稿箱  2: 发布  3: 禁用",
             "store": "如果有推荐店铺, 这里是店铺的基本信息...",
@@ -61,6 +59,7 @@ JSON数据格式:
             "browse_count": "浏览数",
             "comment_count": "评论数",
             "is_follow": "是否互相关注",
+            "is_follow_store": "是否关注推荐的店铺",
             "like_count": "喜欢数",
             "praise_count": "点赞数"
         },
@@ -94,7 +93,7 @@ title            String      必须                    标题
 description      String      可选                    摘要, 最多120个字符
 content          String      必须                    正文
 cover_id         Number      必须                    头图编号
-labels           Array       可选                    标签
+label_id         Number      可选                    标签编号
 ===============  ==========  =========  ==========  =============================
 
 返回示例
@@ -124,7 +123,7 @@ title            String      可选                    标题
 description      String      可选                    摘要, 最多120个字符
 content          String      可选                    正文
 cover_id         Number      可选                    头图编号
-labels           Array       可选                    标签
+label_id         Number      可选                    标签编号
 ===============  ==========  =========  ==========  =============================
 
 返回示例
@@ -146,10 +145,8 @@ JSON数据格式:
             "description": "摘要...",
             "rid": 4,
             "refuse_reason": "审核不通过的原因",
-            "labels": [
-                "手作",
-                "原创"
-            ],
+            "label_id": 2,
+            "label_name": "文化",
             "published_at": "发布时间",
             "status": "1: 草稿箱  2: 发布  3: 禁用",
             "store": "如果有推荐店铺, 这里是店铺的基本信息...",
@@ -161,6 +158,7 @@ JSON数据格式:
             "browse_count": "浏览数",
             "comment_count": "评论数",
             "is_follow": "是否互相关注",
+            "is_follow_store": "是否关注店铺",
             "like_count": "喜欢数",
             "praise_count": "点赞数"
         },
@@ -194,7 +192,7 @@ title            String      可选                    标题
 description      String      可选                    摘要, 最多120个字符
 content          String      可选                    正文
 cover_id         Number      可选                    头图编号
-labels           Array       可选                    标签
+label_id         Number      可选                    标签编号
 ===============  ==========  =========  ==========  =============================
 
 返回示例
@@ -312,6 +310,7 @@ JSON数据格式:
             "browse_count": "浏览数",
             "comment_count": "评论数",
             "is_follow": "是否互相关注",
+            "is_follow_store": "是否关注店铺",
             "like_count": "喜欢数",
             "praise_count": "点赞数"
         },
@@ -400,6 +399,7 @@ JSON数据格式:
             "browse_count": "浏览数",
             "comment_count": "评论数",
             "is_follow": "是否互相关注",
+            "is_follow_store": "是否关注店铺",
             "like_count": "喜欢数",
             "praise_count": "点赞数"
         },
@@ -517,7 +517,8 @@ JSON数据格式:
                     "cover_id": 2,
                     "created_at": 1533290214,
                     "description": "还是飞机沙发斯蒂芬但是发生的发生偶师傅师傅",
-                    "labels": ["手作"],
+                    "label_id": 2,
+                    "label_name": "文化",
                     "published_at": 1533290214,
                     "refuse_reason": null,
                     "rid": 1,
@@ -529,6 +530,7 @@ JSON数据格式:
                     "browse_count": "浏览数",
                     "comment_count": "评论数",
                     "is_follow": "是否互相关注",
+                    "is_follow_store": "是否关注店铺",
                     "like_count": "喜欢数",
                     "praise_count": "点赞数"
                 },
@@ -550,6 +552,7 @@ JSON数据格式:
                     "browse_count": "浏览数",
                     "comment_count": "评论数",
                     "is_follow": "是否互相关注",
+                    "is_follow_store": "是否关注店铺",
                     "like_count": "喜欢数",
                     "praise_count": "点赞数"
                 }
@@ -606,7 +609,8 @@ JSON数据格式:
                     "cover_id": 2,
                     "created_at": 1533290214,
                     "description": "还是飞机沙发斯蒂芬但是发生的发生偶师傅师傅",
-                    "labels": ["手作"],
+                    "label_id": 2,
+                    "label_name": "文化",
                     "published_at": 1533290214,
                     "refuse_reason": null,
                     "rid": 1,
@@ -618,6 +622,7 @@ JSON数据格式:
                     "browse_count": "浏览数",
                     "comment_count": "评论数",
                     "is_follow": "是否互相关注",
+                    "is_follow_store": "是否关注店铺",
                     "like_count": "喜欢数",
                     "praise_count": "点赞数"
                 },
@@ -639,6 +644,7 @@ JSON数据格式:
                     "browse_count": "浏览数",
                     "comment_count": "评论数",
                     "is_follow": "是否互相关注",
+                    "is_follow_store": "是否关注店铺",
                     "like_count": "喜欢数",
                     "praise_count": "点赞数"
                 }
@@ -695,7 +701,8 @@ JSON数据格式:
                     "cover_id": 2,
                     "created_at": 1533353214,
                     "description": "摘要...",
-                    "labels": ["手作"],
+                    "label_id": 2,
+                    "label_name": "文化",
                     "published_at": 1533290214,
                     "refuse_reason": null,
                     "rid": 1,
@@ -707,6 +714,7 @@ JSON数据格式:
                     "browse_count": "浏览数",
                     "comment_count": "评论数",
                     "is_follow": "是否互相关注",
+                    "is_follow_store": "是否关注店铺",
                     "like_count": "喜欢数",
                     "praise_count": "点赞数"
                 },
@@ -728,6 +736,7 @@ JSON数据格式:
                     "browse_count": "浏览数",
                     "comment_count": "评论数",
                     "is_follow": "是否互相关注",
+                    "is_follow_store": "是否关注店铺",
                     "like_count": "喜欢数",
                     "praise_count": "点赞数"
                 }
@@ -784,7 +793,8 @@ JSON数据格式:
                     "cover_id": 2,
                     "created_at": 1533353214,
                     "description": "摘要...",
-                    "labels": ["手作"],
+                    "label_id": 2,
+                    "label_name": "文化",
                     "published_at": 1533290214,
                     "refuse_reason": null,
                     "rid": 1,
@@ -796,6 +806,7 @@ JSON数据格式:
                     "browse_count": "浏览数",
                     "comment_count": "评论数",
                     "is_follow": "是否互相关注",
+                    "is_follow_store": "是否关注店铺",
                     "like_count": "喜欢数",
                     "praise_count": "点赞数"
                 },
@@ -817,6 +828,7 @@ JSON数据格式:
                     "browse_count": "浏览数",
                     "comment_count": "评论数",
                     "is_follow": "是否互相关注",
+                    "is_follow_store": "是否关注店铺",
                     "like_count": "喜欢数",
                     "praise_count": "点赞数"
                 }
@@ -942,7 +954,8 @@ JSON数据格式:
                 }
             ],
             "description": "摘要...",
-            "labels": ["手作"],
+            "label_id": 2,
+            "label_name": "文化",
             "published_at": 1533290214,
             "refuse_reason": null,
             "rid": 1,
@@ -952,6 +965,7 @@ JSON数据格式:
             "browse_count": "浏览数",
             "comment_count": "评论数",
             "is_follow": "是否互相关注",
+            "is_follow_store": "是否关注店铺",
             "like_count": "喜欢数",
             "praise_count": "点赞数"
         },
@@ -1381,6 +1395,82 @@ per_page         Number      可选         10         每页数量
 ===============  ==========  =========  ==========  =============================
 page             Number      可选         1          当前页码
 per_page         Number      可选         10         每页数量
+===============  ==========  =========  ==========  =============================
+
+返回示例
+~~~~~~~~~~~~~~~~
+
+** 同上创作人专访频道返回示例 **
+
+
+猜你喜欢
+----------------------
+
+接口说明
+~~~~~~~~~~~~~~
+
+* API接口请求地址：``/life_records/guess_likes``
+* API接口请求方法：``GET``
+
+请求参数
+~~~~~~~~~~~~~~~
+
+===============  ==========  =========  ==========  =============================
+名称              类型        是否必须     默认值       描述说明
+===============  ==========  =========  ==========  =============================
+page             Number      可选         1          当前页码
+per_page         Number      可选         10         每页数量
+===============  ==========  =========  ==========  =============================
+
+返回示例
+~~~~~~~~~~~~~~~~
+
+** 同上创作人专访频道返回示例 **
+
+
+精彩故事
+----------------------
+
+接口说明
+~~~~~~~~~~~~~~
+
+* API接口请求地址：``/life_records/wonderful_stories``
+* API接口请求方法：``GET``
+
+请求参数
+~~~~~~~~~~~~~~~
+
+===============  ==========  =========  ==========  =============================
+名称              类型        是否必须     默认值       描述说明
+===============  ==========  =========  ==========  =============================
+page             Number      可选         1          当前页码
+per_page         Number      可选         10         每页数量
+===============  ==========  =========  ==========  =============================
+
+返回示例
+~~~~~~~~~~~~~~~~
+
+** 同上创作人专访频道返回示例 **
+
+
+相关故事推荐
+----------------------
+
+接口说明
+~~~~~~~~~~~~~~
+
+* API接口请求地址：``/life_records/similar``
+* API接口请求方法：``GET``
+
+请求参数
+~~~~~~~~~~~~~~~
+
+===============  ==========  =========  ==========  =============================
+名称              类型        是否必须     默认值       描述说明
+===============  ==========  =========  ==========  =============================
+page             Number      可选         1          当前页码
+per_page         Number      可选         10         每页数量
+rid              Number      必须                    当前浏览的生活志编号
 ===============  ==========  =========  ==========  =============================
 
 返回示例
@@ -1873,3 +1963,41 @@ JSON数据格式:
 
 .. literalinclude:: ../products/product_list.js
     :language: javascript
+
+
+获取生活志标签列表
+----------------------
+
+接口说明
+~~~~~~~~~~~~~~
+
+* API接口请求地址：``/life_records/labels``
+* API接口请求方法：``GET``
+
+返回示例
+~~~~~~~~~~~~~~~~
+
+JSON数据格式:
+
+.. code-block:: javascript
+
+    {
+        "data": {
+            "labels": [
+                {
+                    "id": 1,
+                    "name": "手作"
+                },
+                {
+                    "id": 2,
+                    "name": "文化"
+                }
+            ]
+        },
+        "status": {
+            "code": 200,
+            "message": "Ok all right."
+        },
+        "success": true
+    }
+

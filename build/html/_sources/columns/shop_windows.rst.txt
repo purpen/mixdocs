@@ -110,6 +110,7 @@ JSON数据格式:
                     ],
                     "rid": "橱窗编号",
                     "title": "橱窗标题",
+                    "uid": "12795683104",
                     "user_avatar": "http://kg.erp.taihuoniao.com/static/img/default-logo.png",
                     "user_name": "用户名"
                 }
@@ -155,7 +156,7 @@ per_page         Number      可选         10         每页数量
 ~~~~~~~~~~~~~~
 
 * API接口请求地址：``/shop_windows/detail``
-* API接口用户授权：``token``
+* API接口请求方法：``GET``
 
 请求参数
 ~~~~~~~~~~~~~~~
@@ -211,6 +212,7 @@ JSON数据格式:
             ],
             "rid": 1,
             "title": "橱窗标题",
+            "uid": "12795683104",
             "user_avatar": "http://kg.erp.taihuoniao.com/static/img/default-logo.png",
             "user_name": "用户名"
         },
@@ -289,6 +291,7 @@ JSON数据格式:
             ],
             "rid": 1,
             "title": "橱窗标题",
+            "uid": "12795683104",
             "user_avatar": "http://kg.erp.taihuoniao.com/static/img/default-logo.png",
             "user_name": "用户名"
         },
@@ -368,6 +371,7 @@ JSON数据格式:
             ],
             "rid": 1,
             "title": "新橱窗标题",
+            "uid": "12795683104",
             "user_avatar": "http://kg.erp.taihuoniao.com/static/img/default-logo.png",
             "user_name": "用户名"
         },
@@ -522,6 +526,7 @@ JSON数据格式:
                     ],
                     "rid": "橱窗编号",
                     "title": "橱窗标题",
+                    "uid": "12795683104",
                     "user_avatar": "http://kg.erp.taihuoniao.com/static/img/default-logo.png",
                     "user_name": "用户名"
                 }
@@ -643,6 +648,7 @@ JSON数据格式:
                     ],
                     "rid": "橱窗编号",
                     "title": "橱窗标题",
+                    "uid": "12795683104",
                     "user_avatar": "http://kg.erp.taihuoniao.com/static/img/default-logo.png",
                     "user_name": "用户名"
                 }
