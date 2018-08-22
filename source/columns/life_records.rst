@@ -1803,63 +1803,51 @@ JSON数据格式:
 
     {
         "data": {
-            "all_comments": {
-                "k_0": {
-                    "comments": [
+            "comments": [
+                {
+                    "comment_id": 1,
+                    "content": "评论",
+                    "created_at": 1533095600,
+                    "is_praise": true,
+                    "pid": 0,
+                    "praise_count": 1,
+                    "sub_comment_count": 4,
+                    "sub_comments": [
                         {
-                            "comment_id": 1,
-                            "content": "评论",
-                            "created_at": 1533095600,
-                            "is_praise": true,
-                            "pid": 0,
-                            "praise_count": 1,
-                            "user_avatar": "http://kg.erp.taihuoniao.com/static/img/default-logo.png",
-                            "user_name": "评论用户名"
-                        },
-                        {
-                            "comment_id": 2,
-                            "content": "评论",
-                            "created_at": 1533095600,
-                            "is_praise": false,
-                            "pid": 0,
-                            "praise_count": 0,
-                            "user_avatar": "http://kg.erp.taihuoniao.com/static/img/default-logo.png",
-                            "user_name": "评论用户名"
-                        }
-                    ],
-                    "count": 2
-                },
-                "k_1": {
-                    "comments": [
-                        {
-                            "comment_id": 11,
-                            "content": "评论",
-                            "created_at": 1533095600,
+                            "comment_id": 14,
+                            "content": "评论内容",
+                            "created_at": 1533557451,
                             "is_praise": false,
                             "pid": 1,
                             "praise_count": 0,
                             "user_avatar": "http://kg.erp.taihuoniao.com/static/img/default-logo.png",
                             "user_name": "评论用户名"
-                        }
-                    ],
-                    "count": 4
-                },
-                "k_2": {
-                    "comments": [
+                        },
                         {
-                            "comment_id": 7,
-                            "content": "评论",
-                            "created_at": 1533095600,
+                            "comment_id": 13,
+                            "content": "订单！！！",
+                            "created_at": 1533095638,
                             "is_praise": false,
-                            "pid": 2,
+                            "pid": 1,
                             "praise_count": 0,
                             "user_avatar": "http://kg.erp.taihuoniao.com/static/img/default-logo.png",
-                            "user_name": "评论用户名"
+                            "user_name": "商品棒棒棒(作者)"
                         }
                     ],
-                    "count": 4
+                    "user_avatar": "http://kg.erp.taihuoniao.com/static/img/default-logo.png",
+                    "user_name": "评论用户名"
+                },
+                {
+                    "comment_id": 2,
+                    "content": "评论",
+                    "created_at": 1533095600,
+                    "is_praise": false,
+                    "pid": 0,
+                    "praise_count": 0,
+                    "user_avatar": "http://kg.erp.taihuoniao.com/static/img/default-logo.png",
+                    "user_name": "评论用户名"
                 }
-            },
+            ],
             "count": 2,
             "next": false,
             "prev": false
