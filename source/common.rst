@@ -361,9 +361,9 @@ JSON数据格式:
 =====================  ==========  =========  ==========  =============================
 page                    Number      可选         1         当前页码
 per_page                Number      可选         10        每页数量
-cid                     Number      可选                   分类Id
+cids                    Number      可选                   分类Id, 多个用,隔开
 status                  Number      可选         1         商品状态 -1: 所有 0:仓库中; 1:出售中; 2:下架中; 3:已售罄
-qk                      String      可选                   搜索关键字
+qk                      String      必须                   搜索关键字
 min_price               Number      可选                   价格区间： 最小价格
 max_price               Number      可选                   价格区间： 最大价格
 sort_type               Number      可选         0         排序: 1=综合排序, 2=价格由低至高, 3=价格由高至低
