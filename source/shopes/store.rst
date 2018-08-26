@@ -954,6 +954,7 @@ delivery_city_id        Integer     必须                      发货市ID
 country_id              Integer     必须                      商家位置国家ID
 province_id             Integer     必须                      商家位置省ID
 city_id                 Integer     必须                      商家位置市ID
+town_id                 Integer     必须                      商家位置镇ID
 areacode                String      必须                      区号
 mobile                  String      必须                      手机号
 phone                   String      可选                      固定电话
@@ -969,54 +970,69 @@ JSON数据格式
 .. code-block:: javascript
 
     {
-        "data": {
-            "areacode": "+86",
-            "bgcover": {
-                "created_at": null,
-                "filename": "e",
-                "filepath": "http://127.0.0.1:9000/_uploads/photos/222222/5d2812257b539bb.jpg",
-                "id": 2,
-                "view_url": "http://0.0.0.0:9000/_uploads/photos/http://127.0.0.1:9000/_uploads/photos/222222/5d2812257b539bb.jpg"
-            },
-            "browse_number": 0,
-            "categories": [
-                "手机"
+    "data": {
+        "announcement": "速度发射的发生地方",
+        "area": "",
+        "area_id": 0,
+        "areacode": "+86",
+        "begin_date": "",
+        "bgcover": "http://0.0.0.0:9000/_uploads/photos/static/img/default4-logo-180x180.png",
+        "bgcover_id": 4,
+        "browse_number": 11,
+        "categories": [
+            [
+                1,
+                "首饰"
             ],
-            "city": "北京",
-            "country": "中国",
-            "created_at": 1529143434,
-            "delivery_city": "北京",
-            "delivery_country": "中国",
-            "delivery_province": "北京",
-            "description": null,
-            "detail": {
-                "content": "床前明月光",
-                "id": 1,
-                "store_rid": "99627015"
-            },
-            "distribution_type": 0,
-            "fans_count": 0,
-            "logo": {
-                "created_at": null,
-                "filename": "a",
-                "filepath": "http://127.0.0.1:9000/_uploads/photos/222222/5d2812257b539aa.jpg",
-                "id": 1,
-                "view_url": "http://0.0.0.0:9000/_uploads/photos/http://127.0.0.1:9000/_uploads/photos/222222/5d2812257b539aa.jpg"
-            },
-            "mobile": "15555555555",
-            "name": "太火鸟",
-            "phone": "0314-7894561",
-            "province": "北京",
-            "rid": "99627015",
-            "status": 1,
-            "tag_line": "处处蚊子咬",
-            "type": 1
-        },
-        "status": {
-            "code": 201,
-            "message": "All created."
-        },
-        "success": true
+            [
+                2,
+                null
+            ],
+            [
+                3,
+                "好感衣装"
+            ]
+        ],
+        "city": "北京",
+        "city_id": 1,
+        "country": "中国",
+        "country_id": 1,
+        "created_at": 1532163500,
+        "delivery_city": "北京",
+        "delivery_city_id": 1,
+        "delivery_country": "中国",
+        "delivery_country_id": 1,
+        "delivery_date": "",
+        "delivery_province": "北京",
+        "delivery_province_id": 1,
+        "description": "skjdfka",
+        "detail": {},
+        "distribution_type": 0,
+        "end_date": "",
+        "fans_count": 0,
+        "is_closed": true,
+        "kind": 1,
+        "logo": "http://0.0.0.0:9000/_uploads/photos/static/img/default2-logo-180x180.png",
+        "logo_id": 1,
+        "mobile": "15645645665",
+        "name": "sdf",
+        "pattern": 1,
+        "phases": null,
+        "phone": null,
+        "province": "北京",
+        "province_id": 1,
+        "rid": "97958360",
+        "status": -1,
+        "tag_line": "sdjkf",
+        "town": "土溪乡",  // 镇
+        "town_id": 9999,  // 镇ID
+        "type": 1
+    },
+    "status": {
+        "code": 201,
+        "message": "All created."
+    },
+    "success": true
     }
 
 请求 ``失败`` 返回结果：
