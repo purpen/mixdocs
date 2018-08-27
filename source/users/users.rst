@@ -1353,6 +1353,7 @@ qq                       String    可选                      QQ号
 country_id               Integer   必须                      国家ID
 province_id              Integer   必须                      省ID
 city_id                  Integer   可选                      市ID
+town_id                  Integer   可选                      镇ID
 area_id                  Integer   可选                      区域ID
 street_address           String    必须                      详细地址
 urgent_contact_name      String    必须                      紧急联系人姓名
@@ -1485,6 +1486,7 @@ url                      String    可选                      公司网址
 country_id               Integer   必须                      国家ID
 province_id              Integer   必须                      省ID
 city_id                  Integer   可选                      市ID
+town_id                  Integer   可选                      镇ID
 area_id                  Integer   可选                      区域ID
 street_address           String    必须                      详细地址
 company_qualification    Array     必须                      公司资质ID
@@ -1625,6 +1627,8 @@ JSON数据格式
         "data": {
             "area": "",
             "area_id": 0,
+            "town": "", // 镇
+            "town_id": 0,
             "areacode": null,
             "attachments": [
                 {
@@ -1829,6 +1833,7 @@ second_party      String    必须                  乙方
 country_id        Integer   必须                  国家ID
 province_id       Integer   必须                  省ID
 city_id           Integer   可选                  市ID
+town_id           Integer   可选                  镇ID
 area_id           Integer   可选                  区域ID
 street_address    String    必须                  详细地址
 name              String    必须                  联系人
@@ -1864,6 +1869,8 @@ JSON数据格式:
             "account": "6214865188793549",
             "area": "",
             "area_id": null,
+            "town": "", // 镇
+            "town_id": 0,
             "areacode": "+86",
             "attachment_id": 0,
             "bank_addr": "朝阳区酒仙桥支行",
@@ -2090,6 +2097,8 @@ JSON数据格式:
             "about_me": "好人",
             "area": "",  // 区域
             "area_id": 0,
+            "town": "", // 镇
+            "town_id": 0,
             "avatar": "http://0.0.0.0:9000/_uploads/photos/static/img/default-logo-180x180.png",  // 头像url
             "avatar_id": 1,  // 头像ID
             "city": "北京",  // 城市
@@ -2157,6 +2166,7 @@ JSON数据格式:
 country_id              Integer      必须                  国家ID
 province_id             Integer      必须                  省ID
 city_id                 Integer      可选                  市ID
+town_id                 Integer      可选                  镇ID
 area_id                 Integer      可选                  区域ID
 street_address          String       必须                  详细地址
 areacode                String       可选          +86     区号
@@ -2188,6 +2198,8 @@ JSON数据格式:
     {
         "data": {
             "about_me": "好人",
+            "town": "", // 镇
+            "town_id": 0,
             "area": "",
             "area_id": 0,
             "areacode": "+86",
@@ -2263,6 +2275,8 @@ JSON数据格式:
             "about_me": "好人",
             "area": "",  // 区域
             "area_id": 0,
+            "town": "", // 镇
+            "town_id": 0,
             "avatar": "http://0.0.0.0:9000/_uploads/photos/static/img/default-logo-180x180.png",  // 头像url
             "avatar_id": 1,  // 头像ID
             "city": "北京",  // 城市
