@@ -246,6 +246,7 @@ JSON数据格式:
                     "type": "image"
                 },
                 {
+                    "big_picture": "此处显示大图还是小图。 true为大图， false小图",
                     "content": {
                         "category_id": 0,
                         "commission_price": 246.68,
