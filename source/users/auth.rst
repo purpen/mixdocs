@@ -361,6 +361,7 @@ JSON数据格式:
 
     {
         "data": {
+            "is_user": true  // 是不是用户
             "areacode": "+86",
             "email": "13001179400"
         },
