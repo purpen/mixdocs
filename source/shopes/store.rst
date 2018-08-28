@@ -428,15 +428,20 @@ JSON数据格式
 
     {
         "data": {
-            "city": "北京",
-            "country": "中国",
+            "city": "北京",  // 商家位置
+            "country": "中国",  // 商家位置
             "is_followed": false,   // 是否关注过  true: 关注; false: 未关注
             "fans_count": 0,  // 粉丝数
             "life_record_count": 3,  //文章数
             "logo": "http://0.0.0.0:9000/_uploads/photos/static/img/default2-logo-180x180.png",  // logo
+            "bgcover": "", // 背景图
+            'town': "", // 商家位置三级
+            'delivery_country': "",  // 发货位置
+            'delivery_province': "",
+            'delivery_city': "",
             "name": "",   // 品牌馆名称
             "product_count": 0,  // 商品数量
-            "province": "北京",
+            "province": "北京",  // 商家位置
             "rid": "97958360",  // 品牌馆编号
             "tag_line": "sdjkf"   // 宣传语
             "created_at":   // 品牌馆创建时间
