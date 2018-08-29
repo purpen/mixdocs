@@ -220,23 +220,21 @@ JSON数据格式:
     {
         "data": {
             "statements": {
-                "2018": {
-                    "7": {
-                        "statements": [
-                            {
-                                "actual_account_amount": 11,  // 实际提现金额
-                                "actual_amount": 11,  // 提现金额
-                                "created_at": 1534581237,  // 提现时间
-                                "receive_target": 1,  // 提现到 1、微信零钱包
-                                "record_id": 3,  // 记录id
-                                "service_fee": 0,  // 服务费
-                                "status": 2,  // 提现状态 1、审核中 2、成功 3、失败
-                                "store_rid": "2"  //  生活馆rid
-                            }
-                        ],
-                        "total_amount": 11
-                    },
-                }
+                "7月": {
+                    "statements": [
+                        {
+                            "actual_account_amount": 11,  // 实际提现金额
+                            "actual_amount": 11,  // 提现金额
+                            "created_at": 1534581237,  // 提现时间
+                            "receive_target": 1,  // 提现到 1、微信零钱包
+                            "record_id": 3,  // 记录id
+                            "service_fee": 0,  // 服务费
+                            "status": 2,  // 提现状态 1、审核中 2、成功 3、失败
+                            "store_rid": "2"  //  生活馆rid
+                        }
+                    ],
+                    "total_amount": 11  // 总金额
+                },
             }
         },
         "status": {
@@ -282,17 +280,11 @@ JSON数据格式:
                 "actual_amount": 22,  // 提现金额
                 "created_at": 1534582337,  // 提现时间
                 "order_info": {
-                    "1970": {
-                        "1": {
-                            "D18080663458120": {
-                                "commission_price": 1,  // 收益
-                                "created_at": 1533542675  // 时间
-                            },
-                            "D18080692057183": {
-                                "commission_price": 1,
-                                "created_at": 1533542835
-                            }
-                        }
+                    "8月": {
+                        "D18082013567290": {
+                            "commission_price": 6, // 收益
+                            "created_at": 1534763366  // 创建时间
+                        },
                     }
                 },
                 "receive_target": 1,  // 提现到 1、微信零钱包
