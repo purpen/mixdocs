@@ -155,12 +155,15 @@
 <li class="toctree-l2"><a class="reference internal" href="../common.html#id14">核心平台–热门搜索</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../common.html#id17">核心平台–热门推荐</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../common.html#id20">核心平台–搜索</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../common.html#id24">小程序绑定手机号发送验证码</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../common.html#id29">注册发送短信验证码</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../common.html#id34">忘记密码发送短信验证码</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../common.html#id38">动态登陆发送短信验证码</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../common.html#id42">账户编辑发送短信验证码</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../common.html#id46">发送邮件验证码</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../common.html#id24">核心平台–搜索商品列表</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../common.html#id28">核心平台–搜索店铺列表</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../common.html#id32">核心平台–搜索用户列表</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../common.html#id36">小程序绑定手机号发送验证码</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../common.html#id41">注册发送短信验证码</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../common.html#id46">忘记密码发送短信验证码</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../common.html#id50">动态登陆发送短信验证码</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../common.html#id54">账户编辑发送短信验证码</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../common.html#id58">发送邮件验证码</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="../setting.html">系统相关配置文档</a><ul>
@@ -2519,25 +2522,31 @@
 <td>&#160;</td>
 <td>市ID</td>
 </tr>
-<tr class="row-odd"><td>area_id</td>
+<tr class="row-odd"><td>town_id</td>
+<td>Integer</td>
+<td>可选</td>
+<td>&#160;</td>
+<td>镇ID</td>
+</tr>
+<tr class="row-even"><td>area_id</td>
 <td>Integer</td>
 <td>可选</td>
 <td>&#160;</td>
 <td>区域ID</td>
 </tr>
-<tr class="row-even"><td>street_address</td>
+<tr class="row-odd"><td>street_address</td>
 <td>String</td>
 <td>必须</td>
 <td>&#160;</td>
 <td>详细地址</td>
 </tr>
-<tr class="row-odd"><td>urgent_contact_name</td>
+<tr class="row-even"><td>urgent_contact_name</td>
 <td>String</td>
 <td>必须</td>
 <td>&#160;</td>
 <td>紧急联系人姓名</td>
 </tr>
-<tr class="row-even"><td>urgent_contact_mobile</td>
+<tr class="row-odd"><td>urgent_contact_mobile</td>
 <td>String</td>
 <td>必须</td>
 <td>&#160;</td>
@@ -2741,19 +2750,25 @@
 <td>&#160;</td>
 <td>市ID</td>
 </tr>
-<tr class="row-even"><td>area_id</td>
+<tr class="row-even"><td>town_id</td>
+<td>Integer</td>
+<td>可选</td>
+<td>&#160;</td>
+<td>镇ID</td>
+</tr>
+<tr class="row-odd"><td>area_id</td>
 <td>Integer</td>
 <td>可选</td>
 <td>&#160;</td>
 <td>区域ID</td>
 </tr>
-<tr class="row-odd"><td>street_address</td>
+<tr class="row-even"><td>street_address</td>
 <td>String</td>
 <td>必须</td>
 <td>&#160;</td>
 <td>详细地址</td>
 </tr>
-<tr class="row-even"><td>company_qualification</td>
+<tr class="row-odd"><td>company_qualification</td>
 <td>Array</td>
 <td>必须</td>
 <td>&#160;</td>
@@ -2963,6 +2978,8 @@
     <span class="s2">&quot;data&quot;</span><span class="o">:</span> <span class="p">{</span>
         <span class="s2">&quot;area&quot;</span><span class="o">:</span> <span class="s2">&quot;&quot;</span><span class="p">,</span>
         <span class="s2">&quot;area_id&quot;</span><span class="o">:</span> <span class="mi">0</span><span class="p">,</span>
+        <span class="s2">&quot;town&quot;</span><span class="o">:</span> <span class="s2">&quot;&quot;</span><span class="p">,</span> <span class="c1">// 镇</span>
+        <span class="s2">&quot;town_id&quot;</span><span class="o">:</span> <span class="mi">0</span><span class="p">,</span>
         <span class="s2">&quot;areacode&quot;</span><span class="o">:</span> <span class="kc">null</span><span class="p">,</span>
         <span class="s2">&quot;attachments&quot;</span><span class="o">:</span> <span class="p">[</span>
             <span class="p">{</span>
@@ -3217,61 +3234,67 @@
 <td>&#160;</td>
 <td>市ID</td>
 </tr>
-<tr class="row-even"><td>area_id</td>
+<tr class="row-even"><td>town_id</td>
+<td>Integer</td>
+<td>可选</td>
+<td>&#160;</td>
+<td>镇ID</td>
+</tr>
+<tr class="row-odd"><td>area_id</td>
 <td>Integer</td>
 <td>可选</td>
 <td>&#160;</td>
 <td>区域ID</td>
 </tr>
-<tr class="row-odd"><td>street_address</td>
+<tr class="row-even"><td>street_address</td>
 <td>String</td>
 <td>必须</td>
 <td>&#160;</td>
 <td>详细地址</td>
 </tr>
-<tr class="row-even"><td>name</td>
+<tr class="row-odd"><td>name</td>
 <td>String</td>
 <td>必须</td>
 <td>&#160;</td>
 <td>联系人</td>
 </tr>
-<tr class="row-odd"><td>areacode</td>
+<tr class="row-even"><td>areacode</td>
 <td>String</td>
 <td>可选</td>
 <td>+86</td>
 <td>区号</td>
 </tr>
-<tr class="row-even"><td>mobile</td>
+<tr class="row-odd"><td>mobile</td>
 <td>String</td>
 <td>必须</td>
 <td>&#160;</td>
 <td>手机号</td>
 </tr>
-<tr class="row-odd"><td>email</td>
+<tr class="row-even"><td>email</td>
 <td>String</td>
 <td>必须</td>
 <td>&#160;</td>
 <td>邮箱</td>
 </tr>
-<tr class="row-even"><td>bank_name</td>
+<tr class="row-odd"><td>bank_name</td>
 <td>String</td>
 <td>必须</td>
 <td>&#160;</td>
 <td>银行名称</td>
 </tr>
-<tr class="row-odd"><td>username</td>
+<tr class="row-even"><td>username</td>
 <td>String</td>
 <td>必须</td>
 <td>&#160;</td>
 <td>户名</td>
 </tr>
-<tr class="row-even"><td>bank_addr</td>
+<tr class="row-odd"><td>bank_addr</td>
 <td>String</td>
 <td>必须</td>
 <td>&#160;</td>
 <td>开户行</td>
 </tr>
-<tr class="row-odd"><td>account</td>
+<tr class="row-even"><td>account</td>
 <td>String</td>
 <td>必须</td>
 <td>&#160;</td>
@@ -3296,6 +3319,8 @@
         <span class="s2">&quot;account&quot;</span><span class="o">:</span> <span class="s2">&quot;6214865188793549&quot;</span><span class="p">,</span>
         <span class="s2">&quot;area&quot;</span><span class="o">:</span> <span class="s2">&quot;&quot;</span><span class="p">,</span>
         <span class="s2">&quot;area_id&quot;</span><span class="o">:</span> <span class="kc">null</span><span class="p">,</span>
+        <span class="s2">&quot;town&quot;</span><span class="o">:</span> <span class="s2">&quot;&quot;</span><span class="p">,</span> <span class="c1">// 镇</span>
+        <span class="s2">&quot;town_id&quot;</span><span class="o">:</span> <span class="mi">0</span><span class="p">,</span>
         <span class="s2">&quot;areacode&quot;</span><span class="o">:</span> <span class="s2">&quot;+86&quot;</span><span class="p">,</span>
         <span class="s2">&quot;attachment_id&quot;</span><span class="o">:</span> <span class="mi">0</span><span class="p">,</span>
         <span class="s2">&quot;bank_addr&quot;</span><span class="o">:</span> <span class="s2">&quot;朝阳区酒仙桥支行&quot;</span><span class="p">,</span>
@@ -3568,6 +3593,8 @@
         <span class="s2">&quot;about_me&quot;</span><span class="o">:</span> <span class="s2">&quot;好人&quot;</span><span class="p">,</span>
         <span class="s2">&quot;area&quot;</span><span class="o">:</span> <span class="s2">&quot;&quot;</span><span class="p">,</span>  <span class="c1">// 区域</span>
         <span class="s2">&quot;area_id&quot;</span><span class="o">:</span> <span class="mi">0</span><span class="p">,</span>
+        <span class="s2">&quot;town&quot;</span><span class="o">:</span> <span class="s2">&quot;&quot;</span><span class="p">,</span> <span class="c1">// 镇</span>
+        <span class="s2">&quot;town_id&quot;</span><span class="o">:</span> <span class="mi">0</span><span class="p">,</span>
         <span class="s2">&quot;avatar&quot;</span><span class="o">:</span> <span class="s2">&quot;http://0.0.0.0:9000/_uploads/photos/static/img/default-logo-180x180.png&quot;</span><span class="p">,</span>  <span class="c1">// 头像url</span>
         <span class="s2">&quot;avatar_id&quot;</span><span class="o">:</span> <span class="mi">1</span><span class="p">,</span>  <span class="c1">// 头像ID</span>
         <span class="s2">&quot;city&quot;</span><span class="o">:</span> <span class="s2">&quot;北京&quot;</span><span class="p">,</span>  <span class="c1">// 城市</span>
@@ -3661,49 +3688,55 @@
 <td>&#160;</td>
 <td>市ID</td>
 </tr>
-<tr class="row-odd"><td>area_id</td>
+<tr class="row-odd"><td>town_id</td>
+<td>Integer</td>
+<td>可选</td>
+<td>&#160;</td>
+<td>镇ID</td>
+</tr>
+<tr class="row-even"><td>area_id</td>
 <td>Integer</td>
 <td>可选</td>
 <td>&#160;</td>
 <td>区域ID</td>
 </tr>
-<tr class="row-even"><td>street_address</td>
+<tr class="row-odd"><td>street_address</td>
 <td>String</td>
 <td>必须</td>
 <td>&#160;</td>
 <td>详细地址</td>
 </tr>
-<tr class="row-odd"><td>areacode</td>
+<tr class="row-even"><td>areacode</td>
 <td>String</td>
 <td>可选</td>
 <td>+86</td>
 <td>区号</td>
 </tr>
-<tr class="row-even"><td>mobile</td>
+<tr class="row-odd"><td>mobile</td>
 <td>String</td>
 <td>必须</td>
 <td>&#160;</td>
 <td>手机号</td>
 </tr>
-<tr class="row-odd"><td>phone</td>
+<tr class="row-even"><td>phone</td>
 <td>String</td>
 <td>可选</td>
 <td>0</td>
 <td>座机号</td>
 </tr>
-<tr class="row-even"><td>mail</td>
+<tr class="row-odd"><td>mail</td>
 <td>String</td>
 <td>必须</td>
 <td>&#160;</td>
 <td>邮箱</td>
 </tr>
-<tr class="row-odd"><td>verify_code</td>
+<tr class="row-even"><td>verify_code</td>
 <td>String</td>
 <td>可选</td>
 <td>&#160;</td>
 <td>手机验证码</td>
 </tr>
-<tr class="row-even"><td>email_verify_code</td>
+<tr class="row-odd"><td>email_verify_code</td>
 <td>String</td>
 <td>可选</td>
 <td>&#160;</td>
@@ -3726,6 +3759,8 @@
 <div class="highlight-javascript"><div class="highlight"><pre><span></span><span class="p">{</span>
     <span class="s2">&quot;data&quot;</span><span class="o">:</span> <span class="p">{</span>
         <span class="s2">&quot;about_me&quot;</span><span class="o">:</span> <span class="s2">&quot;好人&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;town&quot;</span><span class="o">:</span> <span class="s2">&quot;&quot;</span><span class="p">,</span> <span class="c1">// 镇</span>
+        <span class="s2">&quot;town_id&quot;</span><span class="o">:</span> <span class="mi">0</span><span class="p">,</span>
         <span class="s2">&quot;area&quot;</span><span class="o">:</span> <span class="s2">&quot;&quot;</span><span class="p">,</span>
         <span class="s2">&quot;area_id&quot;</span><span class="o">:</span> <span class="mi">0</span><span class="p">,</span>
         <span class="s2">&quot;areacode&quot;</span><span class="o">:</span> <span class="s2">&quot;+86&quot;</span><span class="p">,</span>
@@ -3794,6 +3829,8 @@
         <span class="s2">&quot;about_me&quot;</span><span class="o">:</span> <span class="s2">&quot;好人&quot;</span><span class="p">,</span>
         <span class="s2">&quot;area&quot;</span><span class="o">:</span> <span class="s2">&quot;&quot;</span><span class="p">,</span>  <span class="c1">// 区域</span>
         <span class="s2">&quot;area_id&quot;</span><span class="o">:</span> <span class="mi">0</span><span class="p">,</span>
+        <span class="s2">&quot;town&quot;</span><span class="o">:</span> <span class="s2">&quot;&quot;</span><span class="p">,</span> <span class="c1">// 镇</span>
+        <span class="s2">&quot;town_id&quot;</span><span class="o">:</span> <span class="mi">0</span><span class="p">,</span>
         <span class="s2">&quot;avatar&quot;</span><span class="o">:</span> <span class="s2">&quot;http://0.0.0.0:9000/_uploads/photos/static/img/default-logo-180x180.png&quot;</span><span class="p">,</span>  <span class="c1">// 头像url</span>
         <span class="s2">&quot;avatar_id&quot;</span><span class="o">:</span> <span class="mi">1</span><span class="p">,</span>  <span class="c1">// 头像ID</span>
         <span class="s2">&quot;city&quot;</span><span class="o">:</span> <span class="s2">&quot;北京&quot;</span><span class="p">,</span>  <span class="c1">// 城市</span>

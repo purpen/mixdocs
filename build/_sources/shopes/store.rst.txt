@@ -428,15 +428,20 @@ JSON数据格式
 
     {
         "data": {
-            "city": "北京",
-            "country": "中国",
+            "city": "北京",  // 商家位置
+            "country": "中国",  // 商家位置
             "is_followed": false,   // 是否关注过  true: 关注; false: 未关注
             "fans_count": 0,  // 粉丝数
             "life_record_count": 3,  //文章数
             "logo": "http://0.0.0.0:9000/_uploads/photos/static/img/default2-logo-180x180.png",  // logo
+            "bgcover": "", // 背景图
+            'town': "", // 商家位置三级
+            'delivery_country': "",  // 发货位置
+            'delivery_province': "",
+            'delivery_city': "",
             "name": "",   // 品牌馆名称
             "product_count": 0,  // 商品数量
-            "province": "北京",
+            "province": "北京",  // 商家位置
             "rid": "97958360",  // 品牌馆编号
             "tag_line": "sdjkf"   // 宣传语
             "created_at":   // 品牌馆创建时间
@@ -954,6 +959,7 @@ delivery_city_id        Integer     必须                      发货市ID
 country_id              Integer     必须                      商家位置国家ID
 province_id             Integer     必须                      商家位置省ID
 city_id                 Integer     必须                      商家位置市ID
+town_id                 Integer     必须                      商家位置镇ID
 areacode                String      必须                      区号
 mobile                  String      必须                      手机号
 phone                   String      可选                      固定电话
@@ -969,54 +975,69 @@ JSON数据格式
 .. code-block:: javascript
 
     {
-        "data": {
-            "areacode": "+86",
-            "bgcover": {
-                "created_at": null,
-                "filename": "e",
-                "filepath": "http://127.0.0.1:9000/_uploads/photos/222222/5d2812257b539bb.jpg",
-                "id": 2,
-                "view_url": "http://0.0.0.0:9000/_uploads/photos/http://127.0.0.1:9000/_uploads/photos/222222/5d2812257b539bb.jpg"
-            },
-            "browse_number": 0,
-            "categories": [
-                "手机"
+    "data": {
+        "announcement": "速度发射的发生地方",
+        "area": "",
+        "area_id": 0,
+        "areacode": "+86",
+        "begin_date": "",
+        "bgcover": "http://0.0.0.0:9000/_uploads/photos/static/img/default4-logo-180x180.png",
+        "bgcover_id": 4,
+        "browse_number": 11,
+        "categories": [
+            [
+                1,
+                "首饰"
             ],
-            "city": "北京",
-            "country": "中国",
-            "created_at": 1529143434,
-            "delivery_city": "北京",
-            "delivery_country": "中国",
-            "delivery_province": "北京",
-            "description": null,
-            "detail": {
-                "content": "床前明月光",
-                "id": 1,
-                "store_rid": "99627015"
-            },
-            "distribution_type": 0,
-            "fans_count": 0,
-            "logo": {
-                "created_at": null,
-                "filename": "a",
-                "filepath": "http://127.0.0.1:9000/_uploads/photos/222222/5d2812257b539aa.jpg",
-                "id": 1,
-                "view_url": "http://0.0.0.0:9000/_uploads/photos/http://127.0.0.1:9000/_uploads/photos/222222/5d2812257b539aa.jpg"
-            },
-            "mobile": "15555555555",
-            "name": "太火鸟",
-            "phone": "0314-7894561",
-            "province": "北京",
-            "rid": "99627015",
-            "status": 1,
-            "tag_line": "处处蚊子咬",
-            "type": 1
-        },
-        "status": {
-            "code": 201,
-            "message": "All created."
-        },
-        "success": true
+            [
+                2,
+                null
+            ],
+            [
+                3,
+                "好感衣装"
+            ]
+        ],
+        "city": "北京",
+        "city_id": 1,
+        "country": "中国",
+        "country_id": 1,
+        "created_at": 1532163500,
+        "delivery_city": "北京",
+        "delivery_city_id": 1,
+        "delivery_country": "中国",
+        "delivery_country_id": 1,
+        "delivery_date": "",
+        "delivery_province": "北京",
+        "delivery_province_id": 1,
+        "description": "skjdfka",
+        "detail": {},
+        "distribution_type": 0,
+        "end_date": "",
+        "fans_count": 0,
+        "is_closed": true,
+        "kind": 1,
+        "logo": "http://0.0.0.0:9000/_uploads/photos/static/img/default2-logo-180x180.png",
+        "logo_id": 1,
+        "mobile": "15645645665",
+        "name": "sdf",
+        "pattern": 1,
+        "phases": null,
+        "phone": null,
+        "province": "北京",
+        "province_id": 1,
+        "rid": "97958360",
+        "status": -1,
+        "tag_line": "sdjkf",
+        "town": "土溪乡",  // 镇
+        "town_id": 9999,  // 镇ID
+        "type": 1
+    },
+    "status": {
+        "code": 201,
+        "message": "All created."
+    },
+    "success": true
     }
 
 请求 ``失败`` 返回结果：
@@ -1471,8 +1492,8 @@ JSON数据格式
     }
 
 
-添加店铺访问者记录
------------------------
+添加店铺/生活馆访问者记录
+-------------------------
 
 
 接口说明
@@ -1487,7 +1508,7 @@ JSON数据格式
 名称            类型      是否必须    默认值     描述说明
 =============  ========  =========  ========  ====================================
 openid          String      必须                  用户唯一标识
-rid             String      必须                  店铺编号
+rid             String      必须                  店铺/生活馆编号
 ip_addr         String      可选                  访问时IP
 agent           String      可选                  访问时代理
 =============  ========  =========  ========  ====================================
@@ -1528,8 +1549,8 @@ JSON数据格式
         "success": false
     }
 
-获取店铺访问者记录
------------------------
+获取店铺/生活馆访问者记录
+---------------------------
 
 
 接口说明
@@ -1544,7 +1565,7 @@ JSON数据格式
 ===========  ========  =========  ========  ==============================================
 名称          类型      是否必须    默认值     描述说明
 ===========  ========  =========  ========  ==============================================
-rid          String    必填                  店铺编号
+rid          String    必填                  店铺/生活馆编号
 openid       String    必须                  用户唯一标识
 page         Number    可选         1        当前页码
 per_page     Number    可选         12       每页数量
@@ -1826,6 +1847,39 @@ JSON数据格式
         },
         "success": false
     }
+
+获取申请小程序审核状态
+-------------------------
+
+
+接口说明
+~~~~~~~~~~~~~~
+
+* API接口请求地址：``/store/wxapp_status``
+* API接口请求方法：``GET``
+* API接口用户授权：``token``
+
+
+返回示例
+~~~~~~~~~~~~~~~~
+
+JSON数据格式
+
+请求 **正确** 返回结果：
+
+.. code-block:: javascript
+
+    {
+        "data": {
+            "status": 2  // 状态: -1 申请失败； 0 默认状态；1 申请中；2 申请成功；
+        },
+        "status": {
+            "code": 200,
+            "message": "Ok all right."
+        },
+        "success": true
+    }
+
 
 更新分销设置
 ---------------------
