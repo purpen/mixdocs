@@ -447,7 +447,7 @@ JSON数据格式:
             "receive_target": 1,  // 提现到 1、微信零钱包
             "record_id": 3,  // 记录id
             "service_fee": 0,  // 服务费
-            "status": 2,  // 提现状态 1、审核中 2、成功 3、失败
+            "status": 2,  // 提现状态 1、审核中   2、成功  3、失败
             "store_rid": "2"  //  生活馆rid
         },
         "status": {
