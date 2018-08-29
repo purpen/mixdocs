@@ -1085,9 +1085,9 @@ JSON数据格式:
 
 
 
-用户查询运费模板详情
---------------------
-用户查询运费模板详情
+独立-用户查询运费模板详情
+-------------------------------
+独立-用户查询运费模板详情
 
 接口说明
 ~~~~~~~~~~~~~~
@@ -1169,6 +1169,95 @@ JSON数据格式:
         },
         "success": true
     }
+
+
+
+核心-用户查询运费模板详情
+-------------------------------
+核心-用户查询运费模板详情
+
+接口说明
+~~~~~~~~~~~~~~
+
+* API接口请求地址：``/logistics/core_freight_template/<string:rid>'``
+* API接口请求方法：``GET``
+
+请求参数
+~~~~~~~~~~~~~~~
+
+=====================  ===========  ==========  ===========  ==============================
+名称                    类型          是否必须      默认值        描述说明
+=====================  ===========  ==========  ===========  ==============================
+rid                    String        必需                      模板rid
+product_rid            String        必需                      商品rid
+store_rid              String        必需                      店铺rid
+=====================  ===========  ==========  ===========  ==============================
+
+返回示例
+~~~~~~~~~~~~~~~~
+
+JSON数据格式:
+
+请求 **正确** 返回结果：
+
+.. code-block:: javascript
+
+    {
+        "data": {
+            "name": "运费模板3",  // 运费模板Id
+            "pricing_method": 1,  // 计费方式
+            "rid": "Ft726918503",  // 模板rid
+            "update_at": 1528707342, //最后修改时间
+            "items": [
+                {
+                    "continuous_amount": 20,  // 续费
+                    "continuous_item": 1,  // 续件
+                    "continuous_weight": 0,  // 续重
+                    "express_code": "YTO",  // 物流公司code
+                    "express_id": 4,  // 物流公司id
+                    "express_name": "圆通",  // 物流公司名
+                    "first_amount": 10,  // 首费
+                    "first_item": 1,  // 首件
+                    "first_weight": 0,  // 首重
+                    "is_default": true,  // 是否默认
+                    "max_days": 5,  // 最长天数
+                    "min_days": 3,  // 最小天数
+                    "place_items": [
+                        {
+                            "continuous_amount": 20,
+                            "continuous_item": 1,
+                            "continuous_weight": 0,
+                            "first_amount": 10,
+                            "first_item": 1,
+                            "first_weight": 0,
+                            "is_default": false,
+                            "places": [
+                                {
+                                    "area_scope": 1,  // 区域范围
+                                    "place_name": "北京",
+                                    "place_oid": 1
+                                },
+                                {
+                                    "area_scope": 1,  // 区域范围
+                                    "place_name": "天津",
+                                    "place_oid": 2
+                                }
+                            ],
+                            "rid": "Fi153042768"  // item_rid
+                        },
+                    ],
+                    "rid": "Fi618937502"  // item_rid
+                },
+            ],
+
+        },
+        "status": {
+            "code": 200,
+            "message": "Ok all right."
+        },
+        "success": true
+    }
+
 
 
 商家查询运费模板详情
@@ -1307,110 +1396,6 @@ JSON数据格式:
     }
 
 
-
-选择合适的运费模板
-----------------------
-选择合适的运费模板
-
-接口说明
-~~~~~~~~~~~~~~
-
-* API接口请求地址：``/logistics/freight/available``
-* API接口请求方法：``POST``
-* API接口用户授权：``token``
-
-请求参数
-~~~~~~~~~~~~~~~
-
-**运费信息基本参数:**
-
-=====================  ===========  ==========  ===========  ==============================
-名称                    类型          是否必须      默认值        描述说明
-=====================  ===========  ==========  ===========  ==============================
-address_rid            String        必须                      地址rid
-product_items          Array         必须                      商品信息列表
-=====================  ===========  ==========  ===========  ==============================
-
-**商品信息:**
-
-=====================  ===========  ==========  ===========  ==============================
-名称                    类型          是否必须      默认值        描述说明
-=====================  ===========  ==========  ===========  ==============================
-product_items:
-sku_rid                String        必须                      sku_rid
-quantity               Integer       必须          1           购买数量
-freight_template_id    String        必须                      运费模板rid
-=====================  ===========  ==========  ===========  ==============================
-
-
-参考示例：
-
-.. code-block:: javascript
-
-
-    {
-        "address_rid":"5125783409",
-        "product_items":[
-            {
-                "sku_rid":"1",
-                "quantity":2,
-                "freight_template_id": "Ft304291658"
-            },
-            {
-                "sku_rid":"4",
-                "quantity":2,
-                "freight_template_id": "Ft304291658"
-
-            }
-
-            ]
-    }
-
-
-返回示例
-~~~~~~~~~~~~~~~~
-
-JSON数据格式:
-
-请求 **正确** 返回结果：
-
-.. code-block:: javascript
-
-
-    {
-        "data": {
-            "express_info": [
-                {
-                    "continuous_amount": 20,
-                    "continuous_item": 1,
-                    "continuous_weight": 0,
-                    "created_at": 1530251099,
-                    "express": {  //物流公司
-                        "express_code": "YTO",  //物流公司
-                        "express_id": 4,
-                        "express_name": "圆通"
-                    },
-                    "first_amount": 10,
-                    "first_item": 1,
-                    "first_weight": 0,
-                    "freight": 23,  // 运费
-                    "is_default": true,
-                    "max_days": 5,  // 最大天数
-                    "min_days": 3,  // 最小天数
-                    "place": [],
-                    "rid": "Fi278194536",
-                    "updated_at": 1530251099
-                },
-            ],
-            "min_express": 4,  // 最小运费公司
-            "min_freight": 23  // 最小运费
-        },
-        "status": {
-            "code": 200,
-            "message": "Ok all right."
-        },
-        "success": true
-    }
 
 
 获取每件商品的物流公司列表

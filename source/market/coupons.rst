@@ -1595,15 +1595,78 @@ JSON数据格式:
     }
 
 
-领券中心
---------------------
-领券中心
+领券中心-同享券-精品品牌券
+-----------------------------
+领券中心-同享券-精品品牌券
 
 接口说明
 ~~~~~~~~~~~~~~
 
-* API接口请求地址：``/market/coupon_center``
+* API接口请求地址：``/market/coupon_center_shared``
 * API接口请求方法：``GET``
+
+
+请求参数
+~~~~~~~~~~~~~~~
+
+====================  ========  =========  ========  ====================================
+名称                   类型      是否必须    默认值     描述说明
+====================  ========  =========  ========  ====================================
+store_category        Number     必填           0      店铺分类id, 0、推荐
+====================  ========  =========  ========  ====================================
+
+
+返回示例
+~~~~~~~~~~~~~~~~
+
+JSON数据格式:
+
+.. code-block:: javascript
+
+    {
+        "data": {
+            "coupons": [
+                {
+                    "amount": 10,  // 面值
+                    "coupon_code": "URQGBISTMZV",  // 优惠券code
+                    "coupon_type": 2,  //  优惠券类型 1、同享券 2、单享券
+                    "is_recommend": true,  // 是否推荐
+                    "min_amount": 99,  //  最低消费
+                    "store_logo": "http://0.0.0.0:9000/_uploads/photos/180523/8f51855eedae984.jpg",  //  店铺logo
+                    "store_name": "第一家",  //  店铺名
+                    "store_rid": "2"  // 店铺rid
+                }
+            ]
+        },
+        "status": {
+            "code": 200,
+            "message": "Ok all right."
+        },
+        "success": true
+    }
+
+
+
+领券中心-商品-同享券
+--------------------
+领券中心-商品-同享券
+
+接口说明
+~~~~~~~~~~~~~~
+
+* API接口请求地址：``/market/coupon_center_product``
+* API接口请求方法：``GET``
+
+
+请求参数
+~~~~~~~~~~~~~~~
+
+====================  ========  =========  ========  ====================================
+名称                   类型      是否必须    默认值     描述说明
+====================  ========  =========  ========  ====================================
+store_rid             String     必填                 店铺rid
+coupon_code           String     必填                 优惠券code
+====================  ========  =========  ========  ====================================
 
 
 返回示例
@@ -1616,18 +1679,66 @@ JSON数据格式:
 
     {
         "data": {
+            "products": [
+                {
+                    "product_amount": 20,  // 商品价格
+                    "product_coupon_amount": 18,  // 券后价
+                    "product_cover": "http://0.0.0.0:9000/_uploads/photos/180523/8f51855eedae984.jpg",
+                    "product_name": "汽车",  // 商品名
+                    "product_rid": "2"  // 商品rid
+                },
+            ]
+        },
+        "status": {
+            "code": 200,
+            "message": "Ok all right."
+        },
+        "success": true
+    }
+
+
+领券中心-单享券-精选商品券
+-----------------------------
+领券中心-单享券-精选商品券
+
+接口说明
+~~~~~~~~~~~~~~
+
+* API接口请求地址：``/market/coupon_center_single``
+* API接口请求方法：``GET``
+
+
+请求参数
+~~~~~~~~~~~~~~~
+
+====================  ========  =========  ========  ====================================
+名称                   类型      是否必须    默认值     描述说明
+====================  ========  =========  ========  ====================================
+store_category        Number     必填           0      店铺分类id, 0、推荐
+====================  ========  =========  ========  ====================================
+
+
+返回示例
+~~~~~~~~~~~~~~~~
+
+JSON数据格式:
+
+.. code-block:: javascript
+
+    {
+        "data": {
             "coupons": [
                 {
-                    "amount": 10,  // 面值
-                    "code": "UHAOSIWFUVZ",  // 优惠券code
-                    "count": 100,
-                    "created_at": 1531742069,  //
-                    "days": 7,  // 有效期
-                    "min_amount": 99,  // 最小金额
-                    "products": [],
-                    "reach_amount": 0,
-                    "type": 1,  // 类型
-                    "type_text": "全店通用"
+                    "amount": 4,  // 面值
+                    "coupon_code": "UQNJSFUAZOX",  // 优惠券code
+                    "is_recommend": true,  // 是否分享
+                    "min_amount": 4,  // 限制金额
+                    "product_amount": 10,  // 商品价格
+                    "product_coupon_amount": 6,  // 券后价
+                    "product_cover": "http://0.0.0.0:9000/_uploads/photos/180523/8f51855eedae984.jpg",  //
+                    "product_name": "摩托",  // 商品名称
+                    "product_rid": "1"  // 商品rid
+                    "store_rid": "3"  // 店铺rid
                 }
             ]
         },
@@ -1638,6 +1749,48 @@ JSON数据格式:
         "success": true
     }
 
+
+领券中心-官方优惠券
+--------------------------
+领券中心-官方优惠券
+
+接口说明
+~~~~~~~~~~~~~~
+
+* API接口请求地址：``/market/official_coupons/recommend``
+* API接口请求方法：``GET``
+
+
+返回示例
+~~~~~~~~~~~~~~~~
+
+JSON数据格式:
+
+.. code-block:: javascript
+
+    {
+        "data": {
+            "official_coupons": [
+                {
+                    "amount": 5,  // 金额
+                    "code": "OUNVXIDAPGZ", // 优惠券code
+                    "count": 2999,  // 发放数量
+                    "created_at": 1535433969, // 创建时间
+                    "end_date": 1536422400, // 结束时间
+                    "min_amount": 5, // 最小满足金额
+                    "pickup_count": 0, // 领取数量
+                    "start_date": 1535385600, // 开始时间
+                    "type_text": "满5减5元", //
+                    "use_count": 0 //  使用数量
+                }
+            ]
+        },
+        "status": {
+            "code": 200,
+            "message": "Ok all right."
+        },
+        "success": true
+    }
 
 
 优惠券头条动态
