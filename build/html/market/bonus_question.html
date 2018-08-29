@@ -212,6 +212,16 @@
 <li><a class="reference internal" href="#id13">返回示例</a></li>
 </ul>
 </li>
+<li><a class="reference internal" href="#id14">获取可提现金额</a><ul>
+<li><a class="reference internal" href="#id15">接口说明</a></li>
+<li><a class="reference internal" href="#id16">返回示例</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#id17">获取优惠券数量</a><ul>
+<li><a class="reference internal" href="#id18">接口说明</a></li>
+<li><a class="reference internal" href="#id19">返回示例</a></li>
+</ul>
+</li>
 </ul>
 </li>
 </ul>
@@ -262,6 +272,16 @@
 <li><a class="reference internal" href="#id13">返回示例</a></li>
 </ul>
 </li>
+<li><a class="reference internal" href="#id14">获取可提现金额</a><ul>
+<li><a class="reference internal" href="#id15">接口说明</a></li>
+<li><a class="reference internal" href="#id16">返回示例</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#id17">获取优惠券数量</a><ul>
+<li><a class="reference internal" href="#id18">接口说明</a></li>
+<li><a class="reference internal" href="#id19">返回示例</a></li>
+</ul>
+</li>
 </ul>
 </li>
 </ul>
@@ -300,8 +320,9 @@
 <div class="section" id="id3">
 <h3>接口说明<a class="headerlink" href="#id3" title="永久链接至标题">¶</a></h3>
 <ul class="simple">
-<li>API接口请求地址：<code class="docutils literal"><span class="pre">/market/bonus/question</span></code></li>
-<li>API接口请求方法：<code class="docutils literal"><span class="pre">POST</span></code></li>
+<li>API接口请求地址：<code class="docutils literal"><span class="pre">/guess_image/question</span></code></li>
+<li>API接口请求方法：<code class="docutils literal"><span class="pre">GET</span></code></li>
+<li>API接口用户授权：<code class="docutils literal"><span class="pre">token</span></code></li>
 </ul>
 </div>
 <div class="section" id="id4">
@@ -323,13 +344,7 @@
 </tr>
 </thead>
 <tbody valign="top">
-<tr class="row-even"><td>open_id</td>
-<td>String</td>
-<td>必需</td>
-<td>&#160;</td>
-<td>小程序open_id</td>
-</tr>
-<tr class="row-odd"><td>is_share</td>
+<tr class="row-even"><td>is_share</td>
 <td>Integer</td>
 <td>可选</td>
 <td>0</td>
@@ -376,8 +391,9 @@
 <div class="section" id="id7">
 <h3>接口说明<a class="headerlink" href="#id7" title="永久链接至标题">¶</a></h3>
 <ul class="simple">
-<li>API接口请求地址：<code class="docutils literal"><span class="pre">/market/bonus/answers</span></code></li>
+<li>API接口请求地址：<code class="docutils literal"><span class="pre">/guess_image/answers</span></code></li>
 <li>API接口请求方法：<code class="docutils literal"><span class="pre">POST</span></code></li>
+<li>API接口用户授权：<code class="docutils literal"><span class="pre">token</span></code></li>
 </ul>
 </div>
 <div class="section" id="id8">
@@ -399,25 +415,19 @@
 </tr>
 </thead>
 <tbody valign="top">
-<tr class="row-even"><td>open_id</td>
-<td>String</td>
-<td>必需</td>
-<td>&#160;</td>
-<td>小程序open_id</td>
-</tr>
-<tr class="row-odd"><td>test_id</td>
+<tr class="row-even"><td>test_id</td>
 <td>Integer</td>
 <td>必需</td>
 <td>&#160;</td>
 <td>试题id</td>
 </tr>
-<tr class="row-even"><td>question_id</td>
+<tr class="row-odd"><td>question_id</td>
 <td>Integer</td>
 <td>必需</td>
 <td>&#160;</td>
 <td>问题id</td>
 </tr>
-<tr class="row-odd"><td>answer_id</td>
+<tr class="row-even"><td>answer_id</td>
 <td>Integer</td>
 <td>必需</td>
 <td>&#160;</td>
@@ -452,8 +462,9 @@
 <div class="section" id="id11">
 <h3>接口说明<a class="headerlink" href="#id11" title="永久链接至标题">¶</a></h3>
 <ul class="simple">
-<li>API接口请求地址：<code class="docutils literal"><span class="pre">/market/bonus/test_settlement</span></code></li>
+<li>API接口请求地址：<code class="docutils literal"><span class="pre">/guess_image/test_settlement</span></code></li>
 <li>API接口请求方法：<code class="docutils literal"><span class="pre">POST</span></code></li>
+<li>API接口用户授权：<code class="docutils literal"><span class="pre">token</span></code></li>
 </ul>
 </div>
 <div class="section" id="id12">
@@ -475,13 +486,7 @@
 </tr>
 </thead>
 <tbody valign="top">
-<tr class="row-even"><td>open_id</td>
-<td>String</td>
-<td>必需</td>
-<td>&#160;</td>
-<td>小程序open_id</td>
-</tr>
-<tr class="row-odd"><td>test_id</td>
+<tr class="row-even"><td>test_id</td>
 <td>Integer</td>
 <td>必需</td>
 <td>&#160;</td>
@@ -522,6 +527,62 @@
     <span class="s2">&quot;status&quot;</span><span class="o">:</span> <span class="p">{</span>
         <span class="s2">&quot;code&quot;</span><span class="o">:</span> <span class="mi">201</span><span class="p">,</span>
         <span class="s2">&quot;message&quot;</span><span class="o">:</span> <span class="s2">&quot;All created.&quot;</span>
+    <span class="p">},</span>
+    <span class="s2">&quot;success&quot;</span><span class="o">:</span> <span class="kc">true</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="id14">
+<h2>获取可提现金额<a class="headerlink" href="#id14" title="永久链接至标题">¶</a></h2>
+<p>获取可提现金额</p>
+<div class="section" id="id15">
+<h3>接口说明<a class="headerlink" href="#id15" title="永久链接至标题">¶</a></h3>
+<ul class="simple">
+<li>API接口请求地址：<code class="docutils literal"><span class="pre">/guess_image/cash_price</span></code></li>
+<li>API接口请求方法：<code class="docutils literal"><span class="pre">GET</span></code></li>
+<li>API接口用户授权：<code class="docutils literal"><span class="pre">token</span></code></li>
+</ul>
+</div>
+<div class="section" id="id16">
+<h3>返回示例<a class="headerlink" href="#id16" title="永久链接至标题">¶</a></h3>
+<p>JSON数据格式:</p>
+<div class="highlight-javascript"><div class="highlight"><pre><span></span><span class="p">{</span>
+    <span class="s2">&quot;data&quot;</span><span class="o">:</span> <span class="p">{</span>
+        <span class="s2">&quot;cash_price&quot;</span><span class="o">:</span> <span class="mi">140</span>  <span class="c1">// 可提现金额</span>
+    <span class="p">},</span>
+    <span class="s2">&quot;status&quot;</span><span class="o">:</span> <span class="p">{</span>
+        <span class="s2">&quot;code&quot;</span><span class="o">:</span> <span class="mi">200</span><span class="p">,</span>
+        <span class="s2">&quot;message&quot;</span><span class="o">:</span> <span class="s2">&quot;Ok all right.&quot;</span>
+    <span class="p">},</span>
+    <span class="s2">&quot;success&quot;</span><span class="o">:</span> <span class="kc">true</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="id17">
+<h2>获取优惠券数量<a class="headerlink" href="#id17" title="永久链接至标题">¶</a></h2>
+<p>获取优惠券数量</p>
+<div class="section" id="id18">
+<h3>接口说明<a class="headerlink" href="#id18" title="永久链接至标题">¶</a></h3>
+<ul class="simple">
+<li>API接口请求地址：<code class="docutils literal"><span class="pre">/guess_image/coupon_count</span></code></li>
+<li>API接口请求方法：<code class="docutils literal"><span class="pre">GET</span></code></li>
+<li>API接口用户授权：<code class="docutils literal"><span class="pre">token</span></code></li>
+</ul>
+</div>
+<div class="section" id="id19">
+<h3>返回示例<a class="headerlink" href="#id19" title="永久链接至标题">¶</a></h3>
+<p>JSON数据格式:</p>
+<div class="highlight-javascript"><div class="highlight"><pre><span></span><span class="p">{</span>
+    <span class="s2">&quot;data&quot;</span><span class="o">:</span> <span class="p">{</span>
+        <span class="s2">&quot;coupon_count&quot;</span><span class="o">:</span> <span class="mi">3</span>  <span class="c1">// 数量</span>
+    <span class="p">},</span>
+    <span class="s2">&quot;status&quot;</span><span class="o">:</span> <span class="p">{</span>
+        <span class="s2">&quot;code&quot;</span><span class="o">:</span> <span class="mi">200</span><span class="p">,</span>
+        <span class="s2">&quot;message&quot;</span><span class="o">:</span> <span class="s2">&quot;Ok all right.&quot;</span>
     <span class="p">},</span>
     <span class="s2">&quot;success&quot;</span><span class="o">:</span> <span class="kc">true</span>
 <span class="p">}</span>
