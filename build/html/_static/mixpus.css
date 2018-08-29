@@ -1,0 +1,63 @@
+.navbar-inverse {
+    background-color: #00a65a;
+}
+.navbar-inverse .dropdown-menu {
+    background-color: #00a65a;
+}
+.navbar-inverse .navbar-nav > li > a:hover,
+.navbar-inverse .navbar-nav > li > a:focus {
+    color: #fff;
+    background-color: #008749;
+}
+.navbar-inverse .navbar-nav>.open>a,
+.navbar-inverse .navbar-nav>.open>a:hover,
+.navbar-inverse .navbar-nav>.open>a:focus {
+    background-color: #008749;
+}
+.navbar .dropdown-menu>li>a:hover,
+.navbar .dropdown-menu>li>a:focus {
+    background-color: #008749;
+}
+.form-control::-webkit-input-placeholder {
+	/* WebKit browsers */
+	color: #a6a6a6;
+}
+.form-control:-moz-placeholder {
+	/* Mozilla Firefox 4 to 18 */
+	color: #a6a6a6;
+}
+.form-control::-moz-placeholder {
+	/* Mozilla Firefox 19+ */
+	color: #a6a6a6;
+}
+.form-control:-ms-input-placeholder {
+	/* Internet Explorer 10+ */
+	color: #a6a6a6;
+}
+.form-control:focus {
+	border-color: #008749;
+}
+a {
+    color: #00a157;
+    -webkit-transition: all 0.1s ease-in-out;
+	-moz-transition: all 0.1s ease-in-out;
+	-ms-transition: all 0.1s ease-in-out;
+	-o-transition: all 0.1s ease-in-out;
+}
+a:hover,
+a:active,
+a:focus {
+    outline:none;
+    color:#008749;
+}
+
+footer {
+  font-size: 11px;
+}
+
+.bs-sidenav {
+    margin-top: 20px;
+}
+.container .content {
+    margin-bottom: 80px;
+}

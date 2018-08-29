@@ -1,0 +1,2314 @@
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml" lang="zh_CN">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>橱窗模块 &#8212; mixdocs 0.1.0 文档</title>
+    <link rel="stylesheet" href="../_static/bootstrap-sphinx.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/mixpus.css" type="text/css" />
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '../',
+        VERSION:     '0.1.0',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true,
+        SOURCELINK_SUFFIX: '.txt'
+      };
+    </script>
+    <script type="text/javascript" src="../_static/jquery.js"></script>
+    <script type="text/javascript" src="../_static/underscore.js"></script>
+    <script type="text/javascript" src="../_static/doctools.js"></script>
+    <script type="text/javascript" src="../_static/translations.js"></script>
+    <script type="text/javascript" src="../_static/js/jquery-1.11.0.min.js"></script>
+    <script type="text/javascript" src="../_static/js/jquery-fix.js"></script>
+    <script type="text/javascript" src="../_static/bootstrap-3.3.7/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="../_static/bootstrap-sphinx.js"></script>
+    <link rel="index" title="索引" href="../genindex.html" />
+    <link rel="search" title="搜索" href="../search.html" />
+    <link rel="next" title="公用接口模块" href="../common.html" />
+    <link rel="prev" title="生活志模块" href="life_records.html" />
+<meta charset='utf-8'>
+<meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'>
+<meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1'>
+<meta name="apple-mobile-web-app-capable" content="yes">
+
+  </head>
+  <body>
+
+  <div id="navbar" class="navbar navbar-inverse navbar-default navbar-fixed-top">
+    <div class="container">
+      <div class="navbar-header">
+        <!-- .btn-navbar is used as the toggle for collapsed navbar content -->
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".nav-collapse">
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="../index.html">
+          moebeast</a>
+        <span class="navbar-text navbar-version pull-left"><b>0.1.0</b></span>
+      </div>
+
+        <div class="collapse navbar-collapse nav-collapse">
+          <ul class="nav navbar-nav">
+            
+            
+              <li class="dropdown globaltoc-container">
+  <a role="button"
+     id="dLabelGlobalToc"
+     data-toggle="dropdown"
+     data-target="#"
+     href="../index.html">API文档 <b class="caret"></b></a>
+  <ul class="dropdown-menu globaltoc"
+      role="menu"
+      aria-labelledby="dLabelGlobalToc"><ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../intro.html">开放平台文档说明</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../intro.html#id2">开发入门</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../intro.html#id3">系统级请求参数</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../intro.html#id4">开发帮助文档</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../intro.html#id5">公共返回状态码说明</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../intro.html#oauth2-0">OAuth2.0协议介绍</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../intro.html#id6">参考资料链接</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../orders/index.html">销售API模块</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../orders/orders.html">订单模块</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../orders/customer_orders.html">分销商订单模块</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../orders/carts.html">购物车模块</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../orders/addresses.html">收货地址模块</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../orders/comment.html">订单评价模块</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../orders/logistics.html">物流运费模块</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../products/index.html">商品API模块</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../products/products.html">商品模块</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../products/category.html">分类模块</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../products/brands.html">供应商/品牌模块</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../products/materials.html">商品材料模块</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../products/colors.html">商品颜色模块</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../products/models.html">商品规格模块</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../products/labels.html">标签模块</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../products/return_policies.html">商家退换货规则模块</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../products/user_record.html">用户商品记录模块</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../products/assets.html">附件模块</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../distributions/index.html">分销API模块</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../distributions/distributions.html">分销模块</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../distributions/store_product_packet.html">商品组模块</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../customers/index.html">分销客户API模块</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../customers/customers.html">分销客户模块</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../customers/grades.html">客户等级模块</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../warehouses/index.html">采购仓储API模块</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../warehouses/purchase.html">采购API模块</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../shopes/index.html">微商城API模块</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../shopes/shopes.html">微商城模块</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../shopes/store.html">店铺模块</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../shopes/wxapp.html">小程序模块</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../market/index.html">营销API模块</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../market/banners.html">营销工具/广告模块</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../market/coupons.html">营销工具/优惠券模块</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../market/bonus_question.html">营销工具/猜题赢现金</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../stats/index.html">统计API模块</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../stats/report.html">报表模块</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../stats/order_sale_stats.html">订单销售统计模块</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../stats/order_stats.html">订单结算统计模块</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../stats/small_b_order_stats.html">小b订单结算统计模块</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../users/index.html">用户API模块</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../users/users.html">用户模块</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../users/auth.html">用户认证模块</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../users/finance.html">账户模块</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../wx_apps/index.html">小程序API模块</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../wx_apps/wx_app_design.html">小程序配置模块</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../qa/index.html">问答API模块</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../qa/qa.html">问答模块</a></li>
+</ul>
+</li>
+<li class="toctree-l1 current"><a class="reference internal" href="index.html">栏目API模块</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="column_products.html">栏目商品模块</a></li>
+<li class="toctree-l2"><a class="reference internal" href="life_records.html">生活志模块</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">橱窗模块</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../common.html">公用接口模块</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../common.html#id2">幻灯图列表</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../common.html#id6">搜索关键词历史</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../common.html#id10">核心平台–搜索关键词历史</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../common.html#id14">核心平台–热门搜索</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../common.html#id17">核心平台–热门推荐</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../common.html#id20">核心平台–搜索</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../common.html#id24">核心平台–搜索商品列表</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../common.html#id28">核心平台–搜索店铺列表</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../common.html#id32">核心平台–搜索用户列表</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../common.html#id36">小程序绑定手机号发送验证码</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../common.html#id41">注册发送短信验证码</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../common.html#id46">忘记密码发送短信验证码</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../common.html#id50">动态登陆发送短信验证码</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../common.html#id54">账户编辑发送短信验证码</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../common.html#id58">发送邮件验证码</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../setting.html">系统相关配置文档</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../setting.html#id2">开放国家列表</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../setting.html#id5">支持的语言</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../setting.html#id6">支持的币种</a></li>
+</ul>
+</li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../faq.html">常见问题</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../history.html">版本历史</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../history.html#v0-1-0">v0.1.0</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../todos.html">未来新功能</a></li>
+</ul>
+</ul>
+</li>
+              
+                <li class="dropdown">
+  <a role="button"
+     id="dLabelLocalToc"
+     data-toggle="dropdown"
+     data-target="#"
+     href="#">Page <b class="caret"></b></a>
+  <ul class="dropdown-menu localtoc"
+      role="menu"
+      aria-labelledby="dLabelLocalToc"><ul>
+<li><a class="reference internal" href="#">橱窗模块</a><ul>
+<li><a class="reference internal" href="#id2">推荐的橱窗</a><ul>
+<li><a class="reference internal" href="#id3">接口说明</a></li>
+<li><a class="reference internal" href="#id4">请求参数</a></li>
+<li><a class="reference internal" href="#id5">返回示例</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#id6">关注人的橱窗</a><ul>
+<li><a class="reference internal" href="#id7">接口说明</a></li>
+<li><a class="reference internal" href="#id8">请求参数</a></li>
+<li><a class="reference internal" href="#id9">返回示例</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#id10">橱窗的信息</a><ul>
+<li><a class="reference internal" href="#id11">接口说明</a></li>
+<li><a class="reference internal" href="#id12">请求参数</a></li>
+<li><a class="reference internal" href="#id13">返回示例</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#id14">发布橱窗</a><ul>
+<li><a class="reference internal" href="#id15">接口说明</a></li>
+<li><a class="reference internal" href="#id16">请求参数</a></li>
+<li><a class="reference internal" href="#id17">返回示例</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#id18">更新橱窗</a><ul>
+<li><a class="reference internal" href="#id19">接口说明</a></li>
+<li><a class="reference internal" href="#id20">请求参数</a></li>
+<li><a class="reference internal" href="#id21">返回示例</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#id22">删除橱窗</a><ul>
+<li><a class="reference internal" href="#id23">接口说明</a></li>
+<li><a class="reference internal" href="#id24">请求参数</a></li>
+<li><a class="reference internal" href="#id25">返回示例</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#id26">用户喜欢橱窗列表</a><ul>
+<li><a class="reference internal" href="#id27">接口说明</a></li>
+<li><a class="reference internal" href="#id28">请求参数</a></li>
+<li><a class="reference internal" href="#id29">返回示例</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#id30">其他用户喜欢橱窗列表</a><ul>
+<li><a class="reference internal" href="#id31">接口说明</a></li>
+<li><a class="reference internal" href="#id32">请求参数</a></li>
+<li><a class="reference internal" href="#id33">返回示例</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#id34">喜欢橱窗</a><ul>
+<li><a class="reference internal" href="#id35">接口说明</a></li>
+<li><a class="reference internal" href="#id36">请求参数</a></li>
+<li><a class="reference internal" href="#id37">返回示例</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#id38">删除喜欢橱窗</a><ul>
+<li><a class="reference internal" href="#id39">接口说明</a></li>
+<li><a class="reference internal" href="#id40">请求参数</a></li>
+<li><a class="reference internal" href="#id41">返回示例</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#id42">评论橱窗</a><ul>
+<li><a class="reference internal" href="#id43">接口说明</a></li>
+<li><a class="reference internal" href="#id44">请求参数</a></li>
+<li><a class="reference internal" href="#id45">返回示例</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#id46">删除橱窗评论</a><ul>
+<li><a class="reference internal" href="#id47">接口说明</a></li>
+<li><a class="reference internal" href="#id48">请求参数</a></li>
+<li><a class="reference internal" href="#id49">返回示例</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#id50">对评论点赞</a><ul>
+<li><a class="reference internal" href="#id51">接口说明</a></li>
+<li><a class="reference internal" href="#id52">请求参数</a></li>
+<li><a class="reference internal" href="#id53">返回示例</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#id54">删除评论点赞</a><ul>
+<li><a class="reference internal" href="#id55">接口说明</a></li>
+<li><a class="reference internal" href="#id56">请求参数</a></li>
+<li><a class="reference internal" href="#id57">返回示例</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#id58">获取橱窗评论</a><ul>
+<li><a class="reference internal" href="#id59">接口说明</a></li>
+<li><a class="reference internal" href="#id60">请求参数</a></li>
+<li><a class="reference internal" href="#id61">返回示例</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#id62">获取评论的子评论</a><ul>
+<li><a class="reference internal" href="#id63">接口说明</a></li>
+<li><a class="reference internal" href="#id64">请求参数</a></li>
+<li><a class="reference internal" href="#id65">返回示例</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#id66">橱窗可选商品列表</a><ul>
+<li><a class="reference internal" href="#id67">接口说明</a></li>
+<li><a class="reference internal" href="#id68">请求参数</a></li>
+<li><a class="reference internal" href="#id69">返回示例</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#id70">橱窗可选商品列表</a><ul>
+<li><a class="reference internal" href="#id71">接口说明</a></li>
+<li><a class="reference internal" href="#id72">请求参数</a></li>
+<li><a class="reference internal" href="#id73">返回示例</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#id74">猜你喜欢</a><ul>
+<li><a class="reference internal" href="#id75">接口说明</a></li>
+<li><a class="reference internal" href="#id76">请求参数</a></li>
+<li><a class="reference internal" href="#id77">返回示例</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#id78">相似橱窗</a><ul>
+<li><a class="reference internal" href="#id79">接口说明</a></li>
+<li><a class="reference internal" href="#id80">请求参数</a></li>
+<li><a class="reference internal" href="#id81">返回示例</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</ul>
+</li>
+              
+            
+            
+            
+            
+            
+          </ul>
+
+          
+            
+<form class="navbar-form navbar-right" action="../search.html" method="get">
+ <div class="form-group">
+  <input type="text" name="q" class="form-control" placeholder="Search" />
+ </div>
+  <input type="hidden" name="check_keywords" value="yes" />
+  <input type="hidden" name="area" value="default" />
+</form>
+          
+        </div>
+    </div>
+  </div>
+
+<div class="container">
+  <div class="row">
+      <div class="col-md-3">
+        <div id="sidebar" class="bs-sidenav" role="complementary"><ul>
+<li><a class="reference internal" href="#">橱窗模块</a><ul>
+<li><a class="reference internal" href="#id2">推荐的橱窗</a><ul>
+<li><a class="reference internal" href="#id3">接口说明</a></li>
+<li><a class="reference internal" href="#id4">请求参数</a></li>
+<li><a class="reference internal" href="#id5">返回示例</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#id6">关注人的橱窗</a><ul>
+<li><a class="reference internal" href="#id7">接口说明</a></li>
+<li><a class="reference internal" href="#id8">请求参数</a></li>
+<li><a class="reference internal" href="#id9">返回示例</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#id10">橱窗的信息</a><ul>
+<li><a class="reference internal" href="#id11">接口说明</a></li>
+<li><a class="reference internal" href="#id12">请求参数</a></li>
+<li><a class="reference internal" href="#id13">返回示例</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#id14">发布橱窗</a><ul>
+<li><a class="reference internal" href="#id15">接口说明</a></li>
+<li><a class="reference internal" href="#id16">请求参数</a></li>
+<li><a class="reference internal" href="#id17">返回示例</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#id18">更新橱窗</a><ul>
+<li><a class="reference internal" href="#id19">接口说明</a></li>
+<li><a class="reference internal" href="#id20">请求参数</a></li>
+<li><a class="reference internal" href="#id21">返回示例</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#id22">删除橱窗</a><ul>
+<li><a class="reference internal" href="#id23">接口说明</a></li>
+<li><a class="reference internal" href="#id24">请求参数</a></li>
+<li><a class="reference internal" href="#id25">返回示例</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#id26">用户喜欢橱窗列表</a><ul>
+<li><a class="reference internal" href="#id27">接口说明</a></li>
+<li><a class="reference internal" href="#id28">请求参数</a></li>
+<li><a class="reference internal" href="#id29">返回示例</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#id30">其他用户喜欢橱窗列表</a><ul>
+<li><a class="reference internal" href="#id31">接口说明</a></li>
+<li><a class="reference internal" href="#id32">请求参数</a></li>
+<li><a class="reference internal" href="#id33">返回示例</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#id34">喜欢橱窗</a><ul>
+<li><a class="reference internal" href="#id35">接口说明</a></li>
+<li><a class="reference internal" href="#id36">请求参数</a></li>
+<li><a class="reference internal" href="#id37">返回示例</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#id38">删除喜欢橱窗</a><ul>
+<li><a class="reference internal" href="#id39">接口说明</a></li>
+<li><a class="reference internal" href="#id40">请求参数</a></li>
+<li><a class="reference internal" href="#id41">返回示例</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#id42">评论橱窗</a><ul>
+<li><a class="reference internal" href="#id43">接口说明</a></li>
+<li><a class="reference internal" href="#id44">请求参数</a></li>
+<li><a class="reference internal" href="#id45">返回示例</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#id46">删除橱窗评论</a><ul>
+<li><a class="reference internal" href="#id47">接口说明</a></li>
+<li><a class="reference internal" href="#id48">请求参数</a></li>
+<li><a class="reference internal" href="#id49">返回示例</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#id50">对评论点赞</a><ul>
+<li><a class="reference internal" href="#id51">接口说明</a></li>
+<li><a class="reference internal" href="#id52">请求参数</a></li>
+<li><a class="reference internal" href="#id53">返回示例</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#id54">删除评论点赞</a><ul>
+<li><a class="reference internal" href="#id55">接口说明</a></li>
+<li><a class="reference internal" href="#id56">请求参数</a></li>
+<li><a class="reference internal" href="#id57">返回示例</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#id58">获取橱窗评论</a><ul>
+<li><a class="reference internal" href="#id59">接口说明</a></li>
+<li><a class="reference internal" href="#id60">请求参数</a></li>
+<li><a class="reference internal" href="#id61">返回示例</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#id62">获取评论的子评论</a><ul>
+<li><a class="reference internal" href="#id63">接口说明</a></li>
+<li><a class="reference internal" href="#id64">请求参数</a></li>
+<li><a class="reference internal" href="#id65">返回示例</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#id66">橱窗可选商品列表</a><ul>
+<li><a class="reference internal" href="#id67">接口说明</a></li>
+<li><a class="reference internal" href="#id68">请求参数</a></li>
+<li><a class="reference internal" href="#id69">返回示例</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#id70">橱窗可选商品列表</a><ul>
+<li><a class="reference internal" href="#id71">接口说明</a></li>
+<li><a class="reference internal" href="#id72">请求参数</a></li>
+<li><a class="reference internal" href="#id73">返回示例</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#id74">猜你喜欢</a><ul>
+<li><a class="reference internal" href="#id75">接口说明</a></li>
+<li><a class="reference internal" href="#id76">请求参数</a></li>
+<li><a class="reference internal" href="#id77">返回示例</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#id78">相似橱窗</a><ul>
+<li><a class="reference internal" href="#id79">接口说明</a></li>
+<li><a class="reference internal" href="#id80">请求参数</a></li>
+<li><a class="reference internal" href="#id81">返回示例</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+
+<ul class="nav nav-list">
+  <li>
+    <a href="life_records.html" title="Previous Chapter: 生活志模块"><span class="glyphicon glyphicon-chevron-left visible-sm"></span><span class="hidden-sm hidden-tablet">&raquo; 生活志模块</span>
+    </a>
+  </li>
+  <li>
+    <a href="../common.html" title="Next Chapter: 公用接口模块"><span class="glyphicon glyphicon-chevron-right visible-sm"></span><span class="hidden-sm hidden-tablet">&raquo; 公用接口模块</span>
+    </a>
+  </li>
+</ul>
+<div id="sourcelink">
+  <a href="../_sources/columns/shop_windows.rst.txt"
+     rel="nofollow">Source</a>
+</div>
+<form action="../search.html" method="get">
+ <div class="form-group">
+  <input type="text" name="q" class="form-control" placeholder="Search" />
+ </div>
+  <input type="hidden" name="check_keywords" value="yes" />
+  <input type="hidden" name="area" value="default" />
+</form>
+        </div>
+      </div>
+    <div class="col-md-9 content">
+      
+  <div class="section" id="id1">
+<h1>橱窗模块<a class="headerlink" href="#id1" title="永久链接至标题">¶</a></h1>
+<div class="section" id="id2">
+<h2>推荐的橱窗<a class="headerlink" href="#id2" title="永久链接至标题">¶</a></h2>
+<p>获取官方推荐的橱窗—发现生活美学</p>
+<div class="section" id="id3">
+<h3>接口说明<a class="headerlink" href="#id3" title="永久链接至标题">¶</a></h3>
+<ul class="simple">
+<li>API接口请求地址：<code class="docutils literal"><span class="pre">/shop_windows/recommend</span></code></li>
+<li>API接口请求方法：<code class="docutils literal"><span class="pre">GET</span></code></li>
+</ul>
+</div>
+<div class="section" id="id4">
+<h3>请求参数<a class="headerlink" href="#id4" title="永久链接至标题">¶</a></h3>
+<table border="1" class="docutils">
+<colgroup>
+<col width="21%" />
+<col width="14%" />
+<col width="12%" />
+<col width="14%" />
+<col width="40%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">名称</th>
+<th class="head">类型</th>
+<th class="head">是否必须</th>
+<th class="head">默认值</th>
+<th class="head">描述说明</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>page</td>
+<td>Number</td>
+<td>可选</td>
+<td>1</td>
+<td>当前页码</td>
+</tr>
+<tr class="row-odd"><td>per_page</td>
+<td>Number</td>
+<td>可选</td>
+<td>10</td>
+<td>每页数量</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="id5">
+<h3>返回示例<a class="headerlink" href="#id5" title="永久链接至标题">¶</a></h3>
+<p>JSON数据格式:</p>
+<div class="highlight-javascript"><div class="highlight"><pre><span></span><span class="p">{</span>
+    <span class="s2">&quot;data&quot;</span><span class="o">:</span> <span class="p">{</span>
+        <span class="s2">&quot;count&quot;</span><span class="o">:</span> <span class="mi">8</span><span class="p">,</span>
+        <span class="s2">&quot;next&quot;</span><span class="o">:</span> <span class="kc">false</span><span class="p">,</span>
+        <span class="s2">&quot;prev&quot;</span><span class="o">:</span> <span class="kc">false</span><span class="p">,</span>
+        <span class="s2">&quot;shop_windows&quot;</span><span class="o">:</span> <span class="p">[</span>
+            <span class="p">{</span>
+                <span class="s2">&quot;comment_count&quot;</span><span class="o">:</span> <span class="s2">&quot;评论数&quot;</span><span class="p">,</span>
+                <span class="s2">&quot;description&quot;</span><span class="o">:</span> <span class="s2">&quot;橱窗详情&quot;</span><span class="p">,</span>
+                <span class="s2">&quot;is_follow&quot;</span><span class="o">:</span> <span class="s2">&quot;是否关注过该橱窗&quot;</span><span class="p">,</span>
+                <span class="s2">&quot;is_official&quot;</span><span class="o">:</span> <span class="s2">&quot;是否官方橱窗&quot;</span><span class="p">,</span>
+                <span class="s2">&quot;keywords&quot;</span><span class="o">:</span> <span class="p">[</span>
+                    <span class="s2">&quot;橱窗关键词一&quot;</span><span class="p">,</span>
+                    <span class="s2">&quot;橱窗关键词二&quot;</span>
+                <span class="p">],</span>
+                <span class="s2">&quot;like_count&quot;</span><span class="o">:</span> <span class="s2">&quot;橱窗喜欢数&quot;</span><span class="p">,</span>
+                <span class="s2">&quot;product_count&quot;</span><span class="o">:</span> <span class="mi">5</span><span class="p">,</span>
+                <span class="s2">&quot;product_covers&quot;</span><span class="o">:</span> <span class="p">[</span>
+                    <span class="s2">&quot;http://127.0.0.1:9000/_uploads/photos/180718/f1a30ad8b52107c.gif&quot;</span><span class="p">,</span>
+                    <span class="s2">&quot;http://127.0.0.1:9000/_uploads/photos/180718/f1a30ad8b52107c.gif&quot;</span><span class="p">,</span>
+                    <span class="s2">&quot;http://127.0.0.1:9000/_uploads/photos/180718/f1a30ad8b52107c.gif&quot;</span><span class="p">,</span>
+                    <span class="s2">&quot;http://127.0.0.1:9000/_uploads/photos/180707/77409c8ab9b0abf.jpg&quot;</span><span class="p">,</span>
+                    <span class="s2">&quot;http://127.0.0.1:9000/_uploads/photos/180707/77409c8ab9b0abf.jpg&quot;</span>
+                <span class="p">],</span>
+                <span class="s2">&quot;products&quot;</span><span class="o">:</span> <span class="p">[</span>
+                    <span class="p">{</span>
+                        <span class="s2">&quot;category_id&quot;</span><span class="o">:</span> <span class="mi">18</span><span class="p">,</span>
+                        <span class="s2">&quot;commission_price&quot;</span><span class="o">:</span> <span class="mf">846.89</span><span class="p">,</span>
+                        <span class="s2">&quot;commission_rate&quot;</span><span class="o">:</span> <span class="mf">24.5</span><span class="p">,</span>
+                        <span class="s2">&quot;cover&quot;</span><span class="o">:</span> <span class="s2">&quot;http://127.0.0.1:9000/_uploads/photos/180710/fbba50f0da91a7a.jpg&quot;</span><span class="p">,</span>
+                        <span class="s2">&quot;cover_id&quot;</span><span class="o">:</span> <span class="mi">10</span><span class="p">,</span>
+                        <span class="s2">&quot;custom_details&quot;</span><span class="o">:</span> <span class="s2">&quot;可以刻名字,生辰八字&quot;</span><span class="p">,</span>
+                        <span class="s2">&quot;delivery_country&quot;</span><span class="o">:</span> <span class="s2">&quot;&quot;</span><span class="p">,</span>
+                        <span class="s2">&quot;delivery_country_id&quot;</span><span class="o">:</span> <span class="kc">null</span><span class="p">,</span>
+                        <span class="s2">&quot;features&quot;</span><span class="o">:</span> <span class="s2">&quot;获得更多的成长值，加速商铺成长获取更多特权：发布三星级及以上的产品可以获得与星级数量等额的成长值，每日上限为20点；&quot;</span><span class="p">,</span>
+                        <span class="s2">&quot;have_distributed&quot;</span><span class="o">:</span> <span class="kc">true</span><span class="p">,</span>
+                        <span class="s2">&quot;id_code&quot;</span><span class="o">:</span> <span class="s2">&quot;&quot;</span><span class="p">,</span>
+                        <span class="s2">&quot;is_custom_made&quot;</span><span class="o">:</span> <span class="kc">true</span><span class="p">,</span>
+                        <span class="s2">&quot;is_custom_service&quot;</span><span class="o">:</span> <span class="kc">true</span><span class="p">,</span>
+                        <span class="s2">&quot;is_distributed&quot;</span><span class="o">:</span> <span class="kc">true</span><span class="p">,</span>
+                        <span class="s2">&quot;is_free_postage&quot;</span><span class="o">:</span> <span class="kc">false</span><span class="p">,</span>
+                        <span class="s2">&quot;is_made_holiday&quot;</span><span class="o">:</span> <span class="kc">false</span><span class="p">,</span>
+                        <span class="s2">&quot;is_proprietary&quot;</span><span class="o">:</span> <span class="kc">false</span><span class="p">,</span>
+                        <span class="s2">&quot;is_sold_out&quot;</span><span class="o">:</span> <span class="kc">false</span><span class="p">,</span>
+                        <span class="s2">&quot;like_count&quot;</span><span class="o">:</span> <span class="mi">1</span><span class="p">,</span>
+                        <span class="s2">&quot;made_cycle&quot;</span><span class="o">:</span> <span class="mi">5</span><span class="p">,</span>
+                        <span class="s2">&quot;material_id&quot;</span><span class="o">:</span> <span class="mi">4</span><span class="p">,</span>
+                        <span class="s2">&quot;material_name&quot;</span><span class="o">:</span> <span class="s2">&quot;毛线&quot;</span><span class="p">,</span>
+                        <span class="s2">&quot;max_price&quot;</span><span class="o">:</span> <span class="mf">5456.7</span><span class="p">,</span>
+                        <span class="s2">&quot;max_sale_price&quot;</span><span class="o">:</span> <span class="mi">0</span><span class="p">,</span>
+                        <span class="s2">&quot;min_price&quot;</span><span class="o">:</span> <span class="mf">3234.5</span><span class="p">,</span>
+                        <span class="s2">&quot;min_sale_price&quot;</span><span class="o">:</span> <span class="mi">2245</span><span class="p">,</span>
+                        <span class="s2">&quot;modes&quot;</span><span class="o">:</span> <span class="p">[</span>
+                            <span class="s2">&quot;3*1 白色&quot;</span><span class="p">,</span>
+                            <span class="s2">&quot;3*2 绿色&quot;</span><span class="p">,</span>
+                            <span class="s2">&quot;3*3 紫色&quot;</span>
+                        <span class="p">],</span>
+                        <span class="s2">&quot;name&quot;</span><span class="o">:</span> <span class="s2">&quot;商品名&quot;</span><span class="p">,</span>
+                        <span class="s2">&quot;published_at&quot;</span><span class="o">:</span> <span class="mi">1531213666</span><span class="p">,</span>
+                        <span class="s2">&quot;real_price&quot;</span><span class="o">:</span> <span class="mf">5456.7</span><span class="p">,</span>
+                        <span class="s2">&quot;real_sale_price&quot;</span><span class="o">:</span> <span class="mi">0</span><span class="p">,</span>
+                        <span class="s2">&quot;rid&quot;</span><span class="o">:</span> <span class="s2">&quot;8479032186&quot;</span><span class="p">,</span>
+                        <span class="s2">&quot;second_category_id&quot;</span><span class="o">:</span> <span class="mi">17</span><span class="p">,</span>
+                        <span class="s2">&quot;status&quot;</span><span class="o">:</span> <span class="mi">1</span><span class="p">,</span>
+                        <span class="s2">&quot;sticked&quot;</span><span class="o">:</span> <span class="kc">false</span><span class="p">,</span>
+                        <span class="s2">&quot;store_name&quot;</span><span class="o">:</span> <span class="s2">&quot;店铺名&quot;</span><span class="p">,</span>
+                        <span class="s2">&quot;store_rid&quot;</span><span class="o">:</span> <span class="s2">&quot;店铺编号&quot;</span><span class="p">,</span>
+                        <span class="s2">&quot;style_id&quot;</span><span class="o">:</span> <span class="s2">&quot;商品风格编号&quot;</span><span class="p">,</span>
+                        <span class="s2">&quot;style_name&quot;</span><span class="o">:</span> <span class="s2">&quot;商品风格名&quot;</span><span class="p">,</span>
+                        <span class="s2">&quot;top_category_id&quot;</span><span class="o">:</span> <span class="mi">1</span><span class="p">,</span>
+                        <span class="s2">&quot;total_stock&quot;</span><span class="o">:</span> <span class="mi">45</span>
+                    <span class="p">},</span>
+                    <span class="p">{</span>
+                        <span class="nx">同上商品基本信息</span><span class="p">...</span>
+                    <span class="p">},</span>
+                    <span class="p">{</span>
+                        <span class="nx">同上商品基本信息</span><span class="p">...</span>
+                    <span class="p">}</span>
+                <span class="p">],</span>
+                <span class="s2">&quot;rid&quot;</span><span class="o">:</span> <span class="s2">&quot;橱窗编号&quot;</span><span class="p">,</span>
+                <span class="s2">&quot;title&quot;</span><span class="o">:</span> <span class="s2">&quot;橱窗标题&quot;</span><span class="p">,</span>
+                <span class="s2">&quot;uid&quot;</span><span class="o">:</span> <span class="s2">&quot;12795683104&quot;</span><span class="p">,</span>
+                <span class="s2">&quot;user_avatar&quot;</span><span class="o">:</span> <span class="s2">&quot;http://kg.erp.taihuoniao.com/static/img/default-logo.png&quot;</span><span class="p">,</span>
+                <span class="s2">&quot;user_name&quot;</span><span class="o">:</span> <span class="s2">&quot;用户名&quot;</span>
+            <span class="p">}</span>
+        <span class="p">]</span>
+    <span class="p">},</span>
+    <span class="s2">&quot;status&quot;</span><span class="o">:</span> <span class="p">{</span>
+        <span class="s2">&quot;code&quot;</span><span class="o">:</span> <span class="mi">200</span><span class="p">,</span>
+        <span class="s2">&quot;message&quot;</span><span class="o">:</span> <span class="s2">&quot;Ok all right.&quot;</span>
+    <span class="p">},</span>
+    <span class="s2">&quot;success&quot;</span><span class="o">:</span> <span class="kc">true</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="id6">
+<h2>关注人的橱窗<a class="headerlink" href="#id6" title="永久链接至标题">¶</a></h2>
+<div class="section" id="id7">
+<h3>接口说明<a class="headerlink" href="#id7" title="永久链接至标题">¶</a></h3>
+<ul class="simple">
+<li>API接口请求地址：<code class="docutils literal"><span class="pre">/shop_windows/follow</span></code></li>
+<li>API接口请求方法：<code class="docutils literal"><span class="pre">GET</span></code></li>
+</ul>
+</div>
+<div class="section" id="id8">
+<h3>请求参数<a class="headerlink" href="#id8" title="永久链接至标题">¶</a></h3>
+<table border="1" class="docutils">
+<colgroup>
+<col width="21%" />
+<col width="14%" />
+<col width="12%" />
+<col width="14%" />
+<col width="40%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">名称</th>
+<th class="head">类型</th>
+<th class="head">是否必须</th>
+<th class="head">默认值</th>
+<th class="head">描述说明</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>page</td>
+<td>Number</td>
+<td>可选</td>
+<td>1</td>
+<td>当前页码</td>
+</tr>
+<tr class="row-odd"><td>per_page</td>
+<td>Number</td>
+<td>可选</td>
+<td>10</td>
+<td>每页数量</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="id9">
+<h3>返回示例<a class="headerlink" href="#id9" title="永久链接至标题">¶</a></h3>
+<p>** 同上推荐的橱窗返回示例 **</p>
+</div>
+</div>
+<div class="section" id="id10">
+<h2>橱窗的信息<a class="headerlink" href="#id10" title="永久链接至标题">¶</a></h2>
+<div class="section" id="id11">
+<h3>接口说明<a class="headerlink" href="#id11" title="永久链接至标题">¶</a></h3>
+<ul class="simple">
+<li>API接口请求地址：<code class="docutils literal"><span class="pre">/shop_windows/detail</span></code></li>
+<li>API接口请求方法：<code class="docutils literal"><span class="pre">GET</span></code></li>
+</ul>
+</div>
+<div class="section" id="id12">
+<h3>请求参数<a class="headerlink" href="#id12" title="永久链接至标题">¶</a></h3>
+<table border="1" class="docutils">
+<colgroup>
+<col width="21%" />
+<col width="14%" />
+<col width="12%" />
+<col width="14%" />
+<col width="40%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">名称</th>
+<th class="head">类型</th>
+<th class="head">是否必须</th>
+<th class="head">默认值</th>
+<th class="head">描述说明</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>rid</td>
+<td>Number</td>
+<td>必须</td>
+<td>&#160;</td>
+<td>橱窗编号</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="id13">
+<h3>返回示例<a class="headerlink" href="#id13" title="永久链接至标题">¶</a></h3>
+<p>JSON数据格式:</p>
+<div class="highlight-javascript"><div class="highlight"><pre><span></span><span class="p">{</span>
+    <span class="s2">&quot;data&quot;</span><span class="o">:</span> <span class="p">{</span>
+        <span class="s2">&quot;comment_count&quot;</span><span class="o">:</span> <span class="mi">9</span><span class="p">,</span>
+        <span class="s2">&quot;description&quot;</span><span class="o">:</span> <span class="s2">&quot;2018腾讯世界人工智能围棋大赛决赛将在中国棋院落下帷幕。&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;is_follow&quot;</span><span class="o">:</span> <span class="kc">true</span><span class="p">,</span>
+        <span class="s2">&quot;is_official&quot;</span><span class="o">:</span> <span class="s2">&quot;是否官方橱窗&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;keywords&quot;</span><span class="o">:</span> <span class="p">[</span>
+            <span class="s2">&quot;棋牌&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;人工智能&quot;</span>
+        <span class="p">],</span>
+        <span class="s2">&quot;like_count&quot;</span><span class="o">:</span> <span class="mi">2</span><span class="p">,</span>
+        <span class="s2">&quot;product_count&quot;</span><span class="o">:</span> <span class="mi">5</span><span class="p">,</span>
+        <span class="s2">&quot;product_covers&quot;</span><span class="o">:</span> <span class="p">[</span>
+            <span class="s2">&quot;http://127.0.0.1:9000/_uploads/photos/180718/f1a30ad8b52107c.gif&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;http://127.0.0.1:9000/_uploads/photos/180718/f1a30ad8b52107c.gif&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;http://127.0.0.1:9000/_uploads/photos/180718/f1a30ad8b52107c.gif&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;http://127.0.0.1:9000/_uploads/photos/180707/77409c8ab9b0abf.jpg&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;http://127.0.0.1:9000/_uploads/photos/180707/77409c8ab9b0abf.jpg&quot;</span>
+        <span class="p">],</span>
+        <span class="s2">&quot;products&quot;</span><span class="o">:</span> <span class="p">[</span>
+            <span class="p">{</span>
+                <span class="nx">商品基本信息</span><span class="p">...</span>
+            <span class="p">},</span>
+            <span class="p">{</span>
+                <span class="nx">商品基本信息</span><span class="p">...</span>
+            <span class="p">},</span>
+            <span class="p">{</span>
+                <span class="nx">商品基本信息</span><span class="p">...</span>
+            <span class="p">},</span>
+            <span class="p">{</span>
+                <span class="nx">商品基本信息</span><span class="p">...</span>
+            <span class="p">},</span>
+            <span class="p">{</span>
+                <span class="nx">商品基本信息</span><span class="p">...</span>
+            <span class="p">}</span>
+        <span class="p">],</span>
+        <span class="s2">&quot;rid&quot;</span><span class="o">:</span> <span class="mi">1</span><span class="p">,</span>
+        <span class="s2">&quot;title&quot;</span><span class="o">:</span> <span class="s2">&quot;橱窗标题&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;uid&quot;</span><span class="o">:</span> <span class="s2">&quot;12795683104&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;user_avatar&quot;</span><span class="o">:</span> <span class="s2">&quot;http://kg.erp.taihuoniao.com/static/img/default-logo.png&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;user_name&quot;</span><span class="o">:</span> <span class="s2">&quot;用户名&quot;</span>
+    <span class="p">},</span>
+    <span class="s2">&quot;status&quot;</span><span class="o">:</span> <span class="p">{</span>
+        <span class="s2">&quot;code&quot;</span><span class="o">:</span> <span class="mi">200</span><span class="p">,</span>
+        <span class="s2">&quot;message&quot;</span><span class="o">:</span> <span class="s2">&quot;Ok all right.&quot;</span>
+    <span class="p">},</span>
+    <span class="s2">&quot;success&quot;</span><span class="o">:</span> <span class="kc">true</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="id14">
+<h2>发布橱窗<a class="headerlink" href="#id14" title="永久链接至标题">¶</a></h2>
+<div class="section" id="id15">
+<h3>接口说明<a class="headerlink" href="#id15" title="永久链接至标题">¶</a></h3>
+<ul class="simple">
+<li>API接口请求地址：<code class="docutils literal"><span class="pre">/shop_windows</span></code></li>
+<li>API接口请求方法：<code class="docutils literal"><span class="pre">POST</span></code></li>
+<li>API接口用户授权：<code class="docutils literal"><span class="pre">token</span></code></li>
+</ul>
+</div>
+<div class="section" id="id16">
+<h3>请求参数<a class="headerlink" href="#id16" title="永久链接至标题">¶</a></h3>
+<table border="1" class="docutils">
+<colgroup>
+<col width="21%" />
+<col width="14%" />
+<col width="12%" />
+<col width="14%" />
+<col width="40%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">名称</th>
+<th class="head">类型</th>
+<th class="head">是否必须</th>
+<th class="head">默认值</th>
+<th class="head">描述说明</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>title</td>
+<td>String</td>
+<td>必须</td>
+<td>&#160;</td>
+<td>标题</td>
+</tr>
+<tr class="row-odd"><td>description</td>
+<td>String</td>
+<td>必须</td>
+<td>&#160;</td>
+<td>简介</td>
+</tr>
+<tr class="row-even"><td>rids</td>
+<td>Array</td>
+<td>必须</td>
+<td>&#160;</td>
+<td>橱窗商品</td>
+</tr>
+<tr class="row-odd"><td>keywords</td>
+<td>Array</td>
+<td>可选</td>
+<td>&#160;</td>
+<td>关键词</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="id17">
+<h3>返回示例<a class="headerlink" href="#id17" title="永久链接至标题">¶</a></h3>
+<p>JSON数据格式:</p>
+<div class="highlight-javascript"><div class="highlight"><pre><span></span><span class="p">{</span>
+    <span class="s2">&quot;data&quot;</span><span class="o">:</span> <span class="p">{</span>
+        <span class="s2">&quot;comment_count&quot;</span><span class="o">:</span> <span class="mi">9</span><span class="p">,</span>
+        <span class="s2">&quot;description&quot;</span><span class="o">:</span> <span class="s2">&quot;橱窗描述&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;is_follow&quot;</span><span class="o">:</span> <span class="kc">true</span><span class="p">,</span>
+        <span class="s2">&quot;is_official&quot;</span><span class="o">:</span> <span class="s2">&quot;是否官方橱窗&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;keywords&quot;</span><span class="o">:</span> <span class="p">[</span>
+            <span class="s2">&quot;棋牌&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;人工智能&quot;</span>
+        <span class="p">],</span>
+        <span class="s2">&quot;like_count&quot;</span><span class="o">:</span> <span class="mi">2</span><span class="p">,</span>
+        <span class="s2">&quot;product_count&quot;</span><span class="o">:</span> <span class="mi">5</span><span class="p">,</span>
+        <span class="s2">&quot;product_covers&quot;</span><span class="o">:</span> <span class="p">[</span>
+            <span class="s2">&quot;http://127.0.0.1:9000/_uploads/photos/180718/f1a30ad8b52107c.gif&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;http://127.0.0.1:9000/_uploads/photos/180718/f1a30ad8b52107c.gif&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;http://127.0.0.1:9000/_uploads/photos/180718/f1a30ad8b52107c.gif&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;http://127.0.0.1:9000/_uploads/photos/180707/77409c8ab9b0abf.jpg&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;http://127.0.0.1:9000/_uploads/photos/180707/77409c8ab9b0abf.jpg&quot;</span>
+        <span class="p">],</span>
+        <span class="s2">&quot;products&quot;</span><span class="o">:</span> <span class="p">[</span>
+            <span class="p">{</span>
+                <span class="nx">商品基本信息</span><span class="p">...</span>
+            <span class="p">},</span>
+            <span class="p">{</span>
+                <span class="nx">商品基本信息</span><span class="p">...</span>
+            <span class="p">},</span>
+            <span class="p">{</span>
+                <span class="nx">商品基本信息</span><span class="p">...</span>
+            <span class="p">},</span>
+            <span class="p">{</span>
+                <span class="nx">商品基本信息</span><span class="p">...</span>
+            <span class="p">},</span>
+            <span class="p">{</span>
+                <span class="nx">商品基本信息</span><span class="p">...</span>
+            <span class="p">}</span>
+        <span class="p">],</span>
+        <span class="s2">&quot;rid&quot;</span><span class="o">:</span> <span class="mi">1</span><span class="p">,</span>
+        <span class="s2">&quot;title&quot;</span><span class="o">:</span> <span class="s2">&quot;橱窗标题&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;uid&quot;</span><span class="o">:</span> <span class="s2">&quot;12795683104&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;user_avatar&quot;</span><span class="o">:</span> <span class="s2">&quot;http://kg.erp.taihuoniao.com/static/img/default-logo.png&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;user_name&quot;</span><span class="o">:</span> <span class="s2">&quot;用户名&quot;</span>
+    <span class="p">},</span>
+    <span class="s2">&quot;status&quot;</span><span class="o">:</span> <span class="p">{</span>
+        <span class="s2">&quot;code&quot;</span><span class="o">:</span> <span class="mi">200</span><span class="p">,</span>
+        <span class="s2">&quot;message&quot;</span><span class="o">:</span> <span class="s2">&quot;Ok all right.&quot;</span>
+    <span class="p">},</span>
+    <span class="s2">&quot;success&quot;</span><span class="o">:</span> <span class="kc">true</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="id18">
+<h2>更新橱窗<a class="headerlink" href="#id18" title="永久链接至标题">¶</a></h2>
+<div class="section" id="id19">
+<h3>接口说明<a class="headerlink" href="#id19" title="永久链接至标题">¶</a></h3>
+<ul class="simple">
+<li>API接口请求地址：<code class="docutils literal"><span class="pre">/shop_windows</span></code></li>
+<li>API接口请求方法：<code class="docutils literal"><span class="pre">PUT</span></code></li>
+<li>API接口用户授权：<code class="docutils literal"><span class="pre">token</span></code></li>
+</ul>
+</div>
+<div class="section" id="id20">
+<h3>请求参数<a class="headerlink" href="#id20" title="永久链接至标题">¶</a></h3>
+<table border="1" class="docutils">
+<colgroup>
+<col width="21%" />
+<col width="14%" />
+<col width="12%" />
+<col width="14%" />
+<col width="40%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">名称</th>
+<th class="head">类型</th>
+<th class="head">是否必须</th>
+<th class="head">默认值</th>
+<th class="head">描述说明</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>rid</td>
+<td>Number</td>
+<td>必须</td>
+<td>&#160;</td>
+<td>橱窗编号</td>
+</tr>
+<tr class="row-odd"><td>title</td>
+<td>String</td>
+<td>必须</td>
+<td>&#160;</td>
+<td>标题</td>
+</tr>
+<tr class="row-even"><td>description</td>
+<td>String</td>
+<td>必须</td>
+<td>&#160;</td>
+<td>简介</td>
+</tr>
+<tr class="row-odd"><td>rids</td>
+<td>Array</td>
+<td>必须</td>
+<td>&#160;</td>
+<td>橱窗商品</td>
+</tr>
+<tr class="row-even"><td>keywords</td>
+<td>Array</td>
+<td>可选</td>
+<td>&#160;</td>
+<td>关键词</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="id21">
+<h3>返回示例<a class="headerlink" href="#id21" title="永久链接至标题">¶</a></h3>
+<p>JSON数据格式:</p>
+<div class="highlight-javascript"><div class="highlight"><pre><span></span><span class="p">{</span>
+    <span class="s2">&quot;data&quot;</span><span class="o">:</span> <span class="p">{</span>
+        <span class="s2">&quot;comment_count&quot;</span><span class="o">:</span> <span class="mi">9</span><span class="p">,</span>
+        <span class="s2">&quot;description&quot;</span><span class="o">:</span> <span class="s2">&quot;新橱窗描述&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;is_follow&quot;</span><span class="o">:</span> <span class="kc">true</span><span class="p">,</span>
+        <span class="s2">&quot;is_official&quot;</span><span class="o">:</span> <span class="s2">&quot;是否官方橱窗&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;keywords&quot;</span><span class="o">:</span> <span class="p">[</span>
+            <span class="s2">&quot;棋牌&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;人工智能&quot;</span>
+        <span class="p">],</span>
+        <span class="s2">&quot;like_count&quot;</span><span class="o">:</span> <span class="mi">2</span><span class="p">,</span>
+        <span class="s2">&quot;product_count&quot;</span><span class="o">:</span> <span class="mi">5</span><span class="p">,</span>
+        <span class="s2">&quot;product_covers&quot;</span><span class="o">:</span> <span class="p">[</span>
+            <span class="s2">&quot;http://127.0.0.1:9000/_uploads/photos/180718/f1a30ad8b52107c.gif&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;http://127.0.0.1:9000/_uploads/photos/180718/f1a30ad8b52107c.gif&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;http://127.0.0.1:9000/_uploads/photos/180718/f1a30ad8b52107c.gif&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;http://127.0.0.1:9000/_uploads/photos/180707/77409c8ab9b0abf.jpg&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;http://127.0.0.1:9000/_uploads/photos/180707/77409c8ab9b0abf.jpg&quot;</span>
+        <span class="p">],</span>
+        <span class="s2">&quot;products&quot;</span><span class="o">:</span> <span class="p">[</span>
+            <span class="p">{</span>
+                <span class="nx">商品基本信息</span><span class="p">...</span>
+            <span class="p">},</span>
+            <span class="p">{</span>
+                <span class="nx">商品基本信息</span><span class="p">...</span>
+            <span class="p">},</span>
+            <span class="p">{</span>
+                <span class="nx">商品基本信息</span><span class="p">...</span>
+            <span class="p">},</span>
+            <span class="p">{</span>
+                <span class="nx">商品基本信息</span><span class="p">...</span>
+            <span class="p">},</span>
+            <span class="p">{</span>
+                <span class="nx">商品基本信息</span><span class="p">...</span>
+            <span class="p">}</span>
+        <span class="p">],</span>
+        <span class="s2">&quot;rid&quot;</span><span class="o">:</span> <span class="mi">1</span><span class="p">,</span>
+        <span class="s2">&quot;title&quot;</span><span class="o">:</span> <span class="s2">&quot;新橱窗标题&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;uid&quot;</span><span class="o">:</span> <span class="s2">&quot;12795683104&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;user_avatar&quot;</span><span class="o">:</span> <span class="s2">&quot;http://kg.erp.taihuoniao.com/static/img/default-logo.png&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;user_name&quot;</span><span class="o">:</span> <span class="s2">&quot;用户名&quot;</span>
+    <span class="p">},</span>
+    <span class="s2">&quot;status&quot;</span><span class="o">:</span> <span class="p">{</span>
+        <span class="s2">&quot;code&quot;</span><span class="o">:</span> <span class="mi">200</span><span class="p">,</span>
+        <span class="s2">&quot;message&quot;</span><span class="o">:</span> <span class="s2">&quot;Ok all right.&quot;</span>
+    <span class="p">},</span>
+    <span class="s2">&quot;success&quot;</span><span class="o">:</span> <span class="kc">true</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="id22">
+<h2>删除橱窗<a class="headerlink" href="#id22" title="永久链接至标题">¶</a></h2>
+<div class="section" id="id23">
+<h3>接口说明<a class="headerlink" href="#id23" title="永久链接至标题">¶</a></h3>
+<ul class="simple">
+<li>API接口请求地址：<code class="docutils literal"><span class="pre">/shop_windows</span></code></li>
+<li>API接口请求方法：<code class="docutils literal"><span class="pre">DELETE</span></code></li>
+<li>API接口用户授权：<code class="docutils literal"><span class="pre">token</span></code></li>
+</ul>
+</div>
+<div class="section" id="id24">
+<h3>请求参数<a class="headerlink" href="#id24" title="永久链接至标题">¶</a></h3>
+<table border="1" class="docutils">
+<colgroup>
+<col width="21%" />
+<col width="14%" />
+<col width="12%" />
+<col width="14%" />
+<col width="40%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">名称</th>
+<th class="head">类型</th>
+<th class="head">是否必须</th>
+<th class="head">默认值</th>
+<th class="head">描述说明</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>rid</td>
+<td>Number</td>
+<td>必须</td>
+<td>&#160;</td>
+<td>橱窗编号</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="id25">
+<h3>返回示例<a class="headerlink" href="#id25" title="永久链接至标题">¶</a></h3>
+<p>JSON数据格式:</p>
+<div class="highlight-javascript"><div class="highlight"><pre><span></span><span class="p">{</span>
+    <span class="s2">&quot;status&quot;</span><span class="o">:</span> <span class="p">{</span>
+        <span class="s2">&quot;code&quot;</span><span class="o">:</span> <span class="mi">204</span><span class="p">,</span>
+        <span class="s2">&quot;message&quot;</span><span class="o">:</span> <span class="s2">&quot;All deleted.&quot;</span>
+    <span class="p">},</span>
+    <span class="s2">&quot;success&quot;</span><span class="o">:</span> <span class="kc">true</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="id26">
+<h2>用户喜欢橱窗列表<a class="headerlink" href="#id26" title="永久链接至标题">¶</a></h2>
+<div class="section" id="id27">
+<h3>接口说明<a class="headerlink" href="#id27" title="永久链接至标题">¶</a></h3>
+<ul class="simple">
+<li>API接口请求地址：<code class="docutils literal"><span class="pre">/shop_windows/user_likes</span></code></li>
+<li>API接口请求方法：<code class="docutils literal"><span class="pre">GET</span></code></li>
+<li>API接口用户授权：<code class="docutils literal"><span class="pre">token</span></code></li>
+</ul>
+</div>
+<div class="section" id="id28">
+<h3>请求参数<a class="headerlink" href="#id28" title="永久链接至标题">¶</a></h3>
+<table border="1" class="docutils">
+<colgroup>
+<col width="21%" />
+<col width="14%" />
+<col width="12%" />
+<col width="14%" />
+<col width="40%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">名称</th>
+<th class="head">类型</th>
+<th class="head">是否必须</th>
+<th class="head">默认值</th>
+<th class="head">描述说明</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>page</td>
+<td>Number</td>
+<td>可选</td>
+<td>1</td>
+<td>当前页码</td>
+</tr>
+<tr class="row-odd"><td>per_page</td>
+<td>Number</td>
+<td>可选</td>
+<td>10</td>
+<td>每页数量</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="id29">
+<h3>返回示例<a class="headerlink" href="#id29" title="永久链接至标题">¶</a></h3>
+<p>JSON数据格式:</p>
+<div class="highlight-javascript"><div class="highlight"><pre><span></span><span class="p">{</span>
+    <span class="s2">&quot;data&quot;</span><span class="o">:</span> <span class="p">{</span>
+        <span class="s2">&quot;count&quot;</span><span class="o">:</span> <span class="mi">8</span><span class="p">,</span>
+        <span class="s2">&quot;next&quot;</span><span class="o">:</span> <span class="kc">false</span><span class="p">,</span>
+        <span class="s2">&quot;prev&quot;</span><span class="o">:</span> <span class="kc">false</span><span class="p">,</span>
+        <span class="s2">&quot;shop_windows&quot;</span><span class="o">:</span> <span class="p">[</span>
+            <span class="p">{</span>
+                <span class="s2">&quot;comment_count&quot;</span><span class="o">:</span> <span class="s2">&quot;评论数&quot;</span><span class="p">,</span>
+                <span class="s2">&quot;description&quot;</span><span class="o">:</span> <span class="s2">&quot;橱窗详情&quot;</span><span class="p">,</span>
+                <span class="s2">&quot;is_follow&quot;</span><span class="o">:</span> <span class="s2">&quot;是否关注过该橱窗&quot;</span><span class="p">,</span>
+                <span class="s2">&quot;is_official&quot;</span><span class="o">:</span> <span class="s2">&quot;是否官方橱窗&quot;</span><span class="p">,</span>
+                <span class="s2">&quot;keywords&quot;</span><span class="o">:</span> <span class="p">[</span>
+                    <span class="s2">&quot;橱窗关键词一&quot;</span><span class="p">,</span>
+                    <span class="s2">&quot;橱窗关键词二&quot;</span>
+                <span class="p">],</span>
+                <span class="s2">&quot;like_count&quot;</span><span class="o">:</span> <span class="s2">&quot;橱窗喜欢数&quot;</span><span class="p">,</span>
+                <span class="s2">&quot;product_count&quot;</span><span class="o">:</span> <span class="mi">5</span><span class="p">,</span>
+                <span class="s2">&quot;product_covers&quot;</span><span class="o">:</span> <span class="p">[</span>
+                    <span class="s2">&quot;http://127.0.0.1:9000/_uploads/photos/180718/f1a30ad8b52107c.gif&quot;</span><span class="p">,</span>
+                    <span class="s2">&quot;http://127.0.0.1:9000/_uploads/photos/180718/f1a30ad8b52107c.gif&quot;</span><span class="p">,</span>
+                    <span class="s2">&quot;http://127.0.0.1:9000/_uploads/photos/180718/f1a30ad8b52107c.gif&quot;</span><span class="p">,</span>
+                    <span class="s2">&quot;http://127.0.0.1:9000/_uploads/photos/180707/77409c8ab9b0abf.jpg&quot;</span><span class="p">,</span>
+                    <span class="s2">&quot;http://127.0.0.1:9000/_uploads/photos/180707/77409c8ab9b0abf.jpg&quot;</span>
+                <span class="p">],</span>
+                <span class="s2">&quot;products&quot;</span><span class="o">:</span> <span class="p">[</span>
+                    <span class="p">{</span>
+                        <span class="s2">&quot;category_id&quot;</span><span class="o">:</span> <span class="mi">18</span><span class="p">,</span>
+                        <span class="s2">&quot;commission_price&quot;</span><span class="o">:</span> <span class="mf">846.89</span><span class="p">,</span>
+                        <span class="s2">&quot;commission_rate&quot;</span><span class="o">:</span> <span class="mf">24.5</span><span class="p">,</span>
+                        <span class="s2">&quot;cover&quot;</span><span class="o">:</span> <span class="s2">&quot;http://127.0.0.1:9000/_uploads/photos/180710/fbba50f0da91a7a.jpg&quot;</span><span class="p">,</span>
+                        <span class="s2">&quot;cover_id&quot;</span><span class="o">:</span> <span class="mi">10</span><span class="p">,</span>
+                        <span class="s2">&quot;custom_details&quot;</span><span class="o">:</span> <span class="s2">&quot;可以刻名字,生辰八字&quot;</span><span class="p">,</span>
+                        <span class="s2">&quot;delivery_country&quot;</span><span class="o">:</span> <span class="s2">&quot;&quot;</span><span class="p">,</span>
+                        <span class="s2">&quot;delivery_country_id&quot;</span><span class="o">:</span> <span class="kc">null</span><span class="p">,</span>
+                        <span class="s2">&quot;features&quot;</span><span class="o">:</span> <span class="s2">&quot;获得更多的成长值，加速商铺成长获取更多特权：发布三星级及以上的产品可以获得与星级数量等额的成长值，每日上限为20点；&quot;</span><span class="p">,</span>
+                        <span class="s2">&quot;have_distributed&quot;</span><span class="o">:</span> <span class="kc">true</span><span class="p">,</span>
+                        <span class="s2">&quot;id_code&quot;</span><span class="o">:</span> <span class="s2">&quot;&quot;</span><span class="p">,</span>
+                        <span class="s2">&quot;is_custom_made&quot;</span><span class="o">:</span> <span class="kc">true</span><span class="p">,</span>
+                        <span class="s2">&quot;is_custom_service&quot;</span><span class="o">:</span> <span class="kc">true</span><span class="p">,</span>
+                        <span class="s2">&quot;is_distributed&quot;</span><span class="o">:</span> <span class="kc">true</span><span class="p">,</span>
+                        <span class="s2">&quot;is_free_postage&quot;</span><span class="o">:</span> <span class="kc">false</span><span class="p">,</span>
+                        <span class="s2">&quot;is_made_holiday&quot;</span><span class="o">:</span> <span class="kc">false</span><span class="p">,</span>
+                        <span class="s2">&quot;is_proprietary&quot;</span><span class="o">:</span> <span class="kc">false</span><span class="p">,</span>
+                        <span class="s2">&quot;is_sold_out&quot;</span><span class="o">:</span> <span class="kc">false</span><span class="p">,</span>
+                        <span class="s2">&quot;like_count&quot;</span><span class="o">:</span> <span class="mi">1</span><span class="p">,</span>
+                        <span class="s2">&quot;made_cycle&quot;</span><span class="o">:</span> <span class="mi">5</span><span class="p">,</span>
+                        <span class="s2">&quot;material_id&quot;</span><span class="o">:</span> <span class="mi">4</span><span class="p">,</span>
+                        <span class="s2">&quot;material_name&quot;</span><span class="o">:</span> <span class="s2">&quot;毛线&quot;</span><span class="p">,</span>
+                        <span class="s2">&quot;max_price&quot;</span><span class="o">:</span> <span class="mf">5456.7</span><span class="p">,</span>
+                        <span class="s2">&quot;max_sale_price&quot;</span><span class="o">:</span> <span class="mi">0</span><span class="p">,</span>
+                        <span class="s2">&quot;min_price&quot;</span><span class="o">:</span> <span class="mf">3234.5</span><span class="p">,</span>
+                        <span class="s2">&quot;min_sale_price&quot;</span><span class="o">:</span> <span class="mi">2245</span><span class="p">,</span>
+                        <span class="s2">&quot;modes&quot;</span><span class="o">:</span> <span class="p">[</span>
+                            <span class="s2">&quot;3*1 白色&quot;</span><span class="p">,</span>
+                            <span class="s2">&quot;3*2 绿色&quot;</span><span class="p">,</span>
+                            <span class="s2">&quot;3*3 紫色&quot;</span>
+                        <span class="p">],</span>
+                        <span class="s2">&quot;name&quot;</span><span class="o">:</span> <span class="s2">&quot;商品名&quot;</span><span class="p">,</span>
+                        <span class="s2">&quot;published_at&quot;</span><span class="o">:</span> <span class="mi">1531213666</span><span class="p">,</span>
+                        <span class="s2">&quot;real_price&quot;</span><span class="o">:</span> <span class="mf">5456.7</span><span class="p">,</span>
+                        <span class="s2">&quot;real_sale_price&quot;</span><span class="o">:</span> <span class="mi">0</span><span class="p">,</span>
+                        <span class="s2">&quot;rid&quot;</span><span class="o">:</span> <span class="s2">&quot;8479032186&quot;</span><span class="p">,</span>
+                        <span class="s2">&quot;second_category_id&quot;</span><span class="o">:</span> <span class="mi">17</span><span class="p">,</span>
+                        <span class="s2">&quot;status&quot;</span><span class="o">:</span> <span class="mi">1</span><span class="p">,</span>
+                        <span class="s2">&quot;sticked&quot;</span><span class="o">:</span> <span class="kc">false</span><span class="p">,</span>
+                        <span class="s2">&quot;store_name&quot;</span><span class="o">:</span> <span class="s2">&quot;店铺名&quot;</span><span class="p">,</span>
+                        <span class="s2">&quot;store_rid&quot;</span><span class="o">:</span> <span class="s2">&quot;店铺编号&quot;</span><span class="p">,</span>
+                        <span class="s2">&quot;style_id&quot;</span><span class="o">:</span> <span class="s2">&quot;商品风格编号&quot;</span><span class="p">,</span>
+                        <span class="s2">&quot;style_name&quot;</span><span class="o">:</span> <span class="s2">&quot;商品风格名&quot;</span><span class="p">,</span>
+                        <span class="s2">&quot;top_category_id&quot;</span><span class="o">:</span> <span class="mi">1</span><span class="p">,</span>
+                        <span class="s2">&quot;total_stock&quot;</span><span class="o">:</span> <span class="mi">45</span>
+                    <span class="p">},</span>
+                    <span class="p">{</span>
+                        <span class="nx">同上商品基本信息</span><span class="p">...</span>
+                    <span class="p">},</span>
+                    <span class="p">{</span>
+                        <span class="nx">同上商品基本信息</span><span class="p">...</span>
+                    <span class="p">}</span>
+                <span class="p">],</span>
+                <span class="s2">&quot;rid&quot;</span><span class="o">:</span> <span class="s2">&quot;橱窗编号&quot;</span><span class="p">,</span>
+                <span class="s2">&quot;title&quot;</span><span class="o">:</span> <span class="s2">&quot;橱窗标题&quot;</span><span class="p">,</span>
+                <span class="s2">&quot;uid&quot;</span><span class="o">:</span> <span class="s2">&quot;12795683104&quot;</span><span class="p">,</span>
+                <span class="s2">&quot;user_avatar&quot;</span><span class="o">:</span> <span class="s2">&quot;http://kg.erp.taihuoniao.com/static/img/default-logo.png&quot;</span><span class="p">,</span>
+                <span class="s2">&quot;user_name&quot;</span><span class="o">:</span> <span class="s2">&quot;用户名&quot;</span>
+            <span class="p">}</span>
+        <span class="p">]</span>
+    <span class="p">},</span>
+    <span class="s2">&quot;status&quot;</span><span class="o">:</span> <span class="p">{</span>
+        <span class="s2">&quot;code&quot;</span><span class="o">:</span> <span class="mi">200</span><span class="p">,</span>
+        <span class="s2">&quot;message&quot;</span><span class="o">:</span> <span class="s2">&quot;Ok all right.&quot;</span>
+    <span class="p">},</span>
+    <span class="s2">&quot;success&quot;</span><span class="o">:</span> <span class="kc">true</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="id30">
+<h2>其他用户喜欢橱窗列表<a class="headerlink" href="#id30" title="永久链接至标题">¶</a></h2>
+<div class="section" id="id31">
+<h3>接口说明<a class="headerlink" href="#id31" title="永久链接至标题">¶</a></h3>
+<ul class="simple">
+<li>API接口请求地址：<code class="docutils literal"><span class="pre">/shop_windows/other_user_likes</span></code></li>
+<li>API接口请求方法：<code class="docutils literal"><span class="pre">GET</span></code></li>
+</ul>
+</div>
+<div class="section" id="id32">
+<h3>请求参数<a class="headerlink" href="#id32" title="永久链接至标题">¶</a></h3>
+<table border="1" class="docutils">
+<colgroup>
+<col width="21%" />
+<col width="14%" />
+<col width="12%" />
+<col width="14%" />
+<col width="40%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">名称</th>
+<th class="head">类型</th>
+<th class="head">是否必须</th>
+<th class="head">默认值</th>
+<th class="head">描述说明</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>page</td>
+<td>Number</td>
+<td>可选</td>
+<td>1</td>
+<td>当前页码</td>
+</tr>
+<tr class="row-odd"><td>per_page</td>
+<td>Number</td>
+<td>可选</td>
+<td>10</td>
+<td>每页数量</td>
+</tr>
+<tr class="row-even"><td>uid</td>
+<td>String</td>
+<td>必须</td>
+<td>&#160;</td>
+<td>用户编号</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="id33">
+<h3>返回示例<a class="headerlink" href="#id33" title="永久链接至标题">¶</a></h3>
+<p>JSON数据格式:</p>
+<div class="highlight-javascript"><div class="highlight"><pre><span></span><span class="p">{</span>
+    <span class="s2">&quot;data&quot;</span><span class="o">:</span> <span class="p">{</span>
+        <span class="s2">&quot;count&quot;</span><span class="o">:</span> <span class="mi">8</span><span class="p">,</span>
+        <span class="s2">&quot;next&quot;</span><span class="o">:</span> <span class="kc">false</span><span class="p">,</span>
+        <span class="s2">&quot;prev&quot;</span><span class="o">:</span> <span class="kc">false</span><span class="p">,</span>
+        <span class="s2">&quot;shop_windows&quot;</span><span class="o">:</span> <span class="p">[</span>
+            <span class="p">{</span>
+                <span class="s2">&quot;comment_count&quot;</span><span class="o">:</span> <span class="s2">&quot;评论数&quot;</span><span class="p">,</span>
+                <span class="s2">&quot;description&quot;</span><span class="o">:</span> <span class="s2">&quot;橱窗详情&quot;</span><span class="p">,</span>
+                <span class="s2">&quot;is_follow&quot;</span><span class="o">:</span> <span class="s2">&quot;是否关注过该橱窗&quot;</span><span class="p">,</span>
+                <span class="s2">&quot;is_official&quot;</span><span class="o">:</span> <span class="s2">&quot;是否官方橱窗&quot;</span><span class="p">,</span>
+                <span class="s2">&quot;keywords&quot;</span><span class="o">:</span> <span class="p">[</span>
+                    <span class="s2">&quot;橱窗关键词一&quot;</span><span class="p">,</span>
+                    <span class="s2">&quot;橱窗关键词二&quot;</span>
+                <span class="p">],</span>
+                <span class="s2">&quot;like_count&quot;</span><span class="o">:</span> <span class="s2">&quot;橱窗喜欢数&quot;</span><span class="p">,</span>
+                <span class="s2">&quot;product_count&quot;</span><span class="o">:</span> <span class="mi">5</span><span class="p">,</span>
+                <span class="s2">&quot;product_covers&quot;</span><span class="o">:</span> <span class="p">[</span>
+                    <span class="s2">&quot;http://127.0.0.1:9000/_uploads/photos/180718/f1a30ad8b52107c.gif&quot;</span><span class="p">,</span>
+                    <span class="s2">&quot;http://127.0.0.1:9000/_uploads/photos/180718/f1a30ad8b52107c.gif&quot;</span><span class="p">,</span>
+                    <span class="s2">&quot;http://127.0.0.1:9000/_uploads/photos/180718/f1a30ad8b52107c.gif&quot;</span><span class="p">,</span>
+                    <span class="s2">&quot;http://127.0.0.1:9000/_uploads/photos/180707/77409c8ab9b0abf.jpg&quot;</span><span class="p">,</span>
+                    <span class="s2">&quot;http://127.0.0.1:9000/_uploads/photos/180707/77409c8ab9b0abf.jpg&quot;</span>
+                <span class="p">],</span>
+                <span class="s2">&quot;products&quot;</span><span class="o">:</span> <span class="p">[</span>
+                    <span class="p">{</span>
+                        <span class="s2">&quot;category_id&quot;</span><span class="o">:</span> <span class="mi">18</span><span class="p">,</span>
+                        <span class="s2">&quot;commission_price&quot;</span><span class="o">:</span> <span class="mf">846.89</span><span class="p">,</span>
+                        <span class="s2">&quot;commission_rate&quot;</span><span class="o">:</span> <span class="mf">24.5</span><span class="p">,</span>
+                        <span class="s2">&quot;cover&quot;</span><span class="o">:</span> <span class="s2">&quot;http://127.0.0.1:9000/_uploads/photos/180710/fbba50f0da91a7a.jpg&quot;</span><span class="p">,</span>
+                        <span class="s2">&quot;cover_id&quot;</span><span class="o">:</span> <span class="mi">10</span><span class="p">,</span>
+                        <span class="s2">&quot;custom_details&quot;</span><span class="o">:</span> <span class="s2">&quot;可以刻名字,生辰八字&quot;</span><span class="p">,</span>
+                        <span class="s2">&quot;delivery_country&quot;</span><span class="o">:</span> <span class="s2">&quot;&quot;</span><span class="p">,</span>
+                        <span class="s2">&quot;delivery_country_id&quot;</span><span class="o">:</span> <span class="kc">null</span><span class="p">,</span>
+                        <span class="s2">&quot;features&quot;</span><span class="o">:</span> <span class="s2">&quot;获得更多的成长值，加速商铺成长获取更多特权：发布三星级及以上的产品可以获得与星级数量等额的成长值，每日上限为20点；&quot;</span><span class="p">,</span>
+                        <span class="s2">&quot;have_distributed&quot;</span><span class="o">:</span> <span class="kc">true</span><span class="p">,</span>
+                        <span class="s2">&quot;id_code&quot;</span><span class="o">:</span> <span class="s2">&quot;&quot;</span><span class="p">,</span>
+                        <span class="s2">&quot;is_custom_made&quot;</span><span class="o">:</span> <span class="kc">true</span><span class="p">,</span>
+                        <span class="s2">&quot;is_custom_service&quot;</span><span class="o">:</span> <span class="kc">true</span><span class="p">,</span>
+                        <span class="s2">&quot;is_distributed&quot;</span><span class="o">:</span> <span class="kc">true</span><span class="p">,</span>
+                        <span class="s2">&quot;is_free_postage&quot;</span><span class="o">:</span> <span class="kc">false</span><span class="p">,</span>
+                        <span class="s2">&quot;is_made_holiday&quot;</span><span class="o">:</span> <span class="kc">false</span><span class="p">,</span>
+                        <span class="s2">&quot;is_proprietary&quot;</span><span class="o">:</span> <span class="kc">false</span><span class="p">,</span>
+                        <span class="s2">&quot;is_sold_out&quot;</span><span class="o">:</span> <span class="kc">false</span><span class="p">,</span>
+                        <span class="s2">&quot;like_count&quot;</span><span class="o">:</span> <span class="mi">1</span><span class="p">,</span>
+                        <span class="s2">&quot;made_cycle&quot;</span><span class="o">:</span> <span class="mi">5</span><span class="p">,</span>
+                        <span class="s2">&quot;material_id&quot;</span><span class="o">:</span> <span class="mi">4</span><span class="p">,</span>
+                        <span class="s2">&quot;material_name&quot;</span><span class="o">:</span> <span class="s2">&quot;毛线&quot;</span><span class="p">,</span>
+                        <span class="s2">&quot;max_price&quot;</span><span class="o">:</span> <span class="mf">5456.7</span><span class="p">,</span>
+                        <span class="s2">&quot;max_sale_price&quot;</span><span class="o">:</span> <span class="mi">0</span><span class="p">,</span>
+                        <span class="s2">&quot;min_price&quot;</span><span class="o">:</span> <span class="mf">3234.5</span><span class="p">,</span>
+                        <span class="s2">&quot;min_sale_price&quot;</span><span class="o">:</span> <span class="mi">2245</span><span class="p">,</span>
+                        <span class="s2">&quot;modes&quot;</span><span class="o">:</span> <span class="p">[</span>
+                            <span class="s2">&quot;3*1 白色&quot;</span><span class="p">,</span>
+                            <span class="s2">&quot;3*2 绿色&quot;</span><span class="p">,</span>
+                            <span class="s2">&quot;3*3 紫色&quot;</span>
+                        <span class="p">],</span>
+                        <span class="s2">&quot;name&quot;</span><span class="o">:</span> <span class="s2">&quot;商品名&quot;</span><span class="p">,</span>
+                        <span class="s2">&quot;published_at&quot;</span><span class="o">:</span> <span class="mi">1531213666</span><span class="p">,</span>
+                        <span class="s2">&quot;real_price&quot;</span><span class="o">:</span> <span class="mf">5456.7</span><span class="p">,</span>
+                        <span class="s2">&quot;real_sale_price&quot;</span><span class="o">:</span> <span class="mi">0</span><span class="p">,</span>
+                        <span class="s2">&quot;rid&quot;</span><span class="o">:</span> <span class="s2">&quot;8479032186&quot;</span><span class="p">,</span>
+                        <span class="s2">&quot;second_category_id&quot;</span><span class="o">:</span> <span class="mi">17</span><span class="p">,</span>
+                        <span class="s2">&quot;status&quot;</span><span class="o">:</span> <span class="mi">1</span><span class="p">,</span>
+                        <span class="s2">&quot;sticked&quot;</span><span class="o">:</span> <span class="kc">false</span><span class="p">,</span>
+                        <span class="s2">&quot;store_name&quot;</span><span class="o">:</span> <span class="s2">&quot;店铺名&quot;</span><span class="p">,</span>
+                        <span class="s2">&quot;store_rid&quot;</span><span class="o">:</span> <span class="s2">&quot;店铺编号&quot;</span><span class="p">,</span>
+                        <span class="s2">&quot;style_id&quot;</span><span class="o">:</span> <span class="s2">&quot;商品风格编号&quot;</span><span class="p">,</span>
+                        <span class="s2">&quot;style_name&quot;</span><span class="o">:</span> <span class="s2">&quot;商品风格名&quot;</span><span class="p">,</span>
+                        <span class="s2">&quot;top_category_id&quot;</span><span class="o">:</span> <span class="mi">1</span><span class="p">,</span>
+                        <span class="s2">&quot;total_stock&quot;</span><span class="o">:</span> <span class="mi">45</span>
+                    <span class="p">},</span>
+                    <span class="p">{</span>
+                        <span class="nx">同上商品基本信息</span><span class="p">...</span>
+                    <span class="p">},</span>
+                    <span class="p">{</span>
+                        <span class="nx">同上商品基本信息</span><span class="p">...</span>
+                    <span class="p">}</span>
+                <span class="p">],</span>
+                <span class="s2">&quot;rid&quot;</span><span class="o">:</span> <span class="s2">&quot;橱窗编号&quot;</span><span class="p">,</span>
+                <span class="s2">&quot;title&quot;</span><span class="o">:</span> <span class="s2">&quot;橱窗标题&quot;</span><span class="p">,</span>
+                <span class="s2">&quot;uid&quot;</span><span class="o">:</span> <span class="s2">&quot;12795683104&quot;</span><span class="p">,</span>
+                <span class="s2">&quot;user_avatar&quot;</span><span class="o">:</span> <span class="s2">&quot;http://kg.erp.taihuoniao.com/static/img/default-logo.png&quot;</span><span class="p">,</span>
+                <span class="s2">&quot;user_name&quot;</span><span class="o">:</span> <span class="s2">&quot;用户名&quot;</span>
+            <span class="p">}</span>
+        <span class="p">]</span>
+    <span class="p">},</span>
+    <span class="s2">&quot;status&quot;</span><span class="o">:</span> <span class="p">{</span>
+        <span class="s2">&quot;code&quot;</span><span class="o">:</span> <span class="mi">200</span><span class="p">,</span>
+        <span class="s2">&quot;message&quot;</span><span class="o">:</span> <span class="s2">&quot;Ok all right.&quot;</span>
+    <span class="p">},</span>
+    <span class="s2">&quot;success&quot;</span><span class="o">:</span> <span class="kc">true</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="id34">
+<h2>喜欢橱窗<a class="headerlink" href="#id34" title="永久链接至标题">¶</a></h2>
+<div class="section" id="id35">
+<h3>接口说明<a class="headerlink" href="#id35" title="永久链接至标题">¶</a></h3>
+<ul class="simple">
+<li>API接口请求地址：<code class="docutils literal"><span class="pre">/shop_windows/user_likes</span></code></li>
+<li>API接口请求方法：<code class="docutils literal"><span class="pre">POST</span></code></li>
+<li>API接口用户授权：<code class="docutils literal"><span class="pre">token</span></code></li>
+</ul>
+</div>
+<div class="section" id="id36">
+<h3>请求参数<a class="headerlink" href="#id36" title="永久链接至标题">¶</a></h3>
+<table border="1" class="docutils">
+<colgroup>
+<col width="21%" />
+<col width="14%" />
+<col width="12%" />
+<col width="14%" />
+<col width="40%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">名称</th>
+<th class="head">类型</th>
+<th class="head">是否必须</th>
+<th class="head">默认值</th>
+<th class="head">描述说明</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>rid</td>
+<td>Number</td>
+<td>必须</td>
+<td>&#160;</td>
+<td>橱窗编号</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="id37">
+<h3>返回示例<a class="headerlink" href="#id37" title="永久链接至标题">¶</a></h3>
+<p>JSON数据格式:</p>
+<div class="highlight-javascript"><div class="highlight"><pre><span></span><span class="p">{</span>
+    <span class="s2">&quot;status&quot;</span><span class="o">:</span> <span class="p">{</span>
+        <span class="s2">&quot;code&quot;</span><span class="o">:</span> <span class="mi">201</span><span class="p">,</span>
+        <span class="s2">&quot;message&quot;</span><span class="o">:</span> <span class="s2">&quot;All created.&quot;</span>
+    <span class="p">},</span>
+    <span class="s2">&quot;success&quot;</span><span class="o">:</span> <span class="kc">true</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="id38">
+<h2>删除喜欢橱窗<a class="headerlink" href="#id38" title="永久链接至标题">¶</a></h2>
+<div class="section" id="id39">
+<h3>接口说明<a class="headerlink" href="#id39" title="永久链接至标题">¶</a></h3>
+<ul class="simple">
+<li>API接口请求地址：<code class="docutils literal"><span class="pre">/shop_windows/user_likes</span></code></li>
+<li>API接口请求方法：<code class="docutils literal"><span class="pre">Delete</span></code></li>
+<li>API接口用户授权：<code class="docutils literal"><span class="pre">token</span></code></li>
+</ul>
+</div>
+<div class="section" id="id40">
+<h3>请求参数<a class="headerlink" href="#id40" title="永久链接至标题">¶</a></h3>
+<table border="1" class="docutils">
+<colgroup>
+<col width="21%" />
+<col width="14%" />
+<col width="12%" />
+<col width="14%" />
+<col width="40%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">名称</th>
+<th class="head">类型</th>
+<th class="head">是否必须</th>
+<th class="head">默认值</th>
+<th class="head">描述说明</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>rid</td>
+<td>Number</td>
+<td>必须</td>
+<td>&#160;</td>
+<td>橱窗编号</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="id41">
+<h3>返回示例<a class="headerlink" href="#id41" title="永久链接至标题">¶</a></h3>
+<p>JSON数据格式:</p>
+<div class="highlight-javascript"><div class="highlight"><pre><span></span><span class="p">{</span>
+    <span class="s2">&quot;status&quot;</span><span class="o">:</span> <span class="p">{</span>
+        <span class="s2">&quot;code&quot;</span><span class="o">:</span> <span class="mi">204</span><span class="p">,</span>
+        <span class="s2">&quot;message&quot;</span><span class="o">:</span> <span class="s2">&quot;All deleted.&quot;</span>
+    <span class="p">},</span>
+    <span class="s2">&quot;success&quot;</span><span class="o">:</span> <span class="kc">true</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="id42">
+<h2>评论橱窗<a class="headerlink" href="#id42" title="永久链接至标题">¶</a></h2>
+<div class="section" id="id43">
+<h3>接口说明<a class="headerlink" href="#id43" title="永久链接至标题">¶</a></h3>
+<ul class="simple">
+<li>API接口请求地址：<code class="docutils literal"><span class="pre">/shop_windows/comments</span></code></li>
+<li>API接口请求方法：<code class="docutils literal"><span class="pre">POST</span></code></li>
+<li>API接口用户授权：<code class="docutils literal"><span class="pre">token</span></code></li>
+</ul>
+</div>
+<div class="section" id="id44">
+<h3>请求参数<a class="headerlink" href="#id44" title="永久链接至标题">¶</a></h3>
+<table border="1" class="docutils">
+<colgroup>
+<col width="21%" />
+<col width="14%" />
+<col width="12%" />
+<col width="14%" />
+<col width="40%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">名称</th>
+<th class="head">类型</th>
+<th class="head">是否必须</th>
+<th class="head">默认值</th>
+<th class="head">描述说明</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>rid</td>
+<td>Number</td>
+<td>必须</td>
+<td>&#160;</td>
+<td>橱窗编号</td>
+</tr>
+<tr class="row-odd"><td>pid</td>
+<td>Number</td>
+<td>可选</td>
+<td>0</td>
+<td>上级评论编号</td>
+</tr>
+<tr class="row-even"><td>content</td>
+<td>String</td>
+<td>必须</td>
+<td>&#160;</td>
+<td>评论内容</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="id45">
+<h3>返回示例<a class="headerlink" href="#id45" title="永久链接至标题">¶</a></h3>
+<p>JSON数据格式:</p>
+<div class="highlight-javascript"><div class="highlight"><pre><span></span><span class="p">{</span>
+    <span class="s2">&quot;data&quot;</span><span class="o">:</span> <span class="p">{</span>
+        <span class="s2">&quot;comment_id&quot;</span><span class="o">:</span> <span class="s2">&quot;评论编号&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;content&quot;</span><span class="o">:</span> <span class="s2">&quot;评论内容&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;created_at&quot;</span><span class="o">:</span> <span class="s2">&quot;评论时间&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;is_praise&quot;</span><span class="o">:</span> <span class="s2">&quot;是否点过赞: true=点过赞,false=未点过赞&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;pid&quot;</span><span class="o">:</span> <span class="s2">&quot;上级评论编号&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;praise_count&quot;</span><span class="o">:</span> <span class="s2">&quot;评论点赞数&quot;</span>
+        <span class="s2">&quot;user_avatar&quot;</span><span class="o">:</span> <span class="s2">&quot;评论用户头像&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;user_name&quot;</span><span class="o">:</span> <span class="s2">&quot;评论用户名&quot;</span>
+    <span class="p">},</span>
+    <span class="s2">&quot;status&quot;</span><span class="o">:</span> <span class="p">{</span>
+        <span class="s2">&quot;code&quot;</span><span class="o">:</span> <span class="mi">201</span><span class="p">,</span>
+        <span class="s2">&quot;message&quot;</span><span class="o">:</span> <span class="s2">&quot;All created.&quot;</span>
+    <span class="p">},</span>
+    <span class="s2">&quot;success&quot;</span><span class="o">:</span> <span class="kc">true</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="id46">
+<h2>删除橱窗评论<a class="headerlink" href="#id46" title="永久链接至标题">¶</a></h2>
+<div class="section" id="id47">
+<h3>接口说明<a class="headerlink" href="#id47" title="永久链接至标题">¶</a></h3>
+<ul class="simple">
+<li>API接口请求地址：<code class="docutils literal"><span class="pre">/shop_windows/comments</span></code></li>
+<li>API接口请求方法：<code class="docutils literal"><span class="pre">DELETE</span></code></li>
+<li>API接口用户授权：<code class="docutils literal"><span class="pre">token</span></code></li>
+</ul>
+</div>
+<div class="section" id="id48">
+<h3>请求参数<a class="headerlink" href="#id48" title="永久链接至标题">¶</a></h3>
+<table border="1" class="docutils">
+<colgroup>
+<col width="21%" />
+<col width="14%" />
+<col width="12%" />
+<col width="14%" />
+<col width="40%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">名称</th>
+<th class="head">类型</th>
+<th class="head">是否必须</th>
+<th class="head">默认值</th>
+<th class="head">描述说明</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>rid</td>
+<td>Number</td>
+<td>必须</td>
+<td>&#160;</td>
+<td>橱窗编号</td>
+</tr>
+<tr class="row-odd"><td>comment_id</td>
+<td>Number</td>
+<td>必须</td>
+<td>&#160;</td>
+<td>评论编号</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="id49">
+<h3>返回示例<a class="headerlink" href="#id49" title="永久链接至标题">¶</a></h3>
+<p>JSON数据格式:</p>
+<div class="highlight-javascript"><div class="highlight"><pre><span></span><span class="p">{</span>
+    <span class="s2">&quot;status&quot;</span><span class="o">:</span> <span class="p">{</span>
+        <span class="s2">&quot;code&quot;</span><span class="o">:</span> <span class="mi">204</span><span class="p">,</span>
+        <span class="s2">&quot;message&quot;</span><span class="o">:</span> <span class="s2">&quot;All deleted.&quot;</span>
+    <span class="p">},</span>
+    <span class="s2">&quot;success&quot;</span><span class="o">:</span> <span class="kc">true</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="id50">
+<h2>对评论点赞<a class="headerlink" href="#id50" title="永久链接至标题">¶</a></h2>
+<div class="section" id="id51">
+<h3>接口说明<a class="headerlink" href="#id51" title="永久链接至标题">¶</a></h3>
+<ul class="simple">
+<li>API接口请求地址：<code class="docutils literal"><span class="pre">/shop_windows/comments/praises</span></code></li>
+<li>API接口请求方法：<code class="docutils literal"><span class="pre">POST</span></code></li>
+<li>API接口用户授权：<code class="docutils literal"><span class="pre">token</span></code></li>
+</ul>
+</div>
+<div class="section" id="id52">
+<h3>请求参数<a class="headerlink" href="#id52" title="永久链接至标题">¶</a></h3>
+<table border="1" class="docutils">
+<colgroup>
+<col width="21%" />
+<col width="14%" />
+<col width="12%" />
+<col width="14%" />
+<col width="40%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">名称</th>
+<th class="head">类型</th>
+<th class="head">是否必须</th>
+<th class="head">默认值</th>
+<th class="head">描述说明</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>comment_id</td>
+<td>Number</td>
+<td>必须</td>
+<td>&#160;</td>
+<td>评论编号</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="id53">
+<h3>返回示例<a class="headerlink" href="#id53" title="永久链接至标题">¶</a></h3>
+<p>JSON数据格式:</p>
+<div class="highlight-javascript"><div class="highlight"><pre><span></span><span class="p">{</span>
+    <span class="s2">&quot;status&quot;</span><span class="o">:</span> <span class="p">{</span>
+        <span class="s2">&quot;code&quot;</span><span class="o">:</span> <span class="mi">201</span><span class="p">,</span>
+        <span class="s2">&quot;message&quot;</span><span class="o">:</span> <span class="s2">&quot;All created.&quot;</span>
+    <span class="p">},</span>
+    <span class="s2">&quot;success&quot;</span><span class="o">:</span> <span class="kc">true</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="id54">
+<h2>删除评论点赞<a class="headerlink" href="#id54" title="永久链接至标题">¶</a></h2>
+<div class="section" id="id55">
+<h3>接口说明<a class="headerlink" href="#id55" title="永久链接至标题">¶</a></h3>
+<ul class="simple">
+<li>API接口请求地址：<code class="docutils literal"><span class="pre">/shop_windows/comments/praises</span></code></li>
+<li>API接口请求方法：<code class="docutils literal"><span class="pre">DELETE</span></code></li>
+<li>API接口用户授权：<code class="docutils literal"><span class="pre">token</span></code></li>
+</ul>
+</div>
+<div class="section" id="id56">
+<h3>请求参数<a class="headerlink" href="#id56" title="永久链接至标题">¶</a></h3>
+<table border="1" class="docutils">
+<colgroup>
+<col width="21%" />
+<col width="14%" />
+<col width="12%" />
+<col width="14%" />
+<col width="40%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">名称</th>
+<th class="head">类型</th>
+<th class="head">是否必须</th>
+<th class="head">默认值</th>
+<th class="head">描述说明</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>comment_id</td>
+<td>Number</td>
+<td>必须</td>
+<td>&#160;</td>
+<td>评论编号</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="id57">
+<h3>返回示例<a class="headerlink" href="#id57" title="永久链接至标题">¶</a></h3>
+<p>JSON数据格式:</p>
+<div class="highlight-javascript"><div class="highlight"><pre><span></span><span class="p">{</span>
+    <span class="s2">&quot;status&quot;</span><span class="o">:</span> <span class="p">{</span>
+        <span class="s2">&quot;code&quot;</span><span class="o">:</span> <span class="mi">204</span><span class="p">,</span>
+        <span class="s2">&quot;message&quot;</span><span class="o">:</span> <span class="s2">&quot;All deleted.&quot;</span>
+    <span class="p">},</span>
+    <span class="s2">&quot;success&quot;</span><span class="o">:</span> <span class="kc">true</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="id58">
+<h2>获取橱窗评论<a class="headerlink" href="#id58" title="永久链接至标题">¶</a></h2>
+<div class="section" id="id59">
+<h3>接口说明<a class="headerlink" href="#id59" title="永久链接至标题">¶</a></h3>
+<ul class="simple">
+<li>API接口请求地址：<code class="docutils literal"><span class="pre">/shop_windows/comments</span></code></li>
+<li>API接口请求方法：<code class="docutils literal"><span class="pre">GET</span></code></li>
+</ul>
+</div>
+<div class="section" id="id60">
+<h3>请求参数<a class="headerlink" href="#id60" title="永久链接至标题">¶</a></h3>
+<table border="1" class="docutils">
+<colgroup>
+<col width="17%" />
+<col width="11%" />
+<col width="10%" />
+<col width="11%" />
+<col width="50%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">名称</th>
+<th class="head">类型</th>
+<th class="head">是否必须</th>
+<th class="head">默认值</th>
+<th class="head">描述说明</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>page</td>
+<td>Number</td>
+<td>可选</td>
+<td>1</td>
+<td>当前页码</td>
+</tr>
+<tr class="row-odd"><td>per_page</td>
+<td>Number</td>
+<td>可选</td>
+<td>10</td>
+<td>每页数量</td>
+</tr>
+<tr class="row-even"><td>sort_type</td>
+<td>Number</td>
+<td>可选</td>
+<td>0</td>
+<td>排序方式： 0=默认， 1=按点赞数， 2=按回复数</td>
+</tr>
+<tr class="row-odd"><td>rid</td>
+<td>Number</td>
+<td>必须</td>
+<td>&#160;</td>
+<td>橱窗编号</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="id61">
+<h3>返回示例<a class="headerlink" href="#id61" title="永久链接至标题">¶</a></h3>
+<p>JSON数据格式:</p>
+<div class="highlight-javascript"><div class="highlight"><pre><span></span><span class="p">{</span>
+    <span class="s2">&quot;data&quot;</span><span class="o">:</span> <span class="p">{</span>
+        <span class="s2">&quot;comments&quot;</span><span class="o">:</span> <span class="p">[</span>
+            <span class="p">{</span>
+                <span class="s2">&quot;comment_id&quot;</span><span class="o">:</span> <span class="mi">1</span><span class="p">,</span>
+                <span class="s2">&quot;content&quot;</span><span class="o">:</span> <span class="s2">&quot;评论&quot;</span><span class="p">,</span>
+                <span class="s2">&quot;created_at&quot;</span><span class="o">:</span> <span class="mi">1533095600</span><span class="p">,</span>
+                <span class="s2">&quot;is_praise&quot;</span><span class="o">:</span> <span class="kc">true</span><span class="p">,</span>
+                <span class="s2">&quot;pid&quot;</span><span class="o">:</span> <span class="mi">0</span><span class="p">,</span>
+                <span class="s2">&quot;praise_count&quot;</span><span class="o">:</span> <span class="mi">1</span><span class="p">,</span>
+                <span class="s2">&quot;sub_comment_count&quot;</span><span class="o">:</span> <span class="mi">4</span><span class="p">,</span>
+                <span class="s2">&quot;sub_comments&quot;</span><span class="o">:</span> <span class="p">[</span>
+                    <span class="p">{</span>
+                        <span class="s2">&quot;comment_id&quot;</span><span class="o">:</span> <span class="mi">14</span><span class="p">,</span>
+                        <span class="s2">&quot;content&quot;</span><span class="o">:</span> <span class="s2">&quot;评论内容&quot;</span><span class="p">,</span>
+                        <span class="s2">&quot;created_at&quot;</span><span class="o">:</span> <span class="mi">1533557451</span><span class="p">,</span>
+                        <span class="s2">&quot;is_praise&quot;</span><span class="o">:</span> <span class="kc">false</span><span class="p">,</span>
+                        <span class="s2">&quot;pid&quot;</span><span class="o">:</span> <span class="mi">1</span><span class="p">,</span>
+                        <span class="s2">&quot;praise_count&quot;</span><span class="o">:</span> <span class="mi">0</span><span class="p">,</span>
+                        <span class="s2">&quot;user_avatar&quot;</span><span class="o">:</span> <span class="s2">&quot;http://kg.erp.taihuoniao.com/static/img/default-logo.png&quot;</span><span class="p">,</span>
+                        <span class="s2">&quot;user_name&quot;</span><span class="o">:</span> <span class="s2">&quot;评论用户名&quot;</span>
+                    <span class="p">},</span>
+                    <span class="p">{</span>
+                        <span class="s2">&quot;comment_id&quot;</span><span class="o">:</span> <span class="mi">13</span><span class="p">,</span>
+                        <span class="s2">&quot;content&quot;</span><span class="o">:</span> <span class="s2">&quot;订单！！！&quot;</span><span class="p">,</span>
+                        <span class="s2">&quot;created_at&quot;</span><span class="o">:</span> <span class="mi">1533095638</span><span class="p">,</span>
+                        <span class="s2">&quot;is_praise&quot;</span><span class="o">:</span> <span class="kc">false</span><span class="p">,</span>
+                        <span class="s2">&quot;pid&quot;</span><span class="o">:</span> <span class="mi">1</span><span class="p">,</span>
+                        <span class="s2">&quot;praise_count&quot;</span><span class="o">:</span> <span class="mi">0</span><span class="p">,</span>
+                        <span class="s2">&quot;user_avatar&quot;</span><span class="o">:</span> <span class="s2">&quot;http://kg.erp.taihuoniao.com/static/img/default-logo.png&quot;</span><span class="p">,</span>
+                        <span class="s2">&quot;user_name&quot;</span><span class="o">:</span> <span class="s2">&quot;商品棒棒棒(作者)&quot;</span>
+                    <span class="p">}</span>
+                <span class="p">],</span>
+                <span class="s2">&quot;user_avatar&quot;</span><span class="o">:</span> <span class="s2">&quot;http://kg.erp.taihuoniao.com/static/img/default-logo.png&quot;</span><span class="p">,</span>
+                <span class="s2">&quot;user_name&quot;</span><span class="o">:</span> <span class="s2">&quot;评论用户名&quot;</span>
+            <span class="p">},</span>
+            <span class="p">{</span>
+                <span class="s2">&quot;comment_id&quot;</span><span class="o">:</span> <span class="mi">2</span><span class="p">,</span>
+                <span class="s2">&quot;content&quot;</span><span class="o">:</span> <span class="s2">&quot;评论&quot;</span><span class="p">,</span>
+                <span class="s2">&quot;created_at&quot;</span><span class="o">:</span> <span class="mi">1533095600</span><span class="p">,</span>
+                <span class="s2">&quot;is_praise&quot;</span><span class="o">:</span> <span class="kc">false</span><span class="p">,</span>
+                <span class="s2">&quot;pid&quot;</span><span class="o">:</span> <span class="mi">0</span><span class="p">,</span>
+                <span class="s2">&quot;praise_count&quot;</span><span class="o">:</span> <span class="mi">0</span><span class="p">,</span>
+                <span class="s2">&quot;user_avatar&quot;</span><span class="o">:</span> <span class="s2">&quot;http://kg.erp.taihuoniao.com/static/img/default-logo.png&quot;</span><span class="p">,</span>
+                <span class="s2">&quot;user_name&quot;</span><span class="o">:</span> <span class="s2">&quot;评论用户名&quot;</span>
+            <span class="p">}</span>
+        <span class="p">],</span>
+        <span class="s2">&quot;count&quot;</span><span class="o">:</span> <span class="mi">2</span><span class="p">,</span>
+        <span class="s2">&quot;next&quot;</span><span class="o">:</span> <span class="kc">false</span><span class="p">,</span>
+        <span class="s2">&quot;prev&quot;</span><span class="o">:</span> <span class="kc">false</span>
+    <span class="p">},</span>
+    <span class="s2">&quot;status&quot;</span><span class="o">:</span> <span class="p">{</span>
+        <span class="s2">&quot;code&quot;</span><span class="o">:</span> <span class="mi">200</span><span class="p">,</span>
+        <span class="s2">&quot;message&quot;</span><span class="o">:</span> <span class="s2">&quot;Ok all right.&quot;</span>
+    <span class="p">},</span>
+    <span class="s2">&quot;success&quot;</span><span class="o">:</span> <span class="kc">true</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="id62">
+<h2>获取评论的子评论<a class="headerlink" href="#id62" title="永久链接至标题">¶</a></h2>
+<div class="section" id="id63">
+<h3>接口说明<a class="headerlink" href="#id63" title="永久链接至标题">¶</a></h3>
+<ul class="simple">
+<li>API接口请求地址：<code class="docutils literal"><span class="pre">/shop_windows/child_comments</span></code></li>
+<li>API接口请求方法：<code class="docutils literal"><span class="pre">GET</span></code></li>
+</ul>
+</div>
+<div class="section" id="id64">
+<h3>请求参数<a class="headerlink" href="#id64" title="永久链接至标题">¶</a></h3>
+<table border="1" class="docutils">
+<colgroup>
+<col width="17%" />
+<col width="11%" />
+<col width="10%" />
+<col width="11%" />
+<col width="50%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">名称</th>
+<th class="head">类型</th>
+<th class="head">是否必须</th>
+<th class="head">默认值</th>
+<th class="head">描述说明</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>page</td>
+<td>Number</td>
+<td>可选</td>
+<td>1</td>
+<td>当前页码</td>
+</tr>
+<tr class="row-odd"><td>per_page</td>
+<td>Number</td>
+<td>可选</td>
+<td>10</td>
+<td>每页数量</td>
+</tr>
+<tr class="row-even"><td>sort_type</td>
+<td>Number</td>
+<td>可选</td>
+<td>0</td>
+<td>排序方式： 0=默认， 1=按点赞数， 2=按回复数</td>
+</tr>
+<tr class="row-odd"><td>pid</td>
+<td>Number</td>
+<td>必须</td>
+<td>&#160;</td>
+<td>父级评论编号</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="id65">
+<h3>返回示例<a class="headerlink" href="#id65" title="永久链接至标题">¶</a></h3>
+<p>JSON数据格式:</p>
+<div class="highlight-javascript"><div class="highlight"><pre><span></span><span class="p">{</span>
+    <span class="s2">&quot;data&quot;</span><span class="o">:</span> <span class="p">{</span>
+        <span class="s2">&quot;comments&quot;</span><span class="o">:</span> <span class="p">[</span>
+            <span class="p">{</span>
+                <span class="s2">&quot;comment_id&quot;</span><span class="o">:</span> <span class="mi">7</span><span class="p">,</span>
+                <span class="s2">&quot;content&quot;</span><span class="o">:</span> <span class="s2">&quot;评论&quot;</span><span class="p">,</span>
+                <span class="s2">&quot;created_at&quot;</span><span class="o">:</span> <span class="mi">1533095600</span><span class="p">,</span>
+                <span class="s2">&quot;is_praise&quot;</span><span class="o">:</span> <span class="kc">false</span><span class="p">,</span>
+                <span class="s2">&quot;pid&quot;</span><span class="o">:</span> <span class="mi">2</span><span class="p">,</span>
+                <span class="s2">&quot;praise_count&quot;</span><span class="o">:</span> <span class="mi">0</span><span class="p">,</span>
+                <span class="s2">&quot;user_avatar&quot;</span><span class="o">:</span> <span class="s2">&quot;http://kg.erp.taihuoniao.com/static/img/default-logo.png&quot;</span><span class="p">,</span>
+                <span class="s2">&quot;user_name&quot;</span><span class="o">:</span> <span class="s2">&quot;评论用户名&quot;</span>
+            <span class="p">},</span>
+            <span class="p">{</span>
+                <span class="s2">&quot;comment_id&quot;</span><span class="o">:</span> <span class="mi">8</span><span class="p">,</span>
+                <span class="s2">&quot;content&quot;</span><span class="o">:</span> <span class="s2">&quot;评论&quot;</span><span class="p">,</span>
+                <span class="s2">&quot;created_at&quot;</span><span class="o">:</span> <span class="mi">1533095600</span><span class="p">,</span>
+                <span class="s2">&quot;is_praise&quot;</span><span class="o">:</span> <span class="kc">false</span><span class="p">,</span>
+                <span class="s2">&quot;pid&quot;</span><span class="o">:</span> <span class="mi">2</span><span class="p">,</span>
+                <span class="s2">&quot;praise_count&quot;</span><span class="o">:</span> <span class="mi">0</span><span class="p">,</span>
+                <span class="s2">&quot;user_avatar&quot;</span><span class="o">:</span> <span class="s2">&quot;http://kg.erp.taihuoniao.com/static/img/default-logo.png&quot;</span><span class="p">,</span>
+                <span class="s2">&quot;user_name&quot;</span><span class="o">:</span> <span class="s2">&quot;评论用户名&quot;</span>
+            <span class="p">}</span>
+        <span class="p">],</span>
+        <span class="s2">&quot;count&quot;</span><span class="o">:</span> <span class="mi">4</span><span class="p">,</span>
+        <span class="s2">&quot;next&quot;</span><span class="o">:</span> <span class="kc">false</span><span class="p">,</span>
+        <span class="s2">&quot;prev&quot;</span><span class="o">:</span> <span class="kc">false</span>
+    <span class="p">},</span>
+    <span class="s2">&quot;status&quot;</span><span class="o">:</span> <span class="p">{</span>
+        <span class="s2">&quot;code&quot;</span><span class="o">:</span> <span class="mi">200</span><span class="p">,</span>
+        <span class="s2">&quot;message&quot;</span><span class="o">:</span> <span class="s2">&quot;Ok all right.&quot;</span>
+    <span class="p">},</span>
+    <span class="s2">&quot;success&quot;</span><span class="o">:</span> <span class="kc">true</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="id66">
+<h2>橱窗可选商品列表<a class="headerlink" href="#id66" title="永久链接至标题">¶</a></h2>
+<p>获取用户添加喜欢和心愿单的商品</p>
+<div class="section" id="id67">
+<h3>接口说明<a class="headerlink" href="#id67" title="永久链接至标题">¶</a></h3>
+<ul class="simple">
+<li>API接口请求地址：<code class="docutils literal"><span class="pre">/shop_windows/optional_products</span></code></li>
+<li>API接口请求方法：<code class="docutils literal"><span class="pre">GET</span></code></li>
+</ul>
+</div>
+<div class="section" id="id68">
+<h3>请求参数<a class="headerlink" href="#id68" title="永久链接至标题">¶</a></h3>
+<table border="1" class="docutils">
+<colgroup>
+<col width="21%" />
+<col width="14%" />
+<col width="12%" />
+<col width="14%" />
+<col width="40%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">名称</th>
+<th class="head">类型</th>
+<th class="head">是否必须</th>
+<th class="head">默认值</th>
+<th class="head">描述说明</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>page</td>
+<td>Number</td>
+<td>可选</td>
+<td>1</td>
+<td>当前页码</td>
+</tr>
+<tr class="row-odd"><td>per_page</td>
+<td>Number</td>
+<td>可选</td>
+<td>10</td>
+<td>每页数量</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="id69">
+<h3>返回示例<a class="headerlink" href="#id69" title="永久链接至标题">¶</a></h3>
+<p>JSON数据格式:</p>
+<div class="highlight-javascript"><div class="highlight"><pre><span></span><span class="p">{</span>
+    <span class="s2">&quot;data&quot;</span><span class="o">:</span> <span class="p">{</span>
+        <span class="s2">&quot;count&quot;</span><span class="o">:</span> <span class="mi">4</span><span class="p">,</span>
+        <span class="s2">&quot;next&quot;</span><span class="o">:</span> <span class="kc">false</span><span class="p">,</span>
+        <span class="s2">&quot;prev&quot;</span><span class="o">:</span> <span class="kc">false</span><span class="p">,</span>
+        <span class="s2">&quot;products&quot;</span><span class="o">:</span> <span class="p">[</span>
+            <span class="p">{</span>
+                <span class="nx">商品基本信息</span><span class="p">...</span>
+            <span class="p">},</span>
+            <span class="p">{</span>
+                <span class="nx">商品基本信息</span><span class="p">...</span>
+            <span class="p">},</span>
+            <span class="p">{</span>
+                <span class="nx">商品基本信息</span><span class="p">...</span>
+            <span class="p">},</span>
+            <span class="p">{</span>
+                <span class="nx">商品基本信息</span><span class="p">...</span>
+            <span class="p">}</span>
+        <span class="p">]</span>
+    <span class="p">},</span>
+    <span class="s2">&quot;status&quot;</span><span class="o">:</span> <span class="p">{</span>
+        <span class="s2">&quot;code&quot;</span><span class="o">:</span> <span class="mi">200</span><span class="p">,</span>
+        <span class="s2">&quot;message&quot;</span><span class="o">:</span> <span class="s2">&quot;Ok all right.&quot;</span>
+    <span class="p">},</span>
+    <span class="s2">&quot;success&quot;</span><span class="o">:</span> <span class="kc">true</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="id70">
+<h2>橱窗可选商品列表<a class="headerlink" href="#id70" title="永久链接至标题">¶</a></h2>
+<p>获取用户添加喜欢和心愿单的商品</p>
+<div class="section" id="id71">
+<h3>接口说明<a class="headerlink" href="#id71" title="永久链接至标题">¶</a></h3>
+<ul class="simple">
+<li>API接口请求地址：<code class="docutils literal"><span class="pre">/shop_windows/optional_products</span></code></li>
+<li>API接口请求方法：<code class="docutils literal"><span class="pre">GET</span></code></li>
+</ul>
+</div>
+<div class="section" id="id72">
+<h3>请求参数<a class="headerlink" href="#id72" title="永久链接至标题">¶</a></h3>
+<table border="1" class="docutils">
+<colgroup>
+<col width="21%" />
+<col width="14%" />
+<col width="12%" />
+<col width="14%" />
+<col width="40%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">名称</th>
+<th class="head">类型</th>
+<th class="head">是否必须</th>
+<th class="head">默认值</th>
+<th class="head">描述说明</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>page</td>
+<td>Number</td>
+<td>可选</td>
+<td>1</td>
+<td>当前页码</td>
+</tr>
+<tr class="row-odd"><td>per_page</td>
+<td>Number</td>
+<td>可选</td>
+<td>10</td>
+<td>每页数量</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="id73">
+<h3>返回示例<a class="headerlink" href="#id73" title="永久链接至标题">¶</a></h3>
+<p>JSON数据格式:</p>
+<div class="highlight-javascript"><div class="highlight"><pre><span></span><span class="p">{</span>
+    <span class="s2">&quot;data&quot;</span><span class="o">:</span> <span class="p">{</span>
+        <span class="s2">&quot;count&quot;</span><span class="o">:</span> <span class="mi">4</span><span class="p">,</span>
+        <span class="s2">&quot;next&quot;</span><span class="o">:</span> <span class="kc">false</span><span class="p">,</span>
+        <span class="s2">&quot;prev&quot;</span><span class="o">:</span> <span class="kc">false</span><span class="p">,</span>
+        <span class="s2">&quot;products&quot;</span><span class="o">:</span> <span class="p">[</span>
+            <span class="p">{</span>
+                <span class="nx">商品基本信息</span><span class="p">...</span>
+            <span class="p">},</span>
+            <span class="p">{</span>
+                <span class="nx">商品基本信息</span><span class="p">...</span>
+            <span class="p">},</span>
+            <span class="p">{</span>
+                <span class="nx">商品基本信息</span><span class="p">...</span>
+            <span class="p">},</span>
+            <span class="p">{</span>
+                <span class="nx">商品基本信息</span><span class="p">...</span>
+            <span class="p">}</span>
+        <span class="p">]</span>
+    <span class="p">},</span>
+    <span class="s2">&quot;status&quot;</span><span class="o">:</span> <span class="p">{</span>
+        <span class="s2">&quot;code&quot;</span><span class="o">:</span> <span class="mi">200</span><span class="p">,</span>
+        <span class="s2">&quot;message&quot;</span><span class="o">:</span> <span class="s2">&quot;Ok all right.&quot;</span>
+    <span class="p">},</span>
+    <span class="s2">&quot;success&quot;</span><span class="o">:</span> <span class="kc">true</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="id74">
+<h2>猜你喜欢<a class="headerlink" href="#id74" title="永久链接至标题">¶</a></h2>
+<div class="section" id="id75">
+<h3>接口说明<a class="headerlink" href="#id75" title="永久链接至标题">¶</a></h3>
+<ul class="simple">
+<li>API接口请求地址：<code class="docutils literal"><span class="pre">/shop_windows/guess_like</span></code></li>
+<li>API接口请求方法：<code class="docutils literal"><span class="pre">GET</span></code></li>
+<li>API接口用户授权：<code class="docutils literal"><span class="pre">token</span></code></li>
+</ul>
+</div>
+<div class="section" id="id76">
+<h3>请求参数<a class="headerlink" href="#id76" title="永久链接至标题">¶</a></h3>
+<table border="1" class="docutils">
+<colgroup>
+<col width="21%" />
+<col width="14%" />
+<col width="12%" />
+<col width="14%" />
+<col width="40%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">名称</th>
+<th class="head">类型</th>
+<th class="head">是否必须</th>
+<th class="head">默认值</th>
+<th class="head">描述说明</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>page</td>
+<td>Number</td>
+<td>可选</td>
+<td>1</td>
+<td>当前页码</td>
+</tr>
+<tr class="row-odd"><td>per_page</td>
+<td>Number</td>
+<td>可选</td>
+<td>10</td>
+<td>每页数量</td>
+</tr>
+<tr class="row-even"><td>rid</td>
+<td>Number</td>
+<td>必须</td>
+<td>&#160;</td>
+<td>当前浏览的橱窗编号</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="id77">
+<h3>返回示例<a class="headerlink" href="#id77" title="永久链接至标题">¶</a></h3>
+<p>JSON数据格式:</p>
+<div class="highlight-javascript"><div class="highlight"><pre><span></span><span class="p">{</span>
+    <span class="s2">&quot;data&quot;</span><span class="o">:</span> <span class="p">{</span>
+        <span class="s2">&quot;count&quot;</span><span class="o">:</span> <span class="mi">4</span><span class="p">,</span>
+        <span class="s2">&quot;next&quot;</span><span class="o">:</span> <span class="kc">false</span><span class="p">,</span>
+        <span class="s2">&quot;prev&quot;</span><span class="o">:</span> <span class="kc">false</span><span class="p">,</span>
+        <span class="s2">&quot;products&quot;</span><span class="o">:</span> <span class="p">[</span>
+            <span class="p">{</span>
+                <span class="nx">商品基本信息</span><span class="p">...</span>
+            <span class="p">},</span>
+            <span class="p">{</span>
+                <span class="nx">商品基本信息</span><span class="p">...</span>
+            <span class="p">},</span>
+            <span class="p">{</span>
+                <span class="nx">商品基本信息</span><span class="p">...</span>
+            <span class="p">},</span>
+            <span class="p">{</span>
+                <span class="nx">商品基本信息</span><span class="p">...</span>
+            <span class="p">}</span>
+        <span class="p">]</span>
+    <span class="p">},</span>
+    <span class="s2">&quot;status&quot;</span><span class="o">:</span> <span class="p">{</span>
+        <span class="s2">&quot;code&quot;</span><span class="o">:</span> <span class="mi">200</span><span class="p">,</span>
+        <span class="s2">&quot;message&quot;</span><span class="o">:</span> <span class="s2">&quot;Ok all right.&quot;</span>
+    <span class="p">},</span>
+    <span class="s2">&quot;success&quot;</span><span class="o">:</span> <span class="kc">true</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="id78">
+<h2>相似橱窗<a class="headerlink" href="#id78" title="永久链接至标题">¶</a></h2>
+<div class="section" id="id79">
+<h3>接口说明<a class="headerlink" href="#id79" title="永久链接至标题">¶</a></h3>
+<ul class="simple">
+<li>API接口请求地址：<code class="docutils literal"><span class="pre">/shop_windows/similar</span></code></li>
+<li>API接口请求方法：<code class="docutils literal"><span class="pre">GET</span></code></li>
+<li>API接口用户授权：<code class="docutils literal"><span class="pre">token</span></code></li>
+</ul>
+</div>
+<div class="section" id="id80">
+<h3>请求参数<a class="headerlink" href="#id80" title="永久链接至标题">¶</a></h3>
+<table border="1" class="docutils">
+<colgroup>
+<col width="21%" />
+<col width="14%" />
+<col width="12%" />
+<col width="14%" />
+<col width="40%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">名称</th>
+<th class="head">类型</th>
+<th class="head">是否必须</th>
+<th class="head">默认值</th>
+<th class="head">描述说明</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>page</td>
+<td>Number</td>
+<td>可选</td>
+<td>1</td>
+<td>当前页码</td>
+</tr>
+<tr class="row-odd"><td>per_page</td>
+<td>Number</td>
+<td>可选</td>
+<td>10</td>
+<td>每页数量</td>
+</tr>
+<tr class="row-even"><td>rid</td>
+<td>Number</td>
+<td>必须</td>
+<td>&#160;</td>
+<td>当前浏览的橱窗编号</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="id81">
+<h3>返回示例<a class="headerlink" href="#id81" title="永久链接至标题">¶</a></h3>
+<p>JSON数据格式:</p>
+<div class="highlight-javascript"><div class="highlight"><pre><span></span><span class="p">{</span>
+    <span class="s2">&quot;data&quot;</span><span class="o">:</span> <span class="p">{</span>
+        <span class="s2">&quot;count&quot;</span><span class="o">:</span> <span class="mi">8</span><span class="p">,</span>
+        <span class="s2">&quot;next&quot;</span><span class="o">:</span> <span class="kc">false</span><span class="p">,</span>
+        <span class="s2">&quot;prev&quot;</span><span class="o">:</span> <span class="kc">false</span><span class="p">,</span>
+        <span class="s2">&quot;shop_windows&quot;</span><span class="o">:</span> <span class="p">[</span>
+            <span class="p">{</span>
+                <span class="s2">&quot;comment_count&quot;</span><span class="o">:</span> <span class="s2">&quot;评论数&quot;</span><span class="p">,</span>
+                <span class="s2">&quot;description&quot;</span><span class="o">:</span> <span class="s2">&quot;橱窗详情&quot;</span><span class="p">,</span>
+                <span class="s2">&quot;is_follow&quot;</span><span class="o">:</span> <span class="s2">&quot;是否关注过该橱窗&quot;</span><span class="p">,</span>
+                <span class="s2">&quot;is_official&quot;</span><span class="o">:</span> <span class="s2">&quot;是否官方橱窗&quot;</span><span class="p">,</span>
+                <span class="s2">&quot;keywords&quot;</span><span class="o">:</span> <span class="p">[</span>
+                    <span class="s2">&quot;橱窗关键词一&quot;</span><span class="p">,</span>
+                    <span class="s2">&quot;橱窗关键词二&quot;</span>
+                <span class="p">],</span>
+                <span class="s2">&quot;like_count&quot;</span><span class="o">:</span> <span class="s2">&quot;橱窗喜欢数&quot;</span><span class="p">,</span>
+                <span class="s2">&quot;product_count&quot;</span><span class="o">:</span> <span class="mi">5</span><span class="p">,</span>
+                <span class="s2">&quot;product_covers&quot;</span><span class="o">:</span> <span class="p">[</span>
+                    <span class="s2">&quot;http://127.0.0.1:9000/_uploads/photos/180718/f1a30ad8b52107c.gif&quot;</span><span class="p">,</span>
+                    <span class="s2">&quot;http://127.0.0.1:9000/_uploads/photos/180718/f1a30ad8b52107c.gif&quot;</span><span class="p">,</span>
+                    <span class="s2">&quot;http://127.0.0.1:9000/_uploads/photos/180718/f1a30ad8b52107c.gif&quot;</span><span class="p">,</span>
+                    <span class="s2">&quot;http://127.0.0.1:9000/_uploads/photos/180707/77409c8ab9b0abf.jpg&quot;</span><span class="p">,</span>
+                    <span class="s2">&quot;http://127.0.0.1:9000/_uploads/photos/180707/77409c8ab9b0abf.jpg&quot;</span>
+                <span class="p">],</span>
+                <span class="s2">&quot;products&quot;</span><span class="o">:</span> <span class="p">[</span>
+                    <span class="p">{</span>
+                        <span class="s2">&quot;category_id&quot;</span><span class="o">:</span> <span class="mi">18</span><span class="p">,</span>
+                        <span class="s2">&quot;commission_price&quot;</span><span class="o">:</span> <span class="mf">846.89</span><span class="p">,</span>
+                        <span class="s2">&quot;commission_rate&quot;</span><span class="o">:</span> <span class="mf">24.5</span><span class="p">,</span>
+                        <span class="s2">&quot;cover&quot;</span><span class="o">:</span> <span class="s2">&quot;http://127.0.0.1:9000/_uploads/photos/180710/fbba50f0da91a7a.jpg&quot;</span><span class="p">,</span>
+                        <span class="s2">&quot;cover_id&quot;</span><span class="o">:</span> <span class="mi">10</span><span class="p">,</span>
+                        <span class="s2">&quot;custom_details&quot;</span><span class="o">:</span> <span class="s2">&quot;可以刻名字,生辰八字&quot;</span><span class="p">,</span>
+                        <span class="s2">&quot;delivery_country&quot;</span><span class="o">:</span> <span class="s2">&quot;&quot;</span><span class="p">,</span>
+                        <span class="s2">&quot;delivery_country_id&quot;</span><span class="o">:</span> <span class="kc">null</span><span class="p">,</span>
+                        <span class="s2">&quot;features&quot;</span><span class="o">:</span> <span class="s2">&quot;获得更多的成长值，加速商铺成长获取更多特权：发布三星级及以上的产品可以获得与星级数量等额的成长值，每日上限为20点；&quot;</span><span class="p">,</span>
+                        <span class="s2">&quot;have_distributed&quot;</span><span class="o">:</span> <span class="kc">true</span><span class="p">,</span>
+                        <span class="s2">&quot;id_code&quot;</span><span class="o">:</span> <span class="s2">&quot;&quot;</span><span class="p">,</span>
+                        <span class="s2">&quot;is_custom_made&quot;</span><span class="o">:</span> <span class="kc">true</span><span class="p">,</span>
+                        <span class="s2">&quot;is_custom_service&quot;</span><span class="o">:</span> <span class="kc">true</span><span class="p">,</span>
+                        <span class="s2">&quot;is_distributed&quot;</span><span class="o">:</span> <span class="kc">true</span><span class="p">,</span>
+                        <span class="s2">&quot;is_free_postage&quot;</span><span class="o">:</span> <span class="kc">false</span><span class="p">,</span>
+                        <span class="s2">&quot;is_made_holiday&quot;</span><span class="o">:</span> <span class="kc">false</span><span class="p">,</span>
+                        <span class="s2">&quot;is_proprietary&quot;</span><span class="o">:</span> <span class="kc">false</span><span class="p">,</span>
+                        <span class="s2">&quot;is_sold_out&quot;</span><span class="o">:</span> <span class="kc">false</span><span class="p">,</span>
+                        <span class="s2">&quot;like_count&quot;</span><span class="o">:</span> <span class="mi">1</span><span class="p">,</span>
+                        <span class="s2">&quot;made_cycle&quot;</span><span class="o">:</span> <span class="mi">5</span><span class="p">,</span>
+                        <span class="s2">&quot;material_id&quot;</span><span class="o">:</span> <span class="mi">4</span><span class="p">,</span>
+                        <span class="s2">&quot;material_name&quot;</span><span class="o">:</span> <span class="s2">&quot;毛线&quot;</span><span class="p">,</span>
+                        <span class="s2">&quot;max_price&quot;</span><span class="o">:</span> <span class="mf">5456.7</span><span class="p">,</span>
+                        <span class="s2">&quot;max_sale_price&quot;</span><span class="o">:</span> <span class="mi">0</span><span class="p">,</span>
+                        <span class="s2">&quot;min_price&quot;</span><span class="o">:</span> <span class="mf">3234.5</span><span class="p">,</span>
+                        <span class="s2">&quot;min_sale_price&quot;</span><span class="o">:</span> <span class="mi">2245</span><span class="p">,</span>
+                        <span class="s2">&quot;modes&quot;</span><span class="o">:</span> <span class="p">[</span>
+                            <span class="s2">&quot;3*1 白色&quot;</span><span class="p">,</span>
+                            <span class="s2">&quot;3*2 绿色&quot;</span><span class="p">,</span>
+                            <span class="s2">&quot;3*3 紫色&quot;</span>
+                        <span class="p">],</span>
+                        <span class="s2">&quot;name&quot;</span><span class="o">:</span> <span class="s2">&quot;商品名&quot;</span><span class="p">,</span>
+                        <span class="s2">&quot;published_at&quot;</span><span class="o">:</span> <span class="mi">1531213666</span><span class="p">,</span>
+                        <span class="s2">&quot;real_price&quot;</span><span class="o">:</span> <span class="mf">5456.7</span><span class="p">,</span>
+                        <span class="s2">&quot;real_sale_price&quot;</span><span class="o">:</span> <span class="mi">0</span><span class="p">,</span>
+                        <span class="s2">&quot;rid&quot;</span><span class="o">:</span> <span class="s2">&quot;8479032186&quot;</span><span class="p">,</span>
+                        <span class="s2">&quot;second_category_id&quot;</span><span class="o">:</span> <span class="mi">17</span><span class="p">,</span>
+                        <span class="s2">&quot;status&quot;</span><span class="o">:</span> <span class="mi">1</span><span class="p">,</span>
+                        <span class="s2">&quot;sticked&quot;</span><span class="o">:</span> <span class="kc">false</span><span class="p">,</span>
+                        <span class="s2">&quot;store_name&quot;</span><span class="o">:</span> <span class="s2">&quot;店铺名&quot;</span><span class="p">,</span>
+                        <span class="s2">&quot;store_rid&quot;</span><span class="o">:</span> <span class="s2">&quot;店铺编号&quot;</span><span class="p">,</span>
+                        <span class="s2">&quot;style_id&quot;</span><span class="o">:</span> <span class="s2">&quot;商品风格编号&quot;</span><span class="p">,</span>
+                        <span class="s2">&quot;style_name&quot;</span><span class="o">:</span> <span class="s2">&quot;商品风格名&quot;</span><span class="p">,</span>
+                        <span class="s2">&quot;top_category_id&quot;</span><span class="o">:</span> <span class="mi">1</span><span class="p">,</span>
+                        <span class="s2">&quot;total_stock&quot;</span><span class="o">:</span> <span class="mi">45</span>
+                    <span class="p">},</span>
+                    <span class="p">{</span>
+                        <span class="nx">同上商品基本信息</span><span class="p">...</span>
+                    <span class="p">},</span>
+                    <span class="p">{</span>
+                        <span class="nx">同上商品基本信息</span><span class="p">...</span>
+                    <span class="p">}</span>
+                <span class="p">],</span>
+                <span class="s2">&quot;rid&quot;</span><span class="o">:</span> <span class="s2">&quot;橱窗编号&quot;</span><span class="p">,</span>
+                <span class="s2">&quot;title&quot;</span><span class="o">:</span> <span class="s2">&quot;橱窗标题&quot;</span><span class="p">,</span>
+                <span class="s2">&quot;user_avatar&quot;</span><span class="o">:</span> <span class="s2">&quot;http://kg.erp.taihuoniao.com/static/img/default-logo.png&quot;</span><span class="p">,</span>
+                <span class="s2">&quot;user_name&quot;</span><span class="o">:</span> <span class="s2">&quot;用户名&quot;</span>
+            <span class="p">}</span>
+        <span class="p">]</span>
+    <span class="p">},</span>
+    <span class="s2">&quot;status&quot;</span><span class="o">:</span> <span class="p">{</span>
+        <span class="s2">&quot;code&quot;</span><span class="o">:</span> <span class="mi">200</span><span class="p">,</span>
+        <span class="s2">&quot;message&quot;</span><span class="o">:</span> <span class="s2">&quot;Ok all right.&quot;</span>
+    <span class="p">},</span>
+    <span class="s2">&quot;success&quot;</span><span class="o">:</span> <span class="kc">true</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+
+
+    </div>
+      
+  </div>
+</div>
+<footer class="footer">
+    <div class="container">
+        <p>© Copyright 2018 moebeast.com.</p>
+        <p>Created using <a href="http://sphinx.pocoo.org/" target="_blank">Sphinx</a>.</p>
+    </div>
+</footer>
+
+  </body>
+</html>
