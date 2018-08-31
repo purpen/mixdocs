@@ -166,6 +166,7 @@ JSON数据格式:
             "buyer_remark": "哈哈哈",  // 买家备注
             "payed_at": 12321312,  // 付款时间
             "received_at": 12321312,  // 签收时间
+            "is_many_express": false, // 是否多物流公司发货
             "items": [
                 {
 
@@ -351,6 +352,7 @@ JSON数据格式:
                     "buyer_remark": "哈哈哈",  // 买家备注
                     "payed_at": 12321312,  // 付款时间
                     "received_at": 12321312,  // 签收时间
+                    "is_many_express": false, // 是否多物流公司发货
                     "items": [
                         {
                             "order_sku_commission_price": 6,// 分销佣金
@@ -587,6 +589,7 @@ JSON数据格式:
                 "buyer_remark": "哈哈哈",  // 买家备注
                 "payed_at": 12321312,  // 付款时间
                 "received_at": 12321312,  // 签收时间
+                "is_many_express": false, // 是否多物流公司发货
                 "items": [
                     {
                         "order_sku_commission_price": 6,// 分销佣金
@@ -732,6 +735,7 @@ JSON数据格式:
                     "buyer_remark": "哈哈哈",  // 买家备注
                     "payed_at": 12321312,  // 付款时间
                     "received_at": 12321312,  // 签收时间
+                    "is_many_express": false, // 是否多物流公司发货
                     "items": [
                         {
                             "order_sku_commission_price": 6,// 分销佣金
@@ -841,6 +845,7 @@ JSON数据格式:
                     "buyer_remark": "哈哈哈",  // 买家备注
                     "payed_at": 12321312,  // 付款时间
                     "received_at": 12321312,  // 签收时间
+                    "is_many_express": false, // 是否多物流公司发货
                     "items": [
                         {
                             "order_sku_commission_price": 6,// 分销佣金
@@ -950,6 +955,7 @@ JSON数据格式:
                     "buyer_remark": "哈哈哈",  // 买家备注
                     "payed_at": 12321312,  // 付款时间
                     "received_at": 12321312,  // 签收时间
+                    "is_many_express": false, // 是否多物流公司发货
                     "items": [
                         {
                             "order_sku_commission_price": 6,// 分销佣金
@@ -1004,7 +1010,8 @@ JSON数据格式:
 名称                    类型        是否必须     默认值       描述说明
 =====================  ==========  =========  ==========  =============================
 rid                    String      必需                    订单号
-sku_dict               {}          必需                    {商品sku_rid: 运单编号}
+express_on             String      可选                    运单编号
+sku_dict               {}          可选                    {商品sku_rid: 运单编号}
 =====================  ==========  =========  ==========  =============================
 
 返回示例
@@ -1060,6 +1067,7 @@ JSON数据格式:
                     "buyer_remark": "哈哈哈",  // 买家备注
                     "payed_at": 12321312,  // 付款时间
                     "received_at": 12321312,  // 签收时间
+                    "is_many_express": false, // 是否多物流公司发货
                     "items": [
                         {
                             "order_sku_commission_price": 6,// 分销佣金
@@ -1169,6 +1177,7 @@ JSON数据格式:
                     "buyer_remark": "哈哈哈",  // 买家备注
                     "payed_at": 12321312,  // 付款时间
                     "received_at": 12321312,  // 签收时间
+                    "is_many_express": false, // 是否多物流公司发货
                     "items": [
                         {
                             "order_sku_commission_price": 6,// 分销佣金
@@ -1279,6 +1288,7 @@ JSON数据格式:
                     "buyer_remark": "哈哈哈",  // 买家备注
                     "payed_at": 12321312,  // 付款时间
                     "received_at": 12321312,  // 签收时间
+                    "is_many_express": false, // 是否多物流公司发货
                     "items": [
                         {
                             "order_sku_commission_price": 6,// 分销佣金
@@ -1469,6 +1479,7 @@ JSON数据格式:
                     "discount_amount": 0,  // 店铺优惠金额 = 首单优惠 + 满减 + 优惠券
                     "first_discount": 0,  // 首单优惠
                     "freight": 14,  // 运费
+                    "is_many_express": false, // 是否多物流公司发货
                     "items": [
                         {
                             "order_sku_commission_price": 6,// 分销佣金

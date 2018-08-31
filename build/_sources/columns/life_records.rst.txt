@@ -24,7 +24,7 @@ description      String      可选                    摘要, 最多120个字�
 content          String      必须                    正文
 cover_id         Number      必须                    头图编号
 label_id         Number      可选                    标签编号
-sid              String      可选                    店铺编号
+sid              String      可选                    推荐店铺编号
 ===============  ==========  =========  ==========  =============================
 
 返回示例
@@ -94,6 +94,7 @@ description      String      可选                    摘要, 最多120个字�
 content          String      必须                    正文
 cover_id         Number      必须                    头图编号
 label_id         Number      可选                    标签编号
+sid              String      可选                    推荐店铺编号
 ===============  ==========  =========  ==========  =============================
 
 返回示例
@@ -124,6 +125,7 @@ description      String      可选                    摘要, 最多120个字�
 content          String      可选                    正文
 cover_id         Number      可选                    头图编号
 label_id         Number      可选                    标签编号
+sid              String      可选                    店铺编号
 ===============  ==========  =========  ==========  =============================
 
 返回示例
@@ -193,6 +195,7 @@ description      String      可选                    摘要, 最多120个字�
 content          String      可选                    正文
 cover_id         Number      可选                    头图编号
 label_id         Number      可选                    标签编号
+sid              String      可选                    店铺编号
 ===============  ==========  =========  ==========  =============================
 
 返回示例
@@ -1051,6 +1054,15 @@ JSON数据格式:
             "label_id": 2,
             "label_name": "文化",
             "published_at": 1533290214,
+            "recommend_store": {
+                "delivery_country": "",
+                "delivery_country_id": null,
+                "is_follow_store": "false 是否关注店铺",
+                "product_counts": "商品数量",
+                "store_logo": "http://kg.erp.taihuoniao.com/static/img/default-logo.png",
+                "store_name": "店铺名",
+                "store_rid": "店铺编号"
+            },
             "refuse_reason": null,
             "rid": 1,
             "status": 2,
