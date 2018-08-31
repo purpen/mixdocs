@@ -287,7 +287,8 @@
 </li>
 <li><a class="reference internal" href="#id61">获取用户收货地址海关信息</a><ul>
 <li><a class="reference internal" href="#id62">接口说明</a></li>
-<li><a class="reference internal" href="#id63">返回示例</a></li>
+<li><a class="reference internal" href="#id63">请求参数</a></li>
+<li><a class="reference internal" href="#id64">返回示例</a></li>
 </ul>
 </li>
 </ul>
@@ -415,7 +416,8 @@
 </li>
 <li><a class="reference internal" href="#id61">获取用户收货地址海关信息</a><ul>
 <li><a class="reference internal" href="#id62">接口说明</a></li>
-<li><a class="reference internal" href="#id63">返回示例</a></li>
+<li><a class="reference internal" href="#id63">请求参数</a></li>
+<li><a class="reference internal" href="#id64">返回示例</a></li>
 </ul>
 </li>
 </ul>
@@ -478,7 +480,6 @@
             <span class="s2">&quot;full_name&quot;</span><span class="o">:</span> <span class="s2">&quot;田帅&quot;</span><span class="p">,</span>  <span class="c1">// 姓名</span>
             <span class="s2">&quot;is_default&quot;</span><span class="o">:</span> <span class="kc">false</span><span class="p">,</span>  <span class="c1">// 是否默认</span>
             <span class="s2">&quot;is_from_wx&quot;</span><span class="o">:</span> <span class="kc">false</span><span class="p">,</span>  <span class="c1">// 是否微信地址</span>
-            <span class="s2">&quot;is_overseas&quot;</span><span class="o">:</span> <span class="kc">false</span><span class="p">,</span>  <span class="c1">// 是否海外地址</span>
             <span class="s2">&quot;last_name&quot;</span><span class="o">:</span> <span class="kc">null</span><span class="p">,</span>  <span class="c1">// 名</span>
             <span class="s2">&quot;mobile&quot;</span><span class="o">:</span> <span class="s2">&quot;13278989898&quot;</span><span class="p">,</span>  <span class="c1">// 手机</span>
             <span class="s2">&quot;phone&quot;</span><span class="o">:</span> <span class="kc">null</span><span class="p">,</span>  <span class="c1">// 电话</span>
@@ -489,27 +490,6 @@
             <span class="s2">&quot;street_address_two&quot;</span><span class="o">:</span> <span class="kc">null</span><span class="p">,</span>  <span class="c1">//</span>
             <span class="s2">&quot;town&quot;</span><span class="o">:</span> <span class="kc">null</span><span class="p">,</span>  <span class="c1">// 镇</span>
             <span class="s2">&quot;town_id&quot;</span><span class="o">:</span> <span class="mi">0</span><span class="p">,</span>  <span class="c1">// 镇oid</span>
-            <span class="s2">&quot;user_custom&quot;</span><span class="o">:</span> <span class="p">{</span>  <span class="c1">// 海关信息</span>
-                <span class="s2">&quot;address_rid&quot;</span><span class="o">:</span> <span class="s2">&quot;5126437908&quot;</span><span class="p">,</span>
-                <span class="s2">&quot;id_card&quot;</span><span class="o">:</span> <span class="s2">&quot;1232&quot;</span><span class="p">,</span>
-                <span class="s2">&quot;id_card_back&quot;</span><span class="o">:</span> <span class="p">{</span>
-                    <span class="s2">&quot;created_at&quot;</span><span class="o">:</span> <span class="mi">1</span><span class="p">,</span>
-                    <span class="s2">&quot;filename&quot;</span><span class="o">:</span> <span class="s2">&quot;1&quot;</span><span class="p">,</span>
-                    <span class="s2">&quot;filepath&quot;</span><span class="o">:</span> <span class="s2">&quot;1&quot;</span><span class="p">,</span>
-                    <span class="s2">&quot;id&quot;</span><span class="o">:</span> <span class="mi">1</span><span class="p">,</span>
-                    <span class="s2">&quot;type&quot;</span><span class="o">:</span> <span class="mi">1</span><span class="p">,</span>
-                    <span class="s2">&quot;view_url&quot;</span><span class="o">:</span> <span class="s2">&quot;http://0.0.0.0:9000/_uploads/photos/1&quot;</span>
-                <span class="p">},</span>
-                <span class="s2">&quot;id_card_front&quot;</span><span class="o">:</span> <span class="p">{</span>
-                    <span class="s2">&quot;created_at&quot;</span><span class="o">:</span> <span class="mi">1</span><span class="p">,</span>
-                    <span class="s2">&quot;filename&quot;</span><span class="o">:</span> <span class="s2">&quot;1&quot;</span><span class="p">,</span>
-                    <span class="s2">&quot;filepath&quot;</span><span class="o">:</span> <span class="s2">&quot;1&quot;</span><span class="p">,</span>
-                    <span class="s2">&quot;id&quot;</span><span class="o">:</span> <span class="mi">1</span><span class="p">,</span>
-                    <span class="s2">&quot;type&quot;</span><span class="o">:</span> <span class="mi">1</span><span class="p">,</span>
-                    <span class="s2">&quot;view_url&quot;</span><span class="o">:</span> <span class="s2">&quot;http://0.0.0.0:9000/_uploads/photos/1&quot;</span>
-                <span class="p">},</span>
-                <span class="s2">&quot;user_id&quot;</span><span class="o">:</span> <span class="mi">1</span>
-            <span class="p">},</span>
             <span class="s2">&quot;zipcode&quot;</span><span class="o">:</span> <span class="kc">null</span>
         <span class="p">}</span>
     <span class="p">],</span>
@@ -550,7 +530,6 @@
         <span class="s2">&quot;full_name&quot;</span><span class="o">:</span> <span class="s2">&quot;田帅&quot;</span><span class="p">,</span>  <span class="c1">// 姓名</span>
         <span class="s2">&quot;is_default&quot;</span><span class="o">:</span> <span class="kc">false</span><span class="p">,</span>  <span class="c1">// 是否默认</span>
         <span class="s2">&quot;is_from_wx&quot;</span><span class="o">:</span> <span class="kc">false</span><span class="p">,</span>  <span class="c1">// 是否微信地址</span>
-        <span class="s2">&quot;is_overseas&quot;</span><span class="o">:</span> <span class="kc">false</span><span class="p">,</span>  <span class="c1">// 是否海外地址</span>
         <span class="s2">&quot;last_name&quot;</span><span class="o">:</span> <span class="kc">null</span><span class="p">,</span>  <span class="c1">// 名</span>
         <span class="s2">&quot;mobile&quot;</span><span class="o">:</span> <span class="s2">&quot;13278989898&quot;</span><span class="p">,</span>  <span class="c1">// 手机</span>
         <span class="s2">&quot;phone&quot;</span><span class="o">:</span> <span class="kc">null</span><span class="p">,</span>  <span class="c1">// 电话</span>
@@ -561,27 +540,6 @@
         <span class="s2">&quot;street_address_two&quot;</span><span class="o">:</span> <span class="kc">null</span><span class="p">,</span>  <span class="c1">//</span>
         <span class="s2">&quot;town&quot;</span><span class="o">:</span> <span class="kc">null</span><span class="p">,</span>  <span class="c1">// 镇</span>
         <span class="s2">&quot;town_id&quot;</span><span class="o">:</span> <span class="mi">0</span><span class="p">,</span>  <span class="c1">// 镇oid</span>
-        <span class="s2">&quot;user_custom&quot;</span><span class="o">:</span> <span class="p">{</span>  <span class="c1">// 海关信息</span>
-            <span class="s2">&quot;address_rid&quot;</span><span class="o">:</span> <span class="s2">&quot;5126437908&quot;</span><span class="p">,</span>
-            <span class="s2">&quot;id_card&quot;</span><span class="o">:</span> <span class="s2">&quot;1232&quot;</span><span class="p">,</span>
-            <span class="s2">&quot;id_card_back&quot;</span><span class="o">:</span> <span class="p">{</span>
-                <span class="s2">&quot;created_at&quot;</span><span class="o">:</span> <span class="mi">1</span><span class="p">,</span>
-                <span class="s2">&quot;filename&quot;</span><span class="o">:</span> <span class="s2">&quot;1&quot;</span><span class="p">,</span>
-                <span class="s2">&quot;filepath&quot;</span><span class="o">:</span> <span class="s2">&quot;1&quot;</span><span class="p">,</span>
-                <span class="s2">&quot;id&quot;</span><span class="o">:</span> <span class="mi">1</span><span class="p">,</span>
-                <span class="s2">&quot;type&quot;</span><span class="o">:</span> <span class="mi">1</span><span class="p">,</span>
-                <span class="s2">&quot;view_url&quot;</span><span class="o">:</span> <span class="s2">&quot;http://0.0.0.0:9000/_uploads/photos/1&quot;</span>
-            <span class="p">},</span>
-            <span class="s2">&quot;id_card_front&quot;</span><span class="o">:</span> <span class="p">{</span>
-                <span class="s2">&quot;created_at&quot;</span><span class="o">:</span> <span class="mi">1</span><span class="p">,</span>
-                <span class="s2">&quot;filename&quot;</span><span class="o">:</span> <span class="s2">&quot;1&quot;</span><span class="p">,</span>
-                <span class="s2">&quot;filepath&quot;</span><span class="o">:</span> <span class="s2">&quot;1&quot;</span><span class="p">,</span>
-                <span class="s2">&quot;id&quot;</span><span class="o">:</span> <span class="mi">1</span><span class="p">,</span>
-                <span class="s2">&quot;type&quot;</span><span class="o">:</span> <span class="mi">1</span><span class="p">,</span>
-                <span class="s2">&quot;view_url&quot;</span><span class="o">:</span> <span class="s2">&quot;http://0.0.0.0:9000/_uploads/photos/1&quot;</span>
-            <span class="p">},</span>
-            <span class="s2">&quot;user_id&quot;</span><span class="o">:</span> <span class="mi">1</span>
-        <span class="p">},</span>
         <span class="s2">&quot;zipcode&quot;</span><span class="o">:</span> <span class="kc">null</span>
     <span class="p">},</span>
     <span class="s2">&quot;status&quot;</span><span class="o">:</span> <span class="p">{</span>
@@ -621,7 +579,6 @@
         <span class="s2">&quot;full_name&quot;</span><span class="o">:</span> <span class="s2">&quot;田帅&quot;</span><span class="p">,</span>  <span class="c1">// 姓名</span>
         <span class="s2">&quot;is_default&quot;</span><span class="o">:</span> <span class="kc">false</span><span class="p">,</span>  <span class="c1">// 是否默认</span>
         <span class="s2">&quot;is_from_wx&quot;</span><span class="o">:</span> <span class="kc">false</span><span class="p">,</span>  <span class="c1">// 是否微信地址</span>
-        <span class="s2">&quot;is_overseas&quot;</span><span class="o">:</span> <span class="kc">false</span><span class="p">,</span>  <span class="c1">// 是否海外地址</span>
         <span class="s2">&quot;last_name&quot;</span><span class="o">:</span> <span class="kc">null</span><span class="p">,</span>  <span class="c1">// 名</span>
         <span class="s2">&quot;mobile&quot;</span><span class="o">:</span> <span class="s2">&quot;13278989898&quot;</span><span class="p">,</span>  <span class="c1">// 手机</span>
         <span class="s2">&quot;phone&quot;</span><span class="o">:</span> <span class="kc">null</span><span class="p">,</span>  <span class="c1">// 电话</span>
@@ -632,27 +589,6 @@
         <span class="s2">&quot;street_address_two&quot;</span><span class="o">:</span> <span class="kc">null</span><span class="p">,</span>  <span class="c1">//</span>
         <span class="s2">&quot;town&quot;</span><span class="o">:</span> <span class="kc">null</span><span class="p">,</span>  <span class="c1">// 镇</span>
         <span class="s2">&quot;town_id&quot;</span><span class="o">:</span> <span class="mi">0</span><span class="p">,</span>  <span class="c1">// 镇oid</span>
-        <span class="s2">&quot;user_custom&quot;</span><span class="o">:</span> <span class="p">{</span>  <span class="c1">// 海关信息</span>
-            <span class="s2">&quot;address_rid&quot;</span><span class="o">:</span> <span class="s2">&quot;5126437908&quot;</span><span class="p">,</span>
-            <span class="s2">&quot;id_card&quot;</span><span class="o">:</span> <span class="s2">&quot;1232&quot;</span><span class="p">,</span>
-            <span class="s2">&quot;id_card_back&quot;</span><span class="o">:</span> <span class="p">{</span>
-                <span class="s2">&quot;created_at&quot;</span><span class="o">:</span> <span class="mi">1</span><span class="p">,</span>
-                <span class="s2">&quot;filename&quot;</span><span class="o">:</span> <span class="s2">&quot;1&quot;</span><span class="p">,</span>
-                <span class="s2">&quot;filepath&quot;</span><span class="o">:</span> <span class="s2">&quot;1&quot;</span><span class="p">,</span>
-                <span class="s2">&quot;id&quot;</span><span class="o">:</span> <span class="mi">1</span><span class="p">,</span>
-                <span class="s2">&quot;type&quot;</span><span class="o">:</span> <span class="mi">1</span><span class="p">,</span>
-                <span class="s2">&quot;view_url&quot;</span><span class="o">:</span> <span class="s2">&quot;http://0.0.0.0:9000/_uploads/photos/1&quot;</span>
-            <span class="p">},</span>
-            <span class="s2">&quot;id_card_front&quot;</span><span class="o">:</span> <span class="p">{</span>
-                <span class="s2">&quot;created_at&quot;</span><span class="o">:</span> <span class="mi">1</span><span class="p">,</span>
-                <span class="s2">&quot;filename&quot;</span><span class="o">:</span> <span class="s2">&quot;1&quot;</span><span class="p">,</span>
-                <span class="s2">&quot;filepath&quot;</span><span class="o">:</span> <span class="s2">&quot;1&quot;</span><span class="p">,</span>
-                <span class="s2">&quot;id&quot;</span><span class="o">:</span> <span class="mi">1</span><span class="p">,</span>
-                <span class="s2">&quot;type&quot;</span><span class="o">:</span> <span class="mi">1</span><span class="p">,</span>
-                <span class="s2">&quot;view_url&quot;</span><span class="o">:</span> <span class="s2">&quot;http://0.0.0.0:9000/_uploads/photos/1&quot;</span>
-            <span class="p">},</span>
-            <span class="s2">&quot;user_id&quot;</span><span class="o">:</span> <span class="mi">1</span>
-        <span class="p">},</span>
         <span class="s2">&quot;zipcode&quot;</span><span class="o">:</span> <span class="kc">null</span>
     <span class="p">},</span>
     <span class="s2">&quot;status&quot;</span><span class="o">:</span> <span class="p">{</span>
@@ -799,30 +735,6 @@
 <td>False</td>
 <td>是否默认地址</td>
 </tr>
-<tr class="row-odd"><td>is_overseas</td>
-<td>Bool</td>
-<td>可选</td>
-<td>False</td>
-<td>是否海外地址</td>
-</tr>
-<tr class="row-even"><td>id_card</td>
-<td>String</td>
-<td>可选</td>
-<td>&#160;</td>
-<td>身份证号</td>
-</tr>
-<tr class="row-odd"><td>id_card_front</td>
-<td>Integer</td>
-<td>可选</td>
-<td>&#160;</td>
-<td>身份证正面照片图片资源id</td>
-</tr>
-<tr class="row-even"><td>id_card_back</td>
-<td>Integer</td>
-<td>可选</td>
-<td>&#160;</td>
-<td>身份证背面照片图片资源id</td>
-</tr>
 </tbody>
 </table>
 </div>
@@ -842,7 +754,6 @@
         <span class="s2">&quot;full_name&quot;</span><span class="o">:</span> <span class="s2">&quot;田帅&quot;</span><span class="p">,</span>  <span class="c1">// 姓名</span>
         <span class="s2">&quot;is_default&quot;</span><span class="o">:</span> <span class="kc">false</span><span class="p">,</span>  <span class="c1">// 是否默认</span>
         <span class="s2">&quot;is_from_wx&quot;</span><span class="o">:</span> <span class="kc">false</span><span class="p">,</span>  <span class="c1">// 是否微信地址</span>
-        <span class="s2">&quot;is_overseas&quot;</span><span class="o">:</span> <span class="kc">false</span><span class="p">,</span>  <span class="c1">// 是否海外地址</span>
         <span class="s2">&quot;last_name&quot;</span><span class="o">:</span> <span class="kc">null</span><span class="p">,</span>  <span class="c1">// 名</span>
         <span class="s2">&quot;mobile&quot;</span><span class="o">:</span> <span class="s2">&quot;13278989898&quot;</span><span class="p">,</span>  <span class="c1">// 手机</span>
         <span class="s2">&quot;phone&quot;</span><span class="o">:</span> <span class="kc">null</span><span class="p">,</span>  <span class="c1">// 电话</span>
@@ -853,27 +764,6 @@
         <span class="s2">&quot;street_address_two&quot;</span><span class="o">:</span> <span class="kc">null</span><span class="p">,</span>  <span class="c1">//</span>
         <span class="s2">&quot;town&quot;</span><span class="o">:</span> <span class="kc">null</span><span class="p">,</span>  <span class="c1">// 镇</span>
         <span class="s2">&quot;town_id&quot;</span><span class="o">:</span> <span class="mi">0</span><span class="p">,</span>  <span class="c1">// 镇oid</span>
-        <span class="s2">&quot;user_custom&quot;</span><span class="o">:</span> <span class="p">{</span>  <span class="c1">// 海关信息</span>
-            <span class="s2">&quot;address_rid&quot;</span><span class="o">:</span> <span class="s2">&quot;5126437908&quot;</span><span class="p">,</span>
-            <span class="s2">&quot;id_card&quot;</span><span class="o">:</span> <span class="s2">&quot;1232&quot;</span><span class="p">,</span>
-            <span class="s2">&quot;id_card_back&quot;</span><span class="o">:</span> <span class="p">{</span>
-                <span class="s2">&quot;created_at&quot;</span><span class="o">:</span> <span class="mi">1</span><span class="p">,</span>
-                <span class="s2">&quot;filename&quot;</span><span class="o">:</span> <span class="s2">&quot;1&quot;</span><span class="p">,</span>
-                <span class="s2">&quot;filepath&quot;</span><span class="o">:</span> <span class="s2">&quot;1&quot;</span><span class="p">,</span>
-                <span class="s2">&quot;id&quot;</span><span class="o">:</span> <span class="mi">1</span><span class="p">,</span>
-                <span class="s2">&quot;type&quot;</span><span class="o">:</span> <span class="mi">1</span><span class="p">,</span>
-                <span class="s2">&quot;view_url&quot;</span><span class="o">:</span> <span class="s2">&quot;http://0.0.0.0:9000/_uploads/photos/1&quot;</span>
-            <span class="p">},</span>
-            <span class="s2">&quot;id_card_front&quot;</span><span class="o">:</span> <span class="p">{</span>
-                <span class="s2">&quot;created_at&quot;</span><span class="o">:</span> <span class="mi">1</span><span class="p">,</span>
-                <span class="s2">&quot;filename&quot;</span><span class="o">:</span> <span class="s2">&quot;1&quot;</span><span class="p">,</span>
-                <span class="s2">&quot;filepath&quot;</span><span class="o">:</span> <span class="s2">&quot;1&quot;</span><span class="p">,</span>
-                <span class="s2">&quot;id&quot;</span><span class="o">:</span> <span class="mi">1</span><span class="p">,</span>
-                <span class="s2">&quot;type&quot;</span><span class="o">:</span> <span class="mi">1</span><span class="p">,</span>
-                <span class="s2">&quot;view_url&quot;</span><span class="o">:</span> <span class="s2">&quot;http://0.0.0.0:9000/_uploads/photos/1&quot;</span>
-            <span class="p">},</span>
-            <span class="s2">&quot;user_id&quot;</span><span class="o">:</span> <span class="mi">1</span>
-        <span class="p">},</span>
         <span class="s2">&quot;zipcode&quot;</span><span class="o">:</span> <span class="kc">null</span>
     <span class="p">},</span>
     <span class="s2">&quot;status&quot;</span><span class="o">:</span> <span class="p">{</span>
@@ -1010,30 +900,6 @@
 <td>False</td>
 <td>是否默认地址</td>
 </tr>
-<tr class="row-even"><td>is_overseas</td>
-<td>Bool</td>
-<td>可选</td>
-<td>False</td>
-<td>是否海外地址</td>
-</tr>
-<tr class="row-odd"><td>id_card</td>
-<td>String</td>
-<td>可选</td>
-<td>&#160;</td>
-<td>身份证号</td>
-</tr>
-<tr class="row-even"><td>id_card_front</td>
-<td>Integer</td>
-<td>可选</td>
-<td>&#160;</td>
-<td>身份证正面照片图片资源id</td>
-</tr>
-<tr class="row-odd"><td>id_card_back</td>
-<td>Integer</td>
-<td>可选</td>
-<td>&#160;</td>
-<td>身份证背面照片图片资源id</td>
-</tr>
 </tbody>
 </table>
 </div>
@@ -1053,7 +919,6 @@
         <span class="s2">&quot;full_name&quot;</span><span class="o">:</span> <span class="s2">&quot;田帅&quot;</span><span class="p">,</span>  <span class="c1">// 姓名</span>
         <span class="s2">&quot;is_default&quot;</span><span class="o">:</span> <span class="kc">false</span><span class="p">,</span>  <span class="c1">// 是否默认</span>
         <span class="s2">&quot;is_from_wx&quot;</span><span class="o">:</span> <span class="kc">false</span><span class="p">,</span>  <span class="c1">// 是否微信地址</span>
-        <span class="s2">&quot;is_overseas&quot;</span><span class="o">:</span> <span class="kc">false</span><span class="p">,</span>  <span class="c1">// 是否海外地址</span>
         <span class="s2">&quot;last_name&quot;</span><span class="o">:</span> <span class="kc">null</span><span class="p">,</span>  <span class="c1">// 名</span>
         <span class="s2">&quot;mobile&quot;</span><span class="o">:</span> <span class="s2">&quot;13278989898&quot;</span><span class="p">,</span>  <span class="c1">// 手机</span>
         <span class="s2">&quot;phone&quot;</span><span class="o">:</span> <span class="kc">null</span><span class="p">,</span>  <span class="c1">// 电话</span>
@@ -1064,27 +929,6 @@
         <span class="s2">&quot;street_address_two&quot;</span><span class="o">:</span> <span class="kc">null</span><span class="p">,</span>  <span class="c1">//</span>
         <span class="s2">&quot;town&quot;</span><span class="o">:</span> <span class="kc">null</span><span class="p">,</span>  <span class="c1">// 镇</span>
         <span class="s2">&quot;town_id&quot;</span><span class="o">:</span> <span class="mi">0</span><span class="p">,</span>  <span class="c1">// 镇oid</span>
-        <span class="s2">&quot;user_custom&quot;</span><span class="o">:</span> <span class="p">{</span>  <span class="c1">// 海关信息</span>
-            <span class="s2">&quot;address_rid&quot;</span><span class="o">:</span> <span class="s2">&quot;5126437908&quot;</span><span class="p">,</span>
-            <span class="s2">&quot;id_card&quot;</span><span class="o">:</span> <span class="s2">&quot;1232&quot;</span><span class="p">,</span>
-            <span class="s2">&quot;id_card_back&quot;</span><span class="o">:</span> <span class="p">{</span>
-                <span class="s2">&quot;created_at&quot;</span><span class="o">:</span> <span class="mi">1</span><span class="p">,</span>
-                <span class="s2">&quot;filename&quot;</span><span class="o">:</span> <span class="s2">&quot;1&quot;</span><span class="p">,</span>
-                <span class="s2">&quot;filepath&quot;</span><span class="o">:</span> <span class="s2">&quot;1&quot;</span><span class="p">,</span>
-                <span class="s2">&quot;id&quot;</span><span class="o">:</span> <span class="mi">1</span><span class="p">,</span>
-                <span class="s2">&quot;type&quot;</span><span class="o">:</span> <span class="mi">1</span><span class="p">,</span>
-                <span class="s2">&quot;view_url&quot;</span><span class="o">:</span> <span class="s2">&quot;http://0.0.0.0:9000/_uploads/photos/1&quot;</span>
-            <span class="p">},</span>
-            <span class="s2">&quot;id_card_front&quot;</span><span class="o">:</span> <span class="p">{</span>
-                <span class="s2">&quot;created_at&quot;</span><span class="o">:</span> <span class="mi">1</span><span class="p">,</span>
-                <span class="s2">&quot;filename&quot;</span><span class="o">:</span> <span class="s2">&quot;1&quot;</span><span class="p">,</span>
-                <span class="s2">&quot;filepath&quot;</span><span class="o">:</span> <span class="s2">&quot;1&quot;</span><span class="p">,</span>
-                <span class="s2">&quot;id&quot;</span><span class="o">:</span> <span class="mi">1</span><span class="p">,</span>
-                <span class="s2">&quot;type&quot;</span><span class="o">:</span> <span class="mi">1</span><span class="p">,</span>
-                <span class="s2">&quot;view_url&quot;</span><span class="o">:</span> <span class="s2">&quot;http://0.0.0.0:9000/_uploads/photos/1&quot;</span>
-            <span class="p">},</span>
-            <span class="s2">&quot;user_id&quot;</span><span class="o">:</span> <span class="mi">1</span>
-        <span class="p">},</span>
         <span class="s2">&quot;zipcode&quot;</span><span class="o">:</span> <span class="kc">null</span>
     <span class="p">},</span>
     <span class="s2">&quot;status&quot;</span><span class="o">:</span> <span class="p">{</span>
@@ -1636,25 +1480,31 @@
 </tr>
 </thead>
 <tbody valign="top">
-<tr class="row-even"><td>address_rid</td>
+<tr class="row-even"><td>user_name</td>
 <td>String</td>
 <td>必需</td>
 <td>&#160;</td>
-<td>收货地址rid</td>
+<td>姓名</td>
 </tr>
-<tr class="row-odd"><td>id_card</td>
+<tr class="row-odd"><td>mobile</td>
+<td>String</td>
+<td>必需</td>
+<td>&#160;</td>
+<td>手机号</td>
+</tr>
+<tr class="row-even"><td>id_card</td>
 <td>String</td>
 <td>必需</td>
 <td>&#160;</td>
 <td>身份证号</td>
 </tr>
-<tr class="row-even"><td>id_card_front</td>
+<tr class="row-odd"><td>id_card_front</td>
 <td>Integer</td>
 <td>必需</td>
 <td>&#160;</td>
 <td>身份证正面照片图片资源id</td>
 </tr>
-<tr class="row-odd"><td>id_card_back</td>
+<tr class="row-even"><td>id_card_back</td>
 <td>Integer</td>
 <td>必需</td>
 <td>&#160;</td>
@@ -1669,25 +1519,26 @@
 <p>请求 <strong>正确</strong> 返回结果：</p>
 <div class="highlight-javascript"><div class="highlight"><pre><span></span><span class="p">{</span>
     <span class="s2">&quot;data&quot;</span><span class="o">:</span> <span class="p">{</span>
-        <span class="s2">&quot;address_rid&quot;</span><span class="o">:</span> <span class="s2">&quot;5608945713&quot;</span><span class="p">,</span>  <span class="c1">// 收货地址rid</span>
-        <span class="s2">&quot;id_card&quot;</span><span class="o">:</span> <span class="s2">&quot;27812768766&quot;</span><span class="p">,</span>  <span class="c1">// 身份证号</span>
+        <span class="s2">&quot;id&quot;</span><span class="o">:</span> <span class="mi">3</span><span class="p">,</span>
+        <span class="s2">&quot;id_card&quot;</span><span class="o">:</span> <span class="s2">&quot;18081827109465&quot;</span><span class="p">,</span>  <span class="c1">// 身份证号</span>
         <span class="s2">&quot;id_card_back&quot;</span><span class="o">:</span> <span class="p">{</span>  <span class="c1">// 身份证背面</span>
-            <span class="s2">&quot;created_at&quot;</span><span class="o">:</span> <span class="mi">3</span><span class="p">,</span>
-            <span class="s2">&quot;filename&quot;</span><span class="o">:</span> <span class="s2">&quot;3&quot;</span><span class="p">,</span>
-            <span class="s2">&quot;filepath&quot;</span><span class="o">:</span> <span class="s2">&quot;3&quot;</span><span class="p">,</span>
-            <span class="s2">&quot;id&quot;</span><span class="o">:</span> <span class="mi">3</span><span class="p">,</span>
-            <span class="s2">&quot;type&quot;</span><span class="o">:</span> <span class="mi">3</span><span class="p">,</span>
-            <span class="s2">&quot;view_url&quot;</span><span class="o">:</span> <span class="s2">&quot;http://0.0.0.0:9000/_uploads/photos/3&quot;</span>
+            <span class="s2">&quot;created_at&quot;</span><span class="o">:</span> <span class="mi">1</span><span class="p">,</span>
+            <span class="s2">&quot;filename&quot;</span><span class="o">:</span> <span class="s2">&quot;1&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;filepath&quot;</span><span class="o">:</span> <span class="s2">&quot;180523/8f51855eedae984.jpg&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;id&quot;</span><span class="o">:</span> <span class="mi">1</span><span class="p">,</span>
+            <span class="s2">&quot;type&quot;</span><span class="o">:</span> <span class="mi">1</span><span class="p">,</span>
+            <span class="s2">&quot;view_url&quot;</span><span class="o">:</span> <span class="s2">&quot;http://0.0.0.0:9000/_uploads/photos/180523/8f51855eedae984.jpg&quot;</span>
         <span class="p">},</span>
-        <span class="s2">&quot;id_card_front&quot;</span><span class="o">:</span> <span class="p">{</span>  <span class="c1">// 身份证后面</span>
-            <span class="s2">&quot;created_at&quot;</span><span class="o">:</span> <span class="mi">3</span><span class="p">,</span>
-            <span class="s2">&quot;filename&quot;</span><span class="o">:</span> <span class="s2">&quot;3&quot;</span><span class="p">,</span>
-            <span class="s2">&quot;filepath&quot;</span><span class="o">:</span> <span class="s2">&quot;3&quot;</span><span class="p">,</span>
-            <span class="s2">&quot;id&quot;</span><span class="o">:</span> <span class="mi">3</span><span class="p">,</span>
-            <span class="s2">&quot;type&quot;</span><span class="o">:</span> <span class="mi">3</span><span class="p">,</span>
-            <span class="s2">&quot;view_url&quot;</span><span class="o">:</span> <span class="s2">&quot;http://0.0.0.0:9000/_uploads/photos/3&quot;</span>
+        <span class="s2">&quot;id_card_front&quot;</span><span class="o">:</span> <span class="p">{</span>  <span class="c1">// 身份证正面</span>
+            <span class="s2">&quot;created_at&quot;</span><span class="o">:</span> <span class="mi">1</span><span class="p">,</span>
+            <span class="s2">&quot;filename&quot;</span><span class="o">:</span> <span class="s2">&quot;1&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;filepath&quot;</span><span class="o">:</span> <span class="s2">&quot;180523/8f51855eedae984.jpg&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;id&quot;</span><span class="o">:</span> <span class="mi">1</span><span class="p">,</span>
+            <span class="s2">&quot;type&quot;</span><span class="o">:</span> <span class="mi">1</span><span class="p">,</span>
+            <span class="s2">&quot;view_url&quot;</span><span class="o">:</span> <span class="s2">&quot;http://0.0.0.0:9000/_uploads/photos/180523/8f51855eedae984.jpg&quot;</span>
         <span class="p">},</span>
-        <span class="s2">&quot;user_id&quot;</span><span class="o">:</span> <span class="mi">2</span>  <span class="c1">//</span>
+        <span class="s2">&quot;mobile&quot;</span><span class="o">:</span> <span class="s2">&quot;18888888888&quot;</span><span class="p">,</span>  <span class="c1">// 手机号</span>
+        <span class="s2">&quot;user_name&quot;</span><span class="o">:</span> <span class="s2">&quot;小杨&quot;</span>  <span class="c1">// 姓名</span>
     <span class="p">},</span>
     <span class="s2">&quot;status&quot;</span><span class="o">:</span> <span class="p">{</span>
         <span class="s2">&quot;code&quot;</span><span class="o">:</span> <span class="mi">200</span><span class="p">,</span>
@@ -1739,11 +1590,23 @@
 </tr>
 </thead>
 <tbody valign="top">
-<tr class="row-even"><td>address_rid</td>
-<td>String</td>
-<td>必需</td>
+<tr class="row-even"><td>id</td>
+<td>Integer</td>
+<td>必须</td>
 <td>&#160;</td>
-<td>地址rid</td>
+<td>海关信息id</td>
+</tr>
+<tr class="row-odd"><td>user_name</td>
+<td>String</td>
+<td>可选</td>
+<td>&#160;</td>
+<td>姓名</td>
+</tr>
+<tr class="row-even"><td>mobile</td>
+<td>String</td>
+<td>可选</td>
+<td>&#160;</td>
+<td>手机号</td>
 </tr>
 <tr class="row-odd"><td>id_card</td>
 <td>String</td>
@@ -1772,25 +1635,26 @@
 <p>请求 <strong>正确</strong> 返回结果：</p>
 <div class="highlight-javascript"><div class="highlight"><pre><span></span><span class="p">{</span>
     <span class="s2">&quot;data&quot;</span><span class="o">:</span> <span class="p">{</span>
-        <span class="s2">&quot;address_rid&quot;</span><span class="o">:</span> <span class="s2">&quot;5608945713&quot;</span><span class="p">,</span>  <span class="c1">// 收货地址rid</span>
-        <span class="s2">&quot;id_card&quot;</span><span class="o">:</span> <span class="s2">&quot;27812768766&quot;</span><span class="p">,</span>  <span class="c1">// 身份证号</span>
+        <span class="s2">&quot;id&quot;</span><span class="o">:</span> <span class="mi">3</span><span class="p">,</span>
+        <span class="s2">&quot;id_card&quot;</span><span class="o">:</span> <span class="s2">&quot;18081827109465&quot;</span><span class="p">,</span>  <span class="c1">// 身份证号</span>
         <span class="s2">&quot;id_card_back&quot;</span><span class="o">:</span> <span class="p">{</span>  <span class="c1">// 身份证背面</span>
-            <span class="s2">&quot;created_at&quot;</span><span class="o">:</span> <span class="mi">3</span><span class="p">,</span>
-            <span class="s2">&quot;filename&quot;</span><span class="o">:</span> <span class="s2">&quot;3&quot;</span><span class="p">,</span>
-            <span class="s2">&quot;filepath&quot;</span><span class="o">:</span> <span class="s2">&quot;3&quot;</span><span class="p">,</span>
-            <span class="s2">&quot;id&quot;</span><span class="o">:</span> <span class="mi">3</span><span class="p">,</span>
-            <span class="s2">&quot;type&quot;</span><span class="o">:</span> <span class="mi">3</span><span class="p">,</span>
-            <span class="s2">&quot;view_url&quot;</span><span class="o">:</span> <span class="s2">&quot;http://0.0.0.0:9000/_uploads/photos/3&quot;</span>
+            <span class="s2">&quot;created_at&quot;</span><span class="o">:</span> <span class="mi">1</span><span class="p">,</span>
+            <span class="s2">&quot;filename&quot;</span><span class="o">:</span> <span class="s2">&quot;1&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;filepath&quot;</span><span class="o">:</span> <span class="s2">&quot;180523/8f51855eedae984.jpg&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;id&quot;</span><span class="o">:</span> <span class="mi">1</span><span class="p">,</span>
+            <span class="s2">&quot;type&quot;</span><span class="o">:</span> <span class="mi">1</span><span class="p">,</span>
+            <span class="s2">&quot;view_url&quot;</span><span class="o">:</span> <span class="s2">&quot;http://0.0.0.0:9000/_uploads/photos/180523/8f51855eedae984.jpg&quot;</span>
         <span class="p">},</span>
-        <span class="s2">&quot;id_card_front&quot;</span><span class="o">:</span> <span class="p">{</span>  <span class="c1">// 身份证后面</span>
-            <span class="s2">&quot;created_at&quot;</span><span class="o">:</span> <span class="mi">3</span><span class="p">,</span>
-            <span class="s2">&quot;filename&quot;</span><span class="o">:</span> <span class="s2">&quot;3&quot;</span><span class="p">,</span>
-            <span class="s2">&quot;filepath&quot;</span><span class="o">:</span> <span class="s2">&quot;3&quot;</span><span class="p">,</span>
-            <span class="s2">&quot;id&quot;</span><span class="o">:</span> <span class="mi">3</span><span class="p">,</span>
-            <span class="s2">&quot;type&quot;</span><span class="o">:</span> <span class="mi">3</span><span class="p">,</span>
-            <span class="s2">&quot;view_url&quot;</span><span class="o">:</span> <span class="s2">&quot;http://0.0.0.0:9000/_uploads/photos/3&quot;</span>
+        <span class="s2">&quot;id_card_front&quot;</span><span class="o">:</span> <span class="p">{</span>  <span class="c1">// 身份证正面</span>
+            <span class="s2">&quot;created_at&quot;</span><span class="o">:</span> <span class="mi">1</span><span class="p">,</span>
+            <span class="s2">&quot;filename&quot;</span><span class="o">:</span> <span class="s2">&quot;1&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;filepath&quot;</span><span class="o">:</span> <span class="s2">&quot;180523/8f51855eedae984.jpg&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;id&quot;</span><span class="o">:</span> <span class="mi">1</span><span class="p">,</span>
+            <span class="s2">&quot;type&quot;</span><span class="o">:</span> <span class="mi">1</span><span class="p">,</span>
+            <span class="s2">&quot;view_url&quot;</span><span class="o">:</span> <span class="s2">&quot;http://0.0.0.0:9000/_uploads/photos/180523/8f51855eedae984.jpg&quot;</span>
         <span class="p">},</span>
-        <span class="s2">&quot;user_id&quot;</span><span class="o">:</span> <span class="mi">2</span>  <span class="c1">//</span>
+        <span class="s2">&quot;mobile&quot;</span><span class="o">:</span> <span class="s2">&quot;18888888888&quot;</span><span class="p">,</span>  <span class="c1">// 手机号</span>
+        <span class="s2">&quot;user_name&quot;</span><span class="o">:</span> <span class="s2">&quot;小杨&quot;</span>  <span class="c1">// 姓名</span>
     <span class="p">},</span>
     <span class="s2">&quot;status&quot;</span><span class="o">:</span> <span class="p">{</span>
         <span class="s2">&quot;code&quot;</span><span class="o">:</span> <span class="mi">200</span><span class="p">,</span>
@@ -1842,11 +1706,23 @@
 </tr>
 </thead>
 <tbody valign="top">
-<tr class="row-even"><td>address_rid</td>
-<td>String</td>
-<td>必需</td>
+<tr class="row-even"><td>id</td>
+<td>Integer</td>
+<td>必须</td>
 <td>&#160;</td>
-<td>地址rid</td>
+<td>海关信息id</td>
+</tr>
+<tr class="row-odd"><td>user_name</td>
+<td>String</td>
+<td>可选</td>
+<td>&#160;</td>
+<td>姓名</td>
+</tr>
+<tr class="row-even"><td>mobile</td>
+<td>String</td>
+<td>可选</td>
+<td>&#160;</td>
+<td>手机号</td>
 </tr>
 </tbody>
 </table>
@@ -1888,30 +1764,65 @@
 </ul>
 </div>
 <div class="section" id="id63">
-<h3>返回示例<a class="headerlink" href="#id63" title="永久链接至标题">¶</a></h3>
+<h3>请求参数<a class="headerlink" href="#id63" title="永久链接至标题">¶</a></h3>
+<table border="1" class="docutils">
+<colgroup>
+<col width="27%" />
+<col width="13%" />
+<col width="11%" />
+<col width="13%" />
+<col width="37%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">名称</th>
+<th class="head">类型</th>
+<th class="head">是否必须</th>
+<th class="head">默认值</th>
+<th class="head">描述说明</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>user_name</td>
+<td>String</td>
+<td>必需</td>
+<td>&#160;</td>
+<td>姓名</td>
+</tr>
+<tr class="row-odd"><td>mobile</td>
+<td>String</td>
+<td>必需</td>
+<td>&#160;</td>
+<td>手机号</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="id64">
+<h3>返回示例<a class="headerlink" href="#id64" title="永久链接至标题">¶</a></h3>
 <p>JSON数据格式:</p>
 <p>请求 <strong>正确</strong> 返回结果：</p>
 <div class="highlight-javascript"><div class="highlight"><pre><span></span><span class="p">{</span>
     <span class="s2">&quot;data&quot;</span><span class="o">:</span> <span class="p">{</span>
-        <span class="s2">&quot;address_rid&quot;</span><span class="o">:</span> <span class="s2">&quot;5608945713&quot;</span><span class="p">,</span>  <span class="c1">// 收货地址rid</span>
-        <span class="s2">&quot;id_card&quot;</span><span class="o">:</span> <span class="s2">&quot;27812768766&quot;</span><span class="p">,</span>  <span class="c1">// 身份证号</span>
+        <span class="s2">&quot;id&quot;</span><span class="o">:</span> <span class="mi">3</span><span class="p">,</span>
+        <span class="s2">&quot;id_card&quot;</span><span class="o">:</span> <span class="s2">&quot;18081827109465&quot;</span><span class="p">,</span>  <span class="c1">// 身份证号</span>
         <span class="s2">&quot;id_card_back&quot;</span><span class="o">:</span> <span class="p">{</span>  <span class="c1">// 身份证背面</span>
-            <span class="s2">&quot;created_at&quot;</span><span class="o">:</span> <span class="mi">3</span><span class="p">,</span>
-            <span class="s2">&quot;filename&quot;</span><span class="o">:</span> <span class="s2">&quot;3&quot;</span><span class="p">,</span>
-            <span class="s2">&quot;filepath&quot;</span><span class="o">:</span> <span class="s2">&quot;3&quot;</span><span class="p">,</span>
-            <span class="s2">&quot;id&quot;</span><span class="o">:</span> <span class="mi">3</span><span class="p">,</span>
-            <span class="s2">&quot;type&quot;</span><span class="o">:</span> <span class="mi">3</span><span class="p">,</span>
-            <span class="s2">&quot;view_url&quot;</span><span class="o">:</span> <span class="s2">&quot;http://0.0.0.0:9000/_uploads/photos/3&quot;</span>
+            <span class="s2">&quot;created_at&quot;</span><span class="o">:</span> <span class="mi">1</span><span class="p">,</span>
+            <span class="s2">&quot;filename&quot;</span><span class="o">:</span> <span class="s2">&quot;1&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;filepath&quot;</span><span class="o">:</span> <span class="s2">&quot;180523/8f51855eedae984.jpg&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;id&quot;</span><span class="o">:</span> <span class="mi">1</span><span class="p">,</span>
+            <span class="s2">&quot;type&quot;</span><span class="o">:</span> <span class="mi">1</span><span class="p">,</span>
+            <span class="s2">&quot;view_url&quot;</span><span class="o">:</span> <span class="s2">&quot;http://0.0.0.0:9000/_uploads/photos/180523/8f51855eedae984.jpg&quot;</span>
         <span class="p">},</span>
-        <span class="s2">&quot;id_card_front&quot;</span><span class="o">:</span> <span class="p">{</span>  <span class="c1">// 身份证后面</span>
-            <span class="s2">&quot;created_at&quot;</span><span class="o">:</span> <span class="mi">3</span><span class="p">,</span>
-            <span class="s2">&quot;filename&quot;</span><span class="o">:</span> <span class="s2">&quot;3&quot;</span><span class="p">,</span>
-            <span class="s2">&quot;filepath&quot;</span><span class="o">:</span> <span class="s2">&quot;3&quot;</span><span class="p">,</span>
-            <span class="s2">&quot;id&quot;</span><span class="o">:</span> <span class="mi">3</span><span class="p">,</span>
-            <span class="s2">&quot;type&quot;</span><span class="o">:</span> <span class="mi">3</span><span class="p">,</span>
-            <span class="s2">&quot;view_url&quot;</span><span class="o">:</span> <span class="s2">&quot;http://0.0.0.0:9000/_uploads/photos/3&quot;</span>
+        <span class="s2">&quot;id_card_front&quot;</span><span class="o">:</span> <span class="p">{</span>  <span class="c1">// 身份证正面</span>
+            <span class="s2">&quot;created_at&quot;</span><span class="o">:</span> <span class="mi">1</span><span class="p">,</span>
+            <span class="s2">&quot;filename&quot;</span><span class="o">:</span> <span class="s2">&quot;1&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;filepath&quot;</span><span class="o">:</span> <span class="s2">&quot;180523/8f51855eedae984.jpg&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;id&quot;</span><span class="o">:</span> <span class="mi">1</span><span class="p">,</span>
+            <span class="s2">&quot;type&quot;</span><span class="o">:</span> <span class="mi">1</span><span class="p">,</span>
+            <span class="s2">&quot;view_url&quot;</span><span class="o">:</span> <span class="s2">&quot;http://0.0.0.0:9000/_uploads/photos/180523/8f51855eedae984.jpg&quot;</span>
         <span class="p">},</span>
-        <span class="s2">&quot;user_id&quot;</span><span class="o">:</span> <span class="mi">2</span>  <span class="c1">//</span>
+        <span class="s2">&quot;mobile&quot;</span><span class="o">:</span> <span class="s2">&quot;18888888888&quot;</span><span class="p">,</span>  <span class="c1">// 手机号</span>
+        <span class="s2">&quot;user_name&quot;</span><span class="o">:</span> <span class="s2">&quot;小杨&quot;</span>  <span class="c1">// 姓名</span>
     <span class="p">},</span>
     <span class="s2">&quot;status&quot;</span><span class="o">:</span> <span class="p">{</span>
         <span class="s2">&quot;code&quot;</span><span class="o">:</span> <span class="mi">200</span><span class="p">,</span>
