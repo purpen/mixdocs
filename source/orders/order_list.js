@@ -64,6 +64,8 @@
                         "express": 4,  // 快递公司ID
                         "express_at": 0,  // 发货时间
                         "express_no": null,  // 运单号
+                        "express_code": "YTO",
+                        "express_name": "圆通",
                         "id_code": "1",
                         "mode": "1 1",
                         "price": 1,

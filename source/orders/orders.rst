@@ -177,6 +177,8 @@ JSON数据格式:
                     "cover": "http://0.0.0.0:9000/_uploads/photos/1",
                     "deal_price": 1,  // 交易价格
                     "express": 4,  // 快递公司ID
+                    "express_code": "YTO",
+                    "express_name": "圆通",
                     "express_at": 0,  // 发货时间
                     "express_no": null,  // 运单号
                     "id_code": "1",
@@ -362,6 +364,8 @@ JSON数据格式:
                             "cover": "http://0.0.0.0:9000/_uploads/photos/1",
                             "deal_price": 1,  // 交易价格
                             "express": 4,  // 快递公司ID
+                            "express_code": "YTO",
+                            "express_name": "圆通",
                             "express_at": 0,  // 发货时间
                             "express_no": null,  // 运单号
                             "id_code": "1",
@@ -599,6 +603,8 @@ JSON数据格式:
                         "cover": "http://0.0.0.0:9000/_uploads/photos/1",
                         "deal_price": 1,  // 交易价格
                         "express": 4,  // 快递公司ID
+                        "express_code": "YTO",
+                        "express_name": "圆通",
                         "express_at": 0,  // 发货时间
                         "express_no": null,  // 运单号
                         "id_code": "1",
@@ -745,6 +751,8 @@ JSON数据格式:
                             "cover": "http://0.0.0.0:9000/_uploads/photos/1",
                             "deal_price": 1,  // 交易价格
                             "express": 4,  // 快递公司ID
+                            "express_code": "YTO",
+                            "express_name": "圆通",
                             "express_at": 0,  // 发货时间
                             "express_no": null,  // 运单号
                             "id_code": "1",
@@ -855,6 +863,8 @@ JSON数据格式:
                             "cover": "http://0.0.0.0:9000/_uploads/photos/1",
                             "deal_price": 1,  // 交易价格
                             "express": 4,  // 快递公司ID
+                            "express_code": "YTO",
+                            "express_name": "圆通",
                             "express_at": 0,  // 发货时间
                             "express_no": null,  // 运单号
                             "id_code": "1",
@@ -965,6 +975,8 @@ JSON数据格式:
                             "cover": "http://0.0.0.0:9000/_uploads/photos/1",
                             "deal_price": 1,  // 交易价格
                             "express": 4,  // 快递公司ID
+                            "express_code": "YTO",
+                            "express_name": "圆通",
                             "express_at": 0,  // 发货时间
                             "express_no": null,  // 运单号
                             "id_code": "1",
@@ -1077,6 +1089,8 @@ JSON数据格式:
                             "cover": "http://0.0.0.0:9000/_uploads/photos/1",
                             "deal_price": 1,  // 交易价格
                             "express": 4,  // 快递公司ID
+                            "express_code": "YTO",
+                            "express_name": "圆通",
                             "express_at": 0,  // 发货时间
                             "express_no": null,  // 运单号
                             "id_code": "1",
@@ -1187,6 +1201,8 @@ JSON数据格式:
                             "cover": "http://0.0.0.0:9000/_uploads/photos/1",
                             "deal_price": 1,  // 交易价格
                             "express": 4,  // 快递公司ID
+                            "express_code": "YTO",
+                            "express_name": "圆通",
                             "express_at": 0,  // 发货时间
                             "express_no": null,  // 运单号
                             "id_code": "1",
@@ -1298,6 +1314,8 @@ JSON数据格式:
                             "cover": "http://0.0.0.0:9000/_uploads/photos/1",
                             "deal_price": 1,  // 交易价格
                             "express": 4,  // 快递公司ID
+                            "express_code": "YTO",
+                            "express_name": "圆通",
                             "express_at": 0,  // 发货时间
                             "express_no": null,  // 运单号
                             "id_code": "1",
@@ -1494,6 +1512,7 @@ JSON数据格式:
                             "express": 4,
                             "express_at": 0,
                             "express_code": "YTO",
+                            "express_name": "圆通",
                             "express_no": null,
                             "freight": 190,
                             "mode": "1 1",
