@@ -52,6 +52,7 @@
                 },
                 "total_amount": 3,  // 商品金额
                 "total_quantity": 3,  // 商品总数量
+                "is_many_express": false, // 是否多物流公司发货
                 "items": [
                     {
                         "order_sku_commission_price": 6,// 分销佣金
