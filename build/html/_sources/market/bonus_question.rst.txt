@@ -291,4 +291,37 @@ JSON数据格式:
 
 
 
+猜图-获取用户所有奖励
+-------------------------
+猜图-获取用户所有奖励
+
+接口说明
+~~~~~~~~~~~~~~
+
+* API接口请求地址：``/guess_image/all_rewards``
+* API接口请求方法：``GET``
+* API接口用户授权：``token``
+
+
+返回示例
+~~~~~~~~~~~~~~~~
+
+JSON数据格式:
+
+.. code-block:: javascript
+
+
+    {
+        "data": {
+            "amount": 0,  // 现金
+            "bonus_amount": 40,  // 优惠券总额
+            "right_count": 8  // 答对题数
+        },
+        "status": {
+            "code": 200,
+            "message": "Ok all right."
+        },
+        "success": true
+    }
+
 

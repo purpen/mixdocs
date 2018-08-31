@@ -208,7 +208,6 @@ JSON数据格式:
 名称                    类型        是否必须    默认值        描述说明
 =====================  ==========  =========  ==========  =============================
 first_name              String      必需                     姓
-last_name               String      可选                     名
 phone                   String      可选                     电话
 mobile                  String      必需                     手机号码
 country_id              Number      可选        1            国家id
@@ -220,6 +219,10 @@ street_address          String      必需                     详细街道
 street_address_two      String      可选
 zipcode                 Number      可选                     邮编
 is_default              Bool        可选        False        是否默认地址
+is_overseas             Bool        可选        False        是保存海关地址
+id_card                 String      可选                     身份证号
+id_card_front           Integer     可选                     身份证正面照片图片资源id
+id_card_back            Integer     可选                     身份证背面照片图片资源id
 =====================  ==========  =========  ==========  =============================
 
 
