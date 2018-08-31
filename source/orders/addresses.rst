@@ -36,7 +36,6 @@ JSON数据格式:
                 "full_name": "田帅",  // 姓名
                 "is_default": false,  // 是否默认
                 "is_from_wx": false,  // 是否微信地址
-                "is_overseas": false,  // 是否海外地址
                 "last_name": null,  // 名
                 "mobile": "13278989898",  // 手机
                 "phone": null,  // 电话
@@ -47,27 +46,6 @@ JSON数据格式:
                 "street_address_two": null,  //
                 "town": null,  // 镇
                 "town_id": 0,  // 镇oid
-                "user_custom": {  // 海关信息
-                    "address_rid": "5126437908",
-                    "id_card": "1232",
-                    "id_card_back": {
-                        "created_at": 1,
-                        "filename": "1",
-                        "filepath": "1",
-                        "id": 1,
-                        "type": 1,
-                        "view_url": "http://0.0.0.0:9000/_uploads/photos/1"
-                    },
-                    "id_card_front": {
-                        "created_at": 1,
-                        "filename": "1",
-                        "filepath": "1",
-                        "id": 1,
-                        "type": 1,
-                        "view_url": "http://0.0.0.0:9000/_uploads/photos/1"
-                    },
-                    "user_id": 1
-                },
                 "zipcode": null
             }
         ],
@@ -110,7 +88,6 @@ JSON数据格式:
             "full_name": "田帅",  // 姓名
             "is_default": false,  // 是否默认
             "is_from_wx": false,  // 是否微信地址
-            "is_overseas": false,  // 是否海外地址
             "last_name": null,  // 名
             "mobile": "13278989898",  // 手机
             "phone": null,  // 电话
@@ -121,27 +98,6 @@ JSON数据格式:
             "street_address_two": null,  //
             "town": null,  // 镇
             "town_id": 0,  // 镇oid
-            "user_custom": {  // 海关信息
-                "address_rid": "5126437908",
-                "id_card": "1232",
-                "id_card_back": {
-                    "created_at": 1,
-                    "filename": "1",
-                    "filepath": "1",
-                    "id": 1,
-                    "type": 1,
-                    "view_url": "http://0.0.0.0:9000/_uploads/photos/1"
-                },
-                "id_card_front": {
-                    "created_at": 1,
-                    "filename": "1",
-                    "filepath": "1",
-                    "id": 1,
-                    "type": 1,
-                    "view_url": "http://0.0.0.0:9000/_uploads/photos/1"
-                },
-                "user_id": 1
-            },
             "zipcode": null
         },
         "status": {
@@ -184,7 +140,6 @@ JSON数据格式:
             "full_name": "田帅",  // 姓名
             "is_default": false,  // 是否默认
             "is_from_wx": false,  // 是否微信地址
-            "is_overseas": false,  // 是否海外地址
             "last_name": null,  // 名
             "mobile": "13278989898",  // 手机
             "phone": null,  // 电话
@@ -195,27 +150,6 @@ JSON数据格式:
             "street_address_two": null,  //
             "town": null,  // 镇
             "town_id": 0,  // 镇oid
-            "user_custom": {  // 海关信息
-                "address_rid": "5126437908",
-                "id_card": "1232",
-                "id_card_back": {
-                    "created_at": 1,
-                    "filename": "1",
-                    "filepath": "1",
-                    "id": 1,
-                    "type": 1,
-                    "view_url": "http://0.0.0.0:9000/_uploads/photos/1"
-                },
-                "id_card_front": {
-                    "created_at": 1,
-                    "filename": "1",
-                    "filepath": "1",
-                    "id": 1,
-                    "type": 1,
-                    "view_url": "http://0.0.0.0:9000/_uploads/photos/1"
-                },
-                "user_id": 1
-            },
             "zipcode": null
         },
         "status": {
@@ -274,7 +208,6 @@ JSON数据格式:
 名称                    类型        是否必须    默认值        描述说明
 =====================  ==========  =========  ==========  =============================
 first_name              String      必需                     姓
-last_name               String      可选                     名
 phone                   String      可选                     电话
 mobile                  String      必需                     手机号码
 country_id              Number      可选        1            国家id
@@ -286,7 +219,7 @@ street_address          String      必需                     详细街道
 street_address_two      String      可选
 zipcode                 Number      可选                     邮编
 is_default              Bool        可选        False        是否默认地址
-is_overseas             Bool        可选        False        是否海外地址
+is_overseas             Bool        可选        False        是保存海关地址
 id_card                 String      可选                     身份证号
 id_card_front           Integer     可选                     身份证正面照片图片资源id
 id_card_back            Integer     可选                     身份证背面照片图片资源id
@@ -314,7 +247,6 @@ JSON数据格式:
             "full_name": "田帅",  // 姓名
             "is_default": false,  // 是否默认
             "is_from_wx": false,  // 是否微信地址
-            "is_overseas": false,  // 是否海外地址
             "last_name": null,  // 名
             "mobile": "13278989898",  // 手机
             "phone": null,  // 电话
@@ -325,27 +257,6 @@ JSON数据格式:
             "street_address_two": null,  //
             "town": null,  // 镇
             "town_id": 0,  // 镇oid
-            "user_custom": {  // 海关信息
-                "address_rid": "5126437908",
-                "id_card": "1232",
-                "id_card_back": {
-                    "created_at": 1,
-                    "filename": "1",
-                    "filepath": "1",
-                    "id": 1,
-                    "type": 1,
-                    "view_url": "http://0.0.0.0:9000/_uploads/photos/1"
-                },
-                "id_card_front": {
-                    "created_at": 1,
-                    "filename": "1",
-                    "filepath": "1",
-                    "id": 1,
-                    "type": 1,
-                    "view_url": "http://0.0.0.0:9000/_uploads/photos/1"
-                },
-                "user_id": 1
-            },
             "zipcode": null
         },
         "status": {
@@ -398,10 +309,6 @@ street_address          String      必需                     详细街道
 street_address_two      String      可选
 zipcode                 Number      可选                     邮编
 is_default              Bool        可选        False        是否默认地址
-is_overseas             Bool        可选        False        是否海外地址
-id_card                 String      可选                     身份证号
-id_card_front           Integer     可选                     身份证正面照片图片资源id
-id_card_back            Integer     可选                     身份证背面照片图片资源id
 =====================  ==========  =========  ==========  =============================
 
 
@@ -426,7 +333,6 @@ JSON数据格式:
             "full_name": "田帅",  // 姓名
             "is_default": false,  // 是否默认
             "is_from_wx": false,  // 是否微信地址
-            "is_overseas": false,  // 是否海外地址
             "last_name": null,  // 名
             "mobile": "13278989898",  // 手机
             "phone": null,  // 电话
@@ -437,27 +343,6 @@ JSON数据格式:
             "street_address_two": null,  //
             "town": null,  // 镇
             "town_id": 0,  // 镇oid
-            "user_custom": {  // 海关信息
-                "address_rid": "5126437908",
-                "id_card": "1232",
-                "id_card_back": {
-                    "created_at": 1,
-                    "filename": "1",
-                    "filepath": "1",
-                    "id": 1,
-                    "type": 1,
-                    "view_url": "http://0.0.0.0:9000/_uploads/photos/1"
-                },
-                "id_card_front": {
-                    "created_at": 1,
-                    "filename": "1",
-                    "filepath": "1",
-                    "id": 1,
-                    "type": 1,
-                    "view_url": "http://0.0.0.0:9000/_uploads/photos/1"
-                },
-                "user_id": 1
-            },
             "zipcode": null
         },
         "status": {
