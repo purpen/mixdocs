@@ -309,6 +309,10 @@ street_address          String      必需                     详细街道
 street_address_two      String      可选
 zipcode                 Number      可选                     邮编
 is_default              Bool        可选        False        是否默认地址
+is_overseas             Bool        可选        False        是保存海关地址
+id_card                 String      可选                     身份证号
+id_card_front           Integer     可选                     身份证正面照片图片资源id
+id_card_back            Integer     可选                     身份证背面照片图片资源id
 =====================  ==========  =========  ==========  =============================
 
 
