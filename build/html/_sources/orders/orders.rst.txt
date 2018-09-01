@@ -70,8 +70,8 @@ status	            Number	  可选	                  订单状态 1、待发货 
 is_distributed      Number    可选           0         是否分销订单 1、分销订单
 create_at           String    可选                     下单时间
 search              String    可选                     商品名称或订单编号
-page                Number    可选         1           当前页码
-per_page            Number    可选         10          每页数量
+page                Number    可选          1          当前页码
+per_page            Number    可选          10         每页数量
 =================  ========  ===========  ==========  =========================================================
 
 返回示例
