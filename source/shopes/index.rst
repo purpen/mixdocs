@@ -19,3 +19,9 @@
     :maxdepth: 2
 
     wxapp.rst
+
+
+.. toctree::
+    :maxdepth: 2
+
+    notice.rst
