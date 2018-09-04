@@ -32,7 +32,117 @@ per_page     Number    可选         10        每页数量
 
 JSON数据格式:
 
-.. literalinclude:: order_list.js
+.. code-block:: javascript
+
+    {
+        "data": {
+            "count": 252,
+            "next": "http://0.0.0.0:9000/v1.0/orders?status=0&page=2",
+            "orders": [
+                {
+                    "buyer_address": "青年路",  // 买家地址
+                    "buyer_city": "淄博",  //买家市
+                    "buyer_country": "中国",  // 买家国家
+                    "buyer_name": "ZT-2",
+                    "buyer_phone": "13260180689",  // 买家电话
+                    "buyer_province": "山东",  // 买家省
+                    "buyer_remark": null,  // 买家备注
+                    "buyer_tel": "13260180689",  // 买家手机
+                    "buyer_zipcode": "255300",  // 买家邮编
+                    "coupon_amount": 0,  // 优惠券金额
+                    "created_at": 1530608616,  // 创建时间
+                    "current_time": 1533813725,  // 当前时间
+                    "customer_order_id": null,  // 分销商订单编号
+                    "discount_amount": 0,  // 店铺优惠金额 = 首单优惠 + 满减 + 优惠券
+                    "first_discount": 0,  // 首单优惠
+                    "freight": 14,  // 运费
+                    "official_order_id": null,  // 官方平台订单号
+                    "outside_target_id": "D18070316803529",  // 第三方平台订单号
+                    "pay_amount": 17,  // 支付金额
+                    "reach_minus": 0,  // 满减金额
+                    "distributed": false,  // 分销订单
+                    "remark": null,  // 卖家备注
+                    "rid": "D18070316803529",  // 订单编号
+                    "ship_mode": 1,  // 运送方式
+                    "status": 5,  // 订单状态
+                    "store": {  // 店铺
+                        "store_logo": {  // logo
+                            "created_at": 1,
+                            "filename": "1",
+                            "filepath": "180523/8f51855eedae984.jpg",
+                            "id": 1,
+                            "type": 1,
+                            "view_url": "http://0.0.0.0:9000/_uploads/photos/180523/8f51855eedae984.jpg"
+                        },
+                        "store_name": "第一家",  // 店铺名称
+                        "store_rid": "2"  // 店铺编号
+                    },
+                    "total_amount": 3,  // 商品金额
+                    "total_quantity": 3,  // 商品总数量
+                    "blessing_utterance": "嘿嘿嘿",  // 买家寄语
+                    "buyer_remark": "哈哈哈",  // 买家备注
+                    "payed_at": 12321312,  // 付款时间
+                    "received_at": 12321312,  // 签收时间
+                    "is_many_express": false, // 是否多物流公司发货
+                    "user_order_status": 1  // 用户查看订单列表状态
+                                            // 1、待发货 2、待收货 3、待评价 4、待付款 5、已评价 6、已退款 7、已取消
+                    "items": [
+                        {
+                            "bgcover": "http://0.0.0.0:9000/_uploads/photos/180523/8f51855eedae984.jpg",
+                            "city": "",
+                            "commission_price": null,
+                            "commission_rate": 10,
+                            "country": "",
+                            "cover": "http://0.0.0.0:9000/_uploads/photos/180523/8f51855eedae984.jpg",
+                            "cover_id": 1,
+                            "deal_price": 30,
+                            "delivery_city": "北京",
+                            "delivery_country": "",
+                            "delivery_country_id": null,
+                            "delivery_province": "北京",
+                            "distribution_type": 1,
+                            "express": 6,
+                            "express_at": 0,
+                            "express_code": "ZJS",
+                            "express_name": "宅急送",
+                            "express_no": null,
+                            "fans_count": 1,
+                            "freight": 590,
+                            "mode": "1 1",
+                            "order_sku_commission_price": 90,
+                            "order_sku_commission_rate": 10,
+                            "price": 33,
+                            "product_name": "自行车",
+                            "product_rid": "3",
+                            "province": "",
+                            "quantity": 30,
+                            "rid": "3",
+                            "s_color": "1",
+                            "s_model": "1",
+                            "s_weight": 1,
+                            "sale_price": 30,
+                            "stock_count": 32243,
+                            "stock_quantity": 32243,
+                            "store_logo": "http://0.0.0.0:9000/_uploads/photos/180523/8f51855eedae984.jpg",
+                            "store_name": "第2家",
+                            "store_rid": "3",
+                            "tag_line": "1",
+                            "town": ""
+                        }
+                    ],
+                },
+
+            ],
+            "prev": null
+        },
+        "status": {
+            "code": 200,
+            "message": "Ok all right."
+        },
+        "success": true
+    }
+
+
 
 
 返回错误格式：
@@ -133,7 +243,8 @@ JSON数据格式:
                     "payed_at": 12321312,  // 付款时间
                     "received_at": 12321312,  // 签收时间
                     "is_many_express": false, // 是否多物流公司发货
-                    "master_order_status": 3,  // 商家列表订单状态  1、待发货 2、已发货 3、已完成 4、已取消 5、未付款
+                    "master_order_status": 3,  // 商家列表订单状态
+                                                //1、待发货 2、已发货 3、已完成 4、已取消 5、未付款
                     "items": [
                         {
                             "bgcover": "http://0.0.0.0:9000/_uploads/photos/180523/8f51855eedae984.jpg",
@@ -181,11 +292,6 @@ JSON数据格式:
 
                 },
             ],
-            "pending_payment_not_read": 0,  // 待付款未读数
-            "pending_shipment_not_read": 33,  // 待发货未读数
-            "finish_not_read": 13,  // 已完成未读数
-            "cancel_not_read": 0,  // 已取消未读数
-            "shipment_not_read": 1  // 已发货未读数
         },
         "status": {
             "code": 200,
@@ -1771,7 +1877,7 @@ JSON数据格式:
                             "store_rid": "3"
                         }
                     ],
-                    "life_order_status": 3,  // 生活馆订单状态， 1、待发货 2、已发货 3、已完成
+                    "life_order_status": 3,  // 生活馆订单状态， 1、待发货 2、已发货 3、已完成 4、已退款 5、已取消
                      "official_order_id": null,  // 官方平台订单号
                     "outside_target_id": "D18070316803529",  // 第三方平台订单号
                     "pay_amount": 17,  // 支付金额
@@ -1801,3 +1907,42 @@ JSON数据格式:
         },
         "success": true
     }
+
+
+
+未付款订单数，未使用优惠券数量
+========================================
+未付款订单数，未使用优惠券数量
+
+接口说明
+~~~~~~~~~~~~~~
+
+* API接口请求地址：``/orders/order_coupon_count``
+* API接口请求方法：``GET``
+* API接口用户授权：``token``
+
+
+返回示例
+~~~~~~~~~~~~~~~~
+
+JSON数据格式:
+
+.. code-block:: javascript
+
+    {
+        "data": {
+            "coupon_count": 3,  // 未使用优惠券数量
+            "order_count": 170  // 未付款订单数
+        },
+        "status": {
+            "code": 200,
+            "message": "Ok all right."
+        },
+        "success": true
+    }
+
+
+
+
+
+
