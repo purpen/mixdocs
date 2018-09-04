@@ -113,6 +113,7 @@
 <li class="toctree-l2"><a class="reference internal" href="shopes/shopes.html">微商城模块</a></li>
 <li class="toctree-l2"><a class="reference internal" href="shopes/store.html">店铺模块</a></li>
 <li class="toctree-l2"><a class="reference internal" href="shopes/wxapp.html">小程序模块</a></li>
+<li class="toctree-l2"><a class="reference internal" href="shopes/notice.html">通知模块</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="market/index.html">营销API模块</a><ul>
@@ -163,7 +164,8 @@
 <li class="toctree-l2"><a class="reference internal" href="#id46">忘记密码发送短信验证码</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#id50">动态登陆发送短信验证码</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#id54">账户编辑发送短信验证码</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#id58">发送邮件验证码</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#id58">账户编辑发送短信验证码</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#id62">发送邮件验证码</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="setting.html">系统相关配置文档</a><ul>
@@ -278,10 +280,16 @@
 <li><a class="reference internal" href="#id57">返回示例</a></li>
 </ul>
 </li>
-<li><a class="reference internal" href="#id58">发送邮件验证码</a><ul>
+<li><a class="reference internal" href="#id58">账户编辑发送短信验证码</a><ul>
 <li><a class="reference internal" href="#id59">接口说明</a></li>
 <li><a class="reference internal" href="#id60">请求参数</a></li>
 <li><a class="reference internal" href="#id61">返回示例</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#id62">发送邮件验证码</a><ul>
+<li><a class="reference internal" href="#id63">接口说明</a></li>
+<li><a class="reference internal" href="#id64">请求参数</a></li>
+<li><a class="reference internal" href="#id65">返回示例</a></li>
 </ul>
 </li>
 </ul>
@@ -400,10 +408,16 @@
 <li><a class="reference internal" href="#id57">返回示例</a></li>
 </ul>
 </li>
-<li><a class="reference internal" href="#id58">发送邮件验证码</a><ul>
+<li><a class="reference internal" href="#id58">账户编辑发送短信验证码</a><ul>
 <li><a class="reference internal" href="#id59">接口说明</a></li>
 <li><a class="reference internal" href="#id60">请求参数</a></li>
 <li><a class="reference internal" href="#id61">返回示例</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#id62">发送邮件验证码</a><ul>
+<li><a class="reference internal" href="#id63">接口说明</a></li>
+<li><a class="reference internal" href="#id64">请求参数</a></li>
+<li><a class="reference internal" href="#id65">返回示例</a></li>
 </ul>
 </li>
 </ul>
@@ -1628,17 +1642,78 @@
 </div>
 </div>
 <div class="section" id="id58">
-<h2>发送邮件验证码<a class="headerlink" href="#id58" title="永久链接至标题">¶</a></h2>
+<h2>账户编辑发送短信验证码<a class="headerlink" href="#id58" title="永久链接至标题">¶</a></h2>
 <div class="section" id="id59">
 <h3>接口说明<a class="headerlink" href="#id59" title="永久链接至标题">¶</a></h3>
+<ul class="simple">
+<li>API接口请求地址：<code class="docutils literal"><span class="pre">/users/users/remove_binding</span></code></li>
+<li>API接口请求方法：<code class="docutils literal"><span class="pre">POST</span></code></li>
+</ul>
+</div>
+<div class="section" id="id60">
+<h3>请求参数<a class="headerlink" href="#id60" title="永久链接至标题">¶</a></h3>
+<table border="1" class="docutils">
+<colgroup>
+<col width="15%" />
+<col width="11%" />
+<col width="13%" />
+<col width="11%" />
+<col width="50%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">名称</th>
+<th class="head">类型</th>
+<th class="head">是否必须</th>
+<th class="head">默认值</th>
+<th class="head">描述说明</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>mobile</td>
+<td>String</td>
+<td>必须</td>
+<td>&#160;</td>
+<td>手机号</td>
+</tr>
+<tr class="row-odd"><td>area_code</td>
+<td>String</td>
+<td>可选</td>
+<td>+86</td>
+<td>区号</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="id61">
+<h3>返回示例<a class="headerlink" href="#id61" title="永久链接至标题">¶</a></h3>
+<p>JSON数据格式</p>
+<p>请求 <strong>正确</strong> 返回结果：</p>
+<div class="highlight-javascript"><div class="highlight"><pre><span></span><span class="p">{</span>
+    <span class="s2">&quot;data&quot;</span><span class="o">:</span> <span class="p">{</span>
+        <span class="s2">&quot;phone_verify_code&quot;</span><span class="o">:</span> <span class="s2">&quot;5702&quot;</span>
+    <span class="p">},</span>
+    <span class="s2">&quot;status&quot;</span><span class="o">:</span> <span class="p">{</span>
+        <span class="s2">&quot;code&quot;</span><span class="o">:</span> <span class="mi">200</span><span class="p">,</span>
+        <span class="s2">&quot;message&quot;</span><span class="o">:</span> <span class="s2">&quot;Ok all right.&quot;</span>
+    <span class="p">},</span>
+    <span class="s2">&quot;success&quot;</span><span class="o">:</span> <span class="kc">true</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="id62">
+<h2>发送邮件验证码<a class="headerlink" href="#id62" title="永久链接至标题">¶</a></h2>
+<div class="section" id="id63">
+<h3>接口说明<a class="headerlink" href="#id63" title="永久链接至标题">¶</a></h3>
 <ul class="simple">
 <li>API接口请求地址：<code class="docutils literal"><span class="pre">/users/email_verify_code</span></code></li>
 <li>API接口请求方法：<code class="docutils literal"><span class="pre">POST</span></code></li>
 <li>API接口用户授权：<code class="docutils literal"><span class="pre">token</span></code></li>
 </ul>
 </div>
-<div class="section" id="id60">
-<h3>请求参数<a class="headerlink" href="#id60" title="永久链接至标题">¶</a></h3>
+<div class="section" id="id64">
+<h3>请求参数<a class="headerlink" href="#id64" title="永久链接至标题">¶</a></h3>
 <table border="1" class="docutils">
 <colgroup>
 <col width="15%" />
@@ -1665,8 +1740,8 @@
 </tbody>
 </table>
 </div>
-<div class="section" id="id61">
-<h3>返回示例<a class="headerlink" href="#id61" title="永久链接至标题">¶</a></h3>
+<div class="section" id="id65">
+<h3>返回示例<a class="headerlink" href="#id65" title="永久链接至标题">¶</a></h3>
 <p>JSON数据格式</p>
 <p>请求 <strong>正确</strong> 返回结果：</p>
 <div class="highlight-javascript"><div class="highlight"><pre><span></span><span class="p">{</span>

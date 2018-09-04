@@ -42,7 +42,7 @@ JSON数据格式:
                     "start_date": 1528560000,  // 开始时间
                     "surplus_days": 7,  // 剩余天数
                     "total_quantity": 2000,  // 总数量
-                    "type": 2  // 类型
+                    "type": 2  // 类型 1、同享券 2、单享券 3、满减
                     "items": [
                         {
                             "amount": 1,  // 面值
@@ -53,7 +53,7 @@ JSON数据格式:
                             "pickup_count": 0,  // 领取数量
                             "surplus_count": 1000,  // 剩余数量
                             "use_count": 0,  // 使用数量
-                            "type": 2,  // 类型
+                            "type": 2,  // 类型 1、同享券 2、单享券 3、满减
                             "type_text": "部分商品可用"
                         }
                     ]
@@ -115,7 +115,7 @@ JSON数据格式:
                     "min_amount": 90,  // 限制金额
                     "pickup_count": 0,  // 领取数量
                     "surplus_count": 1000,  // 剩余数量
-                    "type": 2,  // 类型
+                    "type": 2,  // 类型 1、同享券 2、单享券 3、满减
                     "type_text": "部分商品可用",
                     "use_count": 0  // 使用数量
                 }
@@ -157,13 +157,12 @@ JSON数据格式:
                     "count": 100,  // 数量
                     "created_at": 1528947024,
                     "end_date": 2147483647,
-                    "limit_products": [],  // 限制商品
+                    "products": [],  // 商品
                     "min_amount": 30,  // 最小金额限制
                     "name": "FB",  //
                     "reach_amount": 30,  // 满足金额
                     "start_date": 0,  //
-                    "status": 1,  // 优惠券状态
-                    "type": 3,  // 优惠券类型
+                    "type": 3,  // 优惠券类型 1、同享券 2、单享券 3、满减
                     "type_text": "消费满30.00元可减2.00元"  // 描述
                 }
             ],
@@ -213,17 +212,18 @@ JSON数据格式:
             "coupons": [
                 {
                     "coupon": {
-                        "amount": 5,
-                        "code": "UDNHISFAMRJ",
-                        "created_at": 1520269560,
-                        "limit_products": "",
-                        "min_amount": 0,
-                        "name": "满减活动",
-                        "reach_amount": 100,
-                        "start_date": 1520265600,
-                        "status": 1,
-                        "type": 2,
-                        "type_text": "部分商品可用"
+                        "amount": 30,  //面值
+                        "code": "UVYSEZXQBMH",
+                        "count": 100,
+                        "created_at": 1531744639,
+                        "days": 0,  // 有效天数
+                        "end_date": 1538582400, // 活动结束时间
+                        "min_amount": 0,  // 限制金额
+                        "products": [],  // 可用商品
+                        "reach_amount": 300,  // 满足金额
+                        "start_date": 1525881600, // 活动开始时间
+                        "type": 3,  // // 优惠券类型 1、同享券 2、单享券 3、满减
+                        "type_text": "满300减30元"
                     },
                     "get_at": null,  // 获得时间
                     "is_used": false,  // 是否使用
@@ -278,17 +278,18 @@ JSON数据格式:
             "coupons": [
                 {
                     "coupon": {
-                        "amount": 5,
-                        "code": "UDNHISFAMRJ",
-                        "created_at": 1520269560,
-                        "limit_products": "",
-                        "min_amount": 0,
-                        "name": "满减活动",
-                        "reach_amount": 100,
-                        "start_date": 1520265600,
-                        "status": 1,
-                        "type": 2,
-                        "type_text": "部分商品可用"
+                        "amount": 30,  //面值
+                        "code": "UVYSEZXQBMH",
+                        "count": 100,
+                        "created_at": 1531744639,
+                        "days": 0,  // 有效天数
+                        "end_date": 1538582400, // 活动结束时间
+                        "min_amount": 0,  // 限制金额
+                        "products": [],  // 可用商品
+                        "reach_amount": 300,  // 满足金额
+                        "start_date": 1525881600, // 活动开始时间
+                        "type": 3,  // // 优惠券类型 1、同享券 2、单享券 3、满减
+                        "type_text": "满300减30元"
                     },
                     "get_at": null,  // 获得时间
                     "is_used": false,  // 是否使用
@@ -309,9 +310,9 @@ JSON数据格式:
 
 
 
-用户获取商家优惠券列表
------------------------
-用户获取商家优惠券列表
+用户登录后获取商家优惠券列表
+-------------------------------
+用户登录后获取商家优惠券列表
 
 接口说明
 ~~~~~~~~~~~~~~
@@ -351,7 +352,7 @@ JSON数据格式:
                     "products": [],
                     "reach_amount": 0,
                     "status": 1,  // 是否领取 0、未领取 1、已领取
-                    "type": 1,  // 类型
+                    "type": 1,  // 类型 1、同享券 2、单享券 3、满减
                     "type_text": "全店通用",
                     "end_date": 1538582400,  // 结束时间
                     "start_date": 1531670400,  // 开始时间
@@ -401,71 +402,14 @@ JSON数据格式:
                 {
                     "amount": 10,  // 面值
                     "code": "UHAOSIWFUVZ",  // 优惠券code
-                    "count": 100,
-                    "created_at": 1531742069,  //
-                    "days": 7,  // 有效期
+                    "count": 100,  // 领取数量
+                    "created_at": 1531742069,
+                    "days": 7,  // 有效天数
                     "min_amount": 99,  // 最小金额
-                    "products": [],
-                    "reach_amount": 0,
-                    "type": 1,  // 类型
-                    "type_text": "全店通用",
-                    "end_date": 1538582400,  // 结束时间
-                    "start_date": 1531670400,  // 开始时间
-                }
-            ]
-        },
-        "status": {
-            "code": 200,
-            "message": "Ok all right."
-        },
-        "success": true
-    }
-
-
-
-用户获取分销商优惠券列表
--------------------------------
-用户获取分销商优惠券列表
-
-接口说明
-~~~~~~~~~~~~~~
-
-* API接口请求地址：``/market/user_distribute_coupons``
-* API接口请求方法：``GET``
-* API接口用户授权：``token``
-
-
-请求参数
-~~~~~~~~~~~~~~~
-
-===========  ========  =========  ========  ====================================
-名称          类型      是否必须    默认值     描述说明
-===========  ========  =========  ========  ====================================
-rid          String    可选                  分销商店铺rid
-===========  ========  =========  ========  ====================================
-
-
-返回示例
-~~~~~~~~~~~~~~~~
-
-JSON数据格式:
-
-.. code-block:: javascript
-
-    {
-        "data": {
-            "coupons": [
-                {
-                    "amount": 10,  // 面值
-                    "code": "UHAOSIWFUVZ",  // 优惠券code
-                    "count": 100,
-                    "created_at": 1531742069,  //
-                    "days": 7,  // 有效期
-                    "min_amount": 99,  // 最小金额
-                    "products": [],
-                    "reach_amount": 0,
+                    "products": [],  // 可用商品
+                    "reach_amount": 0,  // 满足金额
                     "status": 1,  // 是否领取 0、未领取 1、已领取
-                    "type": 1,  // 类型
+                    "type": 1,  // 类型 1、同享券 2、单享券 3、满减
                     "type_text": "全店通用",
                     "end_date": 1538582400,  // 结束时间
                     "start_date": 1531670400,  // 开始时间
@@ -557,11 +501,11 @@ JSON数据格式:
                         "code": "URTNVFYOLKB",  // 优惠券code
                         "count": 100,
                         "created_at": 1531744081,
-                        "days": 7,
+                        "days": 7,  // 有效天数
                         "min_amount": 99, // 最小金额
-                        "products": [],
+                        "products": [], // 可用商品
                         "reach_amount": 0,
-                        "type": 1,  // 类型
+                        "type": 1,  // 类型  1、同享券 2、单享券 3、满减
                         "type_text": "全店通用"
                     },
                     "end_at": 1532685052,  // 到期时间
@@ -654,7 +598,7 @@ JSON数据格式:
                 "amount": 30,  // 面值
                 "code": "UVYSEZXQBMH",
                 "reach_amount": 300,  // 满足金额
-                "type": 3,
+                "type": 3, // 1、同享券 2、单享券 3、满减
                 "type_text": "满300.00减30.00元",
                 "use_count": 0
             }
@@ -689,17 +633,18 @@ JSON数据格式:
 
     {
         "data": {
-            "amount": 5,
-            "code": "UDNHISFAMRJ",
-            "created_at": 1520269560,
-            "limit_products": "",
-            "min_amount": 0,
-            "name": "满减活动",
-            "reach_amount": 100,
-            "start_date": 1520265600,
-            "status": 1,
-            "type": 2,
-            "type_text": "部分商品可用"
+            "amount": 10,  // 面值
+            "code": "UHAOSIWFUVZ",  // 优惠券code
+            "count": 100,  // 领取数量
+            "created_at": 1531742069,
+            "days": 7,  // 有效天数
+            "min_amount": 99,  // 最小金额
+            "products": [],  // 可用商品
+            "reach_amount": 0,  // 满足金额
+            "type": 1,  // 类型 1、同享券 2、单享券 3、满减
+            "type_text": "全店通用",
+            "end_date": 1538582400,  // 结束时间
+            "start_date": 1531670400,  // 开始时间
         },
         "status": {
             "code": 200,
@@ -780,20 +725,23 @@ JSON数据格式:
             "activity_id": 2,  // 活动id
             "items": [
                 {
-                    "amount": 1,  // 优惠金额
-                    "code": "UVGKCSLIMOA",  // 优惠券code
-                    "count": 1000,  // 优惠券数量
-                    "created_at": 1529998307,  // 创建时间
+                    "amount": 10,  // 面值
+                    "code": "UHAOSIWFUVZ",  // 优惠券code
+                    "count": 100,  // 领取数量
+                    "created_at": 1531742069,
                     "days": 7,  // 有效天数
-                    "min_amount": 90,  // 限制最小金额
+                    "min_amount": 99,  // 最小金额
                     "products": [
                         {
                             "name": "摩托",  // 优惠商品
                             "rid": "1"  // 商品rid
                         }
                     ],
-                    "type": 2,  // 优惠券类型
-                    "type_text": "部分商品可用"
+                    "reach_amount": 0,  // 满足金额
+                    "type": 1,  // 类型 1、同享券 2、单享券 3、满减
+                    "type_text": "全店通用",
+                    "end_date": 1538582400,  // 结束时间
+                    "start_date": 1531670400,  // 开始时间
                 }
             ],
         },
@@ -1244,9 +1192,9 @@ JSON数据格式:
 
 
 
-用户领取红包
--------------
-用户领取红包
+用户领取官方红包
+--------------------
+用户领取官方红包
 
 接口说明
 ~~~~~~~~~~~~~
@@ -1280,7 +1228,7 @@ JSON数据格式:
             "is_used": false,  // 是否使用
             "min_amount": 0,  // 限制金额
             "start_at": 1532707200,  // 开始时间
-            "type": 1,  // 1 、红包 2、官方优惠券
+            "type": 1,  // 1 、无门槛 2、有门槛
             "user_id": 2  // 用户id
         },
         "status": {
@@ -1547,7 +1495,7 @@ JSON数据格式:
             "is_used": false,  // 是否使用
             "min_amount": 100,  // 限制金额
             "start_at": 1532707200,  // 开始时间
-            "type": 2,  // 1 、红包 2、官方优惠券
+            "type": 2,  // 1 、无门槛 2、有门槛
             "user_id": 2  // 用户id
         },
         "status": {

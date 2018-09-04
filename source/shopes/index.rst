@@ -9,3 +9,4 @@
     shopes.rst
     store.rst
     wxapp.rst
+    notice.rst
