@@ -241,6 +241,12 @@
 <li><a class="reference internal" href="#id30">返回示例</a></li>
 </ul>
 </li>
+<li><a class="reference internal" href="#id31">猜图-好友榜</a><ul>
+<li><a class="reference internal" href="#id32">接口说明</a></li>
+<li><a class="reference internal" href="#id33">请求参数</a></li>
+<li><a class="reference internal" href="#id34">返回示例</a></li>
+</ul>
+</li>
 </ul>
 </li>
 </ul>
@@ -316,6 +322,12 @@
 <li><a class="reference internal" href="#id28">接口说明</a></li>
 <li><a class="reference internal" href="#id29">请求参数</a></li>
 <li><a class="reference internal" href="#id30">返回示例</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#id31">猜图-好友榜</a><ul>
+<li><a class="reference internal" href="#id32">接口说明</a></li>
+<li><a class="reference internal" href="#id33">请求参数</a></li>
+<li><a class="reference internal" href="#id34">返回示例</a></li>
 </ul>
 </li>
 </ul>
@@ -782,8 +794,8 @@
             <span class="s2">&quot;user_logo&quot;</span><span class="o">:</span> <span class="s2">&quot;http://kg.erp.taihuoniao.com/static/img/default-logo.png&quot;</span><span class="p">,</span>  <span class="c1">// 用户头像</span>
             <span class="s2">&quot;user_name&quot;</span><span class="o">:</span> <span class="kc">null</span>  <span class="c1">// 用户名</span>
         <span class="p">},</span>
-        <span class="s2">&quot;user_ranking&quot;</span><span class="o">:</span> <span class="mi">1</span><span class="p">,</span>  <span class="c1">// 当前用户排名</span>
-        <span class="s2">&quot;world_ranking&quot;</span><span class="o">:</span> <span class="p">[</span>  <span class="c1">// 排行榜</span>
+        <span class="s2">&quot;user_ranking&quot;</span><span class="o">:</span> <span class="mi">1</span><span class="p">,</span>  <span class="c1">// 当前用户排名  0、未上榜</span>
+        <span class="s2">&quot;ranking_list&quot;</span><span class="o">:</span> <span class="p">[</span>  <span class="c1">// 排行榜</span>
             <span class="p">{</span>
                 <span class="s2">&quot;amount&quot;</span><span class="o">:</span> <span class="mi">24</span><span class="p">,</span>  <span class="c1">//</span>
                 <span class="s2">&quot;code&quot;</span><span class="o">:</span> <span class="s2">&quot;W598013472&quot;</span><span class="p">,</span>
@@ -792,7 +804,96 @@
                 <span class="s2">&quot;cumulative_coupon_amount&quot;</span><span class="o">:</span> <span class="mi">190</span><span class="p">,</span>  <span class="c1">// 累计优惠券金额</span>
                 <span class="s2">&quot;cumulative_coupon_quantity&quot;</span><span class="o">:</span> <span class="mi">38</span><span class="p">,</span>  <span class="c1">// 累计优惠券数量</span>
                 <span class="s2">&quot;mobile&quot;</span><span class="o">:</span> <span class="kc">null</span><span class="p">,</span>
-                <span class="s2">&quot;num&quot;</span><span class="o">:</span> <span class="mi">1</span><span class="p">,</span>  <span class="c1">// 排名</span>
+                <span class="s2">&quot;ranking&quot;</span><span class="o">:</span> <span class="mi">1</span><span class="p">,</span>  <span class="c1">// 排名</span>
+                <span class="s2">&quot;updated_at&quot;</span><span class="o">:</span> <span class="mi">1536055463</span><span class="p">,</span>
+                <span class="s2">&quot;user_info&quot;</span><span class="o">:</span> <span class="p">{</span>
+                    <span class="s2">&quot;user_logo&quot;</span><span class="o">:</span> <span class="s2">&quot;http://kg.erp.taihuoniao.com/static/img/default-logo.png&quot;</span><span class="p">,</span>  <span class="c1">// 用户头像</span>
+                    <span class="s2">&quot;user_name&quot;</span><span class="o">:</span> <span class="kc">null</span>  <span class="c1">// 用户姓名</span>
+                <span class="p">}</span>
+            <span class="p">}</span>
+        <span class="p">]</span>
+    <span class="p">},</span>
+    <span class="s2">&quot;status&quot;</span><span class="o">:</span> <span class="p">{</span>
+        <span class="s2">&quot;code&quot;</span><span class="o">:</span> <span class="mi">200</span><span class="p">,</span>
+        <span class="s2">&quot;message&quot;</span><span class="o">:</span> <span class="s2">&quot;Ok all right.&quot;</span>
+    <span class="p">},</span>
+    <span class="s2">&quot;success&quot;</span><span class="o">:</span> <span class="kc">true</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="id31">
+<h2>猜图-好友榜<a class="headerlink" href="#id31" title="永久链接至标题">¶</a></h2>
+<p>猜图-好友榜</p>
+<div class="section" id="id32">
+<h3>接口说明<a class="headerlink" href="#id32" title="永久链接至标题">¶</a></h3>
+<ul class="simple">
+<li>API接口请求地址：<code class="docutils literal"><span class="pre">/guess_image/friend_ranking</span></code></li>
+<li>API接口请求方法：<code class="docutils literal"><span class="pre">GET</span></code></li>
+<li>API接口用户授权：<code class="docutils literal"><span class="pre">token</span></code></li>
+</ul>
+</div>
+<div class="section" id="id33">
+<h3>请求参数<a class="headerlink" href="#id33" title="永久链接至标题">¶</a></h3>
+<table border="1" class="docutils">
+<colgroup>
+<col width="21%" />
+<col width="14%" />
+<col width="12%" />
+<col width="14%" />
+<col width="40%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">名称</th>
+<th class="head">类型</th>
+<th class="head">是否必须</th>
+<th class="head">默认值</th>
+<th class="head">描述说明</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>page</td>
+<td>Number</td>
+<td>可选</td>
+<td>1</td>
+<td>当前页码</td>
+</tr>
+<tr class="row-odd"><td>per_page</td>
+<td>Number</td>
+<td>可选</td>
+<td>30</td>
+<td>每页数量</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="id34">
+<h3>返回示例<a class="headerlink" href="#id34" title="永久链接至标题">¶</a></h3>
+<p>JSON数据格式:</p>
+<div class="highlight-javascript"><div class="highlight"><pre><span></span><span class="p">{</span>
+    <span class="s2">&quot;data&quot;</span><span class="o">:</span> <span class="p">{</span>
+        <span class="s2">&quot;count&quot;</span><span class="o">:</span> <span class="mi">1</span><span class="p">,</span>
+        <span class="s2">&quot;next&quot;</span><span class="o">:</span> <span class="kc">null</span><span class="p">,</span>
+        <span class="s2">&quot;prev&quot;</span><span class="o">:</span> <span class="kc">null</span><span class="p">,</span>
+        <span class="s2">&quot;user_amount&quot;</span><span class="o">:</span> <span class="mi">24</span><span class="p">,</span>  <span class="c1">// 当前用户红包金额</span>
+        <span class="s2">&quot;user_coupon_amount&quot;</span><span class="o">:</span> <span class="mi">190</span><span class="p">,</span>  <span class="c1">//当前用户优惠券金额</span>
+        <span class="s2">&quot;user_coupon_quantity&quot;</span><span class="o">:</span> <span class="mi">38</span><span class="p">,</span>  <span class="c1">//当前用户优惠券数量</span>
+        <span class="s2">&quot;user_info&quot;</span><span class="o">:</span> <span class="p">{</span>
+            <span class="s2">&quot;user_logo&quot;</span><span class="o">:</span> <span class="s2">&quot;http://kg.erp.taihuoniao.com/static/img/default-logo.png&quot;</span><span class="p">,</span>  <span class="c1">// 用户头像</span>
+            <span class="s2">&quot;user_name&quot;</span><span class="o">:</span> <span class="kc">null</span>  <span class="c1">// 用户名</span>
+        <span class="p">},</span>
+        <span class="s2">&quot;user_ranking&quot;</span><span class="o">:</span> <span class="mi">1</span><span class="p">,</span>  <span class="c1">// 当前用户排名  0、未上榜</span>
+        <span class="s2">&quot;ranking_list&quot;</span><span class="o">:</span> <span class="p">[</span>  <span class="c1">// 排行榜</span>
+            <span class="p">{</span>
+                <span class="s2">&quot;amount&quot;</span><span class="o">:</span> <span class="mi">24</span><span class="p">,</span>  <span class="c1">//</span>
+                <span class="s2">&quot;code&quot;</span><span class="o">:</span> <span class="s2">&quot;W598013472&quot;</span><span class="p">,</span>
+                <span class="s2">&quot;created_at&quot;</span><span class="o">:</span> <span class="mi">1536052931</span><span class="p">,</span>
+                <span class="s2">&quot;cumulative_amount&quot;</span><span class="o">:</span> <span class="mi">24</span><span class="p">,</span>  <span class="c1">// 累计红包金额</span>
+                <span class="s2">&quot;cumulative_coupon_amount&quot;</span><span class="o">:</span> <span class="mi">190</span><span class="p">,</span>  <span class="c1">// 累计优惠券金额</span>
+                <span class="s2">&quot;cumulative_coupon_quantity&quot;</span><span class="o">:</span> <span class="mi">38</span><span class="p">,</span>  <span class="c1">// 累计优惠券数量</span>
+                <span class="s2">&quot;mobile&quot;</span><span class="o">:</span> <span class="kc">null</span><span class="p">,</span>
+                <span class="s2">&quot;ranking&quot;</span><span class="o">:</span> <span class="mi">1</span><span class="p">,</span>  <span class="c1">// 排名</span>
                 <span class="s2">&quot;updated_at&quot;</span><span class="o">:</span> <span class="mi">1536055463</span><span class="p">,</span>
                 <span class="s2">&quot;user_info&quot;</span><span class="o">:</span> <span class="p">{</span>
                     <span class="s2">&quot;user_logo&quot;</span><span class="o">:</span> <span class="s2">&quot;http://kg.erp.taihuoniao.com/static/img/default-logo.png&quot;</span><span class="p">,</span>  <span class="c1">// 用户头像</span>

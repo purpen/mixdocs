@@ -366,8 +366,8 @@ JSON数据格式:
                 "user_logo": "http://kg.erp.taihuoniao.com/static/img/default-logo.png",  // 用户头像
                 "user_name": null  // 用户名
             },
-            "user_ranking": 1,  // 当前用户排名
-            "world_ranking": [  // 排行榜
+            "user_ranking": 1,  // 当前用户排名  0、未上榜
+            "ranking_list": [  // 排行榜
                 {
                     "amount": 24,  //
                     "code": "W598013472",
@@ -376,7 +376,7 @@ JSON数据格式:
                     "cumulative_coupon_amount": 190,  // 累计优惠券金额
                     "cumulative_coupon_quantity": 38,  // 累计优惠券数量
                     "mobile": null,
-                    "num": 1,  // 排名
+                    "ranking": 1,  // 排名
                     "updated_at": 1536055463,
                     "user_info": {
                         "user_logo": "http://kg.erp.taihuoniao.com/static/img/default-logo.png",  // 用户头像
@@ -392,5 +392,73 @@ JSON数据格式:
         "success": true
     }
 
+
+
+猜图-好友榜
+-------------------------
+猜图-好友榜
+
+接口说明
+~~~~~~~~~~~~~~
+
+* API接口请求地址：``/guess_image/friend_ranking``
+* API接口请求方法：``GET``
+* API接口用户授权：``token``
+
+请求参数
+~~~~~~~~~~~~~~~
+
+===============  ==========  =========  ==========  =============================
+名称              类型        是否必须     默认值       描述说明
+===============  ==========  =========  ==========  =============================
+page             Number      可选         1          当前页码
+per_page         Number      可选         30         每页数量
+===============  ==========  =========  ==========  =============================
+
+
+返回示例
+~~~~~~~~~~~~~~~~
+
+JSON数据格式:
+
+.. code-block:: javascript
+
+    {
+        "data": {
+            "count": 1,
+            "next": null,
+            "prev": null,
+            "user_amount": 24,  // 当前用户红包金额
+            "user_coupon_amount": 190,  //当前用户优惠券金额
+            "user_coupon_quantity": 38,  //当前用户优惠券数量
+            "user_info": {
+                "user_logo": "http://kg.erp.taihuoniao.com/static/img/default-logo.png",  // 用户头像
+                "user_name": null  // 用户名
+            },
+            "user_ranking": 1,  // 当前用户排名  0、未上榜
+            "ranking_list": [  // 排行榜
+                {
+                    "amount": 24,  //
+                    "code": "W598013472",
+                    "created_at": 1536052931,
+                    "cumulative_amount": 24,  // 累计红包金额
+                    "cumulative_coupon_amount": 190,  // 累计优惠券金额
+                    "cumulative_coupon_quantity": 38,  // 累计优惠券数量
+                    "mobile": null,
+                    "ranking": 1,  // 排名
+                    "updated_at": 1536055463,
+                    "user_info": {
+                        "user_logo": "http://kg.erp.taihuoniao.com/static/img/default-logo.png",  // 用户头像
+                        "user_name": null  // 用户姓名
+                    }
+                }
+            ]
+        },
+        "status": {
+            "code": 200,
+            "message": "Ok all right."
+        },
+        "success": true
+    }
 
 
