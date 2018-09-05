@@ -582,10 +582,11 @@ cids                 String      可选                    当前分类子分类
 qk                   String      可选                    搜索关键词
 min_price            Number      可选                    价格区间： 最小价格
 max_price            Number      可选                    价格区间： 最大价格
-sort_type            Number      可选                    排序方式 0=默认排序, 1=综合排序, 2=价格由低至高, 3=价格由高至低
+sort_type            Number      可选                    排序方式 1=综合排序, 2=价格由低至高, 3=价格由高至低
 is_free_postage      Number      可选         0          是否包邮: 0=全部, 1=包邮
 is_preferential      Number      可选         0          是否特惠: 0=全部, 1=特惠
 is_custom_made       Number      可选         0          是否可定制: 0=全部, 1=可定制
+sort_newest          Number      可选         0          是否按最新排序: 0=否, 1=是
 ==================  ==========  =========  ==========  =============================
 
 返回示例
@@ -631,7 +632,7 @@ JSON数据格式:
 .. code-block:: javascript
 
     {
-        "data": {
+        "data":
             "count": 1
         },
         "status": {

@@ -113,6 +113,7 @@
 <li class="toctree-l2"><a class="reference internal" href="../shopes/shopes.html">微商城模块</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../shopes/store.html">店铺模块</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../shopes/wxapp.html">小程序模块</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../shopes/notice.html">通知模块</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="../market/index.html">营销API模块</a><ul>
@@ -163,7 +164,8 @@
 <li class="toctree-l2"><a class="reference internal" href="../common.html#id46">忘记密码发送短信验证码</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../common.html#id50">动态登陆发送短信验证码</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../common.html#id54">账户编辑发送短信验证码</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../common.html#id58">发送邮件验证码</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../common.html#id58">账户编辑发送短信验证码</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../common.html#id62">发送邮件验证码</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="../setting.html">系统相关配置文档</a><ul>
@@ -1454,11 +1456,11 @@
 <h3>请求参数<a class="headerlink" href="#id54" title="永久链接至标题">¶</a></h3>
 <table border="1" class="docutils">
 <colgroup>
-<col width="16%" />
+<col width="18%" />
+<col width="10%" />
 <col width="9%" />
-<col width="8%" />
-<col width="9%" />
-<col width="58%" />
+<col width="10%" />
+<col width="53%" />
 </colgroup>
 <thead valign="bottom">
 <tr class="row-odd"><th class="head">名称</th>
@@ -1515,7 +1517,7 @@
 <td>Number</td>
 <td>可选</td>
 <td>&#160;</td>
-<td>排序方式 0=默认排序, 1=综合排序, 2=价格由低至高, 3=价格由高至低</td>
+<td>排序方式 1=综合排序, 2=价格由低至高, 3=价格由高至低</td>
 </tr>
 <tr class="row-even"><td>is_free_postage</td>
 <td>Number</td>
@@ -1534,6 +1536,12 @@
 <td>可选</td>
 <td>0</td>
 <td>是否可定制: 0=全部, 1=可定制</td>
+</tr>
+<tr class="row-odd"><td>sort_newest</td>
+<td>Number</td>
+<td>可选</td>
+<td>0</td>
+<td>是否按最新排序: 0=否, 1=是</td>
 </tr>
 </tbody>
 </table>
@@ -1739,7 +1747,7 @@
 <h3>返回示例<a class="headerlink" href="#id59" title="永久链接至标题">¶</a></h3>
 <p>JSON数据格式:</p>
 <div class="highlight-javascript"><div class="highlight"><pre><span></span><span class="p">{</span>
-    <span class="s2">&quot;data&quot;</span><span class="o">:</span> <span class="p">{</span>
+    <span class="s2">&quot;data&quot;</span><span class="o">:</span>
         <span class="s2">&quot;count&quot;</span><span class="o">:</span> <span class="mi">1</span>
     <span class="p">},</span>
     <span class="s2">&quot;status&quot;</span><span class="o">:</span> <span class="p">{</span>
