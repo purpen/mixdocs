@@ -85,7 +85,7 @@ JSON数据格式:
                     "received_at": 12321312,  // 签收时间
                     "is_many_express": false, // 是否多物流公司发货
                     "user_order_status": 1  // 用户查看订单列表状态
-                                            // 1、待发货 2、待收货 3、待评价 4、待付款 5、已评价 6、已退款 7、已取消
+                                            // 1、待发货 2、待收货 3、待评价 4、待付款 5、已完成 6、已取消
                     "items": [
                         {
                             "bgcover": "http://0.0.0.0:9000/_uploads/photos/180523/8f51855eedae984.jpg",
@@ -1877,7 +1877,7 @@ JSON数据格式:
                             "store_rid": "3"
                         }
                     ],
-                    "life_order_status": 3,  // 生活馆订单状态， 1、待发货 2、已发货 3、已完成 4、已退款 5、已取消
+                    "life_order_status": 3,  // 生活馆订单状态， 1、待发货 2、已发货 3、已完成
                      "official_order_id": null,  // 官方平台订单号
                     "outside_target_id": "D18070316803529",  // 第三方平台订单号
                     "pay_amount": 17,  // 支付金额
