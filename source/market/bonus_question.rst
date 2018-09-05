@@ -366,7 +366,7 @@ JSON数据格式:
                 "user_logo": "http://kg.erp.taihuoniao.com/static/img/default-logo.png",  // 用户头像
                 "user_name": null  // 用户名
             },
-            "user_ranking": 1,  // 当前用户排名
+            "user_ranking": 1,  // 当前用户排名  0、未上榜
             "ranking_list": [  // 排行榜
                 {
                     "amount": 24,  //
@@ -435,7 +435,7 @@ JSON数据格式:
                 "user_logo": "http://kg.erp.taihuoniao.com/static/img/default-logo.png",  // 用户头像
                 "user_name": null  // 用户名
             },
-            "user_ranking": 1,  // 当前用户排名
+            "user_ranking": 1,  // 当前用户排名  0、未上榜
             "ranking_list": [  // 排行榜
                 {
                     "amount": 24,  //
