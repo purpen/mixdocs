@@ -203,7 +203,7 @@ JSON数据格式:
 rid             String    必须                   广告编号
 ==============  ========  =========  ========  ====================================
 
-``目前支持的编号: 精选顶部广告=hotpick_ad, 探索顶部广告=explore_ad, 精选内容区广告=content_ad, 选品中心推荐=center_ad, 发现头部广告=discover_ad``
+``目前支持的编号: 精选顶部广告=hotpick_ad, 探索顶部广告=explore_ad, 精选内容区广告=content_ad, 选品中心推荐=center_ad, 发现头部广告=discover_ad, 精选品牌馆广告=store_ad``
 
 返回示例
 ~~~~~~~~~~~~~~~~
