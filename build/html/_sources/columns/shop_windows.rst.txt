@@ -242,9 +242,35 @@ JSON数据格式:
 ===============  ==========  =========  ==========  =============================
 title            String      必须                    标题
 description      String      必须                    简介
-rids             Array       必须                    橱窗商品
+product_items    Array       必须                    橱窗商品
 keywords         Array       可选                    关键词
 ===============  ==========  =========  ==========  =============================
+
+请求示例
+~~~~~~~~~~~~~~~
+
+.. code-block:: javascript
+
+    {
+        "title": "橱窗标题",
+        "description": "橱窗描述内容",
+        "product_items": [
+            {
+                "rid": "8037295684",
+                "cover_id": 115173
+            },
+            {
+                "rid": "8758496102",
+                "cover_id": 115181
+            },
+            {
+                "rid": "8160827453",
+                "cover_id": 115185
+            }
+        ],
+        "keywords": ["女孩", "原创饰品", "七夕"]
+    }
+
 
 返回示例
 ~~~~~~~~~~~~~~~~
@@ -257,11 +283,12 @@ JSON数据格式:
         "data": {
             "comment_count": 9,
             "description": "橱窗描述",
-            "is_follow": true,
-            "is_official": "是否官方橱窗",
+            "is_follow": "true: 是否关注橱窗",
+            "is_official": "false: 是否官方橱窗",
             "keywords": [
-                "棋牌",
-                "人工智能"
+                "女孩",
+                "原创饰品",
+                "七夕"
             ],
             "like_count": 2,
             "product_count": 5,
@@ -329,58 +356,7 @@ keywords         Array       可选                    关键词
 返回示例
 ~~~~~~~~~~~~~~~~
 
-JSON数据格式:
-
-.. code-block:: javascript
-
-    {
-        "data": {
-            "comment_count": 9,
-            "description": "新橱窗描述",
-            "is_follow": true,
-            "is_official": "是否官方橱窗",
-            "keywords": [
-                "棋牌",
-                "人工智能"
-            ],
-            "like_count": 2,
-            "product_count": 5,
-            "product_covers": [
-                "http://127.0.0.1:9000/_uploads/photos/180718/f1a30ad8b52107c.gif",
-                "http://127.0.0.1:9000/_uploads/photos/180718/f1a30ad8b52107c.gif",
-                "http://127.0.0.1:9000/_uploads/photos/180718/f1a30ad8b52107c.gif",
-                "http://127.0.0.1:9000/_uploads/photos/180707/77409c8ab9b0abf.jpg",
-                "http://127.0.0.1:9000/_uploads/photos/180707/77409c8ab9b0abf.jpg"
-            ],
-            "products": [
-                {
-                    商品基本信息...
-                },
-                {
-                    商品基本信息...
-                },
-                {
-                    商品基本信息...
-                },
-                {
-                    商品基本信息...
-                },
-                {
-                    商品基本信息...
-                }
-            ],
-            "rid": 1,
-            "title": "新橱窗标题",
-            "uid": "12795683104",
-            "user_avatar": "http://kg.erp.taihuoniao.com/static/img/default-logo.png",
-            "user_name": "用户名"
-        },
-        "status": {
-            "code": 200,
-            "message": "Ok all right."
-        },
-        "success": true
-    }
+** 同上发布橱窗返回示例 **
 
 
 删除橱窗
@@ -1317,6 +1293,194 @@ JSON数据格式:
                     "user_name": "用户名"
                 }
             ]
+        },
+        "status": {
+            "code": 200,
+            "message": "Ok all right."
+        },
+        "success": true
+    }
+
+
+新增标签
+----------------------
+
+接口说明
+~~~~~~~~~~~~~~
+
+* API接口请求地址：``/shop_windows/keywords``
+* API接口请求方法：``POST``
+* API接口用户授权：``token``
+
+请求参数
+~~~~~~~~~~~~~~~
+
+=============  ========  =========  ========  ====================================
+名称            类型      是否必须    默认值     描述说明
+=============  ========  =========  ========  ====================================
+name           String    必填                  标签名
+sort_order     Number    可选         1        排序
+=============  ========  =========  ========  ====================================
+
+返回示例
+~~~~~~~~~~~~~~~~
+
+JSON数据格式:
+
+.. code-block:: javascript
+
+    {
+        "data": {
+            "name": "女孩",
+            "rid": 46,
+            "sort_order": 1
+        },
+        "status": {
+            "code": 201,
+            "message": "All created."
+        },
+        "success": true
+    }
+
+
+删除标签
+----------------------
+
+接口说明
+~~~~~~~~~~~~~~
+
+* API接口请求地址：``/shop_windows/keywords``
+* API接口请求方法：``DELETE``
+* API接口用户授权：``token``
+
+请求参数
+~~~~~~~~~~~~~~~
+
+=============  ========  =========  ========  ====================================
+名称            类型      是否必须    默认值     描述说明
+=============  ========  =========  ========  ====================================
+rid            Number    必填                  标签编号
+=============  ========  =========  ========  ====================================
+
+返回示例
+~~~~~~~~~~~~~~~~
+
+JSON数据格式:
+
+.. code-block:: javascript
+
+    {
+        "status": {
+            "code": 204,
+            "message": "All deleted."
+        },
+        "success": true
+    }
+
+
+获取所有标签
+----------------------
+
+接口说明
+~~~~~~~~~~~~~~
+
+* API接口请求地址：``/shop_windows/all_keywords``
+* API接口请求方法：``GET``
+* API接口用户授权：``token``
+
+返回示例
+~~~~~~~~~~~~~~~~
+
+JSON数据格式:
+
+.. code-block:: javascript
+
+    {
+        "data": {
+            "keywords": [
+                {
+                    "name": "女孩",
+                    "rid": 47,
+                    "sort_order": 1
+                },
+                {
+                    "name": "原创饰品",
+                    "rid": 48,
+                    "sort_order": 2
+                }
+            ]
+        },
+        "status": {
+            "code": 200,
+            "message": "Ok all right."
+        },
+        "success": true
+    }
+
+
+清空所有标签
+----------------------
+
+接口说明
+~~~~~~~~~~~~~~
+
+* API接口请求地址：``/shop_windows/all_keywords``
+* API接口请求方法：``DELETE``
+* API接口用户授权：``token``
+
+返回示例
+~~~~~~~~~~~~~~~~
+
+JSON数据格式:
+
+.. code-block:: javascript
+
+    {
+        "status": {
+            "code": 204,
+            "message": "All deleted."
+        },
+        "success": true
+    }
+
+
+获取热门标签
+----------------------
+
+接口说明
+~~~~~~~~~~~~~~
+
+* API接口请求地址：``/shop_windows/hot_keywords``
+* API接口请求方法：``GET``
+
+返回示例
+~~~~~~~~~~~~~~~~
+
+JSON数据格式:
+
+.. code-block:: javascript
+
+    {
+        "data": {
+            "count": 2,
+            "keywords": [
+                {
+                    "id": 1,
+                    "name": "原创定制好物",
+                    "numbers": "20000 参与人数",
+                    "sort_order": 1,
+                    "type": "1 标签类型： 0=无， 1=活动"
+                },
+                {
+                    "id": 2,
+                    "name": "女孩",
+                    "numbers": 8888,
+                    "sort_order": 2,
+                    "type": 0
+                }
+            ],
+            "next": false,
+            "prev": false
         },
         "status": {
             "code": 200,

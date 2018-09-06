@@ -30,6 +30,7 @@ account                String      必需                    账户号
 bank                   String      必需                    开户银行
 branch_name            String      必需                    开户支行
 mobile                 String      必需                    预留手机号
+areacode               String      必需                    手机号地区编码
 verify_code            String      必需                    验证码
 =====================  ==========  =========  ==========  =============================
 
@@ -47,6 +48,7 @@ verify_code            String      必需                    验证码
         "account":"8888 8888 8888 8888",
         "bank":"招商银行",
         "branch_name":"大望路支行",
+        "areacode":"+86",
         "mobile":"18788888888",
         "verify_code":"0299"
     }
@@ -109,7 +111,6 @@ verify_code            String      必需                    验证码
         "data": {
             "account": "8888888888888888",  // 账户号
             "area": {
-                "area_code": "+86",
                 "area_name": "中国"
             },
             "bank": "招商银行",  // 开户银行
@@ -156,6 +157,7 @@ verify_code            String      必需                    验证码
 名称                    类型        是否必须     默认值       描述说明
 =====================  ==========  =========  ==========  =============================
 mobile                 String      必需                    预留手机号
+areacode               String      必需                    手机号地区编码
 verify_code            String      必需                    验证码
 =====================  ==========  =========  ==========  =============================
 

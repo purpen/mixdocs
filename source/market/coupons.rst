@@ -344,7 +344,7 @@ JSON数据格式:
             "coupons": [
                 {
                     "amount": 10,  // 面值
-                    "code": "UHAOSIWFUVZ",  // 优惠券code
+                    "code": "UHAOSIWFUVZ",  // 优惠券 code
                     "count": 100,
                     "created_at": 1531742069,  //
                     "days": 7,  // 有效期
