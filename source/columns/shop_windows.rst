@@ -1490,3 +1490,45 @@ JSON数据格式:
     }
 
 
+搜索标签
+----------------------
+
+接口说明
+~~~~~~~~~~~~~~
+
+* API接口请求地址：``/shop_windows/search/keywords``
+* API接口请求方法：``GET``
+
+返回示例
+~~~~~~~~~~~~~~~~
+
+JSON数据格式:
+
+.. code-block:: javascript
+
+    {
+        "data": {
+            "count": 2,
+            "keywords": [
+                {
+                    "name": "定制好设计",
+                    "rid": 30,
+                    "sort_order": 1
+                },
+                {
+                    "name": "原创定制好物",
+                    "rid": 27,
+                    "sort_order": 1
+                }
+            ],
+            "next": false,
+            "prev": false
+        },
+        "status": {
+            "code": 200,
+            "message": "Ok all right."
+        },
+        "success": true
+    }
+
+
