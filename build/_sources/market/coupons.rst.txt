@@ -1741,6 +1741,49 @@ JSON数据格式:
 
 
 
+官方无门槛红包分享动态
+--------------------------------
+官方无门槛红包分享动态
+
+接口说明
+~~~~~~~~~~~~~~
+
+* API接口请求地址：``/market/bonus_lines``
+* API接口请求方法：``GET``
+
+
+返回示例
+~~~~~~~~~~~~~~~~
+
+JSON数据格式:
+
+.. code-block:: javascript
+
+    {
+        "data": {
+            "bonus_count": 2,  // 数量
+            "bonus_lines": [
+                {
+                    "activity_id": 2,  // 2、分享红包
+                    "activity_type": 1,  // 1、活动 2、游戏
+                    "amount": 10,  // 金额
+                    "coupon_line_id": 1,  // 动态id
+                    "coupon_type": 1,  // 1: 红包
+                    "created_at": 1530781909,  // 创建时间
+                    "event": 3,  // 3: 领取;
+                    "line_text": "2小时前小黑在分享红包活动中领取10元红包",  // 动态信息
+                    "quantity": 2,  // 数量
+                    "store_name": "第一家",  // 店铺名
+                    "user_name": '小黑'  // 用户名
+                }
+            ]
+        },
+        "status": {
+            "code": 200,
+            "message": "Ok all right."
+        },
+        "success": true
+    }
 
 
 
