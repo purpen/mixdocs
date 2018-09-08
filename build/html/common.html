@@ -163,8 +163,8 @@
 <li class="toctree-l2"><a class="reference internal" href="#id41">注册发送短信验证码</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#id46">忘记密码发送短信验证码</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#id50">动态登陆发送短信验证码</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#id54">账户编辑发送短信验证码</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#id58">账户编辑发送短信验证码</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#id54">绑定银行卡发送短信验证码</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#id58">账户解除绑定银行卡发送短信验证码</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#id62">发送邮件验证码</a></li>
 </ul>
 </li>
@@ -274,13 +274,13 @@
 <li><a class="reference internal" href="#id53">返回示例</a></li>
 </ul>
 </li>
-<li><a class="reference internal" href="#id54">账户编辑发送短信验证码</a><ul>
+<li><a class="reference internal" href="#id54">绑定银行卡发送短信验证码</a><ul>
 <li><a class="reference internal" href="#id55">接口说明</a></li>
 <li><a class="reference internal" href="#id56">请求参数</a></li>
 <li><a class="reference internal" href="#id57">返回示例</a></li>
 </ul>
 </li>
-<li><a class="reference internal" href="#id58">账户编辑发送短信验证码</a><ul>
+<li><a class="reference internal" href="#id58">账户解除绑定银行卡发送短信验证码</a><ul>
 <li><a class="reference internal" href="#id59">接口说明</a></li>
 <li><a class="reference internal" href="#id60">请求参数</a></li>
 <li><a class="reference internal" href="#id61">返回示例</a></li>
@@ -402,13 +402,13 @@
 <li><a class="reference internal" href="#id53">返回示例</a></li>
 </ul>
 </li>
-<li><a class="reference internal" href="#id54">账户编辑发送短信验证码</a><ul>
+<li><a class="reference internal" href="#id54">绑定银行卡发送短信验证码</a><ul>
 <li><a class="reference internal" href="#id55">接口说明</a></li>
 <li><a class="reference internal" href="#id56">请求参数</a></li>
 <li><a class="reference internal" href="#id57">返回示例</a></li>
 </ul>
 </li>
-<li><a class="reference internal" href="#id58">账户编辑发送短信验证码</a><ul>
+<li><a class="reference internal" href="#id58">账户解除绑定银行卡发送短信验证码</a><ul>
 <li><a class="reference internal" href="#id59">接口说明</a></li>
 <li><a class="reference internal" href="#id60">请求参数</a></li>
 <li><a class="reference internal" href="#id61">返回示例</a></li>
@@ -1571,7 +1571,7 @@
 </div>
 </div>
 <div class="section" id="id54">
-<h2>账户编辑发送短信验证码<a class="headerlink" href="#id54" title="永久链接至标题">¶</a></h2>
+<h2>绑定银行卡发送短信验证码<a class="headerlink" href="#id54" title="永久链接至标题">¶</a></h2>
 <div class="section" id="id55">
 <h3>接口说明<a class="headerlink" href="#id55" title="永久链接至标题">¶</a></h3>
 <ul class="simple">
@@ -1610,6 +1610,12 @@
 <td>+86</td>
 <td>区号</td>
 </tr>
+<tr class="row-even"><td>tail</td>
+<td>String</td>
+<td>必须</td>
+<td>&#160;</td>
+<td>银行卡后四位</td>
+</tr>
 </tbody>
 </table>
 </div>
@@ -1642,11 +1648,11 @@
 </div>
 </div>
 <div class="section" id="id58">
-<h2>账户编辑发送短信验证码<a class="headerlink" href="#id58" title="永久链接至标题">¶</a></h2>
+<h2>账户解除绑定银行卡发送短信验证码<a class="headerlink" href="#id58" title="永久链接至标题">¶</a></h2>
 <div class="section" id="id59">
 <h3>接口说明<a class="headerlink" href="#id59" title="永久链接至标题">¶</a></h3>
 <ul class="simple">
-<li>API接口请求地址：<code class="docutils literal"><span class="pre">/users/users/remove_binding</span></code></li>
+<li>API接口请求地址：<code class="docutils literal"><span class="pre">/users/remove_binding</span></code></li>
 <li>API接口请求方法：<code class="docutils literal"><span class="pre">POST</span></code></li>
 </ul>
 </div>
