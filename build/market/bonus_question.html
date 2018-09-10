@@ -251,18 +251,15 @@
 <li><a class="reference internal" href="#id36">接口说明</a></li>
 <li><a class="reference internal" href="#id37">请求参数</a></li>
 <li><a class="reference internal" href="#id38">返回示例</a></li>
+<li><a class="reference internal" href="#id39">接口说明</a></li>
+<li><a class="reference internal" href="#id40">请求参数</a></li>
+<li><a class="reference internal" href="#id41">返回示例</a></li>
+<li><a class="reference internal" href="#id42">接口说明</a></li>
+<li><a class="reference internal" href="#id43">请求参数</a></li>
+<li><a class="reference internal" href="#id44">返回示例</a><ul>
+<li><a class="reference internal" href="#head">&lt;&lt;&lt;&lt;&lt;&lt;&lt; HEAD</a></li>
 </ul>
 </li>
-<li><a class="reference internal" href="#id39">猜图-我的好友列表</a><ul>
-<li><a class="reference internal" href="#id40">接口说明</a></li>
-<li><a class="reference internal" href="#id41">请求参数</a></li>
-<li><a class="reference internal" href="#id42">返回示例</a></li>
-</ul>
-</li>
-<li><a class="reference internal" href="#id43">猜图-可能认识的人列表</a><ul>
-<li><a class="reference internal" href="#id44">接口说明</a></li>
-<li><a class="reference internal" href="#id45">请求参数</a></li>
-<li><a class="reference internal" href="#id46">返回示例</a></li>
 </ul>
 </li>
 </ul>
@@ -352,18 +349,15 @@
 <li><a class="reference internal" href="#id36">接口说明</a></li>
 <li><a class="reference internal" href="#id37">请求参数</a></li>
 <li><a class="reference internal" href="#id38">返回示例</a></li>
+<li><a class="reference internal" href="#id39">接口说明</a></li>
+<li><a class="reference internal" href="#id40">请求参数</a></li>
+<li><a class="reference internal" href="#id41">返回示例</a></li>
+<li><a class="reference internal" href="#id42">接口说明</a></li>
+<li><a class="reference internal" href="#id43">请求参数</a></li>
+<li><a class="reference internal" href="#id44">返回示例</a><ul>
+<li><a class="reference internal" href="#head">&lt;&lt;&lt;&lt;&lt;&lt;&lt; HEAD</a></li>
 </ul>
 </li>
-<li><a class="reference internal" href="#id39">猜图-我的好友列表</a><ul>
-<li><a class="reference internal" href="#id40">接口说明</a></li>
-<li><a class="reference internal" href="#id41">请求参数</a></li>
-<li><a class="reference internal" href="#id42">返回示例</a></li>
-</ul>
-</li>
-<li><a class="reference internal" href="#id43">猜图-可能认识的人列表</a><ul>
-<li><a class="reference internal" href="#id44">接口说明</a></li>
-<li><a class="reference internal" href="#id45">请求参数</a></li>
-<li><a class="reference internal" href="#id46">返回示例</a></li>
 </ul>
 </li>
 </ul>
@@ -1005,92 +999,128 @@
 <span class="p">}</span>
 </pre></div>
 </div>
-</div>
+<p>&lt;&lt;&lt;&lt;&lt;&lt;&lt; HEAD
+猜图-我的好友列表
+————————-
+猜图-我的好友列表
+=======
+猜图-偷好友红包
+————————————————–
+猜图-偷好友红包
+&gt;&gt;&gt;&gt;&gt;&gt;&gt; 50c408e0495f3893052d0d6f7b2d9ab4a976b2e2</p>
 </div>
 <div class="section" id="id39">
-<h2>猜图-我的好友列表<a class="headerlink" href="#id39" title="永久链接至标题">¶</a></h2>
-<p>猜图-我的好友列表</p>
+<h3>接口说明<a class="headerlink" href="#id39" title="永久链接至标题">¶</a></h3>
+<p>&lt;&lt;&lt;&lt;&lt;&lt;&lt; HEAD
+* API接口请求地址：<code class="docutils literal"><span class="pre">/guess_image/friend_list</span></code>
+* API接口请求方法：<code class="docutils literal"><span class="pre">GET</span></code>
+=======
+* API接口请求地址：<code class="docutils literal"><span class="pre">/guess_image/steal_bouns</span></code>
+* API接口请求方法：<code class="docutils literal"><span class="pre">POST</span></code>
+&gt;&gt;&gt;&gt;&gt;&gt;&gt; 50c408e0495f3893052d0d6f7b2d9ab4a976b2e2
+* API接口用户授权：<code class="docutils literal"><span class="pre">token</span></code></p>
+</div>
 <div class="section" id="id40">
-<h3>接口说明<a class="headerlink" href="#id40" title="永久链接至标题">¶</a></h3>
-<ul class="simple">
-<li>API接口请求地址：<code class="docutils literal"><span class="pre">/guess_image/friend_list</span></code></li>
-<li>API接口请求方法：<code class="docutils literal"><span class="pre">GET</span></code></li>
-<li>API接口用户授权：<code class="docutils literal"><span class="pre">token</span></code></li>
-</ul>
+<h3>请求参数<a class="headerlink" href="#id40" title="永久链接至标题">¶</a></h3>
+<p>&lt;&lt;&lt;&lt;&lt;&lt;&lt; HEAD
+===============  ==========  =========  ==========  =============================
+名称              类型        是否必须     默认值       描述说明
+===============  ==========  =========  ==========  =============================
+page             Number      可选         1          当前页码
+per_page         Number      可选         30         每页数量
+===============  ==========  =========  ==========  =============================
+=======
+====================  ==========  =========  ==========  =============================
+名称                   类型        是否必须     默认值       描述说明
+====================  ==========  =========  ==========  =============================
+sn                    String      必需                    好友用户编号
+====================  ==========  =========  ==========  =============================
+&gt;&gt;&gt;&gt;&gt;&gt;&gt; 50c408e0495f3893052d0d6f7b2d9ab4a976b2e2</p>
 </div>
 <div class="section" id="id41">
-<h3>请求参数<a class="headerlink" href="#id41" title="永久链接至标题">¶</a></h3>
-<table border="1" class="docutils">
-<colgroup>
-<col width="21%" />
-<col width="14%" />
-<col width="12%" />
-<col width="14%" />
-<col width="40%" />
-</colgroup>
-<thead valign="bottom">
-<tr class="row-odd"><th class="head">名称</th>
-<th class="head">类型</th>
-<th class="head">是否必须</th>
-<th class="head">默认值</th>
-<th class="head">描述说明</th>
-</tr>
-</thead>
-<tbody valign="top">
-<tr class="row-even"><td>page</td>
-<td>Number</td>
-<td>可选</td>
-<td>1</td>
-<td>当前页码</td>
-</tr>
-<tr class="row-odd"><td>per_page</td>
-<td>Number</td>
-<td>可选</td>
-<td>30</td>
-<td>每页数量</td>
-</tr>
-</tbody>
-</table>
+<h3>返回示例<a class="headerlink" href="#id41" title="永久链接至标题">¶</a></h3>
+<p>JSON数据格式:</p>
+<div class="highlight-javascript"><div class="highlight"><pre><span></span><span class="p">{</span>
+    <span class="s2">&quot;data&quot;</span><span class="o">:</span> <span class="p">{</span>
+</pre></div>
+</div>
+<dl class="docutils">
+<dt>&lt;&lt;&lt;&lt;&lt;&lt;&lt; HEAD</dt>
+<dd><blockquote class="first">
+<div><p>“count”: 1,
+“friend_list”: [</p>
+<blockquote>
+<div><dl class="docutils">
+<dt>{</dt>
+<dd>“user_logo”: “<a class="reference external" href="http://kg.erp.taihuoniao.com/static/img/default-logo.png">http://kg.erp.taihuoniao.com/static/img/default-logo.png</a>”,  // 头像
+“user_name”: “小高”,  // 名字
+“user_sn”: “17160283459”  // 好友编号</dd>
+</dl>
+<p>}</p>
+</div></blockquote>
+<p>],
+“next”: null,
+“prev”: null</p>
+</div></blockquote>
+<p>},
+“status”: {</p>
+<blockquote class="last">
+<div>“code”: 200,
+“message”: “Ok all right.”</div></blockquote>
+</dd>
+</dl>
+<blockquote>
+<div><blockquote>
+<div><dl class="docutils">
+<dt>“coupon”: {</dt>
+<dd>“amount”: 5,  // 优惠券金额
+“end_date”: 1536681600,  // 有效期至
+“min_amount”: 5  // 限制金额</dd>
+</dl>
+<p>},
+“friend_info”: {</p>
+<blockquote>
+<div>“user_logo”: “<a class="reference external" href="http://kg.erp.taihuoniao.com/static/img/default-logo.png">http://kg.erp.taihuoniao.com/static/img/default-logo.png</a>”,  // 用户头像
+“user_name”: “13260180689”,  // 用户名
+“user_sn”: “15672098143”  // 用户编号</div></blockquote>
+<p>}</p>
+</div></blockquote>
+<p>},
+“status”: {</p>
+<blockquote>
+<div>“code”: 201,
+“message”: “All created.”</div></blockquote>
+</div></blockquote>
+<dl class="docutils">
+<dt>&gt;&gt;&gt;&gt;&gt;&gt;&gt; 50c408e0495f3893052d0d6f7b2d9ab4a976b2e2</dt>
+<dd><blockquote class="first">
+<div>},
+“success”: true</div></blockquote>
+<p class="last">}</p>
+</dd>
+</dl>
+<p>&lt;&lt;&lt;&lt;&lt;&lt;&lt; HEAD
+猜图-可能认识的人列表
+————————-
+猜图-可能认识的人列表
+=======
+猜图-偷我钱包的人
+————————-
+猜图-偷我钱包的人
+&gt;&gt;&gt;&gt;&gt;&gt;&gt; 50c408e0495f3893052d0d6f7b2d9ab4a976b2e2</p>
 </div>
 <div class="section" id="id42">
-<h3>返回示例<a class="headerlink" href="#id42" title="永久链接至标题">¶</a></h3>
-<p>JSON数据格式:</p>
-<div class="highlight-javascript"><div class="highlight"><pre><span></span><span class="p">{</span>
-    <span class="s2">&quot;data&quot;</span><span class="o">:</span> <span class="p">{</span>
-        <span class="s2">&quot;count&quot;</span><span class="o">:</span> <span class="mi">1</span><span class="p">,</span>
-        <span class="s2">&quot;friend_list&quot;</span><span class="o">:</span> <span class="p">[</span>
-            <span class="p">{</span>
-                <span class="s2">&quot;user_logo&quot;</span><span class="o">:</span> <span class="s2">&quot;http://kg.erp.taihuoniao.com/static/img/default-logo.png&quot;</span><span class="p">,</span>  <span class="c1">// 头像</span>
-                <span class="s2">&quot;user_name&quot;</span><span class="o">:</span> <span class="s2">&quot;小高&quot;</span><span class="p">,</span>  <span class="c1">// 名字</span>
-                <span class="s2">&quot;user_sn&quot;</span><span class="o">:</span> <span class="s2">&quot;17160283459&quot;</span>  <span class="c1">// 好友编号</span>
-            <span class="p">}</span>
-        <span class="p">],</span>
-        <span class="s2">&quot;next&quot;</span><span class="o">:</span> <span class="kc">null</span><span class="p">,</span>
-        <span class="s2">&quot;prev&quot;</span><span class="o">:</span> <span class="kc">null</span>
-    <span class="p">},</span>
-    <span class="s2">&quot;status&quot;</span><span class="o">:</span> <span class="p">{</span>
-        <span class="s2">&quot;code&quot;</span><span class="o">:</span> <span class="mi">200</span><span class="p">,</span>
-        <span class="s2">&quot;message&quot;</span><span class="o">:</span> <span class="s2">&quot;Ok all right.&quot;</span>
-    <span class="p">},</span>
-    <span class="s2">&quot;success&quot;</span><span class="o">:</span> <span class="kc">true</span>
-<span class="p">}</span>
-</pre></div>
-</div>
-</div>
+<h3>接口说明<a class="headerlink" href="#id42" title="永久链接至标题">¶</a></h3>
+<p>&lt;&lt;&lt;&lt;&lt;&lt;&lt; HEAD
+* API接口请求地址：<code class="docutils literal"><span class="pre">/guess_image/may_friend_list</span></code>
+=======
+* API接口请求地址：<code class="docutils literal"><span class="pre">/guess_image/steal_my_money</span></code>
+&gt;&gt;&gt;&gt;&gt;&gt;&gt; 50c408e0495f3893052d0d6f7b2d9ab4a976b2e2
+* API接口请求方法：<code class="docutils literal"><span class="pre">GET</span></code>
+* API接口用户授权：<code class="docutils literal"><span class="pre">token</span></code></p>
 </div>
 <div class="section" id="id43">
-<h2>猜图-可能认识的人列表<a class="headerlink" href="#id43" title="永久链接至标题">¶</a></h2>
-<p>猜图-可能认识的人列表</p>
-<div class="section" id="id44">
-<h3>接口说明<a class="headerlink" href="#id44" title="永久链接至标题">¶</a></h3>
-<ul class="simple">
-<li>API接口请求地址：<code class="docutils literal"><span class="pre">/guess_image/may_friend_list</span></code></li>
-<li>API接口请求方法：<code class="docutils literal"><span class="pre">GET</span></code></li>
-<li>API接口用户授权：<code class="docutils literal"><span class="pre">token</span></code></li>
-</ul>
-</div>
-<div class="section" id="id45">
-<h3>请求参数<a class="headerlink" href="#id45" title="永久链接至标题">¶</a></h3>
+<h3>请求参数<a class="headerlink" href="#id43" title="永久链接至标题">¶</a></h3>
 <table border="1" class="docutils">
 <colgroup>
 <col width="21%" />
@@ -1123,29 +1153,48 @@
 </tbody>
 </table>
 </div>
-<div class="section" id="id46">
-<h3>返回示例<a class="headerlink" href="#id46" title="永久链接至标题">¶</a></h3>
+<div class="section" id="id44">
+<h3>返回示例<a class="headerlink" href="#id44" title="永久链接至标题">¶</a></h3>
 <p>JSON数据格式:</p>
 <div class="highlight-javascript"><div class="highlight"><pre><span></span><span class="p">{</span>
     <span class="s2">&quot;data&quot;</span><span class="o">:</span> <span class="p">{</span>
         <span class="s2">&quot;count&quot;</span><span class="o">:</span> <span class="mi">1</span><span class="p">,</span>
         <span class="s2">&quot;friend_list&quot;</span><span class="o">:</span> <span class="p">[</span>
             <span class="p">{</span>
-                <span class="s2">&quot;user_logo&quot;</span><span class="o">:</span> <span class="s2">&quot;http://kg.erp.taihuoniao.com/static/img/default-logo.png&quot;</span><span class="p">,</span>  <span class="c1">// 头像</span>
-                <span class="s2">&quot;user_name&quot;</span><span class="o">:</span> <span class="s2">&quot;小高&quot;</span><span class="p">,</span>  <span class="c1">// 名字</span>
-                <span class="s2">&quot;user_sn&quot;</span><span class="o">:</span> <span class="s2">&quot;17160283459&quot;</span>  <span class="c1">// 好友编号</span>
-            <span class="p">}</span>
-        <span class="p">],</span>
-        <span class="s2">&quot;next&quot;</span><span class="o">:</span> <span class="kc">null</span><span class="p">,</span>
-        <span class="s2">&quot;prev&quot;</span><span class="o">:</span> <span class="kc">null</span>
-    <span class="p">},</span>
-    <span class="s2">&quot;status&quot;</span><span class="o">:</span> <span class="p">{</span>
-        <span class="s2">&quot;code&quot;</span><span class="o">:</span> <span class="mi">200</span><span class="p">,</span>
-        <span class="s2">&quot;message&quot;</span><span class="o">:</span> <span class="s2">&quot;Ok all right.&quot;</span>
-    <span class="p">},</span>
-    <span class="s2">&quot;success&quot;</span><span class="o">:</span> <span class="kc">true</span>
-<span class="p">}</span>
 </pre></div>
+</div>
+<dl class="docutils">
+<dt>&lt;&lt;&lt;&lt;&lt;&lt;&lt; HEAD</dt>
+<dd>“user_logo”: “<a class="reference external" href="http://kg.erp.taihuoniao.com/static/img/default-logo.png">http://kg.erp.taihuoniao.com/static/img/default-logo.png</a>”,  // 头像
+“user_name”: “小高”,  // 名字
+“user_sn”: “17160283459”  // 好友编号</dd>
+</dl>
+<blockquote>
+<div>“user_sn”: “17160283459”</div></blockquote>
+<dl class="docutils">
+<dt>&gt;&gt;&gt;&gt;&gt;&gt;&gt; 50c408e0495f3893052d0d6f7b2d9ab4a976b2e2</dt>
+<dd><blockquote class="first">
+<div><blockquote>
+<div><blockquote>
+<div>}</div></blockquote>
+<p>],
+“next”: null,
+“prev”: null</p>
+</div></blockquote>
+<p>},
+“status”: {</p>
+<blockquote>
+<div>“code”: 200,
+“message”: “Ok all right.”</div></blockquote>
+<p>},
+“success”: true</p>
+</div></blockquote>
+<p class="last">}</p>
+</dd>
+</dl>
+<div class="section" id="head">
+<h4>&lt;&lt;&lt;&lt;&lt;&lt;&lt; HEAD<a class="headerlink" href="#head" title="永久链接至标题">¶</a></h4>
+<p>&gt;&gt;&gt;&gt;&gt;&gt;&gt; 50c408e0495f3893052d0d6f7b2d9ab4a976b2e2</p>
 </div>
 </div>
 </div>
