@@ -88,6 +88,81 @@ JSON数据格式:
     }
 
 
+获取官方支持的物流公司列表
+------------------------------------
+获取官方支持的物流公司列表
+
+接口说明
+~~~~~~~~~~~~~~
+
+* API接口请求地址：``/official/express``
+* API接口请求方法：``GET``
+
+请求参数
+~~~~~~~~~~~~~~~
+
+=====================  ===========  ==========  ===========  ==============================
+名称                    类型          是否必须      默认值        描述说明
+=====================  ===========  ==========  ===========  ==============================
+name                   String        可选                      物流公司名称
+=====================  ===========  ==========  ===========  ==============================
+
+返回示例
+~~~~~~~~~~~~~~~~
+
+JSON数据格式:
+
+请求 **正确** 返回结果：
+
+.. code-block:: javascript
+
+
+    {
+        "data": {
+            "expresses": [  // 全国
+                {
+                    "code": "ZJS",  // 物流公司code
+                    "contact_mobile": "18788888888",
+                    "contact_name": "庞123",
+                    "contact_phone": "",
+                    "created_at": 1531902650,
+                    "customer_name": "",
+                    "customer_pwd": "",
+                    "description": "",
+                    "id": 6,  //
+                    "is_default": false,  // 是否常用
+                    "name": "宅急送",  // 物流公司名称
+                    "send_site": "",
+                    "updated_at": 1536252153
+                }
+            ],
+            "often_expresses": [  // 常用
+                {
+                    "code": "EMS",
+                    "contact_mobile": "13260180698",
+                    "contact_name": "EMS",
+                    "contact_phone": "",
+                    "created_at": 1536249836,
+                    "customer_name": "",
+                    "customer_pwd": "",
+                    "description": "",
+                    "id": 7,
+                    "is_default": true,
+                    "name": "EMS",
+                    "send_site": "",
+                    "updated_at": 1536249848
+                }
+            ]
+        },
+        "status": {
+            "code": 200,
+            "message": "Ok all right."
+        },
+        "success": true
+    }
+
+
+
 
 添加运费模板信息
 ----------------
