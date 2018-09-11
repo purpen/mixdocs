@@ -163,8 +163,8 @@
 <li class="toctree-l2"><a class="reference internal" href="../common.html#id41">注册发送短信验证码</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../common.html#id46">忘记密码发送短信验证码</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../common.html#id50">动态登陆发送短信验证码</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../common.html#id54">账户编辑发送短信验证码</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../common.html#id58">账户编辑发送短信验证码</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../common.html#id54">绑定银行卡发送短信验证码</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../common.html#id58">账户解除绑定银行卡发送短信验证码</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../common.html#id62">发送邮件验证码</a></li>
 </ul>
 </li>
@@ -948,6 +948,9 @@
         <span class="s2">&quot;rid&quot;</span><span class="o">:</span> <span class="s2">&quot;D18070316803529&quot;</span><span class="p">,</span>  <span class="c1">// 订单编号</span>
         <span class="s2">&quot;ship_mode&quot;</span><span class="o">:</span> <span class="mi">1</span><span class="p">,</span>  <span class="c1">// 运送方式</span>
         <span class="s2">&quot;status&quot;</span><span class="o">:</span> <span class="mi">5</span><span class="p">,</span>  <span class="c1">// 订单状态</span>
+        <span class="s2">&quot;life_order_status&quot;</span><span class="o">:</span> <span class="mi">1</span><span class="p">,</span>  <span class="c1">// 1、待发货 2、已发货 3、已完成</span>
+        <span class="s2">&quot;master_order_status&quot;</span><span class="o">:</span> <span class="mi">1</span><span class="p">,</span>  <span class="c1">// 1、待发货 2、已发货 3、已完成 4、已取消 5、待付款</span>
+        <span class="s2">&quot;user_order_status&quot;</span><span class="o">:</span> <span class="mi">1</span>  <span class="c1">// 1、待发货 2、待收货 3、待评价 4、待付款</span>
         <span class="s2">&quot;store&quot;</span><span class="o">:</span> <span class="p">{</span>  <span class="c1">// 店铺</span>
             <span class="s2">&quot;store_logo&quot;</span><span class="o">:</span> <span class="p">{</span>  <span class="c1">// logo</span>
                 <span class="s2">&quot;created_at&quot;</span><span class="o">:</span> <span class="mi">1</span><span class="p">,</span>
@@ -1084,6 +1087,7 @@
         <span class="s2">&quot;rid&quot;</span><span class="o">:</span> <span class="s2">&quot;D18070316803529&quot;</span><span class="p">,</span>  <span class="c1">// 订单编号</span>
         <span class="s2">&quot;ship_mode&quot;</span><span class="o">:</span> <span class="mi">1</span><span class="p">,</span>  <span class="c1">// 运送方式</span>
         <span class="s2">&quot;status&quot;</span><span class="o">:</span> <span class="mi">5</span><span class="p">,</span>  <span class="c1">// 订单状态</span>
+        <span class="s2">&quot;user_order_status&quot;</span><span class="o">:</span> <span class="mi">1</span>  <span class="c1">// 1、待发货 2、待收货 3、待评价 4、待付款</span>
         <span class="s2">&quot;store&quot;</span><span class="o">:</span> <span class="p">{</span>  <span class="c1">// 店铺</span>
             <span class="s2">&quot;store_logo&quot;</span><span class="o">:</span> <span class="p">{</span>  <span class="c1">// logo</span>
                 <span class="s2">&quot;created_at&quot;</span><span class="o">:</span> <span class="mi">1</span><span class="p">,</span>
@@ -1222,6 +1226,7 @@
                 <span class="s2">&quot;rid&quot;</span><span class="o">:</span> <span class="s2">&quot;D18070316803529&quot;</span><span class="p">,</span>  <span class="c1">// 订单编号</span>
                 <span class="s2">&quot;ship_mode&quot;</span><span class="o">:</span> <span class="mi">1</span><span class="p">,</span>  <span class="c1">// 运送方式</span>
                 <span class="s2">&quot;status&quot;</span><span class="o">:</span> <span class="mi">5</span><span class="p">,</span>  <span class="c1">// 订单状态</span>
+                <span class="s2">&quot;user_order_status&quot;</span><span class="o">:</span> <span class="mi">1</span>
                 <span class="s2">&quot;store&quot;</span><span class="o">:</span> <span class="p">{</span>  <span class="c1">// 店铺</span>
                     <span class="s2">&quot;store_logo&quot;</span><span class="o">:</span> <span class="p">{</span>  <span class="c1">// logo</span>
                         <span class="s2">&quot;created_at&quot;</span><span class="o">:</span> <span class="mi">1</span><span class="p">,</span>
