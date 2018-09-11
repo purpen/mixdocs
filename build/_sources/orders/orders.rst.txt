@@ -392,6 +392,7 @@ JSON数据格式:
             "payed_at": 12321312,  // 付款时间
             "received_at": 12321312,  // 签收时间
             "is_many_express": false, // 是否多物流公司发货
+            "order_total_commission_price": 0.01,  // 订单总佣金
             "items": [
                 {
 
