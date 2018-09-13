@@ -55,28 +55,46 @@
                 "is_many_express": false, // 是否多物流公司发货
                 "items": [
                     {
-                        "order_sku_commission_price": 6,// 分销佣金
-                        "order_sku_commission_rate": 5,// 佣金比例
+                        "bgcover": "http://0.0.0.0:9000/_uploads/photos/180523/8f51855eedae984.jpg",
+                        "city": "",
                         "commission_price": null,
-                        "commission_rate": 5,
-                        "cover": "http://0.0.0.0:9000/_uploads/photos/1",
-                        "deal_price": 1,  // 交易价格
+                        "commission_rate": 10,
+                        "country": "",
+                        "cover": "http://0.0.0.0:9000/_uploads/photos/180523/8f51855eedae984.jpg",
+                        "cover_id": 1,
+                        "deal_price": 30,
+                        "delivery_city": "北京",
+                        "delivery_country": "",
+                        "delivery_country_id": null,
+                        "delivery_province": "北京",
+                        "distribution_type": 1,
                         "express": 4,  // 快递公司ID
                         "express_at": 0,  // 发货时间
                         "express_no": null,  // 运单号
-                        "express_code": "YTO",
-                        "express_name": "圆通",
-                        "id_code": "1",
+                        "express_code": "ZJS",
+                        "express_name": "宅急送",
+                        "fans_count": 1,
+                        "freight": 590,
                         "mode": "1 1",
-                        "price": 1,
+                        "order_sku_commission_price": 6,// 分销佣金
+                        "order_sku_commission_rate": 5,// 佣金比例
+                        "price": 33,
                         "product_name": "摩托",  // 商品名
+                        "product_rid": "3",
+                        "province": "",
                         "quantity": 3,  // 数量
                         "rid": "1",  // sku
                         "s_color": "1",
                         "s_model": "1",
                         "s_weight": 1,
-                        "sale_price": 1,
-                        "stock_count": 11020
+                        "sale_price": 30,
+                        "stock_count": 32033,
+                        "stock_quantity": 32033,
+                        "store_logo": "http://0.0.0.0:9000/_uploads/photos/180523/8f51855eedae984.jpg",
+                        "store_name": "第2家",
+                        "store_rid": "3",
+                        "tag_line": "1",
+                        "town": ""
                     }
                 ],
             },

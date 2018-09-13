@@ -44,27 +44,41 @@ JSON数据格式:
                 {
                     "option": "其他",
                     "product": {
-                        "cover": "http://0.0.0.0:9000/_uploads/photos/1",
+                        "bgcover": "http://0.0.0.0:9000/_uploads/photos/180523/8f51855eedae984.jpg",
+                        "city": "",
+                        "commission_price": null,
+                        "commission_rate": null,
+                        "country": "",
+                        "cover": "http://0.0.0.0:9000/_uploads/photos/180523/8f51855eedae984.jpg",
                         "cover_id": 1,
-                        "id_code": "1",
-                        "mode": "2 2",
-                        "price": 2,  // 零售价
-                        "product_name": "汽车",
-                        "product_rid": "2",
-                        "rid": "2",
-                        "s_color": "2",
-                        "s_model": "2",
-                        "s_weight": 2,
-                        "sale_price": 2,  // 促销价
+                        "delivery_city": "北京",  //发货城市
+                        "delivery_country": "",  //发货国家
+                        "delivery_country_id": null,
+                        "delivery_province": "北京",//发货省
+                        "distribution_type": 1,
+                        "fans_count": 1231,
+                        "is_free_postage": false,
+                        "mode": "1 1",
+                        "price": 11,  // 零售价
+                        "product_name": "摩托",
+                        "product_rid": "1",
+                        "province": "",
+                        "rid": "1",
+                        "s_color": "1",
+                        "s_model": "1",
+                        "s_weight": 1,
+                        "sale_price": 10, // 促销价
                         "status": 1,  // 商品状态: 0: 仓库中 1: 出售中  2: 下架中
-                        "stock_count": 21611,
-                        "stock_quantity": 21611,  // 库存数
-                        "store_name": "第一家"  // 商品所属店铺名称
+                        "stock_count": 10207,
+                        "stock_quantity": 10207,  // 库存数
+                        "store_logo": "http://0.0.0.0:9000/_uploads/photos/180523/8f51855eedae984.jpg",
+                        "store_name": "第一家",  // 商品所属店铺名称
+                        "store_rid": "2",
+                        "tag_line": "1",
+                        "town": ""
                     },
                     "quantity": 3,
                     "rid": "2",
-                    "store_id": 2,
-                    "user_id": 2
                 }
             ]
         },
@@ -195,27 +209,41 @@ JSON数据格式:
             "cart": {
                 "option": "其他",
                 "product": {
-                   "cover": "http://0.0.0.0:9000/_uploads/photos/1",
+                    "bgcover": "http://0.0.0.0:9000/_uploads/photos/180523/8f51855eedae984.jpg",
+                    "city": "",
+                    "commission_price": null,
+                    "commission_rate": null,
+                    "country": "",
+                    "cover": "http://0.0.0.0:9000/_uploads/photos/180523/8f51855eedae984.jpg",
                     "cover_id": 1,
-                    "id_code": "1",
-                    "mode": "2 2",
-                    "price": 2,  // 零售价
-                    "product_name": "汽车",
-                    "product_rid": "2",
-                    "rid": "2",
-                    "s_color": "2",
-                    "s_model": "2",
-                    "s_weight": 2,
-                    "sale_price": 2,  // 促销价
+                    "delivery_city": "北京",  //发货城市
+                    "delivery_country": "",  //发货国家
+                    "delivery_country_id": null,
+                    "delivery_province": "北京",//发货省
+                    "distribution_type": 1,
+                    "fans_count": 1231,
+                    "is_free_postage": false,
+                    "mode": "1 1",
+                    "price": 11,  // 零售价
+                    "product_name": "摩托",
+                    "product_rid": "1",
+                    "province": "",
+                    "rid": "1",
+                    "s_color": "1",
+                    "s_model": "1",
+                    "s_weight": 1,
+                    "sale_price": 10, // 促销价
                     "status": 1,  // 商品状态: 0: 仓库中 1: 出售中  2: 下架中
-                    "stock_count": 21611,
-                    "stock_quantity": 21611,  // 库存数
-                    "store_name": "第一家"  // 商品所属店铺名称
+                    "stock_count": 10207,
+                    "stock_quantity": 10207,  // 库存数
+                    "store_logo": "http://0.0.0.0:9000/_uploads/photos/180523/8f51855eedae984.jpg",
+                    "store_name": "第一家",  // 商品所属店铺名称
+                    "store_rid": "2",
+                    "tag_line": "1",
+                    "town": ""
                 },
                 "quantity": 4,
                 "rid": "1",
-                "store_id": 2,
-                "user_id": 2
             },
             "item_count": 7  // 购物车中商品总数
         },
@@ -298,27 +326,41 @@ JSON数据格式:
                 "product": {
                     "option": "其他",
                     "product": {
-                        "cover": "http://0.0.0.0:9000/_uploads/photos/1",
+                        "bgcover": "http://0.0.0.0:9000/_uploads/photos/180523/8f51855eedae984.jpg",
+                        "city": "",
+                        "commission_price": null,
+                        "commission_rate": null,
+                        "country": "",
+                        "cover": "http://0.0.0.0:9000/_uploads/photos/180523/8f51855eedae984.jpg",
                         "cover_id": 1,
-                        "id_code": "1",
-                        "mode": "2 2",
-                        "price": 2,  // 零售价
-                        "product_name": "汽车",
-                        "product_rid": "2",
-                        "rid": "2",
-                        "s_color": "2",
-                        "s_model": "2",
-                        "s_weight": 2,
-                        "sale_price": 2,  // 促销价
+                        "delivery_city": "北京",  //发货城市
+                        "delivery_country": "",  //发货国家
+                        "delivery_country_id": null,
+                        "delivery_province": "北京",//发货省
+                        "distribution_type": 1,
+                        "fans_count": 1231,
+                        "is_free_postage": false,
+                        "mode": "1 1",
+                        "price": 11,  // 零售价
+                        "product_name": "摩托",
+                        "product_rid": "1",
+                        "province": "",
+                        "rid": "1",
+                        "s_color": "1",
+                        "s_model": "1",
+                        "s_weight": 1,
+                        "sale_price": 10, // 促销价
                         "status": 1,  // 商品状态: 0: 仓库中 1: 出售中  2: 下架中
-                        "stock_count": 21611,
-                        "stock_quantity": 21611,  // 库存数
-                        "store_name": "第一家"  // 商品所属店铺名称
+                        "stock_count": 10207,
+                        "stock_quantity": 10207,  // 库存数
+                        "store_logo": "http://0.0.0.0:9000/_uploads/photos/180523/8f51855eedae984.jpg",
+                        "store_name": "第一家",  // 商品所属店铺名称
+                        "store_rid": "2",
+                        "tag_line": "1",
+                        "town": ""
                     },
                     "quantity": 3,  // 购买数量
                     "rid": "2",  // sku
-                    "store_id": 2,
-                    "user_id": 2  // 用户id
                 },
             "item_count": 3  // 购物车中商品总数
         },

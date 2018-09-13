@@ -101,28 +101,28 @@ JSON数据格式:
                             "delivery_country_id": null,
                             "delivery_province": "北京",
                             "distribution_type": 1,
-                            "express": 6,
-                            "express_at": 0,
+                            "express": 4,  // 快递公司ID
+                            "express_at": 0,  // 发货时间
+                            "express_no": null,  // 运单号
                             "express_code": "ZJS",
                             "express_name": "宅急送",
-                            "express_no": null,
                             "fans_count": 1,
                             "freight": 590,
                             "mode": "1 1",
-                            "order_sku_commission_price": 90,
-                            "order_sku_commission_rate": 10,
+                            "order_sku_commission_price": 6,// 分销佣金
+                            "order_sku_commission_rate": 5,// 佣金比例
                             "price": 33,
-                            "product_name": "自行车",
+                            "product_name": "摩托",  // 商品名
                             "product_rid": "3",
                             "province": "",
-                            "quantity": 30,
-                            "rid": "3",
+                            "quantity": 3,  // 数量
+                            "rid": "1",  // sku
                             "s_color": "1",
                             "s_model": "1",
                             "s_weight": 1,
                             "sale_price": 30,
-                            "stock_count": 32243,
-                            "stock_quantity": 32243,
+                            "stock_count": 32033,
+                            "stock_quantity": 32033,
                             "store_logo": "http://0.0.0.0:9000/_uploads/photos/180523/8f51855eedae984.jpg",
                             "store_name": "第2家",
                             "store_rid": "3",
@@ -250,41 +250,41 @@ JSON数据格式:
                             "bgcover": "http://0.0.0.0:9000/_uploads/photos/180523/8f51855eedae984.jpg",
                             "city": "",
                             "commission_price": null,
-                            "commission_rate": 5,
+                            "commission_rate": 10,
                             "country": "",
                             "cover": "http://0.0.0.0:9000/_uploads/photos/180523/8f51855eedae984.jpg",
                             "cover_id": 1,
-                            "deal_price": 4,
+                            "deal_price": 30,
                             "delivery_city": "北京",
                             "delivery_country": "",
                             "delivery_country_id": null,
                             "delivery_province": "北京",
                             "distribution_type": 1,
-                            "express": 4,
-                            "express_at": 0,
-                            "express_code": "YTO",
-                            "express_name": "圆通",
-                            "express_no": null,
-                            "fans_count": 1231,
-                            "freight": 157,
+                            "express": 4,  // 快递公司ID
+                            "express_at": 0,  // 发货时间
+                            "express_no": null,  // 运单号
+                            "express_code": "ZJS",
+                            "express_name": "宅急送",
+                            "fans_count": 1,
+                            "freight": 590,
                             "mode": "1 1",
-                            "order_sku_commission_price": 6,
-                            "order_sku_commission_rate": 5,
-                            "price": 44,
-                            "product_name": "棉花",
-                            "product_rid": "4",
+                            "order_sku_commission_price": 6,// 分销佣金
+                            "order_sku_commission_rate": 5,// 佣金比例
+                            "price": 33,
+                            "product_name": "摩托",  // 商品名
+                            "product_rid": "3",
                             "province": "",
-                            "quantity": 30,
-                            "rid": "4",
+                            "quantity": 3,  // 数量
+                            "rid": "1",  // sku
                             "s_color": "1",
                             "s_model": "1",
                             "s_weight": 1,
-                            "sale_price": 40,
-                            "stock_count": 21262,
-                            "stock_quantity": 21262,
+                            "sale_price": 30,
+                            "stock_count": 32033,
+                            "stock_quantity": 32033,
                             "store_logo": "http://0.0.0.0:9000/_uploads/photos/180523/8f51855eedae984.jpg",
-                            "store_name": "第一家",
-                            "store_rid": "2",
+                            "store_name": "第2家",
+                            "store_rid": "3",
                             "tag_line": "1",
                             "town": ""
                         }
@@ -395,29 +395,46 @@ JSON数据格式:
             "order_total_commission_price": 0.01,  // 订单总佣金
             "items": [
                 {
-
-                    "order_sku_commission_price": 6,// 分销佣金
-                    "order_sku_commission_rate": 5,// 佣金比例
+                    "bgcover": "http://0.0.0.0:9000/_uploads/photos/180523/8f51855eedae984.jpg",
+                    "city": "",
                     "commission_price": null,
-                    "commission_rate": 5,
-                    "cover": "http://0.0.0.0:9000/_uploads/photos/1",
-                    "deal_price": 1,  // 交易价格
+                    "commission_rate": 10,
+                    "country": "",
+                    "cover": "http://0.0.0.0:9000/_uploads/photos/180523/8f51855eedae984.jpg",
+                    "cover_id": 1,
+                    "deal_price": 30,
+                    "delivery_city": "北京",
+                    "delivery_country": "",
+                    "delivery_country_id": null,
+                    "delivery_province": "北京",
+                    "distribution_type": 1,
                     "express": 4,  // 快递公司ID
-                    "express_code": "YTO",
-                    "express_name": "圆通",
                     "express_at": 0,  // 发货时间
                     "express_no": null,  // 运单号
-                    "id_code": "1",
+                    "express_code": "ZJS",
+                    "express_name": "宅急送",
+                    "fans_count": 1,
+                    "freight": 590,
                     "mode": "1 1",
-                    "price": 1,
+                    "order_sku_commission_price": 6,// 分销佣金
+                    "order_sku_commission_rate": 5,// 佣金比例
+                    "price": 33,
                     "product_name": "摩托",  // 商品名
+                    "product_rid": "3",
+                    "province": "",
                     "quantity": 3,  // 数量
                     "rid": "1",  // sku
                     "s_color": "1",
                     "s_model": "1",
                     "s_weight": 1,
-                    "sale_price": 1,
-                    "stock_count": 11020
+                    "sale_price": 30,
+                    "stock_count": 32033,
+                    "stock_quantity": 32033,
+                    "store_logo": "http://0.0.0.0:9000/_uploads/photos/180523/8f51855eedae984.jpg",
+                    "store_name": "第2家",
+                    "store_rid": "3",
+                    "tag_line": "1",
+                    "town": ""
                 }
             ],
         },
@@ -518,29 +535,46 @@ JSON数据格式:
             "is_many_express": false, // 是否多物流公司发货
             "items": [
                 {
-
-                    "order_sku_commission_price": 6,// 分销佣金
-                    "order_sku_commission_rate": 5,// 佣金比例
+                    "bgcover": "http://0.0.0.0:9000/_uploads/photos/180523/8f51855eedae984.jpg",
+                    "city": "",
                     "commission_price": null,
-                    "commission_rate": 5,
-                    "cover": "http://0.0.0.0:9000/_uploads/photos/1",
-                    "deal_price": 1,  // 交易价格
+                    "commission_rate": 10,
+                    "country": "",
+                    "cover": "http://0.0.0.0:9000/_uploads/photos/180523/8f51855eedae984.jpg",
+                    "cover_id": 1,
+                    "deal_price": 30,
+                    "delivery_city": "北京",
+                    "delivery_country": "",
+                    "delivery_country_id": null,
+                    "delivery_province": "北京",
+                    "distribution_type": 1,
                     "express": 4,  // 快递公司ID
-                    "express_code": "YTO",
-                    "express_name": "圆通",
                     "express_at": 0,  // 发货时间
                     "express_no": null,  // 运单号
-                    "id_code": "1",
+                    "express_code": "ZJS",
+                    "express_name": "宅急送",
+                    "fans_count": 1,
+                    "freight": 590,
                     "mode": "1 1",
-                    "price": 1,
+                    "order_sku_commission_price": 6,// 分销佣金
+                    "order_sku_commission_rate": 5,// 佣金比例
+                    "price": 33,
                     "product_name": "摩托",  // 商品名
+                    "product_rid": "3",
+                    "province": "",
                     "quantity": 3,  // 数量
                     "rid": "1",  // sku
                     "s_color": "1",
                     "s_model": "1",
                     "s_weight": 1,
-                    "sale_price": 1,
-                    "stock_count": 11020
+                    "sale_price": 30,
+                    "stock_count": 32033,
+                    "stock_quantity": 32033,
+                    "store_logo": "http://0.0.0.0:9000/_uploads/photos/180523/8f51855eedae984.jpg",
+                    "store_name": "第2家",
+                    "store_rid": "3",
+                    "tag_line": "1",
+                    "town": ""
                 }
             ],
         },
@@ -643,29 +677,46 @@ JSON数据格式:
                     "is_many_express": false, // 是否多物流公司发货
                     "items": [
                         {
-
-                            "order_sku_commission_price": 6,// 分销佣金
-                            "order_sku_commission_rate": 5,// 佣金比例
+                            "bgcover": "http://0.0.0.0:9000/_uploads/photos/180523/8f51855eedae984.jpg",
+                            "city": "",
                             "commission_price": null,
-                            "commission_rate": 5,
-                            "cover": "http://0.0.0.0:9000/_uploads/photos/1",
-                            "deal_price": 1,  // 交易价格
+                            "commission_rate": 10,
+                            "country": "",
+                            "cover": "http://0.0.0.0:9000/_uploads/photos/180523/8f51855eedae984.jpg",
+                            "cover_id": 1,
+                            "deal_price": 30,
+                            "delivery_city": "北京",
+                            "delivery_country": "",
+                            "delivery_country_id": null,
+                            "delivery_province": "北京",
+                            "distribution_type": 1,
                             "express": 4,  // 快递公司ID
-                            "express_code": "YTO",
-                            "express_name": "圆通",
                             "express_at": 0,  // 发货时间
                             "express_no": null,  // 运单号
-                            "id_code": "1",
+                            "express_code": "ZJS",
+                            "express_name": "宅急送",
+                            "fans_count": 1,
+                            "freight": 590,
                             "mode": "1 1",
-                            "price": 1,
+                            "order_sku_commission_price": 6,// 分销佣金
+                            "order_sku_commission_rate": 5,// 佣金比例
+                            "price": 33,
                             "product_name": "摩托",  // 商品名
+                            "product_rid": "3",
+                            "province": "",
                             "quantity": 3,  // 数量
                             "rid": "1",  // sku
                             "s_color": "1",
                             "s_model": "1",
                             "s_weight": 1,
-                            "sale_price": 1,
-                            "stock_count": 11020
+                            "sale_price": 30,
+                            "stock_count": 32033,
+                            "stock_quantity": 32033,
+                            "store_logo": "http://0.0.0.0:9000/_uploads/photos/180523/8f51855eedae984.jpg",
+                            "store_name": "第2家",
+                            "store_rid": "3",
+                            "tag_line": "1",
+                            "town": ""
                         }
                     ],
                 },
@@ -823,28 +874,46 @@ JSON数据格式:
                     "is_many_express": false, // 是否多物流公司发货
                     "items": [
                         {
-                            "order_sku_commission_price": 6,// 分销佣金
-                            "order_sku_commission_rate": 5,// 佣金比例
+                            "bgcover": "http://0.0.0.0:9000/_uploads/photos/180523/8f51855eedae984.jpg",
+                            "city": "",
                             "commission_price": null,
-                            "commission_rate": 5,
-                            "cover": "http://0.0.0.0:9000/_uploads/photos/1",
-                            "deal_price": 1,  // 交易价格
+                            "commission_rate": 10,
+                            "country": "",
+                            "cover": "http://0.0.0.0:9000/_uploads/photos/180523/8f51855eedae984.jpg",
+                            "cover_id": 1,
+                            "deal_price": 30,
+                            "delivery_city": "北京",
+                            "delivery_country": "",
+                            "delivery_country_id": null,
+                            "delivery_province": "北京",
+                            "distribution_type": 1,
                             "express": 4,  // 快递公司ID
-                            "express_code": "YTO",
-                            "express_name": "圆通",
                             "express_at": 0,  // 发货时间
                             "express_no": null,  // 运单号
-                            "id_code": "1",
+                            "express_code": "ZJS",
+                            "express_name": "宅急送",
+                            "fans_count": 1,
+                            "freight": 590,
                             "mode": "1 1",
-                            "price": 1,
+                            "order_sku_commission_price": 6,// 分销佣金
+                            "order_sku_commission_rate": 5,// 佣金比例
+                            "price": 33,
                             "product_name": "摩托",  // 商品名
+                            "product_rid": "3",
+                            "province": "",
                             "quantity": 3,  // 数量
                             "rid": "1",  // sku
                             "s_color": "1",
                             "s_model": "1",
                             "s_weight": 1,
-                            "sale_price": 1,
-                            "stock_count": 11020
+                            "sale_price": 30,
+                            "stock_count": 32033,
+                            "stock_quantity": 32033,
+                            "store_logo": "http://0.0.0.0:9000/_uploads/photos/180523/8f51855eedae984.jpg",
+                            "store_name": "第2家",
+                            "store_rid": "3",
+                            "tag_line": "1",
+                            "town": ""
                         }
                     ],
 
@@ -1062,28 +1131,46 @@ JSON数据格式:
                 "is_many_express": false, // 是否多物流公司发货
                 "items": [
                     {
-                        "order_sku_commission_price": 6,// 分销佣金
-                        "order_sku_commission_rate": 5,// 佣金比例
+                        "bgcover": "http://0.0.0.0:9000/_uploads/photos/180523/8f51855eedae984.jpg",
+                        "city": "",
                         "commission_price": null,
-                        "commission_rate": 5,
-                        "cover": "http://0.0.0.0:9000/_uploads/photos/1",
-                        "deal_price": 1,  // 交易价格
+                        "commission_rate": 10,
+                        "country": "",
+                        "cover": "http://0.0.0.0:9000/_uploads/photos/180523/8f51855eedae984.jpg",
+                        "cover_id": 1,
+                        "deal_price": 30,
+                        "delivery_city": "北京",
+                        "delivery_country": "",
+                        "delivery_country_id": null,
+                        "delivery_province": "北京",
+                        "distribution_type": 1,
                         "express": 4,  // 快递公司ID
-                        "express_code": "YTO",
-                        "express_name": "圆通",
                         "express_at": 0,  // 发货时间
                         "express_no": null,  // 运单号
-                        "id_code": "1",
+                        "express_code": "ZJS",
+                        "express_name": "宅急送",
+                        "fans_count": 1,
+                        "freight": 590,
                         "mode": "1 1",
-                        "price": 1,
+                        "order_sku_commission_price": 6,// 分销佣金
+                        "order_sku_commission_rate": 5,// 佣金比例
+                        "price": 33,
                         "product_name": "摩托",  // 商品名
+                        "product_rid": "3",
+                        "province": "",
                         "quantity": 3,  // 数量
                         "rid": "1",  // sku
                         "s_color": "1",
                         "s_model": "1",
                         "s_weight": 1,
-                        "sale_price": 1,
-                        "stock_count": 11020
+                        "sale_price": 30,
+                        "stock_count": 32033,
+                        "stock_quantity": 32033,
+                        "store_logo": "http://0.0.0.0:9000/_uploads/photos/180523/8f51855eedae984.jpg",
+                        "store_name": "第2家",
+                        "store_rid": "3",
+                        "tag_line": "1",
+                        "town": ""
                     }
                 ],
 
@@ -1210,28 +1297,46 @@ JSON数据格式:
                     "is_many_express": false, // 是否多物流公司发货
                     "items": [
                         {
-                            "order_sku_commission_price": 6,// 分销佣金
-                            "order_sku_commission_rate": 5,// 佣金比例
+                            "bgcover": "http://0.0.0.0:9000/_uploads/photos/180523/8f51855eedae984.jpg",
+                            "city": "",
                             "commission_price": null,
-                            "commission_rate": 5,
-                            "cover": "http://0.0.0.0:9000/_uploads/photos/1",
-                            "deal_price": 1,  // 交易价格
+                            "commission_rate": 10,
+                            "country": "",
+                            "cover": "http://0.0.0.0:9000/_uploads/photos/180523/8f51855eedae984.jpg",
+                            "cover_id": 1,
+                            "deal_price": 30,
+                            "delivery_city": "北京",
+                            "delivery_country": "",
+                            "delivery_country_id": null,
+                            "delivery_province": "北京",
+                            "distribution_type": 1,
                             "express": 4,  // 快递公司ID
-                            "express_code": "YTO",
-                            "express_name": "圆通",
                             "express_at": 0,  // 发货时间
                             "express_no": null,  // 运单号
-                            "id_code": "1",
+                            "express_code": "ZJS",
+                            "express_name": "宅急送",
+                            "fans_count": 1,
+                            "freight": 590,
                             "mode": "1 1",
-                            "price": 1,
+                            "order_sku_commission_price": 6,// 分销佣金
+                            "order_sku_commission_rate": 5,// 佣金比例
+                            "price": 33,
                             "product_name": "摩托",  // 商品名
+                            "product_rid": "3",
+                            "province": "",
                             "quantity": 3,  // 数量
                             "rid": "1",  // sku
                             "s_color": "1",
                             "s_model": "1",
                             "s_weight": 1,
-                            "sale_price": 1,
-                            "stock_count": 11020
+                            "sale_price": 30,
+                            "stock_count": 32033,
+                            "stock_quantity": 32033,
+                            "store_logo": "http://0.0.0.0:9000/_uploads/photos/180523/8f51855eedae984.jpg",
+                            "store_name": "第2家",
+                            "store_rid": "3",
+                            "tag_line": "1",
+                            "town": ""
                         }
                     ],
 
@@ -1322,28 +1427,46 @@ JSON数据格式:
                     "is_many_express": false, // 是否多物流公司发货
                     "items": [
                         {
-                            "order_sku_commission_price": 6,// 分销佣金
-                            "order_sku_commission_rate": 5,// 佣金比例
+                           "bgcover": "http://0.0.0.0:9000/_uploads/photos/180523/8f51855eedae984.jpg",
+                            "city": "",
                             "commission_price": null,
-                            "commission_rate": 5,
-                            "cover": "http://0.0.0.0:9000/_uploads/photos/1",
-                            "deal_price": 1,  // 交易价格
+                            "commission_rate": 10,
+                            "country": "",
+                            "cover": "http://0.0.0.0:9000/_uploads/photos/180523/8f51855eedae984.jpg",
+                            "cover_id": 1,
+                            "deal_price": 30,
+                            "delivery_city": "北京",
+                            "delivery_country": "",
+                            "delivery_country_id": null,
+                            "delivery_province": "北京",
+                            "distribution_type": 1,
                             "express": 4,  // 快递公司ID
-                            "express_code": "YTO",
-                            "express_name": "圆通",
                             "express_at": 0,  // 发货时间
                             "express_no": null,  // 运单号
-                            "id_code": "1",
+                            "express_code": "ZJS",
+                            "express_name": "宅急送",
+                            "fans_count": 1,
+                            "freight": 590,
                             "mode": "1 1",
-                            "price": 1,
+                            "order_sku_commission_price": 6,// 分销佣金
+                            "order_sku_commission_rate": 5,// 佣金比例
+                            "price": 33,
                             "product_name": "摩托",  // 商品名
+                            "product_rid": "3",
+                            "province": "",
                             "quantity": 3,  // 数量
                             "rid": "1",  // sku
                             "s_color": "1",
                             "s_model": "1",
                             "s_weight": 1,
-                            "sale_price": 1,
-                            "stock_count": 11020
+                            "sale_price": 30,
+                            "stock_count": 32033,
+                            "stock_quantity": 32033,
+                            "store_logo": "http://0.0.0.0:9000/_uploads/photos/180523/8f51855eedae984.jpg",
+                            "store_name": "第2家",
+                            "store_rid": "3",
+                            "tag_line": "1",
+                            "town": ""
                         }
                     ],
 
@@ -1434,28 +1557,46 @@ JSON数据格式:
                     "is_many_express": false, // 是否多物流公司发货
                     "items": [
                         {
-                            "order_sku_commission_price": 6,// 分销佣金
-                            "order_sku_commission_rate": 5,// 佣金比例
+                           "bgcover": "http://0.0.0.0:9000/_uploads/photos/180523/8f51855eedae984.jpg",
+                            "city": "",
                             "commission_price": null,
-                            "commission_rate": 5,
-                            "cover": "http://0.0.0.0:9000/_uploads/photos/1",
-                            "deal_price": 1,  // 交易价格
+                            "commission_rate": 10,
+                            "country": "",
+                            "cover": "http://0.0.0.0:9000/_uploads/photos/180523/8f51855eedae984.jpg",
+                            "cover_id": 1,
+                            "deal_price": 30,
+                            "delivery_city": "北京",
+                            "delivery_country": "",
+                            "delivery_country_id": null,
+                            "delivery_province": "北京",
+                            "distribution_type": 1,
                             "express": 4,  // 快递公司ID
-                            "express_code": "YTO",
-                            "express_name": "圆通",
                             "express_at": 0,  // 发货时间
                             "express_no": null,  // 运单号
-                            "id_code": "1",
+                            "express_code": "ZJS",
+                            "express_name": "宅急送",
+                            "fans_count": 1,
+                            "freight": 590,
                             "mode": "1 1",
-                            "price": 1,
+                            "order_sku_commission_price": 6,// 分销佣金
+                            "order_sku_commission_rate": 5,// 佣金比例
+                            "price": 33,
                             "product_name": "摩托",  // 商品名
+                            "product_rid": "3",
+                            "province": "",
                             "quantity": 3,  // 数量
                             "rid": "1",  // sku
                             "s_color": "1",
                             "s_model": "1",
                             "s_weight": 1,
-                            "sale_price": 1,
-                            "stock_count": 11020
+                            "sale_price": 30,
+                            "stock_count": 32033,
+                            "stock_quantity": 32033,
+                            "store_logo": "http://0.0.0.0:9000/_uploads/photos/180523/8f51855eedae984.jpg",
+                            "store_name": "第2家",
+                            "store_rid": "3",
+                            "tag_line": "1",
+                            "town": ""
                         }
                     ],
 
@@ -1548,28 +1689,46 @@ JSON数据格式:
                     "is_many_express": false, // 是否多物流公司发货
                     "items": [
                         {
-                            "order_sku_commission_price": 6,// 分销佣金
-                            "order_sku_commission_rate": 5,// 佣金比例
+                           "bgcover": "http://0.0.0.0:9000/_uploads/photos/180523/8f51855eedae984.jpg",
+                            "city": "",
                             "commission_price": null,
-                            "commission_rate": 5,
-                            "cover": "http://0.0.0.0:9000/_uploads/photos/1",
-                            "deal_price": 1,  // 交易价格
+                            "commission_rate": 10,
+                            "country": "",
+                            "cover": "http://0.0.0.0:9000/_uploads/photos/180523/8f51855eedae984.jpg",
+                            "cover_id": 1,
+                            "deal_price": 30,
+                            "delivery_city": "北京",
+                            "delivery_country": "",
+                            "delivery_country_id": null,
+                            "delivery_province": "北京",
+                            "distribution_type": 1,
                             "express": 4,  // 快递公司ID
-                            "express_code": "YTO",
-                            "express_name": "圆通",
                             "express_at": 0,  // 发货时间
                             "express_no": null,  // 运单号
-                            "id_code": "1",
+                            "express_code": "ZJS",
+                            "express_name": "宅急送",
+                            "fans_count": 1,
+                            "freight": 590,
                             "mode": "1 1",
-                            "price": 1,
+                            "order_sku_commission_price": 6,// 分销佣金
+                            "order_sku_commission_rate": 5,// 佣金比例
+                            "price": 33,
                             "product_name": "摩托",  // 商品名
+                            "product_rid": "3",
+                            "province": "",
                             "quantity": 3,  // 数量
                             "rid": "1",  // sku
                             "s_color": "1",
                             "s_model": "1",
                             "s_weight": 1,
-                            "sale_price": 1,
-                            "stock_count": 11020
+                            "sale_price": 30,
+                            "stock_count": 32033,
+                            "stock_quantity": 32033,
+                            "store_logo": "http://0.0.0.0:9000/_uploads/photos/180523/8f51855eedae984.jpg",
+                            "store_name": "第2家",
+                            "store_rid": "3",
+                            "tag_line": "1",
+                            "town": ""
                         }
                     ],
 
@@ -1660,28 +1819,46 @@ JSON数据格式:
                     "is_many_express": false, // 是否多物流公司发货
                     "items": [
                         {
-                            "order_sku_commission_price": 6,// 分销佣金
-                            "order_sku_commission_rate": 5,// 佣金比例
+                           "bgcover": "http://0.0.0.0:9000/_uploads/photos/180523/8f51855eedae984.jpg",
+                            "city": "",
                             "commission_price": null,
-                            "commission_rate": 5,
-                            "cover": "http://0.0.0.0:9000/_uploads/photos/1",
-                            "deal_price": 1,  // 交易价格
+                            "commission_rate": 10,
+                            "country": "",
+                            "cover": "http://0.0.0.0:9000/_uploads/photos/180523/8f51855eedae984.jpg",
+                            "cover_id": 1,
+                            "deal_price": 30,
+                            "delivery_city": "北京",
+                            "delivery_country": "",
+                            "delivery_country_id": null,
+                            "delivery_province": "北京",
+                            "distribution_type": 1,
                             "express": 4,  // 快递公司ID
-                            "express_code": "YTO",
-                            "express_name": "圆通",
                             "express_at": 0,  // 发货时间
                             "express_no": null,  // 运单号
-                            "id_code": "1",
+                            "express_code": "ZJS",
+                            "express_name": "宅急送",
+                            "fans_count": 1,
+                            "freight": 590,
                             "mode": "1 1",
-                            "price": 1,
+                            "order_sku_commission_price": 6,// 分销佣金
+                            "order_sku_commission_rate": 5,// 佣金比例
+                            "price": 33,
                             "product_name": "摩托",  // 商品名
+                            "product_rid": "3",
+                            "province": "",
                             "quantity": 3,  // 数量
                             "rid": "1",  // sku
                             "s_color": "1",
                             "s_model": "1",
                             "s_weight": 1,
-                            "sale_price": 1,
-                            "stock_count": 11020
+                            "sale_price": 30,
+                            "stock_count": 32033,
+                            "stock_quantity": 32033,
+                            "store_logo": "http://0.0.0.0:9000/_uploads/photos/180523/8f51855eedae984.jpg",
+                            "store_name": "第2家",
+                            "store_rid": "3",
+                            "tag_line": "1",
+                            "town": ""
                         }
                     ],
 
@@ -1773,28 +1950,46 @@ JSON数据格式:
                     "is_many_express": false, // 是否多物流公司发货
                     "items": [
                         {
-                            "order_sku_commission_price": 6,// 分销佣金
-                            "order_sku_commission_rate": 5,// 佣金比例
+                           "bgcover": "http://0.0.0.0:9000/_uploads/photos/180523/8f51855eedae984.jpg",
+                            "city": "",
                             "commission_price": null,
-                            "commission_rate": 5,
-                            "cover": "http://0.0.0.0:9000/_uploads/photos/1",
-                            "deal_price": 1,  // 交易价格
+                            "commission_rate": 10,
+                            "country": "",
+                            "cover": "http://0.0.0.0:9000/_uploads/photos/180523/8f51855eedae984.jpg",
+                            "cover_id": 1,
+                            "deal_price": 30,
+                            "delivery_city": "北京",
+                            "delivery_country": "",
+                            "delivery_country_id": null,
+                            "delivery_province": "北京",
+                            "distribution_type": 1,
                             "express": 4,  // 快递公司ID
-                            "express_code": "YTO",
-                            "express_name": "圆通",
                             "express_at": 0,  // 发货时间
                             "express_no": null,  // 运单号
-                            "id_code": "1",
+                            "express_code": "ZJS",
+                            "express_name": "宅急送",
+                            "fans_count": 1,
+                            "freight": 590,
                             "mode": "1 1",
-                            "price": 1,
+                            "order_sku_commission_price": 6,// 分销佣金
+                            "order_sku_commission_rate": 5,// 佣金比例
+                            "price": 33,
                             "product_name": "摩托",  // 商品名
+                            "product_rid": "3",
+                            "province": "",
                             "quantity": 3,  // 数量
                             "rid": "1",  // sku
                             "s_color": "1",
                             "s_model": "1",
                             "s_weight": 1,
-                            "sale_price": 1,
-                            "stock_count": 11020
+                            "sale_price": 30,
+                            "stock_count": 32033,
+                            "stock_quantity": 32033,
+                            "store_logo": "http://0.0.0.0:9000/_uploads/photos/180523/8f51855eedae984.jpg",
+                            "store_name": "第2家",
+                            "store_rid": "3",
+                            "tag_line": "1",
+                            "town": ""
                         }
                     ],
 
@@ -1966,35 +2161,46 @@ JSON数据格式:
                     "is_many_express": false, // 是否多物流公司发货
                     "items": [
                         {
-                            "order_sku_commission_price": 6,// 分销佣金
-                            "order_sku_commission_rate": 5,// 佣金比例
+                           "bgcover": "http://0.0.0.0:9000/_uploads/photos/180523/8f51855eedae984.jpg",
+                            "city": "",
                             "commission_price": null,
-                            "commission_rate": 5,
+                            "commission_rate": 10,
+                            "country": "",
                             "cover": "http://0.0.0.0:9000/_uploads/photos/180523/8f51855eedae984.jpg",
                             "cover_id": 1,
-                            "deal_price": 3,
+                            "deal_price": 30,
+                            "delivery_city": "北京",
                             "delivery_country": "",
                             "delivery_country_id": null,
-                            "express": 4,
-                            "express_at": 0,
-                            "express_code": "YTO",
-                            "express_name": "圆通",
-                            "express_no": null,
-                            "freight": 190,
+                            "delivery_province": "北京",
+                            "distribution_type": 1,
+                            "express": 4,  // 快递公司ID
+                            "express_at": 0,  // 发货时间
+                            "express_no": null,  // 运单号
+                            "express_code": "ZJS",
+                            "express_name": "宅急送",
+                            "fans_count": 1,
+                            "freight": 590,
                             "mode": "1 1",
-                            "price": 3,
-                            "product_name": "自行车",
+                            "order_sku_commission_price": 6,// 分销佣金
+                            "order_sku_commission_rate": 5,// 佣金比例
+                            "price": 33,
+                            "product_name": "摩托",  // 商品名
                             "product_rid": "3",
-                            "quantity": 10,
-                            "rid": "3",
+                            "province": "",
+                            "quantity": 3,  // 数量
+                            "rid": "1",  // sku
                             "s_color": "1",
                             "s_model": "1",
                             "s_weight": 1,
-                            "sale_price": 3,
-                            "stock_count": 32363,
-                            "stock_quantity": 32363,
+                            "sale_price": 30,
+                            "stock_count": 32033,
+                            "stock_quantity": 32033,
+                            "store_logo": "http://0.0.0.0:9000/_uploads/photos/180523/8f51855eedae984.jpg",
                             "store_name": "第2家",
-                            "store_rid": "3"
+                            "store_rid": "3",
+                            "tag_line": "1",
+                            "town": ""
                         }
                     ],
                     "life_order_status": 3,  // 生活馆订单状态， 1、待发货 2、已发货 3、已完成
