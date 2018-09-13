@@ -75,6 +75,7 @@
                         "express_name": "宅急送",
                         "fans_count": 1,
                         "freight": 590,
+                        "freight_name": "运费模板1000",  // 运费模板名
                         "mode": "1 1",
                         "order_sku_commission_price": 6,// 分销佣金
                         "order_sku_commission_rate": 5,// 佣金比例
