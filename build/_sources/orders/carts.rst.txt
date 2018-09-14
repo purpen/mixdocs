@@ -57,6 +57,7 @@ JSON数据格式:
                         "delivery_province": "北京",//发货省
                         "distribution_type": 1,
                         "fans_count": 1231,
+                        "fid": "Ft178504962",  // 运费模板fid
                         "is_free_postage": false,
                         "mode": "1 1",
                         "price": 11,  // 零售价
@@ -222,6 +223,7 @@ JSON数据格式:
                     "delivery_province": "北京",//发货省
                     "distribution_type": 1,
                     "fans_count": 1231,
+                    "fid": "Ft178504962",  // 运费模板fid
                     "is_free_postage": false,
                     "mode": "1 1",
                     "price": 11,  // 零售价
@@ -339,6 +341,7 @@ JSON数据格式:
                         "delivery_province": "北京",//发货省
                         "distribution_type": 1,
                         "fans_count": 1231,
+                        "fid": "Ft178504962",  // 运费模板fid
                         "is_free_postage": false,
                         "mode": "1 1",
                         "price": 11,  // 零售价
