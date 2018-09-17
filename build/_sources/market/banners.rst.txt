@@ -231,6 +231,35 @@ JSON数据格式:
     }
 
 
+分享优惠劵
+----------------------
+
+接口说明
+~~~~~~~~~~~~~~
+
+* API接口请求地址：``/market/share/coupons``
+* API接口请求方法：``POST``
+* API接口用户授权：``token``
+
+返回示例
+~~~~~~~~~~~~~~~~
+
+JSON数据格式:
+
+.. code-block:: javascript
+
+    {
+        "data": {
+            "image_url": "https://kg.erp.taihuoniao.com/20180314/Fk1vEAP_tIVwmPRfHRfl8jpn07CZ.png"
+        },
+        "status": {
+            "code": 200,
+            "message": "Ok all right."
+        },
+        "success": true
+    }
+
+
 邀请好友开馆海报
 ----------------------
 
@@ -367,7 +396,7 @@ JSON数据格式:
                     "sort_order": "排序",
                     "status": true,
                     "title": "标题",
-                    "type": "0=全部, 1=链接地址, 2=商品, 3=分类, 4=品牌, 5=专题"
+                    "type": "0=全部, 1=链接地址, 2=商品, 3=分类, 4=品牌, 5=专题, 6=生活志文章, 7=生活志种草清单"
                 },
                 {
                     "description": "广告图描述",

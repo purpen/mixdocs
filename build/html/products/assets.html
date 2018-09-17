@@ -113,6 +113,7 @@
 <li class="toctree-l2"><a class="reference internal" href="../shopes/shopes.html">微商城模块</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../shopes/store.html">店铺模块</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../shopes/wxapp.html">小程序模块</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../shopes/notice.html">通知模块</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="../market/index.html">营销API模块</a><ul>
@@ -162,8 +163,9 @@
 <li class="toctree-l2"><a class="reference internal" href="../common.html#id41">注册发送短信验证码</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../common.html#id46">忘记密码发送短信验证码</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../common.html#id50">动态登陆发送短信验证码</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../common.html#id54">账户编辑发送短信验证码</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../common.html#id58">发送邮件验证码</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../common.html#id54">绑定银行卡发送短信验证码</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../common.html#id58">账户解除绑定银行卡发送短信验证码</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../common.html#id62">发送邮件验证码</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="../setting.html">系统相关配置文档</a><ul>
@@ -237,6 +239,11 @@
 <li><a class="reference internal" href="#id27">删除附件</a><ul>
 <li><a class="reference internal" href="#id28">请求参数</a></li>
 <li><a class="reference internal" href="#id29">返回示例</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#id30">隐藏附件</a><ul>
+<li><a class="reference internal" href="#id31">请求参数</a></li>
+<li><a class="reference internal" href="#id32">返回示例</a></li>
 </ul>
 </li>
 </ul>
@@ -314,6 +321,11 @@
 <li><a class="reference internal" href="#id27">删除附件</a><ul>
 <li><a class="reference internal" href="#id28">请求参数</a></li>
 <li><a class="reference internal" href="#id29">返回示例</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#id30">隐藏附件</a><ul>
+<li><a class="reference internal" href="#id31">请求参数</a></li>
+<li><a class="reference internal" href="#id32">返回示例</a></li>
 </ul>
 </li>
 </ul>
@@ -875,6 +887,56 @@
 </div>
 <div class="section" id="id29">
 <h3>返回示例<a class="headerlink" href="#id29" title="永久链接至标题">¶</a></h3>
+<p>JSON数据格式:</p>
+<div class="highlight-javascript"><div class="highlight"><pre><span></span><span class="p">{</span>
+    <span class="s2">&quot;status&quot;</span><span class="o">:</span> <span class="p">{</span>
+        <span class="s2">&quot;code&quot;</span><span class="o">:</span> <span class="mi">204</span><span class="p">,</span>
+        <span class="s2">&quot;message&quot;</span><span class="o">:</span> <span class="s2">&quot;All deleted.&quot;</span>
+    <span class="p">},</span>
+    <span class="s2">&quot;success&quot;</span><span class="o">:</span> <span class="kc">true</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="id30">
+<h2>隐藏附件<a class="headerlink" href="#id30" title="永久链接至标题">¶</a></h2>
+<p>删除某个附件图片</p>
+<ul class="simple">
+<li>API接口请求地址：<code class="docutils literal"><span class="pre">/assets/hidden</span></code></li>
+<li>API接口请求方法：<code class="docutils literal"><span class="pre">DELETE</span></code></li>
+<li>API接口用户授权：<code class="docutils literal"><span class="pre">token</span></code></li>
+</ul>
+<div class="section" id="id31">
+<h3>请求参数<a class="headerlink" href="#id31" title="永久链接至标题">¶</a></h3>
+<table border="1" class="docutils">
+<colgroup>
+<col width="18%" />
+<col width="11%" />
+<col width="12%" />
+<col width="11%" />
+<col width="49%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">名称</th>
+<th class="head">类型</th>
+<th class="head">是否必须</th>
+<th class="head">默认值</th>
+<th class="head">描述说明</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>rids</td>
+<td>Array</td>
+<td>必须</td>
+<td>&#160;</td>
+<td>附件编号</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="id32">
+<h3>返回示例<a class="headerlink" href="#id32" title="永久链接至标题">¶</a></h3>
 <p>JSON数据格式:</p>
 <div class="highlight-javascript"><div class="highlight"><pre><span></span><span class="p">{</span>
     <span class="s2">&quot;status&quot;</span><span class="o">:</span> <span class="p">{</span>

@@ -1067,6 +1067,8 @@ JSON数据格式:
             "rid": 1,
             "status": 2,
             "title": "标题...",
+            "store_logo": "店铺logo",
+            "store_name": "店铺名",
             "type": 2,
             "browse_count": "浏览数",
             "comment_count": "评论数",
