@@ -1376,24 +1376,25 @@ JSON数据格式
 请求参数
 ~~~~~~~~~~~~~~~
 
-=====================  ==========  =========  ==========  =============================
-名称                    类型        是否必须     默认值       描述说明
-=====================  ==========  =========  ==========  =============================
-areacode                 String    可选          +86         区号
-mobile                   String    必须                      手机号
-email                    String    必须                      邮箱
-phone                    String    可选                      固定电话
-wechat                   String    必须                      微信号
-qq                       String    可选                      QQ号
-country_id               Integer   必须                      国家ID
-province_id              Integer   必须                      省ID
-city_id                  Integer   可选                      市ID
-town_id                  Integer   可选                      镇ID
-area_id                  Integer   可选                      区域ID
-street_address           String    必须                      详细地址
-urgent_contact_name      String    必须                      紧急联系人姓名
-urgent_contact_mobile    String    必须                      紧急联系人电话
-=====================  ==========  =========  ==========  =============================
+=======================  ==========  =========  ==========  =============================
+名称                      类型        是否必须     默认值       描述说明
+=======================  ==========  =========  ==========  =============================
+areacode                  String      可选          +86         区号
+mobile                    String      必须                      手机号
+email                     String      必须                      邮箱
+phone                     String      可选                      固定电话
+wechat                    String      必须                      微信号
+qq                        String      可选                      QQ号
+country_id                Integer     必须                      国家ID
+province_id               Integer     必须                      省ID
+city_id                   Integer     可选                      市ID
+town_id                   Integer     可选                      镇ID
+area_id                   Integer     可选                      区域ID
+street_address            String      必须                      详细地址
+urgent_contact_name       String      必须                      紧急联系人姓名
+urgent_contact_areacode   String      必须                      紧急联系人手机区号
+urgent_contact_mobile     String      必须                      紧急联系人电话
+=======================  ==========  =========  ==========  =============================
 
 请求示例
 ~~~~~~~~~~~~~~~~
@@ -1403,8 +1404,8 @@ JSON数据格式:
 .. code-block:: javascript
 
     {
-    "areacode":"+86","mobile":"13001179400","wechat":"jksjk45","country_id":1,"province_id":1,"city_id":1,"area_id":2,"street_address":"中南海","urgent_contact_name":"普京","urgent_contact_mobile":"15879456532","email":"1346555456@qq.com","phone":"0314-4567891","qq":"1345678956"
-    }
+        "areacode":"+86","mobile":"13001179400","wechat":"jksjk45","country_id":1,"province_id":1,"city_id":1,"area_id":2,"street_address":"中南海","urgent_contact_name":"普京", "urgent_contact_areacode": "+86", "urgent_contact_mobile":"15879456532","email":"1346555456@qq.com","phone":"0314-4567891","qq":"1345678956"
+        }
 
 返回示例
 ~~~~~~~~~~~~~~~~
