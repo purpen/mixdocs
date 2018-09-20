@@ -131,6 +131,10 @@ JSON数据格式:
                             "town": ""
                         }
                     ],
+                    "pending_rating_count": 1,  // 待评价未读数量
+                    "pending_pay_count": 12,  // 待付款未读数量
+                    "pending_receipt_count": 3,  // 待收货未读数量
+                    "pending_shipment_count": 4,  // 待发货未读数量
                 },
 
             ],
