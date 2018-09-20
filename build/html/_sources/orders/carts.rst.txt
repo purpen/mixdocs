@@ -70,6 +70,7 @@ JSON数据格式:
                         "s_weight": 1,
                         "sale_price": 10, // 促销价
                         "status": 1,  // 商品状态: 0: 仓库中 1: 出售中  2: 下架中
+                        "sku_status": 2,  // sku状态 1、在售 3 删除
                         "stock_count": 10207,
                         "stock_quantity": 10207,  // 库存数
                         "store_logo": "http://0.0.0.0:9000/_uploads/photos/180523/8f51855eedae984.jpg",
@@ -236,6 +237,7 @@ JSON数据格式:
                     "s_weight": 1,
                     "sale_price": 10, // 促销价
                     "status": 1,  // 商品状态: 0: 仓库中 1: 出售中  2: 下架中
+                    "sku_status": 2,  // sku状态 1、在售 3 删除
                     "stock_count": 10207,
                     "stock_quantity": 10207,  // 库存数
                     "store_logo": "http://0.0.0.0:9000/_uploads/photos/180523/8f51855eedae984.jpg",
@@ -354,6 +356,7 @@ JSON数据格式:
                         "s_weight": 1,
                         "sale_price": 10, // 促销价
                         "status": 1,  // 商品状态: 0: 仓库中 1: 出售中  2: 下架中
+                        "sku_status": 2,  // sku状态 1、在售 3 删除
                         "stock_count": 10207,
                         "stock_quantity": 10207,  // 库存数
                         "store_logo": "http://0.0.0.0:9000/_uploads/photos/180523/8f51855eedae984.jpg",
@@ -520,3 +523,102 @@ JSON数据格式:
       },
       "success": false
     }
+
+
+
+重选规格
+----------------
+重选规格
+
+接口说明
+~~~~~~~~~~~~~~
+
+* API接口请求地址：``/cart/re_election``
+* API接口请求方法：``PUT``
+* API接口用户授权：``token``
+
+请求参数
+~~~~~~~~~~~~~~~
+
+===============  ==========  =========================  ==========  =======================
+名称              类型         是否必须                    默认值       描述说明
+===============  ==========  =========================  ==========  =======================
+old_sku           String      必填                                    旧商品sku
+new_sku           String      必填                                    新商品sku
+new_quantity      Integer     必填                        1           新商品购买数量
+===============  ==========  =========================  ==========  =======================
+
+参考示例：
+
+.. code-block:: javascript
+
+    {
+        "old_sku":"1",
+        "new_sku":"2",
+        "new_quantity":2
+
+    }
+
+
+返回示例
+~~~~~~~~~~~~~~~~
+
+JSON数据格式:
+
+请求 **正确** 返回结果：
+
+.. code-block:: javascript
+
+    {
+        "data": {
+            "cart": {
+                "option": "其他",
+                "product": {
+                    "bgcover": "http://0.0.0.0:9000/_uploads/photos/180523/8f51855eedae984.jpg",
+                    "city": "",
+                    "commission_price": null,
+                    "commission_rate": null,
+                    "country": "",
+                    "cover": "http://0.0.0.0:9000/_uploads/photos/180523/8f51855eedae984.jpg",
+                    "cover_id": 1,
+                    "delivery_city": "北京",  //发货城市
+                    "delivery_country": "",  //发货国家
+                    "delivery_country_id": null,
+                    "delivery_province": "北京",//发货省
+                    "distribution_type": 1,
+                    "fans_count": 1231,
+                    "fid": "Ft178504962",  // 运费模板fid
+                    "is_free_postage": false,
+                    "mode": "1 1",
+                    "price": 11,  // 零售价
+                    "product_name": "摩托",
+                    "product_rid": "1",
+                    "province": "",
+                    "rid": "1",
+                    "s_color": "1",
+                    "s_model": "1",
+                    "s_weight": 1,
+                    "sale_price": 10, // 促销价
+                    "status": 1,  // 商品状态: 0: 仓库中 1: 出售中  2: 下架中
+                    "sku_status": 2,  // sku状态 1、在售 3 删除
+                    "stock_count": 10207,
+                    "stock_quantity": 10207,  // 库存数
+                    "store_logo": "http://0.0.0.0:9000/_uploads/photos/180523/8f51855eedae984.jpg",
+                    "store_name": "第一家",  // 商品所属店铺名称
+                    "store_rid": "2",
+                    "tag_line": "1",
+                    "town": ""
+                },
+                "quantity": 4,
+                "rid": "1",
+            },
+            "item_count": 7  // 购物车中商品总数
+        },
+        "status": {
+            "code": 200,
+            "message": "Ok all right."
+        },
+        "success": true
+    }
+
+

@@ -232,6 +232,12 @@
 <li><a class="reference internal" href="#id25">返回示例</a></li>
 </ul>
 </li>
+<li><a class="reference internal" href="#id26">重选规格</a><ul>
+<li><a class="reference internal" href="#id27">接口说明</a></li>
+<li><a class="reference internal" href="#id28">请求参数</a></li>
+<li><a class="reference internal" href="#id29">返回示例</a></li>
+</ul>
+</li>
 </ul>
 </li>
 </ul>
@@ -298,6 +304,12 @@
 <li><a class="reference internal" href="#id23">接口说明</a></li>
 <li><a class="reference internal" href="#id24">请求参数</a></li>
 <li><a class="reference internal" href="#id25">返回示例</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#id26">重选规格</a><ul>
+<li><a class="reference internal" href="#id27">接口说明</a></li>
+<li><a class="reference internal" href="#id28">请求参数</a></li>
+<li><a class="reference internal" href="#id29">返回示例</a></li>
 </ul>
 </li>
 </ul>
@@ -412,6 +424,7 @@
                     <span class="s2">&quot;s_weight&quot;</span><span class="o">:</span> <span class="mi">1</span><span class="p">,</span>
                     <span class="s2">&quot;sale_price&quot;</span><span class="o">:</span> <span class="mi">10</span><span class="p">,</span> <span class="c1">// 促销价</span>
                     <span class="s2">&quot;status&quot;</span><span class="o">:</span> <span class="mi">1</span><span class="p">,</span>  <span class="c1">// 商品状态: 0: 仓库中 1: 出售中  2: 下架中</span>
+                    <span class="s2">&quot;sku_status&quot;</span><span class="o">:</span> <span class="mi">2</span><span class="p">,</span>  <span class="c1">// sku状态 1、在售 3 删除</span>
                     <span class="s2">&quot;stock_count&quot;</span><span class="o">:</span> <span class="mi">10207</span><span class="p">,</span>
                     <span class="s2">&quot;stock_quantity&quot;</span><span class="o">:</span> <span class="mi">10207</span><span class="p">,</span>  <span class="c1">// 库存数</span>
                     <span class="s2">&quot;store_logo&quot;</span><span class="o">:</span> <span class="s2">&quot;http://0.0.0.0:9000/_uploads/photos/180523/8f51855eedae984.jpg&quot;</span><span class="p">,</span>
@@ -617,6 +630,7 @@
                 <span class="s2">&quot;s_weight&quot;</span><span class="o">:</span> <span class="mi">1</span><span class="p">,</span>
                 <span class="s2">&quot;sale_price&quot;</span><span class="o">:</span> <span class="mi">10</span><span class="p">,</span> <span class="c1">// 促销价</span>
                 <span class="s2">&quot;status&quot;</span><span class="o">:</span> <span class="mi">1</span><span class="p">,</span>  <span class="c1">// 商品状态: 0: 仓库中 1: 出售中  2: 下架中</span>
+                <span class="s2">&quot;sku_status&quot;</span><span class="o">:</span> <span class="mi">2</span><span class="p">,</span>  <span class="c1">// sku状态 1、在售 3 删除</span>
                 <span class="s2">&quot;stock_count&quot;</span><span class="o">:</span> <span class="mi">10207</span><span class="p">,</span>
                 <span class="s2">&quot;stock_quantity&quot;</span><span class="o">:</span> <span class="mi">10207</span><span class="p">,</span>  <span class="c1">// 库存数</span>
                 <span class="s2">&quot;store_logo&quot;</span><span class="o">:</span> <span class="s2">&quot;http://0.0.0.0:9000/_uploads/photos/180523/8f51855eedae984.jpg&quot;</span><span class="p">,</span>
@@ -761,6 +775,7 @@
                     <span class="s2">&quot;s_weight&quot;</span><span class="o">:</span> <span class="mi">1</span><span class="p">,</span>
                     <span class="s2">&quot;sale_price&quot;</span><span class="o">:</span> <span class="mi">10</span><span class="p">,</span> <span class="c1">// 促销价</span>
                     <span class="s2">&quot;status&quot;</span><span class="o">:</span> <span class="mi">1</span><span class="p">,</span>  <span class="c1">// 商品状态: 0: 仓库中 1: 出售中  2: 下架中</span>
+                    <span class="s2">&quot;sku_status&quot;</span><span class="o">:</span> <span class="mi">2</span><span class="p">,</span>  <span class="c1">// sku状态 1、在售 3 删除</span>
                     <span class="s2">&quot;stock_count&quot;</span><span class="o">:</span> <span class="mi">10207</span><span class="p">,</span>
                     <span class="s2">&quot;stock_quantity&quot;</span><span class="o">:</span> <span class="mi">10207</span><span class="p">,</span>  <span class="c1">// 库存数</span>
                     <span class="s2">&quot;store_logo&quot;</span><span class="o">:</span> <span class="s2">&quot;http://0.0.0.0:9000/_uploads/photos/180523/8f51855eedae984.jpg&quot;</span><span class="p">,</span>
@@ -950,6 +965,125 @@
     <span class="s2">&quot;message&quot;</span><span class="o">:</span> <span class="s2">&quot;Not Found&quot;</span>
   <span class="p">},</span>
   <span class="s2">&quot;success&quot;</span><span class="o">:</span> <span class="kc">false</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="id26">
+<h2>重选规格<a class="headerlink" href="#id26" title="永久链接至标题">¶</a></h2>
+<p>重选规格</p>
+<div class="section" id="id27">
+<h3>接口说明<a class="headerlink" href="#id27" title="永久链接至标题">¶</a></h3>
+<ul class="simple">
+<li>API接口请求地址：<code class="docutils literal"><span class="pre">/cart/re_election</span></code></li>
+<li>API接口请求方法：<code class="docutils literal"><span class="pre">PUT</span></code></li>
+<li>API接口用户授权：<code class="docutils literal"><span class="pre">token</span></code></li>
+</ul>
+</div>
+<div class="section" id="id28">
+<h3>请求参数<a class="headerlink" href="#id28" title="永久链接至标题">¶</a></h3>
+<table border="1" class="docutils">
+<colgroup>
+<col width="18%" />
+<col width="12%" />
+<col width="30%" />
+<col width="12%" />
+<col width="28%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">名称</th>
+<th class="head">类型</th>
+<th class="head">是否必须</th>
+<th class="head">默认值</th>
+<th class="head">描述说明</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>old_sku</td>
+<td>String</td>
+<td>必填</td>
+<td>&#160;</td>
+<td>旧商品sku</td>
+</tr>
+<tr class="row-odd"><td>new_sku</td>
+<td>String</td>
+<td>必填</td>
+<td>&#160;</td>
+<td>新商品sku</td>
+</tr>
+<tr class="row-even"><td>new_quantity</td>
+<td>Integer</td>
+<td>必填</td>
+<td>1</td>
+<td>新商品购买数量</td>
+</tr>
+</tbody>
+</table>
+<p>参考示例：</p>
+<div class="highlight-javascript"><div class="highlight"><pre><span></span><span class="p">{</span>
+    <span class="s2">&quot;old_sku&quot;</span><span class="o">:</span><span class="s2">&quot;1&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;new_sku&quot;</span><span class="o">:</span><span class="s2">&quot;2&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;new_quantity&quot;</span><span class="o">:</span><span class="mi">2</span>
+
+<span class="p">}</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="id29">
+<h3>返回示例<a class="headerlink" href="#id29" title="永久链接至标题">¶</a></h3>
+<p>JSON数据格式:</p>
+<p>请求 <strong>正确</strong> 返回结果：</p>
+<div class="highlight-javascript"><div class="highlight"><pre><span></span><span class="p">{</span>
+    <span class="s2">&quot;data&quot;</span><span class="o">:</span> <span class="p">{</span>
+        <span class="s2">&quot;cart&quot;</span><span class="o">:</span> <span class="p">{</span>
+            <span class="s2">&quot;option&quot;</span><span class="o">:</span> <span class="s2">&quot;其他&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;product&quot;</span><span class="o">:</span> <span class="p">{</span>
+                <span class="s2">&quot;bgcover&quot;</span><span class="o">:</span> <span class="s2">&quot;http://0.0.0.0:9000/_uploads/photos/180523/8f51855eedae984.jpg&quot;</span><span class="p">,</span>
+                <span class="s2">&quot;city&quot;</span><span class="o">:</span> <span class="s2">&quot;&quot;</span><span class="p">,</span>
+                <span class="s2">&quot;commission_price&quot;</span><span class="o">:</span> <span class="kc">null</span><span class="p">,</span>
+                <span class="s2">&quot;commission_rate&quot;</span><span class="o">:</span> <span class="kc">null</span><span class="p">,</span>
+                <span class="s2">&quot;country&quot;</span><span class="o">:</span> <span class="s2">&quot;&quot;</span><span class="p">,</span>
+                <span class="s2">&quot;cover&quot;</span><span class="o">:</span> <span class="s2">&quot;http://0.0.0.0:9000/_uploads/photos/180523/8f51855eedae984.jpg&quot;</span><span class="p">,</span>
+                <span class="s2">&quot;cover_id&quot;</span><span class="o">:</span> <span class="mi">1</span><span class="p">,</span>
+                <span class="s2">&quot;delivery_city&quot;</span><span class="o">:</span> <span class="s2">&quot;北京&quot;</span><span class="p">,</span>  <span class="c1">//发货城市</span>
+                <span class="s2">&quot;delivery_country&quot;</span><span class="o">:</span> <span class="s2">&quot;&quot;</span><span class="p">,</span>  <span class="c1">//发货国家</span>
+                <span class="s2">&quot;delivery_country_id&quot;</span><span class="o">:</span> <span class="kc">null</span><span class="p">,</span>
+                <span class="s2">&quot;delivery_province&quot;</span><span class="o">:</span> <span class="s2">&quot;北京&quot;</span><span class="p">,</span><span class="c1">//发货省</span>
+                <span class="s2">&quot;distribution_type&quot;</span><span class="o">:</span> <span class="mi">1</span><span class="p">,</span>
+                <span class="s2">&quot;fans_count&quot;</span><span class="o">:</span> <span class="mi">1231</span><span class="p">,</span>
+                <span class="s2">&quot;fid&quot;</span><span class="o">:</span> <span class="s2">&quot;Ft178504962&quot;</span><span class="p">,</span>  <span class="c1">// 运费模板fid</span>
+                <span class="s2">&quot;is_free_postage&quot;</span><span class="o">:</span> <span class="kc">false</span><span class="p">,</span>
+                <span class="s2">&quot;mode&quot;</span><span class="o">:</span> <span class="s2">&quot;1 1&quot;</span><span class="p">,</span>
+                <span class="s2">&quot;price&quot;</span><span class="o">:</span> <span class="mi">11</span><span class="p">,</span>  <span class="c1">// 零售价</span>
+                <span class="s2">&quot;product_name&quot;</span><span class="o">:</span> <span class="s2">&quot;摩托&quot;</span><span class="p">,</span>
+                <span class="s2">&quot;product_rid&quot;</span><span class="o">:</span> <span class="s2">&quot;1&quot;</span><span class="p">,</span>
+                <span class="s2">&quot;province&quot;</span><span class="o">:</span> <span class="s2">&quot;&quot;</span><span class="p">,</span>
+                <span class="s2">&quot;rid&quot;</span><span class="o">:</span> <span class="s2">&quot;1&quot;</span><span class="p">,</span>
+                <span class="s2">&quot;s_color&quot;</span><span class="o">:</span> <span class="s2">&quot;1&quot;</span><span class="p">,</span>
+                <span class="s2">&quot;s_model&quot;</span><span class="o">:</span> <span class="s2">&quot;1&quot;</span><span class="p">,</span>
+                <span class="s2">&quot;s_weight&quot;</span><span class="o">:</span> <span class="mi">1</span><span class="p">,</span>
+                <span class="s2">&quot;sale_price&quot;</span><span class="o">:</span> <span class="mi">10</span><span class="p">,</span> <span class="c1">// 促销价</span>
+                <span class="s2">&quot;status&quot;</span><span class="o">:</span> <span class="mi">1</span><span class="p">,</span>  <span class="c1">// 商品状态: 0: 仓库中 1: 出售中  2: 下架中</span>
+                <span class="s2">&quot;sku_status&quot;</span><span class="o">:</span> <span class="mi">2</span><span class="p">,</span>  <span class="c1">// sku状态 1、在售 3 删除</span>
+                <span class="s2">&quot;stock_count&quot;</span><span class="o">:</span> <span class="mi">10207</span><span class="p">,</span>
+                <span class="s2">&quot;stock_quantity&quot;</span><span class="o">:</span> <span class="mi">10207</span><span class="p">,</span>  <span class="c1">// 库存数</span>
+                <span class="s2">&quot;store_logo&quot;</span><span class="o">:</span> <span class="s2">&quot;http://0.0.0.0:9000/_uploads/photos/180523/8f51855eedae984.jpg&quot;</span><span class="p">,</span>
+                <span class="s2">&quot;store_name&quot;</span><span class="o">:</span> <span class="s2">&quot;第一家&quot;</span><span class="p">,</span>  <span class="c1">// 商品所属店铺名称</span>
+                <span class="s2">&quot;store_rid&quot;</span><span class="o">:</span> <span class="s2">&quot;2&quot;</span><span class="p">,</span>
+                <span class="s2">&quot;tag_line&quot;</span><span class="o">:</span> <span class="s2">&quot;1&quot;</span><span class="p">,</span>
+                <span class="s2">&quot;town&quot;</span><span class="o">:</span> <span class="s2">&quot;&quot;</span>
+            <span class="p">},</span>
+            <span class="s2">&quot;quantity&quot;</span><span class="o">:</span> <span class="mi">4</span><span class="p">,</span>
+            <span class="s2">&quot;rid&quot;</span><span class="o">:</span> <span class="s2">&quot;1&quot;</span><span class="p">,</span>
+        <span class="p">},</span>
+        <span class="s2">&quot;item_count&quot;</span><span class="o">:</span> <span class="mi">7</span>  <span class="c1">// 购物车中商品总数</span>
+    <span class="p">},</span>
+    <span class="s2">&quot;status&quot;</span><span class="o">:</span> <span class="p">{</span>
+        <span class="s2">&quot;code&quot;</span><span class="o">:</span> <span class="mi">200</span><span class="p">,</span>
+        <span class="s2">&quot;message&quot;</span><span class="o">:</span> <span class="s2">&quot;Ok all right.&quot;</span>
+    <span class="p">},</span>
+    <span class="s2">&quot;success&quot;</span><span class="o">:</span> <span class="kc">true</span>
 <span class="p">}</span>
 </pre></div>
 </div>
