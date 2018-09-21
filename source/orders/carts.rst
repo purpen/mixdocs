@@ -241,7 +241,7 @@ JSON数据格式:
                     "status": 1,  // 商品状态: 0: 仓库中 1: 出售中  2: 下架中
                     "sku_status": 2,  // sku状态 1、在售 3 删除
                     "stock_count": 10207,
-                    "stock_quantity": 10207,  // 库存数
+                    "stock_quantity": 10207,  // sku库存数
                     "store_logo": "http://0.0.0.0:9000/_uploads/photos/180523/8f51855eedae984.jpg",
                     "store_name": "第一家",  // 商品所属店铺名称
                     "store_rid": "2",
@@ -361,7 +361,7 @@ JSON数据格式:
                         "status": 1,  // 商品状态: 0: 仓库中 1: 出售中  2: 下架中
                         "sku_status": 2,  // sku状态 1、在售 3 删除
                         "stock_count": 10207,
-                        "stock_quantity": 10207,  // 库存数
+                        "stock_quantity": 10207,  // sku库存数
                         "store_logo": "http://0.0.0.0:9000/_uploads/photos/180523/8f51855eedae984.jpg",
                         "store_name": "第一家",  // 商品所属店铺名称
                         "store_rid": "2",
@@ -606,7 +606,7 @@ JSON数据格式:
                     "status": 1,  // 商品状态: 0: 仓库中 1: 出售中  2: 下架中
                     "sku_status": 2,  // sku状态 1、在售 3 删除
                     "stock_count": 10207,
-                    "stock_quantity": 10207,  // 库存数
+                    "stock_quantity": 10207,  // sku库存数
                     "store_logo": "http://0.0.0.0:9000/_uploads/photos/180523/8f51855eedae984.jpg",
                     "store_name": "第一家",  // 商品所属店铺名称
                     "store_rid": "2",
