@@ -766,6 +766,7 @@ invoice_type           Integer     可选          1          发票类型
 invoice_info           String      可选          {}
 ship_mode              Integer     可选          1          1、发快递 2、自提
 from_client            String      可选                     来源客户端，1、小程序；2、H5 3、App 4、TV 5、POS 6、PAD
+is_alone               Integer     可选          0          是否独立小程序 0、否 1、是
 affiliate_code         String      可选                     推广码
 bonus_code             String      可选                     官方红包码
 sync_pay               Integer     可选           0         是否同步返回支付参数 0、否 1、是
@@ -780,7 +781,6 @@ store_items            Array       必需                     店铺商品信息
 =====================  ==========  =========  ==========  =============================
 store_items:
 store_rid	           String      必需	                  当前店铺rid
-is_distribute          Integer     可选          0         是否分销 0、否 1、是
 original_store_rid     String      可选                    原店铺rid
 buyer_remark           String      可选                    买家备注
 blessing_utterance     String      可选                    买家寄语
