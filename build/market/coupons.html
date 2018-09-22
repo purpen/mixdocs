@@ -339,31 +339,25 @@
 <li><a class="reference internal" href="#id94">返回示例</a></li>
 </ul>
 </li>
-<li><a class="reference internal" href="#id95">领券中心-商品-同享券</a><ul>
+<li><a class="reference internal" href="#id95">领券中心-单享券-精选商品券</a><ul>
 <li><a class="reference internal" href="#id96">接口说明</a></li>
 <li><a class="reference internal" href="#id97">请求参数</a></li>
 <li><a class="reference internal" href="#id98">返回示例</a></li>
 </ul>
 </li>
-<li><a class="reference internal" href="#id99">领券中心-单享券-精选商品券</a><ul>
+<li><a class="reference internal" href="#id99">领券中心-官方优惠券</a><ul>
 <li><a class="reference internal" href="#id100">接口说明</a></li>
-<li><a class="reference internal" href="#id101">请求参数</a></li>
-<li><a class="reference internal" href="#id102">返回示例</a></li>
+<li><a class="reference internal" href="#id101">返回示例</a></li>
 </ul>
 </li>
-<li><a class="reference internal" href="#id103">领券中心-官方优惠券</a><ul>
-<li><a class="reference internal" href="#id104">接口说明</a></li>
-<li><a class="reference internal" href="#id105">返回示例</a></li>
+<li><a class="reference internal" href="#id102">优惠券头条动态</a><ul>
+<li><a class="reference internal" href="#id103">接口说明</a></li>
+<li><a class="reference internal" href="#id104">返回示例</a></li>
 </ul>
 </li>
-<li><a class="reference internal" href="#id106">优惠券头条动态</a><ul>
-<li><a class="reference internal" href="#id107">接口说明</a></li>
-<li><a class="reference internal" href="#id108">返回示例</a></li>
-</ul>
-</li>
-<li><a class="reference internal" href="#id109">官方无门槛红包分享动态</a><ul>
-<li><a class="reference internal" href="#id110">接口说明</a></li>
-<li><a class="reference internal" href="#id111">返回示例</a></li>
+<li><a class="reference internal" href="#id105">官方无门槛红包分享动态</a><ul>
+<li><a class="reference internal" href="#id106">接口说明</a></li>
+<li><a class="reference internal" href="#id107">返回示例</a></li>
 </ul>
 </li>
 </ul>
@@ -541,31 +535,25 @@
 <li><a class="reference internal" href="#id94">返回示例</a></li>
 </ul>
 </li>
-<li><a class="reference internal" href="#id95">领券中心-商品-同享券</a><ul>
+<li><a class="reference internal" href="#id95">领券中心-单享券-精选商品券</a><ul>
 <li><a class="reference internal" href="#id96">接口说明</a></li>
 <li><a class="reference internal" href="#id97">请求参数</a></li>
 <li><a class="reference internal" href="#id98">返回示例</a></li>
 </ul>
 </li>
-<li><a class="reference internal" href="#id99">领券中心-单享券-精选商品券</a><ul>
+<li><a class="reference internal" href="#id99">领券中心-官方优惠券</a><ul>
 <li><a class="reference internal" href="#id100">接口说明</a></li>
-<li><a class="reference internal" href="#id101">请求参数</a></li>
-<li><a class="reference internal" href="#id102">返回示例</a></li>
+<li><a class="reference internal" href="#id101">返回示例</a></li>
 </ul>
 </li>
-<li><a class="reference internal" href="#id103">领券中心-官方优惠券</a><ul>
-<li><a class="reference internal" href="#id104">接口说明</a></li>
-<li><a class="reference internal" href="#id105">返回示例</a></li>
+<li><a class="reference internal" href="#id102">优惠券头条动态</a><ul>
+<li><a class="reference internal" href="#id103">接口说明</a></li>
+<li><a class="reference internal" href="#id104">返回示例</a></li>
 </ul>
 </li>
-<li><a class="reference internal" href="#id106">优惠券头条动态</a><ul>
-<li><a class="reference internal" href="#id107">接口说明</a></li>
-<li><a class="reference internal" href="#id108">返回示例</a></li>
-</ul>
-</li>
-<li><a class="reference internal" href="#id109">官方无门槛红包分享动态</a><ul>
-<li><a class="reference internal" href="#id110">接口说明</a></li>
-<li><a class="reference internal" href="#id111">返回示例</a></li>
+<li><a class="reference internal" href="#id105">官方无门槛红包分享动态</a><ul>
+<li><a class="reference internal" href="#id106">接口说明</a></li>
+<li><a class="reference internal" href="#id107">返回示例</a></li>
 </ul>
 </li>
 </ul>
@@ -2750,6 +2738,18 @@
 <td>0</td>
 <td>店铺分类id, 0、推荐</td>
 </tr>
+<tr class="row-odd"><td>page</td>
+<td>Number</td>
+<td>可选</td>
+<td>1</td>
+<td>当前页码</td>
+</tr>
+<tr class="row-even"><td>per_page</td>
+<td>Number</td>
+<td>可选</td>
+<td>10</td>
+<td>每页数量</td>
+</tr>
 </tbody>
 </table>
 </div>
@@ -2760,16 +2760,26 @@
     <span class="s2">&quot;data&quot;</span><span class="o">:</span> <span class="p">{</span>
         <span class="s2">&quot;coupons&quot;</span><span class="o">:</span> <span class="p">[</span>
             <span class="p">{</span>
-                <span class="s2">&quot;amount&quot;</span><span class="o">:</span> <span class="mi">10</span><span class="p">,</span>  <span class="c1">// 面值</span>
-                <span class="s2">&quot;coupon_code&quot;</span><span class="o">:</span> <span class="s2">&quot;URQGBISTMZV&quot;</span><span class="p">,</span>  <span class="c1">// 优惠券code</span>
-                <span class="s2">&quot;coupon_type&quot;</span><span class="o">:</span> <span class="mi">2</span><span class="p">,</span>  <span class="c1">//  优惠券类型 1、同享券 2、单享券</span>
-                <span class="s2">&quot;is_recommend&quot;</span><span class="o">:</span> <span class="kc">true</span><span class="p">,</span>  <span class="c1">// 是否推荐</span>
-                <span class="s2">&quot;min_amount&quot;</span><span class="o">:</span> <span class="mi">99</span><span class="p">,</span>  <span class="c1">//  最低消费</span>
-                <span class="s2">&quot;store_logo&quot;</span><span class="o">:</span> <span class="s2">&quot;http://0.0.0.0:9000/_uploads/photos/180523/8f51855eedae984.jpg&quot;</span><span class="p">,</span>  <span class="c1">//  店铺logo</span>
-                <span class="s2">&quot;store_name&quot;</span><span class="o">:</span> <span class="s2">&quot;第一家&quot;</span><span class="p">,</span>  <span class="c1">//  店铺名</span>
-                <span class="s2">&quot;store_rid&quot;</span><span class="o">:</span> <span class="s2">&quot;2&quot;</span>  <span class="c1">// 店铺rid</span>
+                <span class="s2">&quot;amount&quot;</span><span class="o">:</span> <span class="mi">4</span><span class="p">,</span>  <span class="c1">// 优惠券金额</span>
+                <span class="s2">&quot;coupon_code&quot;</span><span class="o">:</span> <span class="s2">&quot;UMBSHQGIVDE&quot;</span><span class="p">,</span> <span class="c1">// 优惠券code</span>
+                <span class="s2">&quot;is_recommend&quot;</span><span class="o">:</span> <span class="kc">true</span><span class="p">,</span> <span class="c1">// 是否推荐</span>
+                <span class="s2">&quot;min_amount&quot;</span><span class="o">:</span> <span class="mi">290</span><span class="p">,</span> <span class="c1">// 优惠券面值</span>
+                <span class="s2">&quot;product_sku&quot;</span><span class="o">:</span> <span class="p">[</span>
+                    <span class="p">{</span>
+                        <span class="s2">&quot;product_amount&quot;</span><span class="o">:</span> <span class="mi">300</span><span class="p">,</span> <span class="c1">// 商品价格</span>
+                        <span class="s2">&quot;product_coupon_amount&quot;</span><span class="o">:</span> <span class="mi">296</span><span class="p">,</span> <span class="c1">// 券后价</span>
+                        <span class="s2">&quot;product_cover&quot;</span><span class="o">:</span> <span class="s2">&quot;http://0.0.0.0:9000/_uploads/photos/180523/8f51855eedae984.jpg&quot;</span><span class="p">,</span>
+                        <span class="s2">&quot;product_name&quot;</span><span class="o">:</span> <span class="s2">&quot;自行车&quot;</span><span class="p">,</span> <span class="c1">// 商品名</span>
+                        <span class="s2">&quot;product_rid&quot;</span><span class="o">:</span> <span class="s2">&quot;3&quot;</span> <span class="c1">// 商品编号</span>
+                    <span class="p">}</span>
+                <span class="p">],</span>
+                <span class="s2">&quot;store_logo&quot;</span><span class="o">:</span> <span class="s2">&quot;http://0.0.0.0:9000/_uploads/photos/180523/8f51855eedae984.jpg&quot;</span><span class="p">,</span>
+                <span class="s2">&quot;store_name&quot;</span><span class="o">:</span> <span class="s2">&quot;第2家&quot;</span><span class="p">,</span> <span class="c1">// 店铺名</span>
+                <span class="s2">&quot;store_rid&quot;</span><span class="o">:</span> <span class="s2">&quot;3&quot;</span> <span class="c1">// 店铺编号</span>
             <span class="p">}</span>
-        <span class="p">]</span>
+        <span class="p">],</span>
+        <span class="s2">&quot;next&quot;</span><span class="o">:</span> <span class="kc">null</span><span class="p">,</span>
+        <span class="s2">&quot;prev&quot;</span><span class="o">:</span> <span class="kc">null</span>
     <span class="p">},</span>
     <span class="s2">&quot;status&quot;</span><span class="o">:</span> <span class="p">{</span>
         <span class="s2">&quot;code&quot;</span><span class="o">:</span> <span class="mi">200</span><span class="p">,</span>
@@ -2782,86 +2792,17 @@
 </div>
 </div>
 <div class="section" id="id95">
-<h2>领券中心-商品-同享券<a class="headerlink" href="#id95" title="永久链接至标题">¶</a></h2>
-<p>领券中心-商品-同享券</p>
+<h2>领券中心-单享券-精选商品券<a class="headerlink" href="#id95" title="永久链接至标题">¶</a></h2>
+<p>领券中心-单享券-精选商品券</p>
 <div class="section" id="id96">
 <h3>接口说明<a class="headerlink" href="#id96" title="永久链接至标题">¶</a></h3>
-<ul class="simple">
-<li>API接口请求地址：<code class="docutils literal"><span class="pre">/market/coupon_center_product</span></code></li>
-<li>API接口请求方法：<code class="docutils literal"><span class="pre">GET</span></code></li>
-</ul>
-</div>
-<div class="section" id="id97">
-<h3>请求参数<a class="headerlink" href="#id97" title="永久链接至标题">¶</a></h3>
-<table border="1" class="docutils">
-<colgroup>
-<col width="25%" />
-<col width="10%" />
-<col width="11%" />
-<col width="10%" />
-<col width="44%" />
-</colgroup>
-<thead valign="bottom">
-<tr class="row-odd"><th class="head">名称</th>
-<th class="head">类型</th>
-<th class="head">是否必须</th>
-<th class="head">默认值</th>
-<th class="head">描述说明</th>
-</tr>
-</thead>
-<tbody valign="top">
-<tr class="row-even"><td>store_rid</td>
-<td>String</td>
-<td>必填</td>
-<td>&#160;</td>
-<td>店铺rid</td>
-</tr>
-<tr class="row-odd"><td>coupon_code</td>
-<td>String</td>
-<td>必填</td>
-<td>&#160;</td>
-<td>优惠券code</td>
-</tr>
-</tbody>
-</table>
-</div>
-<div class="section" id="id98">
-<h3>返回示例<a class="headerlink" href="#id98" title="永久链接至标题">¶</a></h3>
-<p>JSON数据格式:</p>
-<div class="highlight-javascript"><div class="highlight"><pre><span></span><span class="p">{</span>
-    <span class="s2">&quot;data&quot;</span><span class="o">:</span> <span class="p">{</span>
-        <span class="s2">&quot;products&quot;</span><span class="o">:</span> <span class="p">[</span>
-            <span class="p">{</span>
-                <span class="s2">&quot;product_amount&quot;</span><span class="o">:</span> <span class="mi">20</span><span class="p">,</span>  <span class="c1">// 商品价格</span>
-                <span class="s2">&quot;product_coupon_amount&quot;</span><span class="o">:</span> <span class="mi">18</span><span class="p">,</span>  <span class="c1">// 券后价</span>
-                <span class="s2">&quot;product_cover&quot;</span><span class="o">:</span> <span class="s2">&quot;http://0.0.0.0:9000/_uploads/photos/180523/8f51855eedae984.jpg&quot;</span><span class="p">,</span>
-                <span class="s2">&quot;product_name&quot;</span><span class="o">:</span> <span class="s2">&quot;汽车&quot;</span><span class="p">,</span>  <span class="c1">// 商品名</span>
-                <span class="s2">&quot;product_rid&quot;</span><span class="o">:</span> <span class="s2">&quot;2&quot;</span>  <span class="c1">// 商品rid</span>
-            <span class="p">},</span>
-        <span class="p">]</span>
-    <span class="p">},</span>
-    <span class="s2">&quot;status&quot;</span><span class="o">:</span> <span class="p">{</span>
-        <span class="s2">&quot;code&quot;</span><span class="o">:</span> <span class="mi">200</span><span class="p">,</span>
-        <span class="s2">&quot;message&quot;</span><span class="o">:</span> <span class="s2">&quot;Ok all right.&quot;</span>
-    <span class="p">},</span>
-    <span class="s2">&quot;success&quot;</span><span class="o">:</span> <span class="kc">true</span>
-<span class="p">}</span>
-</pre></div>
-</div>
-</div>
-</div>
-<div class="section" id="id99">
-<h2>领券中心-单享券-精选商品券<a class="headerlink" href="#id99" title="永久链接至标题">¶</a></h2>
-<p>领券中心-单享券-精选商品券</p>
-<div class="section" id="id100">
-<h3>接口说明<a class="headerlink" href="#id100" title="永久链接至标题">¶</a></h3>
 <ul class="simple">
 <li>API接口请求地址：<code class="docutils literal"><span class="pre">/market/coupon_center_single</span></code></li>
 <li>API接口请求方法：<code class="docutils literal"><span class="pre">GET</span></code></li>
 </ul>
 </div>
-<div class="section" id="id101">
-<h3>请求参数<a class="headerlink" href="#id101" title="永久链接至标题">¶</a></h3>
+<div class="section" id="id97">
+<h3>请求参数<a class="headerlink" href="#id97" title="永久链接至标题">¶</a></h3>
 <table border="1" class="docutils">
 <colgroup>
 <col width="25%" />
@@ -2888,8 +2829,8 @@
 </tbody>
 </table>
 </div>
-<div class="section" id="id102">
-<h3>返回示例<a class="headerlink" href="#id102" title="永久链接至标题">¶</a></h3>
+<div class="section" id="id98">
+<h3>返回示例<a class="headerlink" href="#id98" title="永久链接至标题">¶</a></h3>
 <p>JSON数据格式:</p>
 <div class="highlight-javascript"><div class="highlight"><pre><span></span><span class="p">{</span>
     <span class="s2">&quot;data&quot;</span><span class="o">:</span> <span class="p">{</span>
@@ -2918,18 +2859,18 @@
 </div>
 </div>
 </div>
-<div class="section" id="id103">
-<h2>领券中心-官方优惠券<a class="headerlink" href="#id103" title="永久链接至标题">¶</a></h2>
+<div class="section" id="id99">
+<h2>领券中心-官方优惠券<a class="headerlink" href="#id99" title="永久链接至标题">¶</a></h2>
 <p>领券中心-官方优惠券</p>
-<div class="section" id="id104">
-<h3>接口说明<a class="headerlink" href="#id104" title="永久链接至标题">¶</a></h3>
+<div class="section" id="id100">
+<h3>接口说明<a class="headerlink" href="#id100" title="永久链接至标题">¶</a></h3>
 <ul class="simple">
 <li>API接口请求地址：<code class="docutils literal"><span class="pre">/market/official_coupons/recommend</span></code></li>
 <li>API接口请求方法：<code class="docutils literal"><span class="pre">GET</span></code></li>
 </ul>
 </div>
-<div class="section" id="id105">
-<h3>返回示例<a class="headerlink" href="#id105" title="永久链接至标题">¶</a></h3>
+<div class="section" id="id101">
+<h3>返回示例<a class="headerlink" href="#id101" title="永久链接至标题">¶</a></h3>
 <p>JSON数据格式:</p>
 <div class="highlight-javascript"><div class="highlight"><pre><span></span><span class="p">{</span>
     <span class="s2">&quot;data&quot;</span><span class="o">:</span> <span class="p">{</span>
@@ -2958,18 +2899,18 @@
 </div>
 </div>
 </div>
-<div class="section" id="id106">
-<h2>优惠券头条动态<a class="headerlink" href="#id106" title="永久链接至标题">¶</a></h2>
+<div class="section" id="id102">
+<h2>优惠券头条动态<a class="headerlink" href="#id102" title="永久链接至标题">¶</a></h2>
 <p>优惠券头条动态</p>
-<div class="section" id="id107">
-<h3>接口说明<a class="headerlink" href="#id107" title="永久链接至标题">¶</a></h3>
+<div class="section" id="id103">
+<h3>接口说明<a class="headerlink" href="#id103" title="永久链接至标题">¶</a></h3>
 <ul class="simple">
 <li>API接口请求地址：<code class="docutils literal"><span class="pre">/market/coupon_lines</span></code></li>
 <li>API接口请求方法：<code class="docutils literal"><span class="pre">GET</span></code></li>
 </ul>
 </div>
-<div class="section" id="id108">
-<h3>返回示例<a class="headerlink" href="#id108" title="永久链接至标题">¶</a></h3>
+<div class="section" id="id104">
+<h3>返回示例<a class="headerlink" href="#id104" title="永久链接至标题">¶</a></h3>
 <p>JSON数据格式:</p>
 <div class="highlight-javascript"><div class="highlight"><pre><span></span><span class="p">{</span>
     <span class="s2">&quot;data&quot;</span><span class="o">:</span> <span class="p">{</span>
@@ -2999,18 +2940,18 @@
 </div>
 </div>
 </div>
-<div class="section" id="id109">
-<h2>官方无门槛红包分享动态<a class="headerlink" href="#id109" title="永久链接至标题">¶</a></h2>
+<div class="section" id="id105">
+<h2>官方无门槛红包分享动态<a class="headerlink" href="#id105" title="永久链接至标题">¶</a></h2>
 <p>官方无门槛红包分享动态</p>
-<div class="section" id="id110">
-<h3>接口说明<a class="headerlink" href="#id110" title="永久链接至标题">¶</a></h3>
+<div class="section" id="id106">
+<h3>接口说明<a class="headerlink" href="#id106" title="永久链接至标题">¶</a></h3>
 <ul class="simple">
 <li>API接口请求地址：<code class="docutils literal"><span class="pre">/market/bonus_lines</span></code></li>
 <li>API接口请求方法：<code class="docutils literal"><span class="pre">GET</span></code></li>
 </ul>
 </div>
-<div class="section" id="id111">
-<h3>返回示例<a class="headerlink" href="#id111" title="永久链接至标题">¶</a></h3>
+<div class="section" id="id107">
+<h3>返回示例<a class="headerlink" href="#id107" title="永久链接至标题">¶</a></h3>
 <p>JSON数据格式:</p>
 <div class="highlight-javascript"><div class="highlight"><pre><span></span><span class="p">{</span>
     <span class="s2">&quot;data&quot;</span><span class="o">:</span> <span class="p">{</span>

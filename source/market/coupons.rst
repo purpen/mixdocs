@@ -1515,7 +1515,9 @@ JSON数据格式:
 ====================  ========  =========  ========  ====================================
 名称                   类型      是否必须    默认值     描述说明
 ====================  ========  =========  ========  ====================================
-store_category        Number     必填           0      店铺分类id, 0、推荐
+store_category        Number     必填         0         店铺分类id, 0、推荐
+page                  Number     可选         1         当前页码
+per_page              Number     可选         10        每页数量
 ====================  ========  =========  ========  ====================================
 
 
@@ -1530,67 +1532,26 @@ JSON数据格式:
         "data": {
             "coupons": [
                 {
-                    "amount": 10,  // 面值
-                    "coupon_code": "URQGBISTMZV",  // 优惠券code
-                    "coupon_type": 2,  //  优惠券类型 1、同享券 2、单享券
-                    "is_recommend": true,  // 是否推荐
-                    "min_amount": 99,  //  最低消费
-                    "store_logo": "http://0.0.0.0:9000/_uploads/photos/180523/8f51855eedae984.jpg",  //  店铺logo
-                    "store_name": "第一家",  //  店铺名
-                    "store_rid": "2"  // 店铺rid
+                    "amount": 4,  // 优惠券金额
+                    "coupon_code": "UMBSHQGIVDE", // 优惠券code
+                    "is_recommend": true, // 是否推荐
+                    "min_amount": 290, // 优惠券面值
+                    "product_sku": [
+                        {
+                            "product_amount": 300, // 商品价格
+                            "product_coupon_amount": 296, // 券后价
+                            "product_cover": "http://0.0.0.0:9000/_uploads/photos/180523/8f51855eedae984.jpg",
+                            "product_name": "自行车", // 商品名
+                            "product_rid": "3" // 商品编号
+                        }
+                    ],
+                    "store_logo": "http://0.0.0.0:9000/_uploads/photos/180523/8f51855eedae984.jpg",
+                    "store_name": "第2家", // 店铺名
+                    "store_rid": "3" // 店铺编号
                 }
-            ]
-        },
-        "status": {
-            "code": 200,
-            "message": "Ok all right."
-        },
-        "success": true
-    }
-
-
-
-领券中心-商品-同享券
---------------------
-领券中心-商品-同享券
-
-接口说明
-~~~~~~~~~~~~~~
-
-* API接口请求地址：``/market/coupon_center_product``
-* API接口请求方法：``GET``
-
-
-请求参数
-~~~~~~~~~~~~~~~
-
-====================  ========  =========  ========  ====================================
-名称                   类型      是否必须    默认值     描述说明
-====================  ========  =========  ========  ====================================
-store_rid             String     必填                 店铺rid
-coupon_code           String     必填                 优惠券code
-====================  ========  =========  ========  ====================================
-
-
-返回示例
-~~~~~~~~~~~~~~~~
-
-JSON数据格式:
-
-.. code-block:: javascript
-
-
-    {
-        "data": {
-            "products": [
-                {
-                    "product_amount": 20,  // 商品价格
-                    "product_coupon_amount": 18,  // 券后价
-                    "product_cover": "http://0.0.0.0:9000/_uploads/photos/180523/8f51855eedae984.jpg",
-                    "product_name": "汽车",  // 商品名
-                    "product_rid": "2"  // 商品rid
-                },
-            ]
+            ],
+            "next": null,
+            "prev": null
         },
         "status": {
             "code": 200,
