@@ -1604,7 +1604,9 @@ JSON数据格式:
                     "product_rid": "1"  // 商品rid
                     "store_rid": "3"  // 店铺rid
                 }
-            ]
+            ],
+            "next": null,
+            "prev": null
         },
         "status": {
             "code": 200,

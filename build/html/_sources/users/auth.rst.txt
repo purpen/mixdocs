@@ -148,6 +148,7 @@ store_rid       String    必须                 登录账号
             "access_token": "cfe49b2ddaa797a5884ecc583137bb58706d677b",
             "app_key": "sNcMxUrRLzfiGnZ2hd4E",
             "store": {
+                "pattern": 1,   // 品牌馆营业模型: -1、休假模式  1、正常营业
                 "areacode": null,
                 "begin_date": "",
                 "bgcover": "http://kg.erp.taihuoniao.com",

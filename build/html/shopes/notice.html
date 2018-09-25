@@ -163,8 +163,8 @@
 <li class="toctree-l2"><a class="reference internal" href="../common.html#id41">注册发送短信验证码</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../common.html#id46">忘记密码发送短信验证码</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../common.html#id50">动态登陆发送短信验证码</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../common.html#id54">账户编辑发送短信验证码</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../common.html#id58">账户编辑发送短信验证码</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../common.html#id54">绑定银行卡发送短信验证码</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../common.html#id58">账户解除绑定银行卡发送短信验证码</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../common.html#id62">发送邮件验证码</a></li>
 </ul>
 </li>
@@ -210,13 +210,14 @@
 </li>
 <li><a class="reference internal" href="#id10">获取未读消息通知数量</a><ul>
 <li><a class="reference internal" href="#id11">接口说明</a></li>
-<li><a class="reference internal" href="#id12">返回示例</a></li>
+<li><a class="reference internal" href="#id12">请求参数</a></li>
+<li><a class="reference internal" href="#id13">返回示例</a></li>
 </ul>
 </li>
-<li><a class="reference internal" href="#id13">更新通知读取状态</a><ul>
-<li><a class="reference internal" href="#id14">接口说明</a></li>
-<li><a class="reference internal" href="#id15">请求参数</a></li>
-<li><a class="reference internal" href="#id16">返回示例</a></li>
+<li><a class="reference internal" href="#id14">更新消息读取状态</a><ul>
+<li><a class="reference internal" href="#id15">接口说明</a></li>
+<li><a class="reference internal" href="#id16">请求参数</a></li>
+<li><a class="reference internal" href="#id17">返回示例</a></li>
 </ul>
 </li>
 </ul>
@@ -265,13 +266,14 @@
 </li>
 <li><a class="reference internal" href="#id10">获取未读消息通知数量</a><ul>
 <li><a class="reference internal" href="#id11">接口说明</a></li>
-<li><a class="reference internal" href="#id12">返回示例</a></li>
+<li><a class="reference internal" href="#id12">请求参数</a></li>
+<li><a class="reference internal" href="#id13">返回示例</a></li>
 </ul>
 </li>
-<li><a class="reference internal" href="#id13">更新通知读取状态</a><ul>
-<li><a class="reference internal" href="#id14">接口说明</a></li>
-<li><a class="reference internal" href="#id15">请求参数</a></li>
-<li><a class="reference internal" href="#id16">返回示例</a></li>
+<li><a class="reference internal" href="#id14">更新消息读取状态</a><ul>
+<li><a class="reference internal" href="#id15">接口说明</a></li>
+<li><a class="reference internal" href="#id16">请求参数</a></li>
+<li><a class="reference internal" href="#id17">返回示例</a></li>
 </ul>
 </li>
 </ul>
@@ -341,6 +343,12 @@
 <td>&#160;</td>
 <td>通知id</td>
 </tr>
+<tr class="row-odd"><td>user_type</td>
+<td>Integer</td>
+<td>可选</td>
+<td>1</td>
+<td>推送对象 1: 商家, 2: 普通用户</td>
+</tr>
 </tbody>
 </table>
 </div>
@@ -406,16 +414,22 @@
 <td>1</td>
 <td>通知类型 1: 系统通知 2: 官方公告</td>
 </tr>
-<tr class="row-odd"><td>page</td>
+<tr class="row-odd"><td>user_type</td>
+<td>Integer</td>
+<td>可选</td>
+<td>1</td>
+<td>推送对象 1: 商家, 2: 普通用户</td>
+</tr>
+<tr class="row-even"><td>page</td>
 <td>Integer</td>
 <td>可选</td>
 <td>1</td>
 <td>当前页码</td>
 </tr>
-<tr class="row-even"><td>per_page</td>
+<tr class="row-odd"><td>per_page</td>
 <td>Integer</td>
 <td>可选</td>
-<td>12</td>
+<td>10</td>
 <td>每页数量</td>
 </tr>
 </tbody>
@@ -430,6 +444,8 @@
         <span class="s2">&quot;count&quot;</span><span class="o">:</span> <span class="mi">4</span><span class="p">,</span>
         <span class="s2">&quot;next&quot;</span><span class="o">:</span> <span class="kc">false</span><span class="p">,</span>
         <span class="s2">&quot;prev&quot;</span><span class="o">:</span> <span class="kc">false</span><span class="p">,</span>
+        <span class="s2">&quot;official_announcement_count&quot;</span><span class="o">:</span> <span class="mi">1</span><span class="p">,</span>  <span class="c1">// 官方公告未读数量</span>
+        <span class="s2">&quot;system_notice_count&quot;</span><span class="o">:</span> <span class="mi">3</span>  <span class="c1">// 系统通知未读数量</span>
         <span class="s2">&quot;system_notice&quot;</span><span class="o">:</span> <span class="p">[</span>
             <span class="p">{</span>
                 <span class="s2">&quot;content&quot;</span><span class="o">:</span> <span class="s2">&quot;手动阀&quot;</span><span class="p">,</span>  <span class="c1">// 通知内容</span>
@@ -494,7 +510,35 @@
 </ul>
 </div>
 <div class="section" id="id12">
-<h3>返回示例<a class="headerlink" href="#id12" title="永久链接至标题">¶</a></h3>
+<h3>请求参数<a class="headerlink" href="#id12" title="永久链接至标题">¶</a></h3>
+<table border="1" class="docutils">
+<colgroup>
+<col width="13%" />
+<col width="10%" />
+<col width="11%" />
+<col width="10%" />
+<col width="56%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">名称</th>
+<th class="head">类型</th>
+<th class="head">是否必须</th>
+<th class="head">默认值</th>
+<th class="head">描述说明</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>user_type</td>
+<td>Integer</td>
+<td>可选</td>
+<td>1</td>
+<td>推送对象 1: 商家, 2: 普通用户</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="id13">
+<h3>返回示例<a class="headerlink" href="#id13" title="永久链接至标题">¶</a></h3>
 <p>JSON数据格式</p>
 <p>请求 <strong>正确</strong> 返回结果：</p>
 <div class="highlight-javascript"><div class="highlight"><pre><span></span><span class="p">{</span>
@@ -513,25 +557,25 @@
 </div>
 </div>
 </div>
-<div class="section" id="id13">
-<h2>更新通知读取状态<a class="headerlink" href="#id13" title="永久链接至标题">¶</a></h2>
 <div class="section" id="id14">
-<h3>接口说明<a class="headerlink" href="#id14" title="永久链接至标题">¶</a></h3>
+<h2>更新消息读取状态<a class="headerlink" href="#id14" title="永久链接至标题">¶</a></h2>
+<div class="section" id="id15">
+<h3>接口说明<a class="headerlink" href="#id15" title="永久链接至标题">¶</a></h3>
 <ul class="simple">
-<li>API接口请求地址：<code class="docutils literal"><span class="pre">/notice/get_counts</span></code></li>
+<li>API接口请求地址：<code class="docutils literal"><span class="pre">/notice/update_read_status</span></code></li>
 <li>API接口请求方法：<code class="docutils literal"><span class="pre">PUT</span></code></li>
 <li>API接口用户授权：<code class="docutils literal"><span class="pre">token</span></code></li>
 </ul>
 </div>
-<div class="section" id="id15">
-<h3>请求参数<a class="headerlink" href="#id15" title="永久链接至标题">¶</a></h3>
+<div class="section" id="id16">
+<h3>请求参数<a class="headerlink" href="#id16" title="永久链接至标题">¶</a></h3>
 <table border="1" class="docutils">
 <colgroup>
-<col width="15%" />
-<col width="11%" />
 <col width="13%" />
+<col width="10%" />
 <col width="11%" />
-<col width="50%" />
+<col width="10%" />
+<col width="56%" />
 </colgroup>
 <thead valign="bottom">
 <tr class="row-odd"><th class="head">名称</th>
@@ -542,26 +586,35 @@
 </tr>
 </thead>
 <tbody valign="top">
+<tr class="row-even"><td>user_type</td>
+<td>Integer</td>
+<td>可选</td>
+<td>1</td>
+<td>推送对象 1: 商家, 2: 普通用户</td>
+</tr>
+<tr class="row-odd"><td>type</td>
+<td>Integer</td>
+<td>可选</td>
+<td>1</td>
+<td>通知类型 1: 系统通知 2: 官方公告</td>
+</tr>
 <tr class="row-even"><td>notice_ids</td>
 <td>Array</td>
 <td>必须</td>
 <td>&#160;</td>
-<td>最新未读通知id列表</td>
-</tr>
-<tr class="row-odd"><td>type</td>
-<td>Integer</td>
-<td>必须</td>
-<td>&#160;</td>
-<td>通知类型, 1: 系统通知, 2: 官方公告</td>
+<td>要更新状态的通知</td>
 </tr>
 </tbody>
 </table>
 </div>
-<div class="section" id="id16">
-<h3>返回示例<a class="headerlink" href="#id16" title="永久链接至标题">¶</a></h3>
+<div class="section" id="id17">
+<h3>返回示例<a class="headerlink" href="#id17" title="永久链接至标题">¶</a></h3>
 <p>JSON数据格式</p>
 <p>请求 <strong>正确</strong> 返回结果：</p>
 <div class="highlight-javascript"><div class="highlight"><pre><span></span><span class="p">{</span>
+    <span class="s2">&quot;data&quot;</span><span class="o">:</span> <span class="p">{</span>
+        <span class="s2">&quot;system_notice_count&quot;</span><span class="o">:</span> <span class="mi">1</span>  <span class="c1">// 更新后未读的通知数量, type为1返回system_notice_count; type为2返回official_announcement_count</span>
+    <span class="p">},</span>
     <span class="s2">&quot;status&quot;</span><span class="o">:</span> <span class="p">{</span>
         <span class="s2">&quot;code&quot;</span><span class="o">:</span> <span class="mi">200</span><span class="p">,</span>
         <span class="s2">&quot;message&quot;</span><span class="o">:</span> <span class="s2">&quot;Ok all right.&quot;</span>

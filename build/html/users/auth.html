@@ -113,6 +113,7 @@
 <li class="toctree-l2"><a class="reference internal" href="../shopes/shopes.html">微商城模块</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../shopes/store.html">店铺模块</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../shopes/wxapp.html">小程序模块</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../shopes/notice.html">通知模块</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="../market/index.html">营销API模块</a><ul>
@@ -162,8 +163,9 @@
 <li class="toctree-l2"><a class="reference internal" href="../common.html#id41">注册发送短信验证码</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../common.html#id46">忘记密码发送短信验证码</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../common.html#id50">动态登陆发送短信验证码</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../common.html#id54">账户编辑发送短信验证码</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../common.html#id58">发送邮件验证码</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../common.html#id54">绑定银行卡发送短信验证码</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../common.html#id58">账户解除绑定银行卡发送短信验证码</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../common.html#id62">发送邮件验证码</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="../setting.html">系统相关配置文档</a><ul>
@@ -609,53 +611,54 @@
 <h3>返回示例<a class="headerlink" href="#id12" title="永久链接至标题">¶</a></h3>
 <p><code class="docutils literal"><span class="pre">注意</span></code> 成功返回后，返回的key/access_token请妥善保存至本地，丢失或过期后需再次登录换取。</p>
 <p>正确结果格式:</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="p">{</span>
-    <span class="s2">&quot;data&quot;</span><span class="p">:</span> <span class="p">{</span>
-        <span class="s2">&quot;access_token&quot;</span><span class="p">:</span> <span class="s2">&quot;cfe49b2ddaa797a5884ecc583137bb58706d677b&quot;</span><span class="p">,</span>
-        <span class="s2">&quot;app_key&quot;</span><span class="p">:</span> <span class="s2">&quot;sNcMxUrRLzfiGnZ2hd4E&quot;</span><span class="p">,</span>
-        <span class="s2">&quot;store&quot;</span><span class="p">:</span> <span class="p">{</span>
-            <span class="s2">&quot;areacode&quot;</span><span class="p">:</span> <span class="n">null</span><span class="p">,</span>
-            <span class="s2">&quot;begin_date&quot;</span><span class="p">:</span> <span class="s2">&quot;&quot;</span><span class="p">,</span>
-            <span class="s2">&quot;bgcover&quot;</span><span class="p">:</span> <span class="s2">&quot;http://kg.erp.taihuoniao.com&quot;</span><span class="p">,</span>
-            <span class="s2">&quot;browse_number&quot;</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span>
-            <span class="s2">&quot;categories&quot;</span><span class="p">:</span> <span class="p">[],</span>
-            <span class="s2">&quot;city&quot;</span><span class="p">:</span> <span class="s2">&quot;&quot;</span><span class="p">,</span>
-            <span class="s2">&quot;city_id&quot;</span><span class="p">:</span> <span class="s2">&quot;&quot;</span><span class="p">,</span>
-            <span class="s2">&quot;country&quot;</span><span class="p">:</span> <span class="s2">&quot;中国&quot;</span><span class="p">,</span>
-            <span class="s2">&quot;country_id&quot;</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span>
-            <span class="s2">&quot;created_at&quot;</span><span class="p">:</span> <span class="mi">1530674482</span><span class="p">,</span>
-            <span class="s2">&quot;delivery_city&quot;</span><span class="p">:</span> <span class="s2">&quot;&quot;</span><span class="p">,</span>
-            <span class="s2">&quot;delivery_city_id&quot;</span><span class="p">:</span> <span class="s2">&quot;&quot;</span><span class="p">,</span>
-            <span class="s2">&quot;delivery_country &quot;</span><span class="p">:</span> <span class="s2">&quot;中国&quot;</span><span class="p">,</span>
-            <span class="s2">&quot;delivery_country_id&quot;</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span>
-            <span class="s2">&quot;delivery_date&quot;</span><span class="p">:</span> <span class="s2">&quot;&quot;</span><span class="p">,</span>
-            <span class="s2">&quot;delivery_province&quot;</span><span class="p">:</span> <span class="s2">&quot;&quot;</span><span class="p">,</span>
-            <span class="s2">&quot;delivery_province_id&quot;</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span>
-            <span class="s2">&quot;description&quot;</span><span class="p">:</span> <span class="n">null</span><span class="p">,</span>
-            <span class="s2">&quot;detail&quot;</span><span class="p">:</span> <span class="s2">&quot;&quot;</span><span class="p">,</span>
-            <span class="s2">&quot;distribution_type&quot;</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span>
-            <span class="s2">&quot;end_date&quot;</span><span class="p">:</span> <span class="s2">&quot;&quot;</span><span class="p">,</span>
-            <span class="s2">&quot;fans_count&quot;</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span>
-            <span class="s2">&quot;is_closed&quot;</span><span class="p">:</span> <span class="n">false</span><span class="p">,</span>
-            <span class="s2">&quot;logo&quot;</span><span class="p">:</span> <span class="s2">&quot;http://kg.erp.taihuoniao.com&quot;</span><span class="p">,</span>
-            <span class="s2">&quot;mobile&quot;</span><span class="p">:</span> <span class="n">null</span><span class="p">,</span>
-            <span class="s2">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;淘宝&quot;</span><span class="p">,</span>
-            <span class="s2">&quot;pattern&quot;</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span>
-            <span class="s2">&quot;phone&quot;</span><span class="p">:</span> <span class="n">null</span><span class="p">,</span>
-            <span class="s2">&quot;province&quot;</span><span class="p">:</span> <span class="s2">&quot;&quot;</span><span class="p">,</span>
-            <span class="s2">&quot;province_id&quot;</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span>
-            <span class="s2">&quot;rid&quot;</span><span class="p">:</span> <span class="s2">&quot;98049276&quot;</span><span class="p">,</span>
-            <span class="s2">&quot;status&quot;</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span>
-            <span class="s2">&quot;tag_line&quot;</span><span class="p">:</span> <span class="n">null</span><span class="p">,</span>
-            <span class="s2">&quot;type&quot;</span><span class="p">:</span> <span class="mi">1</span>
-        <span class="p">}</span>
-    <span class="p">},</span>
-    <span class="s2">&quot;status&quot;</span><span class="p">:</span> <span class="p">{</span>
-        <span class="s2">&quot;code&quot;</span><span class="p">:</span> <span class="mi">200</span><span class="p">,</span>
-        <span class="s2">&quot;message&quot;</span><span class="p">:</span> <span class="s2">&quot;Ok all right.&quot;</span>
-    <span class="p">},</span>
-    <span class="s2">&quot;success&quot;</span><span class="p">:</span> <span class="n">true</span>
-<span class="p">}</span>
+<div class="highlight-default"><div class="highlight"><pre><span></span>{
+    &quot;data&quot;: {
+        &quot;access_token&quot;: &quot;cfe49b2ddaa797a5884ecc583137bb58706d677b&quot;,
+        &quot;app_key&quot;: &quot;sNcMxUrRLzfiGnZ2hd4E&quot;,
+        &quot;store&quot;: {
+            &quot;pattern&quot;: 1,   // 品牌馆营业模型: -1、休假模式  1、正常营业
+            &quot;areacode&quot;: null,
+            &quot;begin_date&quot;: &quot;&quot;,
+            &quot;bgcover&quot;: &quot;http://kg.erp.taihuoniao.com&quot;,
+            &quot;browse_number&quot;: 0,
+            &quot;categories&quot;: [],
+            &quot;city&quot;: &quot;&quot;,
+            &quot;city_id&quot;: &quot;&quot;,
+            &quot;country&quot;: &quot;中国&quot;,
+            &quot;country_id&quot;: 1,
+            &quot;created_at&quot;: 1530674482,
+            &quot;delivery_city&quot;: &quot;&quot;,
+            &quot;delivery_city_id&quot;: &quot;&quot;,
+            &quot;delivery_country &quot;: &quot;中国&quot;,
+            &quot;delivery_country_id&quot;: 1,
+            &quot;delivery_date&quot;: &quot;&quot;,
+            &quot;delivery_province&quot;: &quot;&quot;,
+            &quot;delivery_province_id&quot;: 0,
+            &quot;description&quot;: null,
+            &quot;detail&quot;: &quot;&quot;,
+            &quot;distribution_type&quot;: 0,
+            &quot;end_date&quot;: &quot;&quot;,
+            &quot;fans_count&quot;: 0,
+            &quot;is_closed&quot;: false,
+            &quot;logo&quot;: &quot;http://kg.erp.taihuoniao.com&quot;,
+            &quot;mobile&quot;: null,
+            &quot;name&quot;: &quot;淘宝&quot;,
+            &quot;pattern&quot;: 1,
+            &quot;phone&quot;: null,
+            &quot;province&quot;: &quot;&quot;,
+            &quot;province_id&quot;: 0,
+            &quot;rid&quot;: &quot;98049276&quot;,
+            &quot;status&quot;: 1,
+            &quot;tag_line&quot;: null,
+            &quot;type&quot;: 1
+        }
+    },
+    &quot;status&quot;: {
+        &quot;code&quot;: 200,
+        &quot;message&quot;: &quot;Ok all right.&quot;
+    },
+    &quot;success&quot;: true
+}
 </pre></div>
 </div>
 <p>错误结果格式:</p>

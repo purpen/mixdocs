@@ -667,12 +667,6 @@ JSON数据格式:
         "success": true
     }
 
-获取用户关注的设计馆数量
-<<<<<<< HEAD
-----------------------------
-=======
---------------------------
->>>>>>> origin/qiu
 
 接口说明
 ~~~~~~~~~~~~~~
@@ -1116,6 +1110,43 @@ JSON数据格式
         "success": false
     }
 
+更新用户引导
+-------------
+
+
+接口说明
+~~~~~~~~~~~~~~
+
+* API接口请求地址：``/users/update_first_guide``
+* API接口请求方法：``PUT``
+* API接口用户授权：``token``
+
+请求参数
+~~~~~~~~~~~~~~~
+
+===============  ========  =========  ========  ====================================
+名称              类型      是否必须    默认值     描述说明
+===============  ========  =========  ========  ====================================
+first_guide         Bool     可选        True
+===============  ========  =========  ========  ====================================
+
+返回示例
+~~~~~~~~~~~~~~~~
+
+JSON数据格式
+
+请求 **正确** 返回结果：
+
+.. code-block:: javascript
+
+    {
+        "status": {
+            "code": 201,
+            "message": "All created."
+        },
+        "success": true
+    }
+
 更新用户信息
 -------------
 
@@ -1345,24 +1376,25 @@ JSON数据格式
 请求参数
 ~~~~~~~~~~~~~~~
 
-=====================  ==========  =========  ==========  =============================
-名称                    类型        是否必须     默认值       描述说明
-=====================  ==========  =========  ==========  =============================
-areacode                 String    可选          +86         区号
-mobile                   String    必须                      手机号
-email                    String    必须                      邮箱
-phone                    String    可选                      固定电话
-wechat                   String    必须                      微信号
-qq                       String    可选                      QQ号
-country_id               Integer   必须                      国家ID
-province_id              Integer   必须                      省ID
-city_id                  Integer   可选                      市ID
-town_id                  Integer   可选                      镇ID
-area_id                  Integer   可选                      区域ID
-street_address           String    必须                      详细地址
-urgent_contact_name      String    必须                      紧急联系人姓名
-urgent_contact_mobile    String    必须                      紧急联系人电话
-=====================  ==========  =========  ==========  =============================
+=======================  ==========  =========  ==========  =============================
+名称                      类型        是否必须     默认值       描述说明
+=======================  ==========  =========  ==========  =============================
+areacode                  String      可选          +86         区号
+mobile                    String      必须                      手机号
+email                     String      必须                      邮箱
+phone                     String      可选                      固定电话
+wechat                    String      必须                      微信号
+qq                        String      可选                      QQ号
+country_id                Integer     必须                      国家ID
+province_id               Integer     必须                      省ID
+city_id                   Integer     可选                      市ID
+town_id                   Integer     可选                      镇ID
+area_id                   Integer     可选                      区域ID
+street_address            String      必须                      详细地址
+urgent_contact_name       String      必须                      紧急联系人姓名
+urgent_contact_areacode   String      必须                      紧急联系人手机区号
+urgent_contact_mobile     String      必须                      紧急联系人电话
+=======================  ==========  =========  ==========  =============================
 
 请求示例
 ~~~~~~~~~~~~~~~~
@@ -1372,8 +1404,8 @@ JSON数据格式:
 .. code-block:: javascript
 
     {
-    "areacode":"+86","mobile":"13001179400","wechat":"jksjk45","country_id":1,"province_id":1,"city_id":1,"area_id":2,"street_address":"中南海","urgent_contact_name":"普京","urgent_contact_mobile":"15879456532","email":"1346555456@qq.com","phone":"0314-4567891","qq":"1345678956"
-    }
+        "areacode":"+86","mobile":"13001179400","wechat":"jksjk45","country_id":1,"province_id":1,"city_id":1,"area_id":2,"street_address":"中南海","urgent_contact_name":"普京", "urgent_contact_areacode": "+86", "urgent_contact_mobile":"15879456532","email":"1346555456@qq.com","phone":"0314-4567891","qq":"1345678956"
+        }
 
 返回示例
 ~~~~~~~~~~~~~~~~
@@ -2425,16 +2457,16 @@ JSON数据格式:
       "success": false
     }
 
-缴纳或补缴保证金
------------------
+缴纳保证金返回支付二维码
+--------------------------
 
 接口说明
 ~~~~~~~~~~~~~~
 
 
-* API接口请求地址：``/users/deposit``
-* API接口请求方法：``GET``
-* API接口用户授权：``POST``
+* API接口请求地址：``/users/wx_pay_deposit``
+* API接口请求方法：``POST``
+* API接口用户授权：``token``
 
 请求参数
 ~~~~~~~~~~~~~~~
@@ -2442,10 +2474,8 @@ JSON数据格式:
 ===============  ========  =========  ========  ====================================
 名称              类型      是否必须    默认值     描述说明
 ===============  ========  =========  ========  ====================================
-current_pay       Number      必须                当次缴纳金额
-need_pay          Number      必须                需缴纳金额
-already_pay       Number      必须                已缴纳金额
-pay_way           Number      必须                支付方式：1、微信；2：支付宝；3、银联；
+pay_amount        Number      必须                 缴纳金额
+pay_way           Number      可选        1        支付方式：1、微信；2：支付宝；3、银联；
 ===============  ========  =========  ========  ====================================
 
 返回示例
@@ -2459,21 +2489,79 @@ JSON数据格式:
 
     {
         "data": {
-            "already_pay": 500.9,
-            "id": 1,
-            "master_uid": 2,
-            "need_pay": 1000,
-            "pay_at": 1530455722,
-            "pay_way": 1,
-            "status": 1
+            "image_str": "iVBORw0KGgoAAAANSUhEUgAAAYYAAAGGAQAAAABX+xtIAAADKUlEQVR4nO2cUY6cMAyGfzdI8xhusEfJ3GzVm8FROEClzGMlor8PcUKYquogdXcDtR8QM8wnYXltnD9mhThm6dtBADCiLwKctjNPInDdXX/6zq99+mHEIcKTZI5qEn4fgRzkEJ0WgXkESJKcOvbDiANEEpERQIgokX7cyO9jkq0KYBaRz7wrIz6DmGUAgCQAksjda0Un4xfelREfSziKyABOcATgCDwGyP1r78qIf084aib7NT/K5e5XkDGJvMck+ZeB5GfelREfRez79vXPBzXr289PDAh1hR5igoTlRgEGSIiol1w9s/X56Ym8BkPgCpJPie2oFd2zPN4tz89P5KY8yzHwq5b6QF2za/Q9iRAdOVnMz09odjOW6Gfpxa95uV6qAKm9vMX8/ATI6EpUfa3yEVmdIXN2lwIfaDE/PdGm+NSosPVjRBHouMLy/CKEJzG/kXJHEsxyK8v1xwDMb2x23kxvvwJRa/uW3aVlz1eLAbAe7hqExhxFbG0e7/lRrp3bttPapx9GHDBOm/aKGmQ4fbIXxRV1Cd+nH0YcME3s6MqCHKVRzwty7Ou91fbzE40Oh2a3JVut8tqyw2J+DWIek+QhCQ2tpjh0Jx0QkVvJ+H79MOJlK2JrEd4mX2S5CarSlaU5rbZfgthpbnUKrh70TyBrc7ZWuwZRJbg6B6Wjjqq+5QnJEn3L8ysQ7UbahL3yXsQa3XLRzZc+/TDidRsQmAbgMZYBiccIhEVA4KdwHiMlLDdiHiMEvlM/jDhgmxxTM/lZcd0OludXIH6beHsK/ASU9k1/3KcfRhwhwnKjvC+3ms5J8ll5iQFl0t0RIXbrhxEvm869bpOt26ZKPittfHnHqU8/jDhg27O7UdmrALvJ73Vkrk8/jDhgzXx7Vt7jbo+lSu21HvTphxGHiGYiKgnmEZD3ZUCu9/MIoK33/fphxIs2AEgD4H80XxKPJJzFrRKWAZzvAsA7e3fpckTzXqovaQ8AcvckJ31bsX8/jPiLVR19twxHHaCxebjLEc2Es+6w5UYOaDt4r/Pttla7ArHr25sBqXbwvZ2jsDw/PyH2f6P+O+IXclgFJeVu6p4AAAAASUVORK5CYII="
         },
         "status": {
-            "code": 201,
-            "message": "All created."
+            "code": 200,
+            "message": "Ok all right."
         },
         "success": true
     }
 
-请求 ``失败`` 返回结果：
+
+加入消保
+--------------------------
+
+接口说明
+~~~~~~~~~~~~~~
+
+
+* API接口请求地址：``/users/set_secured_trade``
+* API接口请求方法：``POST``
+* API接口用户授权：``token``
+
+请求参数
+~~~~~~~~~~~~~~~
+
+===============  ========  =========  ========  ====================================
+名称              类型      是否必须    默认值     描述说明
+===============  ========  =========  ========  ====================================
+secured_trade      Bool      可选       False         是否成为消保人
+===============  ========  =========  ========  ====================================
+
+返回示例
+~~~~~~~~~~~~~~~~
+
+JSON数据格式:
+
+请求 **正确** 返回结果：
 
 .. code-block:: javascript
+
+    {
+        "status": {
+            "code": 200,
+            "message": "Ok all right."
+        },
+        "success": true
+    }
+
+获取保证金支付状态
+--------------------------
+
+接口说明
+~~~~~~~~~~~~~~
+
+
+* API接口请求地址：``/users/deposit_status``
+* API接口请求方法：``GET``
+* API接口用户授权：``token``
+
+请求参数
+~~~~~~~~~~~~~~~
+
+===============  ========  =========  ========  ====================================
+名称              类型      是否必须    默认值     描述说明
+===============  ========  =========  ========  ====================================
+rid                String    是                   订单编号
+===============  ========  =========  ========  ====================================
+
+返回示例
+~~~~~~~~~~~~~~~~
+
+JSON数据格式:
+
+请求 **正确** 返回结果：
+
+.. code-block:: javascript
+
