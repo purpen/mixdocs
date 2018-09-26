@@ -347,17 +347,18 @@
 </li>
 <li><a class="reference internal" href="#id99">领券中心-官方优惠券</a><ul>
 <li><a class="reference internal" href="#id100">接口说明</a></li>
-<li><a class="reference internal" href="#id101">返回示例</a></li>
+<li><a class="reference internal" href="#id101">请求参数</a></li>
+<li><a class="reference internal" href="#id102">返回示例</a></li>
 </ul>
 </li>
-<li><a class="reference internal" href="#id102">优惠券头条动态</a><ul>
-<li><a class="reference internal" href="#id103">接口说明</a></li>
-<li><a class="reference internal" href="#id104">返回示例</a></li>
+<li><a class="reference internal" href="#id103">优惠券头条动态</a><ul>
+<li><a class="reference internal" href="#id104">接口说明</a></li>
+<li><a class="reference internal" href="#id105">返回示例</a></li>
 </ul>
 </li>
-<li><a class="reference internal" href="#id105">官方无门槛红包分享动态</a><ul>
-<li><a class="reference internal" href="#id106">接口说明</a></li>
-<li><a class="reference internal" href="#id107">返回示例</a></li>
+<li><a class="reference internal" href="#id106">官方无门槛红包分享动态</a><ul>
+<li><a class="reference internal" href="#id107">接口说明</a></li>
+<li><a class="reference internal" href="#id108">返回示例</a></li>
 </ul>
 </li>
 </ul>
@@ -543,17 +544,18 @@
 </li>
 <li><a class="reference internal" href="#id99">领券中心-官方优惠券</a><ul>
 <li><a class="reference internal" href="#id100">接口说明</a></li>
-<li><a class="reference internal" href="#id101">返回示例</a></li>
+<li><a class="reference internal" href="#id101">请求参数</a></li>
+<li><a class="reference internal" href="#id102">返回示例</a></li>
 </ul>
 </li>
-<li><a class="reference internal" href="#id102">优惠券头条动态</a><ul>
-<li><a class="reference internal" href="#id103">接口说明</a></li>
-<li><a class="reference internal" href="#id104">返回示例</a></li>
+<li><a class="reference internal" href="#id103">优惠券头条动态</a><ul>
+<li><a class="reference internal" href="#id104">接口说明</a></li>
+<li><a class="reference internal" href="#id105">返回示例</a></li>
 </ul>
 </li>
-<li><a class="reference internal" href="#id105">官方无门槛红包分享动态</a><ul>
-<li><a class="reference internal" href="#id106">接口说明</a></li>
-<li><a class="reference internal" href="#id107">返回示例</a></li>
+<li><a class="reference internal" href="#id106">官方无门槛红包分享动态</a><ul>
+<li><a class="reference internal" href="#id107">接口说明</a></li>
+<li><a class="reference internal" href="#id108">返回示例</a></li>
 </ul>
 </li>
 </ul>
@@ -2826,6 +2828,12 @@
 <td>0</td>
 <td>店铺分类id, 0、推荐</td>
 </tr>
+<tr class="row-odd"><td>open_id</td>
+<td>String</td>
+<td>必填</td>
+<td>&#160;</td>
+<td>open_id</td>
+</tr>
 </tbody>
 </table>
 </div>
@@ -2846,6 +2854,9 @@
                 <span class="s2">&quot;product_name&quot;</span><span class="o">:</span> <span class="s2">&quot;摩托&quot;</span><span class="p">,</span>  <span class="c1">// 商品名称</span>
                 <span class="s2">&quot;product_rid&quot;</span><span class="o">:</span> <span class="s2">&quot;1&quot;</span>  <span class="c1">// 商品rid</span>
                 <span class="s2">&quot;store_rid&quot;</span><span class="o">:</span> <span class="s2">&quot;3&quot;</span>  <span class="c1">// 店铺rid</span>
+                <span class="s2">&quot;is_grant&quot;</span><span class="o">:</span> <span class="kc">false</span><span class="p">,</span>  <span class="c1">// 是否领取</span>
+                <span class="s2">&quot;surplus_count&quot;</span><span class="o">:</span> <span class="mi">1000</span>  <span class="c1">// 领取数量</span>
+
             <span class="p">}</span>
         <span class="p">],</span>
         <span class="s2">&quot;next&quot;</span><span class="o">:</span> <span class="kc">null</span><span class="p">,</span>
@@ -2872,7 +2883,35 @@
 </ul>
 </div>
 <div class="section" id="id101">
-<h3>返回示例<a class="headerlink" href="#id101" title="永久链接至标题">¶</a></h3>
+<h3>请求参数<a class="headerlink" href="#id101" title="永久链接至标题">¶</a></h3>
+<table border="1" class="docutils">
+<colgroup>
+<col width="25%" />
+<col width="10%" />
+<col width="11%" />
+<col width="10%" />
+<col width="44%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">名称</th>
+<th class="head">类型</th>
+<th class="head">是否必须</th>
+<th class="head">默认值</th>
+<th class="head">描述说明</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>open_id</td>
+<td>String</td>
+<td>必填</td>
+<td>&#160;</td>
+<td>open_id</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="id102">
+<h3>返回示例<a class="headerlink" href="#id102" title="永久链接至标题">¶</a></h3>
 <p>JSON数据格式:</p>
 <div class="highlight-javascript"><div class="highlight"><pre><span></span><span class="p">{</span>
     <span class="s2">&quot;data&quot;</span><span class="o">:</span> <span class="p">{</span>
@@ -2888,6 +2927,8 @@
                 <span class="s2">&quot;start_date&quot;</span><span class="o">:</span> <span class="mi">1535385600</span><span class="p">,</span> <span class="c1">// 开始时间</span>
                 <span class="s2">&quot;type_text&quot;</span><span class="o">:</span> <span class="s2">&quot;满5减5元&quot;</span><span class="p">,</span> <span class="c1">//</span>
                 <span class="s2">&quot;use_count&quot;</span><span class="o">:</span> <span class="mi">0</span> <span class="c1">//  使用数量</span>
+                <span class="s2">&quot;is_grant&quot;</span><span class="o">:</span> <span class="kc">false</span><span class="p">,</span>  <span class="c1">// 是否领取</span>
+                <span class="s2">&quot;surplus_count&quot;</span><span class="o">:</span> <span class="mi">1000</span>  <span class="c1">// 领取数量</span>
             <span class="p">}</span>
         <span class="p">]</span>
     <span class="p">},</span>
@@ -2901,18 +2942,18 @@
 </div>
 </div>
 </div>
-<div class="section" id="id102">
-<h2>优惠券头条动态<a class="headerlink" href="#id102" title="永久链接至标题">¶</a></h2>
-<p>优惠券头条动态</p>
 <div class="section" id="id103">
-<h3>接口说明<a class="headerlink" href="#id103" title="永久链接至标题">¶</a></h3>
+<h2>优惠券头条动态<a class="headerlink" href="#id103" title="永久链接至标题">¶</a></h2>
+<p>优惠券头条动态</p>
+<div class="section" id="id104">
+<h3>接口说明<a class="headerlink" href="#id104" title="永久链接至标题">¶</a></h3>
 <ul class="simple">
 <li>API接口请求地址：<code class="docutils literal"><span class="pre">/market/coupon_lines</span></code></li>
 <li>API接口请求方法：<code class="docutils literal"><span class="pre">GET</span></code></li>
 </ul>
 </div>
-<div class="section" id="id104">
-<h3>返回示例<a class="headerlink" href="#id104" title="永久链接至标题">¶</a></h3>
+<div class="section" id="id105">
+<h3>返回示例<a class="headerlink" href="#id105" title="永久链接至标题">¶</a></h3>
 <p>JSON数据格式:</p>
 <div class="highlight-javascript"><div class="highlight"><pre><span></span><span class="p">{</span>
     <span class="s2">&quot;data&quot;</span><span class="o">:</span> <span class="p">{</span>
@@ -2942,18 +2983,18 @@
 </div>
 </div>
 </div>
-<div class="section" id="id105">
-<h2>官方无门槛红包分享动态<a class="headerlink" href="#id105" title="永久链接至标题">¶</a></h2>
-<p>官方无门槛红包分享动态</p>
 <div class="section" id="id106">
-<h3>接口说明<a class="headerlink" href="#id106" title="永久链接至标题">¶</a></h3>
+<h2>官方无门槛红包分享动态<a class="headerlink" href="#id106" title="永久链接至标题">¶</a></h2>
+<p>官方无门槛红包分享动态</p>
+<div class="section" id="id107">
+<h3>接口说明<a class="headerlink" href="#id107" title="永久链接至标题">¶</a></h3>
 <ul class="simple">
 <li>API接口请求地址：<code class="docutils literal"><span class="pre">/market/bonus_lines</span></code></li>
 <li>API接口请求方法：<code class="docutils literal"><span class="pre">GET</span></code></li>
 </ul>
 </div>
-<div class="section" id="id107">
-<h3>返回示例<a class="headerlink" href="#id107" title="永久链接至标题">¶</a></h3>
+<div class="section" id="id108">
+<h3>返回示例<a class="headerlink" href="#id108" title="永久链接至标题">¶</a></h3>
 <p>JSON数据格式:</p>
 <div class="highlight-javascript"><div class="highlight"><pre><span></span><span class="p">{</span>
     <span class="s2">&quot;data&quot;</span><span class="o">:</span> <span class="p">{</span>
