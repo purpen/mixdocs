@@ -1605,7 +1605,7 @@ JSON数据格式:
                     "product_rid": "1"  // 商品rid
                     "store_rid": "3"  // 店铺rid
                     "is_grant": false,  // 是否领取
-                    "surplus_count": 1000  // 领取数量
+                    "surplus_count": 1000  // 剩余数量
 
                 }
             ],
@@ -1663,7 +1663,7 @@ JSON数据格式:
                     "type_text": "满5减5元", //
                     "use_count": 0 //  使用数量
                     "is_grant": false,  // 是否领取
-                    "surplus_count": 1000  // 领取数量
+                    "surplus_count": 1000  // 剩余数量
                 }
             ]
         },
