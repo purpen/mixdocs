@@ -31,23 +31,29 @@ JSON数据格式:
         "data": {
             "k_0": [
                 {
+                    "code": "bzzx",
                     "id": 1,
+                    "is_question": false,
                     "name": "发布商品常见问题"
                 },
                 {
+                    "code": "sqppgcjwt",
                     "id": 2,
+                    "is_question": true,
                     "name": "申请品牌馆常见问题"
                 }
             ],
             "k_1": [
                 {
+                    "code": "smsthhzc",
                     "id": 10,
+                    "is_question": true,
                     "name": "什么是退换货规则?"
-                }
-            ],
-            "k_2": [
+                },
                 {
+                    "code": "rhjxrz",
                     "id": 11,
+                    "is_question": true,
                     "name": "如何进行认证?"
                 }
             ]
