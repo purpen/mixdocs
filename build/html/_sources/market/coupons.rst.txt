@@ -225,9 +225,13 @@ JSON数据格式:
                         "type": 3,  // // 优惠券类型 1、同享券 2、单享券 3、满减
                         "type_text": "满300减30元"
                     },
+                    "end_at": 1538040141,  // 到期时间
                     "get_at": null,  // 获得时间
+                    "is_expired": false, // 是否过期
                     "is_used": false,  // 是否使用
                     "order_rid": null,  // 订单编号
+                    "store_logo": "https://s3.moebeast.com/20180918/3505FgKkWolTuPukXCVMpxI22Q8ssunL.png",
+                    "store_name": "乐喜生活馆",
                     "used_at": null  // 使用时间
                 }
             ],
@@ -291,9 +295,13 @@ JSON数据格式:
                         "type": 3,  // // 优惠券类型 1、同享券 2、单享券 3、满减
                         "type_text": "满300减30元"
                     },
+                    "end_at": 1538040141, // 到期时间
                     "get_at": null,  // 获得时间
+                    "is_expired": false,  // 是否过期
                     "is_used": false,  // 是否使用
                     "order_rid": null,  // 订单编号
+                    "store_logo": "https://s3.moebeast.com/20180918/3505FgKkWolTuPukXCVMpxI22Q8ssunL.png",
+                    "store_name": "乐喜生活馆",
                     "used_at": null  // 使用时间
                 }
             ],
@@ -1545,7 +1553,8 @@ JSON数据格式:
                             "product_rid": "3" // 商品编号
                         }
                     ],
-                    "store_logo": "http://0.0.0.0:9000/_uploads/photos/180523/8f51855eedae984.jpg",
+                    "store_bgcover": "https://s3.moebeast.com/20180910/5037FninYcPJRCGRAghbGQvQM9cD45z3.jpg",  // 店铺背景图
+                    "store_logo": "http://0.0.0.0:9000/_uploads/photos/180523/8f51855eedae984.jpg",  // 店铺logo
                     "store_name": "第2家", // 店铺名
                     "store_rid": "3" // 店铺编号
                 }
