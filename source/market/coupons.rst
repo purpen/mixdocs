@@ -681,6 +681,7 @@ name              String     必填                        活动名称
 start_date        String     必填                        活动开始日期
 end_date          String     必填                        活动结束日期
 coupon_type       Integer    必填           1            优惠券类型 1、同享券 2、单享券
+product_rids      Array      可选                        优惠商品列表
 items             Array      必填                        优惠券信息列表
 ===============  ========  =============  ============  ============================================
 
@@ -694,7 +695,6 @@ amount            Number     必填                        优惠券金额
 got_count         Integer    必填                        总数量
 min_amount        Number     必填                        最低金额限制
 days              Integer    必填                        有效天数
-product_rids      Array      可选                        优惠商品列表
 ===============  ========  =============  ============  ============================================
 
 **参考示例**
@@ -706,13 +706,13 @@ product_rids      Array      可选                        优惠商品列表
         "start_date":"2018-06-29",
         "end_date":"2018-07-03",
         "coupon_type":2,
+        "product_rids":["1","2"],
         "items":[
             {
                 "amount":1,
                 "min_amount":90,
                 "got_count":1000,
-                "days":7,
-                "product_rids":["1","2"]
+                "days":7
             },
         ]
     }

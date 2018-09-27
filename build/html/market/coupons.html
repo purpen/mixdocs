@@ -1556,7 +1556,13 @@
 <td>1</td>
 <td>优惠券类型 1、同享券 2、单享券</td>
 </tr>
-<tr class="row-even"><td>items</td>
+<tr class="row-even"><td>product_rids</td>
+<td>Array</td>
+<td>可选</td>
+<td>&#160;</td>
+<td>优惠商品列表</td>
+</tr>
+<tr class="row-odd"><td>items</td>
 <td>Array</td>
 <td>必填</td>
 <td>&#160;</td>
@@ -1612,12 +1618,6 @@
 <td>&#160;</td>
 <td>有效天数</td>
 </tr>
-<tr class="row-odd"><td>product_rids</td>
-<td>Array</td>
-<td>可选</td>
-<td>&#160;</td>
-<td>优惠商品列表</td>
-</tr>
 </tbody>
 </table>
 <p><strong>参考示例</strong></p>
@@ -1626,13 +1626,13 @@
     <span class="s2">&quot;start_date&quot;</span><span class="o">:</span><span class="s2">&quot;2018-06-29&quot;</span><span class="p">,</span>
     <span class="s2">&quot;end_date&quot;</span><span class="o">:</span><span class="s2">&quot;2018-07-03&quot;</span><span class="p">,</span>
     <span class="s2">&quot;coupon_type&quot;</span><span class="o">:</span><span class="mi">2</span><span class="p">,</span>
+    <span class="s2">&quot;product_rids&quot;</span><span class="o">:</span><span class="p">[</span><span class="s2">&quot;1&quot;</span><span class="p">,</span><span class="s2">&quot;2&quot;</span><span class="p">],</span>
     <span class="s2">&quot;items&quot;</span><span class="o">:</span><span class="p">[</span>
         <span class="p">{</span>
             <span class="s2">&quot;amount&quot;</span><span class="o">:</span><span class="mi">1</span><span class="p">,</span>
             <span class="s2">&quot;min_amount&quot;</span><span class="o">:</span><span class="mi">90</span><span class="p">,</span>
             <span class="s2">&quot;got_count&quot;</span><span class="o">:</span><span class="mi">1000</span><span class="p">,</span>
-            <span class="s2">&quot;days&quot;</span><span class="o">:</span><span class="mi">7</span><span class="p">,</span>
-            <span class="s2">&quot;product_rids&quot;</span><span class="o">:</span><span class="p">[</span><span class="s2">&quot;1&quot;</span><span class="p">,</span><span class="s2">&quot;2&quot;</span><span class="p">]</span>
+            <span class="s2">&quot;days&quot;</span><span class="o">:</span><span class="mi">7</span>
         <span class="p">},</span>
     <span class="p">]</span>
 <span class="p">}</span>
