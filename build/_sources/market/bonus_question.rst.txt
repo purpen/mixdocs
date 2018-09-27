@@ -162,6 +162,8 @@ JSON数据格式:
             "right_count": 7,  // 回答正确个数
             "count": 10,  // 回答题数
             "test_id": 22  // 试题id
+            "user_ranking": 1 // 用户排行
+
         },
         "status": {
             "code": 201,
@@ -278,7 +280,8 @@ JSON数据格式:
                     "product_rid": "2",  // 商品rid
                     "right_answer": 65,  // 正确答案id
                     "right_answer_name": "汽车",  // 正确答案名
-                    "sale_price": 2  // 折扣价
+                    "sale_price": 2,  // 折扣价
+                    "use_coupon_price": 4  //券后价
                 }
             ]
         },
@@ -733,6 +736,7 @@ JSON数据格式:
         "data": {
             "invite_count": 0,  // 邀请人数
             "total_count": 5141  // 总人数
+            "invite_name": "用户名", // 用户名
         },
         "status": {
             "code": 200,
