@@ -282,6 +282,22 @@
 <li><a class="reference internal" href="#id57">返回示例</a></li>
 </ul>
 </li>
+<li><a class="reference internal" href="#id58">猜图-获取猜图海报图片</a><ul>
+<li><a class="reference internal" href="#id59">接口说明</a></li>
+<li><a class="reference internal" href="#id60">请求参数</a></li>
+<li><a class="reference internal" href="#id61">返回示例</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#id62">猜图-一小时内玩的次数</a><ul>
+<li><a class="reference internal" href="#id63">接口说明</a></li>
+<li><a class="reference internal" href="#id64">返回示例</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#id65">猜图-奖励消息</a><ul>
+<li><a class="reference internal" href="#id66">接口说明</a></li>
+<li><a class="reference internal" href="#id67">返回示例</a></li>
+</ul>
+</li>
 </ul>
 </li>
 </ul>
@@ -398,6 +414,22 @@
 <li><a class="reference internal" href="#id55">猜图-人数统计</a><ul>
 <li><a class="reference internal" href="#id56">接口说明</a></li>
 <li><a class="reference internal" href="#id57">返回示例</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#id58">猜图-获取猜图海报图片</a><ul>
+<li><a class="reference internal" href="#id59">接口说明</a></li>
+<li><a class="reference internal" href="#id60">请求参数</a></li>
+<li><a class="reference internal" href="#id61">返回示例</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#id62">猜图-一小时内玩的次数</a><ul>
+<li><a class="reference internal" href="#id63">接口说明</a></li>
+<li><a class="reference internal" href="#id64">返回示例</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#id65">猜图-奖励消息</a><ul>
+<li><a class="reference internal" href="#id66">接口说明</a></li>
+<li><a class="reference internal" href="#id67">返回示例</a></li>
 </ul>
 </li>
 </ul>
@@ -1349,6 +1381,151 @@
         <span class="s2">&quot;invite_count&quot;</span><span class="o">:</span> <span class="mi">0</span><span class="p">,</span>  <span class="c1">// 邀请人数</span>
         <span class="s2">&quot;total_count&quot;</span><span class="o">:</span> <span class="mi">5141</span>  <span class="c1">// 总人数</span>
         <span class="s2">&quot;invite_name&quot;</span><span class="o">:</span> <span class="s2">&quot;用户名&quot;</span><span class="p">,</span> <span class="c1">// 用户名</span>
+        <span class="s2">&quot;user_logo&quot;</span><span class="o">:</span> <span class="p">[</span>  <span class="c1">// 正在参与头像</span>
+        <span class="s2">&quot;http://kg.erp.taihuoniao.com/static/img/default-logo.png&quot;</span>
+        <span class="p">]</span>
+    <span class="p">},</span>
+    <span class="s2">&quot;status&quot;</span><span class="o">:</span> <span class="p">{</span>
+        <span class="s2">&quot;code&quot;</span><span class="o">:</span> <span class="mi">200</span><span class="p">,</span>
+        <span class="s2">&quot;message&quot;</span><span class="o">:</span> <span class="s2">&quot;Ok all right.&quot;</span>
+    <span class="p">},</span>
+    <span class="s2">&quot;success&quot;</span><span class="o">:</span> <span class="kc">true</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="id58">
+<h2>猜图-获取猜图海报图片<a class="headerlink" href="#id58" title="永久链接至标题">¶</a></h2>
+<p>猜图-获取猜图海报图片</p>
+<div class="section" id="id59">
+<h3>接口说明<a class="headerlink" href="#id59" title="永久链接至标题">¶</a></h3>
+<ul class="simple">
+<li>API接口请求地址：<code class="docutils literal"><span class="pre">/guess_image/wxa_poster</span></code></li>
+<li>API接口请求方法：<code class="docutils literal"><span class="pre">POST</span></code></li>
+<li>API接口用户授权：<code class="docutils literal"><span class="pre">token</span></code></li>
+</ul>
+</div>
+<div class="section" id="id60">
+<h3>请求参数<a class="headerlink" href="#id60" title="永久链接至标题">¶</a></h3>
+<table border="1" class="docutils">
+<colgroup>
+<col width="19%" />
+<col width="9%" />
+<col width="8%" />
+<col width="9%" />
+<col width="55%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">名称</th>
+<th class="head">类型</th>
+<th class="head">是否必须</th>
+<th class="head">默认值</th>
+<th class="head">描述说明</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>type</td>
+<td>Integer</td>
+<td>必需</td>
+<td>11</td>
+<td>11、带图片 图1  12、不带图片 图2</td>
+</tr>
+<tr class="row-odd"><td>auth_app_id</td>
+<td>String</td>
+<td>必需</td>
+<td>&#160;</td>
+<td>小程序id</td>
+</tr>
+<tr class="row-even"><td>path</td>
+<td>String</td>
+<td>必需</td>
+<td>&#160;</td>
+<td>访问路径</td>
+</tr>
+<tr class="row-odd"><td>scene</td>
+<td>String</td>
+<td>必需</td>
+<td>&#160;</td>
+<td>场景参数： 商品编号-店铺编号  例：8945120367-94395210</td>
+</tr>
+<tr class="row-even"><td>test_id</td>
+<td>Integer</td>
+<td>必需</td>
+<td>&#160;</td>
+<td>试题id</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="id61">
+<h3>返回示例<a class="headerlink" href="#id61" title="永久链接至标题">¶</a></h3>
+<p>JSON数据格式:</p>
+<div class="highlight-javascript"><div class="highlight"><pre><span></span><span class="p">{</span>
+    <span class="s2">&quot;data&quot;</span><span class="o">:</span> <span class="p">{</span>
+        <span class="s2">&quot;image_url&quot;</span><span class="o">:</span> <span class="s2">&quot;https://ss0.bdstatic.com/70cFuHSh_Q1YnxGkpo0.jpg&quot;</span><span class="p">,</span>  <span class="c1">// 分享图片</span>
+    <span class="p">},</span>
+    <span class="s2">&quot;status&quot;</span><span class="o">:</span> <span class="p">{</span>
+        <span class="s2">&quot;code&quot;</span><span class="o">:</span> <span class="mi">200</span><span class="p">,</span>
+        <span class="s2">&quot;message&quot;</span><span class="o">:</span> <span class="s2">&quot;Ok all right.&quot;</span>
+    <span class="p">},</span>
+    <span class="s2">&quot;success&quot;</span><span class="o">:</span> <span class="kc">true</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="id62">
+<h2>猜图-一小时内玩的次数<a class="headerlink" href="#id62" title="永久链接至标题">¶</a></h2>
+<p>猜图-一小时内玩的次数</p>
+<div class="section" id="id63">
+<h3>接口说明<a class="headerlink" href="#id63" title="永久链接至标题">¶</a></h3>
+<ul class="simple">
+<li>API接口请求地址：<code class="docutils literal"><span class="pre">/guess_image/play_count</span></code></li>
+<li>API接口请求方法：<code class="docutils literal"><span class="pre">GET</span></code></li>
+<li>API接口用户授权：<code class="docutils literal"><span class="pre">token</span></code></li>
+</ul>
+</div>
+<div class="section" id="id64">
+<h3>返回示例<a class="headerlink" href="#id64" title="永久链接至标题">¶</a></h3>
+<p>JSON数据格式:</p>
+<div class="highlight-javascript"><div class="highlight"><pre><span></span><span class="p">{</span>
+    <span class="s2">&quot;data&quot;</span><span class="o">:</span> <span class="p">{</span>
+        <span class="s2">&quot;play_count&quot;</span><span class="o">:</span> <span class="mi">2</span>
+    <span class="p">},</span>
+    <span class="s2">&quot;status&quot;</span><span class="o">:</span> <span class="p">{</span>
+        <span class="s2">&quot;code&quot;</span><span class="o">:</span> <span class="mi">200</span><span class="p">,</span>
+        <span class="s2">&quot;message&quot;</span><span class="o">:</span> <span class="s2">&quot;Ok all right.&quot;</span>
+    <span class="p">},</span>
+    <span class="s2">&quot;success&quot;</span><span class="o">:</span> <span class="kc">true</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="id65">
+<h2>猜图-奖励消息<a class="headerlink" href="#id65" title="永久链接至标题">¶</a></h2>
+<p>猜图-奖励消息</p>
+<div class="section" id="id66">
+<h3>接口说明<a class="headerlink" href="#id66" title="永久链接至标题">¶</a></h3>
+<ul class="simple">
+<li>API接口请求地址：<code class="docutils literal"><span class="pre">/guess_image/reward_message</span></code></li>
+<li>API接口请求方法：<code class="docutils literal"><span class="pre">GET</span></code></li>
+<li>API接口用户授权：<code class="docutils literal"><span class="pre">token</span></code></li>
+</ul>
+</div>
+<div class="section" id="id67">
+<h3>返回示例<a class="headerlink" href="#id67" title="永久链接至标题">¶</a></h3>
+<p>JSON数据格式:</p>
+<div class="highlight-javascript"><div class="highlight"><pre><span></span><span class="p">{</span>
+    <span class="s2">&quot;data&quot;</span><span class="o">:</span> <span class="p">{</span>
+        <span class="s2">&quot;reward_message&quot;</span><span class="o">:</span> <span class="p">[</span>
+            <span class="p">{</span>
+                <span class="s2">&quot;amount&quot;</span><span class="o">:</span> <span class="mi">18</span><span class="p">,</span>  <span class="c1">// 红包金额</span>
+                <span class="s2">&quot;user_logo&quot;</span><span class="o">:</span> <span class="s2">&quot;http://kg.erp.taihuoniao.com/static/img/default-logo.png&quot;</span><span class="p">,</span>  <span class="c1">// 头像</span>
+                <span class="s2">&quot;user_name&quot;</span><span class="o">:</span> <span class="s2">&quot;15210062187&quot;</span>  <span class="c1">// 用户名</span>
+            <span class="p">}</span>
+        <span class="p">]</span>
     <span class="p">},</span>
     <span class="s2">&quot;status&quot;</span><span class="o">:</span> <span class="p">{</span>
         <span class="s2">&quot;code&quot;</span><span class="o">:</span> <span class="mi">200</span><span class="p">,</span>

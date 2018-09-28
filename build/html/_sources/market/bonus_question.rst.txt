@@ -737,6 +737,83 @@ JSON数据格式:
             "invite_count": 0,  // 邀请人数
             "total_count": 5141  // 总人数
             "invite_name": "用户名", // 用户名
+            "user_logo": [  // 正在参与头像
+            "http://kg.erp.taihuoniao.com/static/img/default-logo.png"
+            ]
+        },
+        "status": {
+            "code": 200,
+            "message": "Ok all right."
+        },
+        "success": true
+    }
+
+
+猜图-获取猜图海报图片
+--------------------------------------------------
+猜图-获取猜图海报图片
+
+接口说明
+~~~~~~~~~~~~~~
+
+* API接口请求地址：``/guess_image/wxa_poster``
+* API接口请求方法：``POST``
+* API接口用户授权：``token``
+
+请求参数
+~~~~~~~~~~~~~~~
+
+====================  ==========  =========  ==========  ===========================================================
+名称                   类型        是否必须     默认值       描述说明
+====================  ==========  =========  ==========  ===========================================================
+type                  Integer     必需         11         11、带图片 图1  12、不带图片 图2
+auth_app_id           String      必需                    小程序id
+path                  String      必需                    访问路径
+scene                 String      必需                    场景参数： 商品编号-店铺编号  例：8945120367-94395210
+test_id               Integer     必需                    试题id
+====================  ==========  =========  ==========  ===========================================================
+
+返回示例
+~~~~~~~~~~~~~~~~
+
+JSON数据格式:
+
+.. code-block:: javascript
+
+    {
+        "data": {
+            "image_url": "https://ss0.bdstatic.com/70cFuHSh_Q1YnxGkpo0.jpg",  // 分享图片
+        },
+        "status": {
+            "code": 200,
+            "message": "Ok all right."
+        },
+        "success": true
+    }
+
+
+猜图-一小时内玩的次数
+-------------------------
+猜图-一小时内玩的次数
+
+接口说明
+~~~~~~~~~~~~~~
+
+* API接口请求地址：``/guess_image/play_count``
+* API接口请求方法：``GET``
+* API接口用户授权：``token``
+
+
+返回示例
+~~~~~~~~~~~~~~~~
+
+JSON数据格式:
+
+.. code-block:: javascript
+
+    {
+        "data": {
+            "play_count": 2
         },
         "status": {
             "code": 200,
@@ -747,3 +824,38 @@ JSON数据格式:
 
 
 
+猜图-奖励消息
+-------------------------
+猜图-奖励消息
+
+接口说明
+~~~~~~~~~~~~~~
+
+* API接口请求地址：``/guess_image/reward_message``
+* API接口请求方法：``GET``
+* API接口用户授权：``token``
+
+
+返回示例
+~~~~~~~~~~~~~~~~
+
+JSON数据格式:
+
+.. code-block:: javascript
+
+    {
+        "data": {
+            "reward_message": [
+                {
+                    "amount": 18,  // 红包金额
+                    "user_logo": "http://kg.erp.taihuoniao.com/static/img/default-logo.png",  // 头像
+                    "user_name": "15210062187"  // 用户名
+                }
+            ]
+        },
+        "status": {
+            "code": 200,
+            "message": "Ok all right."
+        },
+        "success": true
+    }
