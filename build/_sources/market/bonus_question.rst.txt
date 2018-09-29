@@ -97,6 +97,10 @@ JSON数据格式:
             "answer_id": 10,  // 答案id
             "question_id": 4,  // 问题id
             "test_id": 17,  // 试题id
+            "amount": 0,  // 现金金额
+            "bonus_amount": 0, // 优惠券面值
+            "min_amount": 0,  // 优惠券最低消费
+            "right_answer_id": 101,  // 正确答案
         },
         "status": {
             "code": 200,
