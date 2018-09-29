@@ -38,7 +38,8 @@ JSON数据格式:
                 {
                     "comment_count": "评论数",
                     "description": "橱窗详情",
-                    "is_follow": "是否关注过该橱窗",
+                    "is_follow": "是否关注过发布橱窗的用户",
+                    "is_like": "是否喜欢过该橱窗",
                     "is_official": "是否官方橱窗",
                     "keywords": [
                         "橱窗关键词一",
@@ -178,7 +179,8 @@ JSON数据格式:
         "data": {
             "comment_count": 9,
             "description": "2018腾讯世界人工智能围棋大赛决赛将在中国棋院落下帷幕。",
-            "is_follow": true,
+            "is_follow": "是否关注过发布橱窗的用户",
+            "is_like": "是否喜欢过该橱窗",
             "is_official": "是否官方橱窗",
             "keywords": [
                 "棋牌",
@@ -283,7 +285,8 @@ JSON数据格式:
         "data": {
             "comment_count": 9,
             "description": "橱窗描述",
-            "is_follow": "true: 是否关注橱窗",
+            "is_follow": "是否关注过发布橱窗的用户",
+            "is_like": "是否喜欢过该橱窗",
             "is_official": "false: 是否官方橱窗",
             "keywords": [
                 "女孩",
@@ -430,7 +433,8 @@ JSON数据格式:
                 {
                     "comment_count": "评论数",
                     "description": "橱窗详情",
-                    "is_follow": "是否关注过该橱窗",
+                    "is_follow": "是否关注过发布橱窗的用户",
+                    "is_like": "是否喜欢过该橱窗",
                     "is_official": "是否官方橱窗",
                     "keywords": [
                         "橱窗关键词一",
@@ -552,7 +556,8 @@ JSON数据格式:
                 {
                     "comment_count": "评论数",
                     "description": "橱窗详情",
-                    "is_follow": "是否关注过该橱窗",
+                    "is_follow": "是否关注过发布橱窗的用户",
+                    "is_like": "是否喜欢过该橱窗",
                     "is_official": "是否官方橱窗",
                     "keywords": [
                         "橱窗关键词一",
@@ -1105,7 +1110,8 @@ JSON数据格式:
                 {
                     "comment_count": "评论数",
                     "description": "橱窗详情",
-                    "is_follow": "是否关注过该橱窗",
+                    "is_follow": "是否关注过发布橱窗的用户",
+                    "is_like": "是否喜欢过该橱窗",
                     "is_official": "是否官方橱窗",
                     "keywords": [
                         "橱窗关键词一",
@@ -1386,6 +1392,17 @@ JSON数据格式:
 
 * API接口请求地址：``/shop_windows/search/keywords``
 * API接口请求方法：``GET``
+
+请求参数
+~~~~~~~~~~~~~~~
+
+=============  ========  =========  ========  ====================================
+名称            类型      是否必须    默认值     描述说明
+=============  ========  =========  ========  ====================================
+page            Number    可选        1         当前页码
+per_page        Number    可选        10        每页数量
+qk              String    必填                  搜索关键字
+=============  ========  =========  ========  ====================================
 
 返回示例
 ~~~~~~~~~~~~~~~~
