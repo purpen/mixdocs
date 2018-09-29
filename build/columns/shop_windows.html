@@ -157,15 +157,16 @@
 <li class="toctree-l2"><a class="reference internal" href="../common.html#id17">核心平台–热门推荐</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../common.html#id20">核心平台–搜索</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../common.html#id24">核心平台–搜索商品列表</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../common.html#id28">核心平台–搜索店铺列表</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../common.html#id32">核心平台–搜索用户列表</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../common.html#id36">小程序绑定手机号发送验证码</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../common.html#id41">注册发送短信验证码</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../common.html#id46">忘记密码发送短信验证码</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../common.html#id50">动态登陆发送短信验证码</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../common.html#id54">绑定银行卡发送短信验证码</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../common.html#id58">账户解除绑定银行卡发送短信验证码</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../common.html#id62">发送邮件验证码</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../common.html#id28">核心平台–搜索商品数量</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../common.html#id32">核心平台–搜索店铺列表</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../common.html#id36">核心平台–搜索用户列表</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../common.html#id40">小程序绑定手机号发送验证码</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../common.html#id45">注册发送短信验证码</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../common.html#id50">忘记密码发送短信验证码</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../common.html#id54">动态登陆发送短信验证码</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../common.html#id58">绑定银行卡发送短信验证码</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../common.html#id62">账户解除绑定银行卡发送短信验证码</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../common.html#id66">发送邮件验证码</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="../setting.html">系统相关配置文档</a><ul>
@@ -334,7 +335,8 @@
 </li>
 <li><a class="reference internal" href="#id92">搜索标签</a><ul>
 <li><a class="reference internal" href="#id93">接口说明</a></li>
-<li><a class="reference internal" href="#id94">返回示例</a></li>
+<li><a class="reference internal" href="#id94">请求参数</a></li>
+<li><a class="reference internal" href="#id95">返回示例</a></li>
 </ul>
 </li>
 </ul>
@@ -507,7 +509,8 @@
 </li>
 <li><a class="reference internal" href="#id92">搜索标签</a><ul>
 <li><a class="reference internal" href="#id93">接口说明</a></li>
-<li><a class="reference internal" href="#id94">返回示例</a></li>
+<li><a class="reference internal" href="#id94">请求参数</a></li>
+<li><a class="reference internal" href="#id95">返回示例</a></li>
 </ul>
 </li>
 </ul>
@@ -598,7 +601,8 @@
             <span class="p">{</span>
                 <span class="s2">&quot;comment_count&quot;</span><span class="o">:</span> <span class="s2">&quot;评论数&quot;</span><span class="p">,</span>
                 <span class="s2">&quot;description&quot;</span><span class="o">:</span> <span class="s2">&quot;橱窗详情&quot;</span><span class="p">,</span>
-                <span class="s2">&quot;is_follow&quot;</span><span class="o">:</span> <span class="s2">&quot;是否关注过该橱窗&quot;</span><span class="p">,</span>
+                <span class="s2">&quot;is_follow&quot;</span><span class="o">:</span> <span class="s2">&quot;是否关注过发布橱窗的用户&quot;</span><span class="p">,</span>
+                <span class="s2">&quot;is_like&quot;</span><span class="o">:</span> <span class="s2">&quot;是否喜欢过该橱窗&quot;</span><span class="p">,</span>
                 <span class="s2">&quot;is_official&quot;</span><span class="o">:</span> <span class="s2">&quot;是否官方橱窗&quot;</span><span class="p">,</span>
                 <span class="s2">&quot;keywords&quot;</span><span class="o">:</span> <span class="p">[</span>
                     <span class="s2">&quot;橱窗关键词一&quot;</span><span class="p">,</span>
@@ -778,7 +782,8 @@
     <span class="s2">&quot;data&quot;</span><span class="o">:</span> <span class="p">{</span>
         <span class="s2">&quot;comment_count&quot;</span><span class="o">:</span> <span class="mi">9</span><span class="p">,</span>
         <span class="s2">&quot;description&quot;</span><span class="o">:</span> <span class="s2">&quot;2018腾讯世界人工智能围棋大赛决赛将在中国棋院落下帷幕。&quot;</span><span class="p">,</span>
-        <span class="s2">&quot;is_follow&quot;</span><span class="o">:</span> <span class="kc">true</span><span class="p">,</span>
+        <span class="s2">&quot;is_follow&quot;</span><span class="o">:</span> <span class="s2">&quot;是否关注过发布橱窗的用户&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;is_like&quot;</span><span class="o">:</span> <span class="s2">&quot;是否喜欢过该橱窗&quot;</span><span class="p">,</span>
         <span class="s2">&quot;is_official&quot;</span><span class="o">:</span> <span class="s2">&quot;是否官方橱窗&quot;</span><span class="p">,</span>
         <span class="s2">&quot;keywords&quot;</span><span class="o">:</span> <span class="p">[</span>
             <span class="s2">&quot;棋牌&quot;</span><span class="p">,</span>
@@ -913,7 +918,8 @@
     <span class="s2">&quot;data&quot;</span><span class="o">:</span> <span class="p">{</span>
         <span class="s2">&quot;comment_count&quot;</span><span class="o">:</span> <span class="mi">9</span><span class="p">,</span>
         <span class="s2">&quot;description&quot;</span><span class="o">:</span> <span class="s2">&quot;橱窗描述&quot;</span><span class="p">,</span>
-        <span class="s2">&quot;is_follow&quot;</span><span class="o">:</span> <span class="s2">&quot;true: 是否关注橱窗&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;is_follow&quot;</span><span class="o">:</span> <span class="s2">&quot;是否关注过发布橱窗的用户&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;is_like&quot;</span><span class="o">:</span> <span class="s2">&quot;是否喜欢过该橱窗&quot;</span><span class="p">,</span>
         <span class="s2">&quot;is_official&quot;</span><span class="o">:</span> <span class="s2">&quot;false: 是否官方橱窗&quot;</span><span class="p">,</span>
         <span class="s2">&quot;keywords&quot;</span><span class="o">:</span> <span class="p">[</span>
             <span class="s2">&quot;女孩&quot;</span><span class="p">,</span>
@@ -1137,7 +1143,8 @@
             <span class="p">{</span>
                 <span class="s2">&quot;comment_count&quot;</span><span class="o">:</span> <span class="s2">&quot;评论数&quot;</span><span class="p">,</span>
                 <span class="s2">&quot;description&quot;</span><span class="o">:</span> <span class="s2">&quot;橱窗详情&quot;</span><span class="p">,</span>
-                <span class="s2">&quot;is_follow&quot;</span><span class="o">:</span> <span class="s2">&quot;是否关注过该橱窗&quot;</span><span class="p">,</span>
+                <span class="s2">&quot;is_follow&quot;</span><span class="o">:</span> <span class="s2">&quot;是否关注过发布橱窗的用户&quot;</span><span class="p">,</span>
+                <span class="s2">&quot;is_like&quot;</span><span class="o">:</span> <span class="s2">&quot;是否喜欢过该橱窗&quot;</span><span class="p">,</span>
                 <span class="s2">&quot;is_official&quot;</span><span class="o">:</span> <span class="s2">&quot;是否官方橱窗&quot;</span><span class="p">,</span>
                 <span class="s2">&quot;keywords&quot;</span><span class="o">:</span> <span class="p">[</span>
                     <span class="s2">&quot;橱窗关键词一&quot;</span><span class="p">,</span>
@@ -1286,7 +1293,8 @@
             <span class="p">{</span>
                 <span class="s2">&quot;comment_count&quot;</span><span class="o">:</span> <span class="s2">&quot;评论数&quot;</span><span class="p">,</span>
                 <span class="s2">&quot;description&quot;</span><span class="o">:</span> <span class="s2">&quot;橱窗详情&quot;</span><span class="p">,</span>
-                <span class="s2">&quot;is_follow&quot;</span><span class="o">:</span> <span class="s2">&quot;是否关注过该橱窗&quot;</span><span class="p">,</span>
+                <span class="s2">&quot;is_follow&quot;</span><span class="o">:</span> <span class="s2">&quot;是否关注过发布橱窗的用户&quot;</span><span class="p">,</span>
+                <span class="s2">&quot;is_like&quot;</span><span class="o">:</span> <span class="s2">&quot;是否喜欢过该橱窗&quot;</span><span class="p">,</span>
                 <span class="s2">&quot;is_official&quot;</span><span class="o">:</span> <span class="s2">&quot;是否官方橱窗&quot;</span><span class="p">,</span>
                 <span class="s2">&quot;keywords&quot;</span><span class="o">:</span> <span class="p">[</span>
                     <span class="s2">&quot;橱窗关键词一&quot;</span><span class="p">,</span>
@@ -2074,7 +2082,8 @@
             <span class="p">{</span>
                 <span class="s2">&quot;comment_count&quot;</span><span class="o">:</span> <span class="s2">&quot;评论数&quot;</span><span class="p">,</span>
                 <span class="s2">&quot;description&quot;</span><span class="o">:</span> <span class="s2">&quot;橱窗详情&quot;</span><span class="p">,</span>
-                <span class="s2">&quot;is_follow&quot;</span><span class="o">:</span> <span class="s2">&quot;是否关注过该橱窗&quot;</span><span class="p">,</span>
+                <span class="s2">&quot;is_follow&quot;</span><span class="o">:</span> <span class="s2">&quot;是否关注过发布橱窗的用户&quot;</span><span class="p">,</span>
+                <span class="s2">&quot;is_like&quot;</span><span class="o">:</span> <span class="s2">&quot;是否喜欢过该橱窗&quot;</span><span class="p">,</span>
                 <span class="s2">&quot;is_official&quot;</span><span class="o">:</span> <span class="s2">&quot;是否官方橱窗&quot;</span><span class="p">,</span>
                 <span class="s2">&quot;keywords&quot;</span><span class="o">:</span> <span class="p">[</span>
                     <span class="s2">&quot;橱窗关键词一&quot;</span><span class="p">,</span>
@@ -2392,7 +2401,47 @@
 </ul>
 </div>
 <div class="section" id="id94">
-<h3>返回示例<a class="headerlink" href="#id94" title="永久链接至标题">¶</a></h3>
+<h3>请求参数<a class="headerlink" href="#id94" title="永久链接至标题">¶</a></h3>
+<table border="1" class="docutils">
+<colgroup>
+<col width="18%" />
+<col width="11%" />
+<col width="12%" />
+<col width="11%" />
+<col width="49%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">名称</th>
+<th class="head">类型</th>
+<th class="head">是否必须</th>
+<th class="head">默认值</th>
+<th class="head">描述说明</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>page</td>
+<td>Number</td>
+<td>可选</td>
+<td>1</td>
+<td>当前页码</td>
+</tr>
+<tr class="row-odd"><td>per_page</td>
+<td>Number</td>
+<td>可选</td>
+<td>10</td>
+<td>每页数量</td>
+</tr>
+<tr class="row-even"><td>qk</td>
+<td>String</td>
+<td>必填</td>
+<td>&#160;</td>
+<td>搜索关键字</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="id95">
+<h3>返回示例<a class="headerlink" href="#id95" title="永久链接至标题">¶</a></h3>
 <p>JSON数据格式:</p>
 <div class="highlight-javascript"><div class="highlight"><pre><span></span><span class="p">{</span>
     <span class="s2">&quot;data&quot;</span><span class="o">:</span> <span class="p">{</span>
