@@ -157,15 +157,16 @@
 <li class="toctree-l2"><a class="reference internal" href="../common.html#id17">核心平台–热门推荐</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../common.html#id20">核心平台–搜索</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../common.html#id24">核心平台–搜索商品列表</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../common.html#id28">核心平台–搜索店铺列表</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../common.html#id32">核心平台–搜索用户列表</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../common.html#id36">小程序绑定手机号发送验证码</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../common.html#id41">注册发送短信验证码</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../common.html#id46">忘记密码发送短信验证码</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../common.html#id50">动态登陆发送短信验证码</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../common.html#id54">绑定银行卡发送短信验证码</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../common.html#id58">账户解除绑定银行卡发送短信验证码</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../common.html#id62">发送邮件验证码</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../common.html#id28">核心平台–搜索商品数量</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../common.html#id32">核心平台–搜索店铺列表</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../common.html#id36">核心平台–搜索用户列表</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../common.html#id40">小程序绑定手机号发送验证码</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../common.html#id45">注册发送短信验证码</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../common.html#id50">忘记密码发送短信验证码</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../common.html#id54">动态登陆发送短信验证码</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../common.html#id58">绑定银行卡发送短信验证码</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../common.html#id62">账户解除绑定银行卡发送短信验证码</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../common.html#id66">发送邮件验证码</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="../setting.html">系统相关配置文档</a><ul>
@@ -1284,18 +1285,18 @@
 <p>JSON数据格式:</p>
 <div class="highlight-javascript"><div class="highlight"><pre><span></span><span class="p">{</span>
     <span class="s2">&quot;data&quot;</span><span class="o">:</span> <span class="p">{</span>
-        <span class="s2">&quot;amount&quot;</span><span class="o">:</span> <span class="mi">0</span><span class="p">,</span>  <span class="c1">// 现金金额</span>
-        <span class="s2">&quot;bouns_type&quot;</span><span class="o">:</span> <span class="mi">1</span><span class="p">,</span>  <span class="c1">// 通红包类型 1、官方优惠券 2、现金</span>
+        <span class="s2">&quot;amount&quot;</span><span class="o">:</span> <span class="mf">0.3</span><span class="p">,</span>  <span class="c1">// 偷现金金额</span>
+        <span class="s2">&quot;bouns_type&quot;</span><span class="o">:</span> <span class="mi">1</span><span class="p">,</span>  <span class="c1">// 1、偷优惠券 2、偷现金</span>
         <span class="s2">&quot;coupon&quot;</span><span class="o">:</span> <span class="p">{</span>
-            <span class="s2">&quot;amount&quot;</span><span class="o">:</span> <span class="mi">5</span><span class="p">,</span>  <span class="c1">// 优惠券金额</span>
-            <span class="s2">&quot;end_date&quot;</span><span class="o">:</span> <span class="mi">1536681600</span><span class="p">,</span>  <span class="c1">// 有效期至</span>
-            <span class="s2">&quot;min_amount&quot;</span><span class="o">:</span> <span class="mi">5</span>  <span class="c1">// 最小限制金额</span>
+            <span class="s2">&quot;amount&quot;</span><span class="o">:</span> <span class="mi">10</span><span class="p">,</span>  <span class="c1">// 优惠券金额</span>
+            <span class="s2">&quot;expired_at&quot;</span><span class="o">:</span> <span class="mi">1538841600</span><span class="p">,</span>  <span class="c1">// 过期时间</span>
+            <span class="s2">&quot;min_amount&quot;</span><span class="o">:</span> <span class="mi">100</span>  <span class="c1">// 最小金额</span>
         <span class="p">},</span>
-        <span class="s2">&quot;friend_info&quot;</span><span class="o">:</span> <span class="p">{</span>
-            <span class="s2">&quot;user_logo&quot;</span><span class="o">:</span> <span class="s2">&quot;http://kg.erp.taihuoniao.com/static/img/default-logo.png&quot;</span><span class="p">,</span>
-            <span class="s2">&quot;user_name&quot;</span><span class="o">:</span> <span class="s2">&quot;13260180689&quot;</span><span class="p">,</span>
-            <span class="s2">&quot;user_sn&quot;</span><span class="o">:</span> <span class="s2">&quot;15672098143&quot;</span>
-        <span class="p">}</span>
+        <span class="s2">&quot;status&quot;</span><span class="o">:</span> <span class="mi">1</span>  <span class="c1">// 返回信息</span>
+        <span class="c1">// 1、成功</span>
+        <span class="c1">// 2、ta今天已经不不能在偷了了，先放过ta吧!</span>
+        <span class="c1">// 3、你刚刚已经偷过ta了了，稍后在来吧!</span>
+        <span class="c1">// 4、ta钱包已经被一群强盗偷光了了，去提醒一下好友吧!</span>
     <span class="p">},</span>
     <span class="s2">&quot;status&quot;</span><span class="o">:</span> <span class="p">{</span>
         <span class="s2">&quot;code&quot;</span><span class="o">:</span> <span class="mi">201</span><span class="p">,</span>

@@ -157,15 +157,16 @@
 <li class="toctree-l2"><a class="reference internal" href="../common.html#id17">核心平台–热门推荐</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../common.html#id20">核心平台–搜索</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../common.html#id24">核心平台–搜索商品列表</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../common.html#id28">核心平台–搜索店铺列表</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../common.html#id32">核心平台–搜索用户列表</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../common.html#id36">小程序绑定手机号发送验证码</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../common.html#id41">注册发送短信验证码</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../common.html#id46">忘记密码发送短信验证码</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../common.html#id50">动态登陆发送短信验证码</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../common.html#id54">绑定银行卡发送短信验证码</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../common.html#id58">账户解除绑定银行卡发送短信验证码</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../common.html#id62">发送邮件验证码</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../common.html#id28">核心平台–搜索商品数量</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../common.html#id32">核心平台–搜索店铺列表</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../common.html#id36">核心平台–搜索用户列表</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../common.html#id40">小程序绑定手机号发送验证码</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../common.html#id45">注册发送短信验证码</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../common.html#id50">忘记密码发送短信验证码</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../common.html#id54">动态登陆发送短信验证码</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../common.html#id58">绑定银行卡发送短信验证码</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../common.html#id62">账户解除绑定银行卡发送短信验证码</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../common.html#id66">发送邮件验证码</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="../setting.html">系统相关配置文档</a><ul>
@@ -897,76 +898,79 @@
 <p>JSON数据格式</p>
 <p>请求 <strong>正确</strong> 返回结果：</p>
 <div class="highlight-javascript"><div class="highlight"><pre><span></span><span class="p">{</span>
-    <span class="s2">&quot;data&quot;</span><span class="o">:</span> <span class="p">{</span>
-        <span class="s2">&quot;count&quot;</span><span class="o">:</span> <span class="mi">5</span><span class="p">,</span>
-        <span class="s2">&quot;lines&quot;</span><span class="o">:</span> <span class="p">[</span>
-            <span class="p">{</span>
-                <span class="s2">&quot;created_at&quot;</span><span class="o">:</span> <span class="mi">1534094558</span><span class="p">,</span>  <span class="c1">// 发布时间</span>
-                <span class="s2">&quot;shop_window&quot;</span><span class="o">:</span> <span class="p">{</span>  <span class="c1">// 橱窗信息</span>
-                    <span class="s2">&quot;comment_count&quot;</span><span class="o">:</span> <span class="kc">null</span><span class="p">,</span>  <span class="c1">// 评论数</span>
-                    <span class="s2">&quot;description&quot;</span><span class="o">:</span> <span class="s2">&quot;去去去去去去去去去去&quot;</span><span class="p">,</span>  <span class="c1">// 描述</span>
-                    <span class="s2">&quot;is_follow&quot;</span><span class="o">:</span> <span class="kc">false</span><span class="p">,</span>  <span class="c1">// 是否关注过</span>
-                    <span class="s2">&quot;keywords&quot;</span><span class="o">:</span> <span class="p">[],</span>
-                    <span class="s2">&quot;like_count&quot;</span><span class="o">:</span> <span class="kc">null</span><span class="p">,</span>  <span class="c1">// 喜欢的人数</span>
-                    <span class="s2">&quot;product_count&quot;</span><span class="o">:</span> <span class="mi">5</span><span class="p">,</span>  <span class="c1">// 商品数量</span>
-                    <span class="s2">&quot;product_covers&quot;</span><span class="o">:</span> <span class="p">[</span>  <span class="c1">// 商品图片</span>
-                        <span class="s2">&quot;http://0.0.0.0:9000/_uploads/photos/static/img/default2-logo-180x180.png&quot;</span><span class="p">,</span>
-                        <span class="s2">&quot;http://0.0.0.0:9000/_uploads/photos/static/img/default2-logo-180x180.png&quot;</span><span class="p">,</span>
-                        <span class="s2">&quot;http://0.0.0.0:9000/_uploads/photos/static/img/default2-logo-180x180.png&quot;</span><span class="p">,</span>
-                        <span class="s2">&quot;http://0.0.0.0:9000/_uploads/photos/static/img/default2-logo-180x180.png&quot;</span><span class="p">,</span>
-                        <span class="s2">&quot;http://0.0.0.0:9000/_uploads/photos/static/img/default2-logo-180x180.png&quot;</span>
-                    <span class="p">],</span>
-                    <span class="s2">&quot;products&quot;</span><span class="o">:</span> <span class="p">[</span>  <span class="c1">// 商品</span>
-                        <span class="p">{</span>
-                            <span class="s2">&quot;category_id&quot;</span><span class="o">:</span> <span class="mi">0</span><span class="p">,</span>
-                            <span class="s2">&quot;cover&quot;</span><span class="o">:</span> <span class="s2">&quot;http://0.0.0.0:9000/_uploads/photos/static/img/default2-logo-180x180.png&quot;</span><span class="p">,</span>
-                            <span class="s2">&quot;cover_id&quot;</span><span class="o">:</span> <span class="mi">1</span><span class="p">,</span>
-                            <span class="s2">&quot;custom_details&quot;</span><span class="o">:</span> <span class="kc">null</span><span class="p">,</span>
-                            <span class="s2">&quot;features&quot;</span><span class="o">:</span> <span class="kc">null</span><span class="p">,</span>
-                            <span class="s2">&quot;id_code&quot;</span><span class="o">:</span> <span class="kc">null</span><span class="p">,</span>
-                            <span class="s2">&quot;is_custom_made&quot;</span><span class="o">:</span> <span class="kc">null</span><span class="p">,</span>
-                            <span class="s2">&quot;is_custom_service&quot;</span><span class="o">:</span> <span class="kc">null</span><span class="p">,</span>
-                            <span class="s2">&quot;is_distributed&quot;</span><span class="o">:</span> <span class="kc">null</span><span class="p">,</span>
-                            <span class="s2">&quot;is_free_postage&quot;</span><span class="o">:</span> <span class="kc">null</span><span class="p">,</span>
-                            <span class="s2">&quot;is_made_holiday&quot;</span><span class="o">:</span> <span class="kc">null</span><span class="p">,</span>
-                            <span class="s2">&quot;is_sold_out&quot;</span><span class="o">:</span> <span class="kc">false</span><span class="p">,</span>
-                            <span class="s2">&quot;like_count&quot;</span><span class="o">:</span> <span class="kc">null</span><span class="p">,</span>
-                            <span class="s2">&quot;made_cycle&quot;</span><span class="o">:</span> <span class="kc">null</span><span class="p">,</span>
-                            <span class="s2">&quot;material_id&quot;</span><span class="o">:</span> <span class="kc">null</span><span class="p">,</span>
-                            <span class="s2">&quot;material_name&quot;</span><span class="o">:</span> <span class="s2">&quot;&quot;</span><span class="p">,</span>
-                            <span class="s2">&quot;max_price&quot;</span><span class="o">:</span> <span class="mi">0</span><span class="p">,</span>
-                            <span class="s2">&quot;max_sale_price&quot;</span><span class="o">:</span> <span class="mi">0</span><span class="p">,</span>
-                            <span class="s2">&quot;min_price&quot;</span><span class="o">:</span> <span class="mi">0</span><span class="p">,</span>
-                            <span class="s2">&quot;min_sale_price&quot;</span><span class="o">:</span> <span class="mi">0</span><span class="p">,</span>
-                            <span class="s2">&quot;modes&quot;</span><span class="o">:</span> <span class="p">[],</span>
-                            <span class="s2">&quot;name&quot;</span><span class="o">:</span> <span class="s2">&quot;飞机&quot;</span><span class="p">,</span>
-                            <span class="s2">&quot;published_at&quot;</span><span class="o">:</span> <span class="kc">null</span><span class="p">,</span>
-                            <span class="s2">&quot;rid&quot;</span><span class="o">:</span> <span class="s2">&quot;97958360&quot;</span><span class="p">,</span>
-                            <span class="s2">&quot;second_category_id&quot;</span><span class="o">:</span> <span class="mi">0</span><span class="p">,</span>
-                            <span class="s2">&quot;status&quot;</span><span class="o">:</span> <span class="mi">1</span><span class="p">,</span>
-                            <span class="s2">&quot;sticked&quot;</span><span class="o">:</span> <span class="kc">null</span><span class="p">,</span>
-                            <span class="s2">&quot;style_id&quot;</span><span class="o">:</span> <span class="kc">null</span><span class="p">,</span>
-                            <span class="s2">&quot;style_name&quot;</span><span class="o">:</span> <span class="s2">&quot;&quot;</span><span class="p">,</span>
-                            <span class="s2">&quot;top_category_id&quot;</span><span class="o">:</span> <span class="mi">0</span><span class="p">,</span>
-                            <span class="s2">&quot;total_stock&quot;</span><span class="o">:</span> <span class="kc">null</span>
-                        <span class="p">}</span>
-
-                    <span class="p">],</span>
-                    <span class="s2">&quot;rid&quot;</span><span class="o">:</span> <span class="mi">1</span><span class="p">,</span>
-                    <span class="s2">&quot;title&quot;</span><span class="o">:</span> <span class="s2">&quot;啊啊啊啊啊啊啊啊啊&quot;</span><span class="p">,</span>  <span class="c1">// 标题</span>
-                    <span class="s2">&quot;user_avatar&quot;</span><span class="o">:</span> <span class="s2">&quot;http://0.0.0.0:9000/_uploads/photos/FlHKgXPzqwjPC7pD5Z_SfdL0R8hE&quot;</span><span class="p">,</span>  <span class="c1">// 用户头像</span>
-                    <span class="s2">&quot;user_name&quot;</span><span class="o">:</span> <span class="s2">&quot;亮晶晶&quot;</span>  <span class="c1">// 用户名</span>
+<span class="s2">&quot;data&quot;</span><span class="o">:</span> <span class="p">{</span>
+    <span class="s2">&quot;bg_cover&quot;</span><span class="o">:</span> <span class="s2">&quot;http://kg.erp.taihuoniao.com/static/img/default-logo.png&quot;</span><span class="p">,</span>  <span class="c1">// 背景图</span>
+    <span class="s2">&quot;count&quot;</span><span class="o">:</span> <span class="mi">5</span><span class="p">,</span>  <span class="c1">// 橱窗数量</span>
+    <span class="s2">&quot;followed_status&quot;</span><span class="o">:</span> <span class="mi">0</span><span class="p">,</span>  <span class="c1">// // 看别人动态的关注状态, 0:未关注, 1:已关注, 2:相互关注</span>
+    <span class="s2">&quot;lines&quot;</span><span class="o">:</span> <span class="p">[</span>  <span class="c1">// 橱窗列表</span>
+        <span class="p">{</span>   <span class="s2">&quot;updated_at&quot;</span><span class="o">:</span> <span class="c1">// 发布时间</span>
+            <span class="s2">&quot;comment_count&quot;</span><span class="o">:</span> <span class="kc">null</span><span class="p">,</span>  <span class="c1">// 评论数量</span>
+            <span class="s2">&quot;description&quot;</span><span class="o">:</span> <span class="s2">&quot;去去去去去去去去去去&quot;</span><span class="p">,</span>  <span class="c1">// 简介</span>
+            <span class="s2">&quot;is_follow&quot;</span><span class="o">:</span> <span class="kc">false</span><span class="p">,</span>
+            <span class="s2">&quot;is_like&quot;</span><span class="o">:</span> <span class="kc">false</span><span class="p">,</span>  <span class="c1">// 是否喜欢</span>
+            <span class="s2">&quot;is_official&quot;</span><span class="o">:</span> <span class="kc">null</span><span class="p">,</span>  <span class="c1">// 是否为官方橱窗</span>
+            <span class="s2">&quot;keywords&quot;</span><span class="o">:</span> <span class="p">[],</span>
+            <span class="s2">&quot;like_count&quot;</span><span class="o">:</span> <span class="kc">null</span><span class="p">,</span>  <span class="c1">// 被喜欢的数量</span>
+            <span class="s2">&quot;product_count&quot;</span><span class="o">:</span> <span class="mi">5</span><span class="p">,</span>  <span class="c1">// 商品数量</span>
+            <span class="s2">&quot;product_covers&quot;</span><span class="o">:</span> <span class="p">[</span>  <span class="c1">// 商品cover</span>
+                <span class="s2">&quot;http://kg.erp.taihuoniao.com/static/img/default-logo.png&quot;</span><span class="p">,</span>
+                <span class="s2">&quot;http://kg.erp.taihuoniao.com/static/img/default-logo.png&quot;</span><span class="p">,</span>
+                <span class="s2">&quot;http://kg.erp.taihuoniao.com/static/img/default-logo.png&quot;</span><span class="p">,</span>
+                <span class="s2">&quot;http://kg.erp.taihuoniao.com/static/img/default-logo.png&quot;</span><span class="p">,</span>
+                <span class="s2">&quot;http://kg.erp.taihuoniao.com/static/img/default-logo.png&quot;</span>
+            <span class="p">],</span>
+            <span class="s2">&quot;products&quot;</span><span class="o">:</span> <span class="p">[</span>  <span class="c1">// 商品信息</span>
+                <span class="p">{</span>
+                    <span class="s2">&quot;category_id&quot;</span><span class="o">:</span> <span class="mi">0</span><span class="p">,</span>
+                    <span class="s2">&quot;cover&quot;</span><span class="o">:</span> <span class="s2">&quot;http://0.0.0.0:9000/_uploads/photos/static/img/default2-logo-180x180.png&quot;</span><span class="p">,</span>
+                    <span class="s2">&quot;cover_id&quot;</span><span class="o">:</span> <span class="mi">1</span><span class="p">,</span>
+                    <span class="s2">&quot;custom_details&quot;</span><span class="o">:</span> <span class="kc">null</span><span class="p">,</span>
+                    <span class="s2">&quot;features&quot;</span><span class="o">:</span> <span class="kc">null</span><span class="p">,</span>
+                    <span class="s2">&quot;id_code&quot;</span><span class="o">:</span> <span class="kc">null</span><span class="p">,</span>
+                    <span class="s2">&quot;is_custom_made&quot;</span><span class="o">:</span> <span class="kc">null</span><span class="p">,</span>
+                    <span class="s2">&quot;is_custom_service&quot;</span><span class="o">:</span> <span class="kc">null</span><span class="p">,</span>
+                    <span class="s2">&quot;is_distributed&quot;</span><span class="o">:</span> <span class="kc">null</span><span class="p">,</span>
+                    <span class="s2">&quot;is_free_postage&quot;</span><span class="o">:</span> <span class="kc">false</span><span class="p">,</span>
+                    <span class="s2">&quot;is_made_holiday&quot;</span><span class="o">:</span> <span class="kc">null</span><span class="p">,</span>
+                    <span class="s2">&quot;is_sold_out&quot;</span><span class="o">:</span> <span class="kc">false</span><span class="p">,</span>
+                    <span class="s2">&quot;like_count&quot;</span><span class="o">:</span> <span class="mi">0</span><span class="p">,</span>
+                    <span class="s2">&quot;made_cycle&quot;</span><span class="o">:</span> <span class="kc">null</span><span class="p">,</span>
+                    <span class="s2">&quot;material_id&quot;</span><span class="o">:</span> <span class="kc">null</span><span class="p">,</span>
+                    <span class="s2">&quot;material_name&quot;</span><span class="o">:</span> <span class="s2">&quot;&quot;</span><span class="p">,</span>
+                    <span class="s2">&quot;max_price&quot;</span><span class="o">:</span> <span class="mi">0</span><span class="p">,</span>
+                    <span class="s2">&quot;max_sale_price&quot;</span><span class="o">:</span> <span class="mi">0</span><span class="p">,</span>
+                    <span class="s2">&quot;min_price&quot;</span><span class="o">:</span> <span class="mi">0</span><span class="p">,</span>
+                    <span class="s2">&quot;min_sale_price&quot;</span><span class="o">:</span> <span class="mi">0</span><span class="p">,</span>
+                    <span class="s2">&quot;modes&quot;</span><span class="o">:</span> <span class="p">[],</span>
+                    <span class="s2">&quot;name&quot;</span><span class="o">:</span> <span class="s2">&quot;飞机&quot;</span><span class="p">,</span>
+                    <span class="s2">&quot;published_at&quot;</span><span class="o">:</span> <span class="kc">null</span><span class="p">,</span>
+                    <span class="s2">&quot;rid&quot;</span><span class="o">:</span> <span class="s2">&quot;97958360&quot;</span><span class="p">,</span>
+                    <span class="s2">&quot;second_category_id&quot;</span><span class="o">:</span> <span class="mi">0</span><span class="p">,</span>
+                    <span class="s2">&quot;status&quot;</span><span class="o">:</span> <span class="mi">1</span><span class="p">,</span>
+                    <span class="s2">&quot;sticked&quot;</span><span class="o">:</span> <span class="kc">null</span><span class="p">,</span>
+                    <span class="s2">&quot;style_id&quot;</span><span class="o">:</span> <span class="kc">null</span><span class="p">,</span>
+                    <span class="s2">&quot;style_name&quot;</span><span class="o">:</span> <span class="s2">&quot;&quot;</span><span class="p">,</span>
+                    <span class="s2">&quot;top_category_id&quot;</span><span class="o">:</span> <span class="mi">0</span><span class="p">,</span>
+                    <span class="s2">&quot;total_stock&quot;</span><span class="o">:</span> <span class="kc">null</span>
                 <span class="p">}</span>
-            <span class="p">},</span>
-        <span class="p">],</span>
-        <span class="s2">&quot;next&quot;</span><span class="o">:</span> <span class="kc">false</span><span class="p">,</span>
-        <span class="s2">&quot;prev&quot;</span><span class="o">:</span> <span class="kc">false</span>
-    <span class="p">},</span>
-    <span class="s2">&quot;status&quot;</span><span class="o">:</span> <span class="p">{</span>
-        <span class="s2">&quot;code&quot;</span><span class="o">:</span> <span class="mi">200</span><span class="p">,</span>
-        <span class="s2">&quot;message&quot;</span><span class="o">:</span> <span class="s2">&quot;Ok all right.&quot;</span>
-    <span class="p">},</span>
-    <span class="s2">&quot;success&quot;</span><span class="o">:</span> <span class="kc">true</span>
+            <span class="p">],</span>
+            <span class="s2">&quot;rid&quot;</span><span class="o">:</span> <span class="mi">1</span><span class="p">,</span>
+            <span class="s2">&quot;title&quot;</span><span class="o">:</span> <span class="s2">&quot;啊啊啊啊啊啊啊啊啊&quot;</span><span class="p">,</span>  <span class="c1">// 标题</span>
+            <span class="s2">&quot;uid&quot;</span><span class="o">:</span> <span class="s2">&quot;17048395612&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;user_avatar&quot;</span><span class="o">:</span> <span class="s2">&quot;http://kg.erp.taihuoniao.com/static/img/default-logo.png&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;user_name&quot;</span><span class="o">:</span> <span class="s2">&quot;秋天不会来&quot;</span>
+        <span class="p">}</span>
+    <span class="p">],</span>
+    <span class="s2">&quot;next&quot;</span><span class="o">:</span> <span class="kc">false</span><span class="p">,</span>
+    <span class="s2">&quot;prev&quot;</span><span class="o">:</span> <span class="kc">false</span><span class="p">,</span>
+    <span class="s2">&quot;user_avatar&quot;</span><span class="o">:</span> <span class="s2">&quot;http://kg.erp.taihuoniao.com/static/img/default-logo.png&quot;</span><span class="p">,</span>  <span class="c1">// 头像</span>
+    <span class="s2">&quot;username&quot;</span><span class="o">:</span> <span class="s2">&quot;秋天不会来&quot;</span>  <span class="c1">// 用户名</span>
+<span class="p">},</span>
+<span class="s2">&quot;status&quot;</span><span class="o">:</span> <span class="p">{</span>
+    <span class="s2">&quot;code&quot;</span><span class="o">:</span> <span class="mi">200</span><span class="p">,</span>
+    <span class="s2">&quot;message&quot;</span><span class="o">:</span> <span class="s2">&quot;Ok all right.&quot;</span>
+<span class="p">},</span>
+<span class="s2">&quot;success&quot;</span><span class="o">:</span> <span class="kc">true</span>
 <span class="p">}</span>
 </pre></div>
 </div>

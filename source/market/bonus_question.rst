@@ -641,21 +641,20 @@ JSON数据格式:
 
 .. code-block:: javascript
 
-
     {
         "data": {
-            "amount": 0,  // 现金金额
-            "bouns_type": 1,  // 通红包类型 1、官方优惠券 2、现金
+            "amount": 0.3,  // 偷现金金额
+            "bouns_type": 1,  // 1、偷优惠券 2、偷现金
             "coupon": {
-                "amount": 5,  // 优惠券金额
-                "end_date": 1536681600,  // 有效期至
-                "min_amount": 5  // 最小限制金额
+                "amount": 10,  // 优惠券金额
+                "expired_at": 1538841600,  // 过期时间
+                "min_amount": 100  // 最小金额
             },
-            "friend_info": {
-                "user_logo": "http://kg.erp.taihuoniao.com/static/img/default-logo.png",
-                "user_name": "13260180689",
-                "user_sn": "15672098143"
-            }
+            "status": 1  // 返回信息
+            // 1、成功
+            // 2、ta今天已经不不能在偷了了，先放过ta吧!
+            // 3、你刚刚已经偷过ta了了，稍后在来吧!
+            // 4、ta钱包已经被一群强盗偷光了了，去提醒一下好友吧!
         },
         "status": {
             "code": 201,
@@ -663,7 +662,6 @@ JSON数据格式:
         },
         "success": true
     }
-
 
 
 猜图-偷我钱包的人

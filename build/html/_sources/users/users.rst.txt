@@ -92,76 +92,79 @@ JSON数据格式
 .. code-block:: javascript
 
     {
-        "data": {
-            "count": 5,
-            "lines": [
-                {
-                    "created_at": 1534094558,  // 发布时间
-                    "shop_window": {  // 橱窗信息
-                        "comment_count": null,  // 评论数
-                        "description": "去去去去去去去去去去",  // 描述
-                        "is_follow": false,  // 是否关注过
-                        "keywords": [],
-                        "like_count": null,  // 喜欢的人数
-                        "product_count": 5,  // 商品数量
-                        "product_covers": [  // 商品图片
-                            "http://0.0.0.0:9000/_uploads/photos/static/img/default2-logo-180x180.png",
-                            "http://0.0.0.0:9000/_uploads/photos/static/img/default2-logo-180x180.png",
-                            "http://0.0.0.0:9000/_uploads/photos/static/img/default2-logo-180x180.png",
-                            "http://0.0.0.0:9000/_uploads/photos/static/img/default2-logo-180x180.png",
-                            "http://0.0.0.0:9000/_uploads/photos/static/img/default2-logo-180x180.png"
-                        ],
-                        "products": [  // 商品
-                            {
-                                "category_id": 0,
-                                "cover": "http://0.0.0.0:9000/_uploads/photos/static/img/default2-logo-180x180.png",
-                                "cover_id": 1,
-                                "custom_details": null,
-                                "features": null,
-                                "id_code": null,
-                                "is_custom_made": null,
-                                "is_custom_service": null,
-                                "is_distributed": null,
-                                "is_free_postage": null,
-                                "is_made_holiday": null,
-                                "is_sold_out": false,
-                                "like_count": null,
-                                "made_cycle": null,
-                                "material_id": null,
-                                "material_name": "",
-                                "max_price": 0,
-                                "max_sale_price": 0,
-                                "min_price": 0,
-                                "min_sale_price": 0,
-                                "modes": [],
-                                "name": "飞机",
-                                "published_at": null,
-                                "rid": "97958360",
-                                "second_category_id": 0,
-                                "status": 1,
-                                "sticked": null,
-                                "style_id": null,
-                                "style_name": "",
-                                "top_category_id": 0,
-                                "total_stock": null
-                            }
-
-                        ],
-                        "rid": 1,
-                        "title": "啊啊啊啊啊啊啊啊啊",  // 标题
-                        "user_avatar": "http://0.0.0.0:9000/_uploads/photos/FlHKgXPzqwjPC7pD5Z_SfdL0R8hE",  // 用户头像
-                        "user_name": "亮晶晶"  // 用户名
+    "data": {
+        "bg_cover": "http://kg.erp.taihuoniao.com/static/img/default-logo.png",  // 背景图
+        "count": 5,  // 橱窗数量
+        "followed_status": 0,  // // 看别人动态的关注状态, 0:未关注, 1:已关注, 2:相互关注
+        "lines": [  // 橱窗列表
+            {   "updated_at": // 发布时间
+                "comment_count": null,  // 评论数量
+                "description": "去去去去去去去去去去",  // 简介
+                "is_follow": false,
+                "is_like": false,  // 是否喜欢
+                "is_official": null,  // 是否为官方橱窗
+                "keywords": [],
+                "like_count": null,  // 被喜欢的数量
+                "product_count": 5,  // 商品数量
+                "product_covers": [  // 商品cover
+                    "http://kg.erp.taihuoniao.com/static/img/default-logo.png",
+                    "http://kg.erp.taihuoniao.com/static/img/default-logo.png",
+                    "http://kg.erp.taihuoniao.com/static/img/default-logo.png",
+                    "http://kg.erp.taihuoniao.com/static/img/default-logo.png",
+                    "http://kg.erp.taihuoniao.com/static/img/default-logo.png"
+                ],
+                "products": [  // 商品信息
+                    {
+                        "category_id": 0,
+                        "cover": "http://0.0.0.0:9000/_uploads/photos/static/img/default2-logo-180x180.png",
+                        "cover_id": 1,
+                        "custom_details": null,
+                        "features": null,
+                        "id_code": null,
+                        "is_custom_made": null,
+                        "is_custom_service": null,
+                        "is_distributed": null,
+                        "is_free_postage": false,
+                        "is_made_holiday": null,
+                        "is_sold_out": false,
+                        "like_count": 0,
+                        "made_cycle": null,
+                        "material_id": null,
+                        "material_name": "",
+                        "max_price": 0,
+                        "max_sale_price": 0,
+                        "min_price": 0,
+                        "min_sale_price": 0,
+                        "modes": [],
+                        "name": "飞机",
+                        "published_at": null,
+                        "rid": "97958360",
+                        "second_category_id": 0,
+                        "status": 1,
+                        "sticked": null,
+                        "style_id": null,
+                        "style_name": "",
+                        "top_category_id": 0,
+                        "total_stock": null
                     }
-                },
-            ],
-            "next": false,
-            "prev": false
-        },
-        "status": {
-            "code": 200,
-            "message": "Ok all right."
-        },
-        "success": true
+                ],
+                "rid": 1,
+                "title": "啊啊啊啊啊啊啊啊啊",  // 标题
+                "uid": "17048395612",
+                "user_avatar": "http://kg.erp.taihuoniao.com/static/img/default-logo.png",
+                "user_name": "秋天不会来"
+            }
+        ],
+        "next": false,
+        "prev": false,
+        "user_avatar": "http://kg.erp.taihuoniao.com/static/img/default-logo.png",  // 头像
+        "username": "秋天不会来"  // 用户名
+    },
+    "status": {
+        "code": 200,
+        "message": "Ok all right."
+    },
+    "success": true
     }
 
 获取别人生活馆动态
