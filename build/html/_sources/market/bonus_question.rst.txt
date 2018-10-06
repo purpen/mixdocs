@@ -371,7 +371,8 @@ JSON数据格式:
             "user_coupon_quantity": 38,  //当前用户优惠券数量
             "user_info": {
                 "user_logo": "http://kg.erp.taihuoniao.com/static/img/default-logo.png",  // 用户头像
-                "user_name": null  // 用户名
+                "user_name": null,  // 用户名
+                "user_sn": "15672098143"  // 用户编号
             },
             "user_ranking": 1,  // 当前用户排名  0、未上榜
             "ranking_list": [  // 排行榜
@@ -387,7 +388,8 @@ JSON数据格式:
                     "updated_at": 1536055463,
                     "user_info": {
                         "user_logo": "http://kg.erp.taihuoniao.com/static/img/default-logo.png",  // 用户头像
-                        "user_name": null  // 用户姓名
+                        "user_name": null,  // 用户姓名
+                        "user_sn": "15672098143"  // 用户编号
                     }
                 }
             ]
@@ -440,7 +442,9 @@ JSON数据格式:
             "user_coupon_quantity": 38,  //当前用户优惠券数量
             "user_info": {
                 "user_logo": "http://kg.erp.taihuoniao.com/static/img/default-logo.png",  // 用户头像
-                "user_name": null  // 用户名
+                "user_name": null,  // 用户名
+                "user_sn": "15672098143"  // 用户编号
+
             },
             "user_ranking": 1,  // 当前用户排名  0、未上榜
             "ranking_list": [  // 排行榜
@@ -456,7 +460,8 @@ JSON数据格式:
                     "updated_at": 1536055463,
                     "user_info": {
                         "user_logo": "http://kg.erp.taihuoniao.com/static/img/default-logo.png",  // 用户头像
-                        "user_name": null  // 用户姓名
+                        "user_name": null,  // 用户姓名
+                        "user_sn": "15672098143"  // 用户编号
                     }
                 }
             ]
@@ -901,5 +906,56 @@ JSON数据格式:
 
 
 
+猜图-偷我红包记录
+-------------------------
+猜图-偷我红包记录
 
+接口说明
+~~~~~~~~~~~~~~
+
+* API接口请求地址：``/guess_image/steal_bouns_record``
+* API接口请求方法：``GET``
+* API接口用户授权：``token``
+
+
+返回示例
+~~~~~~~~~~~~~~~~
+
+JSON数据格式:
+
+.. code-block:: javascript
+
+
+    {
+        "data": {
+            "steal_bouns_count": 2,  // 偷我红包好友数量
+            "steal_bouns_record": [
+                {
+                    "amount": 22,  // 现金金额
+                    "bonus_amount": 0,  //  优惠券金额
+                    "bouns_type": 2,  // 红包类型 1、优惠券 2、现金红包
+                    "user_info": {
+                        "user_logo": "http://kg.erp.taihuoniao.com/static/img/default-logo.png",
+                        "user_name": null,
+                        "user_sn": "15672098143"
+                    }
+                },
+                {
+                    "amount": 0,
+                    "bonus_amount": null,
+                    "bouns_type": 1,
+                    "user_info": {
+                        "user_logo": "http://kg.erp.taihuoniao.com/static/img/default-logo.png",
+                        "user_name": null,
+                        "user_sn": "15672098143"
+                    }
+                }
+            ]
+        },
+        "status": {
+            "code": 200,
+            "message": "Ok all right."
+        },
+        "success": true
+    }
 
