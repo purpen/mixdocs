@@ -2241,7 +2241,12 @@ JSON数据格式:
                         "store_rid": "3"
                     },
                     "total_amount": 30,
-                    "total_quantity": 10
+                    "total_quantity": 10,
+                    "user_info": {
+                        "user_logo": "http://kg.erp.taihuoniao.com/static/img/default-logo.png",  // 用户头像
+                        "user_name": "默默",  // 用户名
+                        "user_sn": "17160283459"  // 用户编号
+                    }
                 }
             ],
         },
