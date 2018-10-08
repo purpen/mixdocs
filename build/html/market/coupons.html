@@ -157,15 +157,16 @@
 <li class="toctree-l2"><a class="reference internal" href="../common.html#id17">核心平台–热门推荐</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../common.html#id20">核心平台–搜索</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../common.html#id24">核心平台–搜索商品列表</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../common.html#id28">核心平台–搜索店铺列表</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../common.html#id32">核心平台–搜索用户列表</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../common.html#id36">小程序绑定手机号发送验证码</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../common.html#id41">注册发送短信验证码</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../common.html#id46">忘记密码发送短信验证码</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../common.html#id50">动态登陆发送短信验证码</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../common.html#id54">绑定银行卡发送短信验证码</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../common.html#id58">账户解除绑定银行卡发送短信验证码</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../common.html#id62">发送邮件验证码</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../common.html#id28">核心平台–搜索商品数量</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../common.html#id32">核心平台–搜索店铺列表</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../common.html#id36">核心平台–搜索用户列表</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../common.html#id40">小程序绑定手机号发送验证码</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../common.html#id45">注册发送短信验证码</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../common.html#id50">忘记密码发送短信验证码</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../common.html#id54">动态登陆发送短信验证码</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../common.html#id58">绑定银行卡发送短信验证码</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../common.html#id62">账户解除绑定银行卡发送短信验证码</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../common.html#id66">发送邮件验证码</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="../setting.html">系统相关配置文档</a><ul>
@@ -356,7 +357,7 @@
 <li><a class="reference internal" href="#id105">返回示例</a></li>
 </ul>
 </li>
-<li><a class="reference internal" href="#id106">官方无门槛红包分享动态</a><ul>
+<li><a class="reference internal" href="#id106">官方红包分享动态</a><ul>
 <li><a class="reference internal" href="#id107">接口说明</a></li>
 <li><a class="reference internal" href="#id108">返回示例</a></li>
 </ul>
@@ -553,7 +554,7 @@
 <li><a class="reference internal" href="#id105">返回示例</a></li>
 </ul>
 </li>
-<li><a class="reference internal" href="#id106">官方无门槛红包分享动态</a><ul>
+<li><a class="reference internal" href="#id106">官方红包分享动态</a><ul>
 <li><a class="reference internal" href="#id107">接口说明</a></li>
 <li><a class="reference internal" href="#id108">返回示例</a></li>
 </ul>
@@ -2391,7 +2392,7 @@
         <span class="s2">&quot;is_used&quot;</span><span class="o">:</span> <span class="kc">false</span><span class="p">,</span>  <span class="c1">// 是否使用</span>
         <span class="s2">&quot;min_amount&quot;</span><span class="o">:</span> <span class="mi">0</span><span class="p">,</span>  <span class="c1">// 限制金额</span>
         <span class="s2">&quot;start_at&quot;</span><span class="o">:</span> <span class="mi">1532707200</span><span class="p">,</span>  <span class="c1">// 开始时间</span>
-        <span class="s2">&quot;type&quot;</span><span class="o">:</span> <span class="mi">1</span><span class="p">,</span>  <span class="c1">// 1 、无门槛 2、有门槛</span>
+        <span class="s2">&quot;type&quot;</span><span class="o">:</span> <span class="mi">1</span><span class="p">,</span>
         <span class="s2">&quot;user_id&quot;</span><span class="o">:</span> <span class="mi">2</span>  <span class="c1">// 用户id</span>
     <span class="p">},</span>
     <span class="s2">&quot;status&quot;</span><span class="o">:</span> <span class="p">{</span>
@@ -2500,7 +2501,7 @@
                 <span class="s2">&quot;is_used&quot;</span><span class="o">:</span> <span class="kc">false</span><span class="p">,</span>  <span class="c1">// 是否使用</span>
                 <span class="s2">&quot;min_amount&quot;</span><span class="o">:</span> <span class="mi">0</span><span class="p">,</span>  <span class="c1">// 限制金额</span>
                 <span class="s2">&quot;start_at&quot;</span><span class="o">:</span> <span class="mi">1532707200</span><span class="p">,</span>  <span class="c1">// 开始时间</span>
-                <span class="s2">&quot;type&quot;</span><span class="o">:</span> <span class="mi">1</span><span class="p">,</span>  <span class="c1">// 1 、无门槛 2、有门槛</span>
+                <span class="s2">&quot;type&quot;</span><span class="o">:</span> <span class="mi">1</span><span class="p">,</span>
                 <span class="s2">&quot;user_id&quot;</span><span class="o">:</span> <span class="mi">2</span>  <span class="c1">// 用户id</span>
             <span class="p">},</span>
             <span class="p">{</span>
@@ -2579,7 +2580,7 @@
                 <span class="s2">&quot;is_used&quot;</span><span class="o">:</span> <span class="kc">false</span><span class="p">,</span>  <span class="c1">// 是否使用</span>
                 <span class="s2">&quot;min_amount&quot;</span><span class="o">:</span> <span class="mi">0</span><span class="p">,</span>  <span class="c1">// 限制金额</span>
                 <span class="s2">&quot;start_at&quot;</span><span class="o">:</span> <span class="mi">1532707200</span><span class="p">,</span>  <span class="c1">// 开始时间</span>
-                <span class="s2">&quot;type&quot;</span><span class="o">:</span> <span class="mi">1</span><span class="p">,</span>  <span class="c1">// 1 、无门槛 2、有门槛</span>
+                <span class="s2">&quot;type&quot;</span><span class="o">:</span> <span class="mi">1</span><span class="p">,</span>
                 <span class="s2">&quot;user_id&quot;</span><span class="o">:</span> <span class="mi">2</span>  <span class="c1">// 用户id</span>
             <span class="p">},</span>
             <span class="p">{</span>
@@ -2700,7 +2701,7 @@
         <span class="s2">&quot;is_used&quot;</span><span class="o">:</span> <span class="kc">false</span><span class="p">,</span>  <span class="c1">// 是否使用</span>
         <span class="s2">&quot;min_amount&quot;</span><span class="o">:</span> <span class="mi">100</span><span class="p">,</span>  <span class="c1">// 限制金额</span>
         <span class="s2">&quot;start_at&quot;</span><span class="o">:</span> <span class="mi">1532707200</span><span class="p">,</span>  <span class="c1">// 开始时间</span>
-        <span class="s2">&quot;type&quot;</span><span class="o">:</span> <span class="mi">2</span><span class="p">,</span>  <span class="c1">// 1 、无门槛 2、有门槛</span>
+        <span class="s2">&quot;type&quot;</span><span class="o">:</span> <span class="mi">2</span><span class="p">,</span>
         <span class="s2">&quot;user_id&quot;</span><span class="o">:</span> <span class="mi">2</span>  <span class="c1">// 用户id</span>
     <span class="p">},</span>
     <span class="s2">&quot;status&quot;</span><span class="o">:</span> <span class="p">{</span>
@@ -2993,8 +2994,8 @@
 </div>
 </div>
 <div class="section" id="id106">
-<h2>官方无门槛红包分享动态<a class="headerlink" href="#id106" title="永久链接至标题">¶</a></h2>
-<p>官方无门槛红包分享动态</p>
+<h2>官方红包分享动态<a class="headerlink" href="#id106" title="永久链接至标题">¶</a></h2>
+<p>官方红包分享动态</p>
 <div class="section" id="id107">
 <h3>接口说明<a class="headerlink" href="#id107" title="永久链接至标题">¶</a></h3>
 <ul class="simple">

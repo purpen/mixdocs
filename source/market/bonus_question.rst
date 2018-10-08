@@ -739,8 +739,17 @@ JSON数据格式:
             "invite_count": 0,  // 邀请人数
             "total_count": 5141  // 总人数
             "invite_name": "用户名", // 用户名
-            "user_logo": [  // 正在参与头像
-            "http://kg.erp.taihuoniao.com/static/img/default-logo.png"
+            "user_info": [  // 参与用户信息
+                {
+                    "user_logo": "http://kg.erp.taihuoniao.com/static/img/default-logo.png",
+                    "user_name": "13260180689",
+                    "user_sn": "15672098143"
+                },
+                {
+                    "user_logo": "http://kg.erp.taihuoniao.com/static/img/default-logo.png",
+                    "user_name": "18612963205",
+                    "user_sn": "14987652130"
+                }
             ]
         },
         "status": {
