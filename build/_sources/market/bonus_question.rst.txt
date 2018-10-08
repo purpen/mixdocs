@@ -638,6 +638,11 @@ JSON数据格式:
 
     {
         "data": {
+            "user_info": {
+                "user_logo": "http://kg.erp.taihuoniao.com/static/img/default-logo.png", //好友头像
+                "user_name": '默默',  // 好友名称
+                "user_sn": "15672098143" // 好友用户编号
+            },
             "amount": 0.3,  // 偷现金金额
             "bouns_type": 1,  // 1、偷优惠券 2、偷现金
             "coupon": {
