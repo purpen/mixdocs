@@ -312,6 +312,7 @@ JSON数据格式:
         "data": {
             "amount": 0,  // 现金
             "bonus_amount": 40,  // 优惠券总额
+            "bonus_quantity": 60  // 优惠券数量
         },
         "status": {
             "code": 200,
