@@ -736,9 +736,7 @@ JSON数据格式:
 
     {
         "data": {
-            "invite_count": 0,  // 邀请人数
             "total_count": 5141  // 总人数
-            "invite_name": "用户名", // 用户名
             "user_info": [  // 参与用户信息
                 {
                     "user_logo": "http://kg.erp.taihuoniao.com/static/img/default-logo.png",
@@ -974,7 +972,7 @@ JSON数据格式:
 ~~~~~~~~~~~~~~
 
 * API接口请求地址：``/guess_image/is_share``
-* API接口请求方法：``GET``
+* API接口请求方法：``POST``
 * API接口用户授权：``token``
 
 返回示例
@@ -991,5 +989,49 @@ JSON数据格式:
         },
         "success": true
     }
+
+
+猜图-邀请好友信息
+-------------------------
+猜图-邀请好友信息
+
+接口说明
+~~~~~~~~~~~~~~
+
+* API接口请求地址：``/guess_image/invite_friend``
+* API接口请求方法：``GET``
+* API接口用户授权：``token``
+
+
+返回示例
+~~~~~~~~~~~~~~~~
+
+JSON数据格式:
+
+.. code-block:: javascript
+
+
+    {
+        "data": {
+            "invite_count": 1,  // 邀请人数
+            "invite_name": "默默",  //被邀请人姓名
+            "user_info": [  // 三个头像
+                {
+                    "user_logo": "http://kg.erp.taihuoniao.com/static/img/default-logo.png",
+                    "user_name": "默默",
+                    "user_sn": "15672098143"
+                }
+            ]
+        },
+        "status": {
+            "code": 200,
+            "message": "Ok all right."
+        },
+        "success": true
+    }
+
+
+
+
 
 

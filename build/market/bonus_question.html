@@ -314,6 +314,11 @@
 <li><a class="reference internal" href="#id76">返回示例</a></li>
 </ul>
 </li>
+<li><a class="reference internal" href="#id77">猜图-邀请好友信息</a><ul>
+<li><a class="reference internal" href="#id78">接口说明</a></li>
+<li><a class="reference internal" href="#id79">返回示例</a></li>
+</ul>
+</li>
 </ul>
 </li>
 </ul>
@@ -461,6 +466,11 @@
 <li><a class="reference internal" href="#id74">猜图-记录是否分享</a><ul>
 <li><a class="reference internal" href="#id75">接口说明</a></li>
 <li><a class="reference internal" href="#id76">返回示例</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#id77">猜图-邀请好友信息</a><ul>
+<li><a class="reference internal" href="#id78">接口说明</a></li>
+<li><a class="reference internal" href="#id79">返回示例</a></li>
 </ul>
 </li>
 </ul>
@@ -1395,9 +1405,7 @@
 <p>JSON数据格式:</p>
 <div class="highlight-javascript"><div class="highlight"><pre><span></span><span class="p">{</span>
     <span class="s2">&quot;data&quot;</span><span class="o">:</span> <span class="p">{</span>
-        <span class="s2">&quot;invite_count&quot;</span><span class="o">:</span> <span class="mi">0</span><span class="p">,</span>  <span class="c1">// 邀请人数</span>
         <span class="s2">&quot;total_count&quot;</span><span class="o">:</span> <span class="mi">5141</span>  <span class="c1">// 总人数</span>
-        <span class="s2">&quot;invite_name&quot;</span><span class="o">:</span> <span class="s2">&quot;用户名&quot;</span><span class="p">,</span> <span class="c1">// 用户名</span>
         <span class="s2">&quot;user_info&quot;</span><span class="o">:</span> <span class="p">[</span>  <span class="c1">// 参与用户信息</span>
             <span class="p">{</span>
                 <span class="s2">&quot;user_logo&quot;</span><span class="o">:</span> <span class="s2">&quot;http://kg.erp.taihuoniao.com/static/img/default-logo.png&quot;</span><span class="p">,</span>
@@ -1674,7 +1682,7 @@
 <h3>接口说明<a class="headerlink" href="#id75" title="永久链接至标题">¶</a></h3>
 <ul class="simple">
 <li>API接口请求地址：<code class="docutils literal"><span class="pre">/guess_image/is_share</span></code></li>
-<li>API接口请求方法：<code class="docutils literal"><span class="pre">GET</span></code></li>
+<li>API接口请求方法：<code class="docutils literal"><span class="pre">POST</span></code></li>
 <li>API接口用户授权：<code class="docutils literal"><span class="pre">token</span></code></li>
 </ul>
 </div>
@@ -1682,6 +1690,42 @@
 <h3>返回示例<a class="headerlink" href="#id76" title="永久链接至标题">¶</a></h3>
 <p>JSON数据格式:</p>
 <div class="highlight-javascript"><div class="highlight"><pre><span></span><span class="p">{</span>
+    <span class="s2">&quot;status&quot;</span><span class="o">:</span> <span class="p">{</span>
+        <span class="s2">&quot;code&quot;</span><span class="o">:</span> <span class="mi">200</span><span class="p">,</span>
+        <span class="s2">&quot;message&quot;</span><span class="o">:</span> <span class="s2">&quot;Ok all right.&quot;</span>
+    <span class="p">},</span>
+    <span class="s2">&quot;success&quot;</span><span class="o">:</span> <span class="kc">true</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="id77">
+<h2>猜图-邀请好友信息<a class="headerlink" href="#id77" title="永久链接至标题">¶</a></h2>
+<p>猜图-邀请好友信息</p>
+<div class="section" id="id78">
+<h3>接口说明<a class="headerlink" href="#id78" title="永久链接至标题">¶</a></h3>
+<ul class="simple">
+<li>API接口请求地址：<code class="docutils literal"><span class="pre">/guess_image/invite_friend</span></code></li>
+<li>API接口请求方法：<code class="docutils literal"><span class="pre">GET</span></code></li>
+<li>API接口用户授权：<code class="docutils literal"><span class="pre">token</span></code></li>
+</ul>
+</div>
+<div class="section" id="id79">
+<h3>返回示例<a class="headerlink" href="#id79" title="永久链接至标题">¶</a></h3>
+<p>JSON数据格式:</p>
+<div class="highlight-javascript"><div class="highlight"><pre><span></span><span class="p">{</span>
+    <span class="s2">&quot;data&quot;</span><span class="o">:</span> <span class="p">{</span>
+        <span class="s2">&quot;invite_count&quot;</span><span class="o">:</span> <span class="mi">1</span><span class="p">,</span>  <span class="c1">// 邀请人数</span>
+        <span class="s2">&quot;invite_name&quot;</span><span class="o">:</span> <span class="s2">&quot;默默&quot;</span><span class="p">,</span>  <span class="c1">//被邀请人姓名</span>
+        <span class="s2">&quot;user_info&quot;</span><span class="o">:</span> <span class="p">[</span>  <span class="c1">// 三个头像</span>
+            <span class="p">{</span>
+                <span class="s2">&quot;user_logo&quot;</span><span class="o">:</span> <span class="s2">&quot;http://kg.erp.taihuoniao.com/static/img/default-logo.png&quot;</span><span class="p">,</span>
+                <span class="s2">&quot;user_name&quot;</span><span class="o">:</span> <span class="s2">&quot;默默&quot;</span><span class="p">,</span>
+                <span class="s2">&quot;user_sn&quot;</span><span class="o">:</span> <span class="s2">&quot;15672098143&quot;</span>
+            <span class="p">}</span>
+        <span class="p">]</span>
+    <span class="p">},</span>
     <span class="s2">&quot;status&quot;</span><span class="o">:</span> <span class="p">{</span>
         <span class="s2">&quot;code&quot;</span><span class="o">:</span> <span class="mi">200</span><span class="p">,</span>
         <span class="s2">&quot;message&quot;</span><span class="o">:</span> <span class="s2">&quot;Ok all right.&quot;</span>
