@@ -860,7 +860,8 @@ JSON数据格式:
                 {
                     "amount": 18,  // 红包金额
                     "user_logo": "http://kg.erp.taihuoniao.com/static/img/default-logo.png",  // 头像
-                    "user_name": "15210062187"  // 用户名
+                    "user_name": "默默",  // 用户名
+                    "user_sn": "17160283459"  // 用户编号
                 }
             ]
         },
