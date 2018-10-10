@@ -378,7 +378,7 @@ JSON数据格式:
             "status": 5,  // 订单状态
             "life_order_status": 1,  // 1、待发货 2、已发货 3、已完成
             "master_order_status": 1,  // 1、待发货 2、已发货 3、已完成 4、已取消 5、待付款
-            "user_order_status": 1  // 1、待发货 2、待收货 3、待评价 4、待付款
+            "user_order_status": 1  // 1、待发货 2、待收货 3、待评价 4、待付款 5、已完成 6、已取消
             "store": {  // 店铺
                 "store_logo": {  // logo
                     "created_at": 1,
@@ -520,7 +520,7 @@ JSON数据格式:
             "rid": "D18070316803529",  // 订单编号
             "ship_mode": 1,  // 运送方式
             "status": 5,  // 订单状态
-            "user_order_status": 1  // 1、待发货 2、待收货 3、待评价 4、待付款
+            "user_order_status": 1  // 1、待发货 2、待收货 3、待评价 4、待付款 5、已完成 6、已取消
             "store": {  // 店铺
                 "store_logo": {  // logo
                     "created_at": 1,
@@ -663,7 +663,7 @@ JSON数据格式:
                     "rid": "D18070316803529",  // 订单编号
                     "ship_mode": 1,  // 运送方式
                     "status": 5,  // 订单状态
-                    "user_order_status": 1
+                    "user_order_status": 1 // 1、待发货 2、待收货 3、待评价 4、待付款 5、已完成 6、已取消
                     "store": {  // 店铺
                         "store_logo": {  // logo
                             "created_at": 1,

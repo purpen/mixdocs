@@ -301,7 +301,8 @@ JSON数据格式:
                     "is_used": false,  // 是否使用
                     "order_rid": null,  // 订单编号
                     "store_logo": "https://s3.moebeast.com/20180918/3505FgKkWolTuPukXCVMpxI22Q8ssunL.png",
-                    "store_name": "乐喜生活馆",
+                    "store_name": "乐喜生活馆", // 店铺名
+                    "store_rid": "12313141", // 店铺编号
                     "used_at": null  // 使用时间
                 }
             ],

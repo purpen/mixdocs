@@ -1033,6 +1033,39 @@ JSON数据格式:
 
 
 
+猜图-最新邀请好友登录信息
+-----------------------------------
+猜图-最新邀请好友登录信息
+
+接口说明
+~~~~~~~~~~~~~~
+
+* API接口请求地址：``/guess_image/new_friend_info``
+* API接口请求方法：``GET``
+* API接口用户授权：``token``
 
 
+返回示例
+~~~~~~~~~~~~~~~~
 
+JSON数据格式:
+
+.. code-block:: javascript
+
+
+    {
+        "data": {
+            "user_info": [
+                {
+                    "user_logo": "http://kg.erp.taihuoniao.com/static/img/default-logo.png",
+                    "user_name": "15210062187",
+                    "user_sn": "17160283459"
+                },
+            ]
+        },
+        "status": {
+            "code": 200,
+            "message": "Ok all right."
+        },
+        "success": true
+    }
