@@ -30,7 +30,9 @@
                 "freight": 14,  // 运费
                 "official_order_id": null,  // 官方平台订单号
                 "outside_target_id": "D18070316803529",  // 第三方平台订单号
-                "pay_amount": 17,  // 支付金额
+                "pay_amount": 17,  // b端商家 支付金额
+                "user_pay_amount": 17, // c端用户 支付金额
+                "official_bonus_amount": 0, // 官方优惠券优惠金额
                 "reach_minus": 0,  // 满减金额
                 "received_at": 0,  // 收货时间
                 "distributed": false,  // 分销订单

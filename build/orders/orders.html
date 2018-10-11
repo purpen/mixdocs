@@ -322,6 +322,12 @@
 <li><a class="reference internal" href="#id83">返回示例</a></li>
 </ul>
 </li>
+<li><a class="reference internal" href="#id84">微信小程序支付签名</a><ul>
+<li><a class="reference internal" href="#id85">接口说明</a></li>
+<li><a class="reference internal" href="#id86">请求参数</a></li>
+<li><a class="reference internal" href="#id87">返回示例</a></li>
+</ul>
+</li>
 </ul>
 </li>
 </ul>
@@ -479,6 +485,12 @@
 <li><a class="reference internal" href="#id83">返回示例</a></li>
 </ul>
 </li>
+<li><a class="reference internal" href="#id84">微信小程序支付签名</a><ul>
+<li><a class="reference internal" href="#id85">接口说明</a></li>
+<li><a class="reference internal" href="#id86">请求参数</a></li>
+<li><a class="reference internal" href="#id87">返回示例</a></li>
+</ul>
+</li>
 </ul>
 </li>
 </ul>
@@ -590,7 +602,9 @@
                 <span class="s2">&quot;freight&quot;</span><span class="o">:</span> <span class="mi">14</span><span class="p">,</span>  <span class="c1">// 运费</span>
                 <span class="s2">&quot;official_order_id&quot;</span><span class="o">:</span> <span class="kc">null</span><span class="p">,</span>  <span class="c1">// 官方平台订单号</span>
                 <span class="s2">&quot;outside_target_id&quot;</span><span class="o">:</span> <span class="s2">&quot;D18070316803529&quot;</span><span class="p">,</span>  <span class="c1">// 第三方平台订单号</span>
-                <span class="s2">&quot;pay_amount&quot;</span><span class="o">:</span> <span class="mi">17</span><span class="p">,</span>  <span class="c1">// 支付金额</span>
+                <span class="s2">&quot;pay_amount&quot;</span><span class="o">:</span> <span class="mi">17</span><span class="p">,</span>  <span class="c1">// b端商家 支付金额</span>
+                <span class="s2">&quot;user_pay_amount&quot;</span><span class="o">:</span> <span class="mi">17</span><span class="p">,</span> <span class="c1">// c端用户 支付金额</span>
+                <span class="s2">&quot;official_bonus_amount&quot;</span><span class="o">:</span> <span class="mi">0</span><span class="p">,</span> <span class="c1">// 官方优惠券优惠金额</span>
                 <span class="s2">&quot;reach_minus&quot;</span><span class="o">:</span> <span class="mi">0</span><span class="p">,</span>  <span class="c1">// 满减金额</span>
                 <span class="s2">&quot;distributed&quot;</span><span class="o">:</span> <span class="kc">false</span><span class="p">,</span>  <span class="c1">// 分销订单</span>
                 <span class="s2">&quot;remark&quot;</span><span class="o">:</span> <span class="kc">null</span><span class="p">,</span>  <span class="c1">// 卖家备注</span>
@@ -789,7 +803,9 @@
                 <span class="s2">&quot;freight&quot;</span><span class="o">:</span> <span class="mi">14</span><span class="p">,</span>  <span class="c1">// 运费</span>
                 <span class="s2">&quot;official_order_id&quot;</span><span class="o">:</span> <span class="kc">null</span><span class="p">,</span>  <span class="c1">// 官方平台订单号</span>
                 <span class="s2">&quot;outside_target_id&quot;</span><span class="o">:</span> <span class="s2">&quot;D18070316803529&quot;</span><span class="p">,</span>  <span class="c1">// 第三方平台订单号</span>
-                <span class="s2">&quot;pay_amount&quot;</span><span class="o">:</span> <span class="mi">17</span><span class="p">,</span>  <span class="c1">// 支付金额</span>
+                <span class="s2">&quot;pay_amount&quot;</span><span class="o">:</span> <span class="mi">17</span><span class="p">,</span>  <span class="c1">// b端商家 支付金额</span>
+                <span class="s2">&quot;user_pay_amount&quot;</span><span class="o">:</span> <span class="mi">17</span><span class="p">,</span> <span class="c1">// c端用户 支付金额</span>
+                <span class="s2">&quot;official_bonus_amount&quot;</span><span class="o">:</span> <span class="mi">0</span><span class="p">,</span> <span class="c1">// 官方优惠券优惠金额</span>
                 <span class="s2">&quot;reach_minus&quot;</span><span class="o">:</span> <span class="mi">0</span><span class="p">,</span>  <span class="c1">// 满减金额</span>
                 <span class="s2">&quot;distributed&quot;</span><span class="o">:</span> <span class="kc">false</span><span class="p">,</span>  <span class="c1">// 分销订单</span>
                 <span class="s2">&quot;remark&quot;</span><span class="o">:</span> <span class="kc">null</span><span class="p">,</span>  <span class="c1">// 卖家备注</span>
@@ -948,7 +964,9 @@
         <span class="s2">&quot;freight&quot;</span><span class="o">:</span> <span class="mi">14</span><span class="p">,</span>  <span class="c1">// 运费</span>
         <span class="s2">&quot;official_order_id&quot;</span><span class="o">:</span> <span class="kc">null</span><span class="p">,</span>  <span class="c1">// 官方平台订单号</span>
         <span class="s2">&quot;outside_target_id&quot;</span><span class="o">:</span> <span class="s2">&quot;D18070316803529&quot;</span><span class="p">,</span>  <span class="c1">// 第三方平台订单号</span>
-        <span class="s2">&quot;pay_amount&quot;</span><span class="o">:</span> <span class="mi">17</span><span class="p">,</span>  <span class="c1">// 支付金额</span>
+        <span class="s2">&quot;pay_amount&quot;</span><span class="o">:</span> <span class="mi">17</span><span class="p">,</span>  <span class="c1">// b端商家 支付金额</span>
+        <span class="s2">&quot;user_pay_amount&quot;</span><span class="o">:</span> <span class="mi">17</span><span class="p">,</span> <span class="c1">// c端用户 支付金额</span>
+        <span class="s2">&quot;official_bonus_amount&quot;</span><span class="o">:</span> <span class="mi">0</span><span class="p">,</span> <span class="c1">// 官方优惠券优惠金额</span>
         <span class="s2">&quot;reach_minus&quot;</span><span class="o">:</span> <span class="mi">0</span><span class="p">,</span>  <span class="c1">// 满减金额</span>
         <span class="s2">&quot;distributed&quot;</span><span class="o">:</span> <span class="kc">false</span><span class="p">,</span>  <span class="c1">// 分销订单</span>
         <span class="s2">&quot;remark&quot;</span><span class="o">:</span> <span class="kc">null</span><span class="p">,</span>  <span class="c1">// 卖家备注</span>
@@ -1106,7 +1124,9 @@
         <span class="s2">&quot;freight&quot;</span><span class="o">:</span> <span class="mi">14</span><span class="p">,</span>  <span class="c1">// 运费</span>
         <span class="s2">&quot;official_order_id&quot;</span><span class="o">:</span> <span class="kc">null</span><span class="p">,</span>  <span class="c1">// 官方平台订单号</span>
         <span class="s2">&quot;outside_target_id&quot;</span><span class="o">:</span> <span class="s2">&quot;D18070316803529&quot;</span><span class="p">,</span>  <span class="c1">// 第三方平台订单号</span>
-        <span class="s2">&quot;pay_amount&quot;</span><span class="o">:</span> <span class="mi">17</span><span class="p">,</span>  <span class="c1">// 支付金额</span>
+        <span class="s2">&quot;pay_amount&quot;</span><span class="o">:</span> <span class="mi">17</span><span class="p">,</span>  <span class="c1">// b端商家 支付金额</span>
+        <span class="s2">&quot;user_pay_amount&quot;</span><span class="o">:</span> <span class="mi">17</span><span class="p">,</span> <span class="c1">// c端用户 支付金额</span>
+        <span class="s2">&quot;official_bonus_amount&quot;</span><span class="o">:</span> <span class="mi">0</span><span class="p">,</span> <span class="c1">// 官方优惠券优惠金额</span>
         <span class="s2">&quot;reach_minus&quot;</span><span class="o">:</span> <span class="mi">0</span><span class="p">,</span>  <span class="c1">// 满减金额</span>
         <span class="s2">&quot;distributed&quot;</span><span class="o">:</span> <span class="kc">false</span><span class="p">,</span>  <span class="c1">// 分销订单</span>
         <span class="s2">&quot;remark&quot;</span><span class="o">:</span> <span class="kc">null</span><span class="p">,</span>  <span class="c1">// 卖家备注</span>
@@ -1263,7 +1283,9 @@
                 <span class="s2">&quot;freight&quot;</span><span class="o">:</span> <span class="mi">14</span><span class="p">,</span>  <span class="c1">// 运费</span>
                 <span class="s2">&quot;official_order_id&quot;</span><span class="o">:</span> <span class="kc">null</span><span class="p">,</span>  <span class="c1">// 官方平台订单号</span>
                 <span class="s2">&quot;outside_target_id&quot;</span><span class="o">:</span> <span class="s2">&quot;D18070316803529&quot;</span><span class="p">,</span>  <span class="c1">// 第三方平台订单号</span>
-                <span class="s2">&quot;pay_amount&quot;</span><span class="o">:</span> <span class="mi">17</span><span class="p">,</span>  <span class="c1">// 支付金额</span>
+                <span class="s2">&quot;pay_amount&quot;</span><span class="o">:</span> <span class="mi">17</span><span class="p">,</span>  <span class="c1">// b端商家 支付金额</span>
+                <span class="s2">&quot;user_pay_amount&quot;</span><span class="o">:</span> <span class="mi">17</span><span class="p">,</span> <span class="c1">// c端用户 支付金额</span>
+                <span class="s2">&quot;official_bonus_amount&quot;</span><span class="o">:</span> <span class="mi">0</span><span class="p">,</span> <span class="c1">// 官方优惠券优惠金额</span>
                 <span class="s2">&quot;reach_minus&quot;</span><span class="o">:</span> <span class="mi">0</span><span class="p">,</span>  <span class="c1">// 满减金额</span>
                 <span class="s2">&quot;distributed&quot;</span><span class="o">:</span> <span class="kc">false</span><span class="p">,</span>  <span class="c1">// 分销订单</span>
                 <span class="s2">&quot;remark&quot;</span><span class="o">:</span> <span class="kc">null</span><span class="p">,</span>  <span class="c1">// 卖家备注</span>
@@ -1613,7 +1635,9 @@
                 <span class="s2">&quot;freight&quot;</span><span class="o">:</span> <span class="mi">14</span><span class="p">,</span>  <span class="c1">// 运费</span>
                 <span class="s2">&quot;official_order_id&quot;</span><span class="o">:</span> <span class="kc">null</span><span class="p">,</span>  <span class="c1">// 官方平台订单号</span>
                 <span class="s2">&quot;outside_target_id&quot;</span><span class="o">:</span> <span class="s2">&quot;D18070316803529&quot;</span><span class="p">,</span>  <span class="c1">// 第三方平台订单号</span>
-                <span class="s2">&quot;pay_amount&quot;</span><span class="o">:</span> <span class="mi">17</span><span class="p">,</span>  <span class="c1">// 支付金额</span>
+                <span class="s2">&quot;pay_amount&quot;</span><span class="o">:</span> <span class="mi">17</span><span class="p">,</span>  <span class="c1">// b端商家 支付金额</span>
+                <span class="s2">&quot;user_pay_amount&quot;</span><span class="o">:</span> <span class="mi">17</span><span class="p">,</span> <span class="c1">// c端用户 支付金额</span>
+                <span class="s2">&quot;official_bonus_amount&quot;</span><span class="o">:</span> <span class="mi">0</span><span class="p">,</span> <span class="c1">// 官方优惠券优惠金额</span>
                 <span class="s2">&quot;reach_minus&quot;</span><span class="o">:</span> <span class="mi">0</span><span class="p">,</span>  <span class="c1">// 满减金额</span>
                 <span class="s2">&quot;distributed&quot;</span><span class="o">:</span> <span class="kc">false</span><span class="p">,</span>  <span class="c1">// 分销订单</span>
                 <span class="s2">&quot;remark&quot;</span><span class="o">:</span> <span class="kc">null</span><span class="p">,</span>  <span class="c1">// 卖家备注</span>
@@ -1938,7 +1962,9 @@
             <span class="s2">&quot;freight&quot;</span><span class="o">:</span> <span class="mi">14</span><span class="p">,</span>  <span class="c1">// 运费</span>
             <span class="s2">&quot;official_order_id&quot;</span><span class="o">:</span> <span class="kc">null</span><span class="p">,</span>  <span class="c1">// 官方平台订单号</span>
             <span class="s2">&quot;outside_target_id&quot;</span><span class="o">:</span> <span class="s2">&quot;D18070316803529&quot;</span><span class="p">,</span>  <span class="c1">// 第三方平台订单号</span>
-            <span class="s2">&quot;pay_amount&quot;</span><span class="o">:</span> <span class="mi">17</span><span class="p">,</span>  <span class="c1">// 支付金额</span>
+            <span class="s2">&quot;pay_amount&quot;</span><span class="o">:</span> <span class="mi">17</span><span class="p">,</span>  <span class="c1">// b端商家 支付金额</span>
+            <span class="s2">&quot;user_pay_amount&quot;</span><span class="o">:</span> <span class="mi">17</span><span class="p">,</span> <span class="c1">// c端用户 支付金额</span>
+            <span class="s2">&quot;official_bonus_amount&quot;</span><span class="o">:</span> <span class="mi">0</span><span class="p">,</span> <span class="c1">// 官方优惠券优惠金额</span>
             <span class="s2">&quot;reach_minus&quot;</span><span class="o">:</span> <span class="mi">0</span><span class="p">,</span>  <span class="c1">// 满减金额</span>
             <span class="s2">&quot;distributed&quot;</span><span class="o">:</span> <span class="kc">false</span><span class="p">,</span>  <span class="c1">// 分销订单</span>
             <span class="s2">&quot;remark&quot;</span><span class="o">:</span> <span class="kc">null</span><span class="p">,</span>  <span class="c1">// 卖家备注</span>
@@ -2145,7 +2171,9 @@
                 <span class="s2">&quot;freight&quot;</span><span class="o">:</span> <span class="mi">14</span><span class="p">,</span>  <span class="c1">// 运费</span>
                 <span class="s2">&quot;official_order_id&quot;</span><span class="o">:</span> <span class="kc">null</span><span class="p">,</span>  <span class="c1">// 官方平台订单号</span>
                 <span class="s2">&quot;outside_target_id&quot;</span><span class="o">:</span> <span class="s2">&quot;D18070316803529&quot;</span><span class="p">,</span>  <span class="c1">// 第三方平台订单号</span>
-                <span class="s2">&quot;pay_amount&quot;</span><span class="o">:</span> <span class="mi">17</span><span class="p">,</span>  <span class="c1">// 支付金额</span>
+                <span class="s2">&quot;pay_amount&quot;</span><span class="o">:</span> <span class="mi">17</span><span class="p">,</span>  <span class="c1">// b端商家 支付金额</span>
+                <span class="s2">&quot;user_pay_amount&quot;</span><span class="o">:</span> <span class="mi">17</span><span class="p">,</span> <span class="c1">// c端用户 支付金额</span>
+                <span class="s2">&quot;official_bonus_amount&quot;</span><span class="o">:</span> <span class="mi">0</span><span class="p">,</span> <span class="c1">// 官方优惠券优惠金额</span>
                 <span class="s2">&quot;reach_minus&quot;</span><span class="o">:</span> <span class="mi">0</span><span class="p">,</span>  <span class="c1">// 满减金额</span>
                 <span class="s2">&quot;distributed&quot;</span><span class="o">:</span> <span class="kc">false</span><span class="p">,</span>  <span class="c1">// 分销订单</span>
                 <span class="s2">&quot;remark&quot;</span><span class="o">:</span> <span class="kc">null</span><span class="p">,</span>  <span class="c1">// 卖家备注</span>
@@ -2293,7 +2321,9 @@
                 <span class="s2">&quot;freight&quot;</span><span class="o">:</span> <span class="mi">14</span><span class="p">,</span>  <span class="c1">// 运费</span>
                 <span class="s2">&quot;official_order_id&quot;</span><span class="o">:</span> <span class="kc">null</span><span class="p">,</span>  <span class="c1">// 官方平台订单号</span>
                 <span class="s2">&quot;outside_target_id&quot;</span><span class="o">:</span> <span class="s2">&quot;D18070316803529&quot;</span><span class="p">,</span>  <span class="c1">// 第三方平台订单号</span>
-                <span class="s2">&quot;pay_amount&quot;</span><span class="o">:</span> <span class="mi">17</span><span class="p">,</span>  <span class="c1">// 支付金额</span>
+                <span class="s2">&quot;pay_amount&quot;</span><span class="o">:</span> <span class="mi">17</span><span class="p">,</span>  <span class="c1">// b端商家 支付金额</span>
+                <span class="s2">&quot;user_pay_amount&quot;</span><span class="o">:</span> <span class="mi">17</span><span class="p">,</span> <span class="c1">// c端用户 支付金额</span>
+                <span class="s2">&quot;official_bonus_amount&quot;</span><span class="o">:</span> <span class="mi">0</span><span class="p">,</span> <span class="c1">// 官方优惠券优惠金额</span>
                 <span class="s2">&quot;reach_minus&quot;</span><span class="o">:</span> <span class="mi">0</span><span class="p">,</span>  <span class="c1">// 满减金额</span>
                 <span class="s2">&quot;distributed&quot;</span><span class="o">:</span> <span class="kc">false</span><span class="p">,</span>  <span class="c1">// 分销订单</span>
                 <span class="s2">&quot;remark&quot;</span><span class="o">:</span> <span class="kc">null</span><span class="p">,</span>  <span class="c1">// 卖家备注</span>
@@ -2441,7 +2471,9 @@
                 <span class="s2">&quot;freight&quot;</span><span class="o">:</span> <span class="mi">14</span><span class="p">,</span>  <span class="c1">// 运费</span>
                 <span class="s2">&quot;official_order_id&quot;</span><span class="o">:</span> <span class="kc">null</span><span class="p">,</span>  <span class="c1">// 官方平台订单号</span>
                 <span class="s2">&quot;outside_target_id&quot;</span><span class="o">:</span> <span class="s2">&quot;D18070316803529&quot;</span><span class="p">,</span>  <span class="c1">// 第三方平台订单号</span>
-                <span class="s2">&quot;pay_amount&quot;</span><span class="o">:</span> <span class="mi">17</span><span class="p">,</span>  <span class="c1">// 支付金额</span>
+                <span class="s2">&quot;pay_amount&quot;</span><span class="o">:</span> <span class="mi">17</span><span class="p">,</span>  <span class="c1">// b端商家 支付金额</span>
+                <span class="s2">&quot;user_pay_amount&quot;</span><span class="o">:</span> <span class="mi">17</span><span class="p">,</span> <span class="c1">// c端用户 支付金额</span>
+                <span class="s2">&quot;official_bonus_amount&quot;</span><span class="o">:</span> <span class="mi">0</span><span class="p">,</span> <span class="c1">// 官方优惠券优惠金额</span>
                 <span class="s2">&quot;reach_minus&quot;</span><span class="o">:</span> <span class="mi">0</span><span class="p">,</span>  <span class="c1">// 满减金额</span>
                 <span class="s2">&quot;distributed&quot;</span><span class="o">:</span> <span class="kc">false</span><span class="p">,</span>  <span class="c1">// 分销订单</span>
                 <span class="s2">&quot;remark&quot;</span><span class="o">:</span> <span class="kc">null</span><span class="p">,</span>  <span class="c1">// 卖家备注</span>
@@ -2601,7 +2633,9 @@
                 <span class="s2">&quot;freight&quot;</span><span class="o">:</span> <span class="mi">14</span><span class="p">,</span>  <span class="c1">// 运费</span>
                 <span class="s2">&quot;official_order_id&quot;</span><span class="o">:</span> <span class="kc">null</span><span class="p">,</span>  <span class="c1">// 官方平台订单号</span>
                 <span class="s2">&quot;outside_target_id&quot;</span><span class="o">:</span> <span class="s2">&quot;D18070316803529&quot;</span><span class="p">,</span>  <span class="c1">// 第三方平台订单号</span>
-                <span class="s2">&quot;pay_amount&quot;</span><span class="o">:</span> <span class="mi">17</span><span class="p">,</span>  <span class="c1">// 支付金额</span>
+                <span class="s2">&quot;pay_amount&quot;</span><span class="o">:</span> <span class="mi">17</span><span class="p">,</span>  <span class="c1">// b端商家 支付金额</span>
+                <span class="s2">&quot;user_pay_amount&quot;</span><span class="o">:</span> <span class="mi">17</span><span class="p">,</span> <span class="c1">// c端用户 支付金额</span>
+                <span class="s2">&quot;official_bonus_amount&quot;</span><span class="o">:</span> <span class="mi">0</span><span class="p">,</span> <span class="c1">// 官方优惠券优惠金额</span>
                 <span class="s2">&quot;reach_minus&quot;</span><span class="o">:</span> <span class="mi">0</span><span class="p">,</span>  <span class="c1">// 满减金额</span>
                 <span class="s2">&quot;distributed&quot;</span><span class="o">:</span> <span class="kc">false</span><span class="p">,</span>  <span class="c1">// 分销订单</span>
                 <span class="s2">&quot;remark&quot;</span><span class="o">:</span> <span class="kc">null</span><span class="p">,</span>  <span class="c1">// 卖家备注</span>
@@ -2749,7 +2783,9 @@
                 <span class="s2">&quot;freight&quot;</span><span class="o">:</span> <span class="mi">14</span><span class="p">,</span>  <span class="c1">// 运费</span>
                 <span class="s2">&quot;official_order_id&quot;</span><span class="o">:</span> <span class="kc">null</span><span class="p">,</span>  <span class="c1">// 官方平台订单号</span>
                 <span class="s2">&quot;outside_target_id&quot;</span><span class="o">:</span> <span class="s2">&quot;D18070316803529&quot;</span><span class="p">,</span>  <span class="c1">// 第三方平台订单号</span>
-                <span class="s2">&quot;pay_amount&quot;</span><span class="o">:</span> <span class="mi">17</span><span class="p">,</span>  <span class="c1">// 支付金额</span>
+                <span class="s2">&quot;pay_amount&quot;</span><span class="o">:</span> <span class="mi">17</span><span class="p">,</span>  <span class="c1">// b端商家 支付金额</span>
+                <span class="s2">&quot;user_pay_amount&quot;</span><span class="o">:</span> <span class="mi">17</span><span class="p">,</span> <span class="c1">// c端用户 支付金额</span>
+                <span class="s2">&quot;official_bonus_amount&quot;</span><span class="o">:</span> <span class="mi">0</span><span class="p">,</span> <span class="c1">// 官方优惠券优惠金额</span>
                 <span class="s2">&quot;reach_minus&quot;</span><span class="o">:</span> <span class="mi">0</span><span class="p">,</span>  <span class="c1">// 满减金额</span>
                 <span class="s2">&quot;distributed&quot;</span><span class="o">:</span> <span class="kc">false</span><span class="p">,</span>  <span class="c1">// 分销订单</span>
                 <span class="s2">&quot;remark&quot;</span><span class="o">:</span> <span class="kc">null</span><span class="p">,</span>  <span class="c1">// 卖家备注</span>
@@ -2897,7 +2933,9 @@
                 <span class="s2">&quot;freight&quot;</span><span class="o">:</span> <span class="mi">14</span><span class="p">,</span>  <span class="c1">// 运费</span>
                 <span class="s2">&quot;official_order_id&quot;</span><span class="o">:</span> <span class="kc">null</span><span class="p">,</span>  <span class="c1">// 官方平台订单号</span>
                 <span class="s2">&quot;outside_target_id&quot;</span><span class="o">:</span> <span class="s2">&quot;D18070316803529&quot;</span><span class="p">,</span>  <span class="c1">// 第三方平台订单号</span>
-                <span class="s2">&quot;pay_amount&quot;</span><span class="o">:</span> <span class="mi">17</span><span class="p">,</span>  <span class="c1">// 支付金额</span>
+                <span class="s2">&quot;pay_amount&quot;</span><span class="o">:</span> <span class="mi">17</span><span class="p">,</span>  <span class="c1">// b端商家 支付金额</span>
+                <span class="s2">&quot;user_pay_amount&quot;</span><span class="o">:</span> <span class="mi">17</span><span class="p">,</span> <span class="c1">// c端用户 支付金额</span>
+                <span class="s2">&quot;official_bonus_amount&quot;</span><span class="o">:</span> <span class="mi">0</span><span class="p">,</span> <span class="c1">// 官方优惠券优惠金额</span>
                 <span class="s2">&quot;reach_minus&quot;</span><span class="o">:</span> <span class="mi">0</span><span class="p">,</span>  <span class="c1">// 满减金额</span>
                 <span class="s2">&quot;received_at&quot;</span><span class="o">:</span> <span class="mi">0</span><span class="p">,</span>  <span class="c1">// 收货时间</span>
                 <span class="s2">&quot;distributed&quot;</span><span class="o">:</span> <span class="kc">false</span><span class="p">,</span>  <span class="c1">// 分销订单</span>
@@ -3242,7 +3280,9 @@
                 <span class="s2">&quot;life_order_status&quot;</span><span class="o">:</span> <span class="mi">3</span><span class="p">,</span>  <span class="c1">// 生活馆订单状态， 1、待发货 2、已发货 3、已完成</span>
                  <span class="s2">&quot;official_order_id&quot;</span><span class="o">:</span> <span class="kc">null</span><span class="p">,</span>  <span class="c1">// 官方平台订单号</span>
                 <span class="s2">&quot;outside_target_id&quot;</span><span class="o">:</span> <span class="s2">&quot;D18070316803529&quot;</span><span class="p">,</span>  <span class="c1">// 第三方平台订单号</span>
-                <span class="s2">&quot;pay_amount&quot;</span><span class="o">:</span> <span class="mi">17</span><span class="p">,</span>  <span class="c1">// 支付金额</span>
+                <span class="s2">&quot;pay_amount&quot;</span><span class="o">:</span> <span class="mi">17</span><span class="p">,</span>  <span class="c1">// b端商家 支付金额</span>
+                <span class="s2">&quot;user_pay_amount&quot;</span><span class="o">:</span> <span class="mi">17</span><span class="p">,</span> <span class="c1">// c端用户 支付金额</span>
+                <span class="s2">&quot;official_bonus_amount&quot;</span><span class="o">:</span> <span class="mi">0</span><span class="p">,</span> <span class="c1">// 官方优惠券优惠金额</span>
                 <span class="s2">&quot;payed_at&quot;</span><span class="o">:</span> <span class="mi">1534231106</span><span class="p">,</span>  <span class="c1">// 支付时间</span>
                 <span class="s2">&quot;payment_slip&quot;</span><span class="o">:</span> <span class="kc">null</span><span class="p">,</span>  <span class="c1">// 支付单号</span>
                 <span class="s2">&quot;reach_minus&quot;</span><span class="o">:</span> <span class="mi">2</span><span class="p">,</span>
@@ -3296,6 +3336,93 @@
     <span class="s2">&quot;data&quot;</span><span class="o">:</span> <span class="p">{</span>
         <span class="s2">&quot;coupon_count&quot;</span><span class="o">:</span> <span class="mi">3</span><span class="p">,</span>  <span class="c1">// 未使用优惠券数量</span>
         <span class="s2">&quot;order_count&quot;</span><span class="o">:</span> <span class="mi">170</span>  <span class="c1">// 未付款订单数</span>
+    <span class="p">},</span>
+    <span class="s2">&quot;status&quot;</span><span class="o">:</span> <span class="p">{</span>
+        <span class="s2">&quot;code&quot;</span><span class="o">:</span> <span class="mi">200</span><span class="p">,</span>
+        <span class="s2">&quot;message&quot;</span><span class="o">:</span> <span class="s2">&quot;Ok all right.&quot;</span>
+    <span class="p">},</span>
+    <span class="s2">&quot;success&quot;</span><span class="o">:</span> <span class="kc">true</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="id84">
+<h2>微信小程序支付签名<a class="headerlink" href="#id84" title="永久链接至标题">¶</a></h2>
+<p>微信小程序支付签名</p>
+<div class="section" id="id85">
+<h3>接口说明<a class="headerlink" href="#id85" title="永久链接至标题">¶</a></h3>
+<ul class="simple">
+<li>API接口请求地址：<code class="docutils literal"><span class="pre">/orders/wx_prepay_sign</span></code></li>
+<li>API接口请求方法：<code class="docutils literal"><span class="pre">POST</span></code></li>
+<li>API接口用户授权：<code class="docutils literal"><span class="pre">token</span></code></li>
+</ul>
+</div>
+<div class="section" id="id86">
+<h3>请求参数<a class="headerlink" href="#id86" title="永久链接至标题">¶</a></h3>
+<table border="1" class="docutils">
+<colgroup>
+<col width="27%" />
+<col width="13%" />
+<col width="11%" />
+<col width="13%" />
+<col width="37%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">名称</th>
+<th class="head">类型</th>
+<th class="head">是否必须</th>
+<th class="head">默认值</th>
+<th class="head">描述说明</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>rid</td>
+<td>String</td>
+<td>必需</td>
+<td>&#160;</td>
+<td>订单编号</td>
+</tr>
+<tr class="row-odd"><td>authAppid</td>
+<td>String</td>
+<td>必需</td>
+<td>&#160;</td>
+<td>authAppid</td>
+</tr>
+<tr class="row-even"><td>openid</td>
+<td>String</td>
+<td>必需</td>
+<td>&#160;</td>
+<td>openid</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="id87">
+<h3>返回示例<a class="headerlink" href="#id87" title="永久链接至标题">¶</a></h3>
+<p>JSON数据格式:</p>
+<div class="highlight-javascript"><div class="highlight"><pre><span></span><span class="p">{</span>
+    <span class="s2">&quot;data&quot;</span><span class="o">:</span> <span class="p">{</span>
+        <span class="s1">&#39;appId&#39;</span><span class="o">:</span> <span class="s1">&#39;wxappId&#39;</span><span class="p">,</span>
+        <span class="s1">&#39;nonceStr&#39;</span><span class="o">:</span> <span class="s1">&#39;nonceStr&#39;</span><span class="p">,</span>
+        <span class="s1">&#39;package&#39;</span><span class="o">:</span> <span class="s1">&#39;prepay_id=package&#39;</span><span class="p">,</span>
+        <span class="s1">&#39;signType&#39;</span><span class="o">:</span> <span class="s1">&#39;signType&#39;</span><span class="p">,</span>
+        <span class="s1">&#39;timeStamp&#39;</span><span class="o">:</span> <span class="mi">1539245473</span><span class="p">,</span>
+        <span class="s1">&#39;pay_sign&#39;</span><span class="o">:</span> <span class="s1">&#39;pay_sign&#39;</span><span class="p">,</span>
+        <span class="s1">&#39;prepay_id&#39;</span><span class="o">:</span> <span class="s1">&#39;prepay_id&#39;</span><span class="p">,</span>
+        <span class="s2">&quot;is_merge&quot;</span><span class="o">:</span> <span class="kc">true</span><span class="p">,</span>  <span class="c1">// 是否合并支付</span>
+        <span class="s2">&quot;order_list&quot;</span><span class="o">:</span> <span class="p">[</span>  <span class="c1">// 订单信息</span>
+            <span class="p">{</span>
+                <span class="s2">&quot;store_name&quot;</span><span class="o">:</span> <span class="s2">&quot;第一家&quot;</span><span class="p">,</span>  <span class="c1">// 店铺名</span>
+                <span class="s2">&quot;total_quantity&quot;</span><span class="o">:</span> <span class="mi">30</span><span class="p">,</span>  <span class="c1">// 数量</span>
+                <span class="s2">&quot;user_pay_amount&quot;</span><span class="o">:</span> <span class="mf">1184.7</span> <span class="c1">//支付金额</span>
+            <span class="p">},</span>
+            <span class="p">{</span>
+                <span class="s2">&quot;store_name&quot;</span><span class="o">:</span> <span class="s2">&quot;第2家&quot;</span><span class="p">,</span>
+                <span class="s2">&quot;total_quantity&quot;</span><span class="o">:</span> <span class="mi">30</span><span class="p">,</span>
+                <span class="s2">&quot;user_pay_amount&quot;</span><span class="o">:</span> <span class="mf">9585.3</span>
+            <span class="p">}</span>
+        <span class="p">]</span>
     <span class="p">},</span>
     <span class="s2">&quot;status&quot;</span><span class="o">:</span> <span class="p">{</span>
         <span class="s2">&quot;code&quot;</span><span class="o">:</span> <span class="mi">200</span><span class="p">,</span>

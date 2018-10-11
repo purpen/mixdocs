@@ -58,7 +58,9 @@ JSON数据格式:
                     "freight": 14,  // 运费
                     "official_order_id": null,  // 官方平台订单号
                     "outside_target_id": "D18070316803529",  // 第三方平台订单号
-                    "pay_amount": 17,  // 支付金额
+                    "pay_amount": 17,  // b端商家 支付金额
+                    "user_pay_amount": 17, // c端用户 支付金额
+                    "official_bonus_amount": 0, // 官方优惠券优惠金额
                     "reach_minus": 0,  // 满减金额
                     "distributed": false,  // 分销订单
                     "remark": null,  // 卖家备注
@@ -222,7 +224,9 @@ JSON数据格式:
                     "freight": 14,  // 运费
                     "official_order_id": null,  // 官方平台订单号
                     "outside_target_id": "D18070316803529",  // 第三方平台订单号
-                    "pay_amount": 17,  // 支付金额
+                    "pay_amount": 17,  // b端商家 支付金额
+                    "user_pay_amount": 17, // c端用户 支付金额
+                    "official_bonus_amount": 0, // 官方优惠券优惠金额
                     "reach_minus": 0,  // 满减金额
                     "distributed": false,  // 分销订单
                     "remark": null,  // 卖家备注
@@ -369,7 +373,9 @@ JSON数据格式:
             "freight": 14,  // 运费
             "official_order_id": null,  // 官方平台订单号
             "outside_target_id": "D18070316803529",  // 第三方平台订单号
-            "pay_amount": 17,  // 支付金额
+            "pay_amount": 17,  // b端商家 支付金额
+            "user_pay_amount": 17, // c端用户 支付金额
+            "official_bonus_amount": 0, // 官方优惠券优惠金额
             "reach_minus": 0,  // 满减金额
             "distributed": false,  // 分销订单
             "remark": null,  // 卖家备注
@@ -513,7 +519,9 @@ JSON数据格式:
             "freight": 14,  // 运费
             "official_order_id": null,  // 官方平台订单号
             "outside_target_id": "D18070316803529",  // 第三方平台订单号
-            "pay_amount": 17,  // 支付金额
+            "pay_amount": 17,  // b端商家 支付金额
+            "user_pay_amount": 17, // c端用户 支付金额
+            "official_bonus_amount": 0, // 官方优惠券优惠金额
             "reach_minus": 0,  // 满减金额
             "distributed": false,  // 分销订单
             "remark": null,  // 卖家备注
@@ -656,7 +664,9 @@ JSON数据格式:
                     "freight": 14,  // 运费
                     "official_order_id": null,  // 官方平台订单号
                     "outside_target_id": "D18070316803529",  // 第三方平台订单号
-                    "pay_amount": 17,  // 支付金额
+                    "pay_amount": 17,  // b端商家 支付金额
+                    "user_pay_amount": 17, // c端用户 支付金额
+                    "official_bonus_amount": 0, // 官方优惠券优惠金额
                     "reach_minus": 0,  // 满减金额
                     "distributed": false,  // 分销订单
                     "remark": null,  // 卖家备注
@@ -855,7 +865,9 @@ JSON数据格式:
                     "freight": 14,  // 运费
                     "official_order_id": null,  // 官方平台订单号
                     "outside_target_id": "D18070316803529",  // 第三方平台订单号
-                    "pay_amount": 17,  // 支付金额
+                    "pay_amount": 17,  // b端商家 支付金额
+                    "user_pay_amount": 17, // c端用户 支付金额
+                    "official_bonus_amount": 0, // 官方优惠券优惠金额
                     "reach_minus": 0,  // 满减金额
                     "distributed": false,  // 分销订单
                     "remark": null,  // 卖家备注
@@ -1113,7 +1125,9 @@ JSON数据格式:
                 "freight": 14,  // 运费
                 "official_order_id": null,  // 官方平台订单号
                 "outside_target_id": "D18070316803529",  // 第三方平台订单号
-                "pay_amount": 17,  // 支付金额
+                "pay_amount": 17,  // b端商家 支付金额
+                "user_pay_amount": 17, // c端用户 支付金额
+                "official_bonus_amount": 0, // 官方优惠券优惠金额
                 "reach_minus": 0,  // 满减金额
                 "distributed": false,  // 分销订单
                 "remark": null,  // 卖家备注
@@ -1280,7 +1294,9 @@ JSON数据格式:
                     "freight": 14,  // 运费
                     "official_order_id": null,  // 官方平台订单号
                     "outside_target_id": "D18070316803529",  // 第三方平台订单号
-                    "pay_amount": 17,  // 支付金额
+                    "pay_amount": 17,  // b端商家 支付金额
+                    "user_pay_amount": 17, // c端用户 支付金额
+                    "official_bonus_amount": 0, // 官方优惠券优惠金额
                     "reach_minus": 0,  // 满减金额
                     "distributed": false,  // 分销订单
                     "remark": null,  // 卖家备注
@@ -1411,7 +1427,9 @@ JSON数据格式:
                     "freight": 14,  // 运费
                     "official_order_id": null,  // 官方平台订单号
                     "outside_target_id": "D18070316803529",  // 第三方平台订单号
-                    "pay_amount": 17,  // 支付金额
+                    "pay_amount": 17,  // b端商家 支付金额
+                    "user_pay_amount": 17, // c端用户 支付金额
+                    "official_bonus_amount": 0, // 官方优惠券优惠金额
                     "reach_minus": 0,  // 满减金额
                     "distributed": false,  // 分销订单
                     "remark": null,  // 卖家备注
@@ -1542,7 +1560,9 @@ JSON数据格式:
                     "freight": 14,  // 运费
                     "official_order_id": null,  // 官方平台订单号
                     "outside_target_id": "D18070316803529",  // 第三方平台订单号
-                    "pay_amount": 17,  // 支付金额
+                    "pay_amount": 17,  // b端商家 支付金额
+                    "user_pay_amount": 17, // c端用户 支付金额
+                    "official_bonus_amount": 0, // 官方优惠券优惠金额
                     "reach_minus": 0,  // 满减金额
                     "distributed": false,  // 分销订单
                     "remark": null,  // 卖家备注
@@ -1675,7 +1695,9 @@ JSON数据格式:
                     "freight": 14,  // 运费
                     "official_order_id": null,  // 官方平台订单号
                     "outside_target_id": "D18070316803529",  // 第三方平台订单号
-                    "pay_amount": 17,  // 支付金额
+                    "pay_amount": 17,  // b端商家 支付金额
+                    "user_pay_amount": 17, // c端用户 支付金额
+                    "official_bonus_amount": 0, // 官方优惠券优惠金额
                     "reach_minus": 0,  // 满减金额
                     "distributed": false,  // 分销订单
                     "remark": null,  // 卖家备注
@@ -1806,7 +1828,9 @@ JSON数据格式:
                     "freight": 14,  // 运费
                     "official_order_id": null,  // 官方平台订单号
                     "outside_target_id": "D18070316803529",  // 第三方平台订单号
-                    "pay_amount": 17,  // 支付金额
+                    "pay_amount": 17,  // b端商家 支付金额
+                    "user_pay_amount": 17, // c端用户 支付金额
+                    "official_bonus_amount": 0, // 官方优惠券优惠金额
                     "reach_minus": 0,  // 满减金额
                     "distributed": false,  // 分销订单
                     "remark": null,  // 卖家备注
@@ -1937,7 +1961,9 @@ JSON数据格式:
                     "freight": 14,  // 运费
                     "official_order_id": null,  // 官方平台订单号
                     "outside_target_id": "D18070316803529",  // 第三方平台订单号
-                    "pay_amount": 17,  // 支付金额
+                    "pay_amount": 17,  // b端商家 支付金额
+                    "user_pay_amount": 17, // c端用户 支付金额
+                    "official_bonus_amount": 0, // 官方优惠券优惠金额
                     "reach_minus": 0,  // 满减金额
                     "received_at": 0,  // 收货时间
                     "distributed": false,  // 分销订单
@@ -2224,7 +2250,9 @@ JSON数据格式:
                     "life_order_status": 3,  // 生活馆订单状态， 1、待发货 2、已发货 3、已完成
                      "official_order_id": null,  // 官方平台订单号
                     "outside_target_id": "D18070316803529",  // 第三方平台订单号
-                    "pay_amount": 17,  // 支付金额
+                    "pay_amount": 17,  // b端商家 支付金额
+                    "user_pay_amount": 17, // c端用户 支付金额
+                    "official_bonus_amount": 0, // 官方优惠券优惠金额
                     "payed_at": 1534231106,  // 支付时间
                     "payment_slip": null,  // 支付单号
                     "reach_minus": 2,
@@ -2291,7 +2319,62 @@ JSON数据格式:
     }
 
 
+微信小程序支付签名
+=============================
+微信小程序支付签名
 
+接口说明
+~~~~~~~~~~~~~~
 
+* API接口请求地址：``/orders/wx_prepay_sign``
+* API接口请求方法：``POST``
+* API接口用户授权：``token``
 
+请求参数
+~~~~~~~~~~~~~~~
+
+=====================  ==========  =========  ==========  =============================
+名称                    类型        是否必须     默认值       描述说明
+=====================  ==========  =========  ==========  =============================
+rid                    String      必需                    订单编号
+authAppid              String      必需                    authAppid
+openid                 String      必需                    openid
+=====================  ==========  =========  ==========  =============================
+
+返回示例
+~~~~~~~~~~~~~~~~
+
+JSON数据格式:
+
+.. code-block:: javascript
+
+    {
+        "data": {
+            'appId': 'wxappId',
+            'nonceStr': 'nonceStr',
+            'package': 'prepay_id=package',
+            'signType': 'signType',
+            'timeStamp': 1539245473,
+            'pay_sign': 'pay_sign',
+            'prepay_id': 'prepay_id',
+            "is_merge": true,  // 是否合并支付
+            "order_list": [  // 订单信息
+                {
+                    "store_name": "第一家",  // 店铺名
+                    "total_quantity": 30,  // 数量
+                    "user_pay_amount": 1184.7 //支付金额
+                },
+                {
+                    "store_name": "第2家",
+                    "total_quantity": 30,
+                    "user_pay_amount": 9585.3
+                }
+            ]
+        },
+        "status": {
+            "code": 200,
+            "message": "Ok all right."
+        },
+        "success": true
+    }
 
