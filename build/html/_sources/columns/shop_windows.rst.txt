@@ -177,7 +177,67 @@ JSON数据格式:
 
     {
         "data": {
-            "comment_count": 9,
+            "comment_count": 9, // 评论数
+            "comments": [       // 橱窗最新三条评论
+                {
+                    "comment_id": 15,
+                    "content": "评论内容！！！",
+                    "created_at": 1539240015,
+                    "is_praise": false,
+                    "pid": 0,
+                    "praise_count": 0,
+                    "sub_comment_count": 0,    // 子评论数
+                    "sub_comments": [],        // 子评论内容, 当子评论数大于2时取第一个子评论名
+                    "user_avatar": "http://kg.erp.taihuoniao.com/static/img/default-logo.png",
+                    "user_name": "用户名(作者)"
+                },
+                {
+                    "comment_id": 2,
+                    "content": "评论内容！！！",
+                    "created_at": 1533086656,
+                    "is_praise": false,
+                    "pid": 0,
+                    "praise_count": 0,
+                    "sub_comment_count": 4,
+                    "sub_comments": [
+                        {
+                            "comment_id": 10,
+                            "content": "评论内容！！！",
+                            "created_at": 1533095621,
+                            "is_praise": false,
+                            "pid": 2,
+                            "praise_count": 0,
+                            "user_avatar": "http://kg.erp.taihuoniao.com/static/img/default-logo.png",
+                            "user_name": "用户名(作者)"
+                        },
+                        {
+                            "comment_id": 9,
+                            "content": "评论内容！！！",
+                            "created_at": 1533095618,
+                            "is_praise": false,
+                            "pid": 2,
+                            "praise_count": 0,
+                            "user_avatar": "http://kg.erp.taihuoniao.com/static/img/default-logo.png",
+                            "user_name": "用户名(作者)"
+                        }
+                    ],
+                    "user_avatar": "http://kg.erp.taihuoniao.com/static/img/default-logo.png",
+                    "user_name": "15210062187"
+                },
+                {
+                    "comment_id": 1,
+                    "content": "你说的真好",
+                    "created_at": 1533086565,
+                    "is_praise": false,
+                    "pid": 0,
+                    "praise_count": 1,
+                    "sub_comment_count": 0,
+                    "sub_comments": [],
+                    "user_avatar": "http://kg.erp.taihuoniao.com/static/img/default-logo.png",
+                    "user_name": "用户名(作者)"
+                }
+            ],
+            "current_page": 1,
             "description": "2018腾讯世界人工智能围棋大赛决赛将在中国棋院落下帷幕。",
             "is_follow": "是否关注过发布橱窗的用户",
             "is_like": "是否喜欢过该橱窗",
@@ -212,8 +272,10 @@ JSON数据格式:
                     商品基本信息...
                 }
             ],
+            "remain_count": 0,      // 剩余的评论数
             "rid": 1,
             "title": "橱窗标题",
+            "total_count": 3,       // 总评论数
             "uid": "12795683104",
             "user_avatar": "http://kg.erp.taihuoniao.com/static/img/default-logo.png",
             "user_name": "用户名"
@@ -942,8 +1004,10 @@ JSON数据格式:
                 }
             ],
             "count": 2,
+            "current_page": 1,      // 当前评论页数
             "next": false,
-            "prev": false
+            "prev": false,
+            "remain_count": 0       // 剩余评论个数(此处指一级评论)
         },
         "status": {
             "code": 200,
@@ -1006,8 +1070,10 @@ JSON数据格式:
                 }
             ],
             "count": 4,
+            "current_page": 1,
             "next": false,
-            "prev": false
+            "prev": false,
+            "remain_count": 2
         },
         "status": {
             "code": 200,

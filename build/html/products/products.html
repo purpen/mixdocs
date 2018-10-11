@@ -157,15 +157,16 @@
 <li class="toctree-l2"><a class="reference internal" href="../common.html#id17">核心平台–热门推荐</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../common.html#id20">核心平台–搜索</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../common.html#id24">核心平台–搜索商品列表</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../common.html#id28">核心平台–搜索店铺列表</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../common.html#id32">核心平台–搜索用户列表</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../common.html#id36">小程序绑定手机号发送验证码</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../common.html#id41">注册发送短信验证码</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../common.html#id46">忘记密码发送短信验证码</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../common.html#id50">动态登陆发送短信验证码</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../common.html#id54">绑定银行卡发送短信验证码</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../common.html#id58">账户解除绑定银行卡发送短信验证码</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../common.html#id62">发送邮件验证码</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../common.html#id28">核心平台–搜索商品数量</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../common.html#id32">核心平台–搜索店铺列表</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../common.html#id36">核心平台–搜索用户列表</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../common.html#id40">小程序绑定手机号发送验证码</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../common.html#id45">注册发送短信验证码</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../common.html#id50">忘记密码发送短信验证码</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../common.html#id54">动态登陆发送短信验证码</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../common.html#id58">绑定银行卡发送短信验证码</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../common.html#id62">账户解除绑定银行卡发送短信验证码</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../common.html#id66">发送邮件验证码</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="../setting.html">系统相关配置文档</a><ul>
@@ -404,6 +405,12 @@
 <li><a class="reference internal" href="#id138">接口说明</a></li>
 <li><a class="reference internal" href="#id139">请求参数</a></li>
 <li><a class="reference internal" href="#id140">返回示例</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#id141">包邮专区商品数量</a><ul>
+<li><a class="reference internal" href="#id142">接口说明</a></li>
+<li><a class="reference internal" href="#id143">请求参数</a></li>
+<li><a class="reference internal" href="#id144">返回示例</a></li>
 </ul>
 </li>
 </ul>
@@ -646,6 +653,12 @@
 <li><a class="reference internal" href="#id138">接口说明</a></li>
 <li><a class="reference internal" href="#id139">请求参数</a></li>
 <li><a class="reference internal" href="#id140">返回示例</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#id141">包邮专区商品数量</a><ul>
+<li><a class="reference internal" href="#id142">接口说明</a></li>
+<li><a class="reference internal" href="#id143">请求参数</a></li>
+<li><a class="reference internal" href="#id144">返回示例</a></li>
 </ul>
 </li>
 </ul>
@@ -5086,11 +5099,11 @@
 <h3>请求参数<a class="headerlink" href="#id139" title="永久链接至标题">¶</a></h3>
 <table border="1" class="docutils">
 <colgroup>
-<col width="15%" />
-<col width="11%" />
-<col width="13%" />
-<col width="11%" />
-<col width="50%" />
+<col width="21%" />
+<col width="10%" />
+<col width="9%" />
+<col width="10%" />
+<col width="49%" />
 </colgroup>
 <thead valign="bottom">
 <tr class="row-odd"><th class="head">名称</th>
@@ -5112,6 +5125,36 @@
 <td>可选</td>
 <td>10</td>
 <td>每页数量</td>
+</tr>
+<tr class="row-even"><td>cids</td>
+<td>Number</td>
+<td>可选</td>
+<td>&#160;</td>
+<td>分类Id, 多个用,隔开</td>
+</tr>
+<tr class="row-odd"><td>min_price</td>
+<td>Number</td>
+<td>可选</td>
+<td>&#160;</td>
+<td>价格区间： 最小价格</td>
+</tr>
+<tr class="row-even"><td>max_price</td>
+<td>Number</td>
+<td>可选</td>
+<td>&#160;</td>
+<td>价格区间： 最大价格</td>
+</tr>
+<tr class="row-odd"><td>sort_type</td>
+<td>Number</td>
+<td>可选</td>
+<td>0</td>
+<td>排序: 1=综合排序, 2=价格由低至高, 3=价格由高至低</td>
+</tr>
+<tr class="row-even"><td>sort_newest</td>
+<td>Number</td>
+<td>可选</td>
+<td>0</td>
+<td>按最新排序: 0=否, 1=是</td>
 </tr>
 </tbody>
 </table>
@@ -5228,6 +5271,72 @@
     <span class="s2">&quot;message&quot;</span><span class="o">:</span> <span class="s2">&quot;Ok all right.&quot;</span>
   <span class="p">},</span>
   <span class="s2">&quot;success&quot;</span><span class="o">:</span> <span class="kc">true</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="id141">
+<h2>包邮专区商品数量<a class="headerlink" href="#id141" title="永久链接至标题">¶</a></h2>
+<div class="section" id="id142">
+<h3>接口说明<a class="headerlink" href="#id142" title="永久链接至标题">¶</a></h3>
+<ul class="simple">
+<li>API接口请求地址：<code class="docutils literal"><span class="pre">/products/free_postage/count</span></code></li>
+<li>API接口请求方法：<code class="docutils literal"><span class="pre">GET</span></code></li>
+</ul>
+</div>
+<div class="section" id="id143">
+<h3>请求参数<a class="headerlink" href="#id143" title="永久链接至标题">¶</a></h3>
+<table border="1" class="docutils">
+<colgroup>
+<col width="27%" />
+<col width="13%" />
+<col width="11%" />
+<col width="13%" />
+<col width="37%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">名称</th>
+<th class="head">类型</th>
+<th class="head">是否必须</th>
+<th class="head">默认值</th>
+<th class="head">描述说明</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>cids</td>
+<td>Number</td>
+<td>可选</td>
+<td>&#160;</td>
+<td>分类Id, 多个用,隔开</td>
+</tr>
+<tr class="row-odd"><td>min_price</td>
+<td>Number</td>
+<td>可选</td>
+<td>&#160;</td>
+<td>价格区间： 最小价格</td>
+</tr>
+<tr class="row-even"><td>max_price</td>
+<td>Number</td>
+<td>可选</td>
+<td>&#160;</td>
+<td>价格区间： 最大价格</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="id144">
+<h3>返回示例<a class="headerlink" href="#id144" title="永久链接至标题">¶</a></h3>
+<p>JSON数据格式:</p>
+<div class="highlight-javascript"><div class="highlight"><pre><span></span><span class="p">{</span>
+    <span class="s2">&quot;data&quot;</span><span class="o">:</span> <span class="p">{</span>
+        <span class="s2">&quot;count&quot;</span><span class="o">:</span> <span class="mi">16</span>
+    <span class="p">},</span>
+    <span class="s2">&quot;status&quot;</span><span class="o">:</span> <span class="p">{</span>
+        <span class="s2">&quot;code&quot;</span><span class="o">:</span> <span class="mi">200</span><span class="p">,</span>
+        <span class="s2">&quot;message&quot;</span><span class="o">:</span> <span class="s2">&quot;Ok all right.&quot;</span>
+    <span class="p">},</span>
+    <span class="s2">&quot;success&quot;</span><span class="o">:</span> <span class="kc">true</span>
 <span class="p">}</span>
 </pre></div>
 </div>

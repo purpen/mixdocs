@@ -780,7 +780,67 @@
 <p>JSON数据格式:</p>
 <div class="highlight-javascript"><div class="highlight"><pre><span></span><span class="p">{</span>
     <span class="s2">&quot;data&quot;</span><span class="o">:</span> <span class="p">{</span>
-        <span class="s2">&quot;comment_count&quot;</span><span class="o">:</span> <span class="mi">9</span><span class="p">,</span>
+        <span class="s2">&quot;comment_count&quot;</span><span class="o">:</span> <span class="mi">9</span><span class="p">,</span> <span class="c1">// 评论数</span>
+        <span class="s2">&quot;comments&quot;</span><span class="o">:</span> <span class="p">[</span>       <span class="c1">// 橱窗最新三条评论</span>
+            <span class="p">{</span>
+                <span class="s2">&quot;comment_id&quot;</span><span class="o">:</span> <span class="mi">15</span><span class="p">,</span>
+                <span class="s2">&quot;content&quot;</span><span class="o">:</span> <span class="s2">&quot;评论内容！！！&quot;</span><span class="p">,</span>
+                <span class="s2">&quot;created_at&quot;</span><span class="o">:</span> <span class="mi">1539240015</span><span class="p">,</span>
+                <span class="s2">&quot;is_praise&quot;</span><span class="o">:</span> <span class="kc">false</span><span class="p">,</span>
+                <span class="s2">&quot;pid&quot;</span><span class="o">:</span> <span class="mi">0</span><span class="p">,</span>
+                <span class="s2">&quot;praise_count&quot;</span><span class="o">:</span> <span class="mi">0</span><span class="p">,</span>
+                <span class="s2">&quot;sub_comment_count&quot;</span><span class="o">:</span> <span class="mi">0</span><span class="p">,</span>    <span class="c1">// 子评论数</span>
+                <span class="s2">&quot;sub_comments&quot;</span><span class="o">:</span> <span class="p">[],</span>        <span class="c1">// 子评论内容, 当子评论数大于2时取第一个子评论名</span>
+                <span class="s2">&quot;user_avatar&quot;</span><span class="o">:</span> <span class="s2">&quot;http://kg.erp.taihuoniao.com/static/img/default-logo.png&quot;</span><span class="p">,</span>
+                <span class="s2">&quot;user_name&quot;</span><span class="o">:</span> <span class="s2">&quot;用户名(作者)&quot;</span>
+            <span class="p">},</span>
+            <span class="p">{</span>
+                <span class="s2">&quot;comment_id&quot;</span><span class="o">:</span> <span class="mi">2</span><span class="p">,</span>
+                <span class="s2">&quot;content&quot;</span><span class="o">:</span> <span class="s2">&quot;评论内容！！！&quot;</span><span class="p">,</span>
+                <span class="s2">&quot;created_at&quot;</span><span class="o">:</span> <span class="mi">1533086656</span><span class="p">,</span>
+                <span class="s2">&quot;is_praise&quot;</span><span class="o">:</span> <span class="kc">false</span><span class="p">,</span>
+                <span class="s2">&quot;pid&quot;</span><span class="o">:</span> <span class="mi">0</span><span class="p">,</span>
+                <span class="s2">&quot;praise_count&quot;</span><span class="o">:</span> <span class="mi">0</span><span class="p">,</span>
+                <span class="s2">&quot;sub_comment_count&quot;</span><span class="o">:</span> <span class="mi">4</span><span class="p">,</span>
+                <span class="s2">&quot;sub_comments&quot;</span><span class="o">:</span> <span class="p">[</span>
+                    <span class="p">{</span>
+                        <span class="s2">&quot;comment_id&quot;</span><span class="o">:</span> <span class="mi">10</span><span class="p">,</span>
+                        <span class="s2">&quot;content&quot;</span><span class="o">:</span> <span class="s2">&quot;评论内容！！！&quot;</span><span class="p">,</span>
+                        <span class="s2">&quot;created_at&quot;</span><span class="o">:</span> <span class="mi">1533095621</span><span class="p">,</span>
+                        <span class="s2">&quot;is_praise&quot;</span><span class="o">:</span> <span class="kc">false</span><span class="p">,</span>
+                        <span class="s2">&quot;pid&quot;</span><span class="o">:</span> <span class="mi">2</span><span class="p">,</span>
+                        <span class="s2">&quot;praise_count&quot;</span><span class="o">:</span> <span class="mi">0</span><span class="p">,</span>
+                        <span class="s2">&quot;user_avatar&quot;</span><span class="o">:</span> <span class="s2">&quot;http://kg.erp.taihuoniao.com/static/img/default-logo.png&quot;</span><span class="p">,</span>
+                        <span class="s2">&quot;user_name&quot;</span><span class="o">:</span> <span class="s2">&quot;用户名(作者)&quot;</span>
+                    <span class="p">},</span>
+                    <span class="p">{</span>
+                        <span class="s2">&quot;comment_id&quot;</span><span class="o">:</span> <span class="mi">9</span><span class="p">,</span>
+                        <span class="s2">&quot;content&quot;</span><span class="o">:</span> <span class="s2">&quot;评论内容！！！&quot;</span><span class="p">,</span>
+                        <span class="s2">&quot;created_at&quot;</span><span class="o">:</span> <span class="mi">1533095618</span><span class="p">,</span>
+                        <span class="s2">&quot;is_praise&quot;</span><span class="o">:</span> <span class="kc">false</span><span class="p">,</span>
+                        <span class="s2">&quot;pid&quot;</span><span class="o">:</span> <span class="mi">2</span><span class="p">,</span>
+                        <span class="s2">&quot;praise_count&quot;</span><span class="o">:</span> <span class="mi">0</span><span class="p">,</span>
+                        <span class="s2">&quot;user_avatar&quot;</span><span class="o">:</span> <span class="s2">&quot;http://kg.erp.taihuoniao.com/static/img/default-logo.png&quot;</span><span class="p">,</span>
+                        <span class="s2">&quot;user_name&quot;</span><span class="o">:</span> <span class="s2">&quot;用户名(作者)&quot;</span>
+                    <span class="p">}</span>
+                <span class="p">],</span>
+                <span class="s2">&quot;user_avatar&quot;</span><span class="o">:</span> <span class="s2">&quot;http://kg.erp.taihuoniao.com/static/img/default-logo.png&quot;</span><span class="p">,</span>
+                <span class="s2">&quot;user_name&quot;</span><span class="o">:</span> <span class="s2">&quot;15210062187&quot;</span>
+            <span class="p">},</span>
+            <span class="p">{</span>
+                <span class="s2">&quot;comment_id&quot;</span><span class="o">:</span> <span class="mi">1</span><span class="p">,</span>
+                <span class="s2">&quot;content&quot;</span><span class="o">:</span> <span class="s2">&quot;你说的真好&quot;</span><span class="p">,</span>
+                <span class="s2">&quot;created_at&quot;</span><span class="o">:</span> <span class="mi">1533086565</span><span class="p">,</span>
+                <span class="s2">&quot;is_praise&quot;</span><span class="o">:</span> <span class="kc">false</span><span class="p">,</span>
+                <span class="s2">&quot;pid&quot;</span><span class="o">:</span> <span class="mi">0</span><span class="p">,</span>
+                <span class="s2">&quot;praise_count&quot;</span><span class="o">:</span> <span class="mi">1</span><span class="p">,</span>
+                <span class="s2">&quot;sub_comment_count&quot;</span><span class="o">:</span> <span class="mi">0</span><span class="p">,</span>
+                <span class="s2">&quot;sub_comments&quot;</span><span class="o">:</span> <span class="p">[],</span>
+                <span class="s2">&quot;user_avatar&quot;</span><span class="o">:</span> <span class="s2">&quot;http://kg.erp.taihuoniao.com/static/img/default-logo.png&quot;</span><span class="p">,</span>
+                <span class="s2">&quot;user_name&quot;</span><span class="o">:</span> <span class="s2">&quot;用户名(作者)&quot;</span>
+            <span class="p">}</span>
+        <span class="p">],</span>
+        <span class="s2">&quot;current_page&quot;</span><span class="o">:</span> <span class="mi">1</span><span class="p">,</span>
         <span class="s2">&quot;description&quot;</span><span class="o">:</span> <span class="s2">&quot;2018腾讯世界人工智能围棋大赛决赛将在中国棋院落下帷幕。&quot;</span><span class="p">,</span>
         <span class="s2">&quot;is_follow&quot;</span><span class="o">:</span> <span class="s2">&quot;是否关注过发布橱窗的用户&quot;</span><span class="p">,</span>
         <span class="s2">&quot;is_like&quot;</span><span class="o">:</span> <span class="s2">&quot;是否喜欢过该橱窗&quot;</span><span class="p">,</span>
@@ -815,8 +875,10 @@
                 <span class="nx">商品基本信息</span><span class="p">...</span>
             <span class="p">}</span>
         <span class="p">],</span>
+        <span class="s2">&quot;remain_count&quot;</span><span class="o">:</span> <span class="mi">0</span><span class="p">,</span>      <span class="c1">// 剩余的评论数</span>
         <span class="s2">&quot;rid&quot;</span><span class="o">:</span> <span class="mi">1</span><span class="p">,</span>
         <span class="s2">&quot;title&quot;</span><span class="o">:</span> <span class="s2">&quot;橱窗标题&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;total_count&quot;</span><span class="o">:</span> <span class="mi">3</span><span class="p">,</span>       <span class="c1">// 总评论数</span>
         <span class="s2">&quot;uid&quot;</span><span class="o">:</span> <span class="s2">&quot;12795683104&quot;</span><span class="p">,</span>
         <span class="s2">&quot;user_avatar&quot;</span><span class="o">:</span> <span class="s2">&quot;http://kg.erp.taihuoniao.com/static/img/default-logo.png&quot;</span><span class="p">,</span>
         <span class="s2">&quot;user_name&quot;</span><span class="o">:</span> <span class="s2">&quot;用户名&quot;</span>
@@ -1828,8 +1890,10 @@
             <span class="p">}</span>
         <span class="p">],</span>
         <span class="s2">&quot;count&quot;</span><span class="o">:</span> <span class="mi">2</span><span class="p">,</span>
+        <span class="s2">&quot;current_page&quot;</span><span class="o">:</span> <span class="mi">1</span><span class="p">,</span>      <span class="c1">// 当前评论页数</span>
         <span class="s2">&quot;next&quot;</span><span class="o">:</span> <span class="kc">false</span><span class="p">,</span>
-        <span class="s2">&quot;prev&quot;</span><span class="o">:</span> <span class="kc">false</span>
+        <span class="s2">&quot;prev&quot;</span><span class="o">:</span> <span class="kc">false</span><span class="p">,</span>
+        <span class="s2">&quot;remain_count&quot;</span><span class="o">:</span> <span class="mi">0</span>       <span class="c1">// 剩余评论个数(此处指一级评论)</span>
     <span class="p">},</span>
     <span class="s2">&quot;status&quot;</span><span class="o">:</span> <span class="p">{</span>
         <span class="s2">&quot;code&quot;</span><span class="o">:</span> <span class="mi">200</span><span class="p">,</span>
@@ -1924,8 +1988,10 @@
             <span class="p">}</span>
         <span class="p">],</span>
         <span class="s2">&quot;count&quot;</span><span class="o">:</span> <span class="mi">4</span><span class="p">,</span>
+        <span class="s2">&quot;current_page&quot;</span><span class="o">:</span> <span class="mi">1</span><span class="p">,</span>
         <span class="s2">&quot;next&quot;</span><span class="o">:</span> <span class="kc">false</span><span class="p">,</span>
-        <span class="s2">&quot;prev&quot;</span><span class="o">:</span> <span class="kc">false</span>
+        <span class="s2">&quot;prev&quot;</span><span class="o">:</span> <span class="kc">false</span><span class="p">,</span>
+        <span class="s2">&quot;remain_count&quot;</span><span class="o">:</span> <span class="mi">2</span>
     <span class="p">},</span>
     <span class="s2">&quot;status&quot;</span><span class="o">:</span> <span class="p">{</span>
         <span class="s2">&quot;code&quot;</span><span class="o">:</span> <span class="mi">200</span><span class="p">,</span>
