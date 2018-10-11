@@ -2358,6 +2358,7 @@ JSON数据格式:
             'pay_sign': 'pay_sign',
             'prepay_id': 'prepay_id',
             "is_merge": true,  // 是否合并支付
+            "order_rid": "D18070316803529", // 订单编号或官方订单编号
             "order_list": [  // 订单信息
                 {
                     "store_name": "第一家",  // 店铺名
