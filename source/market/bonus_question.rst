@@ -645,7 +645,7 @@ JSON数据格式:
                 "user_sn": "15672098143" // 好友用户编号
             },
             "amount": 0.3,  // 偷现金金额
-            "bouns_type": 1,  // 1、偷优惠券 2、偷现金
+            "bouns_type": 1,  // 0、 未偷到 1、偷优惠券 2、偷现金
             "coupon": {
                 "amount": 10,  // 优惠券金额
                 "expired_at": 1538841600,  // 过期时间
@@ -1055,6 +1055,8 @@ JSON数据格式:
 
     {
         "data": {
+            "invite_count": 1,  // 邀请人数
+            "invite_name": "默默",  //被邀请人姓名
             "user_info": [
                 {
                     "user_logo": "http://kg.erp.taihuoniao.com/static/img/default-logo.png",

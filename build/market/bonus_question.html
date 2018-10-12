@@ -1307,7 +1307,7 @@
             <span class="s2">&quot;user_sn&quot;</span><span class="o">:</span> <span class="s2">&quot;15672098143&quot;</span> <span class="c1">// 好友用户编号</span>
         <span class="p">},</span>
         <span class="s2">&quot;amount&quot;</span><span class="o">:</span> <span class="mf">0.3</span><span class="p">,</span>  <span class="c1">// 偷现金金额</span>
-        <span class="s2">&quot;bouns_type&quot;</span><span class="o">:</span> <span class="mi">1</span><span class="p">,</span>  <span class="c1">// 1、偷优惠券 2、偷现金</span>
+        <span class="s2">&quot;bouns_type&quot;</span><span class="o">:</span> <span class="mi">1</span><span class="p">,</span>  <span class="c1">// 0、 未偷到 1、偷优惠券 2、偷现金</span>
         <span class="s2">&quot;coupon&quot;</span><span class="o">:</span> <span class="p">{</span>
             <span class="s2">&quot;amount&quot;</span><span class="o">:</span> <span class="mi">10</span><span class="p">,</span>  <span class="c1">// 优惠券金额</span>
             <span class="s2">&quot;expired_at&quot;</span><span class="o">:</span> <span class="mi">1538841600</span><span class="p">,</span>  <span class="c1">// 过期时间</span>
@@ -1763,6 +1763,8 @@
 <p>JSON数据格式:</p>
 <div class="highlight-javascript"><div class="highlight"><pre><span></span><span class="p">{</span>
     <span class="s2">&quot;data&quot;</span><span class="o">:</span> <span class="p">{</span>
+        <span class="s2">&quot;invite_count&quot;</span><span class="o">:</span> <span class="mi">1</span><span class="p">,</span>  <span class="c1">// 邀请人数</span>
+        <span class="s2">&quot;invite_name&quot;</span><span class="o">:</span> <span class="s2">&quot;默默&quot;</span><span class="p">,</span>  <span class="c1">//被邀请人姓名</span>
         <span class="s2">&quot;user_info&quot;</span><span class="o">:</span> <span class="p">[</span>
             <span class="p">{</span>
                 <span class="s2">&quot;user_logo&quot;</span><span class="o">:</span> <span class="s2">&quot;http://kg.erp.taihuoniao.com/static/img/default-logo.png&quot;</span><span class="p">,</span>
