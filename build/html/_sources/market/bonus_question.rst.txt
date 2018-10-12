@@ -1055,9 +1055,9 @@ JSON数据格式:
 
     {
         "data": {
-            "invite_count": 1,  // 邀请人数
-            "invite_name": "默默",  //被邀请人姓名
-            "user_info": [
+            "invite_count": 1,  // 邀请总人数
+            "invite_name": "默默",  // 最新被邀请人姓名
+            "user_info": [ // 最新被邀请人
                 {
                     "user_logo": "http://kg.erp.taihuoniao.com/static/img/default-logo.png",
                     "user_name": "15210062187",
