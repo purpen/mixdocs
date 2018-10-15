@@ -543,6 +543,9 @@
 <p>JSON数据格式:</p>
 <div class="highlight-javascript"><div class="highlight"><pre><span></span><span class="p">{</span>
     <span class="s2">&quot;data&quot;</span><span class="o">:</span> <span class="p">{</span>
+        <span class="s2">&quot;play_count&quot;</span><span class="o">:</span> <span class="mi">0</span><span class="p">,</span>  <span class="c1">// 一小时内玩的次数</span>
+        <span class="s2">&quot;prize_pool&quot;</span><span class="o">:</span> <span class="mi">500</span><span class="p">,</span>  <span class="c1">// 奖金池</span>
+        <span class="s2">&quot;test_id&quot;</span><span class="o">:</span> <span class="mi">18</span><span class="p">,</span>  <span class="c1">// 试题id</span>
         <span class="s2">&quot;question&quot;</span><span class="o">:</span> <span class="p">[</span>  <span class="c1">// 问题列表</span>
             <span class="p">{</span>
                 <span class="s2">&quot;answers&quot;</span><span class="o">:</span> <span class="p">[</span>  <span class="c1">// 答案列表</span>
@@ -558,13 +561,25 @@
                 <span class="s2">&quot;question&quot;</span><span class="o">:</span> <span class="s2">&quot;第4题&quot;</span>  <span class="c1">// 问题内容</span>
             <span class="p">}</span>
         <span class="p">],</span>
-        <span class="s2">&quot;test_id&quot;</span><span class="o">:</span> <span class="mi">18</span>  <span class="c1">// 试题id</span>
     <span class="p">},</span>
     <span class="s2">&quot;status&quot;</span><span class="o">:</span> <span class="p">{</span>
         <span class="s2">&quot;code&quot;</span><span class="o">:</span> <span class="mi">200</span><span class="p">,</span>
         <span class="s2">&quot;message&quot;</span><span class="o">:</span> <span class="s2">&quot;Ok all right.&quot;</span>
     <span class="p">},</span>
     <span class="s2">&quot;success&quot;</span><span class="o">:</span> <span class="kc">true</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<p>返回错误格式：</p>
+<div class="highlight-javascript"><div class="highlight"><pre><span></span><span class="p">{</span>
+    <span class="s2">&quot;data&quot;</span><span class="o">:</span> <span class="p">{</span>
+        <span class="s2">&quot;play_count&quot;</span><span class="o">:</span> <span class="mi">1</span>
+    <span class="p">},</span>
+    <span class="s2">&quot;status&quot;</span><span class="o">:</span> <span class="p">{</span>
+        <span class="s2">&quot;code&quot;</span><span class="o">:</span> <span class="mi">400</span><span class="p">,</span>
+        <span class="s2">&quot;message&quot;</span><span class="o">:</span> <span class="s2">&quot;邀请好友一起玩，可再获的1次猜图机会&quot;</span>
+    <span class="p">},</span>
+    <span class="s2">&quot;success&quot;</span><span class="o">:</span> <span class="kc">false</span>
 <span class="p">}</span>
 </pre></div>
 </div>
@@ -1500,13 +1515,7 @@
 <td>&#160;</td>
 <td>访问路径</td>
 </tr>
-<tr class="row-odd"><td>scene</td>
-<td>String</td>
-<td>必需</td>
-<td>&#160;</td>
-<td>场景参数： 商品编号-店铺编号  例：8945120367-94395210</td>
-</tr>
-<tr class="row-even"><td>test_id</td>
+<tr class="row-odd"><td>test_id</td>
 <td>Integer</td>
 <td>必需</td>
 <td>&#160;</td>
@@ -1836,12 +1845,6 @@
 <td>必需</td>
 <td>&#160;</td>
 <td>访问路径</td>
-</tr>
-<tr class="row-even"><td>scene</td>
-<td>String</td>
-<td>必需</td>
-<td>&#160;</td>
-<td>场景参数： 商品编号-店铺编号  例：8945120367-94395210</td>
 </tr>
 </tbody>
 </table>
