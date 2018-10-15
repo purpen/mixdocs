@@ -354,12 +354,13 @@
 </li>
 <li><a class="reference internal" href="#id103">优惠券头条动态</a><ul>
 <li><a class="reference internal" href="#id104">接口说明</a></li>
-<li><a class="reference internal" href="#id105">返回示例</a></li>
+<li><a class="reference internal" href="#id105">请求参数</a></li>
+<li><a class="reference internal" href="#id106">返回示例</a></li>
 </ul>
 </li>
-<li><a class="reference internal" href="#id106">官方红包分享动态</a><ul>
-<li><a class="reference internal" href="#id107">接口说明</a></li>
-<li><a class="reference internal" href="#id108">返回示例</a></li>
+<li><a class="reference internal" href="#id107">官方红包分享动态</a><ul>
+<li><a class="reference internal" href="#id108">接口说明</a></li>
+<li><a class="reference internal" href="#id109">返回示例</a></li>
 </ul>
 </li>
 </ul>
@@ -551,12 +552,13 @@
 </li>
 <li><a class="reference internal" href="#id103">优惠券头条动态</a><ul>
 <li><a class="reference internal" href="#id104">接口说明</a></li>
-<li><a class="reference internal" href="#id105">返回示例</a></li>
+<li><a class="reference internal" href="#id105">请求参数</a></li>
+<li><a class="reference internal" href="#id106">返回示例</a></li>
 </ul>
 </li>
-<li><a class="reference internal" href="#id106">官方红包分享动态</a><ul>
-<li><a class="reference internal" href="#id107">接口说明</a></li>
-<li><a class="reference internal" href="#id108">返回示例</a></li>
+<li><a class="reference internal" href="#id107">官方红包分享动态</a><ul>
+<li><a class="reference internal" href="#id108">接口说明</a></li>
+<li><a class="reference internal" href="#id109">返回示例</a></li>
 </ul>
 </li>
 </ul>
@@ -2964,7 +2966,41 @@
 </ul>
 </div>
 <div class="section" id="id105">
-<h3>返回示例<a class="headerlink" href="#id105" title="永久链接至标题">¶</a></h3>
+<h3>请求参数<a class="headerlink" href="#id105" title="永久链接至标题">¶</a></h3>
+<table border="1" class="docutils">
+<colgroup>
+<col width="25%" />
+<col width="10%" />
+<col width="11%" />
+<col width="10%" />
+<col width="44%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">名称</th>
+<th class="head">类型</th>
+<th class="head">是否必须</th>
+<th class="head">默认值</th>
+<th class="head">描述说明</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>status</td>
+<td>Number</td>
+<td>可选</td>
+<td>1</td>
+<td>来源，1、领券中心</td>
+</tr>
+<tr class="row-odd"><td>count</td>
+<td>Number</td>
+<td>可选</td>
+<td>10</td>
+<td>返回数据数量</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="id106">
+<h3>返回示例<a class="headerlink" href="#id106" title="永久链接至标题">¶</a></h3>
 <p>JSON数据格式:</p>
 <div class="highlight-javascript"><div class="highlight"><pre><span></span><span class="p">{</span>
     <span class="s2">&quot;data&quot;</span><span class="o">:</span> <span class="p">{</span>
@@ -2980,7 +3016,11 @@
                 <span class="s2">&quot;line_text&quot;</span><span class="o">:</span> <span class="s2">&quot;888小时前小黑在分享红包游戏中被赠送2元官方优惠券&quot;</span><span class="p">,</span>  <span class="c1">// 动态信息</span>
                 <span class="s2">&quot;quantity&quot;</span><span class="o">:</span> <span class="mi">2</span><span class="p">,</span>  <span class="c1">// 数量</span>
                 <span class="s2">&quot;store_name&quot;</span><span class="o">:</span> <span class="s2">&quot;第一家&quot;</span><span class="p">,</span>  <span class="c1">// 店铺名</span>
-                <span class="s2">&quot;user_name&quot;</span><span class="o">:</span> <span class="s1">&#39;小黑&#39;</span>  <span class="c1">// 用户名</span>
+                <span class="s2">&quot;user_info&quot;</span><span class="o">:</span> <span class="p">{</span>
+                    <span class="s2">&quot;user_logo&quot;</span><span class="o">:</span> <span class="s2">&quot;http://kg.erp.taihuoniao.com/static/img/default-logo.png&quot;</span><span class="p">,</span>
+                    <span class="s2">&quot;user_name&quot;</span><span class="o">:</span> <span class="s2">&quot;15210062187&quot;</span><span class="p">,</span>
+                    <span class="s2">&quot;user_sn&quot;</span><span class="o">:</span> <span class="s2">&quot;17160283459&quot;</span>
+                <span class="p">}</span>
             <span class="p">}</span>
         <span class="p">]</span>
     <span class="p">},</span>
@@ -2994,18 +3034,18 @@
 </div>
 </div>
 </div>
-<div class="section" id="id106">
-<h2>官方红包分享动态<a class="headerlink" href="#id106" title="永久链接至标题">¶</a></h2>
-<p>官方红包分享动态</p>
 <div class="section" id="id107">
-<h3>接口说明<a class="headerlink" href="#id107" title="永久链接至标题">¶</a></h3>
+<h2>官方红包分享动态<a class="headerlink" href="#id107" title="永久链接至标题">¶</a></h2>
+<p>官方红包分享动态</p>
+<div class="section" id="id108">
+<h3>接口说明<a class="headerlink" href="#id108" title="永久链接至标题">¶</a></h3>
 <ul class="simple">
 <li>API接口请求地址：<code class="docutils literal"><span class="pre">/market/bonus_lines</span></code></li>
 <li>API接口请求方法：<code class="docutils literal"><span class="pre">GET</span></code></li>
 </ul>
 </div>
-<div class="section" id="id108">
-<h3>返回示例<a class="headerlink" href="#id108" title="永久链接至标题">¶</a></h3>
+<div class="section" id="id109">
+<h3>返回示例<a class="headerlink" href="#id109" title="永久链接至标题">¶</a></h3>
 <p>JSON数据格式:</p>
 <div class="highlight-javascript"><div class="highlight"><pre><span></span><span class="p">{</span>
     <span class="s2">&quot;data&quot;</span><span class="o">:</span> <span class="p">{</span>
