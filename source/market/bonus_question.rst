@@ -24,7 +24,6 @@ JSON数据格式:
 
     {
         "data": {
-            "play_count": 0,  // 一小时内玩的次数
             "prize_pool": 500,  // 奖金池
             "test_id": 18,  // 试题id
             "question": [  // 问题列表
@@ -56,9 +55,6 @@ JSON数据格式:
 .. code-block:: javascript
 
     {
-        "data": {
-            "play_count": 1
-        },
         "status": {
             "code": 400,
             "message": "邀请好友一起玩，可再获的1次猜图机会"
@@ -1121,6 +1117,45 @@ JSON数据格式:
     {
         "data": {
             "image_url": "https://s3.lexivip.com/lexi/20181011/CAbdFKDXOEnkBJSNYeZa.png"
+        },
+        "status": {
+            "code": 200,
+            "message": "Ok all right."
+        },
+        "success": true
+    }
+
+
+猜图-还需要邀请几个好友
+-----------------------------------
+猜图-还需要邀请几个好友
+
+接口说明
+~~~~~~~~~~~~~~
+
+* API接口请求地址：``/guess_image/invite_friend_record``
+* API接口请求方法：``GET``
+* API接口用户授权：``token``
+
+
+返回示例
+~~~~~~~~~~~~~~~~
+
+JSON数据格式:
+
+.. code-block:: javascript
+
+
+    {
+        "data": {
+            "friend_list": [
+                {
+                    "user_logo": "http://kg.erp.taihuoniao.com/static/img/default-logo.png",  // 头像
+                    "user_name": "13260180689",  // 用户名
+                    "user_sn": "15672098143"  // 用户编号
+                }
+            ],
+            "need_invite": 1  // 1、需要邀请 2、不需要邀请
         },
         "status": {
             "code": 200,

@@ -1847,4 +1847,61 @@ JSON数据格式:
     }
 
 
+是否领取1000元新人红包
+--------------------------------
+是否领取1000元新人红包
 
+接口说明
+~~~~~~~~~~~~~~
+
+* API接口请求地址：``/market/is_new_user_bonus``
+* API接口请求方法：``GET``
+* API接口用户授权：``token``
+
+
+返回示例
+~~~~~~~~~~~~~~~~
+
+JSON数据格式:
+
+.. code-block:: javascript
+
+    {
+        "data": {
+            "is_grant": 0  // 0、未领取 1、已领取
+        },
+        "status": {
+            "code": 200,
+            "message": "Ok all right."
+        },
+        "success": true
+    }
+
+
+领取1000元新人红包
+--------------------------------
+领取1000元新人红包
+
+接口说明
+~~~~~~~~~~~~~~
+
+* API接口请求地址：``/market/grant_new_user_bonus``
+* API接口请求方法：``POST``
+* API接口用户授权：``token``
+
+
+返回示例
+~~~~~~~~~~~~~~~~
+
+JSON数据格式:
+
+.. code-block:: javascript
+
+
+    {
+        "status": {
+            "code": 200,
+            "message": "Ok all right."
+        },
+        "success": true
+    }
