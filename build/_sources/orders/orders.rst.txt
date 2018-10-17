@@ -2357,6 +2357,8 @@ JSON数据格式:
             'timeStamp': 1539245473,
             'pay_sign': 'pay_sign',
             'prepay_id': 'prepay_id',
+            'current_at': 1539245473,  // 当前时间
+            'created_at': 1539245473,  // 创建时间
             "is_merge": true,  // 是否合并支付
             "order_rid": "D18070316803529", // 订单编号或官方订单编号
             "order_list": [  // 订单信息

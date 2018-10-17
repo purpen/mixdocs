@@ -1292,9 +1292,9 @@ JSON数据格式:
     }
 
 
-用户查看自己的官方优惠券、红包列表
+用户查看自己的官方优惠券列表
 ----------------------------------------
-用户查看自己的官方优惠券、红包列表
+用户查看自己的官方优惠券列表
 
 接口说明
 ~~~~~~~~~~~~~~
@@ -1313,30 +1313,18 @@ JSON数据格式:
 
     {
         "data": {
+            "count": 4,
             "coupons": [
                 {
-                    "amount": 10,  // 面值
-                    "code": "BGQOUYRDXPV",  // code
-                    "expired_at": 1533312000,  // 过期时间
-                    "is_expired": false,  // 是否过期
-                    "is_used": false,  // 是否使用
-                    "min_amount": 0,  // 限制金额
-                    "start_at": 1532707200,  // 开始时间
-                    "type": 1,
-                    "user_id": 2  // 用户id
+                    "amount": 5,  // 面值
+                    "code": "OUABTSDUHMG",  // code
+                    "expired_at": 1540742400,  // 到期时间
+                    "min_amount": 5,  // 最小满足金额
+                    "start_at": 1539705600  // 开始时间
                 },
-                {
-                    "amount": 10,
-                    "code": "OUWZSVGAHLF",
-                    "expired_at": 1533052800,
-                    "is_expired": false,
-                    "is_used": false,
-                    "min_amount": 200,
-                    "start_at": 1532707200,
-                    "type": 2,
-                    "user_id": 2
-                }
-            ]
+            ],
+            "next": true,
+            "prev": false
         },
         "status": {
             "code": 200,
@@ -1346,9 +1334,55 @@ JSON数据格式:
     }
 
 
-用户获取自己的符合当前金额的官方优惠券、红包列表
+用户查看自己失效的优惠券列表
+----------------------------------------
+用户查看自己失效的优惠券列表
+
+接口说明
+~~~~~~~~~~~~~~
+
+* API接口请求地址：``/market/user_expired``
+* API接口请求方法：``GET``
+* API接口用户授权：``token``
+
+返回示例
+~~~~~~~~~~~~~~~~
+
+JSON数据格式:
+
+.. code-block:: javascript
+
+
+    {
+        "data": {
+            "count": 187,
+            "coupons": [
+                {
+                    "amount": 5,  // 面值
+                    "code": "OUOYDHGSPNI",  // code
+                    "expired_at": 1533139200,  // 过期时间
+                    "min_amount": 200,  // 最小金额
+                    "start_at": 1532880000,  // 开始时间
+                    "store_logo": "",  // 店铺logo
+                    "store_name": "",  // 店铺名
+                    "store_rid": "",  // 店铺编号
+                    "type": 2  // 1、店铺优惠券 2、官方哟回去
+                },
+            ],
+            "next": true,
+            "prev": false
+        },
+        "status": {
+            "code": 200,
+            "message": "Ok all right."
+        },
+        "success": true
+    }
+
+
+用户获取自己的符合当前金额的官方优惠券列表
 -------------------------------------------------------
-用户获取自己的符合当前金额的官方优惠券、红包列表
+用户获取自己的符合当前金额的官方优惠券列表
 
 接口说明
 ~~~~~~~~~~~~~~
