@@ -235,8 +235,8 @@ JSON数据格式:
                     "used_at": null  // 使用时间
                 }
             ],
-            "next": null,
-            "prev": null
+            "next": true,
+            "prev": false
         },
         "status": {
             "code": 200,
@@ -306,8 +306,8 @@ JSON数据格式:
                     "used_at": null  // 使用时间
                 }
             ],
-            "next": null,
-            "prev": null
+            "next": true,
+            "prev": false
         },
         "status": {
             "code": 200,
