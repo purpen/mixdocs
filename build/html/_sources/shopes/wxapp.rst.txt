@@ -85,3 +85,29 @@ JSON数据格式:
         },
         "success": false
     }
+
+
+小程序运行环境
+------------------
+
+接口说明
+~~~~~~~~~~~~~
+
+* API接口请求地址：``/run_env/wxa``
+* API接口请求方法：``GET``
+
+JSON数据格式:
+
+.. code-block:: javascript
+
+    {
+        "data": {
+            "status": 2 // 1=正在审核中, 2=正式上线中
+        },
+        "status": {
+            "code": 200,
+            "message": "Ok all right."
+        },
+        "success": true
+    }
+
