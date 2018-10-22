@@ -78,7 +78,9 @@ JSON数据格式:
                         "store_name": "第一家",  // 商品所属店铺名称
                         "store_rid": "2",
                         "tag_line": "1",
-                        "town": ""
+                        "town": "",
+                        "top_category_id": 1,  // 商品一级分类
+
                     },
                     "quantity": 3,
                     "rid": "2",
@@ -246,7 +248,8 @@ JSON数据格式:
                     "store_name": "第一家",  // 商品所属店铺名称
                     "store_rid": "2",
                     "tag_line": "1",
-                    "town": ""
+                    "town": "",
+                    "top_category_id": 1,  // 商品一级分类
                 },
                 "quantity": 4,
                 "rid": "1",
@@ -366,7 +369,8 @@ JSON数据格式:
                         "store_name": "第一家",  // 商品所属店铺名称
                         "store_rid": "2",
                         "tag_line": "1",
-                        "town": ""
+                        "town": "",
+                        "top_category_id": 1,  // 商品一级分类
                     },
                     "quantity": 3,  // 购买数量
                     "rid": "2",  // sku
@@ -611,7 +615,8 @@ JSON数据格式:
                     "store_name": "第一家",  // 商品所属店铺名称
                     "store_rid": "2",
                     "tag_line": "1",
-                    "town": ""
+                    "town": "",
+                    "top_category_id": 1,  // 商品一级分类
                 },
                 "quantity": 4,
                 "rid": "1",
