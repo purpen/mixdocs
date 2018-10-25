@@ -923,6 +923,7 @@ is_alone               Integer     可选          0          是否独立小程
 affiliate_code         String      可选                     推广码
 bonus_code             String      可选                     官方红包码
 sync_pay               Integer     可选           0         是否同步返回支付参数 0、否 1、是
+authAppid              String      可选                     authAppid
 last_store_rid         String      可选                     上一次浏览的小b店铺rid
 store_items            Array       必需                     店铺商品信息
 =====================  ==========  =========  ==========  =============================

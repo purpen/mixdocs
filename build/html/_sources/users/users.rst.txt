@@ -425,7 +425,7 @@ JSON数据格式
 接口说明
 ~~~~~~~~~~~~~~
 
-* API接口请求地址：``/users/other_user_center``
+* API接口请求地址：``/users/get_other_user_center``
 * API接口请求方法：``GET``
 
 请求参数

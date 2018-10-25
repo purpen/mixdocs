@@ -157,15 +157,16 @@
 <li class="toctree-l2"><a class="reference internal" href="../common.html#id17">核心平台–热门推荐</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../common.html#id20">核心平台–搜索</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../common.html#id24">核心平台–搜索商品列表</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../common.html#id28">核心平台–搜索店铺列表</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../common.html#id32">核心平台–搜索用户列表</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../common.html#id36">小程序绑定手机号发送验证码</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../common.html#id41">注册发送短信验证码</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../common.html#id46">忘记密码发送短信验证码</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../common.html#id50">动态登陆发送短信验证码</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../common.html#id54">绑定银行卡发送短信验证码</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../common.html#id58">账户解除绑定银行卡发送短信验证码</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../common.html#id62">发送邮件验证码</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../common.html#id28">核心平台–搜索商品数量</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../common.html#id32">核心平台–搜索店铺列表</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../common.html#id36">核心平台–搜索用户列表</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../common.html#id40">小程序绑定手机号发送验证码</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../common.html#id45">注册发送短信验证码</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../common.html#id50">忘记密码发送短信验证码</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../common.html#id54">动态登陆发送短信验证码</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../common.html#id58">绑定银行卡发送短信验证码</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../common.html#id62">账户解除绑定银行卡发送短信验证码</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../common.html#id66">发送邮件验证码</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="../setting.html">系统相关配置文档</a><ul>
@@ -291,6 +292,12 @@
 <li><a class="reference internal" href="#id62">接口说明</a></li>
 <li><a class="reference internal" href="#id63">请求参数</a></li>
 <li><a class="reference internal" href="#id64">返回示例</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#id65">商家获取用户收货地址海关信息</a><ul>
+<li><a class="reference internal" href="#id66">接口说明</a></li>
+<li><a class="reference internal" href="#id67">请求参数</a></li>
+<li><a class="reference internal" href="#id68">返回示例</a></li>
 </ul>
 </li>
 </ul>
@@ -420,6 +427,12 @@
 <li><a class="reference internal" href="#id62">接口说明</a></li>
 <li><a class="reference internal" href="#id63">请求参数</a></li>
 <li><a class="reference internal" href="#id64">返回示例</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#id65">商家获取用户收货地址海关信息</a><ul>
+<li><a class="reference internal" href="#id66">接口说明</a></li>
+<li><a class="reference internal" href="#id67">请求参数</a></li>
+<li><a class="reference internal" href="#id68">返回示例</a></li>
 </ul>
 </li>
 </ul>
@@ -1848,6 +1861,88 @@
 </div>
 <div class="section" id="id64">
 <h3>返回示例<a class="headerlink" href="#id64" title="永久链接至标题">¶</a></h3>
+<p>JSON数据格式:</p>
+<p>请求 <strong>正确</strong> 返回结果：</p>
+<div class="highlight-javascript"><div class="highlight"><pre><span></span><span class="p">{</span>
+    <span class="s2">&quot;data&quot;</span><span class="o">:</span> <span class="p">{</span>
+        <span class="s2">&quot;id&quot;</span><span class="o">:</span> <span class="mi">3</span><span class="p">,</span>
+        <span class="s2">&quot;id_card&quot;</span><span class="o">:</span> <span class="s2">&quot;18081827109465&quot;</span><span class="p">,</span>  <span class="c1">//身份证号</span>
+        <span class="s2">&quot;id_card_back&quot;</span><span class="o">:</span> <span class="p">{</span>  <span class="c1">// 身份证背面</span>
+            <span class="s2">&quot;created_at&quot;</span><span class="o">:</span> <span class="mi">1</span><span class="p">,</span>
+            <span class="s2">&quot;filename&quot;</span><span class="o">:</span> <span class="s2">&quot;1&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;filepath&quot;</span><span class="o">:</span> <span class="s2">&quot;180523/8f51855eedae984.jpg&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;id&quot;</span><span class="o">:</span> <span class="mi">1</span><span class="p">,</span>
+            <span class="s2">&quot;type&quot;</span><span class="o">:</span> <span class="mi">1</span><span class="p">,</span>
+            <span class="s2">&quot;view_url&quot;</span><span class="o">:</span> <span class="s2">&quot;http://0.0.0.0:9000/_uploads/photos/180523/8f51855eedae984.jpg&quot;</span>
+        <span class="p">},</span>
+        <span class="s2">&quot;id_card_front&quot;</span><span class="o">:</span> <span class="p">{</span>  <span class="c1">// 身份证正面</span>
+            <span class="s2">&quot;created_at&quot;</span><span class="o">:</span> <span class="mi">1</span><span class="p">,</span>
+            <span class="s2">&quot;filename&quot;</span><span class="o">:</span> <span class="s2">&quot;1&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;filepath&quot;</span><span class="o">:</span> <span class="s2">&quot;180523/8f51855eedae984.jpg&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;id&quot;</span><span class="o">:</span> <span class="mi">1</span><span class="p">,</span>
+            <span class="s2">&quot;type&quot;</span><span class="o">:</span> <span class="mi">1</span><span class="p">,</span>
+            <span class="s2">&quot;view_url&quot;</span><span class="o">:</span> <span class="s2">&quot;http://0.0.0.0:9000/_uploads/photos/180523/8f51855eedae984.jpg&quot;</span>
+        <span class="p">},</span>
+        <span class="s2">&quot;mobile&quot;</span><span class="o">:</span> <span class="s2">&quot;18888888888&quot;</span><span class="p">,</span>  <span class="c1">// 手机号</span>
+        <span class="s2">&quot;user_name&quot;</span><span class="o">:</span> <span class="s2">&quot;小杨&quot;</span>  <span class="c1">// 姓名</span>
+    <span class="p">},</span>
+    <span class="s2">&quot;status&quot;</span><span class="o">:</span> <span class="p">{</span>
+        <span class="s2">&quot;code&quot;</span><span class="o">:</span> <span class="mi">200</span><span class="p">,</span>
+        <span class="s2">&quot;message&quot;</span><span class="o">:</span> <span class="s2">&quot;Ok all right.&quot;</span>
+    <span class="p">},</span>
+    <span class="s2">&quot;success&quot;</span><span class="o">:</span> <span class="kc">true</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="id65">
+<h2>商家获取用户收货地址海关信息<a class="headerlink" href="#id65" title="永久链接至标题">¶</a></h2>
+<p>商家获取用户收货地址海关信息</p>
+<div class="section" id="id66">
+<h3>接口说明<a class="headerlink" href="#id66" title="永久链接至标题">¶</a></h3>
+<ul class="simple">
+<li>API接口请求地址：<code class="docutils literal"><span class="pre">/address/custom/master</span></code></li>
+<li>API接口请求方法：<code class="docutils literal"><span class="pre">GET</span></code></li>
+<li>API接口用户授权：<code class="docutils literal"><span class="pre">token</span></code></li>
+</ul>
+</div>
+<div class="section" id="id67">
+<h3>请求参数<a class="headerlink" href="#id67" title="永久链接至标题">¶</a></h3>
+<table border="1" class="docutils">
+<colgroup>
+<col width="27%" />
+<col width="13%" />
+<col width="11%" />
+<col width="13%" />
+<col width="37%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">名称</th>
+<th class="head">类型</th>
+<th class="head">是否必须</th>
+<th class="head">默认值</th>
+<th class="head">描述说明</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>user_name</td>
+<td>String</td>
+<td>必需</td>
+<td>&#160;</td>
+<td>姓名</td>
+</tr>
+<tr class="row-odd"><td>mobile</td>
+<td>String</td>
+<td>必需</td>
+<td>&#160;</td>
+<td>手机号</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="id68">
+<h3>返回示例<a class="headerlink" href="#id68" title="永久链接至标题">¶</a></h3>
 <p>JSON数据格式:</p>
 <p>请求 <strong>正确</strong> 返回结果：</p>
 <div class="highlight-javascript"><div class="highlight"><pre><span></span><span class="p">{</span>

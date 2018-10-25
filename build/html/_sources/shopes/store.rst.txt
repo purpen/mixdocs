@@ -1637,6 +1637,7 @@ JSON数据格式
             "next_url": false,
             "prev_url": false,
             "total_page": 1,
+            "browse_number" :10   // 浏览次数
             "user_parties": [
                 {
                     "about_me": null,
@@ -1743,6 +1744,7 @@ JSON数据格式
             "next_url": false,
             "prev_url": false,
             "total_page": 1,
+            "browse_number": 10  // 浏览次数
             "users": [
                 {
                     "about_me": null,
