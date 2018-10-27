@@ -714,14 +714,14 @@ JSON数据格式:
                     ],
                     "sort_order": 12,
                     "sub_name": "",
-                    "target_type": "推荐类型: 1=生活志文章, 2=种草清单 3=主题"
+                    "target_type": "推荐类型: 1=生活志文章, 2=种草清单 3=主题 4=商品"
                 },
                 {
                     "recommend_description": "推荐描述",
                     "recommend_id": 3,
                     "recommend_label": "推荐标签",
                     "recommend_title": "推荐标题",
-                    "target_type": "推荐类型: 1=生活志文章, 2=种草清单 3=主题",
+                    "target_type": "推荐类型: 1=生活志文章, 2=种草清单 3=主题 4=商品",
                     "audit_status": 3,
                     "content": "正文",
                     "cover": "http://127.0.0.1:9000/_uploads/photos/180707/912fc59a8199d04.jpg",
