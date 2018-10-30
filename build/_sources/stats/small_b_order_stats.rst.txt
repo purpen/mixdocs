@@ -78,7 +78,7 @@ JSON数据格式:
     {
         "data": {
             "pending_commission_price": 7,  // 待结算金额
-            "today_commission_price": 0,  // 今日收益
+            "today_commission_price": 0,  // 今日订单收益
             "total_commission_price": 10  // 累计收益
         },
         "status": {

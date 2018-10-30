@@ -114,10 +114,11 @@ JSON数据格式:
                     "days": 7,  // 有效期
                     "min_amount": 90,  // 限制金额
                     "pickup_count": 0,  // 领取数量
+                    'got_count': 1000,  // 发行数量
                     "surplus_count": 1000,  // 剩余数量
+                    "use_count": 0,  // 使用数量
                     "type": 2,  // 类型 1、同享券 2、单享券 3、满减
                     "type_text": "部分商品可用",
-                    "use_count": 0  // 使用数量
                 }
             ]
         },
