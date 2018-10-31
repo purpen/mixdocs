@@ -747,7 +747,15 @@ JSON数据格式:
                         }
                     ],
                 },
-            ]
+            ],
+        "pay_status": "SUCCESS"  // 支付状态
+                                    // SUCCESS—支付成功
+                                    // REFUND—转入退款
+                                    // NOTPAY—未支付
+                                    // CLOSED—已关闭
+                                    // REVOKED—已撤销（刷卡支付）
+                                    // USERPAYING--用户支付中
+                                    // PAYERROR--支付失败
         },
         "status": {
             "code": 200,
@@ -787,7 +795,8 @@ from_client            String      可选                     来源客户端，
 is_alone               Integer     可选          0          是否独立小程序 0、否 1、是
 affiliate_code         String      可选                     推广码
 bonus_code             String      可选                     官方红包码
-sync_pay               Integer     可选           0         是否同步返回支付参数 0、否 1、是
+sync_pay               Integer     可选          0          是否同步返回支付参数 0、否 1、是
+pay_type               Number      可选          1          支付方式 1、微信 2、支付宝
 authAppid              String      可选                     authAppid
 last_store_rid         String      可选                     上一次浏览的小b店铺rid
 store_items            Array       必需                     店铺商品信息
@@ -2373,7 +2382,7 @@ JSON数据格式:
 名称                    类型        是否必须     默认值       描述说明
 =====================  ==========  =========  ==========  =============================
 rid                    String      必需                    订单编号
-pay_type               String      必需                    支付方式 1、微信 2、支付宝
+pay_type               Number      可选            1       支付方式 1、微信 2、支付宝
 authAppid              String      可选                    应用id
 =====================  ==========  =========  ==========  =============================
 
@@ -2384,19 +2393,23 @@ JSON数据格式:
 
 .. code-block:: javascript
 
+
     {
         "data": {
-            'appId': 'wxappId',
-            'nonceStr': 'nonceStr',
-            'package': 'prepay_id=package',
-            'signType': 'signType',
-            'timeStamp': 1539245473,
-            'pay_sign': 'pay_sign',
-            'prepay_id': 'prepay_id',
+            "_asdict": {},
+            "appid": "appid",
             'current_at': 1539245473,  // 当前时间
             'created_at': 1539245473,  // 创建时间
             "is_merge": true,  // 是否合并支付
+            "mch_id": "mch_id",
+            "nonce_str": "nonce_str",
             "order_rid": "D18070316803529", // 订单编号或官方订单编号
+            "prepay_id": "prepay_id",
+            "result_code": "SUCCESS",
+            "return_code": "SUCCESS",
+            "return_msg": "OK",
+            "sign": "sign",
+            "trade_type": "APP",
             "order_list": [  // 订单信息
                 {
                     "store_name": "第一家",  // 店铺名
@@ -2408,7 +2421,7 @@ JSON数据格式:
                     "total_quantity": 30,
                     "user_pay_amount": 9585.3
                 }
-            ]
+            ],
         },
         "status": {
             "code": 200,
@@ -2416,5 +2429,4 @@ JSON数据格式:
         },
         "success": true
     }
-
 
