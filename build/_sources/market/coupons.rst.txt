@@ -1591,6 +1591,8 @@ JSON数据格式:
 store_category        Number     必填           0      店铺分类id, 0、推荐
 open_id               String     可选                  open_id
 rid                   String     可选                  用户编号，app没登录不填，登录后填写
+page                  Number     可选         1         当前页码
+per_page              Number     可选         10        每页数量
 ====================  ========  =========  ========  ====================================
 
 
