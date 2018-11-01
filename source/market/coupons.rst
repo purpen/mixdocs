@@ -1341,7 +1341,7 @@ JSON数据格式:
                     "store_name": "",  // 店铺名
                     "store_rid": "",  // 店铺编号
                     "type": 2  // 1、店铺优惠券 2、官方优惠券
-                    "source": 11,  // 1、分享领红包 2、猜图赢现金 3、赠送 4、新人奖励 11、领券中心 12、店铺
+                    "source": 11,  // 1、分享领红包 2、猜图赢现金 3、赠送 4、新人奖励 5、双十一活动 11、领券中心 12、店铺
                     "category_id": 0,  // 分类id
                     "category_name": "全平台通用",  // 分类名
                 },
@@ -1398,7 +1398,7 @@ JSON数据格式:
                     "code": "BCAFTIVLKJS",  // code
                     "expired_at": 1540915200,  // 到期时间
                     "min_amount": 5,  // 最小限制金额
-                    "source": 3,  // // 1、分享领红包 2、猜图赢现金 3、赠送 4、新人奖励 11、领券中心 12、店铺
+                    "source": 3,  // // 1、分享领红包 2、猜图赢现金 3、赠送 4、新人奖励 5、双十一活动 11、领券中心 12、店铺
                     "start_at": 1539746091  // 开始时间
                 }
             ]
@@ -1851,3 +1851,272 @@ JSON数据格式:
         },
         "success": true
     }
+
+
+领券中心-双十一活动
+--------------------------
+领券中心-双十一活动
+
+接口说明
+~~~~~~~~~~~~~~
+
+* API接口请求地址：``/market/coupons_activity/double``
+* API接口请求方法：``GET``
+
+
+请求参数
+~~~~~~~~~~~~~~~
+
+====================  ========  =========  ========  ==========================================
+名称                   类型      是否必须    默认值     描述说明
+====================  ========  =========  ========  ==========================================
+open_id               String     必填                  open_id,小程序必填
+rid                   String     可选                  用户编号，app没登录不填，登录后填写
+====================  ========  =========  ========  ==========================================
+
+
+返回示例
+~~~~~~~~~~~~~~~~
+
+JSON数据格式:
+
+.. code-block:: javascript
+
+
+    {
+        "data": {
+            "coupons": [
+                {
+                    "id": 1,  // 1、300-50 2、600-80 3、1000-120
+                    "image_able": "https://static.moebeast.com/h5/img/mall/image1.jpg", // 可用图
+                    "image_not_able": "https://static.moebeast.com/h5/img/mall/image1.jpg", // 不可用图
+                    "is_grant": true // 是否可领取 true、可领 false、不可领
+                },
+                {
+                    "id": 2,
+                    "image_able": "https://static.moebeast.com/h5/img/mall/image1.jpg",
+                    "image_not_able": "https://static.moebeast.com/h5/img/mall/image1.jpg",
+                    "is_grant": true
+                },
+                {
+                    "id": 3,
+                    "image_able": "https://static.moebeast.com/h5/img/mall/image1.jpg",
+                    "image_not_able": "https://static.moebeast.com/h5/img/mall/image1.jpg",
+                    "is_grant": true
+                }
+            ]
+        },
+        "status": {
+            "code": 200,
+            "message": "Ok all right."
+        },
+        "success": true
+    }
+
+
+领券中心-双十一返场活动
+--------------------------
+领券中心-双十一返场活动
+
+接口说明
+~~~~~~~~~~~~~~
+
+* API接口请求地址：``/market/coupons_activity/return``
+* API接口请求方法：``GET``
+
+
+请求参数
+~~~~~~~~~~~~~~~
+
+====================  ========  =========  ========  ==========================================
+名称                   类型      是否必须    默认值     描述说明
+====================  ========  =========  ========  ==========================================
+open_id               String     必填                  open_id,小程序必填
+rid                   String     可选                  用户编号，app没登录不填，登录后填写
+====================  ========  =========  ========  ==========================================
+
+
+返回示例
+~~~~~~~~~~~~~~~~
+
+JSON数据格式:
+
+.. code-block:: javascript
+
+
+    {
+        "data": {
+            "coupons": [
+                {
+                    "id": 4,  // 4、400-50
+                    "image_able": "https://static.moebeast.com/h5/img/mall/image1.jpg", // 可用图
+                    "image_not_able": "https://static.moebeast.com/h5/img/mall/image1.jpg",  // 不可用图
+                    "is_grant": true // 是否可领取 true、可领 false、不可领
+                }
+            ]
+        },
+        "status": {
+            "code": 200,
+            "message": "Ok all right."
+        },
+        "success": true
+    }
+
+
+
+店铺-双十一活动
+--------------------------
+店铺-双十一活动
+
+接口说明
+~~~~~~~~~~~~~~
+
+* API接口请求地址：``/market/master_activity/double``
+* API接口请求方法：``GET``
+
+
+请求参数
+~~~~~~~~~~~~~~~
+
+====================  ========  =========  ========  ==========================================
+名称                   类型      是否必须    默认值     描述说明
+====================  ========  =========  ========  ==========================================
+open_id               String     必填                  open_id,小程序必填
+rid                   String     可选                  用户编号，app没登录不填，登录后填写
+====================  ========  =========  ========  ==========================================
+
+
+返回示例
+~~~~~~~~~~~~~~~~
+
+JSON数据格式:
+
+.. code-block:: javascript
+
+
+    {
+        "data": {
+            "coupons": [
+                {
+                    "id": 1,  // 1、300-50 2、600-80 3、1000-120
+                    "image_able": "https://static.moebeast.com/h5/img/mall/image1.jpg", // 可用图
+                    "image_not_able": "https://static.moebeast.com/h5/img/mall/image1.jpg", // 不可用图
+                    "is_grant": true // 是否可领取 true、可领 false、不可领
+                },
+                {
+                    "id": 2,
+                    "image_able": "https://static.moebeast.com/h5/img/mall/image1.jpg",
+                    "image_not_able": "https://static.moebeast.com/h5/img/mall/image1.jpg",
+                    "is_grant": true
+                },
+                {
+                    "id": 3,
+                    "image_able": "https://static.moebeast.com/h5/img/mall/image1.jpg",
+                    "image_not_able": "https://static.moebeast.com/h5/img/mall/image1.jpg",
+                    "is_grant": true
+                }
+            ]
+        },
+        "status": {
+            "code": 200,
+            "message": "Ok all right."
+        },
+        "success": true
+    }
+
+
+店铺-双十一返场活动
+--------------------------
+店铺-双十一返场活动
+
+接口说明
+~~~~~~~~~~~~~~
+
+* API接口请求地址：``/market/master_activity/return``
+* API接口请求方法：``GET``
+
+
+请求参数
+~~~~~~~~~~~~~~~
+
+====================  ========  =========  ========  ==========================================
+名称                   类型      是否必须    默认值     描述说明
+====================  ========  =========  ========  ==========================================
+open_id               String     必填                  open_id,小程序必填
+rid                   String     可选                  用户编号，app没登录不填，登录后填写
+====================  ========  =========  ========  ==========================================
+
+
+返回示例
+~~~~~~~~~~~~~~~~
+
+JSON数据格式:
+
+.. code-block:: javascript
+
+
+    {
+        "data": {
+            "coupons": [
+                {
+                    "id": 4,  // 4、400-50
+                    "image_able": "https://static.moebeast.com/h5/img/mall/image1.jpg", // 可用图
+                    "image_not_able": "https://static.moebeast.com/h5/img/mall/image1.jpg",  // 不可用图
+                    "is_grant": true // 是否可领取 true、可领 false、不可领
+                }
+            ]
+        },
+        "status": {
+            "code": 200,
+            "message": "Ok all right."
+        },
+        "success": true
+    }
+
+
+领取双十一活动优惠券
+--------------------------------
+领取双十一活动优惠券
+
+接口说明
+~~~~~~~~~~~~~~
+
+* API接口请求地址：``/market/coupons_activity/grant``
+* API接口请求方法：``POST``
+* API接口用户授权：``token``
+
+
+请求参数
+~~~~~~~~~~~~~~~
+
+====================  ========  =========  ========  ==========================================
+名称                   类型      是否必须    默认值     描述说明
+====================  ========  =========  ========  ==========================================
+id                    Integer     必须                  双十一优惠券id
+====================  ========  =========  ========  ==========================================
+
+
+返回示例
+~~~~~~~~~~~~~~~~
+
+JSON数据格式:
+
+.. code-block:: javascript
+
+    {
+        "data": {
+            "coupons": {
+                "id": 4,  // 1、300-50 2、600-80 3、1000-120 4、400-50
+                "image_able": "https://static.moebeast.com/h5/img/mall/image1.jpg", // 可用图
+                "image_not_able": "https://static.moebeast.com/h5/img/mall/image1.jpg",  // 不可用图
+                "is_grant": true // 是否可领取 true、可领 false、不可领
+            }
+        },
+        "status": {
+            "code": 200,
+            "message": "Ok all right."
+        },
+        "success": true
+    }
+
+
