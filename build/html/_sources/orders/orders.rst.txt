@@ -796,7 +796,7 @@ is_alone               Integer     可选          0          是否独立小程
 affiliate_code         String      可选                     推广码
 bonus_code             String      可选                     官方红包码
 sync_pay               Integer     可选          0          是否同步返回支付参数 0、否 1、是
-pay_type               Number      可选          1          支付方式 1、微信 2、支付宝
+pay_type               Integer     可选          1          支付方式 1、微信 2、支付宝
 authAppid              String      可选                     authAppid
 last_store_rid         String      可选                     上一次浏览的小b店铺rid
 store_items            Array       必需                     店铺商品信息
@@ -2362,6 +2362,69 @@ JSON数据格式:
         },
         "success": true
     }
+
+
+
+微信app是否合并支付
+=============================
+微信app是否合并支付
+
+接口说明
+~~~~~~~~~~~~~~
+
+* API接口请求地址：``/orders/app_pay/is_merge``
+* API接口请求方法：``POST``
+* API接口用户授权：``token``
+
+请求参数
+~~~~~~~~~~~~~~~
+
+=====================  ==========  =========  ==========  =============================
+名称                    类型        是否必须     默认值       描述说明
+=====================  ==========  =========  ==========  =============================
+rid                    String      必需                    订单编号
+=====================  ==========  =========  ==========  =============================
+
+返回示例
+~~~~~~~~~~~~~~~~
+
+JSON数据格式:
+
+.. code-block:: javascript
+
+
+    {
+        "data": {
+            "created_at": 1539157265,  // 创建时间
+            "current_at": 1541048780,  // 当前时间
+            "is_merge": true,  // 是否合并支付
+            "bonus_amount": 5,  // 官方优惠券金额
+            "coupon_amount": 0,  // 店铺优惠券金额
+            "first_discount": 0,  // 首单优惠
+            "freight": 1180,  // 运费
+            "pay_amount": 10770,  // 应支付金额
+            "reach_minus": 5,  // 满减
+            "total_amount": 9600,  // 商品总金额
+            "order_list": [
+                {
+                    "store_name": "第一家",
+                    "total_quantity": 30,
+                    "user_pay_amount": null
+                },
+                {
+                    "store_name": "第2家",
+                    "total_quantity": 30,
+                    "user_pay_amount": null
+                }
+            ]
+        },
+        "status": {
+            "code": 200,
+            "message": "Ok all right."
+        },
+        "success": true
+    }
+
 
 
 微信app支付签名

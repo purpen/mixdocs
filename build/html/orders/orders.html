@@ -328,10 +328,16 @@
 <li><a class="reference internal" href="#id87">返回示例</a></li>
 </ul>
 </li>
-<li><a class="reference internal" href="#app">微信app支付签名</a><ul>
+<li><a class="reference internal" href="#app">微信app是否合并支付</a><ul>
 <li><a class="reference internal" href="#id88">接口说明</a></li>
 <li><a class="reference internal" href="#id89">请求参数</a></li>
 <li><a class="reference internal" href="#id90">返回示例</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#id91">微信app支付签名</a><ul>
+<li><a class="reference internal" href="#id92">接口说明</a></li>
+<li><a class="reference internal" href="#id93">请求参数</a></li>
+<li><a class="reference internal" href="#id94">返回示例</a></li>
 </ul>
 </li>
 </ul>
@@ -497,10 +503,16 @@
 <li><a class="reference internal" href="#id87">返回示例</a></li>
 </ul>
 </li>
-<li><a class="reference internal" href="#app">微信app支付签名</a><ul>
+<li><a class="reference internal" href="#app">微信app是否合并支付</a><ul>
 <li><a class="reference internal" href="#id88">接口说明</a></li>
 <li><a class="reference internal" href="#id89">请求参数</a></li>
 <li><a class="reference internal" href="#id90">返回示例</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#id91">微信app支付签名</a><ul>
+<li><a class="reference internal" href="#id92">接口说明</a></li>
+<li><a class="reference internal" href="#id93">请求参数</a></li>
+<li><a class="reference internal" href="#id94">返回示例</a></li>
 </ul>
 </li>
 </ul>
@@ -1513,7 +1525,7 @@
 <td>是否同步返回支付参数 0、否 1、是</td>
 </tr>
 <tr class="row-even"><td>pay_type</td>
-<td>Number</td>
+<td>Integer</td>
 <td>可选</td>
 <td>1</td>
 <td>支付方式 1、微信 2、支付宝</td>
@@ -3442,18 +3454,95 @@
 </div>
 </div>
 <div class="section" id="app">
-<h2>微信app支付签名<a class="headerlink" href="#app" title="永久链接至标题">¶</a></h2>
-<p>微信app支付签名</p>
+<h2>微信app是否合并支付<a class="headerlink" href="#app" title="永久链接至标题">¶</a></h2>
+<p>微信app是否合并支付</p>
 <div class="section" id="id88">
 <h3>接口说明<a class="headerlink" href="#id88" title="永久链接至标题">¶</a></h3>
 <ul class="simple">
-<li>API接口请求地址：<code class="docutils literal"><span class="pre">/orders/wx_pay/app</span></code></li>
+<li>API接口请求地址：<code class="docutils literal"><span class="pre">/orders/app_pay/is_merge</span></code></li>
 <li>API接口请求方法：<code class="docutils literal"><span class="pre">POST</span></code></li>
 <li>API接口用户授权：<code class="docutils literal"><span class="pre">token</span></code></li>
 </ul>
 </div>
 <div class="section" id="id89">
 <h3>请求参数<a class="headerlink" href="#id89" title="永久链接至标题">¶</a></h3>
+<table border="1" class="docutils">
+<colgroup>
+<col width="27%" />
+<col width="13%" />
+<col width="11%" />
+<col width="13%" />
+<col width="37%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">名称</th>
+<th class="head">类型</th>
+<th class="head">是否必须</th>
+<th class="head">默认值</th>
+<th class="head">描述说明</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>rid</td>
+<td>String</td>
+<td>必需</td>
+<td>&#160;</td>
+<td>订单编号</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="id90">
+<h3>返回示例<a class="headerlink" href="#id90" title="永久链接至标题">¶</a></h3>
+<p>JSON数据格式:</p>
+<div class="highlight-javascript"><div class="highlight"><pre><span></span><span class="p">{</span>
+    <span class="s2">&quot;data&quot;</span><span class="o">:</span> <span class="p">{</span>
+        <span class="s2">&quot;created_at&quot;</span><span class="o">:</span> <span class="mi">1539157265</span><span class="p">,</span>  <span class="c1">// 创建时间</span>
+        <span class="s2">&quot;current_at&quot;</span><span class="o">:</span> <span class="mi">1541048780</span><span class="p">,</span>  <span class="c1">// 当前时间</span>
+        <span class="s2">&quot;is_merge&quot;</span><span class="o">:</span> <span class="kc">true</span><span class="p">,</span>  <span class="c1">// 是否合并支付</span>
+        <span class="s2">&quot;bonus_amount&quot;</span><span class="o">:</span> <span class="mi">5</span><span class="p">,</span>  <span class="c1">// 官方优惠券金额</span>
+        <span class="s2">&quot;coupon_amount&quot;</span><span class="o">:</span> <span class="mi">0</span><span class="p">,</span>  <span class="c1">// 店铺优惠券金额</span>
+        <span class="s2">&quot;first_discount&quot;</span><span class="o">:</span> <span class="mi">0</span><span class="p">,</span>  <span class="c1">// 首单优惠</span>
+        <span class="s2">&quot;freight&quot;</span><span class="o">:</span> <span class="mi">1180</span><span class="p">,</span>  <span class="c1">// 运费</span>
+        <span class="s2">&quot;pay_amount&quot;</span><span class="o">:</span> <span class="mi">10770</span><span class="p">,</span>  <span class="c1">// 应支付金额</span>
+        <span class="s2">&quot;reach_minus&quot;</span><span class="o">:</span> <span class="mi">5</span><span class="p">,</span>  <span class="c1">// 满减</span>
+        <span class="s2">&quot;total_amount&quot;</span><span class="o">:</span> <span class="mi">9600</span><span class="p">,</span>  <span class="c1">// 商品总金额</span>
+        <span class="s2">&quot;order_list&quot;</span><span class="o">:</span> <span class="p">[</span>
+            <span class="p">{</span>
+                <span class="s2">&quot;store_name&quot;</span><span class="o">:</span> <span class="s2">&quot;第一家&quot;</span><span class="p">,</span>
+                <span class="s2">&quot;total_quantity&quot;</span><span class="o">:</span> <span class="mi">30</span><span class="p">,</span>
+                <span class="s2">&quot;user_pay_amount&quot;</span><span class="o">:</span> <span class="kc">null</span>
+            <span class="p">},</span>
+            <span class="p">{</span>
+                <span class="s2">&quot;store_name&quot;</span><span class="o">:</span> <span class="s2">&quot;第2家&quot;</span><span class="p">,</span>
+                <span class="s2">&quot;total_quantity&quot;</span><span class="o">:</span> <span class="mi">30</span><span class="p">,</span>
+                <span class="s2">&quot;user_pay_amount&quot;</span><span class="o">:</span> <span class="kc">null</span>
+            <span class="p">}</span>
+        <span class="p">]</span>
+    <span class="p">},</span>
+    <span class="s2">&quot;status&quot;</span><span class="o">:</span> <span class="p">{</span>
+        <span class="s2">&quot;code&quot;</span><span class="o">:</span> <span class="mi">200</span><span class="p">,</span>
+        <span class="s2">&quot;message&quot;</span><span class="o">:</span> <span class="s2">&quot;Ok all right.&quot;</span>
+    <span class="p">},</span>
+    <span class="s2">&quot;success&quot;</span><span class="o">:</span> <span class="kc">true</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="id91">
+<h2>微信app支付签名<a class="headerlink" href="#id91" title="永久链接至标题">¶</a></h2>
+<p>微信app支付签名</p>
+<div class="section" id="id92">
+<h3>接口说明<a class="headerlink" href="#id92" title="永久链接至标题">¶</a></h3>
+<ul class="simple">
+<li>API接口请求地址：<code class="docutils literal"><span class="pre">/orders/wx_pay/app</span></code></li>
+<li>API接口请求方法：<code class="docutils literal"><span class="pre">POST</span></code></li>
+<li>API接口用户授权：<code class="docutils literal"><span class="pre">token</span></code></li>
+</ul>
+</div>
+<div class="section" id="id93">
+<h3>请求参数<a class="headerlink" href="#id93" title="永久链接至标题">¶</a></h3>
 <table border="1" class="docutils">
 <colgroup>
 <col width="27%" />
@@ -3492,8 +3581,8 @@
 </tbody>
 </table>
 </div>
-<div class="section" id="id90">
-<h3>返回示例<a class="headerlink" href="#id90" title="永久链接至标题">¶</a></h3>
+<div class="section" id="id94">
+<h3>返回示例<a class="headerlink" href="#id94" title="永久链接至标题">¶</a></h3>
 <p>JSON数据格式:</p>
 <div class="highlight-javascript"><div class="highlight"><pre><span></span><span class="p">{</span>
     <span class="s2">&quot;data&quot;</span><span class="o">:</span> <span class="p">{</span>
