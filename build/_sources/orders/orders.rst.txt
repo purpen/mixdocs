@@ -748,6 +748,20 @@ JSON数据格式:
                     ],
                 },
             ],
+        "city": "淄博",  // 城市
+        "first_name": "张",  // 姓名
+        "province": "山东",  // 省
+        "street_address": "青年路",  // 详细街道
+        "town": "周村",  // 镇
+        "mobile": "13260180689",  // 手机
+        "zipcode": "255300",  // 邮编
+        "coupon_amount": 0,  // 店铺优惠券
+        "first_discount": 959,  // 首单优惠
+        "bonus_amount": 4.23,  // 官方优惠券
+        "freight": 590,  // 运费
+        "reach_minus": 0,  // 满减
+        "total_amount": 9000,  // 商品总价
+        "user_pay_amount": 8626.77,  // 支付金额
         "pay_status": "SUCCESS"  // 支付状态
                                     // SUCCESS—支付成功
                                     // REFUND—转入退款
