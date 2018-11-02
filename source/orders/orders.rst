@@ -748,13 +748,13 @@ JSON数据格式:
                     ],
                 },
             ],
-        "city": "淄博",  // 城市
-        "first_name": "张",  // 姓名
-        "province": "山东",  // 省
-        "street_address": "青年路",  // 详细街道
-        "town": "周村",  // 镇
-        "mobile": "13260180689",  // 手机
-        "zipcode": "255300",  // 邮编
+        "buyer_city": "淄博",  // 城市
+        "buyer_name": "张",  // 姓名
+        "buyer_province": "山东",  // 省
+        "buyer_address": "青年路",  // 详细街道
+        "buyer_town": "周村",  // 镇
+        "buyer_tel": "13260180689",  // 手机
+        "buyer_zipcode": "255300",  // 邮编
         "coupon_amount": 0,  // 店铺优惠券
         "first_discount": 959,  // 首单优惠
         "bonus_amount": 4.23,  // 官方优惠券
