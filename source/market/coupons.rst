@@ -1996,6 +1996,7 @@ JSON数据格式:
 
     {
         "data": {
+            'tag': 'https://static.moebeast.com/h5/img/mall/image1.jpg',
             "coupons": [
                 {
                     "id": 1,  // 1、300-50 2、600-80 3、1000-120
@@ -2057,6 +2058,7 @@ JSON数据格式:
 
     {
         "data": {
+            'tag': 'https://static.moebeast.com/h5/img/mall/image1.jpg',
             "coupons": [
                 {
                     "id": 4,  // 4、400-50
