@@ -2,6 +2,117 @@
 用户模块
 =========
 
+查看最近访问的生活馆列表
+--------------------------
+
+
+接口说明
+~~~~~~~~~~~~~~
+
+* API接口请求地址：``/users/get_visitor_life_stores``
+* API接口请求方法：``GET``
+* API接口用户授权：``token``
+
+JSON数据格式
+
+请求 **正确** 返回结果：
+
+.. code-block:: javascript
+
+    {
+        "data": {
+            "count": 3,
+            "life_stores": [
+                {
+                    "browse_number": 80,  // 访问次数
+                    "logo": "http://kg.erp.taihuoniao.com/static/img/default-logo.png",  // 头像
+                    "name": "京东",  // 用户名
+                    "rid": "93914785"  // 生活馆编号
+                },
+                {
+                    "browse_number": 601,
+                    "logo": "http://kg.erp.taihuoniao.com/static/img/default-logo.png",
+                    "name": "淘宝",
+                    "rid": "93914762"
+                },
+                {
+                    "browse_number": 91,
+                    "logo": "http://kg.erp.taihuoniao.com/static/img/default-logo.png",
+                    "name": "天猫",
+                    "rid": "93914725"
+                }
+            ],
+            "next": false,
+            "prev": false
+        },
+        "status": {
+            "code": 200,
+            "message": "Ok all right."
+        },
+        "success": true
+    }
+
+
+查看别人最近访问的生活馆列表
+----------------------------
+
+
+接口说明
+~~~~~~~~~~~~~~
+
+* API接口请求地址：``/users/get_other_visitor_life_stores``
+* API接口请求方法：``GET``
+* API接口用户授权：``token``
+
+请求参数
+~~~~~~~~~~~~~~~
+
+=====================  ==========  =========  ==========  =============================
+名称                    类型        是否必须     默认值       描述说明
+=====================  ==========  =========  ==========  =============================
+uid                     String       是                     被查看用户编号
+=====================  ==========  =========  ==========  =============================
+
+JSON数据格式
+
+请求 **正确** 返回结果：
+
+.. code-block:: javascript
+
+    {
+        "data": {
+            "count": 3,
+            "life_stores": [
+                {
+                    "browse_number": 80,  // 访问次数
+                    "logo": "http://kg.erp.taihuoniao.com/static/img/default-logo.png",  // 头像
+                    "name": "京东",  // 用户名
+                    "rid": "93914785"  // 生活馆编号
+                },
+                {
+                    "browse_number": 601,
+                    "logo": "http://kg.erp.taihuoniao.com/static/img/default-logo.png",
+                    "name": "淘宝",
+                    "rid": "93914762"
+                },
+                {
+                    "browse_number": 91,
+                    "logo": "http://kg.erp.taihuoniao.com/static/img/default-logo.png",
+                    "name": "天猫",
+                    "rid": "93914725"
+                }
+            ],
+            "next": false,
+            "prev": false
+        },
+        "status": {
+            "code": 200,
+            "message": "Ok all right."
+        },
+        "success": true
+    }
+
+
 获取用户最后进入的生活馆
 --------------------------
 **核心小程序会用到, 移动端不需要**
