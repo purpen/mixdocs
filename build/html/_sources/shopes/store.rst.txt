@@ -3,6 +3,104 @@
 ================
 
 
+获取合同签署日期
+--------------------------
+
+
+接口说明
+~~~~~~~~~~~~~~
+
+* API接口请求地址：``/store/get_contract_date``
+* API接口请求方法：``GET``
+* API接口用户授权：``token``
+
+JSON数据格式
+
+请求 **正确** 返回结果：
+
+.. code-block:: javascript
+
+    {
+        "data": {
+            "begin_at": 1420041600,
+            "end_at": 1514736000,
+            "sign_at": 1420041600
+        },
+        "status": {
+            "code": 200,
+            "message": "Ok all right."
+        },
+        "success": true
+    }
+
+
+确认签署合同
+-----------------
+
+接口说明
+~~~~~~~~~~~~~~
+
+* API接口请求地址：``/store/affirm_contract``
+* API接口请求方法：``POST``
+* API接口用户授权：``token``
+
+
+请求参数
+~~~~~~~~~~~~~~~
+
+===============  ========  =========  ========  ====================================
+名称              类型      是否必须    默认值     描述说明
+===============  ========  =========  ========  ====================================
+begin_at          Integer    可选                  合同签署日期
+end_at            Integer    可选                  合同结束日期
+authorizer        String     必须                  合同签字人
+===============  ========  =========  ========  ====================================
+
+返回示例
+~~~~~~~~~~~~~~~~
+
+JSON数据格式:
+
+请求 **正确** 返回结果：
+
+.. code-block:: javascript
+
+    {
+        "data": {
+            "account": "6214865188793549",
+            "area": "",
+            "area_id": null,
+            "areacode": "+86",
+            "attachment_id": 0,
+            "bank_addr": "朝阳区酒仙桥支行",
+            "bank_name": "中国银行",
+            "begin_at": 1530609462,
+            "city": "北京",
+            "city_id": 1,
+            "contract_sn": "MT201807036128",
+            "country": "中国",
+            "country_id": 1,
+            "email": "8888888@qq.com",
+            "end_at": 1562145462,
+            "id": 1,
+            "master_uid": 2,
+            "mobile": "13004578966",
+            "name": "马化腾",
+            "province": "北京",
+            "province_id": 1,
+            "second_party": "京东商城",
+            "status": 2,
+            "street_address": null,
+            "username": "雷军"
+        },
+        "status": {
+            "code": 201,
+            "message": "All created."
+        },
+        "success": true
+    }
+
+
 生活馆管理--获取成功邀请开馆的人数
 ---------------------------------------
 
