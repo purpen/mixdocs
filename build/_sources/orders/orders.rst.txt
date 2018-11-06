@@ -743,7 +743,9 @@ JSON数据格式:
                             "store_name": "第2家",
                             "store_rid": "3",
                             "tag_line": "1",
-                            "town": ""
+                            "town": "",
+                            "max_days": 5,  // 最大天数
+                            "min_days": 3,  // 最小天数
                         }
                     ],
                 },
