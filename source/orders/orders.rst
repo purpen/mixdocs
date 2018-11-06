@@ -746,6 +746,7 @@ JSON数据格式:
                             "town": "",
                             "max_days": 5,  // 最大天数
                             "min_days": 3,  // 最小天数
+                            "py_intro": "",
                         }
                     ],
                 },
