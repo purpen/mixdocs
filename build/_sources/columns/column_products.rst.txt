@@ -363,8 +363,64 @@ JSON数据格式:
     }
 
 
+集合基本信息
+----------------------
+只返回集合的基本信息，不包含任何集合中商品信息
+
+接口说明
+~~~~~~~~~~~~~~
+
+* API接口请求地址：``/column/collections/basic``
+* API接口请求方法：``GET``
+
+请求参数
+~~~~~~~~~~~~~~~
+
+===============  ==========  =========  ==========  =============================
+名称              类型        是否必须     默认值       描述说明
+===============  ==========  =========  ==========  =============================
+page             Number      可选         1          当前页码
+per_page         Number      可选         10         每页数量
+===============  ==========  =========  ==========  =============================
+
+返回示例
+~~~~~~~~~~~~~~~~
+
+JSON数据格式:
+
+.. code-block:: javascript
+
+    {
+        "data": {
+            "collections": [
+                {
+                    "cover": "https://s3.lexivip.com/20181025/1803FrUcuFryIETqw24TuP1oNyIS714Y.png",
+                    "id": 7,
+                    "name": "女生日常",
+                    "sub_name": "看你的千面色彩"
+                },
+                {
+                    "cover": "https://s3.lexivip.com/20181025/5603FtZVhDCnTCEUwupgmH3HjzuX3cc4.jpg",
+                    "id": 5,
+                    "name": "男生潮品",
+                    "sub_name": "懂你的潮品好物"
+                }
+            ],
+            "count": 2,
+            "next": false,
+            "prev": false,
+            "title": "集合"
+        },
+        "status": {
+            "code": 200,
+            "message": "Ok all right."
+        },
+        "success": true
+    }
+
 探索--集合
 ----------------------
+集合查看全部，包含集合基本信息和其中四个商品的基本信息
 
 接口说明
 ~~~~~~~~~~~~~~
@@ -393,64 +449,33 @@ JSON数据格式:
         "data": {
             "collections": [
                 {
-                    "cover": "http://127.0.0.1:9000/_uploads/photos/180707/61b85f8fe19d59f.jpg",
-                    "cover_id": 7,
-                    "id": 7,
-                    "mask_color": "遮罩颜色",
-                    "name": "主题标题",
+                    "count": 8,
+                    "cover": "https://s3.lexivip.com/20181025/1803FrUcuFryIETqw24TuP1oNyIS714Y.png",
+                    "id": 24,
+                    "name": "女生日常",
                     "products": [
                         {
-                            "category_id": 628,
-                            "commission_price": 246.68,
-                            "commission_rate": 11.5,
-                            "cover": "http://127.0.0.1:9000/_uploads/photos/180718/f1a30ad8b52107c.gif",
-                            "cover_id": 14,
-                            "custom_details": "",
-                            "delivery_country": "",
-                            "delivery_country_id": null,
-                            "features": "价格超值(5) 大小合适(4) 面料舒适(4) 尺码精准(3) 尺码合适(3) 做工精良(2) 简单得体(2) 使命必达 简约大方",
-                            "have_distributed": false,
-                            "id_code": "sd3223",
-                            "is_custom_made": false,
-                            "is_custom_service": false,
-                            "is_distributed": true,
-                            "is_free_postage": false,
-                            "is_made_holiday": false,
-                            "is_proprietary": true,
-                            "is_sold_out": false,
-                            "like_count": 0,
-                            "made_cycle": 0,
-                            "material_id": 4,
-                            "material_name": "毛线",
-                            "max_price": 2234.5,
-                            "max_sale_price": 2145,
-                            "min_price": 1234.5,
-                            "min_sale_price": 1145,
-                            "modes": [
-                                "大 白色23",
-                                "小 白色22"
-                            ],
-                            "name": "宝利博纳 夏季新款修身短袖t恤男韩版潮流男士翻领polo衫男体恤",
-                            "published_at": 1532155598,
-                            "real_price": 2234.5,
-                            "real_sale_price": 2145,
-                            "rid": "8269513870",
-                            "second_category_id": 628,
-                            "status": 1,
-                            "sticked": false,
-                            "store_name": "店铺名",
-                            "store_rid": "1234567891",
-                            "style_id": null,
-                            "style_name": "",
-                            "top_category_id": 600,
-                            "total_stock": 10
+                            "cover": "https://s3.lexivip.com/20180925/5755Fusb0HJurLVQtqe2ylItLRM3VuUv.jpg",
+                            "rid": "8876905123",
+                            "status": 1
+                        },
+                        {
+                            "cover": "https://s3.lexivip.com/lxServer/1532604236757.JPG",
+                            "rid": "8059314678",
+                            "status": 1
+                        },
+                        {
+                            "cover": "https://s3.lexivip.com/lxServer/1533623666074.jpg",
+                            "rid": "8729451036",
+                            "status": 1
+                        },
+                        {
+                            "cover": "https://s3.lexivip.com/20181003/5302Fh2qNBwuC96CFd-I9M2J3Jt9lJB-.jpg",
+                            "rid": "8745209136",
+                            "status": 1
                         }
                     ],
-                    "rids": [
-                        "8269513870"
-                    ],
-                    "sort_order": 1,
-                    "sub_name": "主题标题二"
+                    "sub_name": "看你的千面色彩"
                 }
             ],
             "count": 2,
@@ -466,8 +491,9 @@ JSON数据格式:
     }
 
 
-探索--集合详情
+集合详情
 ----------------------
+集合的详情和集合中所有商品的信息
 
 接口说明
 ~~~~~~~~~~~~~~
@@ -493,63 +519,23 @@ JSON数据格式:
 
     {
         "data": {
+            "count": 8,
             "cover": "http://127.0.0.1:9000/_uploads/photos/180707/61b85f8fe19d59f.jpg",
-            "cover_id": 7,
             "id": 7,
-            "mask_color": "遮罩颜色",
             "name": "主题标题",
             "products": [
                 {
-                    "category_id": 628,
-                    "commission_price": 246.68,
-                    "commission_rate": 11.5,
-                    "cover": "http://127.0.0.1:9000/_uploads/photos/180718/f1a30ad8b52107c.gif",
-                    "cover_id": 14,
-                    "custom_details": "",
-                    "delivery_country": "",
-                    "delivery_country_id": null,
-                    "features": "价格超值(5) 大小合适(4) 面料舒适(4) 尺码精准(3) 尺码合适(3) 做工精良(2) 简单得体(2) 使命必达 简约大方",
-                    "have_distributed": false,
-                    "id_code": "sd3223",
-                    "is_custom_made": false,
-                    "is_custom_service": false,
-                    "is_distributed": true,
+                    "cover": "https://s3.lexivip.com/lxServer/1535384922675.jpg",
                     "is_free_postage": false,
-                    "is_made_holiday": false,
-                    "is_proprietary": true,
-                    "is_sold_out": false,
                     "like_count": 0,
-                    "made_cycle": 0,
-                    "material_id": 4,
-                    "material_name": "毛线",
-                    "max_price": 2234.5,
-                    "max_sale_price": 2145,
-                    "min_price": 1234.5,
-                    "min_sale_price": 1145,
-                    "modes": [
-                        "大 白色23",
-                        "小 白色22"
-                    ],
-                    "name": "宝利博纳 夏季新款修身短袖t恤男韩版潮流男士翻领polo衫男体恤",
-                    "published_at": 1532155598,
-                    "real_price": 2234.5,
-                    "real_sale_price": 2145,
-                    "rid": "8269513870",
-                    "second_category_id": 628,
+                    "min_price": 180,
+                    "min_sale_price": 0,
+                    "name": "[香港原創] CLASSY 意大利皮革錶帶",
+                    "rid": "8910352476",
                     "status": 1,
-                    "sticked": false,
-                    "store_name": "店铺名",
-                    "store_rid": "1234567891",
-                    "style_id": null,
-                    "style_name": "",
-                    "top_category_id": 600,
-                    "total_stock": 10
+                    "store_rid": "91758940"
                 }
             ],
-            "rids": [
-                "8269513870"
-            ],
-            "sort_order": 1,
             "sub_name": "主题标题二"
         },
         "status": {
@@ -714,14 +700,14 @@ JSON数据格式:
                     ],
                     "sort_order": 12,
                     "sub_name": "",
-                    "target_type": "推荐类型: 1=生活志文章, 2=种草清单 3=主题"
+                    "target_type": "推荐类型: 1=生活志文章, 2=种草清单 3=主题 4=商品"
                 },
                 {
                     "recommend_description": "推荐描述",
                     "recommend_id": 3,
                     "recommend_label": "推荐标签",
                     "recommend_title": "推荐标题",
-                    "target_type": "推荐类型: 1=生活志文章, 2=种草清单 3=主题",
+                    "target_type": "推荐类型: 1=生活志文章, 2=种草清单 3=主题 4=商品",
                     "audit_status": 3,
                     "content": "正文",
                     "cover": "http://127.0.0.1:9000/_uploads/photos/180707/912fc59a8199d04.jpg",

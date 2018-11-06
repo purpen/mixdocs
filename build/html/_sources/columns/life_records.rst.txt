@@ -1919,6 +1919,7 @@ JSON数据格式:
                     "is_praise": true,
                     "pid": 0,
                     "praise_count": 1,
+                    "remain_count": 0,
                     "sub_comment_count": 4,
                     "sub_comments": [
                         {
@@ -1957,8 +1958,10 @@ JSON数据格式:
                 }
             ],
             "count": 2,
+            "current_page": 1,
             "next": false,
             "prev": false
+            "remain_count": 0
         },
         "status": {
             "code": 200,
@@ -2021,8 +2024,10 @@ JSON数据格式:
                 }
             ],
             "count": 4,
+            "current_page": 1,
             "next": false,
-            "prev": false
+            "prev": false,
+            "remain_count": 0
         },
         "status": {
             "code": 200,
