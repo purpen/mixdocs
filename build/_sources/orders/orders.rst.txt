@@ -2444,9 +2444,9 @@ JSON数据格式:
 
 
 
-微信app支付签名
+订单列表app支付
 =============================
-微信app支付签名
+订单列表app支付
 
 接口说明
 ~~~~~~~~~~~~~~
@@ -2465,7 +2465,7 @@ rid                    String      必需                    订单编号
 pay_type               Number      可选            1       支付方式 1、微信 2、支付宝
 =====================  ==========  =========  ==========  =============================
 
-返回示例
+微信返回示例
 ~~~~~~~~~~~~~~~~
 
 JSON数据格式:
@@ -2510,9 +2510,57 @@ JSON数据格式:
     }
 
 
-微信app订单支付
+支付宝返回示例
+~~~~~~~~~~~~~~~~
+
+JSON数据格式:
+
+.. code-block:: javascript
+
+
+    {
+        "data": {
+            'current_at': 1539245473,  // 当前时间
+            'created_at': 1539245473,  // 创建时间
+            "is_merge": true,  // 是否合并支付
+            "order_list": [  // 订单信息
+                {
+                    "store_name": "第一家",  // 店铺名
+                    "total_quantity": 30,  // 数量
+                    "user_pay_amount": 1184.7 //支付金额
+                },
+                {
+                    "store_name": "第2家",
+                    "total_quantity": 30,
+                    "user_pay_amount": 9585.3
+                }
+            ],
+            "order_rid": "D18110685201673",  // 订单编号或官方订单编号
+            "order_string": "app_id=2018102761828848&biz_content=%7B%22subject%22%3A%22%5Cu4e50%5Cu559c-\
+                %5Cu8ba2%5Cu5355%5Cu652f%5Cu4ed8%22%2C%22out_trade_no%22%3A%22D18110650186379 \
+                %22%2C%22total_amount%22%3A%221185.00%22%2C%22product_code%22%3A%22QUICK_MSECURITY_PAY \
+                %22%7D&charset=utf-8&method=alipay.trade.app.pay&notify_url=https%3A%2F%2Ffx.taihuoniao.com \
+                %2Fopen%2Fali%2Fapp_pay_notify&sign_type=RSA2&timestamp=2018-11-06+18%3A11%3A48&version=1.0 \
+                &sign=hpBukZ3DQLEzEDbNf%2FycbNgEmuddZCYT5ZWmCdCIKXf%2BciOEruHVMAPmDhoKhNoZvoPp7R9x6Z6719hU3 \
+                %2BZNQogpmZlmhK6LXFm7MtIkhIHG4YB514iB8l4WxaMXW4v8Ksed%2BJOo1te2bZMEgyHH0acoakLE2OIJ97skA29Xky \
+                %2BGkWPG%2FXGNp4tid1WG%2FqzXtcvKFLERAxL3P0wlNTOjOatx4w3SQUDgZG79y \
+                %2FcQtuiFn0Ksxcx84zHhrz6Q0SX3TN2UZ8l6OVEqQi6 \
+                %2FsUCsITVhEy6t5MIeOCKZNkmNUZ6waaTtfXbqMrS5LY5FK3XbT4kBwCEV5v0sJ2ou6qTdsA%3D%3D"
+        },
+        "status": {
+            "code": 200,
+            "message": "Ok all right."
+        },
+        "success": true
+    }
+
+
+
+
+
+app订单支付
 =============================
-微信app订单支付
+app订单支付
 
 接口说明
 ~~~~~~~~~~~~~~
@@ -2531,7 +2579,7 @@ rid                    String      必需                    订单编号或官�
 pay_type               Number      可选            1       支付方式 1、微信 2、支付宝
 =====================  ==========  =========  ==========  =============================
 
-返回示例
+微信返回示例
 ~~~~~~~~~~~~~~~~
 
 JSON数据格式:
@@ -2561,5 +2609,39 @@ JSON数据格式:
         },
         "success": true
     }
+
+
+支付宝返回示例
+~~~~~~~~~~~~~~~~
+
+JSON数据格式:
+
+.. code-block:: javascript
+
+    {
+        "data": {
+            "created_at": 1541499031,
+            "current_at": 1541499173,
+            "order_rid": "D18110650186379",
+            "order_string": "app_id=2018102761828848&biz_content=%7B%22subject%22%3A%22%5Cu4e50%5Cu559c-\
+                            %5Cu8ba2%5Cu5355%5Cu652f%5Cu4ed8%22%2C%22out_trade_no%22%3A%22D18110650186379 \
+                            %22%2C%22total_amount%22%3A%221185.00%22%2C%22product_code%22%3A%22QUICK_MSECURITY_PAY \
+                            %22%7D&charset=utf-8&method=alipay.trade.app.pay&notify_url=https%3A%2F%2Ffx.taihuoniao.com \
+                            %2Fopen%2Fali%2Fapp_pay_notify&sign_type=RSA2&timestamp=2018-11-06+18%3A11%3A48&version=1.0 \
+                            &sign=hpBukZ3DQLEzEDbNf%2FycbNgEmuddZCYT5ZWmCdCIKXf%2BciOEruHVMAPmDhoKhNoZvoPp7R9x6Z6719hU3 \
+                            %2BZNQogpmZlmhK6LXFm7MtIkhIHG4YB514iB8l4WxaMXW4v8Ksed%2BJOo1te2bZMEgyHH0acoakLE2OIJ97skA29Xky \
+                            %2BGkWPG%2FXGNp4tid1WG%2FqzXtcvKFLERAxL3P0wlNTOjOatx4w3SQUDgZG79y \
+                            %2FcQtuiFn0Ksxcx84zHhrz6Q0SX3TN2UZ8l6OVEqQi6 \
+                            %2FsUCsITVhEy6t5MIeOCKZNkmNUZ6waaTtfXbqMrS5LY5FK3XbT4kBwCEV5v0sJ2ou6qTdsA%3D%3D"
+        },
+        "status": {
+            "code": 200,
+            "message": "Ok all right."
+        },
+        "success": true
+    }
+
+
+
 
 

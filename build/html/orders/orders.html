@@ -334,16 +334,18 @@
 <li><a class="reference internal" href="#id90">返回示例</a></li>
 </ul>
 </li>
-<li><a class="reference internal" href="#id91">微信app支付签名</a><ul>
+<li><a class="reference internal" href="#id91">订单列表app支付</a><ul>
 <li><a class="reference internal" href="#id92">接口说明</a></li>
 <li><a class="reference internal" href="#id93">请求参数</a></li>
-<li><a class="reference internal" href="#id94">返回示例</a></li>
+<li><a class="reference internal" href="#id94">微信返回示例</a></li>
+<li><a class="reference internal" href="#id95">支付宝返回示例</a></li>
 </ul>
 </li>
-<li><a class="reference internal" href="#id95">微信app订单支付</a><ul>
-<li><a class="reference internal" href="#id96">接口说明</a></li>
-<li><a class="reference internal" href="#id97">请求参数</a></li>
-<li><a class="reference internal" href="#id98">返回示例</a></li>
+<li><a class="reference internal" href="#id96">app订单支付</a><ul>
+<li><a class="reference internal" href="#id97">接口说明</a></li>
+<li><a class="reference internal" href="#id98">请求参数</a></li>
+<li><a class="reference internal" href="#id99">微信返回示例</a></li>
+<li><a class="reference internal" href="#id100">支付宝返回示例</a></li>
 </ul>
 </li>
 </ul>
@@ -515,16 +517,18 @@
 <li><a class="reference internal" href="#id90">返回示例</a></li>
 </ul>
 </li>
-<li><a class="reference internal" href="#id91">微信app支付签名</a><ul>
+<li><a class="reference internal" href="#id91">订单列表app支付</a><ul>
 <li><a class="reference internal" href="#id92">接口说明</a></li>
 <li><a class="reference internal" href="#id93">请求参数</a></li>
-<li><a class="reference internal" href="#id94">返回示例</a></li>
+<li><a class="reference internal" href="#id94">微信返回示例</a></li>
+<li><a class="reference internal" href="#id95">支付宝返回示例</a></li>
 </ul>
 </li>
-<li><a class="reference internal" href="#id95">微信app订单支付</a><ul>
-<li><a class="reference internal" href="#id96">接口说明</a></li>
-<li><a class="reference internal" href="#id97">请求参数</a></li>
-<li><a class="reference internal" href="#id98">返回示例</a></li>
+<li><a class="reference internal" href="#id96">app订单支付</a><ul>
+<li><a class="reference internal" href="#id97">接口说明</a></li>
+<li><a class="reference internal" href="#id98">请求参数</a></li>
+<li><a class="reference internal" href="#id99">微信返回示例</a></li>
+<li><a class="reference internal" href="#id100">支付宝返回示例</a></li>
 </ul>
 </li>
 </ul>
@@ -3560,8 +3564,8 @@
 </div>
 </div>
 <div class="section" id="id91">
-<h2>微信app支付签名<a class="headerlink" href="#id91" title="永久链接至标题">¶</a></h2>
-<p>微信app支付签名</p>
+<h2>订单列表app支付<a class="headerlink" href="#id91" title="永久链接至标题">¶</a></h2>
+<p>订单列表app支付</p>
 <div class="section" id="id92">
 <h3>接口说明<a class="headerlink" href="#id92" title="永久链接至标题">¶</a></h3>
 <ul class="simple">
@@ -3605,7 +3609,7 @@
 </table>
 </div>
 <div class="section" id="id94">
-<h3>返回示例<a class="headerlink" href="#id94" title="永久链接至标题">¶</a></h3>
+<h3>微信返回示例<a class="headerlink" href="#id94" title="永久链接至标题">¶</a></h3>
 <p>JSON数据格式:</p>
 <div class="highlight-javascript"><div class="highlight"><pre><span></span><span class="p">{</span>
     <span class="s2">&quot;data&quot;</span><span class="o">:</span> <span class="p">{</span>
@@ -3645,20 +3649,61 @@
 </pre></div>
 </div>
 </div>
-</div>
 <div class="section" id="id95">
-<h2>微信app订单支付<a class="headerlink" href="#id95" title="永久链接至标题">¶</a></h2>
-<p>微信app订单支付</p>
+<h3>支付宝返回示例<a class="headerlink" href="#id95" title="永久链接至标题">¶</a></h3>
+<p>JSON数据格式:</p>
+<div class="highlight-javascript"><div class="highlight"><pre><span></span><span class="p">{</span>
+    <span class="s2">&quot;data&quot;</span><span class="o">:</span> <span class="p">{</span>
+        <span class="s1">&#39;current_at&#39;</span><span class="o">:</span> <span class="mi">1539245473</span><span class="p">,</span>  <span class="c1">// 当前时间</span>
+        <span class="s1">&#39;created_at&#39;</span><span class="o">:</span> <span class="mi">1539245473</span><span class="p">,</span>  <span class="c1">// 创建时间</span>
+        <span class="s2">&quot;is_merge&quot;</span><span class="o">:</span> <span class="kc">true</span><span class="p">,</span>  <span class="c1">// 是否合并支付</span>
+        <span class="s2">&quot;order_list&quot;</span><span class="o">:</span> <span class="p">[</span>  <span class="c1">// 订单信息</span>
+            <span class="p">{</span>
+                <span class="s2">&quot;store_name&quot;</span><span class="o">:</span> <span class="s2">&quot;第一家&quot;</span><span class="p">,</span>  <span class="c1">// 店铺名</span>
+                <span class="s2">&quot;total_quantity&quot;</span><span class="o">:</span> <span class="mi">30</span><span class="p">,</span>  <span class="c1">// 数量</span>
+                <span class="s2">&quot;user_pay_amount&quot;</span><span class="o">:</span> <span class="mf">1184.7</span> <span class="c1">//支付金额</span>
+            <span class="p">},</span>
+            <span class="p">{</span>
+                <span class="s2">&quot;store_name&quot;</span><span class="o">:</span> <span class="s2">&quot;第2家&quot;</span><span class="p">,</span>
+                <span class="s2">&quot;total_quantity&quot;</span><span class="o">:</span> <span class="mi">30</span><span class="p">,</span>
+                <span class="s2">&quot;user_pay_amount&quot;</span><span class="o">:</span> <span class="mf">9585.3</span>
+            <span class="p">}</span>
+        <span class="p">],</span>
+        <span class="s2">&quot;order_rid&quot;</span><span class="o">:</span> <span class="s2">&quot;D18110685201673&quot;</span><span class="p">,</span>  <span class="c1">// 订单编号或官方订单编号</span>
+        <span class="s2">&quot;order_string&quot;</span><span class="o">:</span> <span class="s2">&quot;app_id=2018102761828848&amp;biz_content=%7B%22subject%22%3A%22%5Cu4e50%5Cu559c-\</span>
+<span class="s2">            %5Cu8ba2%5Cu5355%5Cu652f%5Cu4ed8%22%2C%22out_trade_no%22%3A%22D18110650186379 \</span>
+<span class="s2">            %22%2C%22total_amount%22%3A%221185.00%22%2C%22product_code%22%3A%22QUICK_MSECURITY_PAY \</span>
+<span class="s2">            %22%7D&amp;charset=utf-8&amp;method=alipay.trade.app.pay&amp;notify_url=https%3A%2F%2Ffx.taihuoniao.com \</span>
+<span class="s2">            %2Fopen%2Fali%2Fapp_pay_notify&amp;sign_type=RSA2&amp;timestamp=2018-11-06+18%3A11%3A48&amp;version=1.0 \</span>
+<span class="s2">            &amp;sign=hpBukZ3DQLEzEDbNf%2FycbNgEmuddZCYT5ZWmCdCIKXf%2BciOEruHVMAPmDhoKhNoZvoPp7R9x6Z6719hU3 \</span>
+<span class="s2">            %2BZNQogpmZlmhK6LXFm7MtIkhIHG4YB514iB8l4WxaMXW4v8Ksed%2BJOo1te2bZMEgyHH0acoakLE2OIJ97skA29Xky \</span>
+<span class="s2">            %2BGkWPG%2FXGNp4tid1WG%2FqzXtcvKFLERAxL3P0wlNTOjOatx4w3SQUDgZG79y \</span>
+<span class="s2">            %2FcQtuiFn0Ksxcx84zHhrz6Q0SX3TN2UZ8l6OVEqQi6 \</span>
+<span class="s2">            %2FsUCsITVhEy6t5MIeOCKZNkmNUZ6waaTtfXbqMrS5LY5FK3XbT4kBwCEV5v0sJ2ou6qTdsA%3D%3D&quot;</span>
+    <span class="p">},</span>
+    <span class="s2">&quot;status&quot;</span><span class="o">:</span> <span class="p">{</span>
+        <span class="s2">&quot;code&quot;</span><span class="o">:</span> <span class="mi">200</span><span class="p">,</span>
+        <span class="s2">&quot;message&quot;</span><span class="o">:</span> <span class="s2">&quot;Ok all right.&quot;</span>
+    <span class="p">},</span>
+    <span class="s2">&quot;success&quot;</span><span class="o">:</span> <span class="kc">true</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</div>
+</div>
 <div class="section" id="id96">
-<h3>接口说明<a class="headerlink" href="#id96" title="永久链接至标题">¶</a></h3>
+<h2>app订单支付<a class="headerlink" href="#id96" title="永久链接至标题">¶</a></h2>
+<p>app订单支付</p>
+<div class="section" id="id97">
+<h3>接口说明<a class="headerlink" href="#id97" title="永久链接至标题">¶</a></h3>
 <ul class="simple">
 <li>API接口请求地址：<code class="docutils literal"><span class="pre">/orders/app_pay</span></code></li>
 <li>API接口请求方法：<code class="docutils literal"><span class="pre">POST</span></code></li>
 <li>API接口用户授权：<code class="docutils literal"><span class="pre">token</span></code></li>
 </ul>
 </div>
-<div class="section" id="id97">
-<h3>请求参数<a class="headerlink" href="#id97" title="永久链接至标题">¶</a></h3>
+<div class="section" id="id98">
+<h3>请求参数<a class="headerlink" href="#id98" title="永久链接至标题">¶</a></h3>
 <table border="1" class="docutils">
 <colgroup>
 <col width="27%" />
@@ -3691,8 +3736,8 @@
 </tbody>
 </table>
 </div>
-<div class="section" id="id98">
-<h3>返回示例<a class="headerlink" href="#id98" title="永久链接至标题">¶</a></h3>
+<div class="section" id="id99">
+<h3>微信返回示例<a class="headerlink" href="#id99" title="永久链接至标题">¶</a></h3>
 <p>JSON数据格式:</p>
 <div class="highlight-javascript"><div class="highlight"><pre><span></span><span class="p">{</span>
     <span class="s2">&quot;data&quot;</span><span class="o">:</span> <span class="p">{</span>
@@ -3709,6 +3754,34 @@
         <span class="s2">&quot;return_msg&quot;</span><span class="o">:</span> <span class="s2">&quot;OK&quot;</span><span class="p">,</span>
         <span class="s2">&quot;sign&quot;</span><span class="o">:</span> <span class="s2">&quot;sign&quot;</span><span class="p">,</span>
         <span class="s2">&quot;trade_type&quot;</span><span class="o">:</span> <span class="s2">&quot;APP&quot;</span><span class="p">,</span>
+    <span class="p">},</span>
+    <span class="s2">&quot;status&quot;</span><span class="o">:</span> <span class="p">{</span>
+        <span class="s2">&quot;code&quot;</span><span class="o">:</span> <span class="mi">200</span><span class="p">,</span>
+        <span class="s2">&quot;message&quot;</span><span class="o">:</span> <span class="s2">&quot;Ok all right.&quot;</span>
+    <span class="p">},</span>
+    <span class="s2">&quot;success&quot;</span><span class="o">:</span> <span class="kc">true</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="id100">
+<h3>支付宝返回示例<a class="headerlink" href="#id100" title="永久链接至标题">¶</a></h3>
+<p>JSON数据格式:</p>
+<div class="highlight-javascript"><div class="highlight"><pre><span></span><span class="p">{</span>
+    <span class="s2">&quot;data&quot;</span><span class="o">:</span> <span class="p">{</span>
+        <span class="s2">&quot;created_at&quot;</span><span class="o">:</span> <span class="mi">1541499031</span><span class="p">,</span>
+        <span class="s2">&quot;current_at&quot;</span><span class="o">:</span> <span class="mi">1541499173</span><span class="p">,</span>
+        <span class="s2">&quot;order_rid&quot;</span><span class="o">:</span> <span class="s2">&quot;D18110650186379&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;order_string&quot;</span><span class="o">:</span> <span class="s2">&quot;app_id=2018102761828848&amp;biz_content=%7B%22subject%22%3A%22%5Cu4e50%5Cu559c-\</span>
+<span class="s2">                        %5Cu8ba2%5Cu5355%5Cu652f%5Cu4ed8%22%2C%22out_trade_no%22%3A%22D18110650186379 \</span>
+<span class="s2">                        %22%2C%22total_amount%22%3A%221185.00%22%2C%22product_code%22%3A%22QUICK_MSECURITY_PAY \</span>
+<span class="s2">                        %22%7D&amp;charset=utf-8&amp;method=alipay.trade.app.pay&amp;notify_url=https%3A%2F%2Ffx.taihuoniao.com \</span>
+<span class="s2">                        %2Fopen%2Fali%2Fapp_pay_notify&amp;sign_type=RSA2&amp;timestamp=2018-11-06+18%3A11%3A48&amp;version=1.0 \</span>
+<span class="s2">                        &amp;sign=hpBukZ3DQLEzEDbNf%2FycbNgEmuddZCYT5ZWmCdCIKXf%2BciOEruHVMAPmDhoKhNoZvoPp7R9x6Z6719hU3 \</span>
+<span class="s2">                        %2BZNQogpmZlmhK6LXFm7MtIkhIHG4YB514iB8l4WxaMXW4v8Ksed%2BJOo1te2bZMEgyHH0acoakLE2OIJ97skA29Xky \</span>
+<span class="s2">                        %2BGkWPG%2FXGNp4tid1WG%2FqzXtcvKFLERAxL3P0wlNTOjOatx4w3SQUDgZG79y \</span>
+<span class="s2">                        %2FcQtuiFn0Ksxcx84zHhrz6Q0SX3TN2UZ8l6OVEqQi6 \</span>
+<span class="s2">                        %2FsUCsITVhEy6t5MIeOCKZNkmNUZ6waaTtfXbqMrS5LY5FK3XbT4kBwCEV5v0sJ2ou6qTdsA%3D%3D&quot;</span>
     <span class="p">},</span>
     <span class="s2">&quot;status&quot;</span><span class="o">:</span> <span class="p">{</span>
         <span class="s2">&quot;code&quot;</span><span class="o">:</span> <span class="mi">200</span><span class="p">,</span>
