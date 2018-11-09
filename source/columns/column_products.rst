@@ -520,26 +520,31 @@ JSON数据格式:
 .. code-block:: javascript
 
     {
-        "data": {
+        "data":
+            "collection": {
+                "count": 8,
+                "cover": "http://127.0.0.1:9000/_uploads/photos/180707/61b85f8fe19d59f.jpg",
+                "id": 7,
+                "name": "主题标题",
+                "products": [
+                    {
+                        "cover": "https://s3.lexivip.com/lxServer/1535384922675.jpg",
+                        "is_free_postage": false,
+                        "like_count": 0,
+                        "min_price": 180,
+                        "min_sale_price": 0,
+                        "name": "[香港原創] CLASSY 意大利皮革錶帶",
+                        "rid": "8910352476",
+                        "status": 1,
+                        "store_rid": "91758940"
+                    }
+                ],
+                "sub_name": "主题标题二"
+            },
             "count": 8,
-            "cover": "http://127.0.0.1:9000/_uploads/photos/180707/61b85f8fe19d59f.jpg",
-            "id": 7,
-            "name": "主题标题",
-            "products": [
-                {
-                    "cover": "https://s3.lexivip.com/lxServer/1535384922675.jpg",
-                    "is_free_postage": false,
-                    "like_count": 0,
-                    "min_price": 180,
-                    "min_sale_price": 0,
-                    "name": "[香港原創] CLASSY 意大利皮革錶帶",
-                    "rid": "8910352476",
-                    "status": 1,
-                    "store_rid": "91758940"
-                }
-            ],
-            "sub_name": "主题标题二"
-        },
+            "next": true,
+            "prev": false,
+            "title": "校园活动专场"
         "status": {
             "code": 200,
             "message": "Ok all right."
