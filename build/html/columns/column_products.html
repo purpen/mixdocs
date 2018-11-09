@@ -1565,26 +1565,31 @@
 <h3>返回示例<a class="headerlink" href="#id49" title="永久链接至标题">¶</a></h3>
 <p>JSON数据格式:</p>
 <div class="highlight-javascript"><div class="highlight"><pre><span></span><span class="p">{</span>
-    <span class="s2">&quot;data&quot;</span><span class="o">:</span> <span class="p">{</span>
+    <span class="s2">&quot;data&quot;</span><span class="o">:</span>
+        <span class="s2">&quot;collection&quot;</span><span class="o">:</span> <span class="p">{</span>
+            <span class="s2">&quot;count&quot;</span><span class="o">:</span> <span class="mi">8</span><span class="p">,</span>
+            <span class="s2">&quot;cover&quot;</span><span class="o">:</span> <span class="s2">&quot;http://127.0.0.1:9000/_uploads/photos/180707/61b85f8fe19d59f.jpg&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;id&quot;</span><span class="o">:</span> <span class="mi">7</span><span class="p">,</span>
+            <span class="s2">&quot;name&quot;</span><span class="o">:</span> <span class="s2">&quot;主题标题&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;products&quot;</span><span class="o">:</span> <span class="p">[</span>
+                <span class="p">{</span>
+                    <span class="s2">&quot;cover&quot;</span><span class="o">:</span> <span class="s2">&quot;https://s3.lexivip.com/lxServer/1535384922675.jpg&quot;</span><span class="p">,</span>
+                    <span class="s2">&quot;is_free_postage&quot;</span><span class="o">:</span> <span class="kc">false</span><span class="p">,</span>
+                    <span class="s2">&quot;like_count&quot;</span><span class="o">:</span> <span class="mi">0</span><span class="p">,</span>
+                    <span class="s2">&quot;min_price&quot;</span><span class="o">:</span> <span class="mi">180</span><span class="p">,</span>
+                    <span class="s2">&quot;min_sale_price&quot;</span><span class="o">:</span> <span class="mi">0</span><span class="p">,</span>
+                    <span class="s2">&quot;name&quot;</span><span class="o">:</span> <span class="s2">&quot;[香港原創] CLASSY 意大利皮革錶帶&quot;</span><span class="p">,</span>
+                    <span class="s2">&quot;rid&quot;</span><span class="o">:</span> <span class="s2">&quot;8910352476&quot;</span><span class="p">,</span>
+                    <span class="s2">&quot;status&quot;</span><span class="o">:</span> <span class="mi">1</span><span class="p">,</span>
+                    <span class="s2">&quot;store_rid&quot;</span><span class="o">:</span> <span class="s2">&quot;91758940&quot;</span>
+                <span class="p">}</span>
+            <span class="p">],</span>
+            <span class="s2">&quot;sub_name&quot;</span><span class="o">:</span> <span class="s2">&quot;主题标题二&quot;</span>
+        <span class="p">},</span>
         <span class="s2">&quot;count&quot;</span><span class="o">:</span> <span class="mi">8</span><span class="p">,</span>
-        <span class="s2">&quot;cover&quot;</span><span class="o">:</span> <span class="s2">&quot;http://127.0.0.1:9000/_uploads/photos/180707/61b85f8fe19d59f.jpg&quot;</span><span class="p">,</span>
-        <span class="s2">&quot;id&quot;</span><span class="o">:</span> <span class="mi">7</span><span class="p">,</span>
-        <span class="s2">&quot;name&quot;</span><span class="o">:</span> <span class="s2">&quot;主题标题&quot;</span><span class="p">,</span>
-        <span class="s2">&quot;products&quot;</span><span class="o">:</span> <span class="p">[</span>
-            <span class="p">{</span>
-                <span class="s2">&quot;cover&quot;</span><span class="o">:</span> <span class="s2">&quot;https://s3.lexivip.com/lxServer/1535384922675.jpg&quot;</span><span class="p">,</span>
-                <span class="s2">&quot;is_free_postage&quot;</span><span class="o">:</span> <span class="kc">false</span><span class="p">,</span>
-                <span class="s2">&quot;like_count&quot;</span><span class="o">:</span> <span class="mi">0</span><span class="p">,</span>
-                <span class="s2">&quot;min_price&quot;</span><span class="o">:</span> <span class="mi">180</span><span class="p">,</span>
-                <span class="s2">&quot;min_sale_price&quot;</span><span class="o">:</span> <span class="mi">0</span><span class="p">,</span>
-                <span class="s2">&quot;name&quot;</span><span class="o">:</span> <span class="s2">&quot;[香港原創] CLASSY 意大利皮革錶帶&quot;</span><span class="p">,</span>
-                <span class="s2">&quot;rid&quot;</span><span class="o">:</span> <span class="s2">&quot;8910352476&quot;</span><span class="p">,</span>
-                <span class="s2">&quot;status&quot;</span><span class="o">:</span> <span class="mi">1</span><span class="p">,</span>
-                <span class="s2">&quot;store_rid&quot;</span><span class="o">:</span> <span class="s2">&quot;91758940&quot;</span>
-            <span class="p">}</span>
-        <span class="p">],</span>
-        <span class="s2">&quot;sub_name&quot;</span><span class="o">:</span> <span class="s2">&quot;主题标题二&quot;</span>
-    <span class="p">},</span>
+        <span class="s2">&quot;next&quot;</span><span class="o">:</span> <span class="kc">true</span><span class="p">,</span>
+        <span class="s2">&quot;prev&quot;</span><span class="o">:</span> <span class="kc">false</span><span class="p">,</span>
+        <span class="s2">&quot;title&quot;</span><span class="o">:</span> <span class="s2">&quot;校园活动专场&quot;</span>
     <span class="s2">&quot;status&quot;</span><span class="o">:</span> <span class="p">{</span>
         <span class="s2">&quot;code&quot;</span><span class="o">:</span> <span class="mi">200</span><span class="p">,</span>
         <span class="s2">&quot;message&quot;</span><span class="o">:</span> <span class="s2">&quot;Ok all right.&quot;</span>
