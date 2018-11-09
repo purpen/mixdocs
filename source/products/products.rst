@@ -441,7 +441,7 @@ JSON数据格式:
     }
 
 
-商品基本信息
+单个商品信息
 ----------------
 获取商品的详细基本信息
 
@@ -504,6 +504,147 @@ JSON数据格式:
             "message": "No result matched."
         },
         "success": false
+    }
+
+
+商品基本信息
+----------------
+
+接口说明
+~~~~~~~~~~~~~~
+
+* API接口请求地址：``/products/basic``
+* API接口请求方法：``GET``
+
+请求参数
+~~~~~~~~~~~~~~~
+
+=====================  ==========  =========  ==========  =============================
+名称                    类型        是否必须     默认值       描述说明
+=====================  ==========  =========  ==========  =============================
+rid                    String       是                      商品编号
+sid                    String       否
+=====================  ==========  =========  ==========  =============================
+
+返回示例
+~~~~~~~~~~~~~~~~
+
+JSON数据格式:
+
+.. code-block:: javascript
+
+    {
+        "data": {
+            "assets": [
+                {
+                    "created_at": 1539998863,
+                    "filename": "WechatIMG23.jpeg",
+                    "filepath": "20181020/2742Ft9q7Nug7jf9V-ambe5DXhGNNHyF.jpeg",
+                    "id": 30874,
+                    "type": 1,
+                    "view_url": "http://127.0.0.1:9000/_uploads/photos/20181020/2742Ft9q7Nug7jf9V-ambe5DXhGNNHyF.jpeg"
+                },
+                {
+                    "created_at": 1539998854,
+                    "filename": "WechatIMG22.jpeg",
+                    "filepath": "20181020/2732FiBBLWdziXYravTQQMsH9rfn8O8e.jpeg",
+                    "id": 30873,
+                    "type": 1,
+                    "view_url": "http://127.0.0.1:9000/_uploads/photos/20181020/2732FiBBLWdziXYravTQQMsH9rfn8O8e.jpeg"
+                }
+            ],
+            "commission_price": 2.72,
+            "have_distributed": true,
+            "is_distributed": true,
+            "is_free_postage": true,
+            "is_like": true,
+            "is_wish": true,
+            "min_price": 158,
+            "min_sale_price": 115,
+            "name": "Bigbands fc sup掌机复古经典掌上游戏机 童年怀旧街机礼物",
+            "rid": "8817965304",
+            "status": 1,
+            "store_rid": "96513947"
+        },
+        "status": {
+            "code": 200,
+            "message": "Ok all right."
+        },
+        "success": true
+    }
+
+
+商品详情信息
+----------------
+
+接口说明
+~~~~~~~~~~~~~~
+
+* API接口请求地址：``/products/detail``
+* API接口请求方法：``GET``
+
+请求参数
+~~~~~~~~~~~~~~~
+
+=====================  ==========  =========  ==========  =============================
+名称                    类型        是否必须     默认值       描述说明
+=====================  ==========  =========  ==========  =============================
+rid                    String       是                      商品编号
+openid                 String       否                      用户在小程序中的openid
+=====================  ==========  =========  ==========  =============================
+
+返回示例
+
+JSON数据格式:
+
+.. code-block:: javascript
+
+    {
+        "data": {
+            "country_id": 1,
+            "custom_details": "",
+            "deal_content": [
+                {
+                    "content": "https://s3.lexivip.com/20181107/1042Fm_mdhHArh49JUYQYJBtfeU2d9d6.jpg",
+                    "height": 570,
+                    "rid": "4286317",
+                    "type": "image",
+                    "width": 750
+                },
+                {
+                    "content": "文字描述内容",
+                    "rid": "9102453",
+                    "type": "text",
+                },
+            ],
+            "delivery_country": "中国",
+            "delivery_province": "北京",
+            "features": "童年回忆，畅玩168款游戏，增强版Plus操作体验感更强",
+            "is_custom_made": false,
+            "is_custom_service": false,
+            "is_made_holiday": true,
+            "is_sold_out": false,
+            "keywords": "",
+            "made_cycle": 0,
+            "material_name": "塑胶",
+            "max_days": 3,  // 发货时间最大天数
+            "min_days": 2,  // 发货世纪最小天数
+            "py_intro": "预计3到5天",   // 导入数据设置的交货时间，如果min_days和max_days都为0则显示该字段
+            "product_return_policy": "除定制化、一次性使用商品，特殊订单项目外，如果由于个人原因您对购买的礼品不满意，在乐喜您可以在收到订单后隔日起算享受7天内退货或更换礼品服务。礼品寄出和退回运费将由消费者自行负担，请保持礼品及包裝完整寄回，经过创作人确认无误后，即可退换货。",
+            "published_at": 1540800831,
+            "return_policy_title": "7天退换货服务",
+            "stock_count": 195,
+            "store_logo": "http://127.0.0.1:9000/_uploads/photos/20180928/2428FibUsmyfZR0EutdSTf7UpbBjY8Xs.jpg",
+            "store_name": "偏良集合",
+            "store_rid": "96513947",
+            "style_name": "童趣",
+            "total_stock": 195
+        },
+        "status": {
+            "code": 200,
+            "message": "Ok all right."
+        },
+        "success": true
     }
 
 
