@@ -880,6 +880,8 @@ JSON数据格式:
             "actual_payment": 17,  // 实际支付金额
             "bonus_amount": 0,  // 官方红包金额
             "order_rid": "D18090562079514", // 订单编号或官方订单编号
+            'pay_params': {},
+            'is_paid': false,  // 是否已支付，支付0元时为true
             "orders": [
                 {
                     "buyer_address": "青年路",  // 买家地址
