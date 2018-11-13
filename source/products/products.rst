@@ -558,13 +558,16 @@ JSON数据格式:
             "is_distributed": true,
             "is_free_postage": true,
             "is_like": true,
+            "is_sold_out": false,
             "is_wish": true,
             "min_price": 158,
             "min_sale_price": 115,
             "name": "Bigbands fc sup掌机复古经典掌上游戏机 童年怀旧街机礼物",
             "rid": "8817965304",
             "status": 1,
-            "store_rid": "96513947"
+            "stock_count": 195,
+            "store_rid": "96513947",
+            "total_stock": 195
         },
         "status": {
             "code": 200,
@@ -623,7 +626,6 @@ JSON数据格式:
             "is_custom_made": false,
             "is_custom_service": false,
             "is_made_holiday": true,
-            "is_sold_out": false,
             "keywords": "",
             "made_cycle": 0,
             "material_name": "塑胶",
@@ -633,12 +635,10 @@ JSON数据格式:
             "product_return_policy": "除定制化、一次性使用商品，特殊订单项目外，如果由于个人原因您对购买的礼品不满意，在乐喜您可以在收到订单后隔日起算享受7天内退货或更换礼品服务。礼品寄出和退回运费将由消费者自行负担，请保持礼品及包裝完整寄回，经过创作人确认无误后，即可退换货。",
             "published_at": 1540800831,
             "return_policy_title": "7天退换货服务",
-            "stock_count": 195,
             "store_logo": "http://127.0.0.1:9000/_uploads/photos/20180928/2428FibUsmyfZR0EutdSTf7UpbBjY8Xs.jpg",
             "store_name": "偏良集合",
             "store_rid": "96513947",
             "style_name": "童趣",
-            "total_stock": 195
         },
         "status": {
             "code": 200,
