@@ -513,6 +513,60 @@ JSON数据格式:
 接口说明
 ~~~~~~~~~~~~~~
 
+* API接口请求地址：``/products/images``
+* API接口请求方法：``GET``
+
+请求参数
+~~~~~~~~~~~~~~~
+
+=====================  ==========  =========  ==========  =============================
+名称                    类型        是否必须     默认值       描述说明
+=====================  ==========  =========  ==========  =============================
+rid                    String       是                      商品编号
+=====================  ==========  =========  ==========  =============================
+
+返回示例
+~~~~~~~~~~~~~~~~
+
+JSON数据格式:
+
+.. code-block:: javascript
+
+    {
+        "data": {
+            "images": [         // 商品图片
+                {
+                    "created_at": 1539998863,
+                    "filename": "WechatIMG23.jpeg",
+                    "filepath": "20181020/2742Ft9q7Nug7jf9V-ambe5DXhGNNHyF.jpeg",
+                    "id": 30874,
+                    "type": 1,
+                    "view_url": "http://127.0.0.1:9000/_uploads/photos/20181020/2742Ft9q7Nug7jf9V-ambe5DXhGNNHyF.jpeg"
+                },
+                {
+                    "created_at": 1539998854,
+                    "filename": "WechatIMG22.jpeg",
+                    "filepath": "20181020/2732FiBBLWdziXYravTQQMsH9rfn8O8e.jpeg",
+                    "id": 30873,
+                    "type": 1,
+                    "view_url": "http://127.0.0.1:9000/_uploads/photos/20181020/2732FiBBLWdziXYravTQQMsH9rfn8O8e.jpeg"
+                }
+            ]
+        },
+        "status": {
+            "code": 200,
+            "message": "Ok all right."
+        },
+        "success": true
+    }
+
+
+商品基本信息
+----------------
+
+接口说明
+~~~~~~~~~~~~~~
+
 * API接口请求地址：``/products/basic``
 * API接口请求方法：``GET``
 
@@ -535,7 +589,7 @@ JSON数据格式:
 
     {
         "data": {
-            "assets": [
+            "assets": [         // 商品图片
                 {
                     "created_at": 1539998863,
                     "filename": "WechatIMG23.jpeg",
@@ -553,18 +607,22 @@ JSON数据格式:
                     "view_url": "http://127.0.0.1:9000/_uploads/photos/20181020/2732FiBBLWdziXYravTQQMsH9rfn8O8e.jpeg"
                 }
             ],
-            "commission_price": 2.72,
-            "have_distributed": true,
-            "is_distributed": true,
-            "is_free_postage": true,
-            "is_like": true,
-            "is_wish": true,
-            "min_price": 158,
-            "min_sale_price": 115,
+            "commission_price": 2.72,       // 商品佣金
+            "have_distributed": true,       // 生活馆是否分销过该商品
+            "is_custom_made": false,        // 是否接单定制
+            "is_distributed": true,         // 是否分销商品
+            "is_free_postage": true,        // 是否包邮
+            "is_like": true,                // 用户是否添加过喜欢该商品
+            "is_sold_out": false,           // 商品是否已售罄
+            "is_wish": true,                // 用户是否加入过心愿清单
+            "min_price": 158,               // 商品售价
+            "min_sale_price": 115,          // 商品折扣价
             "name": "Bigbands fc sup掌机复古经典掌上游戏机 童年怀旧街机礼物",
-            "rid": "8817965304",
-            "status": 1,
-            "store_rid": "96513947"
+            "rid": "8817965304",            // 商品编号
+            "status": 1,                    // 商品状态
+            "stock_count": 195,             // 库存数
+            "store_rid": "96513947",        // 店铺编号
+            "total_stock": 195              // 库存数
         },
         "status": {
             "code": 200,
@@ -623,7 +681,6 @@ JSON数据格式:
             "is_custom_made": false,
             "is_custom_service": false,
             "is_made_holiday": true,
-            "is_sold_out": false,
             "keywords": "",
             "made_cycle": 0,
             "material_name": "塑胶",
@@ -633,12 +690,10 @@ JSON数据格式:
             "product_return_policy": "除定制化、一次性使用商品，特殊订单项目外，如果由于个人原因您对购买的礼品不满意，在乐喜您可以在收到订单后隔日起算享受7天内退货或更换礼品服务。礼品寄出和退回运费将由消费者自行负担，请保持礼品及包裝完整寄回，经过创作人确认无误后，即可退换货。",
             "published_at": 1540800831,
             "return_policy_title": "7天退换货服务",
-            "stock_count": 195,
             "store_logo": "http://127.0.0.1:9000/_uploads/photos/20180928/2428FibUsmyfZR0EutdSTf7UpbBjY8Xs.jpg",
             "store_name": "偏良集合",
             "store_rid": "96513947",
             "style_name": "童趣",
-            "total_stock": 195
         },
         "status": {
             "code": 200,
