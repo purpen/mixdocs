@@ -309,7 +309,7 @@ label_id         Number      可选                    标签编号
 接口说明
 ~~~~~~~~~~~~~~
 
-* API接口请求地址：``/life_records/articles/draft``
+* API接口请求地址：``/life_records/videos/draft``
 * API接口请求方法：``POST``
 * API接口用户授权：``token``
 
@@ -388,7 +388,7 @@ JSON数据格式:
 名称              类型        是否必须     默认值       描述说明
 ===============  ==========  =========  ==========  =============================
 rid              Number      必须                    文章编号
-video_id         Number      必须                    短视频编号
+video_id         Number      可选                    短视频编号
 channel_id       Number      可选                    频道编号
 title            String      可选                    标题
 description      String      可选                    摘要, 最多140个字符
