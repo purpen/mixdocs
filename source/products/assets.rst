@@ -38,6 +38,38 @@ JSON数据格式:
     }
 
 
+获取上传视频Token
+-----------------------
+
+接口说明
+~~~~~~~~~~~~~~
+
+* API接口请求地址：``/assets/video/up_token``
+* API接口请求方法：``GET``
+* API接口用户授权：``token``
+
+返回示例
+~~~~~~~~~~~~~~~~
+
+JSON数据格式:
+
+.. code-block:: javascript
+
+    {
+        "data": {
+            "directory_id": 2,
+            "user_id": 4,
+            "up_endpoint": "https://up.qbox.me",
+            "up_token": "AWTEpwVNmNcVjsIL-vS1hOabJ0NgIfNDzvTbDb4i:OgsNLotOvWrTLDv7_QOSREvN2Zo=:eyJzY29wZSI6ImZya2luZyIsImRlYWRsaW5lIjoxNTIxNzcxNzI1LCJjYWxsYmFja1VybCI6Imh0dHA6Ly8xMjcuMC4wLjE6OTAwMC9vcGVuL3Fpbml1L25vdGlmeSIsImNhbGxiYWNrQm9keSI6ImZpbGVwYXRoPSQoa2V5KSZmaWxlbmFtZT0kKGZuYW1lKSZmaWxlc2l6ZT0kKGZzaXplKSZtaW1lPSQobWltZVR5cGUpJnVzZXJfaWQ9JCh4OnVzZXJfaWQpJndpZHRoPSQoaW1hZ2VJbmZvLndpZHRoKSZoZWlnaHQ9JChpbWFnZUluZm8uaGVpZ2h0KSZleHQ9JChleHQpJmRpcmVjdG9yeT0kKHg6ZGlyZWN0b3J5KSIsInNhdmVLZXkiOiIkKHllYXIpJChtb24pJChkYXkpLyQoZXRhZykkKGV4dCkiLCJmc2l6ZUxpbWl0IjoyMDk3MTUyMCwicmV0dXJuVXJsIjoiIiwicmV0dXJuQm9keSI6IiJ9"
+        },
+        "status": {
+            "code": 200,
+            "message": "Ok all right."
+        },
+        "success": true
+    }
+
+
 获取普通用户上传附件Token
 ----------------------------
 获取普通用户上传附件（包括图片）Token

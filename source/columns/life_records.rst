@@ -1273,7 +1273,9 @@ JSON数据格式:
             "is_follow": "是否互相关注",
             "is_follow_store": "是否关注店铺",
             "like_count": "喜欢数",
-            "praise_count": "点赞数"
+            "praise_count": "点赞数",
+            "video_id": 46024,
+            "video_url": "https://kg.erp.taihuoniao.com/20181121/2603lqVb__1rdSw9yz71BqZxWu_vl6ec.mp4-320x240"
         },
         "status": {
             "code": 200,
