@@ -215,7 +215,7 @@
 <li><a class="reference internal" href="#id13">返回示例</a></li>
 </ul>
 </li>
-<li><a class="reference internal" href="#id14">关注人的橱窗</a><ul>
+<li><a class="reference internal" href="#id14">包含指定标签的橱窗</a><ul>
 <li><a class="reference internal" href="#id15">接口说明</a></li>
 <li><a class="reference internal" href="#id16">请求参数</a></li>
 <li><a class="reference internal" href="#id17">返回示例</a></li>
@@ -401,7 +401,7 @@
 <li><a class="reference internal" href="#id13">返回示例</a></li>
 </ul>
 </li>
-<li><a class="reference internal" href="#id14">关注人的橱窗</a><ul>
+<li><a class="reference internal" href="#id14">包含指定标签的橱窗</a><ul>
 <li><a class="reference internal" href="#id15">接口说明</a></li>
 <li><a class="reference internal" href="#id16">请求参数</a></li>
 <li><a class="reference internal" href="#id17">返回示例</a></li>
@@ -812,7 +812,7 @@
 </div>
 </div>
 <div class="section" id="id14">
-<h2>关注人的橱窗<a class="headerlink" href="#id14" title="永久链接至标题">¶</a></h2>
+<h2>包含指定标签的橱窗<a class="headerlink" href="#id14" title="永久链接至标题">¶</a></h2>
 <div class="section" id="id15">
 <h3>接口说明<a class="headerlink" href="#id15" title="永久链接至标题">¶</a></h3>
 <ul class="simple">
@@ -862,7 +862,59 @@
 </div>
 <div class="section" id="id17">
 <h3>返回示例<a class="headerlink" href="#id17" title="永久链接至标题">¶</a></h3>
-<p>** 同上推荐的橱窗返回示例 **</p>
+<p>JSON数据格式:</p>
+<div class="highlight-javascript"><div class="highlight"><pre><span></span><span class="p">{</span>
+    <span class="s2">&quot;data&quot;</span><span class="o">:</span> <span class="p">{</span>
+        <span class="s2">&quot;count&quot;</span><span class="o">:</span> <span class="mi">18</span><span class="p">,</span>
+        <span class="s2">&quot;next&quot;</span><span class="o">:</span> <span class="kc">true</span><span class="p">,</span>
+        <span class="s2">&quot;prev&quot;</span><span class="o">:</span> <span class="kc">false</span><span class="p">,</span>
+        <span class="s2">&quot;shop_windows&quot;</span><span class="o">:</span> <span class="p">[</span>
+            <span class="p">{</span>
+                <span class="s2">&quot;comment_count&quot;</span><span class="o">:</span> <span class="mi">3</span><span class="p">,</span>
+                <span class="s2">&quot;description&quot;</span><span class="o">:</span> <span class="s2">&quot;往事随风，走路带风的女子，甚得我心&quot;</span><span class="p">,</span>
+                <span class="s2">&quot;is_expert&quot;</span><span class="o">:</span> <span class="kc">false</span><span class="p">,</span>
+                <span class="s2">&quot;is_official&quot;</span><span class="o">:</span> <span class="kc">false</span><span class="p">,</span>
+                <span class="s2">&quot;keywords&quot;</span><span class="o">:</span> <span class="p">[</span>
+                    <span class="s2">&quot;双十一锦鲤心愿单&quot;</span><span class="p">,</span>
+                    <span class="s2">&quot;创意生活&quot;</span>
+                <span class="p">],</span>
+                <span class="s2">&quot;like_count&quot;</span><span class="o">:</span> <span class="mi">6</span><span class="p">,</span>
+                <span class="s2">&quot;product_count&quot;</span><span class="o">:</span> <span class="mi">3</span><span class="p">,</span>
+                <span class="s2">&quot;product_covers&quot;</span><span class="o">:</span> <span class="p">[</span>
+                    <span class="s2">&quot;https://s3.lexivip.com/lxServer/1530543749791.jpg&quot;</span><span class="p">,</span>
+                    <span class="s2">&quot;https://s3.lexivip.com/lxServer/1530537896407.JPG&quot;</span><span class="p">,</span>
+                    <span class="s2">&quot;https://s3.lexivip.com/lxServer/1531465277694.jpg&quot;</span>
+                <span class="p">],</span>
+                <span class="s2">&quot;products&quot;</span><span class="o">:</span> <span class="p">[</span>
+                    <span class="p">{</span>
+                        <span class="s2">&quot;cover&quot;</span><span class="o">:</span> <span class="s2">&quot;https://s3.lexivip.com/lxServer/1530543749791.jpg&quot;</span><span class="p">,</span>
+                        <span class="s2">&quot;rid&quot;</span><span class="o">:</span> <span class="s2">&quot;8857632104&quot;</span>
+                    <span class="p">},</span>
+                    <span class="p">{</span>
+                        <span class="s2">&quot;cover&quot;</span><span class="o">:</span> <span class="s2">&quot;https://s3.lexivip.com/lxServer/1530537896407.JPG&quot;</span><span class="p">,</span>
+                        <span class="s2">&quot;rid&quot;</span><span class="o">:</span> <span class="s2">&quot;8269035174&quot;</span>
+                    <span class="p">},</span>
+                    <span class="p">{</span>
+                        <span class="s2">&quot;cover&quot;</span><span class="o">:</span> <span class="s2">&quot;https://s3.lexivip.com/lxServer/1531465277694.jpg&quot;</span><span class="p">,</span>
+                        <span class="s2">&quot;rid&quot;</span><span class="o">:</span> <span class="s2">&quot;8840236957&quot;</span>
+                    <span class="p">}</span>
+                <span class="p">],</span>
+                <span class="s2">&quot;rid&quot;</span><span class="o">:</span> <span class="mi">196</span><span class="p">,</span>
+                <span class="s2">&quot;title&quot;</span><span class="o">:</span> <span class="s2">&quot;与其等风来，不如自己先跑起来&quot;</span><span class="p">,</span>
+                <span class="s2">&quot;uid&quot;</span><span class="o">:</span> <span class="s2">&quot;13145089726&quot;</span><span class="p">,</span>
+                <span class="s2">&quot;user_avatar&quot;</span><span class="o">:</span> <span class="s2">&quot;https://s3.lexivip.com/20181103/2551FjR9wss5Zl8pwbUVghpBifjTxFQ-.jpg&quot;</span><span class="p">,</span>
+                <span class="s2">&quot;user_name&quot;</span><span class="o">:</span> <span class="s2">&quot;糖小兔，&quot;</span>
+            <span class="p">}</span>
+        <span class="p">]</span>
+    <span class="p">},</span>
+    <span class="s2">&quot;status&quot;</span><span class="o">:</span> <span class="p">{</span>
+        <span class="s2">&quot;code&quot;</span><span class="o">:</span> <span class="mi">200</span><span class="p">,</span>
+        <span class="s2">&quot;message&quot;</span><span class="o">:</span> <span class="s2">&quot;Ok all right.&quot;</span>
+    <span class="p">},</span>
+    <span class="s2">&quot;success&quot;</span><span class="o">:</span> <span class="kc">true</span>
+<span class="p">}</span>
+</pre></div>
+</div>
 </div>
 </div>
 <div class="section" id="id18">
