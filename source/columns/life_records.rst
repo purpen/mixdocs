@@ -224,6 +224,7 @@ video_id         Number      必须                    视频编号
 channel_id       Number      必须                    频道编号
 title            String      必须                    标题
 description      String      可选                    摘要, 最多140个字符
+content          String      可选                    正文
 cover_id         Number      必须                    封面图编号
 label_id         Number      可选                    标签编号
 ===============  ==========  =========  ==========  =============================
@@ -293,6 +294,7 @@ video_id         Number      必须                    短视频编号
 channel_id       Number      必须                    频道编号
 title            String      必须                    标题
 description      String      可选                    摘要, 最多140个字符
+content          String      可选                    正文
 cover_id         Number      必须                    封面图编号
 label_id         Number      可选                    标签编号
 ===============  ==========  =========  ==========  =============================
@@ -323,6 +325,7 @@ video_id         Number      可选                    短视频编号
 channel_id       Number      可选                    频道编号
 title            String      可选                    标题
 description      String      可选                    摘要, 最多140个字符
+content          String      可选                    正文
 cover_id         Number      可选                    封面图编号
 label_id         Number      可选                    标签编号
 ===============  ==========  =========  ==========  =============================
@@ -392,6 +395,7 @@ video_id         Number      可选                    短视频编号
 channel_id       Number      可选                    频道编号
 title            String      可选                    标题
 description      String      可选                    摘要, 最多140个字符
+content          String      可选                    正文
 cover_id         Number      可选                    封面图编号
 label_id         Number      可选                    标签编号
 ===============  ==========  =========  ==========  =============================
