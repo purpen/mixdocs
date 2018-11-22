@@ -5,6 +5,7 @@
     "prev": false,
     "products": [
       {
+        "audit_fail_reason": "商品审核拒绝原因",
         "category_id": "分类id",
         "commission_price": "分销佣金",
         "commission_rate": "佣金比率",
