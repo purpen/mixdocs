@@ -217,10 +217,11 @@ per_page                Number      可选         10        每页数量
 start_date              String      可选                   发布日期的开始日期
 end_date                String      可选                   发布日期的结束日期
 cid                     Number      可选                   分类Id
-status                  Number      可选         1         商品状态 0:仓库中; 1:出售中; 2:下架中; 3:已售罄
+status                  Number      可选         1         商品状态 0:仓库中; 1:出售中; 2:下架中; 3:已售罄; 4: 待审核
 is_distributed          Number      可选                   商品类别 0: 全部; 1：自营商品；2：分销商品
 qk                      String      可选                   搜索关键字
 out_of_stock            Number      可选         0         商品库存 0: 全部; 1: 数量不足
+audit_status            Number      可选         1         审核状态 1: 审核中 2: 审核拒绝
 =====================  ==========  =========  ==========  =============================
 
 返回示例
@@ -252,7 +253,7 @@ page                    Number      可选         1         当前页码
 per_page                Number      可选         10        每页数量
 sid                     String      必须                   店铺编号
 cid                     Number      可选                   分类Id
-status                  Number      可选         1         商品状态 -1: 所有 0:仓库中; 1:出售中; 2:下架中; 3:已售罄
+status                  Number      可选         1         商品状态 -1: 所有 0:仓库中; 1:出售中; 2:下架中; 3:已售罄; 4: 审核中
 is_distributed          Number      可选                   商品类别 0: 全部; 1：自营商品；2：分销商品
 qk                      String      可选                   搜索关键字
 min_price               Number      可选                   价格区间： 最小价格
@@ -2203,6 +2204,11 @@ JSON数据格式:
                 "count": 5,
                 "name": "已售罄",
                 "status": 3
+            },
+            {
+                "count": 2,
+                "name": "审核中",
+                "status": 4
             }
         ],
         "status": {

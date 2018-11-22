@@ -120,6 +120,7 @@
 <li class="toctree-l2"><a class="reference internal" href="../market/banners.html">营销工具/广告模块</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../market/coupons.html">营销工具/优惠券模块</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../market/bonus_question.html">营销工具/猜题赢现金</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../market/yiyuan.html">营销工具/一元送礼模块</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="../stats/index.html">统计API模块</a><ul>
@@ -793,6 +794,7 @@
     <span class="s2">&quot;prev&quot;</span><span class="o">:</span> <span class="kc">false</span><span class="p">,</span>
     <span class="s2">&quot;products&quot;</span><span class="o">:</span> <span class="p">[</span>
       <span class="p">{</span>
+        <span class="s2">&quot;audit_fail_reason&quot;</span><span class="o">:</span> <span class="s2">&quot;商品审核拒绝原因&quot;</span><span class="p">,</span>
         <span class="s2">&quot;category_id&quot;</span><span class="o">:</span> <span class="s2">&quot;分类id&quot;</span><span class="p">,</span>
         <span class="s2">&quot;commission_price&quot;</span><span class="o">:</span> <span class="s2">&quot;分销佣金&quot;</span><span class="p">,</span>
         <span class="s2">&quot;commission_rate&quot;</span><span class="o">:</span> <span class="s2">&quot;佣金比率&quot;</span><span class="p">,</span>
@@ -954,6 +956,7 @@
     <span class="s2">&quot;prev&quot;</span><span class="o">:</span> <span class="kc">false</span><span class="p">,</span>
     <span class="s2">&quot;products&quot;</span><span class="o">:</span> <span class="p">[</span>
       <span class="p">{</span>
+        <span class="s2">&quot;audit_fail_reason&quot;</span><span class="o">:</span> <span class="s2">&quot;商品审核拒绝原因&quot;</span><span class="p">,</span>
         <span class="s2">&quot;category_id&quot;</span><span class="o">:</span> <span class="s2">&quot;分类id&quot;</span><span class="p">,</span>
         <span class="s2">&quot;commission_price&quot;</span><span class="o">:</span> <span class="s2">&quot;分销佣金&quot;</span><span class="p">,</span>
         <span class="s2">&quot;commission_rate&quot;</span><span class="o">:</span> <span class="s2">&quot;佣金比率&quot;</span><span class="p">,</span>
@@ -1115,6 +1118,7 @@
     <span class="s2">&quot;prev&quot;</span><span class="o">:</span> <span class="kc">false</span><span class="p">,</span>
     <span class="s2">&quot;products&quot;</span><span class="o">:</span> <span class="p">[</span>
       <span class="p">{</span>
+        <span class="s2">&quot;audit_fail_reason&quot;</span><span class="o">:</span> <span class="s2">&quot;商品审核拒绝原因&quot;</span><span class="p">,</span>
         <span class="s2">&quot;category_id&quot;</span><span class="o">:</span> <span class="s2">&quot;分类id&quot;</span><span class="p">,</span>
         <span class="s2">&quot;commission_price&quot;</span><span class="o">:</span> <span class="s2">&quot;分销佣金&quot;</span><span class="p">,</span>
         <span class="s2">&quot;commission_rate&quot;</span><span class="o">:</span> <span class="s2">&quot;佣金比率&quot;</span><span class="p">,</span>
@@ -1384,6 +1388,7 @@
     <span class="s2">&quot;prev&quot;</span><span class="o">:</span> <span class="kc">false</span><span class="p">,</span>
     <span class="s2">&quot;products&quot;</span><span class="o">:</span> <span class="p">[</span>
       <span class="p">{</span>
+        <span class="s2">&quot;audit_fail_reason&quot;</span><span class="o">:</span> <span class="s2">&quot;商品审核拒绝原因&quot;</span><span class="p">,</span>
         <span class="s2">&quot;category_id&quot;</span><span class="o">:</span> <span class="s2">&quot;分类id&quot;</span><span class="p">,</span>
         <span class="s2">&quot;commission_price&quot;</span><span class="o">:</span> <span class="s2">&quot;分销佣金&quot;</span><span class="p">,</span>
         <span class="s2">&quot;commission_rate&quot;</span><span class="o">:</span> <span class="s2">&quot;佣金比率&quot;</span><span class="p">,</span>
@@ -1505,11 +1510,11 @@
 <h3>请求参数<a class="headerlink" href="#id24" title="永久链接至标题">¶</a></h3>
 <table border="1" class="docutils">
 <colgroup>
-<col width="21%" />
-<col width="10%" />
+<col width="19%" />
 <col width="9%" />
-<col width="10%" />
-<col width="49%" />
+<col width="8%" />
+<col width="9%" />
+<col width="54%" />
 </colgroup>
 <thead valign="bottom">
 <tr class="row-odd"><th class="head">名称</th>
@@ -1554,7 +1559,7 @@
 <td>Number</td>
 <td>可选</td>
 <td>1</td>
-<td>商品状态 0:仓库中; 1:出售中; 2:下架中; 3:已售罄</td>
+<td>商品状态 0:仓库中; 1:出售中; 2:下架中; 3:已售罄; 4: 待审核</td>
 </tr>
 <tr class="row-even"><td>is_distributed</td>
 <td>Number</td>
@@ -1574,6 +1579,12 @@
 <td>0</td>
 <td>商品库存 0: 全部; 1: 数量不足</td>
 </tr>
+<tr class="row-odd"><td>audit_status</td>
+<td>Number</td>
+<td>可选</td>
+<td>1</td>
+<td>审核状态 1: 审核中 2: 审核拒绝</td>
+</tr>
 </tbody>
 </table>
 </div>
@@ -1587,6 +1598,7 @@
     <span class="s2">&quot;prev&quot;</span><span class="o">:</span> <span class="kc">false</span><span class="p">,</span>
     <span class="s2">&quot;products&quot;</span><span class="o">:</span> <span class="p">[</span>
       <span class="p">{</span>
+        <span class="s2">&quot;audit_fail_reason&quot;</span><span class="o">:</span> <span class="s2">&quot;商品审核拒绝原因&quot;</span><span class="p">,</span>
         <span class="s2">&quot;category_id&quot;</span><span class="o">:</span> <span class="s2">&quot;分类id&quot;</span><span class="p">,</span>
         <span class="s2">&quot;commission_price&quot;</span><span class="o">:</span> <span class="s2">&quot;分销佣金&quot;</span><span class="p">,</span>
         <span class="s2">&quot;commission_rate&quot;</span><span class="o">:</span> <span class="s2">&quot;佣金比率&quot;</span><span class="p">,</span>
@@ -1708,11 +1720,11 @@
 <h3>请求参数<a class="headerlink" href="#id28" title="永久链接至标题">¶</a></h3>
 <table border="1" class="docutils">
 <colgroup>
-<col width="20%" />
-<col width="9%" />
+<col width="18%" />
 <col width="8%" />
-<col width="9%" />
-<col width="53%" />
+<col width="8%" />
+<col width="8%" />
+<col width="58%" />
 </colgroup>
 <thead valign="bottom">
 <tr class="row-odd"><th class="head">名称</th>
@@ -1751,7 +1763,7 @@
 <td>Number</td>
 <td>可选</td>
 <td>1</td>
-<td>商品状态 -1: 所有 0:仓库中; 1:出售中; 2:下架中; 3:已售罄</td>
+<td>商品状态 -1: 所有 0:仓库中; 1:出售中; 2:下架中; 3:已售罄; 4: 审核中</td>
 </tr>
 <tr class="row-odd"><td>is_distributed</td>
 <td>Number</td>
@@ -1820,6 +1832,7 @@
     <span class="s2">&quot;prev&quot;</span><span class="o">:</span> <span class="kc">false</span><span class="p">,</span>
     <span class="s2">&quot;products&quot;</span><span class="o">:</span> <span class="p">[</span>
       <span class="p">{</span>
+        <span class="s2">&quot;audit_fail_reason&quot;</span><span class="o">:</span> <span class="s2">&quot;商品审核拒绝原因&quot;</span><span class="p">,</span>
         <span class="s2">&quot;category_id&quot;</span><span class="o">:</span> <span class="s2">&quot;分类id&quot;</span><span class="p">,</span>
         <span class="s2">&quot;commission_price&quot;</span><span class="o">:</span> <span class="s2">&quot;分销佣金&quot;</span><span class="p">,</span>
         <span class="s2">&quot;commission_rate&quot;</span><span class="o">:</span> <span class="s2">&quot;佣金比率&quot;</span><span class="p">,</span>
@@ -4395,6 +4408,11 @@
             <span class="s2">&quot;count&quot;</span><span class="o">:</span> <span class="mi">5</span><span class="p">,</span>
             <span class="s2">&quot;name&quot;</span><span class="o">:</span> <span class="s2">&quot;已售罄&quot;</span><span class="p">,</span>
             <span class="s2">&quot;status&quot;</span><span class="o">:</span> <span class="mi">3</span>
+        <span class="p">},</span>
+        <span class="p">{</span>
+            <span class="s2">&quot;count&quot;</span><span class="o">:</span> <span class="mi">2</span><span class="p">,</span>
+            <span class="s2">&quot;name&quot;</span><span class="o">:</span> <span class="s2">&quot;审核中&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;status&quot;</span><span class="o">:</span> <span class="mi">4</span>
         <span class="p">}</span>
     <span class="p">],</span>
     <span class="s2">&quot;status&quot;</span><span class="o">:</span> <span class="p">{</span>
@@ -4652,6 +4670,7 @@
     <span class="s2">&quot;prev&quot;</span><span class="o">:</span> <span class="kc">false</span><span class="p">,</span>
     <span class="s2">&quot;products&quot;</span><span class="o">:</span> <span class="p">[</span>
       <span class="p">{</span>
+        <span class="s2">&quot;audit_fail_reason&quot;</span><span class="o">:</span> <span class="s2">&quot;商品审核拒绝原因&quot;</span><span class="p">,</span>
         <span class="s2">&quot;category_id&quot;</span><span class="o">:</span> <span class="s2">&quot;分类id&quot;</span><span class="p">,</span>
         <span class="s2">&quot;commission_price&quot;</span><span class="o">:</span> <span class="s2">&quot;分销佣金&quot;</span><span class="p">,</span>
         <span class="s2">&quot;commission_rate&quot;</span><span class="o">:</span> <span class="s2">&quot;佣金比率&quot;</span><span class="p">,</span>
@@ -5009,6 +5028,7 @@
     <span class="s2">&quot;prev&quot;</span><span class="o">:</span> <span class="kc">false</span><span class="p">,</span>
     <span class="s2">&quot;products&quot;</span><span class="o">:</span> <span class="p">[</span>
       <span class="p">{</span>
+        <span class="s2">&quot;audit_fail_reason&quot;</span><span class="o">:</span> <span class="s2">&quot;商品审核拒绝原因&quot;</span><span class="p">,</span>
         <span class="s2">&quot;category_id&quot;</span><span class="o">:</span> <span class="s2">&quot;分类id&quot;</span><span class="p">,</span>
         <span class="s2">&quot;commission_price&quot;</span><span class="o">:</span> <span class="s2">&quot;分销佣金&quot;</span><span class="p">,</span>
         <span class="s2">&quot;commission_rate&quot;</span><span class="o">:</span> <span class="s2">&quot;佣金比率&quot;</span><span class="p">,</span>
@@ -5176,6 +5196,7 @@
     <span class="s2">&quot;prev&quot;</span><span class="o">:</span> <span class="kc">false</span><span class="p">,</span>
     <span class="s2">&quot;products&quot;</span><span class="o">:</span> <span class="p">[</span>
       <span class="p">{</span>
+        <span class="s2">&quot;audit_fail_reason&quot;</span><span class="o">:</span> <span class="s2">&quot;商品审核拒绝原因&quot;</span><span class="p">,</span>
         <span class="s2">&quot;category_id&quot;</span><span class="o">:</span> <span class="s2">&quot;分类id&quot;</span><span class="p">,</span>
         <span class="s2">&quot;commission_price&quot;</span><span class="o">:</span> <span class="s2">&quot;分销佣金&quot;</span><span class="p">,</span>
         <span class="s2">&quot;commission_rate&quot;</span><span class="o">:</span> <span class="s2">&quot;佣金比率&quot;</span><span class="p">,</span>
@@ -5367,6 +5388,7 @@
     <span class="s2">&quot;prev&quot;</span><span class="o">:</span> <span class="kc">false</span><span class="p">,</span>
     <span class="s2">&quot;products&quot;</span><span class="o">:</span> <span class="p">[</span>
       <span class="p">{</span>
+        <span class="s2">&quot;audit_fail_reason&quot;</span><span class="o">:</span> <span class="s2">&quot;商品审核拒绝原因&quot;</span><span class="p">,</span>
         <span class="s2">&quot;category_id&quot;</span><span class="o">:</span> <span class="s2">&quot;分类id&quot;</span><span class="p">,</span>
         <span class="s2">&quot;commission_price&quot;</span><span class="o">:</span> <span class="s2">&quot;分销佣金&quot;</span><span class="p">,</span>
         <span class="s2">&quot;commission_rate&quot;</span><span class="o">:</span> <span class="s2">&quot;佣金比率&quot;</span><span class="p">,</span>

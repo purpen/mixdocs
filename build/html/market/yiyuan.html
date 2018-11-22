@@ -3,7 +3,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="zh_CN">
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    <title>营销API模块 &#8212; mixdocs 0.1.0 文档</title>
+    <title>营销工具/一元送礼模块 &#8212; mixdocs 0.1.0 文档</title>
     <link rel="stylesheet" href="../_static/bootstrap-sphinx.css" type="text/css" />
     <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
     <link rel="stylesheet" href="../_static/mixpus.css" type="text/css" />
@@ -27,8 +27,8 @@
     <script type="text/javascript" src="../_static/bootstrap-sphinx.js"></script>
     <link rel="index" title="索引" href="../genindex.html" />
     <link rel="search" title="搜索" href="../search.html" />
-    <link rel="next" title="营销工具/广告模块" href="banners.html" />
-    <link rel="prev" title="通知模块" href="../shopes/notice.html" />
+    <link rel="next" title="统计API模块" href="../stats/index.html" />
+    <link rel="prev" title="营销工具/猜题赢现金" href="bonus_question.html" />
 <meta charset='utf-8'>
 <meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'>
 <meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1'>
@@ -116,11 +116,11 @@
 <li class="toctree-l2"><a class="reference internal" href="../shopes/notice.html">通知模块</a></li>
 </ul>
 </li>
-<li class="toctree-l1 current"><a class="current reference internal" href="#">营销API模块</a><ul>
+<li class="toctree-l1 current"><a class="reference internal" href="index.html">营销API模块</a><ul class="current">
 <li class="toctree-l2"><a class="reference internal" href="banners.html">营销工具/广告模块</a></li>
 <li class="toctree-l2"><a class="reference internal" href="coupons.html">营销工具/优惠券模块</a></li>
 <li class="toctree-l2"><a class="reference internal" href="bonus_question.html">营销工具/猜题赢现金</a></li>
-<li class="toctree-l2"><a class="reference internal" href="yiyuan.html">营销工具/一元送礼模块</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">营销工具/一元送礼模块</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="../stats/index.html">统计API模块</a><ul>
@@ -197,7 +197,14 @@
   <ul class="dropdown-menu localtoc"
       role="menu"
       aria-labelledby="dLabelLocalToc"><ul>
-<li><a class="reference internal" href="#">营销API模块</a></li>
+<li><a class="reference internal" href="#">营销工具/一元送礼模块</a><ul>
+<li><a class="reference internal" href="#id2">查看今日礼物</a><ul>
+<li><a class="reference internal" href="#id3">接口说明</a></li>
+<li><a class="reference internal" href="#id4">返回示例</a></li>
+</ul>
+</li>
+</ul>
+</li>
 </ul>
 </ul>
 </li>
@@ -227,22 +234,29 @@
   <div class="row">
       <div class="col-md-3">
         <div id="sidebar" class="bs-sidenav" role="complementary"><ul>
-<li><a class="reference internal" href="#">营销API模块</a></li>
+<li><a class="reference internal" href="#">营销工具/一元送礼模块</a><ul>
+<li><a class="reference internal" href="#id2">查看今日礼物</a><ul>
+<li><a class="reference internal" href="#id3">接口说明</a></li>
+<li><a class="reference internal" href="#id4">返回示例</a></li>
+</ul>
+</li>
+</ul>
+</li>
 </ul>
 
 
 <ul class="nav nav-list">
   <li>
-    <a href="../shopes/notice.html" title="Previous Chapter: 通知模块"><span class="glyphicon glyphicon-chevron-left visible-sm"></span><span class="hidden-sm hidden-tablet">&raquo; 通知模块</span>
+    <a href="bonus_question.html" title="Previous Chapter: 营销工具/猜题赢现金"><span class="glyphicon glyphicon-chevron-left visible-sm"></span><span class="hidden-sm hidden-tablet">&raquo; 营销工具/猜题赢现金</span>
     </a>
   </li>
   <li>
-    <a href="banners.html" title="Next Chapter: 营销工具/广告模块"><span class="glyphicon glyphicon-chevron-right visible-sm"></span><span class="hidden-sm hidden-tablet">&raquo; 营销工具/广告模块</span>
+    <a href="../stats/index.html" title="Next Chapter: 统计API模块"><span class="glyphicon glyphicon-chevron-right visible-sm"></span><span class="hidden-sm hidden-tablet">&raquo; 统计API模块</span>
     </a>
   </li>
 </ul>
 <div id="sourcelink">
-  <a href="../_sources/market/index.rst.txt"
+  <a href="../_sources/market/yiyuan.rst.txt"
      rel="nofollow">Source</a>
 </div>
 <form action="../search.html" method="get">
@@ -256,104 +270,90 @@
       </div>
     <div class="col-md-9 content">
       
-  <div class="section" id="api">
-<h1>营销API模块<a class="headerlink" href="#api" title="永久链接至标题">¶</a></h1>
-<div class="toctree-wrapper compound">
-<ul>
-<li class="toctree-l1"><a class="reference internal" href="banners.html">营销工具/广告模块</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="banners.html#id2">生成推广图</a></li>
-<li class="toctree-l2"><a class="reference internal" href="banners.html#id6">生成小程序码</a></li>
-<li class="toctree-l2"><a class="reference internal" href="banners.html#id10">生成分享海报图</a></li>
-<li class="toctree-l2"><a class="reference internal" href="banners.html#id14">分享品牌馆卡片</a></li>
-<li class="toctree-l2"><a class="reference internal" href="banners.html#id18">分享生活馆卡片</a></li>
-<li class="toctree-l2"><a class="reference internal" href="banners.html#id22">邀请好友开馆卡片</a></li>
-<li class="toctree-l2"><a class="reference internal" href="banners.html#id25">分享优惠劵</a></li>
-<li class="toctree-l2"><a class="reference internal" href="banners.html#id28">邀请好友开馆海报</a></li>
-<li class="toctree-l2"><a class="reference internal" href="banners.html#id32">生成橱窗分享海报图</a></li>
-<li class="toctree-l2"><a class="reference internal" href="banners.html#id36">生成商品分享卡片</a></li>
-<li class="toctree-l2"><a class="reference internal" href="banners.html#id40">获取生活志分享卡片</a></li>
-<li class="toctree-l2"><a class="reference internal" href="banners.html#id44">广告列表</a></li>
-<li class="toctree-l2"><a class="reference internal" href="banners.html#id48">广告图列表</a></li>
-<li class="toctree-l2"><a class="reference internal" href="banners.html#id52">精选顶部广告</a></li>
-<li class="toctree-l2"><a class="reference internal" href="banners.html#id55">精选内容区广告</a></li>
-<li class="toctree-l2"><a class="reference internal" href="banners.html#id58">探索顶部广告</a></li>
-<li class="toctree-l2"><a class="reference internal" href="banners.html#id61">新增广告信息&lt;未开通&gt;</a></li>
-<li class="toctree-l2"><a class="reference internal" href="banners.html#id63">更新广告信息&lt;未开通&gt;</a></li>
-<li class="toctree-l2"><a class="reference internal" href="banners.html#id65">删除广告信息&lt;未开通&gt;</a></li>
+  <div class="section" id="id1">
+<h1>营销工具/一元送礼模块<a class="headerlink" href="#id1" title="永久链接至标题">¶</a></h1>
+<div class="section" id="id2">
+<h2>查看今日礼物<a class="headerlink" href="#id2" title="永久链接至标题">¶</a></h2>
+<p>查看今日礼物</p>
+<div class="section" id="id3">
+<h3>接口说明<a class="headerlink" href="#id3" title="永久链接至标题">¶</a></h3>
+<ul class="simple">
+<li>API接口请求地址：<code class="docutils literal"><span class="pre">/yiyuan/product</span></code></li>
+<li>API接口请求方法：<code class="docutils literal"><span class="pre">GET</span></code></li>
 </ul>
-</li>
-<li class="toctree-l1"><a class="reference internal" href="coupons.html">营销工具/优惠券模块</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="coupons.html#id2">优惠活动列表</a></li>
-<li class="toctree-l2"><a class="reference internal" href="coupons.html#id6">优惠活动详情列表</a></li>
-<li class="toctree-l2"><a class="reference internal" href="coupons.html#id10">正在活动中的优惠券列表</a></li>
-<li class="toctree-l2"><a class="reference internal" href="coupons.html#id13">独立-用户获取自己的商家优惠券列表</a></li>
-<li class="toctree-l2"><a class="reference internal" href="coupons.html#id17">核心-用户获取自己的商家优惠券列表</a></li>
-<li class="toctree-l2"><a class="reference internal" href="coupons.html#id21">用户登录后获取商家优惠券列表</a></li>
-<li class="toctree-l2"><a class="reference internal" href="coupons.html#id25">未登录用户获取商家优惠券、满减活动列表</a></li>
-<li class="toctree-l2"><a class="reference internal" href="coupons.html#id29">用户获取当前订单的符合条件的优惠券信息</a></li>
-<li class="toctree-l2"><a class="reference internal" href="coupons.html#id33">用户获取当前订单的符合条件的满减信息</a></li>
-<li class="toctree-l2"><a class="reference internal" href="coupons.html#id37">优惠券详情</a></li>
-<li class="toctree-l2"><a class="reference internal" href="coupons.html#id40">新增优惠券</a></li>
-<li class="toctree-l2"><a class="reference internal" href="coupons.html#id44">新增满减活动</a></li>
-<li class="toctree-l2"><a class="reference internal" href="coupons.html#id48">修改满减活动</a></li>
-<li class="toctree-l2"><a class="reference internal" href="coupons.html#id52">修改优惠券活动</a></li>
-<li class="toctree-l2"><a class="reference internal" href="coupons.html#id56">撤销优惠券活动</a></li>
-<li class="toctree-l2"><a class="reference internal" href="coupons.html#id60">领取优惠券</a></li>
-<li class="toctree-l2"><a class="reference internal" href="coupons.html#id64">禁用优惠券</a></li>
-<li class="toctree-l2"><a class="reference internal" href="coupons.html#id67">是否72小时内首单新用户</a></li>
-<li class="toctree-l2"><a class="reference internal" href="coupons.html#id70">用户领取10元官方红包</a></li>
-<li class="toctree-l2"><a class="reference internal" href="coupons.html#id73">用户查看自己的官方优惠券列表</a></li>
-<li class="toctree-l2"><a class="reference internal" href="coupons.html#id77">用户查看自己失效的优惠券列表</a></li>
-<li class="toctree-l2"><a class="reference internal" href="coupons.html#id81">用户获取自己的符合当前金额的官方优惠券列表</a></li>
-<li class="toctree-l2"><a class="reference internal" href="coupons.html#id85">用户查看官方优惠券列表</a></li>
-<li class="toctree-l2"><a class="reference internal" href="coupons.html#id88">用户领取官方优惠券</a></li>
-<li class="toctree-l2"><a class="reference internal" href="coupons.html#id92">领券中心-同享券-精品品牌券</a></li>
-<li class="toctree-l2"><a class="reference internal" href="coupons.html#id96">领券中心-单享券-精选商品券</a></li>
-<li class="toctree-l2"><a class="reference internal" href="coupons.html#id100">领券中心-官方优惠券</a></li>
-<li class="toctree-l2"><a class="reference internal" href="coupons.html#id104">优惠券头条动态</a></li>
-<li class="toctree-l2"><a class="reference internal" href="coupons.html#id108">官方红包分享动态</a></li>
-<li class="toctree-l2"><a class="reference internal" href="coupons.html#id111">是否领取1000元新人红包</a></li>
-<li class="toctree-l2"><a class="reference internal" href="coupons.html#id114">领取1000元新人红包</a></li>
-<li class="toctree-l2"><a class="reference internal" href="coupons.html#id117">领券中心-双十一活动</a></li>
-<li class="toctree-l2"><a class="reference internal" href="coupons.html#id121">领券中心-双十一返场活动</a></li>
-<li class="toctree-l2"><a class="reference internal" href="coupons.html#id125">店铺-双十一活动</a></li>
-<li class="toctree-l2"><a class="reference internal" href="coupons.html#id129">店铺-双十一返场活动</a></li>
-<li class="toctree-l2"><a class="reference internal" href="coupons.html#id133">领取双十一活动优惠券</a></li>
-</ul>
-</li>
-<li class="toctree-l1"><a class="reference internal" href="bonus_question.html">营销工具/猜题赢现金</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="bonus_question.html#id2">用户获取题目</a></li>
-<li class="toctree-l2"><a class="reference internal" href="bonus_question.html#id5">判断答案是否正确</a></li>
-<li class="toctree-l2"><a class="reference internal" href="bonus_question.html#id9">试题结算</a></li>
-<li class="toctree-l2"><a class="reference internal" href="bonus_question.html#id13">获取可提现金额</a></li>
-<li class="toctree-l2"><a class="reference internal" href="bonus_question.html#id16">获取优惠券数量</a></li>
-<li class="toctree-l2"><a class="reference internal" href="bonus_question.html#id19">猜图-答案列表</a></li>
-<li class="toctree-l2"><a class="reference internal" href="bonus_question.html#id23">猜图-获取用户所有奖励</a></li>
-<li class="toctree-l2"><a class="reference internal" href="bonus_question.html#id26">猜图-世界榜</a></li>
-<li class="toctree-l2"><a class="reference internal" href="bonus_question.html#id30">猜图-好友榜</a></li>
-<li class="toctree-l2"><a class="reference internal" href="bonus_question.html#id34">猜图-用户被邀请同时添加游戏好友</a></li>
-<li class="toctree-l2"><a class="reference internal" href="bonus_question.html#id38">猜图-我的好友列表</a></li>
-<li class="toctree-l2"><a class="reference internal" href="bonus_question.html#id42">猜图-可能认识的人列表</a></li>
-<li class="toctree-l2"><a class="reference internal" href="bonus_question.html#id46">猜图-偷红包</a></li>
-<li class="toctree-l2"><a class="reference internal" href="bonus_question.html#id50">猜图-偷我钱包的人</a></li>
-<li class="toctree-l2"><a class="reference internal" href="bonus_question.html#id54">猜图-人数统计</a></li>
-<li class="toctree-l2"><a class="reference internal" href="bonus_question.html#id57">猜图-获取猜图海报图片</a></li>
-<li class="toctree-l2"><a class="reference internal" href="bonus_question.html#id61">猜图-一小时内玩的次数</a></li>
-<li class="toctree-l2"><a class="reference internal" href="bonus_question.html#id64">猜图-奖励消息</a></li>
-<li class="toctree-l2"><a class="reference internal" href="bonus_question.html#id67">猜图-猜图赢现金提现</a></li>
-<li class="toctree-l2"><a class="reference internal" href="bonus_question.html#id71">猜图-偷我红包记录</a></li>
-<li class="toctree-l2"><a class="reference internal" href="bonus_question.html#id74">猜图-记录是否分享</a></li>
-<li class="toctree-l2"><a class="reference internal" href="bonus_question.html#id77">猜图-邀请好友信息</a></li>
-<li class="toctree-l2"><a class="reference internal" href="bonus_question.html#id80">猜图-最新邀请好友登录信息</a></li>
-<li class="toctree-l2"><a class="reference internal" href="bonus_question.html#id83">猜图-获取首页分享海报图片</a></li>
-<li class="toctree-l2"><a class="reference internal" href="bonus_question.html#id87">猜图-还需要邀请几个好友</a></li>
-</ul>
-</li>
-<li class="toctree-l1"><a class="reference internal" href="yiyuan.html">营销工具/一元送礼模块</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="yiyuan.html#id2">查看今日礼物</a></li>
-</ul>
-</li>
-</ul>
+</div>
+<div class="section" id="id4">
+<h3>返回示例<a class="headerlink" href="#id4" title="永久链接至标题">¶</a></h3>
+<p>JSON数据格式:</p>
+<div class="highlight-javascript"><div class="highlight"><pre><span></span><span class="p">{</span>
+    <span class="s2">&quot;data&quot;</span><span class="o">:</span> <span class="p">{</span>
+        <span class="s2">&quot;assets&quot;</span><span class="o">:</span> <span class="p">[</span>
+            <span class="p">{</span>
+                <span class="s2">&quot;created_at&quot;</span><span class="o">:</span> <span class="mi">1541599579</span><span class="p">,</span>
+                <span class="s2">&quot;filename&quot;</span><span class="o">:</span> <span class="s2">&quot;1.jpg&quot;</span><span class="p">,</span>
+                <span class="s2">&quot;filepath&quot;</span><span class="o">:</span> <span class="s2">&quot;20181107/0618Fp2ThUtpaN-7O3N8f5BJ0_3eciIS.jpg&quot;</span><span class="p">,</span>
+                <span class="s2">&quot;id&quot;</span><span class="o">:</span> <span class="mi">38641</span><span class="p">,</span>
+                <span class="s2">&quot;type&quot;</span><span class="o">:</span> <span class="mi">1</span><span class="p">,</span>
+                <span class="s2">&quot;view_url&quot;</span><span class="o">:</span> <span class="s2">&quot;https://s3.lexivip.com/20181107/0618Fp2ThUtpaN-7O3N8f5BJ0_3eciIS.jpg&quot;</span>
+            <span class="p">},</span>
+            <span class="p">{</span>
+                <span class="s2">&quot;created_at&quot;</span><span class="o">:</span> <span class="mi">1541599579</span><span class="p">,</span>
+                <span class="s2">&quot;filename&quot;</span><span class="o">:</span> <span class="s2">&quot;2.jpg&quot;</span><span class="p">,</span>
+                <span class="s2">&quot;filepath&quot;</span><span class="o">:</span> <span class="s2">&quot;20181107/0618FpmDb_An-ssdeczTRdJsClNe-FIQ.jpg&quot;</span><span class="p">,</span>
+                <span class="s2">&quot;id&quot;</span><span class="o">:</span> <span class="mi">38640</span><span class="p">,</span>
+                <span class="s2">&quot;type&quot;</span><span class="o">:</span> <span class="mi">1</span><span class="p">,</span>
+                <span class="s2">&quot;view_url&quot;</span><span class="o">:</span> <span class="s2">&quot;https://s3.lexivip.com/20181107/0618FpmDb_An-ssdeczTRdJsClNe-FIQ.jpg&quot;</span>
+            <span class="p">},</span>
+            <span class="p">{</span>
+                <span class="s2">&quot;created_at&quot;</span><span class="o">:</span> <span class="mi">1541599579</span><span class="p">,</span>
+                <span class="s2">&quot;filename&quot;</span><span class="o">:</span> <span class="s2">&quot;3.jpg&quot;</span><span class="p">,</span>
+                <span class="s2">&quot;filepath&quot;</span><span class="o">:</span> <span class="s2">&quot;20181107/0618FrQaO0hGFP031EgM_quMZ4GnLv2H.jpg&quot;</span><span class="p">,</span>
+                <span class="s2">&quot;id&quot;</span><span class="o">:</span> <span class="mi">38638</span><span class="p">,</span>
+                <span class="s2">&quot;type&quot;</span><span class="o">:</span> <span class="mi">1</span><span class="p">,</span>
+                <span class="s2">&quot;view_url&quot;</span><span class="o">:</span> <span class="s2">&quot;https://s3.lexivip.com/20181107/0618FrQaO0hGFP031EgM_quMZ4GnLv2H.jpg&quot;</span>
+            <span class="p">},</span>
+            <span class="p">{</span>
+                <span class="s2">&quot;created_at&quot;</span><span class="o">:</span> <span class="mi">1541599579</span><span class="p">,</span>
+                <span class="s2">&quot;filename&quot;</span><span class="o">:</span> <span class="s2">&quot;4.jpg&quot;</span><span class="p">,</span>
+                <span class="s2">&quot;filepath&quot;</span><span class="o">:</span> <span class="s2">&quot;20181107/0618FumUEnK8xtd8pjy_cj6ECTxagpGN.jpg&quot;</span><span class="p">,</span>
+                <span class="s2">&quot;id&quot;</span><span class="o">:</span> <span class="mi">38637</span><span class="p">,</span>
+                <span class="s2">&quot;type&quot;</span><span class="o">:</span> <span class="mi">1</span><span class="p">,</span>
+                <span class="s2">&quot;view_url&quot;</span><span class="o">:</span> <span class="s2">&quot;https://s3.lexivip.com/20181107/0618FumUEnK8xtd8pjy_cj6ECTxagpGN.jpg&quot;</span>
+            <span class="p">},</span>
+            <span class="p">{</span>
+                <span class="s2">&quot;created_at&quot;</span><span class="o">:</span> <span class="mi">1541599577</span><span class="p">,</span>
+                <span class="s2">&quot;filename&quot;</span><span class="o">:</span> <span class="s2">&quot;5.jpg&quot;</span><span class="p">,</span>
+                <span class="s2">&quot;filepath&quot;</span><span class="o">:</span> <span class="s2">&quot;20181107/0615Fiot22kYJub4EhbueVTrdnHmeUiQ.jpg&quot;</span><span class="p">,</span>
+                <span class="s2">&quot;id&quot;</span><span class="o">:</span> <span class="mi">38636</span><span class="p">,</span>
+                <span class="s2">&quot;type&quot;</span><span class="o">:</span> <span class="mi">1</span><span class="p">,</span>
+                <span class="s2">&quot;view_url&quot;</span><span class="o">:</span> <span class="s2">&quot;https://s3.lexivip.com/20181107/0615Fiot22kYJub4EhbueVTrdnHmeUiQ.jpg&quot;</span>
+            <span class="p">},</span>
+            <span class="p">{</span>
+                <span class="s2">&quot;created_at&quot;</span><span class="o">:</span> <span class="mi">1541599579</span><span class="p">,</span>
+                <span class="s2">&quot;filename&quot;</span><span class="o">:</span> <span class="s2">&quot;6.jpg&quot;</span><span class="p">,</span>
+                <span class="s2">&quot;filepath&quot;</span><span class="o">:</span> <span class="s2">&quot;20181107/0618FvFmtRpBJt6yJWh2nypWUWF-bahx.jpg&quot;</span><span class="p">,</span>
+                <span class="s2">&quot;id&quot;</span><span class="o">:</span> <span class="mi">38639</span><span class="p">,</span>
+                <span class="s2">&quot;type&quot;</span><span class="o">:</span> <span class="mi">1</span><span class="p">,</span>
+                <span class="s2">&quot;view_url&quot;</span><span class="o">:</span> <span class="s2">&quot;https://s3.lexivip.com/20181107/0618FvFmtRpBJt6yJWh2nypWUWF-bahx.jpg&quot;</span>
+            <span class="p">}</span>
+        <span class="p">],</span>
+        <span class="s2">&quot;price&quot;</span><span class="o">:</span> <span class="mi">189</span><span class="p">,</span>  <span class="c1">// 销售价</span>
+        <span class="s2">&quot;product_name&quot;</span><span class="o">:</span> <span class="s2">&quot;望北原创自制 2018年新款简约百搭休闲裤九分裤&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;product_rid&quot;</span><span class="o">:</span> <span class="s2">&quot;8670312598&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;quantity&quot;</span><span class="o">:</span> <span class="mi">20</span><span class="p">,</span>  <span class="c1">// 可送数量</span>
+        <span class="s2">&quot;real_price&quot;</span><span class="o">:</span> <span class="mi">178</span><span class="p">,</span> <span class="c1">// 实际价格</span>
+        <span class="s2">&quot;sale_price&quot;</span><span class="o">:</span> <span class="mi">178</span><span class="p">,</span> <span class="c1">// 折扣价</span>
+        <span class="s2">&quot;surplus_count&quot;</span><span class="o">:</span> <span class="mi">20</span>  <span class="c1">// 剩余数量</span>
+    <span class="p">},</span>
+    <span class="s2">&quot;status&quot;</span><span class="o">:</span> <span class="p">{</span>
+        <span class="s2">&quot;code&quot;</span><span class="o">:</span> <span class="mi">200</span><span class="p">,</span>
+        <span class="s2">&quot;message&quot;</span><span class="o">:</span> <span class="s2">&quot;Ok all right.&quot;</span>
+    <span class="p">},</span>
+    <span class="s2">&quot;success&quot;</span><span class="o">:</span> <span class="kc">true</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</div>
 </div>
 </div>
 
