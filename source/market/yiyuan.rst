@@ -1,0 +1,90 @@
+====================
+营销工具/一元送礼模块
+====================
+
+
+查看今日礼物
+----------------------
+查看今日礼物
+
+接口说明
+~~~~~~~~~~~~~~
+
+* API接口请求地址：``/yiyuan/product``
+* API接口请求方法：``GET``
+
+
+返回示例
+~~~~~~~~~~~~~~~~
+
+JSON数据格式:
+
+.. code-block:: javascript
+
+    {
+        "data": {
+            "assets": [
+                {
+                    "created_at": 1541599579,
+                    "filename": "1.jpg",
+                    "filepath": "20181107/0618Fp2ThUtpaN-7O3N8f5BJ0_3eciIS.jpg",
+                    "id": 38641,
+                    "type": 1,
+                    "view_url": "https://s3.lexivip.com/20181107/0618Fp2ThUtpaN-7O3N8f5BJ0_3eciIS.jpg"
+                },
+                {
+                    "created_at": 1541599579,
+                    "filename": "2.jpg",
+                    "filepath": "20181107/0618FpmDb_An-ssdeczTRdJsClNe-FIQ.jpg",
+                    "id": 38640,
+                    "type": 1,
+                    "view_url": "https://s3.lexivip.com/20181107/0618FpmDb_An-ssdeczTRdJsClNe-FIQ.jpg"
+                },
+                {
+                    "created_at": 1541599579,
+                    "filename": "3.jpg",
+                    "filepath": "20181107/0618FrQaO0hGFP031EgM_quMZ4GnLv2H.jpg",
+                    "id": 38638,
+                    "type": 1,
+                    "view_url": "https://s3.lexivip.com/20181107/0618FrQaO0hGFP031EgM_quMZ4GnLv2H.jpg"
+                },
+                {
+                    "created_at": 1541599579,
+                    "filename": "4.jpg",
+                    "filepath": "20181107/0618FumUEnK8xtd8pjy_cj6ECTxagpGN.jpg",
+                    "id": 38637,
+                    "type": 1,
+                    "view_url": "https://s3.lexivip.com/20181107/0618FumUEnK8xtd8pjy_cj6ECTxagpGN.jpg"
+                },
+                {
+                    "created_at": 1541599577,
+                    "filename": "5.jpg",
+                    "filepath": "20181107/0615Fiot22kYJub4EhbueVTrdnHmeUiQ.jpg",
+                    "id": 38636,
+                    "type": 1,
+                    "view_url": "https://s3.lexivip.com/20181107/0615Fiot22kYJub4EhbueVTrdnHmeUiQ.jpg"
+                },
+                {
+                    "created_at": 1541599579,
+                    "filename": "6.jpg",
+                    "filepath": "20181107/0618FvFmtRpBJt6yJWh2nypWUWF-bahx.jpg",
+                    "id": 38639,
+                    "type": 1,
+                    "view_url": "https://s3.lexivip.com/20181107/0618FvFmtRpBJt6yJWh2nypWUWF-bahx.jpg"
+                }
+            ],
+            "price": 189,  // 销售价
+            "product_name": "望北原创自制 2018年新款简约百搭休闲裤九分裤",
+            "product_rid": "8670312598",
+            "quantity": 20,  // 可送数量
+            "real_price": 178, // 实际价格
+            "sale_price": 178, // 折扣价
+            "surplus_count": 20  // 剩余数量
+        },
+        "status": {
+            "code": 200,
+            "message": "Ok all right."
+        },
+        "success": true
+    }
+
