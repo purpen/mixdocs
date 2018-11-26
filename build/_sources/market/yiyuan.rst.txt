@@ -198,7 +198,7 @@ JSON数据格式:
 接口说明
 ~~~~~~~~~~~~~~
 
-* API接口请求地址：``yiyuan/product/receive``
+* API接口请求地址：``/yiyuan/product/receive``
 * API接口请求方法：``GET``
 * API接口用户授权：``token``
 
@@ -373,6 +373,76 @@ JSON数据格式:
         },
         "success": true
     }
+
+
+我参与的抽奖
+-------------------------
+我参与的抽奖
+
+接口说明
+~~~~~~~~~~~~~~
+
+* API接口请求地址：``/yiyuan/activity/join``
+* API接口请求方法：``GET``
+* API接口用户授权：``token``
+
+请求参数
+~~~~~~~~~~~~~~~
+
+===============  ==========  =========  ==========  ========================================
+名称              类型        是否必须     默认值       描述说明
+===============  ==========  =========  ==========  ========================================
+page             Number      可选         1          当前页码
+per_page         Number      可选         10         每页数量
+s                Number      可选         0          0、全部 1、已中奖 2、未中奖 3、已失效
+===============  ==========  =========  ==========  ========================================
+
+
+返回示例
+~~~~~~~~~~~~~~~~
+
+JSON数据格式:
+
+.. code-block:: javascript
+
+
+        "data": {
+            "activity_list": [
+                {
+                    "activity_rid": "Y18112664521",  // 活动编号
+                    "created_at": 1543225329,  // 参与时间
+                    "full_count": 20,  // 满足人数
+                    "is_receive": 0,  // 是否领奖 0、未领奖 1、已领奖
+                    "join_count": 1,  // 参与人数
+                    "product_name": "2018年冬季新款男士个性加绒拼接棉衣",  // 商品名
+                    "product_rid": "8537216804",  // 商品rid
+                    "s_color": "军绿色",  // 颜色
+                    "s_model": "M",  // 型号
+                    "sku": "8054396721",  // sku
+                    "status": 3,  // 1、已中奖 2、未中奖 3、已失效 4、未开奖
+                    "user_info": {  // 发起用户
+                        "user_logo": "https://s3.lexivip.com/20181101/2251FgKdtFrFPWjJYew4aROzCOBB6IMP.jpg",
+                        "user_name": "蓝胖子",
+                        "user_sn": "10296157834"
+                    },
+                    "view_url": "https://s3.lexivip.com/20181107/2344FiRbFqkXD4hKGVky91L-Co7RG0UZ.jpg",  // 商品图片
+                    "winning_at": 0  // 开奖时间
+                }
+            ],
+            "count": 1,
+            "next": false,
+            "prev": false
+        },
+        "status": {
+            "code": 200,
+            "message": "Ok all right."
+        },
+        "success": true
+    }
+
+
+
+
 
 
 

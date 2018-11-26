@@ -231,6 +231,12 @@
 <li><a class="reference internal" href="#id22">返回示例</a></li>
 </ul>
 </li>
+<li><a class="reference internal" href="#id23">我参与的抽奖</a><ul>
+<li><a class="reference internal" href="#id24">接口说明</a></li>
+<li><a class="reference internal" href="#id25">请求参数</a></li>
+<li><a class="reference internal" href="#id26">返回示例</a></li>
+</ul>
+</li>
 </ul>
 </li>
 </ul>
@@ -294,6 +300,12 @@
 <li><a class="reference internal" href="#id20">查看十个最热门的活动</a><ul>
 <li><a class="reference internal" href="#id21">接口说明</a></li>
 <li><a class="reference internal" href="#id22">返回示例</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#id23">我参与的抽奖</a><ul>
+<li><a class="reference internal" href="#id24">接口说明</a></li>
+<li><a class="reference internal" href="#id25">请求参数</a></li>
+<li><a class="reference internal" href="#id26">返回示例</a></li>
 </ul>
 </li>
 </ul>
@@ -577,7 +589,7 @@
 <div class="section" id="id14">
 <h3>接口说明<a class="headerlink" href="#id14" title="永久链接至标题">¶</a></h3>
 <ul class="simple">
-<li>API接口请求地址：<code class="docutils literal"><span class="pre">yiyuan/product/receive</span></code></li>
+<li>API接口请求地址：<code class="docutils literal"><span class="pre">/yiyuan/product/receive</span></code></li>
 <li>API接口请求方法：<code class="docutils literal"><span class="pre">GET</span></code></li>
 <li>API接口用户授权：<code class="docutils literal"><span class="pre">token</span></code></li>
 </ul>
@@ -755,6 +767,97 @@
                 <span class="p">]</span>
             <span class="p">}</span>
         <span class="p">]</span>
+    <span class="p">},</span>
+    <span class="s2">&quot;status&quot;</span><span class="o">:</span> <span class="p">{</span>
+        <span class="s2">&quot;code&quot;</span><span class="o">:</span> <span class="mi">200</span><span class="p">,</span>
+        <span class="s2">&quot;message&quot;</span><span class="o">:</span> <span class="s2">&quot;Ok all right.&quot;</span>
+    <span class="p">},</span>
+    <span class="s2">&quot;success&quot;</span><span class="o">:</span> <span class="kc">true</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="id23">
+<h2>我参与的抽奖<a class="headerlink" href="#id23" title="永久链接至标题">¶</a></h2>
+<p>我参与的抽奖</p>
+<div class="section" id="id24">
+<h3>接口说明<a class="headerlink" href="#id24" title="永久链接至标题">¶</a></h3>
+<ul class="simple">
+<li>API接口请求地址：<code class="docutils literal"><span class="pre">/yiyuan/activity/join</span></code></li>
+<li>API接口请求方法：<code class="docutils literal"><span class="pre">GET</span></code></li>
+<li>API接口用户授权：<code class="docutils literal"><span class="pre">token</span></code></li>
+</ul>
+</div>
+<div class="section" id="id25">
+<h3>请求参数<a class="headerlink" href="#id25" title="永久链接至标题">¶</a></h3>
+<table border="1" class="docutils">
+<colgroup>
+<col width="18%" />
+<col width="12%" />
+<col width="11%" />
+<col width="12%" />
+<col width="48%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">名称</th>
+<th class="head">类型</th>
+<th class="head">是否必须</th>
+<th class="head">默认值</th>
+<th class="head">描述说明</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>page</td>
+<td>Number</td>
+<td>可选</td>
+<td>1</td>
+<td>当前页码</td>
+</tr>
+<tr class="row-odd"><td>per_page</td>
+<td>Number</td>
+<td>可选</td>
+<td>10</td>
+<td>每页数量</td>
+</tr>
+<tr class="row-even"><td>s</td>
+<td>Number</td>
+<td>可选</td>
+<td>0</td>
+<td>0、全部 1、已中奖 2、未中奖 3、已失效</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="id26">
+<h3>返回示例<a class="headerlink" href="#id26" title="永久链接至标题">¶</a></h3>
+<p>JSON数据格式:</p>
+<div class="highlight-javascript"><div class="highlight"><pre><span></span>    <span class="s2">&quot;data&quot;</span><span class="o">:</span> <span class="p">{</span>
+        <span class="s2">&quot;activity_list&quot;</span><span class="o">:</span> <span class="p">[</span>
+            <span class="p">{</span>
+                <span class="s2">&quot;activity_rid&quot;</span><span class="o">:</span> <span class="s2">&quot;Y18112664521&quot;</span><span class="p">,</span>  <span class="c1">// 活动编号</span>
+                <span class="s2">&quot;created_at&quot;</span><span class="o">:</span> <span class="mi">1543225329</span><span class="p">,</span>  <span class="c1">// 参与时间</span>
+                <span class="s2">&quot;full_count&quot;</span><span class="o">:</span> <span class="mi">20</span><span class="p">,</span>  <span class="c1">// 满足人数</span>
+                <span class="s2">&quot;is_receive&quot;</span><span class="o">:</span> <span class="mi">0</span><span class="p">,</span>  <span class="c1">// 是否领奖 0、未领奖 1、已领奖</span>
+                <span class="s2">&quot;join_count&quot;</span><span class="o">:</span> <span class="mi">1</span><span class="p">,</span>  <span class="c1">// 参与人数</span>
+                <span class="s2">&quot;product_name&quot;</span><span class="o">:</span> <span class="s2">&quot;2018年冬季新款男士个性加绒拼接棉衣&quot;</span><span class="p">,</span>  <span class="c1">// 商品名</span>
+                <span class="s2">&quot;product_rid&quot;</span><span class="o">:</span> <span class="s2">&quot;8537216804&quot;</span><span class="p">,</span>  <span class="c1">// 商品rid</span>
+                <span class="s2">&quot;s_color&quot;</span><span class="o">:</span> <span class="s2">&quot;军绿色&quot;</span><span class="p">,</span>  <span class="c1">// 颜色</span>
+                <span class="s2">&quot;s_model&quot;</span><span class="o">:</span> <span class="s2">&quot;M&quot;</span><span class="p">,</span>  <span class="c1">// 型号</span>
+                <span class="s2">&quot;sku&quot;</span><span class="o">:</span> <span class="s2">&quot;8054396721&quot;</span><span class="p">,</span>  <span class="c1">// sku</span>
+                <span class="s2">&quot;status&quot;</span><span class="o">:</span> <span class="mi">3</span><span class="p">,</span>  <span class="c1">// 1、已中奖 2、未中奖 3、已失效 4、未开奖</span>
+                <span class="s2">&quot;user_info&quot;</span><span class="o">:</span> <span class="p">{</span>  <span class="c1">// 发起用户</span>
+                    <span class="s2">&quot;user_logo&quot;</span><span class="o">:</span> <span class="s2">&quot;https://s3.lexivip.com/20181101/2251FgKdtFrFPWjJYew4aROzCOBB6IMP.jpg&quot;</span><span class="p">,</span>
+                    <span class="s2">&quot;user_name&quot;</span><span class="o">:</span> <span class="s2">&quot;蓝胖子&quot;</span><span class="p">,</span>
+                    <span class="s2">&quot;user_sn&quot;</span><span class="o">:</span> <span class="s2">&quot;10296157834&quot;</span>
+                <span class="p">},</span>
+                <span class="s2">&quot;view_url&quot;</span><span class="o">:</span> <span class="s2">&quot;https://s3.lexivip.com/20181107/2344FiRbFqkXD4hKGVky91L-Co7RG0UZ.jpg&quot;</span><span class="p">,</span>  <span class="c1">// 商品图片</span>
+                <span class="s2">&quot;winning_at&quot;</span><span class="o">:</span> <span class="mi">0</span>  <span class="c1">// 开奖时间</span>
+            <span class="p">}</span>
+        <span class="p">],</span>
+        <span class="s2">&quot;count&quot;</span><span class="o">:</span> <span class="mi">1</span><span class="p">,</span>
+        <span class="s2">&quot;next&quot;</span><span class="o">:</span> <span class="kc">false</span><span class="p">,</span>
+        <span class="s2">&quot;prev&quot;</span><span class="o">:</span> <span class="kc">false</span>
     <span class="p">},</span>
     <span class="s2">&quot;status&quot;</span><span class="o">:</span> <span class="p">{</span>
         <span class="s2">&quot;code&quot;</span><span class="o">:</span> <span class="mi">200</span><span class="p">,</span>
