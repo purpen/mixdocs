@@ -143,7 +143,8 @@ JSON数据格式:
 
     {
         "data": {
-            "item_count": 2  // 购物车中商品总数
+            "item_count": 2,  // 购物车中商品总数
+            "is_new": 1,  // 是否有新商品 0、没有 1、有
         },
         "status": {
             "code": 200,

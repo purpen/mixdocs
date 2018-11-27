@@ -2309,7 +2309,10 @@ JSON数据格式:
 
     {
         "data": {
-            "coupon_count": 3,  // 未使用优惠券数量
+            "coupon_count": 65,  // 未读优惠券数量
+            "expired_count": 65,  // 过期优惠券未读数量
+            "master_count": 0,  // 店铺优惠券未读数量
+            "official_count": 0,  // 官方优惠券未读数量
             "order_count": 170  // 未付款订单数
         },
         "status": {

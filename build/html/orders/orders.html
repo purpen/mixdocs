@@ -120,6 +120,7 @@
 <li class="toctree-l2"><a class="reference internal" href="../market/banners.html">营销工具/广告模块</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../market/coupons.html">营销工具/优惠券模块</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../market/bonus_question.html">营销工具/猜题赢现金</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../market/yiyuan.html">营销工具/一元送礼模块</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="../stats/index.html">统计API模块</a><ul>
@@ -3397,7 +3398,10 @@
 <p>JSON数据格式:</p>
 <div class="highlight-javascript"><div class="highlight"><pre><span></span><span class="p">{</span>
     <span class="s2">&quot;data&quot;</span><span class="o">:</span> <span class="p">{</span>
-        <span class="s2">&quot;coupon_count&quot;</span><span class="o">:</span> <span class="mi">3</span><span class="p">,</span>  <span class="c1">// 未使用优惠券数量</span>
+        <span class="s2">&quot;coupon_count&quot;</span><span class="o">:</span> <span class="mi">65</span><span class="p">,</span>  <span class="c1">// 未读优惠券数量</span>
+        <span class="s2">&quot;expired_count&quot;</span><span class="o">:</span> <span class="mi">65</span><span class="p">,</span>  <span class="c1">// 过期优惠券未读数量</span>
+        <span class="s2">&quot;master_count&quot;</span><span class="o">:</span> <span class="mi">0</span><span class="p">,</span>  <span class="c1">// 店铺优惠券未读数量</span>
+        <span class="s2">&quot;official_count&quot;</span><span class="o">:</span> <span class="mi">0</span><span class="p">,</span>  <span class="c1">// 官方优惠券未读数量</span>
         <span class="s2">&quot;order_count&quot;</span><span class="o">:</span> <span class="mi">170</span>  <span class="c1">// 未付款订单数</span>
     <span class="p">},</span>
     <span class="s2">&quot;status&quot;</span><span class="o">:</span> <span class="p">{</span>
