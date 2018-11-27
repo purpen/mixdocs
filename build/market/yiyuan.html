@@ -215,26 +215,32 @@
 <li><a class="reference internal" href="#id12">返回示例</a></li>
 </ul>
 </li>
-<li><a class="reference internal" href="#id13">查看领取我的礼物的人</a><ul>
+<li><a class="reference internal" href="#id13">活动参与人</a><ul>
 <li><a class="reference internal" href="#id14">接口说明</a></li>
 <li><a class="reference internal" href="#id15">请求参数</a></li>
 <li><a class="reference internal" href="#id16">返回示例</a></li>
 </ul>
 </li>
-<li><a class="reference internal" href="#id17">我参与的活动汇总</a><ul>
+<li><a class="reference internal" href="#id17">查看领取我的礼物的人</a><ul>
 <li><a class="reference internal" href="#id18">接口说明</a></li>
-<li><a class="reference internal" href="#id19">返回示例</a></li>
+<li><a class="reference internal" href="#id19">请求参数</a></li>
+<li><a class="reference internal" href="#id20">返回示例</a></li>
 </ul>
 </li>
-<li><a class="reference internal" href="#id20">查看十个最热门的活动</a><ul>
-<li><a class="reference internal" href="#id21">接口说明</a></li>
-<li><a class="reference internal" href="#id22">返回示例</a></li>
+<li><a class="reference internal" href="#id21">我参与的活动汇总</a><ul>
+<li><a class="reference internal" href="#id22">接口说明</a></li>
+<li><a class="reference internal" href="#id23">返回示例</a></li>
 </ul>
 </li>
-<li><a class="reference internal" href="#id23">我参与的抽奖</a><ul>
-<li><a class="reference internal" href="#id24">接口说明</a></li>
-<li><a class="reference internal" href="#id25">请求参数</a></li>
+<li><a class="reference internal" href="#id24">查看十个最热门的活动</a><ul>
+<li><a class="reference internal" href="#id25">接口说明</a></li>
 <li><a class="reference internal" href="#id26">返回示例</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#id27">我参与的抽奖</a><ul>
+<li><a class="reference internal" href="#id28">接口说明</a></li>
+<li><a class="reference internal" href="#id29">请求参数</a></li>
+<li><a class="reference internal" href="#id30">返回示例</a></li>
 </ul>
 </li>
 </ul>
@@ -286,26 +292,32 @@
 <li><a class="reference internal" href="#id12">返回示例</a></li>
 </ul>
 </li>
-<li><a class="reference internal" href="#id13">查看领取我的礼物的人</a><ul>
+<li><a class="reference internal" href="#id13">活动参与人</a><ul>
 <li><a class="reference internal" href="#id14">接口说明</a></li>
 <li><a class="reference internal" href="#id15">请求参数</a></li>
 <li><a class="reference internal" href="#id16">返回示例</a></li>
 </ul>
 </li>
-<li><a class="reference internal" href="#id17">我参与的活动汇总</a><ul>
+<li><a class="reference internal" href="#id17">查看领取我的礼物的人</a><ul>
 <li><a class="reference internal" href="#id18">接口说明</a></li>
-<li><a class="reference internal" href="#id19">返回示例</a></li>
+<li><a class="reference internal" href="#id19">请求参数</a></li>
+<li><a class="reference internal" href="#id20">返回示例</a></li>
 </ul>
 </li>
-<li><a class="reference internal" href="#id20">查看十个最热门的活动</a><ul>
-<li><a class="reference internal" href="#id21">接口说明</a></li>
-<li><a class="reference internal" href="#id22">返回示例</a></li>
+<li><a class="reference internal" href="#id21">我参与的活动汇总</a><ul>
+<li><a class="reference internal" href="#id22">接口说明</a></li>
+<li><a class="reference internal" href="#id23">返回示例</a></li>
 </ul>
 </li>
-<li><a class="reference internal" href="#id23">我参与的抽奖</a><ul>
-<li><a class="reference internal" href="#id24">接口说明</a></li>
-<li><a class="reference internal" href="#id25">请求参数</a></li>
+<li><a class="reference internal" href="#id24">查看十个最热门的活动</a><ul>
+<li><a class="reference internal" href="#id25">接口说明</a></li>
 <li><a class="reference internal" href="#id26">返回示例</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#id27">我参与的抽奖</a><ul>
+<li><a class="reference internal" href="#id28">接口说明</a></li>
+<li><a class="reference internal" href="#id29">请求参数</a></li>
+<li><a class="reference internal" href="#id30">返回示例</a></li>
 </ul>
 </li>
 </ul>
@@ -431,25 +443,31 @@
 <td>&#160;</td>
 <td>商品rid</td>
 </tr>
-<tr class="row-odd"><td>blessing</td>
+<tr class="row-odd"><td>days</td>
+<td>Number</td>
+<td>必需</td>
+<td>&#160;</td>
+<td>活动天数</td>
+</tr>
+<tr class="row-even"><td>blessing</td>
 <td>String</td>
 <td>可选</td>
 <td>&#160;</td>
 <td>祝福语</td>
 </tr>
-<tr class="row-even"><td>pay_type</td>
+<tr class="row-odd"><td>pay_type</td>
 <td>Number</td>
 <td>可选</td>
 <td>1</td>
 <td>支付类型 1、微信</td>
 </tr>
-<tr class="row-odd"><td>sync_pay</td>
+<tr class="row-even"><td>sync_pay</td>
 <td>Number</td>
 <td>可选</td>
 <td>1</td>
 <td>是否同步返回支付参数 0、否 1、是</td>
 </tr>
-<tr class="row-even"><td>auth_app_id</td>
+<tr class="row-odd"><td>auth_app_id</td>
 <td>Number</td>
 <td>可选</td>
 <td>&#160;</td>
@@ -511,7 +529,7 @@
 <td>String</td>
 <td>必需</td>
 <td>&#160;</td>
-<td>商品rid</td>
+<td>活动rid</td>
 </tr>
 </tbody>
 </table>
@@ -545,23 +563,12 @@
         <span class="s2">&quot;status&quot;</span><span class="o">:</span> <span class="mi">1</span><span class="p">,</span>  <span class="c1">// 活动状态 2、抽奖中 3、开奖成功 4、已失效</span>
         <span class="s2">&quot;surplus_count&quot;</span><span class="o">:</span> <span class="mi">19</span><span class="p">,</span>  <span class="c1">// 剩余人数</span>
         <span class="s2">&quot;total_people_count&quot;</span><span class="o">:</span> <span class="mi">20</span><span class="p">,</span>  <span class="c1">// 需要人数</span>
-        <span class="s2">&quot;user_list&quot;</span><span class="o">:</span> <span class="p">[</span>  <span class="c1">// 参与者</span>
-            <span class="p">{</span>
-                <span class="s2">&quot;is_receive&quot;</span><span class="o">:</span> <span class="kc">false</span><span class="p">,</span>  <span class="c1">// 是否领奖</span>
-                <span class="s2">&quot;is_win&quot;</span><span class="o">:</span> <span class="kc">false</span><span class="p">,</span>  <span class="c1">// 是否中奖</span>
-                <span class="s2">&quot;receive_at&quot;</span><span class="o">:</span> <span class="mi">0</span><span class="p">,</span>  <span class="c1">// 领奖时间</span>
-                <span class="s2">&quot;user_logo&quot;</span><span class="o">:</span> <span class="s2">&quot;https://s3.lexivip.com/20181101/2251FgKdtFrFPWjJYew4aROzCOBB6IMP.jpg&quot;</span><span class="p">,</span>
-                <span class="s2">&quot;user_name&quot;</span><span class="o">:</span> <span class="s2">&quot;蓝胖子&quot;</span><span class="p">,</span>
-                <span class="s2">&quot;user_sn&quot;</span><span class="o">:</span> <span class="s2">&quot;10296157834&quot;</span>
-            <span class="p">}</span>
-        <span class="p">],</span>
         <span class="s2">&quot;winning_user&quot;</span><span class="o">:</span> <span class="p">{</span>  <span class="c1">// 中奖用户</span>
             <span class="s2">&quot;user_logo&quot;</span><span class="o">:</span> <span class="s2">&quot;https://s3.lexivip.com/20181101/2251FgKdtFrFPWjJYew4aROzCOBB6IMP.jpg&quot;</span><span class="p">,</span>
             <span class="s2">&quot;user_name&quot;</span><span class="o">:</span> <span class="s2">&quot;蓝胖子&quot;</span><span class="p">,</span>
             <span class="s2">&quot;user_sn&quot;</span><span class="o">:</span> <span class="s2">&quot;10296157834&quot;</span>
         <span class="p">},</span>
         <span class="s2">&quot;owner_store&quot;</span><span class="o">:</span> <span class="p">{</span>
-            <span class="s2">&quot;kind&quot;</span><span class="o">:</span> <span class="mi">1</span><span class="p">,</span>  <span class="c1">// 1、品牌馆  2、生活馆 3、普通用户</span>
             <span class="s2">&quot;store_bgcover&quot;</span><span class="o">:</span> <span class="s2">&quot;https://s3.lexivip.com/20180911/4148FlTE2Q_LRdlouNbvyf_E3HTjWHJB.png&quot;</span><span class="p">,</span>  <span class="c1">// 店铺背景图</span>
             <span class="s2">&quot;store_logo&quot;</span><span class="o">:</span> <span class="s2">&quot;https://s3.lexivip.com/20180913/4849FgzxNAZiToR482ksb89Pl2kOAQ8B.png&quot;</span><span class="p">,</span>  <span class="c1">// 店铺logo</span>
             <span class="s2">&quot;store_name&quot;</span><span class="o">:</span> <span class="s2">&quot;爱尚&quot;</span><span class="p">,</span>  <span class="c1">// 店铺名</span>
@@ -572,6 +579,7 @@
             <span class="s2">&quot;user_name&quot;</span><span class="o">:</span> <span class="s2">&quot;蓝胖子&quot;</span><span class="p">,</span>
             <span class="s2">&quot;user_sn&quot;</span><span class="o">:</span> <span class="s2">&quot;10296157834&quot;</span>
         <span class="p">},</span>
+        <span class="s1">&#39;user_kind&#39;</span><span class="o">:</span> <span class="mi">1</span>  <span class="c1">// 1、品牌馆  2、生活馆  3、普通用户</span>
     <span class="p">},</span>
     <span class="s2">&quot;status&quot;</span><span class="o">:</span> <span class="p">{</span>
         <span class="s2">&quot;code&quot;</span><span class="o">:</span> <span class="mi">200</span><span class="p">,</span>
@@ -584,18 +592,82 @@
 </div>
 </div>
 <div class="section" id="id13">
-<h2>查看领取我的礼物的人<a class="headerlink" href="#id13" title="永久链接至标题">¶</a></h2>
-<p>查看领取我的礼物的人</p>
+<h2>活动参与人<a class="headerlink" href="#id13" title="永久链接至标题">¶</a></h2>
+<p>活动参与人</p>
 <div class="section" id="id14">
 <h3>接口说明<a class="headerlink" href="#id14" title="永久链接至标题">¶</a></h3>
+<ul class="simple">
+<li>API接口请求地址：<code class="docutils literal"><span class="pre">/yiyuan/activity/users/&lt;string:rid&gt;</span></code></li>
+<li>API接口请求方法：<code class="docutils literal"><span class="pre">GET</span></code></li>
+</ul>
+</div>
+<div class="section" id="id15">
+<h3>请求参数<a class="headerlink" href="#id15" title="永久链接至标题">¶</a></h3>
+<table border="1" class="docutils">
+<colgroup>
+<col width="25%" />
+<col width="13%" />
+<col width="12%" />
+<col width="13%" />
+<col width="36%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">名称</th>
+<th class="head">类型</th>
+<th class="head">是否必须</th>
+<th class="head">默认值</th>
+<th class="head">描述说明</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>rid</td>
+<td>String</td>
+<td>必需</td>
+<td>&#160;</td>
+<td>活动rid</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="id16">
+<h3>返回示例<a class="headerlink" href="#id16" title="永久链接至标题">¶</a></h3>
+<p>JSON数据格式:</p>
+<div class="highlight-javascript"><div class="highlight"><pre><span></span><span class="p">{</span>
+    <span class="s2">&quot;data&quot;</span><span class="o">:</span> <span class="p">{</span>
+        <span class="s2">&quot;user_list&quot;</span><span class="o">:</span> <span class="p">[</span>  <span class="c1">// 参与者</span>
+            <span class="p">{</span>
+                <span class="s2">&quot;is_receive&quot;</span><span class="o">:</span> <span class="kc">false</span><span class="p">,</span>  <span class="c1">// 是否领奖</span>
+                <span class="s2">&quot;is_win&quot;</span><span class="o">:</span> <span class="kc">false</span><span class="p">,</span>  <span class="c1">// 是否中奖</span>
+                <span class="s2">&quot;receive_at&quot;</span><span class="o">:</span> <span class="mi">0</span><span class="p">,</span>  <span class="c1">// 领奖时间</span>
+                <span class="s2">&quot;user_logo&quot;</span><span class="o">:</span> <span class="s2">&quot;https://s3.lexivip.com/20181101/2251FgKdtFrFPWjJYew4aROzCOBB6IMP.jpg&quot;</span><span class="p">,</span>
+                <span class="s2">&quot;user_name&quot;</span><span class="o">:</span> <span class="s2">&quot;蓝胖子&quot;</span><span class="p">,</span>
+                <span class="s2">&quot;user_sn&quot;</span><span class="o">:</span> <span class="s2">&quot;10296157834&quot;</span>
+            <span class="p">}</span>
+        <span class="p">]</span>
+    <span class="p">},</span>
+    <span class="s2">&quot;status&quot;</span><span class="o">:</span> <span class="p">{</span>
+        <span class="s2">&quot;code&quot;</span><span class="o">:</span> <span class="mi">200</span><span class="p">,</span>
+        <span class="s2">&quot;message&quot;</span><span class="o">:</span> <span class="s2">&quot;Ok all right.&quot;</span>
+    <span class="p">},</span>
+    <span class="s2">&quot;success&quot;</span><span class="o">:</span> <span class="kc">true</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="id17">
+<h2>查看领取我的礼物的人<a class="headerlink" href="#id17" title="永久链接至标题">¶</a></h2>
+<p>查看领取我的礼物的人</p>
+<div class="section" id="id18">
+<h3>接口说明<a class="headerlink" href="#id18" title="永久链接至标题">¶</a></h3>
 <ul class="simple">
 <li>API接口请求地址：<code class="docutils literal"><span class="pre">/yiyuan/product/receive</span></code></li>
 <li>API接口请求方法：<code class="docutils literal"><span class="pre">GET</span></code></li>
 <li>API接口用户授权：<code class="docutils literal"><span class="pre">token</span></code></li>
 </ul>
 </div>
-<div class="section" id="id15">
-<h3>请求参数<a class="headerlink" href="#id15" title="永久链接至标题">¶</a></h3>
+<div class="section" id="id19">
+<h3>请求参数<a class="headerlink" href="#id19" title="永久链接至标题">¶</a></h3>
 <table border="1" class="docutils">
 <colgroup>
 <col width="21%" />
@@ -628,8 +700,8 @@
 </tbody>
 </table>
 </div>
-<div class="section" id="id16">
-<h3>返回示例<a class="headerlink" href="#id16" title="永久链接至标题">¶</a></h3>
+<div class="section" id="id20">
+<h3>返回示例<a class="headerlink" href="#id20" title="永久链接至标题">¶</a></h3>
 <p>JSON数据格式:</p>
 <div class="highlight-javascript"><div class="highlight"><pre><span></span><span class="p">{</span>
     <span class="s2">&quot;data&quot;</span><span class="o">:</span> <span class="p">{</span>
@@ -655,19 +727,19 @@
 </div>
 </div>
 </div>
-<div class="section" id="id17">
-<h2>我参与的活动汇总<a class="headerlink" href="#id17" title="永久链接至标题">¶</a></h2>
+<div class="section" id="id21">
+<h2>我参与的活动汇总<a class="headerlink" href="#id21" title="永久链接至标题">¶</a></h2>
 <p>我参与的活动汇总</p>
-<div class="section" id="id18">
-<h3>接口说明<a class="headerlink" href="#id18" title="永久链接至标题">¶</a></h3>
+<div class="section" id="id22">
+<h3>接口说明<a class="headerlink" href="#id22" title="永久链接至标题">¶</a></h3>
 <ul class="simple">
 <li>API接口请求地址：<code class="docutils literal"><span class="pre">/yiyuan/collect_activity</span></code></li>
 <li>API接口请求方法：<code class="docutils literal"><span class="pre">GET</span></code></li>
 <li>API接口用户授权：<code class="docutils literal"><span class="pre">token</span></code></li>
 </ul>
 </div>
-<div class="section" id="id19">
-<h3>返回示例<a class="headerlink" href="#id19" title="永久链接至标题">¶</a></h3>
+<div class="section" id="id23">
+<h3>返回示例<a class="headerlink" href="#id23" title="永久链接至标题">¶</a></h3>
 <p>JSON数据格式:</p>
 <div class="highlight-javascript"><div class="highlight"><pre><span></span><span class="p">{</span>
     <span class="s2">&quot;data&quot;</span><span class="o">:</span> <span class="p">{</span>
@@ -685,19 +757,19 @@
 </div>
 </div>
 </div>
-<div class="section" id="id20">
-<h2>查看十个最热门的活动<a class="headerlink" href="#id20" title="永久链接至标题">¶</a></h2>
+<div class="section" id="id24">
+<h2>查看十个最热门的活动<a class="headerlink" href="#id24" title="永久链接至标题">¶</a></h2>
 <p>查看十个最热门的活动</p>
-<div class="section" id="id21">
-<h3>接口说明<a class="headerlink" href="#id21" title="永久链接至标题">¶</a></h3>
+<div class="section" id="id25">
+<h3>接口说明<a class="headerlink" href="#id25" title="永久链接至标题">¶</a></h3>
 <ul class="simple">
 <li>API接口请求地址：<code class="docutils literal"><span class="pre">/yiyuan/activity/more</span></code></li>
 <li>API接口请求方法：<code class="docutils literal"><span class="pre">GET</span></code></li>
 <li>API接口用户授权：<code class="docutils literal"><span class="pre">token</span></code></li>
 </ul>
 </div>
-<div class="section" id="id22">
-<h3>返回示例<a class="headerlink" href="#id22" title="永久链接至标题">¶</a></h3>
+<div class="section" id="id26">
+<h3>返回示例<a class="headerlink" href="#id26" title="永久链接至标题">¶</a></h3>
 <p>JSON数据格式:</p>
 <div class="highlight-javascript"><div class="highlight"><pre><span></span><span class="p">{</span>
     <span class="s2">&quot;data&quot;</span><span class="o">:</span> <span class="p">{</span>
@@ -714,57 +786,8 @@
                 <span class="s2">&quot;sale_price&quot;</span><span class="o">:</span> <span class="mi">178</span><span class="p">,</span>  <span class="c1">// 折扣价</span>
                 <span class="s2">&quot;user_logo&quot;</span><span class="o">:</span> <span class="s2">&quot;https://s3.lexivip.com/20181101/2251FgKdtFrFPWjJYew4aROzCOBB6IMP.jpg&quot;</span><span class="p">,</span>
                 <span class="s2">&quot;user_name&quot;</span><span class="o">:</span> <span class="s2">&quot;蓝胖子&quot;</span><span class="p">,</span>
+                <span class="s2">&quot;cover&quot;</span><span class="o">:</span> <span class="s2">&quot;https://s3.lexivip.com/20181107/0618Fp2ThUtpaN-7O3N8f5BJ0_3eciIS.jpg&quot;</span><span class="p">,</span>  <span class="c1">// 商品图</span>
                 <span class="s2">&quot;user_sn&quot;</span><span class="o">:</span> <span class="s2">&quot;10296157834&quot;</span>
-                <span class="s2">&quot;assets&quot;</span><span class="o">:</span> <span class="p">[</span>
-                    <span class="p">{</span>
-                        <span class="s2">&quot;created_at&quot;</span><span class="o">:</span> <span class="mi">1541599579</span><span class="p">,</span>
-                        <span class="s2">&quot;filename&quot;</span><span class="o">:</span> <span class="s2">&quot;1.jpg&quot;</span><span class="p">,</span>
-                        <span class="s2">&quot;filepath&quot;</span><span class="o">:</span> <span class="s2">&quot;20181107/0618Fp2ThUtpaN-7O3N8f5BJ0_3eciIS.jpg&quot;</span><span class="p">,</span>
-                        <span class="s2">&quot;id&quot;</span><span class="o">:</span> <span class="mi">38641</span><span class="p">,</span>
-                        <span class="s2">&quot;type&quot;</span><span class="o">:</span> <span class="mi">1</span><span class="p">,</span>
-                        <span class="s2">&quot;view_url&quot;</span><span class="o">:</span> <span class="s2">&quot;https://s3.lexivip.com/20181107/0618Fp2ThUtpaN-7O3N8f5BJ0_3eciIS.jpg&quot;</span>
-                    <span class="p">},</span>
-                    <span class="p">{</span>
-                        <span class="s2">&quot;created_at&quot;</span><span class="o">:</span> <span class="mi">1541599579</span><span class="p">,</span>
-                        <span class="s2">&quot;filename&quot;</span><span class="o">:</span> <span class="s2">&quot;2.jpg&quot;</span><span class="p">,</span>
-                        <span class="s2">&quot;filepath&quot;</span><span class="o">:</span> <span class="s2">&quot;20181107/0618FpmDb_An-ssdeczTRdJsClNe-FIQ.jpg&quot;</span><span class="p">,</span>
-                        <span class="s2">&quot;id&quot;</span><span class="o">:</span> <span class="mi">38640</span><span class="p">,</span>
-                        <span class="s2">&quot;type&quot;</span><span class="o">:</span> <span class="mi">1</span><span class="p">,</span>
-                        <span class="s2">&quot;view_url&quot;</span><span class="o">:</span> <span class="s2">&quot;https://s3.lexivip.com/20181107/0618FpmDb_An-ssdeczTRdJsClNe-FIQ.jpg&quot;</span>
-                    <span class="p">},</span>
-                    <span class="p">{</span>
-                        <span class="s2">&quot;created_at&quot;</span><span class="o">:</span> <span class="mi">1541599579</span><span class="p">,</span>
-                        <span class="s2">&quot;filename&quot;</span><span class="o">:</span> <span class="s2">&quot;3.jpg&quot;</span><span class="p">,</span>
-                        <span class="s2">&quot;filepath&quot;</span><span class="o">:</span> <span class="s2">&quot;20181107/0618FrQaO0hGFP031EgM_quMZ4GnLv2H.jpg&quot;</span><span class="p">,</span>
-                        <span class="s2">&quot;id&quot;</span><span class="o">:</span> <span class="mi">38638</span><span class="p">,</span>
-                        <span class="s2">&quot;type&quot;</span><span class="o">:</span> <span class="mi">1</span><span class="p">,</span>
-                        <span class="s2">&quot;view_url&quot;</span><span class="o">:</span> <span class="s2">&quot;https://s3.lexivip.com/20181107/0618FrQaO0hGFP031EgM_quMZ4GnLv2H.jpg&quot;</span>
-                    <span class="p">},</span>
-                    <span class="p">{</span>
-                        <span class="s2">&quot;created_at&quot;</span><span class="o">:</span> <span class="mi">1541599579</span><span class="p">,</span>
-                        <span class="s2">&quot;filename&quot;</span><span class="o">:</span> <span class="s2">&quot;4.jpg&quot;</span><span class="p">,</span>
-                        <span class="s2">&quot;filepath&quot;</span><span class="o">:</span> <span class="s2">&quot;20181107/0618FumUEnK8xtd8pjy_cj6ECTxagpGN.jpg&quot;</span><span class="p">,</span>
-                        <span class="s2">&quot;id&quot;</span><span class="o">:</span> <span class="mi">38637</span><span class="p">,</span>
-                        <span class="s2">&quot;type&quot;</span><span class="o">:</span> <span class="mi">1</span><span class="p">,</span>
-                        <span class="s2">&quot;view_url&quot;</span><span class="o">:</span> <span class="s2">&quot;https://s3.lexivip.com/20181107/0618FumUEnK8xtd8pjy_cj6ECTxagpGN.jpg&quot;</span>
-                    <span class="p">},</span>
-                    <span class="p">{</span>
-                        <span class="s2">&quot;created_at&quot;</span><span class="o">:</span> <span class="mi">1541599577</span><span class="p">,</span>
-                        <span class="s2">&quot;filename&quot;</span><span class="o">:</span> <span class="s2">&quot;5.jpg&quot;</span><span class="p">,</span>
-                        <span class="s2">&quot;filepath&quot;</span><span class="o">:</span> <span class="s2">&quot;20181107/0615Fiot22kYJub4EhbueVTrdnHmeUiQ.jpg&quot;</span><span class="p">,</span>
-                        <span class="s2">&quot;id&quot;</span><span class="o">:</span> <span class="mi">38636</span><span class="p">,</span>
-                        <span class="s2">&quot;type&quot;</span><span class="o">:</span> <span class="mi">1</span><span class="p">,</span>
-                        <span class="s2">&quot;view_url&quot;</span><span class="o">:</span> <span class="s2">&quot;https://s3.lexivip.com/20181107/0615Fiot22kYJub4EhbueVTrdnHmeUiQ.jpg&quot;</span>
-                    <span class="p">},</span>
-                    <span class="p">{</span>
-                        <span class="s2">&quot;created_at&quot;</span><span class="o">:</span> <span class="mi">1541599579</span><span class="p">,</span>
-                        <span class="s2">&quot;filename&quot;</span><span class="o">:</span> <span class="s2">&quot;6.jpg&quot;</span><span class="p">,</span>
-                        <span class="s2">&quot;filepath&quot;</span><span class="o">:</span> <span class="s2">&quot;20181107/0618FvFmtRpBJt6yJWh2nypWUWF-bahx.jpg&quot;</span><span class="p">,</span>
-                        <span class="s2">&quot;id&quot;</span><span class="o">:</span> <span class="mi">38639</span><span class="p">,</span>
-                        <span class="s2">&quot;type&quot;</span><span class="o">:</span> <span class="mi">1</span><span class="p">,</span>
-                        <span class="s2">&quot;view_url&quot;</span><span class="o">:</span> <span class="s2">&quot;https://s3.lexivip.com/20181107/0618FvFmtRpBJt6yJWh2nypWUWF-bahx.jpg&quot;</span>
-                    <span class="p">}</span>
-                <span class="p">]</span>
             <span class="p">}</span>
         <span class="p">]</span>
     <span class="p">},</span>
@@ -778,19 +801,19 @@
 </div>
 </div>
 </div>
-<div class="section" id="id23">
-<h2>我参与的抽奖<a class="headerlink" href="#id23" title="永久链接至标题">¶</a></h2>
+<div class="section" id="id27">
+<h2>我参与的抽奖<a class="headerlink" href="#id27" title="永久链接至标题">¶</a></h2>
 <p>我参与的抽奖</p>
-<div class="section" id="id24">
-<h3>接口说明<a class="headerlink" href="#id24" title="永久链接至标题">¶</a></h3>
+<div class="section" id="id28">
+<h3>接口说明<a class="headerlink" href="#id28" title="永久链接至标题">¶</a></h3>
 <ul class="simple">
 <li>API接口请求地址：<code class="docutils literal"><span class="pre">/yiyuan/activity/join</span></code></li>
 <li>API接口请求方法：<code class="docutils literal"><span class="pre">GET</span></code></li>
 <li>API接口用户授权：<code class="docutils literal"><span class="pre">token</span></code></li>
 </ul>
 </div>
-<div class="section" id="id25">
-<h3>请求参数<a class="headerlink" href="#id25" title="永久链接至标题">¶</a></h3>
+<div class="section" id="id29">
+<h3>请求参数<a class="headerlink" href="#id29" title="永久链接至标题">¶</a></h3>
 <table border="1" class="docutils">
 <colgroup>
 <col width="18%" />
@@ -829,8 +852,8 @@
 </tbody>
 </table>
 </div>
-<div class="section" id="id26">
-<h3>返回示例<a class="headerlink" href="#id26" title="永久链接至标题">¶</a></h3>
+<div class="section" id="id30">
+<h3>返回示例<a class="headerlink" href="#id30" title="永久链接至标题">¶</a></h3>
 <p>JSON数据格式:</p>
 <div class="highlight-javascript"><div class="highlight"><pre><span></span>    <span class="s2">&quot;data&quot;</span><span class="o">:</span> <span class="p">{</span>
         <span class="s2">&quot;activity_list&quot;</span><span class="o">:</span> <span class="p">[</span>

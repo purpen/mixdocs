@@ -120,6 +120,7 @@
 <li class="toctree-l2"><a class="reference internal" href="banners.html">营销工具/广告模块</a></li>
 <li class="toctree-l2 current"><a class="current reference internal" href="#">营销工具/优惠券模块</a></li>
 <li class="toctree-l2"><a class="reference internal" href="bonus_question.html">营销工具/猜题赢现金</a></li>
+<li class="toctree-l2"><a class="reference internal" href="yiyuan.html">营销工具/一元送礼模块</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="../stats/index.html">统计API模块</a><ul>
@@ -404,6 +405,12 @@
 <li><a class="reference internal" href="#id136">返回示例</a></li>
 </ul>
 </li>
+<li><a class="reference internal" href="#id137">用户-记录优惠券阅读时间</a><ul>
+<li><a class="reference internal" href="#id138">接口说明</a></li>
+<li><a class="reference internal" href="#id139">请求参数</a></li>
+<li><a class="reference internal" href="#id140">返回示例</a></li>
+</ul>
+</li>
 </ul>
 </li>
 </ul>
@@ -641,6 +648,12 @@
 <li><a class="reference internal" href="#id134">接口说明</a></li>
 <li><a class="reference internal" href="#id135">请求参数</a></li>
 <li><a class="reference internal" href="#id136">返回示例</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#id137">用户-记录优惠券阅读时间</a><ul>
+<li><a class="reference internal" href="#id138">接口说明</a></li>
+<li><a class="reference internal" href="#id139">请求参数</a></li>
+<li><a class="reference internal" href="#id140">返回示例</a></li>
 </ul>
 </li>
 </ul>
@@ -3607,6 +3620,59 @@
             <span class="s2">&quot;is_grant&quot;</span><span class="o">:</span> <span class="kc">true</span> <span class="c1">// 是否可领取 true、可领 false、不可领</span>
         <span class="p">}</span>
     <span class="p">},</span>
+    <span class="s2">&quot;status&quot;</span><span class="o">:</span> <span class="p">{</span>
+        <span class="s2">&quot;code&quot;</span><span class="o">:</span> <span class="mi">200</span><span class="p">,</span>
+        <span class="s2">&quot;message&quot;</span><span class="o">:</span> <span class="s2">&quot;Ok all right.&quot;</span>
+    <span class="p">},</span>
+    <span class="s2">&quot;success&quot;</span><span class="o">:</span> <span class="kc">true</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="id137">
+<h2>用户-记录优惠券阅读时间<a class="headerlink" href="#id137" title="永久链接至标题">¶</a></h2>
+<p>用户-记录优惠券阅读时间</p>
+<div class="section" id="id138">
+<h3>接口说明<a class="headerlink" href="#id138" title="永久链接至标题">¶</a></h3>
+<ul class="simple">
+<li>API接口请求地址：<code class="docutils literal"><span class="pre">/market/read_time</span></code></li>
+<li>API接口请求方法：<code class="docutils literal"><span class="pre">POST</span></code></li>
+<li>API接口用户授权：<code class="docutils literal"><span class="pre">token</span></code></li>
+</ul>
+</div>
+<div class="section" id="id139">
+<h3>请求参数<a class="headerlink" href="#id139" title="永久链接至标题">¶</a></h3>
+<table border="1" class="docutils">
+<colgroup>
+<col width="23%" />
+<col width="9%" />
+<col width="10%" />
+<col width="9%" />
+<col width="48%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">名称</th>
+<th class="head">类型</th>
+<th class="head">是否必须</th>
+<th class="head">默认值</th>
+<th class="head">描述说明</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>status</td>
+<td>Integer</td>
+<td>必须</td>
+<td>2</td>
+<td>1、店铺 2、官方 3、过期</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="id140">
+<h3>返回示例<a class="headerlink" href="#id140" title="永久链接至标题">¶</a></h3>
+<p>JSON数据格式:</p>
+<div class="highlight-javascript"><div class="highlight"><pre><span></span><span class="p">{</span>
     <span class="s2">&quot;status&quot;</span><span class="o">:</span> <span class="p">{</span>
         <span class="s2">&quot;code&quot;</span><span class="o">:</span> <span class="mi">200</span><span class="p">,</span>
         <span class="s2">&quot;message&quot;</span><span class="o">:</span> <span class="s2">&quot;Ok all right.&quot;</span>
