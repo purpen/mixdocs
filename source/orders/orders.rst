@@ -38,6 +38,7 @@ JSON数据格式:
         "data": {
             "count": 252,
             "next": "http://0.0.0.0:9000/v1.0/orders?status=0&page=2",
+            "prev": null,
             "orders": [
                 {
                     "created_at": 1540265891,  // 创建时间
@@ -70,7 +71,10 @@ JSON数据格式:
                 },
 
             ],
-            "prev": null
+            'pending_pay_count': 12,  // 待付款未读数量
+            'pending_shipment_count': 0,  // 待发货未读数量
+            'pending_receipt_count': 0,  // 待收货未读数量
+            'pending_rating_count': 0,  // 待评价未读数量
         },
         "status": {
             "code": 200,

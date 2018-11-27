@@ -243,6 +243,11 @@
 <li><a class="reference internal" href="#id30">返回示例</a></li>
 </ul>
 </li>
+<li><a class="reference internal" href="#id31">用户当前是否有活动</a><ul>
+<li><a class="reference internal" href="#id32">接口说明</a></li>
+<li><a class="reference internal" href="#id33">返回示例</a></li>
+</ul>
+</li>
 </ul>
 </li>
 </ul>
@@ -318,6 +323,11 @@
 <li><a class="reference internal" href="#id28">接口说明</a></li>
 <li><a class="reference internal" href="#id29">请求参数</a></li>
 <li><a class="reference internal" href="#id30">返回示例</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#id31">用户当前是否有活动</a><ul>
+<li><a class="reference internal" href="#id32">接口说明</a></li>
+<li><a class="reference internal" href="#id33">返回示例</a></li>
 </ul>
 </li>
 </ul>
@@ -881,6 +891,34 @@
         <span class="s2">&quot;count&quot;</span><span class="o">:</span> <span class="mi">1</span><span class="p">,</span>
         <span class="s2">&quot;next&quot;</span><span class="o">:</span> <span class="kc">false</span><span class="p">,</span>
         <span class="s2">&quot;prev&quot;</span><span class="o">:</span> <span class="kc">false</span>
+    <span class="p">},</span>
+    <span class="s2">&quot;status&quot;</span><span class="o">:</span> <span class="p">{</span>
+        <span class="s2">&quot;code&quot;</span><span class="o">:</span> <span class="mi">200</span><span class="p">,</span>
+        <span class="s2">&quot;message&quot;</span><span class="o">:</span> <span class="s2">&quot;Ok all right.&quot;</span>
+    <span class="p">},</span>
+    <span class="s2">&quot;success&quot;</span><span class="o">:</span> <span class="kc">true</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="id31">
+<h2>用户当前是否有活动<a class="headerlink" href="#id31" title="永久链接至标题">¶</a></h2>
+<p>用户当前是否有活动</p>
+<div class="section" id="id32">
+<h3>接口说明<a class="headerlink" href="#id32" title="永久链接至标题">¶</a></h3>
+<ul class="simple">
+<li>API接口请求地址：<code class="docutils literal"><span class="pre">/yiyuan/activity/having</span></code></li>
+<li>API接口请求方法：<code class="docutils literal"><span class="pre">GET</span></code></li>
+<li>API接口用户授权：<code class="docutils literal"><span class="pre">token</span></code></li>
+</ul>
+</div>
+<div class="section" id="id33">
+<h3>返回示例<a class="headerlink" href="#id33" title="永久链接至标题">¶</a></h3>
+<p>JSON数据格式:</p>
+<div class="highlight-javascript"><div class="highlight"><pre><span></span><span class="p">{</span>
+    <span class="s2">&quot;data&quot;</span><span class="o">:</span> <span class="p">{</span>
+        <span class="s2">&quot;is_having&quot;</span><span class="o">:</span> <span class="mi">0</span>  <span class="c1">// 0、没有 1、有</span>
     <span class="p">},</span>
     <span class="s2">&quot;status&quot;</span><span class="o">:</span> <span class="p">{</span>
         <span class="s2">&quot;code&quot;</span><span class="o">:</span> <span class="mi">200</span><span class="p">,</span>

@@ -431,6 +431,35 @@ JSON数据格式:
     }
 
 
+用户当前是否有活动
+--------------------------------
+用户当前是否有活动
+
+接口说明
+~~~~~~~~~~~~~~
+
+* API接口请求地址：``/yiyuan/activity/having``
+* API接口请求方法：``GET``
+* API接口用户授权：``token``
+
+
+返回示例
+~~~~~~~~~~~~~~~~
+
+JSON数据格式:
+
+.. code-block:: javascript
+
+    {
+        "data": {
+            "is_having": 0  // 0、没有 1、有
+        },
+        "status": {
+            "code": 200,
+            "message": "Ok all right."
+        },
+        "success": true
+    }
 
 
 
