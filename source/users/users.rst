@@ -2822,3 +2822,56 @@ JSON数据格式:
 
 .. code-block:: javascript
 
+    {
+        "data": {
+            "is_paid": true,
+            "paid_status": 1,
+            "pay_amount": 699
+        },
+        "status": {
+            "code": 200,
+            "message": "Ok all right."
+        },
+        "success": true
+    }
+
+保存form_id
+--------------------------
+
+接口说明
+~~~~~~~~~~~~~~
+
+
+* API接口请求地址：``/users/save_form_ids``
+* API接口请求方法：``POST``
+* API接口用户授权：``token``
+
+请求参数
+~~~~~~~~~~~~~~~
+
+===============  ========  =========  ========  ====================================
+名称              类型      是否必须    默认值     描述说明
+===============  ========  =========  ========  ====================================
+app_id             String   是                   小程序id
+openid             String   是                   用户唯一标识
+form_ids           Array    否                   form_id数组
+order_rid          String   否                   订单编号
+prepay_id          String   否                   支付成功产生
+===============  ========  =========  ========  ====================================
+
+返回示例
+~~~~~~~~~~~~~~~~
+
+JSON数据格式:
+
+请求 **正确** 返回结果：
+
+.. code-block:: javascript
+
+    {
+        "status": {
+            "code": 200,
+            "message": "Ok all right."
+        },
+        "success": true
+    }
