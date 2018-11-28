@@ -254,6 +254,12 @@
 <li><a class="reference internal" href="#id37">返回示例</a></li>
 </ul>
 </li>
+<li><a class="reference internal" href="#id38">我送出的礼物</a><ul>
+<li><a class="reference internal" href="#id39">接口说明</a></li>
+<li><a class="reference internal" href="#id40">请求参数</a></li>
+<li><a class="reference internal" href="#id41">返回示例</a></li>
+</ul>
+</li>
 </ul>
 </li>
 </ul>
@@ -340,6 +346,12 @@
 <li><a class="reference internal" href="#id35">用户当前是否有活动</a><ul>
 <li><a class="reference internal" href="#id36">接口说明</a></li>
 <li><a class="reference internal" href="#id37">返回示例</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#id38">我送出的礼物</a><ul>
+<li><a class="reference internal" href="#id39">接口说明</a></li>
+<li><a class="reference internal" href="#id40">请求参数</a></li>
+<li><a class="reference internal" href="#id41">返回示例</a></li>
 </ul>
 </li>
 </ul>
@@ -563,6 +575,7 @@
     <span class="s2">&quot;data&quot;</span><span class="o">:</span> <span class="p">{</span>
         <span class="s2">&quot;current_time&quot;</span><span class="o">:</span> <span class="mi">1542966869</span><span class="p">,</span>  <span class="c1">// 当前时间</span>
         <span class="s2">&quot;is_receive&quot;</span><span class="o">:</span> <span class="kc">false</span><span class="p">,</span>  <span class="c1">// 是否领奖</span>
+        <span class="s2">&quot;can_receive&quot;</span><span class="o">:</span> <span class="kc">false</span><span class="p">,</span>  <span class="c1">// 是否可以领取奖励</span>
         <span class="s2">&quot;people_count&quot;</span><span class="o">:</span> <span class="mi">1</span><span class="p">,</span>  <span class="c1">// 当前参与人数</span>
         <span class="s2">&quot;product&quot;</span><span class="o">:</span> <span class="p">{</span>
             <span class="s2">&quot;assets&quot;</span><span class="o">:</span> <span class="p">[</span>   <span class="c1">// 商品图片</span>
@@ -984,6 +997,95 @@
 <div class="highlight-javascript"><div class="highlight"><pre><span></span><span class="p">{</span>
     <span class="s2">&quot;data&quot;</span><span class="o">:</span> <span class="p">{</span>
         <span class="s2">&quot;is_having&quot;</span><span class="o">:</span> <span class="mi">0</span>  <span class="c1">// 0、没有 1、有</span>
+    <span class="p">},</span>
+    <span class="s2">&quot;status&quot;</span><span class="o">:</span> <span class="p">{</span>
+        <span class="s2">&quot;code&quot;</span><span class="o">:</span> <span class="mi">200</span><span class="p">,</span>
+        <span class="s2">&quot;message&quot;</span><span class="o">:</span> <span class="s2">&quot;Ok all right.&quot;</span>
+    <span class="p">},</span>
+    <span class="s2">&quot;success&quot;</span><span class="o">:</span> <span class="kc">true</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="id38">
+<h2>我送出的礼物<a class="headerlink" href="#id38" title="永久链接至标题">¶</a></h2>
+<p>我送出的礼物</p>
+<div class="section" id="id39">
+<h3>接口说明<a class="headerlink" href="#id39" title="永久链接至标题">¶</a></h3>
+<ul class="simple">
+<li>API接口请求地址：<code class="docutils literal"><span class="pre">/yiyuan/activity/send</span></code></li>
+<li>API接口请求方法：<code class="docutils literal"><span class="pre">GET</span></code></li>
+<li>API接口用户授权：<code class="docutils literal"><span class="pre">token</span></code></li>
+</ul>
+</div>
+<div class="section" id="id40">
+<h3>请求参数<a class="headerlink" href="#id40" title="永久链接至标题">¶</a></h3>
+<table border="1" class="docutils">
+<colgroup>
+<col width="18%" />
+<col width="12%" />
+<col width="11%" />
+<col width="12%" />
+<col width="48%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">名称</th>
+<th class="head">类型</th>
+<th class="head">是否必须</th>
+<th class="head">默认值</th>
+<th class="head">描述说明</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>page</td>
+<td>Number</td>
+<td>可选</td>
+<td>1</td>
+<td>当前页码</td>
+</tr>
+<tr class="row-odd"><td>per_page</td>
+<td>Number</td>
+<td>可选</td>
+<td>10</td>
+<td>每页数量</td>
+</tr>
+<tr class="row-even"><td>s</td>
+<td>Number</td>
+<td>可选</td>
+<td>0</td>
+<td>0、全部 1、未领取 2、已领取 3、退款</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="id41">
+<h3>返回示例<a class="headerlink" href="#id41" title="永久链接至标题">¶</a></h3>
+<p>JSON数据格式:</p>
+<div class="highlight-javascript"><div class="highlight"><pre><span></span><span class="p">{</span>
+    <span class="s2">&quot;data&quot;</span><span class="o">:</span> <span class="p">{</span>
+        <span class="s2">&quot;activity_list&quot;</span><span class="o">:</span> <span class="p">[</span>
+            <span class="p">{</span>
+                <span class="s2">&quot;activity_rid&quot;</span><span class="o">:</span> <span class="s2">&quot;Y18112728940&quot;</span><span class="p">,</span>  <span class="c1">// 活动编号</span>
+                <span class="s2">&quot;created_at&quot;</span><span class="o">:</span> <span class="mi">1543304292</span><span class="p">,</span>  <span class="c1">// 创建时间</span>
+                <span class="s2">&quot;product_name&quot;</span><span class="o">:</span> <span class="s2">&quot;清浅‖原创个性百搭纯手工紫光檀木镶银s925防过敏银耳钉自戴送礼【双鱼】&quot;</span><span class="p">,</span>  <span class="c1">// 商品名</span>
+                <span class="s2">&quot;product_rid&quot;</span><span class="o">:</span> <span class="s2">&quot;8635729480&quot;</span><span class="p">,</span>  <span class="c1">// 商品编号</span>
+                <span class="s2">&quot;s_color&quot;</span><span class="o">:</span> <span class="s2">&quot;黑色&quot;</span><span class="p">,</span>  <span class="c1">// 颜色</span>
+                <span class="s2">&quot;s_model&quot;</span><span class="o">:</span> <span class="s2">&quot;&quot;</span><span class="p">,</span>  <span class="c1">// 型号</span>
+                <span class="s2">&quot;sku&quot;</span><span class="o">:</span> <span class="s2">&quot;8035291864&quot;</span><span class="p">,</span>  <span class="c1">// sku</span>
+                <span class="s2">&quot;status&quot;</span><span class="o">:</span> <span class="mi">1</span><span class="p">,</span>  <span class="c1">// 1、未领取 2、已领取 3、退款</span>
+                <span class="s2">&quot;user_info&quot;</span><span class="o">:</span> <span class="p">{</span>  <span class="c1">// 发起者信息</span>
+                    <span class="s2">&quot;user_logo&quot;</span><span class="o">:</span> <span class="s2">&quot;https://static.moebeast.com/image/static/default_user.png&quot;</span><span class="p">,</span>
+                    <span class="s2">&quot;user_name&quot;</span><span class="o">:</span> <span class="s2">&quot;purpen.w&quot;</span><span class="p">,</span>
+                    <span class="s2">&quot;user_sn&quot;</span><span class="o">:</span> <span class="s2">&quot;13978412506&quot;</span>
+                <span class="p">},</span>
+                <span class="s2">&quot;view_url&quot;</span><span class="o">:</span> <span class="s2">&quot;https://s3.lexivip.com/20181107/4307FolDdcJqUkBbTgiLBL6KLobQKSFb.jpg&quot;</span><span class="p">,</span>  <span class="c1">// 商品图</span>
+                <span class="s2">&quot;winning_at&quot;</span><span class="o">:</span> <span class="mi">1543329839</span>  <span class="c1">// 开奖时间</span>
+            <span class="p">}</span>
+        <span class="p">],</span>
+        <span class="s2">&quot;count&quot;</span><span class="o">:</span> <span class="mi">2</span><span class="p">,</span>
+        <span class="s2">&quot;next&quot;</span><span class="o">:</span> <span class="kc">false</span><span class="p">,</span>
+        <span class="s2">&quot;prev&quot;</span><span class="o">:</span> <span class="kc">false</span>
     <span class="p">},</span>
     <span class="s2">&quot;status&quot;</span><span class="o">:</span> <span class="p">{</span>
         <span class="s2">&quot;code&quot;</span><span class="o">:</span> <span class="mi">200</span><span class="p">,</span>

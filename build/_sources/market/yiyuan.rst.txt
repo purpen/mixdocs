@@ -133,6 +133,7 @@ JSON数据格式:
         "data": {
             "current_time": 1542966869,  // 当前时间
             "is_receive": false,  // 是否领奖
+            "can_receive": false,  // 是否可以领取奖励
             "people_count": 1,  // 当前参与人数
             "product": {
                 "assets": [   // 商品图片
@@ -502,8 +503,66 @@ JSON数据格式:
 
 
 
+我送出的礼物
+-------------------------
+我送出的礼物
+
+接口说明
+~~~~~~~~~~~~~~
+
+* API接口请求地址：``/yiyuan/activity/send``
+* API接口请求方法：``GET``
+* API接口用户授权：``token``
+
+请求参数
+~~~~~~~~~~~~~~~
+
+===============  ==========  =========  ==========  ========================================
+名称              类型        是否必须     默认值       描述说明
+===============  ==========  =========  ==========  ========================================
+page             Number      可选         1          当前页码
+per_page         Number      可选         10         每页数量
+s                Number      可选         0          0、全部 1、未领取 2、已领取 3、退款
+===============  ==========  =========  ==========  ========================================
 
 
+返回示例
+~~~~~~~~~~~~~~~~
+
+JSON数据格式:
+
+.. code-block:: javascript
 
 
+    {
+        "data": {
+            "activity_list": [
+                {
+                    "activity_rid": "Y18112728940",  // 活动编号
+                    "created_at": 1543304292,  // 创建时间
+                    "product_name": "清浅‖原创个性百搭纯手工紫光檀木镶银s925防过敏银耳钉自戴送礼【双鱼】",  // 商品名
+                    "product_rid": "8635729480",  // 商品编号
+                    "s_color": "黑色",  // 颜色
+                    "s_model": "",  // 型号
+                    "sku": "8035291864",  // sku
+                    "status": 1,  // 1、未领取 2、已领取 3、退款
+                    "user_info": {  // 发起者信息
+                        "user_logo": "https://static.moebeast.com/image/static/default_user.png",
+                        "user_name": "purpen.w",
+                        "user_sn": "13978412506"
+                    },
+                    "view_url": "https://s3.lexivip.com/20181107/4307FolDdcJqUkBbTgiLBL6KLobQKSFb.jpg",  // 商品图
+                    "winning_at": 1543329839  // 开奖时间
+                }
+            ],
+            "count": 2,
+            "next": false,
+            "prev": false
+        },
+        "status": {
+            "code": 200,
+            "message": "Ok all right."
+        },
+        "success": true
+    }
 
