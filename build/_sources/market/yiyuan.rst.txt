@@ -259,7 +259,7 @@ JSON数据格式:
 
     {
         "data": {
-            "expired_receive": true,  // 领取时间是否到期, 开奖5天不可领取
+            "expired_receive": true,  // 是否可以领取奖励, 开奖5天不可领取
             "is_join": true,  // 是否参与
             "is_receive": true,  // 是否领奖
             "is_winner": true,  // 是否中奖
