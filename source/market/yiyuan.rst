@@ -268,7 +268,12 @@ JSON数据格式:
             "is_join": true,  // 是否参与
             "is_receive": true,  // 是否领奖
             "is_winner": true,  // 是否中奖
-            "status": 3  // // 活动状态 2、抽奖中 3、开奖成功 4、已失效
+            "status": 3,  // 活动状态 2、抽奖中 3、开奖成功 4、已失效
+            "winning_user": {  // 中奖用户
+                "user_logo": "https://s3.lexivip.com/20181101/2251FgKdtFrFPWjJYew4aROzCOBB6IMP.jpg",
+                "user_name": "蓝胖子",
+                "user_sn": "10296157834"
+            }
         },
         "status": {
             "code": 200,
