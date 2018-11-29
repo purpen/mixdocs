@@ -131,6 +131,9 @@ JSON数据格式:
 
     {
         "data": {
+            "days": 3,  // 活动天数
+            "end_at": 1543665172,  // 活动结束时间
+            "start_time": 1542966869,  // 开始时间
             "current_time": 1542966869,  // 当前时间
             "people_count": 1,  // 当前参与人数
             "blessing": '哈哈哈',  // 祝福语
@@ -151,7 +154,6 @@ JSON数据格式:
                 "real_price": 178,  // 真实价格
                 "sale_price": 178  // 折扣价
             },
-            "start_time": 1542966869,  // 开始时间
             "status": 1,  // 活动状态 2、抽奖中 3、开奖成功 4、已失效
             "surplus_count": 19,  // 剩余人数
             "total_people_count": 20,  // 需要人数
