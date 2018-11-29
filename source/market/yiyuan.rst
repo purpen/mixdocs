@@ -132,8 +132,6 @@ JSON数据格式:
     {
         "data": {
             "current_time": 1542966869,  // 当前时间
-            "is_receive": false,  // 是否领奖
-            "can_receive": false,  // 是否可以领取奖励
             "people_count": 1,  // 当前参与人数
             "blessing": '哈哈哈',  // 祝福语
             "product": {
@@ -157,11 +155,6 @@ JSON数据格式:
             "status": 1,  // 活动状态 2、抽奖中 3、开奖成功 4、已失效
             "surplus_count": 19,  // 剩余人数
             "total_people_count": 20,  // 需要人数
-            "winning_user": {  // 中奖用户
-                "user_logo": "https://s3.lexivip.com/20181101/2251FgKdtFrFPWjJYew4aROzCOBB6IMP.jpg",
-                "user_name": "蓝胖子",
-                "user_sn": "10296157834"
-            },
             "owner_store": {
                 "store_bgcover": "https://s3.lexivip.com/20180911/4148FlTE2Q_LRdlouNbvyf_E3HTjWHJB.png",  // 店铺背景图
                 "store_logo": "https://s3.lexivip.com/20180913/4849FgzxNAZiToR482ksb89Pl2kOAQ8B.png",  // 店铺logo
@@ -230,6 +223,53 @@ JSON数据格式:
         },
         "success": true
     }
+
+
+
+活动状态
+-------------------------
+活动状态
+
+接口说明
+~~~~~~~~~~~~~~
+
+* API接口请求地址：``/yiyuan/activity/status/<string:rid>``
+* API接口请求方法：``GET``
+* API接口用户授权：``token``
+
+请求参数
+~~~~~~~~~~~~~~~
+
+===============  ==========  =========  ==========  =============================
+名称              类型        是否必须     默认值       描述说明
+===============  ==========  =========  ==========  =============================
+rid              String      必需                    活动rid
+===============  ==========  =========  ==========  =============================
+
+
+返回示例
+~~~~~~~~~~~~~~~~
+
+JSON数据格式:
+
+.. code-block:: javascript
+
+
+    {
+        "data": {
+            "expired_receive": true,  // 领取时间是否到期, 开奖5天不可领取
+            "is_join": true,  // 是否参与
+            "is_receive": true,  // 是否领奖
+            "is_winner": true,  // 是否中奖
+            "status": 3  // // 活动状态 2、抽奖中 3、开奖成功 4、已失效
+        },
+        "status": {
+            "code": 200,
+            "message": "Ok all right."
+        },
+        "success": true
+    }
+
 
 
 查看领取我的礼物的人
