@@ -196,6 +196,8 @@ JSON数据格式:
 名称                    类型          是否必须      默认值        描述说明
 =====================  ===========  ==========  ===========  ==============================
 rid                    String        必需                      活动rid
+page                   Number        可选         1            当前页码
+per_page               Number        可选         50           每页数量
 =====================  ===========  ==========  ===========  ==============================
 
 
@@ -208,6 +210,9 @@ JSON数据格式:
 
     {
         "data": {
+            "count": 1,
+            "next": false,
+            "prev": false,
             "user_list": [  // 参与者
                 {
                     "is_receive": false,  // 是否领奖
@@ -505,6 +510,21 @@ JSON数据格式:
 
 
     {
+        "data": {
+            "people_count": 1,  // 当前参与人数
+            "surplus_count": 49,  // 剩余人数
+            "total_people_count": 50,  // 需要人数
+            "user_list": [
+                {
+                    "is_receive": true,
+                    "is_win": true,
+                    "receive_at": 1543406077,
+                    "user_logo": "https://s3.lexivip.com/20181101/2251FgKdtFrFPWjJYew4aROzCOBB6IMP.jpg",
+                    "user_name": "蓝胖子",
+                    "user_sn": "10296157834"
+                }
+            ]
+        },
         "status": {
             "code": 200,
             "message": "Ok all right."
@@ -715,3 +735,61 @@ JSON数据格式:
         },
         "success": true
     }
+
+
+
+品牌馆更多商品
+-------------------------
+品牌馆更多商品
+
+接口说明
+~~~~~~~~~~~~~~
+
+* API接口请求地址：``/yiyuan/product/store``
+* API接口用户授权：``token``
+
+请求参数
+~~~~~~~~~~~~~~~
+
+===============  ==========  =========  ==========  ========================================
+名称              类型        是否必须     默认值       描述说明
+===============  ==========  =========  ==========  ========================================
+page             Number      可选         1          当前页码
+per_page         Number      可选         10         每页数量
+store_rid        String      必需         0          店铺rid
+===============  ==========  =========  ==========  ========================================
+
+
+返回示例
+~~~~~~~~~~~~~~~~
+
+JSON数据格式:
+
+.. code-block:: javascript
+
+
+    {
+        "data": {
+            "count": 38,
+            "next": true,
+            "prev": false,
+            "product_list": [
+                {
+                    "cover": "https://s3.lexivip.com/20181023/1707FhnL7eK2IfSPpxoBeZ1o5hgS_fJc.jpeg",
+                    "price": 328,  // 销售价
+                    "product_name": "雪花 耳环 14kgf YUFUN原创设计 施华洛世奇水晶再设计",
+                    "product_rid": "8736814295",
+                    "real_price": 328,// 实际价
+                    "sale_price": 0// 折扣价
+                }
+            ]
+        },
+        "status": {
+            "code": 200,
+            "message": "Ok all right."
+        },
+        "success": true
+    }
+
+
+
