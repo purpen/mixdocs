@@ -1110,11 +1110,11 @@
 <h3>请求参数<a class="headerlink" href="#id23" title="永久链接至标题">¶</a></h3>
 <table border="1" class="docutils">
 <colgroup>
-<col width="15%" />
+<col width="20%" />
 <col width="11%" />
-<col width="13%" />
+<col width="12%" />
 <col width="11%" />
-<col width="50%" />
+<col width="47%" />
 </colgroup>
 <thead valign="bottom">
 <tr class="row-odd"><th class="head">名称</th>
@@ -1131,6 +1131,12 @@
 <td>&#160;</td>
 <td>店铺rid，核心填写，独立不填</td>
 </tr>
+<tr class="row-odd"><td>category_id</td>
+<td>Number</td>
+<td>可选</td>
+<td>&#160;</td>
+<td>商品分类id</td>
+</tr>
 </tbody>
 </table>
 </div>
@@ -1139,7 +1145,7 @@
 <p>JSON数据格式:</p>
 <div class="highlight-javascript"><div class="highlight"><pre><span></span><span class="p">{</span>
     <span class="s2">&quot;data&quot;</span><span class="o">:</span> <span class="p">{</span>
-        <span class="s2">&quot;coupons&quot;</span><span class="o">:</span> <span class="p">[</span>
+        <span class="s2">&quot;coupons&quot;</span><span class="o">:</span> <span class="p">[</span>  <span class="c1">// 店铺优惠券</span>
             <span class="p">{</span>
                 <span class="s2">&quot;amount&quot;</span><span class="o">:</span> <span class="mi">10</span><span class="p">,</span>  <span class="c1">// 面值</span>
                 <span class="s2">&quot;code&quot;</span><span class="o">:</span> <span class="s2">&quot;UHAOSIWFUVZ&quot;</span><span class="p">,</span>  <span class="c1">// 优惠券 code</span>
@@ -1154,6 +1160,24 @@
                 <span class="s2">&quot;type_text&quot;</span><span class="o">:</span> <span class="s2">&quot;全店通用&quot;</span><span class="p">,</span>
                 <span class="s2">&quot;end_date&quot;</span><span class="o">:</span> <span class="mi">1538582400</span><span class="p">,</span>  <span class="c1">// 结束时间</span>
                 <span class="s2">&quot;start_date&quot;</span><span class="o">:</span> <span class="mi">1531670400</span><span class="p">,</span>  <span class="c1">// 开始时间</span>
+            <span class="p">}</span>
+        <span class="p">],</span>
+        <span class="s2">&quot;official_coupon&quot;</span><span class="o">:</span> <span class="p">[</span>  <span class="c1">// 官方优惠券</span>
+            <span class="p">{</span>
+                <span class="s2">&quot;amount&quot;</span><span class="o">:</span> <span class="mi">20</span><span class="p">,</span>  <span class="c1">// 面值</span>
+                <span class="s2">&quot;category_name&quot;</span><span class="o">:</span> <span class="s2">&quot;好感衣装&quot;</span><span class="p">,</span><span class="c1">// 分类名</span>
+                <span class="s2">&quot;code&quot;</span><span class="o">:</span> <span class="s2">&quot;OUMAVIDOSTH&quot;</span><span class="p">,</span><span class="c1">// 优惠券 code</span>
+                <span class="s2">&quot;count&quot;</span><span class="o">:</span> <span class="mi">12999</span><span class="p">,</span>
+                <span class="s2">&quot;created_at&quot;</span><span class="o">:</span> <span class="mi">1543487919</span><span class="p">,</span>
+                <span class="s2">&quot;days&quot;</span><span class="o">:</span> <span class="mi">0</span><span class="p">,</span>
+                <span class="s2">&quot;start_date&quot;</span><span class="o">:</span> <span class="mi">1543420800</span><span class="p">,</span>  <span class="c1">// 开始时间</span>
+                <span class="s2">&quot;end_date&quot;</span><span class="o">:</span> <span class="mi">1544284799</span><span class="p">,</span>  <span class="c1">// 结束时间</span>
+                <span class="s2">&quot;is_grant&quot;</span><span class="o">:</span> <span class="mi">1</span><span class="p">,</span> <span class="c1">// 是否领取 0、未领取 1、已领取</span>
+                <span class="s2">&quot;min_amount&quot;</span><span class="o">:</span> <span class="mi">200</span><span class="p">,</span><span class="c1">// 最小金额</span>
+                <span class="s2">&quot;pickup_count&quot;</span><span class="o">:</span> <span class="mi">1</span><span class="p">,</span>
+                <span class="s2">&quot;surplus_count&quot;</span><span class="o">:</span> <span class="mi">12998</span><span class="p">,</span>
+                <span class="s2">&quot;type_text&quot;</span><span class="o">:</span> <span class="s2">&quot;满200减20元&quot;</span><span class="p">,</span>
+                <span class="s2">&quot;use_count&quot;</span><span class="o">:</span> <span class="mi">0</span>
             <span class="p">}</span>
         <span class="p">]</span>
     <span class="p">},</span>
@@ -1181,11 +1205,11 @@
 <h3>请求参数<a class="headerlink" href="#id27" title="永久链接至标题">¶</a></h3>
 <table border="1" class="docutils">
 <colgroup>
-<col width="15%" />
+<col width="20%" />
 <col width="11%" />
-<col width="13%" />
+<col width="12%" />
 <col width="11%" />
-<col width="50%" />
+<col width="47%" />
 </colgroup>
 <thead valign="bottom">
 <tr class="row-odd"><th class="head">名称</th>
@@ -1202,6 +1226,12 @@
 <td>&#160;</td>
 <td>店铺rid，核心填写，独立不填</td>
 </tr>
+<tr class="row-odd"><td>category_id</td>
+<td>Number</td>
+<td>可选</td>
+<td>&#160;</td>
+<td>商品分类id</td>
+</tr>
 </tbody>
 </table>
 </div>
@@ -1210,7 +1240,7 @@
 <p>JSON数据格式:</p>
 <div class="highlight-javascript"><div class="highlight"><pre><span></span><span class="p">{</span>
     <span class="s2">&quot;data&quot;</span><span class="o">:</span> <span class="p">{</span>
-        <span class="s2">&quot;coupons&quot;</span><span class="o">:</span> <span class="p">[</span>
+        <span class="s2">&quot;coupons&quot;</span><span class="o">:</span> <span class="p">[</span>  <span class="c1">// 店铺优惠券</span>
             <span class="p">{</span>
                 <span class="s2">&quot;amount&quot;</span><span class="o">:</span> <span class="mi">10</span><span class="p">,</span>  <span class="c1">// 面值</span>
                 <span class="s2">&quot;code&quot;</span><span class="o">:</span> <span class="s2">&quot;UHAOSIWFUVZ&quot;</span><span class="p">,</span>  <span class="c1">// 优惠券code</span>
@@ -1225,6 +1255,24 @@
                 <span class="s2">&quot;type_text&quot;</span><span class="o">:</span> <span class="s2">&quot;全店通用&quot;</span><span class="p">,</span>
                 <span class="s2">&quot;end_date&quot;</span><span class="o">:</span> <span class="mi">1538582400</span><span class="p">,</span>  <span class="c1">// 结束时间</span>
                 <span class="s2">&quot;start_date&quot;</span><span class="o">:</span> <span class="mi">1531670400</span><span class="p">,</span>  <span class="c1">// 开始时间</span>
+            <span class="p">}</span>
+        <span class="p">],</span>
+        <span class="s2">&quot;official_coupon&quot;</span><span class="o">:</span> <span class="p">[</span>  <span class="c1">// 官方优惠券</span>
+            <span class="p">{</span>
+                <span class="s2">&quot;amount&quot;</span><span class="o">:</span> <span class="mi">20</span><span class="p">,</span>  <span class="c1">// 面值</span>
+                <span class="s2">&quot;category_name&quot;</span><span class="o">:</span> <span class="s2">&quot;好感衣装&quot;</span><span class="p">,</span><span class="c1">// 分类名</span>
+                <span class="s2">&quot;code&quot;</span><span class="o">:</span> <span class="s2">&quot;OUMAVIDOSTH&quot;</span><span class="p">,</span><span class="c1">// 优惠券 code</span>
+                <span class="s2">&quot;count&quot;</span><span class="o">:</span> <span class="mi">12999</span><span class="p">,</span>
+                <span class="s2">&quot;created_at&quot;</span><span class="o">:</span> <span class="mi">1543487919</span><span class="p">,</span>
+                <span class="s2">&quot;days&quot;</span><span class="o">:</span> <span class="mi">0</span><span class="p">,</span>
+                <span class="s2">&quot;start_date&quot;</span><span class="o">:</span> <span class="mi">1543420800</span><span class="p">,</span>  <span class="c1">// 开始时间</span>
+                <span class="s2">&quot;end_date&quot;</span><span class="o">:</span> <span class="mi">1544284799</span><span class="p">,</span>  <span class="c1">// 结束时间</span>
+                <span class="s2">&quot;is_grant&quot;</span><span class="o">:</span> <span class="mi">1</span><span class="p">,</span> <span class="c1">// 是否领取 0、未领取 1、已领取</span>
+                <span class="s2">&quot;min_amount&quot;</span><span class="o">:</span> <span class="mi">200</span><span class="p">,</span><span class="c1">// 最小金额</span>
+                <span class="s2">&quot;pickup_count&quot;</span><span class="o">:</span> <span class="mi">1</span><span class="p">,</span>
+                <span class="s2">&quot;surplus_count&quot;</span><span class="o">:</span> <span class="mi">12998</span><span class="p">,</span>
+                <span class="s2">&quot;type_text&quot;</span><span class="o">:</span> <span class="s2">&quot;满200减20元&quot;</span><span class="p">,</span>
+                <span class="s2">&quot;use_count&quot;</span><span class="o">:</span> <span class="mi">0</span>
             <span class="p">}</span>
         <span class="p">]</span>
     <span class="p">},</span>
