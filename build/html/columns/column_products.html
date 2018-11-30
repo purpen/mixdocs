@@ -120,6 +120,7 @@
 <li class="toctree-l2"><a class="reference internal" href="../market/banners.html">营销工具/广告模块</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../market/coupons.html">营销工具/优惠券模块</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../market/bonus_question.html">营销工具/猜题赢现金</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../market/yiyuan.html">营销工具/一元送礼模块</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="../stats/index.html">统计API模块</a><ul>
@@ -1866,6 +1867,12 @@
 <td>10</td>
 <td>每页数量</td>
 </tr>
+<tr class="row-even"><td>client_type</td>
+<td>Number</td>
+<td>可选</td>
+<td>1</td>
+<td>客户端类型 1=小程序 2=app</td>
+</tr>
 </tbody>
 </table>
 </div>
@@ -1900,14 +1907,14 @@
                 <span class="p">],</span>
                 <span class="s2">&quot;sort_order&quot;</span><span class="o">:</span> <span class="mi">12</span><span class="p">,</span>
                 <span class="s2">&quot;sub_name&quot;</span><span class="o">:</span> <span class="s2">&quot;&quot;</span><span class="p">,</span>
-                <span class="s2">&quot;target_type&quot;</span><span class="o">:</span> <span class="s2">&quot;推荐类型: 1=生活志文章, 2=种草清单 3=主题 4=商品&quot;</span>
+                <span class="s2">&quot;target_type&quot;</span><span class="o">:</span> <span class="s2">&quot;推荐类型: 1=生活志文章, 2=种草清单 3=主题 4=商品 5=小程序链接&quot;</span>
             <span class="p">},</span>
             <span class="p">{</span>
                 <span class="s2">&quot;recommend_description&quot;</span><span class="o">:</span> <span class="s2">&quot;推荐描述&quot;</span><span class="p">,</span>
                 <span class="s2">&quot;recommend_id&quot;</span><span class="o">:</span> <span class="mi">3</span><span class="p">,</span>
                 <span class="s2">&quot;recommend_label&quot;</span><span class="o">:</span> <span class="s2">&quot;推荐标签&quot;</span><span class="p">,</span>
                 <span class="s2">&quot;recommend_title&quot;</span><span class="o">:</span> <span class="s2">&quot;推荐标题&quot;</span><span class="p">,</span>
-                <span class="s2">&quot;target_type&quot;</span><span class="o">:</span> <span class="s2">&quot;推荐类型: 1=生活志文章, 2=种草清单 3=主题 4=商品&quot;</span><span class="p">,</span>
+                <span class="s2">&quot;target_type&quot;</span><span class="o">:</span> <span class="s2">&quot;推荐类型: 1=生活志文章, 2=种草清单 3=主题 4=商品 5=小程序链接&quot;</span><span class="p">,</span>
                 <span class="s2">&quot;audit_status&quot;</span><span class="o">:</span> <span class="mi">3</span><span class="p">,</span>
                 <span class="s2">&quot;content&quot;</span><span class="o">:</span> <span class="s2">&quot;正文&quot;</span><span class="p">,</span>
                 <span class="s2">&quot;cover&quot;</span><span class="o">:</span> <span class="s2">&quot;http://127.0.0.1:9000/_uploads/photos/180707/912fc59a8199d04.jpg&quot;</span><span class="p">,</span>

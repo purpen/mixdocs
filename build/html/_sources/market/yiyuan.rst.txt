@@ -844,4 +844,70 @@ JSON数据格式:
 
 
 
+分享一元商品卡片
+----------------------
+分享一元商品卡片
+
+接口说明
+~~~~~~~~~~~~~~
+
+* API接口请求地址：``/yiyuan/product_card``
+* API接口请求方法：``POST``
+
+请求参数
+~~~~~~~~~~~~~~~
+
+=============  ========  =========  ========  ====================================
+名称            类型      是否必须    默认值     描述说明
+=============  ========  =========  ========  ====================================
+rid            String    必填                  商品编号
+=============  ========  =========  ========  ====================================
+
+返回示例
+~~~~~~~~~~~~~~~~
+
+JSON数据格式:
+
+.. code-block:: javascript
+
+    {
+        "data": {
+            "image_url": "https://kg.erp.taihuoniao.com/20180314/Fk1vEAP_tIVwmPRfHRfl8jpn07CZ.png"
+        },
+        "status": {
+            "code": 200,
+            "message": "Ok all right."
+        },
+        "success": true
+    }
+
+
+获取一元海报图片
+----------------------
+获取一元海报图片
+
+接口说明
+~~~~~~~~~~~~~~
+
+* API接口请求地址：``/yiyuan/product_poster``
+* API接口请求方法：``POST``
+
+
+返回示例
+~~~~~~~~~~~~~~~~
+
+JSON数据格式:
+
+.. code-block:: javascript
+
+    {
+        "data": {
+            "image_url": "https://kg.erp.taihuoniao.com/20180314/Fk1vEAP_tIVwmPRfHRfl8jpn07CZ.png"
+        },
+        "status": {
+            "code": 200,
+            "message": "Ok all right."
+        },
+        "success": true
+    }
 

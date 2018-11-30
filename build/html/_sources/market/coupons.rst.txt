@@ -1853,6 +1853,54 @@ JSON数据格式:
     }
 
 
+
+1000元新人红包列表
+--------------------------------
+1000元新人红包列表
+
+接口说明
+~~~~~~~~~~~~~~
+
+* API接口请求地址：``/market/new_user_bonus``
+* API接口用户授权：``token``
+
+
+返回示例
+~~~~~~~~~~~~~~~~
+
+JSON数据格式:
+
+.. code-block:: javascript
+
+
+    {
+        "data": {
+            "coupon_list": [
+                {
+                    "amount": 30,  // 面值
+                    "category_name": "全场通用",
+                    "end_time": 1545235199, // 结束时间
+                    "min_amount": 199,  // 最低满足金额
+                    "start_time": 1543507200  // 开始时间
+                },
+                {
+                    "amount": 5,
+                    "category_name": "限艺术作品分类使用",
+                    "end_time": 1544803199,
+                    "min_amount": 10,
+                    "start_time": 1543507200
+                }
+            ]
+        },
+        "status": {
+            "code": 200,
+            "message": "Ok all right."
+        },
+        "success": true
+    }
+
+
+
 领券中心-双十一活动
 --------------------------
 领券中心-双十一活动
