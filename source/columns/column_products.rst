@@ -667,6 +667,7 @@ view_more        Number      可选         0          是否查看更多: 0=否
 ===============  ==========  =========  ==========  =============================
 page             Number      可选         1          当前页码
 per_page         Number      可选         10         每页数量
+client_type      Number      可选         1          客户端类型 1=小程序 2=app
 ===============  ==========  =========  ==========  =============================
 
 返回示例
@@ -704,14 +705,14 @@ JSON数据格式:
                     ],
                     "sort_order": 12,
                     "sub_name": "",
-                    "target_type": "推荐类型: 1=生活志文章, 2=种草清单 3=主题 4=商品"
+                    "target_type": "推荐类型: 1=生活志文章, 2=种草清单 3=主题 4=商品 5=小程序链接"
                 },
                 {
                     "recommend_description": "推荐描述",
                     "recommend_id": 3,
                     "recommend_label": "推荐标签",
                     "recommend_title": "推荐标题",
-                    "target_type": "推荐类型: 1=生活志文章, 2=种草清单 3=主题 4=商品",
+                    "target_type": "推荐类型: 1=生活志文章, 2=种草清单 3=主题 4=商品 5=小程序链接",
                     "audit_status": 3,
                     "content": "正文",
                     "cover": "http://127.0.0.1:9000/_uploads/photos/180707/912fc59a8199d04.jpg",
