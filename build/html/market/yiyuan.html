@@ -298,7 +298,8 @@
 </li>
 <li><a class="reference internal" href="#id66">获取一元海报图片</a><ul>
 <li><a class="reference internal" href="#id67">接口说明</a></li>
-<li><a class="reference internal" href="#id68">返回示例</a></li>
+<li><a class="reference internal" href="#id68">请求参数</a></li>
+<li><a class="reference internal" href="#id69">返回示例</a></li>
 </ul>
 </li>
 </ul>
@@ -433,7 +434,8 @@
 </li>
 <li><a class="reference internal" href="#id66">获取一元海报图片</a><ul>
 <li><a class="reference internal" href="#id67">接口说明</a></li>
-<li><a class="reference internal" href="#id68">返回示例</a></li>
+<li><a class="reference internal" href="#id68">请求参数</a></li>
+<li><a class="reference internal" href="#id69">返回示例</a></li>
 </ul>
 </li>
 </ul>
@@ -1615,6 +1617,12 @@
 <td>&#160;</td>
 <td>商品编号</td>
 </tr>
+<tr class="row-odd"><td>type</td>
+<td>Number</td>
+<td>必填</td>
+<td>&#160;</td>
+<td>类型 1、邀请 2、炫耀</td>
+</tr>
 </tbody>
 </table>
 </div>
@@ -1646,7 +1654,53 @@
 </ul>
 </div>
 <div class="section" id="id68">
-<h3>返回示例<a class="headerlink" href="#id68" title="永久链接至标题">¶</a></h3>
+<h3>请求参数<a class="headerlink" href="#id68" title="永久链接至标题">¶</a></h3>
+<table border="1" class="docutils">
+<colgroup>
+<col width="21%" />
+<col width="10%" />
+<col width="12%" />
+<col width="10%" />
+<col width="47%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">名称</th>
+<th class="head">类型</th>
+<th class="head">是否必须</th>
+<th class="head">默认值</th>
+<th class="head">描述说明</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>rid</td>
+<td>String</td>
+<td>必填</td>
+<td>&#160;</td>
+<td>商品编号</td>
+</tr>
+<tr class="row-odd"><td>type</td>
+<td>Number</td>
+<td>必填</td>
+<td>&#160;</td>
+<td>类型 1、邀请 2、炫耀</td>
+</tr>
+<tr class="row-even"><td>auth_app_id</td>
+<td>String</td>
+<td>必需</td>
+<td>&#160;</td>
+<td>小程序id</td>
+</tr>
+<tr class="row-odd"><td>path</td>
+<td>String</td>
+<td>必需</td>
+<td>&#160;</td>
+<td>访问路径</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="id69">
+<h3>返回示例<a class="headerlink" href="#id69" title="永久链接至标题">¶</a></h3>
 <p>JSON数据格式:</p>
 <div class="highlight-javascript"><div class="highlight"><pre><span></span><span class="p">{</span>
     <span class="s2">&quot;data&quot;</span><span class="o">:</span> <span class="p">{</span>
