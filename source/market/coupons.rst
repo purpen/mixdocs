@@ -438,7 +438,8 @@ JSON数据格式:
                     "type_text": "满200减20元",
                     "use_count": 0
                 }
-            ]
+            ],
+            "all_grant": false,  // 是否全部领取
         },
         "status": {
             "code": 200,
