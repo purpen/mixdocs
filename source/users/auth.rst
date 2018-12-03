@@ -568,6 +568,7 @@ app动态登陆
 ==================  ========  =========  ========  ====================================
 名称                 类型      是否必须    默认值     描述说明
 ==================  ========  =========  ========  ====================================
+openid               String    可选                 微信登陆需传参数
 areacode             String    可选        +86      区号
 email                String    必须                 手机号
 verify_code          String    必须                 验证码
@@ -587,12 +588,11 @@ JSON数据格式:
         "data": {
             "avatar": "http://0.0.0.0:9000/_uploads/photos/static/img/default2-logo-180x180.png",  // 头像
             "created_at": 1533178967,
-            "expiration": 2592000,
+            "expiration": 2592000,  // 有效期30天
             "is_small_b": false,  // 是不是小b
             "is_first_login": false,
             "is_supplier": false,  // 是不是商家
-            "mobile": "+86-13645647894",
-            "store_rid": "",  // 店铺id
+            "store_rid": "",  // 生活馆id
             "token": "eyJhbGciOiJIUzI1NiIsImlhdCI6MTUzMzE3ODk2NywiZXhwIjoxNTM1NzcwOTY3fQ.eyJpZCI6Mn0.YGTBoGb8OZS_S98OOwviDA9fwZC8Brni8mIAiGFzRq4",
             "uid": "17048395612",
             "username": "wdd"  // 用户名
@@ -723,4 +723,51 @@ JSON数据格式:
         "success": false
     }
 
+app微信授权登陆
+-----------------------
+
+
+接口说明
+~~~~~~~~~~~~~~
+
+* API接口请求地址：``/auth/app_bind_wx``
+* API接口请求方法：``POST``
+
+
+请求参数
+~~~~~~~~~~~~~~~
+
+===========  ========  =========  ========  ====================================
+名称          类型      是否必须    默认值     描述说明
+===========  ========  =========  ========  ====================================
+openid        String     必须                   用户微信标识
+nick_name     String     可选                   用户名
+avatar_url    String     可选                   用户头像链接
+gender        String     可选                   性别
+unionid       String     可选                   用户唯一标识
+country       String     可选                   国家
+province      String     可选                   省
+city          String     可选                   市
+===========  ========  =========  ========  ====================================
+
+返回示例
+~~~~~~~~~~~~~~~~
+
+JSON数据格式:
+
+请求 **正确** 返回结果：
+
+.. code-block:: javascript
+
+    {
+        "data": {
+            "is_bind": false,  //  是否授权过   为false跳转到动态码登陆
+            "openid": "oDlWe-nTb2RKSKbIHPQPg1B-Pk"
+        },
+        "status": {
+            "code": 200,
+            "message": "Ok all right."
+        },
+        "success": true
+    }
 
