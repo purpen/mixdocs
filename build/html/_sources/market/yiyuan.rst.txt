@@ -73,7 +73,7 @@ days                   Number        必需                      活动天数
 blessing               String        可选                      祝福语
 pay_type               Number        可选             1        支付类型 1、微信
 sync_pay               Number        可选             1        是否同步返回支付参数 0、否 1、是
-auth_app_id            Number        可选                      auth_app_id
+auth_app_id            String        可选                      auth_app_id
 =====================  ===========  ==========  ===========  ==============================
 
 
@@ -655,6 +655,8 @@ JSON数据格式:
 rid              String      必需                     活动rid
 openid           String      必需                     openid
 address_rid      String      必需                     地址rid
+sync_pay         Number      可选             1       是否同步返回支付参数 0、否 1、是
+auth_app_id      String      可选                     auth_app_id
 ===============  ==========  =========  ==========  ========================================
 
 
@@ -667,9 +669,14 @@ JSON数据格式:
 
 
     {
+        "data": {
+            "activity_rid": "Y18112357682",  // 活动编号
+            "actual_payment": 1,  // 实际支付金额
+            "pay_params": {}
+        },
         "status": {
-            "code": 200,
-            "message": "Ok all right."
+            "code": 201,
+            "message": "All created."
         },
         "success": true
     }
