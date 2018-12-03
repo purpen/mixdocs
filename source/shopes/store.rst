@@ -31,24 +31,14 @@ JSON数据格式
 
     {
         "data": {
-            "company_qualification": [
-                {
-                    "created_at": 1538054045,
-                    "filename": "IMG_20180517_193448.jpg",
-                    "filepath": "20180927/1404FlP2COvkWjLqx69DSBGa-ri99XJB.jpg",
-                    "id": 24645,
-                    "type": 1,
-                    "view_url": "https://s3.lexivip.com/20180927/1404FlP2COvkWjLqx69DSBGa-ri99XJB.jpg"   // 资质链接
-                },
-                {
-                    "created_at": 1538054087,
-                    "filename": "IMG_20180517_193448.jpg",
-                    "filepath": "20180927/1446FlP2COvkWjLqx69DSBGa-ri99XJB.jpg",
-                    "id": 24646,
-                    "type": 1,
-                    "view_url": "https://s3.lexivip.com/20180927/1446FlP2COvkWjLqx69DSBGa-ri99XJB.jpg"  // 资质链接
-                }
-            ]
+            "company_qualification": {
+                "created_at": 1538054045,
+                "filename": "IMG_20180517_193448.jpg",
+                "filepath": "20180927/1404FlP2COvkWjLqx69DSBGa-ri99XJB.jpg",
+                "id": 24645,
+                "type": 1,
+                "view_url": "https://s3.lexivip.com/20180927/1404FlP2COvkWjLqx69DSBGa-ri99XJB.jpg"  // 资质链接
+            }
         },
         "status": {
             "code": 200,
