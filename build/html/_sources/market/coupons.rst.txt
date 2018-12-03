@@ -101,10 +101,14 @@ JSON数据格式:
 名称              类型      是否必须    默认值     描述说明
 ===============  ========  =========  ========  ====================================
 id               Number    必填                   优惠活动详情
+type             Number    可选          1        活动类型 4，一元活动
+auth_app_id      String    可选                   小程序id
+path             String    可选                   访问路径
+scene            String    可选                   场景参数
 ===============  ========  =========  ========  ====================================
 
-返回示例
-~~~~~~~~~~~~~~~~
+优惠券活动返回示例
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 JSON数据格式:
 
@@ -140,6 +144,44 @@ JSON数据格式:
         },
         "success": true
     }
+
+
+一元活动返回示例
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+JSON数据格式:
+
+.. code-block:: javascript
+
+
+    {
+        "data": {
+            "activity_status": 3,  // 活动状态 1，进行中 2，待生效 3，已结束
+            "blessing": "哈哈哈哈",  // 祝福语
+            "current_time": 1543808758,  // 当前时间
+            "days": 3,  // 有效天数
+            "end_at": 1543665172,  // 结束时间
+            "people_count": 1,  // 当前参与人数
+            "product": {  // 商品信息
+                "cover": "https://s3.lexivip.com/20181107/4917Fv-5K9wdFTXgV13g-nfMTvXrnNb1.jpg",
+                "price": 252,
+                "product_name": "2018年新款男士休闲连帽夹克",
+                "product_rid": "8703186425",
+                "real_price": 252,
+                "sale_price": 0
+            },
+            "start_time": 1543405988,  // 开始时间
+            "status": 3,  // 2、抽奖中 3、开奖成功 4、已失效
+            "total_people_count": 50,  // 目标参与人数
+            'wxa_image_url': "https://kg.erp.taihuoniao.com/20180314/Fk1vEAP_tIVwmPRfHRfl8jpn07CZ.png",  // 小程序码
+        },
+        "status": {
+            "code": 200,
+            "message": "Ok all right."
+        },
+        "success": true
+    }
+
 
 
 正在活动中的优惠券列表
