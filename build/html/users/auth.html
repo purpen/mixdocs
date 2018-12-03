@@ -120,6 +120,7 @@
 <li class="toctree-l2"><a class="reference internal" href="../market/banners.html">营销工具/广告模块</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../market/coupons.html">营销工具/优惠券模块</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../market/bonus_question.html">营销工具/猜题赢现金</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../market/yiyuan.html">营销工具/一元送礼模块</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="../stats/index.html">统计API模块</a><ul>
@@ -274,6 +275,12 @@
 <li><a class="reference internal" href="#id50">返回示例</a></li>
 </ul>
 </li>
+<li><a class="reference internal" href="#id51">app微信授权登陆</a><ul>
+<li><a class="reference internal" href="#id52">接口说明</a></li>
+<li><a class="reference internal" href="#id53">请求参数</a></li>
+<li><a class="reference internal" href="#id54">返回示例</a></li>
+</ul>
+</li>
 </ul>
 </li>
 </ul>
@@ -381,6 +388,12 @@
 <li><a class="reference internal" href="#id48">接口说明</a></li>
 <li><a class="reference internal" href="#id49">请求参数</a></li>
 <li><a class="reference internal" href="#id50">返回示例</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#id51">app微信授权登陆</a><ul>
+<li><a class="reference internal" href="#id52">接口说明</a></li>
+<li><a class="reference internal" href="#id53">请求参数</a></li>
+<li><a class="reference internal" href="#id54">返回示例</a></li>
 </ul>
 </li>
 </ul>
@@ -1207,19 +1220,25 @@
 </tr>
 </thead>
 <tbody valign="top">
-<tr class="row-even"><td>areacode</td>
+<tr class="row-even"><td>openid</td>
+<td>String</td>
+<td>可选</td>
+<td>&#160;</td>
+<td>微信登陆需传参数</td>
+</tr>
+<tr class="row-odd"><td>areacode</td>
 <td>String</td>
 <td>可选</td>
 <td>+86</td>
 <td>区号</td>
 </tr>
-<tr class="row-odd"><td>email</td>
+<tr class="row-even"><td>email</td>
 <td>String</td>
 <td>必须</td>
 <td>&#160;</td>
 <td>手机号</td>
 </tr>
-<tr class="row-even"><td>verify_code</td>
+<tr class="row-odd"><td>verify_code</td>
 <td>String</td>
 <td>必须</td>
 <td>&#160;</td>
@@ -1236,12 +1255,11 @@
     <span class="s2">&quot;data&quot;</span><span class="o">:</span> <span class="p">{</span>
         <span class="s2">&quot;avatar&quot;</span><span class="o">:</span> <span class="s2">&quot;http://0.0.0.0:9000/_uploads/photos/static/img/default2-logo-180x180.png&quot;</span><span class="p">,</span>  <span class="c1">// 头像</span>
         <span class="s2">&quot;created_at&quot;</span><span class="o">:</span> <span class="mi">1533178967</span><span class="p">,</span>
-        <span class="s2">&quot;expiration&quot;</span><span class="o">:</span> <span class="mi">2592000</span><span class="p">,</span>
+        <span class="s2">&quot;expiration&quot;</span><span class="o">:</span> <span class="mi">2592000</span><span class="p">,</span>  <span class="c1">// 有效期30天</span>
         <span class="s2">&quot;is_small_b&quot;</span><span class="o">:</span> <span class="kc">false</span><span class="p">,</span>  <span class="c1">// 是不是小b</span>
         <span class="s2">&quot;is_first_login&quot;</span><span class="o">:</span> <span class="kc">false</span><span class="p">,</span>
         <span class="s2">&quot;is_supplier&quot;</span><span class="o">:</span> <span class="kc">false</span><span class="p">,</span>  <span class="c1">// 是不是商家</span>
-        <span class="s2">&quot;mobile&quot;</span><span class="o">:</span> <span class="s2">&quot;+86-13645647894&quot;</span><span class="p">,</span>
-        <span class="s2">&quot;store_rid&quot;</span><span class="o">:</span> <span class="s2">&quot;&quot;</span><span class="p">,</span>  <span class="c1">// 店铺id</span>
+        <span class="s2">&quot;store_rid&quot;</span><span class="o">:</span> <span class="s2">&quot;&quot;</span><span class="p">,</span>  <span class="c1">// 生活馆id</span>
         <span class="s2">&quot;token&quot;</span><span class="o">:</span> <span class="s2">&quot;eyJhbGciOiJIUzI1NiIsImlhdCI6MTUzMzE3ODk2NywiZXhwIjoxNTM1NzcwOTY3fQ.eyJpZCI6Mn0.YGTBoGb8OZS_S98OOwviDA9fwZC8Brni8mIAiGFzRq4&quot;</span><span class="p">,</span>
         <span class="s2">&quot;uid&quot;</span><span class="o">:</span> <span class="s2">&quot;17048395612&quot;</span><span class="p">,</span>
         <span class="s2">&quot;username&quot;</span><span class="o">:</span> <span class="s2">&quot;wdd&quot;</span>  <span class="c1">// 用户名</span>
@@ -1421,6 +1439,104 @@
         <span class="s2">&quot;message&quot;</span><span class="o">:</span> <span class="s2">&quot;请先上传头像&quot;</span>
     <span class="p">},</span>
     <span class="s2">&quot;success&quot;</span><span class="o">:</span> <span class="kc">false</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="id51">
+<h2>app微信授权登陆<a class="headerlink" href="#id51" title="永久链接至标题">¶</a></h2>
+<div class="section" id="id52">
+<h3>接口说明<a class="headerlink" href="#id52" title="永久链接至标题">¶</a></h3>
+<ul class="simple">
+<li>API接口请求地址：<code class="docutils literal"><span class="pre">/auth/app_bind_wx</span></code></li>
+<li>API接口请求方法：<code class="docutils literal"><span class="pre">POST</span></code></li>
+</ul>
+</div>
+<div class="section" id="id53">
+<h3>请求参数<a class="headerlink" href="#id53" title="永久链接至标题">¶</a></h3>
+<table border="1" class="docutils">
+<colgroup>
+<col width="15%" />
+<col width="11%" />
+<col width="13%" />
+<col width="11%" />
+<col width="50%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">名称</th>
+<th class="head">类型</th>
+<th class="head">是否必须</th>
+<th class="head">默认值</th>
+<th class="head">描述说明</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>openid</td>
+<td>String</td>
+<td>必须</td>
+<td>&#160;</td>
+<td>用户微信标识</td>
+</tr>
+<tr class="row-odd"><td>nick_name</td>
+<td>String</td>
+<td>可选</td>
+<td>&#160;</td>
+<td>用户名</td>
+</tr>
+<tr class="row-even"><td>avatar_url</td>
+<td>String</td>
+<td>可选</td>
+<td>&#160;</td>
+<td>用户头像链接</td>
+</tr>
+<tr class="row-odd"><td>gender</td>
+<td>String</td>
+<td>可选</td>
+<td>&#160;</td>
+<td>性别</td>
+</tr>
+<tr class="row-even"><td>unionid</td>
+<td>String</td>
+<td>可选</td>
+<td>&#160;</td>
+<td>用户唯一标识</td>
+</tr>
+<tr class="row-odd"><td>country</td>
+<td>String</td>
+<td>可选</td>
+<td>&#160;</td>
+<td>国家</td>
+</tr>
+<tr class="row-even"><td>province</td>
+<td>String</td>
+<td>可选</td>
+<td>&#160;</td>
+<td>省</td>
+</tr>
+<tr class="row-odd"><td>city</td>
+<td>String</td>
+<td>可选</td>
+<td>&#160;</td>
+<td>市</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="id54">
+<h3>返回示例<a class="headerlink" href="#id54" title="永久链接至标题">¶</a></h3>
+<p>JSON数据格式:</p>
+<p>请求 <strong>正确</strong> 返回结果：</p>
+<div class="highlight-javascript"><div class="highlight"><pre><span></span><span class="p">{</span>
+    <span class="s2">&quot;data&quot;</span><span class="o">:</span> <span class="p">{</span>
+        <span class="s2">&quot;is_bind&quot;</span><span class="o">:</span> <span class="kc">false</span><span class="p">,</span>  <span class="c1">//  是否授权过   为false跳转到动态码登陆</span>
+        <span class="s2">&quot;openid&quot;</span><span class="o">:</span> <span class="s2">&quot;oDlWe-nTb2RKSKbIHPQPg1B-Pk&quot;</span>
+    <span class="p">},</span>
+    <span class="s2">&quot;status&quot;</span><span class="o">:</span> <span class="p">{</span>
+        <span class="s2">&quot;code&quot;</span><span class="o">:</span> <span class="mi">200</span><span class="p">,</span>
+        <span class="s2">&quot;message&quot;</span><span class="o">:</span> <span class="s2">&quot;Ok all right.&quot;</span>
+    <span class="p">},</span>
+    <span class="s2">&quot;success&quot;</span><span class="o">:</span> <span class="kc">true</span>
 <span class="p">}</span>
 </pre></div>
 </div>

@@ -925,3 +925,63 @@ JSON数据格式:
         "success": true
     }
 
+
+商家查看活动详情
+----------------------
+商家查看活动详情
+
+接口说明
+~~~~~~~~~~~~~~
+
+* API接口请求地址：``/yiyuan/master``
+* API接口请求方法：``POST``
+
+
+请求参数
+~~~~~~~~~~~~~~~
+
+=====================  ===========  ==========  ===========  ==============================
+名称                    类型          是否必须      默认值        描述说明
+=====================  ===========  ==========  ===========  ==============================
+rid                    String        必需                      活动rid
+auth_app_id            String        必需                      小程序id
+path                   String        必需                      访问路径
+=====================  ===========  ==========  ===========  ==============================
+
+
+返回示例
+~~~~~~~~~~~~~~~~
+
+JSON数据格式:
+
+.. code-block:: javascript
+
+
+    {
+        "data": {
+            "blessing": "哈哈哈哈",
+            "current_time": 1543808758,
+            "days": 3,
+            "end_at": 1543665172,
+            "people_count": 1,
+            "product": {
+                "cover": "https://s3.lexivip.com/20181107/4917Fv-5K9wdFTXgV13g-nfMTvXrnNb1.jpg",
+                "price": 252,
+                "product_name": "2018年新款男士休闲连帽夹克",
+                "product_rid": "8703186425",
+                "real_price": 252,
+                "sale_price": 0
+            },
+            "start_time": 1543405988,
+            "status": 3,
+            "total_people_count": 50,
+            'wxa_image_url': "https://kg.erp.taihuoniao.com/20180314/Fk1vEAP_tIVwmPRfHRfl8jpn07CZ.png",
+        },
+        "status": {
+            "code": 200,
+            "message": "Ok all right."
+        },
+        "success": true
+    }
+
+
