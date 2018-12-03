@@ -1019,6 +1019,7 @@ JSON数据格式:
             "province_id": 1,
             "uid": "19138405762",
             "username": "盖世火锅" // 用户名
+            "is_bind_wx": true   // 是否绑定过微信
         },
         "status": {
             "code": 200,
