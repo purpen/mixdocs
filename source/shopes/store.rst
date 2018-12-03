@@ -3,6 +3,60 @@
 ================
 
 
+获取品牌馆资质
+--------------------------
+
+
+接口说明
+~~~~~~~~~~~~~~
+
+* API接口请求地址：``/users/get_company_qualification``
+* API接口请求方法：``GET``
+
+请求参数
+~~~~~~~~~~~~~~~
+
+===============  ========  =========  ========  ====================================
+名称              类型      是否必须    默认值     描述说明
+===============  ========  =========  ========  ====================================
+rid               String     必须                  品牌馆编号
+image_code        String     必须                  图片验证码
+===============  ========  =========  ========  ====================================
+
+JSON数据格式
+
+请求 **正确** 返回结果：
+
+.. code-block:: javascript
+
+    {
+        "data": {
+            "company_qualification": [
+                {
+                    "created_at": 1538054045,
+                    "filename": "IMG_20180517_193448.jpg",
+                    "filepath": "20180927/1404FlP2COvkWjLqx69DSBGa-ri99XJB.jpg",
+                    "id": 24645,
+                    "type": 1,
+                    "view_url": "https://s3.lexivip.com/20180927/1404FlP2COvkWjLqx69DSBGa-ri99XJB.jpg"   // 资质链接
+                },
+                {
+                    "created_at": 1538054087,
+                    "filename": "IMG_20180517_193448.jpg",
+                    "filepath": "20180927/1446FlP2COvkWjLqx69DSBGa-ri99XJB.jpg",
+                    "id": 24646,
+                    "type": 1,
+                    "view_url": "https://s3.lexivip.com/20180927/1446FlP2COvkWjLqx69DSBGa-ri99XJB.jpg"  // 资质链接
+                }
+            ]
+        },
+        "status": {
+            "code": 200,
+            "message": "Ok all right."
+        },
+        "success": true
+    }
+
 获取合同签署日期
 --------------------------
 
