@@ -530,33 +530,10 @@ JSON数据格式
 
     {
         "data": {
-            "area": "", // 区域
-            "area_id": null, // 区域ID
-            "areacode": null,  // 区号
-            "avatar": {
-                "created_at": null,
-                "filename": "d",
-                "filepath": "static/img/default-logo-180x180.png",
-                "id": 1,
-                "type": null,
-                "view_url": "http://0.0.0.0:9000/_uploads/photos/static/img/default-logo-180x180.png"
-            },  // 认证头像url
-            "avatar_id": 1,  // 认证头像ID
-            "brand_name": null,
-            "city": "",  // 城市
-            "city_id": null,  // 城市ID
-            "country": "", // 国家
-            "country_id": null,  // 国家ID
-            "email": null,  // 邮箱
-            "id": 1,
-            "label_libraries": [], // 商品标签
-            "mobile": null, // 手机号
-            "name": "张飞", // 认证姓名
-            "province": "", // 省
-            "province_id": null,
-            "user_identity": 1 // 用户身份, 1、独立设计师；2、艺术家；3、手做人；4、业余设计师(原创设计达人):11、原创商户经营
-            "user_avatar": "http://0.0.0.0:9000/_uploads/photos/FlHKgXPzqwjPC7pD5Z_SfdL0R8hE",  // 用户头像
-            "username": "wdd"  // 用户名称
+            "has_qualification": false,   // 是否有资质
+            "user_avatar": "https://s3.lexivip.com/20180905/0127FrUvfqbyfnc-lnOdommJAqHw1Oh3.jpeg", // 头像
+            "user_identity": 1,  // 用户身份, 1、独立设计师；2、艺术家；3、手做人；4、业余设计师(原创设计达人):11、原创商户经营
+            "username": "田孝义"  // 用户名
         },
         "status": {
             "code": 200,
@@ -609,7 +586,8 @@ JSON数据格式
         "data": {
             "user_avatar": "http://0.0.0.0:9000/_uploads/photos/FlHKgXPzqwjPC7pD5Z_SfdL0R8hE",  // 用户头像
             "user_identity": 1,  // 用户身份, 1、独立设计师；2、艺术家；3、手做人；4、业余设计师(原创设计达人):11、原创商户经营
-            "username": "wdd"  // 用户名
+            "username": "wdd",  // 用户名
+            "has_qualification": false   // 是否有资质
         },
         "status": {
             "code": 200,
@@ -2251,6 +2229,8 @@ JSON数据格式
             "name": "雨一直下" , //  生活馆名称
             "phases": 1,  // 生活馆阶段: 1、实习馆主  2、达人馆主
             "phases_description": "成功在30天内销售3笔订单即可成为正式的达人馆主哦， 如一个月内未达标准生活馆将被关闭， 如重新申请需单独联系乐喜辅导员申请。"
+            "visit_times": 289,  // 访问次数
+            "visitor_count": 77  // 访问人数
         },
         "status": {
             "code": 200,
