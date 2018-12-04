@@ -68,7 +68,8 @@ JSON数据格式:
                     "start_date": 1543498747,  // 开始时间
                     "product_name": "测试产品02",  // 商品名称
                     "current_time": 1543804523,  // 当前时间
-                    "type": 4  // 4、一元送礼活动
+                    "type": 4,  // 4、一元送礼活动
+                    "user_kind": 1,  // 1、品牌馆  2、生活馆  3、普通用户
                 }
             ],
             "count": 3,
@@ -169,6 +170,11 @@ JSON数据格式:
                 "product_rid": "8703186425",
                 "real_price": 252,
                 "sale_price": 0
+            },
+            "user_info": {  // 中奖人信息
+                "user_logo": "https://s3.lexivip.com/20181101/2251FgKdtFrFPWjJYew4aROzCOBB6IMP.jpg",
+                "user_name": "蓝胖子",
+                "user_sn": "10296157834"
             },
             "start_time": 1543405988,  // 开始时间
             "status": 3,  // 2、抽奖中 3、开奖成功 4、已失效
