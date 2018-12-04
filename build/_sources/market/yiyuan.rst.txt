@@ -407,7 +407,8 @@ JSON数据格式:
                     "user_logo": "https://s3.lexivip.com/20181101/2251FgKdtFrFPWjJYew4aROzCOBB6IMP.jpg",
                     "user_name": "蓝胖子",
                     "cover": "https://s3.lexivip.com/20181107/0618Fp2ThUtpaN-7O3N8f5BJ0_3eciIS.jpg",  // 商品图
-                    "user_sn": "10296157834"
+                    "user_sn": "10296157834",
+                    'user_kind': 1  // 1、品牌馆  2、生活馆  3、普通用户
                 }
             ]
         },
