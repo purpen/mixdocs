@@ -2,6 +2,61 @@
 用户模块
 =========
 
+获得红包用户列表
+--------------------------
+
+
+接口说明
+~~~~~~~~~~~~~~
+
+* API接口请求地址：``/win_cash/get_wallet_users``
+* API接口请求方法：``GET``
+
+JSON数据格式
+
+请求 **正确** 返回结果：
+
+.. code-block:: javascript
+
+    {
+        "data": [
+            {
+                "amount": 5,  // 获得红包金额
+                "username": "fIzzy"  // 用户名
+            },
+            {
+                "amount": 3,
+                "username": "哆啦"
+            },
+
+            {
+                "amount": 5,
+                "username": "改叫王小呆吧"
+            },
+            {
+                "amount": 5,
+                "username": "怪我"
+            },
+            {
+                "amount": 2,
+                "username": "James"
+            },
+            {
+                "amount": 10,
+                "username": "汤圆"
+            },
+            {
+                "amount": 10,
+                "username": "揪位姐妹"
+            }
+        ],
+        "status": {
+            "code": 200,
+            "message": "Ok all right."
+        },
+        "success": true
+    }
+
 
 获取邀请人信息
 --------------------------
@@ -30,7 +85,6 @@ JSON数据格式
 
     {
         "data": {
-            "amount": 0,   // 邀请好友已获得金额
             "avatar": "https://s3.lexivip.com/20181026/0529FjOQZvn5EbRuGU3NboM8q7AOyETQ.jpg",  // 头像
             "username": "蘑菇蘑菇"  // 用户名
         },
