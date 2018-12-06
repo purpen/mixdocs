@@ -11,7 +11,7 @@
 ~~~~~~~~~~~~~~
 
 * API接口请求地址：``/users/get_company_qualification``
-* API接口请求方法：``GET``
+* API接口请求方法：``POST``
 
 请求参数
 ~~~~~~~~~~~~~~~
