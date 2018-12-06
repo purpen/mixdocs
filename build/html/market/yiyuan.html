@@ -308,6 +308,12 @@
 <li><a class="reference internal" href="#id73">返回示例</a></li>
 </ul>
 </li>
+<li><a class="reference internal" href="#id74">更多礼物</a><ul>
+<li><a class="reference internal" href="#id75">接口说明</a></li>
+<li><a class="reference internal" href="#id76">请求参数</a></li>
+<li><a class="reference internal" href="#id77">返回示例</a></li>
+</ul>
+</li>
 </ul>
 </li>
 </ul>
@@ -448,6 +454,12 @@
 <li><a class="reference internal" href="#id71">接口说明</a></li>
 <li><a class="reference internal" href="#id72">请求参数</a></li>
 <li><a class="reference internal" href="#id73">返回示例</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#id74">更多礼物</a><ul>
+<li><a class="reference internal" href="#id75">接口说明</a></li>
+<li><a class="reference internal" href="#id76">请求参数</a></li>
+<li><a class="reference internal" href="#id77">返回示例</a></li>
 </ul>
 </li>
 </ul>
@@ -1810,6 +1822,79 @@
                 <span class="s2">&quot;user_name&quot;</span><span class="o">:</span> <span class="s2">&quot;蓝胖子&quot;</span><span class="p">,</span>
                 <span class="s2">&quot;user_sn&quot;</span><span class="o">:</span> <span class="s2">&quot;10296157834&quot;</span><span class="p">,</span>
                 <span class="s2">&quot;winning_at&quot;</span><span class="o">:</span> <span class="mi">1543499243</span>  <span class="c1">// 中奖时间</span>
+            <span class="p">}</span>
+        <span class="p">]</span>
+    <span class="p">},</span>
+    <span class="s2">&quot;status&quot;</span><span class="o">:</span> <span class="p">{</span>
+        <span class="s2">&quot;code&quot;</span><span class="o">:</span> <span class="mi">200</span><span class="p">,</span>
+        <span class="s2">&quot;message&quot;</span><span class="o">:</span> <span class="s2">&quot;Ok all right.&quot;</span>
+    <span class="p">},</span>
+    <span class="s2">&quot;success&quot;</span><span class="o">:</span> <span class="kc">true</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="id74">
+<h2>更多礼物<a class="headerlink" href="#id74" title="永久链接至标题">¶</a></h2>
+<p>更多礼物</p>
+<div class="section" id="id75">
+<h3>接口说明<a class="headerlink" href="#id75" title="永久链接至标题">¶</a></h3>
+<ul class="simple">
+<li>API接口请求地址：<code class="docutils literal"><span class="pre">/yiyuan/product/more</span></code></li>
+<li>API接口请求方法：<code class="docutils literal"><span class="pre">GET</span></code></li>
+</ul>
+</div>
+<div class="section" id="id76">
+<h3>请求参数<a class="headerlink" href="#id76" title="永久链接至标题">¶</a></h3>
+<table border="1" class="docutils">
+<colgroup>
+<col width="18%" />
+<col width="12%" />
+<col width="11%" />
+<col width="12%" />
+<col width="48%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">名称</th>
+<th class="head">类型</th>
+<th class="head">是否必须</th>
+<th class="head">默认值</th>
+<th class="head">描述说明</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>page</td>
+<td>Number</td>
+<td>可选</td>
+<td>1</td>
+<td>当前页码</td>
+</tr>
+<tr class="row-odd"><td>per_page</td>
+<td>Number</td>
+<td>可选</td>
+<td>10</td>
+<td>每页数量</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="id77">
+<h3>返回示例<a class="headerlink" href="#id77" title="永久链接至标题">¶</a></h3>
+<p>JSON数据格式:</p>
+<div class="highlight-javascript"><div class="highlight"><pre><span></span><span class="p">{</span>
+    <span class="s2">&quot;data&quot;</span><span class="o">:</span> <span class="p">{</span>
+        <span class="s2">&quot;count&quot;</span><span class="o">:</span> <span class="mi">1</span><span class="p">,</span>
+        <span class="s2">&quot;next&quot;</span><span class="o">:</span> <span class="kc">false</span><span class="p">,</span>
+        <span class="s2">&quot;prev&quot;</span><span class="o">:</span> <span class="kc">false</span><span class="p">,</span>
+        <span class="s2">&quot;user_list&quot;</span><span class="o">:</span> <span class="p">[</span>
+            <span class="p">{</span>
+                <span class="s2">&quot;cover&quot;</span><span class="o">:</span> <span class="s2">&quot;https://s3.lexivip.com/20181107/4917Fv-5K9wdFTXgV13g-nfMTvXrnNb1.jpg&quot;</span><span class="p">,</span> <span class="c1">// 商品图</span>
+                <span class="s2">&quot;price&quot;</span><span class="o">:</span> <span class="mi">252</span><span class="p">,</span> <span class="c1">// 价格</span>
+                <span class="s2">&quot;product_name&quot;</span><span class="o">:</span> <span class="s2">&quot;2018年新款男士休闲连帽夹克&quot;</span><span class="p">,</span> <span class="c1">// 商品名</span>
+                <span class="s2">&quot;product_rid&quot;</span><span class="o">:</span> <span class="s2">&quot;8703186425&quot;</span><span class="p">,</span> <span class="c1">// 商品rid</span>
+                <span class="s2">&quot;real_price&quot;</span><span class="o">:</span> <span class="mi">252</span><span class="p">,</span>
+                <span class="s2">&quot;sale_price&quot;</span><span class="o">:</span> <span class="mi">0</span>
             <span class="p">}</span>
         <span class="p">]</span>
     <span class="p">},</span>
