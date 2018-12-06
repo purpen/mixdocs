@@ -314,6 +314,12 @@
 <li><a class="reference internal" href="#id77">返回示例</a></li>
 </ul>
 </li>
+<li><a class="reference internal" href="#id78">放弃领取奖励</a><ul>
+<li><a class="reference internal" href="#id79">接口说明</a></li>
+<li><a class="reference internal" href="#id80">请求参数</a></li>
+<li><a class="reference internal" href="#id81">返回示例</a></li>
+</ul>
+</li>
 </ul>
 </li>
 </ul>
@@ -460,6 +466,12 @@
 <li><a class="reference internal" href="#id75">接口说明</a></li>
 <li><a class="reference internal" href="#id76">请求参数</a></li>
 <li><a class="reference internal" href="#id77">返回示例</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#id78">放弃领取奖励</a><ul>
+<li><a class="reference internal" href="#id79">接口说明</a></li>
+<li><a class="reference internal" href="#id80">请求参数</a></li>
+<li><a class="reference internal" href="#id81">返回示例</a></li>
 </ul>
 </li>
 </ul>
@@ -855,6 +867,7 @@
     <span class="s2">&quot;data&quot;</span><span class="o">:</span> <span class="p">{</span>
         <span class="s2">&quot;expired_receive&quot;</span><span class="o">:</span> <span class="kc">true</span><span class="p">,</span>  <span class="c1">// 是否可以领取奖励, 开奖5天不可领取</span>
         <span class="s2">&quot;is_join&quot;</span><span class="o">:</span> <span class="kc">true</span><span class="p">,</span>  <span class="c1">// 是否参与</span>
+        <span class="s2">&quot;is_quit&quot;</span><span class="o">:</span> <span class="kc">false</span><span class="p">,</span>  <span class="c1">// 是否放弃领奖</span>
         <span class="s2">&quot;is_receive&quot;</span><span class="o">:</span> <span class="kc">true</span><span class="p">,</span>  <span class="c1">// 是否领奖</span>
         <span class="s2">&quot;is_winner&quot;</span><span class="o">:</span> <span class="kc">true</span><span class="p">,</span>  <span class="c1">// 是否中奖</span>
         <span class="s2">&quot;status&quot;</span><span class="o">:</span> <span class="mi">3</span><span class="p">,</span>  <span class="c1">// 活动状态 2、抽奖中 3、开奖成功 4、已失效</span>
@@ -1082,6 +1095,7 @@
                 <span class="s2">&quot;created_at&quot;</span><span class="o">:</span> <span class="mi">1543225329</span><span class="p">,</span>  <span class="c1">// 参与时间</span>
                 <span class="s2">&quot;full_count&quot;</span><span class="o">:</span> <span class="mi">20</span><span class="p">,</span>  <span class="c1">// 满足人数</span>
                 <span class="s2">&quot;is_receive&quot;</span><span class="o">:</span> <span class="mi">0</span><span class="p">,</span>  <span class="c1">// 是否领奖 0、未领奖 1、已领奖</span>
+                <span class="s2">&quot;is_quit&quot;</span><span class="o">:</span> <span class="mi">0</span><span class="p">,</span>  <span class="c1">// 是否放弃领奖 0、未放弃 1、已放弃</span>
                 <span class="s2">&quot;join_count&quot;</span><span class="o">:</span> <span class="mi">1</span><span class="p">,</span>  <span class="c1">// 参与人数</span>
                 <span class="s2">&quot;product_name&quot;</span><span class="o">:</span> <span class="s2">&quot;2018年冬季新款男士个性加绒拼接棉衣&quot;</span><span class="p">,</span>  <span class="c1">// 商品名</span>
                 <span class="s2">&quot;product_rid&quot;</span><span class="o">:</span> <span class="s2">&quot;8537216804&quot;</span><span class="p">,</span>  <span class="c1">// 商品rid</span>
@@ -1367,6 +1381,7 @@
     <span class="s2">&quot;data&quot;</span><span class="o">:</span> <span class="p">{</span>
         <span class="s2">&quot;activity_rid&quot;</span><span class="o">:</span> <span class="s2">&quot;Y18112357682&quot;</span><span class="p">,</span>  <span class="c1">// 活动编号</span>
         <span class="s2">&quot;actual_payment&quot;</span><span class="o">:</span> <span class="mi">1</span><span class="p">,</span>  <span class="c1">// 实际支付金额</span>
+        <span class="s2">&quot;no_stock&quot;</span><span class="o">:</span> <span class="kc">false</span><span class="p">,</span> <span class="c1">// 是否没有官方库存</span>
         <span class="s2">&quot;pay_params&quot;</span><span class="o">:</span> <span class="p">{}</span>
     <span class="p">},</span>
     <span class="s2">&quot;status&quot;</span><span class="o">:</span> <span class="p">{</span>
@@ -1904,6 +1919,53 @@
     <span class="p">},</span>
     <span class="s2">&quot;success&quot;</span><span class="o">:</span> <span class="kc">true</span>
 <span class="p">}</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="id78">
+<h2>放弃领取奖励<a class="headerlink" href="#id78" title="永久链接至标题">¶</a></h2>
+<p>放弃领取奖励</p>
+<div class="section" id="id79">
+<h3>接口说明<a class="headerlink" href="#id79" title="永久链接至标题">¶</a></h3>
+<ul class="simple">
+<li>API接口请求地址：<code class="docutils literal"><span class="pre">/yiyuan/activity/quit</span></code></li>
+<li>API接口请求方法：<code class="docutils literal"><span class="pre">POST</span></code></li>
+<li>API接口用户授权：<code class="docutils literal"><span class="pre">token</span></code></li>
+</ul>
+</div>
+<div class="section" id="id80">
+<h3>请求参数<a class="headerlink" href="#id80" title="永久链接至标题">¶</a></h3>
+<table border="1" class="docutils">
+<colgroup>
+<col width="18%" />
+<col width="12%" />
+<col width="11%" />
+<col width="12%" />
+<col width="48%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">名称</th>
+<th class="head">类型</th>
+<th class="head">是否必须</th>
+<th class="head">默认值</th>
+<th class="head">描述说明</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>rid</td>
+<td>String</td>
+<td>必需</td>
+<td>&#160;</td>
+<td>活动rid</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="id81">
+<h3>返回示例<a class="headerlink" href="#id81" title="永久链接至标题">¶</a></h3>
+<p>JSON数据格式:</p>
+<div class="highlight-javascript"><div class="highlight"><pre><span></span>
 </pre></div>
 </div>
 </div>
