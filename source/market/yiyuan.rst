@@ -1072,7 +1072,11 @@ JSON数据格式:
 .. code-block:: javascript
 
 
-
-
-
+    {
+        "status": {
+            "code": 200,
+            "message": "Ok all right."
+        },
+        "success": true
+    }
 
