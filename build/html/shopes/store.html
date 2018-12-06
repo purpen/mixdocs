@@ -408,6 +408,12 @@
 <li><a class="reference internal" href="#id135">返回示例</a></li>
 </ul>
 </li>
+<li><a class="reference internal" href="#id136">关闭生活馆文案</a><ul>
+<li><a class="reference internal" href="#id137">接口说明</a></li>
+<li><a class="reference internal" href="#id138">请求参数</a></li>
+<li><a class="reference internal" href="#id139">返回示例</a></li>
+</ul>
+</li>
 </ul>
 </li>
 </ul>
@@ -648,6 +654,12 @@
 <li><a class="reference internal" href="#id133">接口说明</a></li>
 <li><a class="reference internal" href="#id134">请求参数</a></li>
 <li><a class="reference internal" href="#id135">返回示例</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#id136">关闭生活馆文案</a><ul>
+<li><a class="reference internal" href="#id137">接口说明</a></li>
+<li><a class="reference internal" href="#id138">请求参数</a></li>
+<li><a class="reference internal" href="#id139">返回示例</a></li>
 </ul>
 </li>
 </ul>
@@ -3429,6 +3441,7 @@
         <span class="s2">&quot;phases_description&quot;</span><span class="o">:</span> <span class="s2">&quot;成功在30天内销售3笔订单即可成为正式的达人馆主哦， 如一个月内未达标准生活馆将被关闭， 如重新申请需单独联系乐喜辅导员申请。&quot;</span>
         <span class="s2">&quot;visit_times&quot;</span><span class="o">:</span> <span class="mi">289</span><span class="p">,</span>  <span class="c1">// 访问次数</span>
         <span class="s2">&quot;visitor_count&quot;</span><span class="o">:</span> <span class="mi">77</span>  <span class="c1">// 访问人数</span>
+        <span class="s2">&quot;close_description&quot;</span><span class="o">:</span> <span class="kc">false</span><span class="p">,</span>   <span class="c1">// 关闭生活馆文案提示</span>
     <span class="p">},</span>
     <span class="s2">&quot;status&quot;</span><span class="o">:</span> <span class="p">{</span>
         <span class="s2">&quot;code&quot;</span><span class="o">:</span> <span class="mi">200</span><span class="p">,</span>
@@ -3518,6 +3531,59 @@
         <span class="s2">&quot;message&quot;</span><span class="o">:</span> <span class="s2">&quot;参数错误&quot;</span>
     <span class="p">},</span>
     <span class="s2">&quot;success&quot;</span><span class="o">:</span> <span class="kc">false</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="id136">
+<h2>关闭生活馆文案<a class="headerlink" href="#id136" title="永久链接至标题">¶</a></h2>
+<div class="section" id="id137">
+<h3>接口说明<a class="headerlink" href="#id137" title="永久链接至标题">¶</a></h3>
+<ul class="simple">
+<li>API接口请求地址：<code class="docutils literal"><span class="pre">/store/close_phases_description</span></code></li>
+<li>API接口请求方法：<code class="docutils literal"><span class="pre">POST</span></code></li>
+<li>API接口用户授权：<code class="docutils literal"><span class="pre">token</span></code></li>
+</ul>
+</div>
+<div class="section" id="id138">
+<h3>请求参数<a class="headerlink" href="#id138" title="永久链接至标题">¶</a></h3>
+<table border="1" class="docutils">
+<colgroup>
+<col width="21%" />
+<col width="10%" />
+<col width="9%" />
+<col width="10%" />
+<col width="49%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">名称</th>
+<th class="head">类型</th>
+<th class="head">是否必须</th>
+<th class="head">默认值</th>
+<th class="head">描述说明</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>rid</td>
+<td>String</td>
+<td>必须</td>
+<td>&#160;</td>
+<td>生活馆编号</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="id139">
+<h3>返回示例<a class="headerlink" href="#id139" title="永久链接至标题">¶</a></h3>
+<p>JSON数据格式</p>
+<p>请求 <strong>正确</strong> 返回结果：</p>
+<div class="highlight-javascript"><div class="highlight"><pre><span></span><span class="p">{</span>
+    <span class="s2">&quot;status&quot;</span><span class="o">:</span> <span class="p">{</span>
+        <span class="s2">&quot;code&quot;</span><span class="o">:</span> <span class="mi">200</span><span class="p">,</span>
+        <span class="s2">&quot;message&quot;</span><span class="o">:</span> <span class="s2">&quot;Ok all right.&quot;</span>
+    <span class="p">},</span>
+    <span class="s2">&quot;success&quot;</span><span class="o">:</span> <span class="kc">true</span>
 <span class="p">}</span>
 </pre></div>
 </div>
