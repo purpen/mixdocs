@@ -543,14 +543,13 @@ JSON数据格式:
                 }
             ],
         },
+
         "status": {
             "code": 200,
             "message": "Ok all right."
         },
         "success": true
     }
-
-
 
 
 用户当前是否有活动
