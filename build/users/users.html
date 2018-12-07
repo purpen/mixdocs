@@ -497,6 +497,12 @@
 <li><a class="reference internal" href="#id191">返回示例</a></li>
 </ul>
 </li>
+<li><a class="reference internal" href="#app">app微信绑定</a><ul>
+<li><a class="reference internal" href="#id192">接口说明</a></li>
+<li><a class="reference internal" href="#id193">请求参数</a></li>
+<li><a class="reference internal" href="#id194">返回示例</a></li>
+</ul>
+</li>
 </ul>
 </li>
 </ul>
@@ -826,6 +832,12 @@
 <li><a class="reference internal" href="#id189">接口说明</a></li>
 <li><a class="reference internal" href="#id190">请求参数</a></li>
 <li><a class="reference internal" href="#id191">返回示例</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#app">app微信绑定</a><ul>
+<li><a class="reference internal" href="#id192">接口说明</a></li>
+<li><a class="reference internal" href="#id193">请求参数</a></li>
+<li><a class="reference internal" href="#id194">返回示例</a></li>
 </ul>
 </li>
 </ul>
@@ -4805,6 +4817,128 @@
         <span class="s2">&quot;message&quot;</span><span class="o">:</span> <span class="s2">&quot;Ok all right.&quot;</span>
     <span class="p">},</span>
     <span class="s2">&quot;success&quot;</span><span class="o">:</span> <span class="kc">true</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="app">
+<h2>app微信绑定<a class="headerlink" href="#app" title="永久链接至标题">¶</a></h2>
+<div class="section" id="id192">
+<h3>接口说明<a class="headerlink" href="#id192" title="永久链接至标题">¶</a></h3>
+<ul class="simple">
+<li>API接口请求地址：<code class="docutils literal"><span class="pre">/users/user_info_bind_wx</span></code></li>
+<li>API接口请求方法：<code class="docutils literal"><span class="pre">POST</span></code></li>
+<li>API接口用户授权：<code class="docutils literal"><span class="pre">token</span></code></li>
+</ul>
+</div>
+<div class="section" id="id193">
+<h3>请求参数<a class="headerlink" href="#id193" title="永久链接至标题">¶</a></h3>
+<table border="1" class="docutils">
+<colgroup>
+<col width="15%" />
+<col width="11%" />
+<col width="13%" />
+<col width="11%" />
+<col width="50%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">名称</th>
+<th class="head">类型</th>
+<th class="head">是否必须</th>
+<th class="head">默认值</th>
+<th class="head">描述说明</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>openid</td>
+<td>String</td>
+<td>必须</td>
+<td>&#160;</td>
+<td>用户微信标识</td>
+</tr>
+<tr class="row-odd"><td>nick_name</td>
+<td>String</td>
+<td>可选</td>
+<td>&#160;</td>
+<td>用户名</td>
+</tr>
+<tr class="row-even"><td>avatar_url</td>
+<td>String</td>
+<td>可选</td>
+<td>&#160;</td>
+<td>用户头像链接</td>
+</tr>
+<tr class="row-odd"><td>gender</td>
+<td>String</td>
+<td>可选</td>
+<td>&#160;</td>
+<td>性别</td>
+</tr>
+<tr class="row-even"><td>unionid</td>
+<td>String</td>
+<td>可选</td>
+<td>&#160;</td>
+<td>用户唯一标识</td>
+</tr>
+<tr class="row-odd"><td>country</td>
+<td>String</td>
+<td>可选</td>
+<td>&#160;</td>
+<td>国家</td>
+</tr>
+<tr class="row-even"><td>province</td>
+<td>String</td>
+<td>可选</td>
+<td>&#160;</td>
+<td>省</td>
+</tr>
+<tr class="row-odd"><td>city</td>
+<td>String</td>
+<td>可选</td>
+<td>&#160;</td>
+<td>市</td>
+</tr>
+<tr class="row-even"><td>app_id</td>
+<td>String</td>
+<td>可选</td>
+<td>&#160;</td>
+<td>应用id</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="id194">
+<h3>返回示例<a class="headerlink" href="#id194" title="永久链接至标题">¶</a></h3>
+<p>JSON数据格式:</p>
+<p>请求 <strong>正确</strong> 返回结果：</p>
+<div class="highlight-javascript"><div class="highlight"><pre><span></span><span class="p">{</span>
+    <span class="s2">&quot;data&quot;</span><span class="o">:</span> <span class="p">{</span>
+        <span class="s2">&quot;avatar&quot;</span><span class="o">:</span> <span class="s2">&quot;https://s3.lexivip.com/20181113/2213FjvLhFAih37XmkwC4Ag2A_aZThdd.jpg&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;created_at&quot;</span><span class="o">:</span> <span class="mi">1544193284</span><span class="p">,</span>
+        <span class="s2">&quot;expiration&quot;</span><span class="o">:</span> <span class="mi">2592000</span><span class="p">,</span>
+        <span class="s2">&quot;is_bind&quot;</span><span class="o">:</span> <span class="kc">true</span><span class="p">,</span>
+        <span class="s2">&quot;mobile&quot;</span><span class="o">:</span> <span class="s2">&quot;13001179400&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;openid&quot;</span><span class="o">:</span> <span class="s2">&quot;juamckk&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;token&quot;</span><span class="o">:</span> <span class="s2">&quot;eyJhbGciOiJIUzI1NiIsImlhdCI6MTU0NDE5MzI4NCwiZXhwIjoxNTQ2Nzg1Mjg0fQ.eyJpZCI6M30.-YdXlLvDJiBFEuiyP0zR7n_jTrz_r4DducOpf1WugTk&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;uid&quot;</span><span class="o">:</span> <span class="s2">&quot;11278634905&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;username&quot;</span><span class="o">:</span> <span class="s2">&quot;æ²¡å¤´è\\x84\\x91å\\x92\\x8cä¸\\x8dé«\\x98å\\x85´&quot;</span>
+    <span class="p">},</span>
+    <span class="s2">&quot;status&quot;</span><span class="o">:</span> <span class="p">{</span>
+        <span class="s2">&quot;code&quot;</span><span class="o">:</span> <span class="mi">200</span><span class="p">,</span>
+        <span class="s2">&quot;message&quot;</span><span class="o">:</span> <span class="s2">&quot;Ok all right.&quot;</span>
+    <span class="p">},</span>
+    <span class="s2">&quot;success&quot;</span><span class="o">:</span> <span class="kc">true</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<p>请求 <code class="docutils literal"><span class="pre">失败</span></code> 返回结果：</p>
+<div class="highlight-javascript"><div class="highlight"><pre><span></span><span class="p">{</span>
+    <span class="s2">&quot;status&quot;</span><span class="o">:</span> <span class="p">{</span>
+        <span class="s2">&quot;code&quot;</span><span class="o">:</span> <span class="mi">400</span><span class="p">,</span>
+        <span class="s2">&quot;message&quot;</span><span class="o">:</span> <span class="s2">&quot;该微信已绑定&quot;</span>
+    <span class="p">},</span>
+    <span class="s2">&quot;success&quot;</span><span class="o">:</span> <span class="kc">false</span>
 <span class="p">}</span>
 </pre></div>
 </div>

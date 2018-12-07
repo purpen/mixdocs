@@ -687,6 +687,7 @@ JSON数据格式:
             "activity_rid": "Y18112357682",  // 活动编号
             "actual_payment": 1,  // 实际支付金额
             "no_stock": false, // 是否没有官方库存
+            "order_rid": "D214314253465", // 订单编号
             "pay_params": {}
         },
         "status": {

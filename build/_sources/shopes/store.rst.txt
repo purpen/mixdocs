@@ -644,6 +644,8 @@ JSON数据格式
             "rid": "97958360",  // 品牌馆编号
             "tag_line": "sdjkf"   // 宣传语
             "created_at":   // 品牌馆创建时间
+            "has_qualification": true,  // 是否有资质
+
         },
         "status": {
             "code": 200,

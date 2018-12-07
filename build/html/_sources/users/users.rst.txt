@@ -2964,3 +2964,72 @@ JSON数据格式:
         },
         "success": true
     }
+
+app微信绑定
+--------------------------------
+
+接口说明
+~~~~~~~~~~~~~~
+
+* API接口请求地址：``/users/user_info_bind_wx``
+* API接口请求方法：``POST``
+* API接口用户授权：``token``
+
+
+
+请求参数
+~~~~~~~~~~~~~~~
+
+===========  ========  =========  ========  ====================================
+名称          类型      是否必须    默认值     描述说明
+===========  ========  =========  ========  ====================================
+openid        String     必须                   用户微信标识
+nick_name     String     可选                   用户名
+avatar_url    String     可选                   用户头像链接
+gender        String     可选                   性别
+unionid       String     可选                   用户唯一标识
+country       String     可选                   国家
+province      String     可选                   省
+city          String     可选                   市
+app_id        String     可选                   应用id
+===========  ========  =========  ========  ====================================
+
+返回示例
+~~~~~~~~~~~~~~~~
+
+JSON数据格式:
+
+请求 **正确** 返回结果：
+
+.. code-block:: javascript
+
+    {
+        "data": {
+            "avatar": "https://s3.lexivip.com/20181113/2213FjvLhFAih37XmkwC4Ag2A_aZThdd.jpg",
+            "created_at": 1544193284,
+            "expiration": 2592000,
+            "is_bind": true,
+            "mobile": "13001179400",
+            "openid": "juamckk",
+            "token": "eyJhbGciOiJIUzI1NiIsImlhdCI6MTU0NDE5MzI4NCwiZXhwIjoxNTQ2Nzg1Mjg0fQ.eyJpZCI6M30.-YdXlLvDJiBFEuiyP0zR7n_jTrz_r4DducOpf1WugTk",
+            "uid": "11278634905",
+            "username": "æ²¡å¤´è\\x84\\x91å\\x92\\x8cä¸\\x8dé«\\x98å\\x85´"
+        },
+        "status": {
+            "code": 200,
+            "message": "Ok all right."
+        },
+        "success": true
+    }
+
+请求 ``失败`` 返回结果：
+
+.. code-block:: javascript
+
+    {
+        "status": {
+            "code": 400,
+            "message": "该微信已绑定"
+        },
+        "success": false
+    }
