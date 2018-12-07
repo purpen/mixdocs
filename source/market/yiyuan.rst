@@ -269,12 +269,25 @@ JSON数据格式:
             "is_quit": false,  // 是否放弃领奖
             "is_receive": true,  // 是否领奖
             "is_winner": true,  // 是否中奖
+            "people_count": 1, // 当前参与人数
             "status": 3,  // 活动状态 2、抽奖中 3、开奖成功 4、已失效
+            "surplus_count": 49,  // 剩余人数
+            "total_people_count": 50,  // 需要人数
             "winning_user": {  // 中奖用户
                 "user_logo": "https://s3.lexivip.com/20181101/2251FgKdtFrFPWjJYew4aROzCOBB6IMP.jpg",
                 "user_name": "蓝胖子",
                 "user_sn": "10296157834"
             }
+            "user_list": [
+                {
+                    "is_receive": false,
+                    "is_win": false,
+                    "receive_at": 0,
+                    "user_logo": "https://s3.lexivip.com/20181101/2251FgKdtFrFPWjJYew4aROzCOBB6IMP.jpg",
+                    "user_name": "蓝胖子",
+                    "user_sn": "10296157834"
+                }
+            ],
         },
         "status": {
             "code": 200,
