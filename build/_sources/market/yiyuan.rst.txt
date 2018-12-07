@@ -725,6 +725,7 @@ JSON数据格式:
                     "activity_rid": "Y18112815074",  // 活动rid
                     "created_at": 1543406082,  // 创建时间
                     "order_rid": "D18112876054132",  // 订单编号
+                    "order_type": 11,  // 11、可调换一元送礼订单
                     "product_name": "2018年新款男士休闲连帽夹克",  // 商品名
                     "product_rid": "8703186425",  // 商品rid
                     "s_color": "蓝色",  // 颜色
