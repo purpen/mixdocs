@@ -465,33 +465,19 @@ JSON数据格式:
 .. code-block:: javascript
 
 
+    {
         "data": {
-            "activity_list": [
-                {
-                    "activity_rid": "Y18112664521",  // 活动编号
-                    "created_at": 1543225329,  // 参与时间
-                    "full_count": 20,  // 满足人数
-                    "is_receive": 0,  // 是否领奖 0、未领奖 1、已领奖
-                    "is_quit": 0,  // 是否放弃领奖 0、未放弃 1、已放弃
-                    "join_count": 1,  // 参与人数
-                    "product_name": "2018年冬季新款男士个性加绒拼接棉衣",  // 商品名
-                    "product_rid": "8537216804",  // 商品rid
-                    "s_color": "军绿色",  // 颜色
-                    "s_model": "M",  // 型号
-                    "sku": "8054396721",  // sku
-                    "status": 3,  // 1、已中奖 2、未中奖 3、已失效 4、未开奖
-                    "user_info": {  // 发起用户
-                        "user_logo": "https://s3.lexivip.com/20181101/2251FgKdtFrFPWjJYew4aROzCOBB6IMP.jpg",
-                        "user_name": "蓝胖子",
-                        "user_sn": "10296157834"
-                    },
-                    "view_url": "https://s3.lexivip.com/20181107/2344FiRbFqkXD4hKGVky91L-Co7RG0UZ.jpg",  // 商品图片
-                    "winning_at": 0  // 开奖时间
-                }
-            ],
-            "count": 1,
-            "next": false,
-            "prev": false
+            "expired_receive": true,  // 是否可以领取奖励, 开奖5天不可领取
+            "is_join": true,  // 是否参与
+            "is_quit": false,  // 是否放弃领奖
+            "is_receive": true,  // 是否领奖
+            "is_winner": true,  // 是否中奖
+            "status": 3,  // 活动状态 2、抽奖中 3、开奖成功 4、已失效
+            "winning_user": {  // 中奖用户
+                "user_logo": "https://s3.lexivip.com/20181101/2251FgKdtFrFPWjJYew4aROzCOBB6IMP.jpg",
+                "user_name": "蓝胖子",
+                "user_sn": "10296157834"
+            }
         },
         "status": {
             "code": 200,
@@ -532,19 +518,30 @@ JSON数据格式:
 
     {
         "data": {
-            "people_count": 1,  // 当前参与人数
+            "expired_receive": true,  // 是否可以领取奖励, 开奖5天不可领取
+            "is_join": true,  // 是否参与
+            "is_quit": false,  // 是否放弃领奖
+            "is_receive": true,  // 是否领奖
+            "is_winner": true,  // 是否中奖
+            "people_count": 1, // 当前参与人数
+            "status": 3,  // 活动状态 2、抽奖中 3、开奖成功 4、已失效
             "surplus_count": 49,  // 剩余人数
             "total_people_count": 50,  // 需要人数
+            "winning_user": {  // 中奖用户
+                "user_logo": "https://s3.lexivip.com/20181101/2251FgKdtFrFPWjJYew4aROzCOBB6IMP.jpg",
+                "user_name": "蓝胖子",
+                "user_sn": "10296157834"
+            }
             "user_list": [
                 {
-                    "is_receive": true,
-                    "is_win": true,
-                    "receive_at": 1543406077,
+                    "is_receive": false,
+                    "is_win": false,
+                    "receive_at": 0,
                     "user_logo": "https://s3.lexivip.com/20181101/2251FgKdtFrFPWjJYew4aROzCOBB6IMP.jpg",
                     "user_name": "蓝胖子",
                     "user_sn": "10296157834"
                 }
-            ]
+            ],
         },
         "status": {
             "code": 200,
@@ -552,6 +549,7 @@ JSON数据格式:
         },
         "success": true
     }
+
 
 
 

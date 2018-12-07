@@ -1113,33 +1113,19 @@
 <div class="section" id="id34">
 <h3>返回示例<a class="headerlink" href="#id34" title="永久链接至标题">¶</a></h3>
 <p>JSON数据格式:</p>
-<div class="highlight-javascript"><div class="highlight"><pre><span></span>    <span class="s2">&quot;data&quot;</span><span class="o">:</span> <span class="p">{</span>
-        <span class="s2">&quot;activity_list&quot;</span><span class="o">:</span> <span class="p">[</span>
-            <span class="p">{</span>
-                <span class="s2">&quot;activity_rid&quot;</span><span class="o">:</span> <span class="s2">&quot;Y18112664521&quot;</span><span class="p">,</span>  <span class="c1">// 活动编号</span>
-                <span class="s2">&quot;created_at&quot;</span><span class="o">:</span> <span class="mi">1543225329</span><span class="p">,</span>  <span class="c1">// 参与时间</span>
-                <span class="s2">&quot;full_count&quot;</span><span class="o">:</span> <span class="mi">20</span><span class="p">,</span>  <span class="c1">// 满足人数</span>
-                <span class="s2">&quot;is_receive&quot;</span><span class="o">:</span> <span class="mi">0</span><span class="p">,</span>  <span class="c1">// 是否领奖 0、未领奖 1、已领奖</span>
-                <span class="s2">&quot;is_quit&quot;</span><span class="o">:</span> <span class="mi">0</span><span class="p">,</span>  <span class="c1">// 是否放弃领奖 0、未放弃 1、已放弃</span>
-                <span class="s2">&quot;join_count&quot;</span><span class="o">:</span> <span class="mi">1</span><span class="p">,</span>  <span class="c1">// 参与人数</span>
-                <span class="s2">&quot;product_name&quot;</span><span class="o">:</span> <span class="s2">&quot;2018年冬季新款男士个性加绒拼接棉衣&quot;</span><span class="p">,</span>  <span class="c1">// 商品名</span>
-                <span class="s2">&quot;product_rid&quot;</span><span class="o">:</span> <span class="s2">&quot;8537216804&quot;</span><span class="p">,</span>  <span class="c1">// 商品rid</span>
-                <span class="s2">&quot;s_color&quot;</span><span class="o">:</span> <span class="s2">&quot;军绿色&quot;</span><span class="p">,</span>  <span class="c1">// 颜色</span>
-                <span class="s2">&quot;s_model&quot;</span><span class="o">:</span> <span class="s2">&quot;M&quot;</span><span class="p">,</span>  <span class="c1">// 型号</span>
-                <span class="s2">&quot;sku&quot;</span><span class="o">:</span> <span class="s2">&quot;8054396721&quot;</span><span class="p">,</span>  <span class="c1">// sku</span>
-                <span class="s2">&quot;status&quot;</span><span class="o">:</span> <span class="mi">3</span><span class="p">,</span>  <span class="c1">// 1、已中奖 2、未中奖 3、已失效 4、未开奖</span>
-                <span class="s2">&quot;user_info&quot;</span><span class="o">:</span> <span class="p">{</span>  <span class="c1">// 发起用户</span>
-                    <span class="s2">&quot;user_logo&quot;</span><span class="o">:</span> <span class="s2">&quot;https://s3.lexivip.com/20181101/2251FgKdtFrFPWjJYew4aROzCOBB6IMP.jpg&quot;</span><span class="p">,</span>
-                    <span class="s2">&quot;user_name&quot;</span><span class="o">:</span> <span class="s2">&quot;蓝胖子&quot;</span><span class="p">,</span>
-                    <span class="s2">&quot;user_sn&quot;</span><span class="o">:</span> <span class="s2">&quot;10296157834&quot;</span>
-                <span class="p">},</span>
-                <span class="s2">&quot;view_url&quot;</span><span class="o">:</span> <span class="s2">&quot;https://s3.lexivip.com/20181107/2344FiRbFqkXD4hKGVky91L-Co7RG0UZ.jpg&quot;</span><span class="p">,</span>  <span class="c1">// 商品图片</span>
-                <span class="s2">&quot;winning_at&quot;</span><span class="o">:</span> <span class="mi">0</span>  <span class="c1">// 开奖时间</span>
-            <span class="p">}</span>
-        <span class="p">],</span>
-        <span class="s2">&quot;count&quot;</span><span class="o">:</span> <span class="mi">1</span><span class="p">,</span>
-        <span class="s2">&quot;next&quot;</span><span class="o">:</span> <span class="kc">false</span><span class="p">,</span>
-        <span class="s2">&quot;prev&quot;</span><span class="o">:</span> <span class="kc">false</span>
+<div class="highlight-javascript"><div class="highlight"><pre><span></span><span class="p">{</span>
+    <span class="s2">&quot;data&quot;</span><span class="o">:</span> <span class="p">{</span>
+        <span class="s2">&quot;expired_receive&quot;</span><span class="o">:</span> <span class="kc">true</span><span class="p">,</span>  <span class="c1">// 是否可以领取奖励, 开奖5天不可领取</span>
+        <span class="s2">&quot;is_join&quot;</span><span class="o">:</span> <span class="kc">true</span><span class="p">,</span>  <span class="c1">// 是否参与</span>
+        <span class="s2">&quot;is_quit&quot;</span><span class="o">:</span> <span class="kc">false</span><span class="p">,</span>  <span class="c1">// 是否放弃领奖</span>
+        <span class="s2">&quot;is_receive&quot;</span><span class="o">:</span> <span class="kc">true</span><span class="p">,</span>  <span class="c1">// 是否领奖</span>
+        <span class="s2">&quot;is_winner&quot;</span><span class="o">:</span> <span class="kc">true</span><span class="p">,</span>  <span class="c1">// 是否中奖</span>
+        <span class="s2">&quot;status&quot;</span><span class="o">:</span> <span class="mi">3</span><span class="p">,</span>  <span class="c1">// 活动状态 2、抽奖中 3、开奖成功 4、已失效</span>
+        <span class="s2">&quot;winning_user&quot;</span><span class="o">:</span> <span class="p">{</span>  <span class="c1">// 中奖用户</span>
+            <span class="s2">&quot;user_logo&quot;</span><span class="o">:</span> <span class="s2">&quot;https://s3.lexivip.com/20181101/2251FgKdtFrFPWjJYew4aROzCOBB6IMP.jpg&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;user_name&quot;</span><span class="o">:</span> <span class="s2">&quot;蓝胖子&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;user_sn&quot;</span><span class="o">:</span> <span class="s2">&quot;10296157834&quot;</span>
+        <span class="p">}</span>
     <span class="p">},</span>
     <span class="s2">&quot;status&quot;</span><span class="o">:</span> <span class="p">{</span>
         <span class="s2">&quot;code&quot;</span><span class="o">:</span> <span class="mi">200</span><span class="p">,</span>
@@ -1195,19 +1181,30 @@
 <p>JSON数据格式:</p>
 <div class="highlight-javascript"><div class="highlight"><pre><span></span><span class="p">{</span>
     <span class="s2">&quot;data&quot;</span><span class="o">:</span> <span class="p">{</span>
-        <span class="s2">&quot;people_count&quot;</span><span class="o">:</span> <span class="mi">1</span><span class="p">,</span>  <span class="c1">// 当前参与人数</span>
+        <span class="s2">&quot;expired_receive&quot;</span><span class="o">:</span> <span class="kc">true</span><span class="p">,</span>  <span class="c1">// 是否可以领取奖励, 开奖5天不可领取</span>
+        <span class="s2">&quot;is_join&quot;</span><span class="o">:</span> <span class="kc">true</span><span class="p">,</span>  <span class="c1">// 是否参与</span>
+        <span class="s2">&quot;is_quit&quot;</span><span class="o">:</span> <span class="kc">false</span><span class="p">,</span>  <span class="c1">// 是否放弃领奖</span>
+        <span class="s2">&quot;is_receive&quot;</span><span class="o">:</span> <span class="kc">true</span><span class="p">,</span>  <span class="c1">// 是否领奖</span>
+        <span class="s2">&quot;is_winner&quot;</span><span class="o">:</span> <span class="kc">true</span><span class="p">,</span>  <span class="c1">// 是否中奖</span>
+        <span class="s2">&quot;people_count&quot;</span><span class="o">:</span> <span class="mi">1</span><span class="p">,</span> <span class="c1">// 当前参与人数</span>
+        <span class="s2">&quot;status&quot;</span><span class="o">:</span> <span class="mi">3</span><span class="p">,</span>  <span class="c1">// 活动状态 2、抽奖中 3、开奖成功 4、已失效</span>
         <span class="s2">&quot;surplus_count&quot;</span><span class="o">:</span> <span class="mi">49</span><span class="p">,</span>  <span class="c1">// 剩余人数</span>
         <span class="s2">&quot;total_people_count&quot;</span><span class="o">:</span> <span class="mi">50</span><span class="p">,</span>  <span class="c1">// 需要人数</span>
+        <span class="s2">&quot;winning_user&quot;</span><span class="o">:</span> <span class="p">{</span>  <span class="c1">// 中奖用户</span>
+            <span class="s2">&quot;user_logo&quot;</span><span class="o">:</span> <span class="s2">&quot;https://s3.lexivip.com/20181101/2251FgKdtFrFPWjJYew4aROzCOBB6IMP.jpg&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;user_name&quot;</span><span class="o">:</span> <span class="s2">&quot;蓝胖子&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;user_sn&quot;</span><span class="o">:</span> <span class="s2">&quot;10296157834&quot;</span>
+        <span class="p">}</span>
         <span class="s2">&quot;user_list&quot;</span><span class="o">:</span> <span class="p">[</span>
             <span class="p">{</span>
-                <span class="s2">&quot;is_receive&quot;</span><span class="o">:</span> <span class="kc">true</span><span class="p">,</span>
-                <span class="s2">&quot;is_win&quot;</span><span class="o">:</span> <span class="kc">true</span><span class="p">,</span>
-                <span class="s2">&quot;receive_at&quot;</span><span class="o">:</span> <span class="mi">1543406077</span><span class="p">,</span>
+                <span class="s2">&quot;is_receive&quot;</span><span class="o">:</span> <span class="kc">false</span><span class="p">,</span>
+                <span class="s2">&quot;is_win&quot;</span><span class="o">:</span> <span class="kc">false</span><span class="p">,</span>
+                <span class="s2">&quot;receive_at&quot;</span><span class="o">:</span> <span class="mi">0</span><span class="p">,</span>
                 <span class="s2">&quot;user_logo&quot;</span><span class="o">:</span> <span class="s2">&quot;https://s3.lexivip.com/20181101/2251FgKdtFrFPWjJYew4aROzCOBB6IMP.jpg&quot;</span><span class="p">,</span>
                 <span class="s2">&quot;user_name&quot;</span><span class="o">:</span> <span class="s2">&quot;蓝胖子&quot;</span><span class="p">,</span>
                 <span class="s2">&quot;user_sn&quot;</span><span class="o">:</span> <span class="s2">&quot;10296157834&quot;</span>
             <span class="p">}</span>
-        <span class="p">]</span>
+        <span class="p">],</span>
     <span class="p">},</span>
     <span class="s2">&quot;status&quot;</span><span class="o">:</span> <span class="p">{</span>
         <span class="s2">&quot;code&quot;</span><span class="o">:</span> <span class="mi">200</span><span class="p">,</span>
