@@ -2971,7 +2971,7 @@ app微信绑定
 接口说明
 ~~~~~~~~~~~~~~
 
-* API接口请求地址：``/users/app_bind_wx``
+* API接口请求地址：``/users/user_info_bind_wx``
 * API接口请求方法：``POST``
 * API接口用户授权：``token``
 
