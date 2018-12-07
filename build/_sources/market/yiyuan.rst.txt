@@ -527,6 +527,7 @@ JSON数据格式:
             "status": 3,  // 活动状态 2、抽奖中 3、开奖成功 4、已失效
             "surplus_count": 49,  // 剩余人数
             "total_people_count": 50,  // 需要人数
+            "can_join": true,  // true:可参与  false:不可参与
             "winning_user": {  // 中奖用户
                 "user_logo": "https://s3.lexivip.com/20181101/2251FgKdtFrFPWjJYew4aROzCOBB6IMP.jpg",
                 "user_name": "蓝胖子",
