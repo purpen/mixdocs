@@ -39,6 +39,7 @@ JSON数据格式:
                     "comment_count": "评论数",
                     "description": "橱窗详情",
                     "is_follow": "是否关注过发布橱窗的用户",
+                    "followed_status": "是否关注过发布橱窗的用户",
                     "is_like": "是否喜欢过该橱窗",
                     "is_official": "是否官方橱窗",
                     "keywords": [
