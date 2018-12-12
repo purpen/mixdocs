@@ -120,6 +120,7 @@
 <li class="toctree-l2"><a class="reference internal" href="../market/banners.html">营销工具/广告模块</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../market/coupons.html">营销工具/优惠券模块</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../market/bonus_question.html">营销工具/猜题赢现金</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../market/yiyuan.html">营销工具/一元送礼模块</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="../stats/index.html">统计API模块</a><ul>
@@ -157,15 +158,16 @@
 <li class="toctree-l2"><a class="reference internal" href="../common.html#id17">核心平台–热门推荐</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../common.html#id20">核心平台–搜索</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../common.html#id24">核心平台–搜索商品列表</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../common.html#id28">核心平台–搜索店铺列表</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../common.html#id32">核心平台–搜索用户列表</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../common.html#id36">小程序绑定手机号发送验证码</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../common.html#id41">注册发送短信验证码</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../common.html#id46">忘记密码发送短信验证码</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../common.html#id50">动态登陆发送短信验证码</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../common.html#id54">账户编辑发送短信验证码</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../common.html#id58">账户编辑发送短信验证码</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../common.html#id62">发送邮件验证码</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../common.html#id28">核心平台–搜索商品数量</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../common.html#id32">核心平台–搜索店铺列表</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../common.html#id36">核心平台–搜索用户列表</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../common.html#id40">小程序绑定手机号发送验证码</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../common.html#id45">注册发送短信验证码</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../common.html#id50">忘记密码发送短信验证码</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../common.html#id54">动态登陆发送短信验证码</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../common.html#id58">绑定银行卡发送短信验证码</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../common.html#id62">账户解除绑定银行卡发送短信验证码</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../common.html#id66">发送邮件验证码</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="../setting.html">系统相关配置文档</a><ul>
@@ -243,6 +245,12 @@
 <li><a class="reference internal" href="#id29">接口说明</a></li>
 <li><a class="reference internal" href="#id30">请求参数</a></li>
 <li><a class="reference internal" href="#id31">返回示例</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#id32">分享赢35元现金提现</a><ul>
+<li><a class="reference internal" href="#id33">接口说明</a></li>
+<li><a class="reference internal" href="#id34">请求参数</a></li>
+<li><a class="reference internal" href="#id35">返回示例</a></li>
 </ul>
 </li>
 </ul>
@@ -324,6 +332,12 @@
 <li><a class="reference internal" href="#id29">接口说明</a></li>
 <li><a class="reference internal" href="#id30">请求参数</a></li>
 <li><a class="reference internal" href="#id31">返回示例</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#id32">分享赢35元现金提现</a><ul>
+<li><a class="reference internal" href="#id33">接口说明</a></li>
+<li><a class="reference internal" href="#id34">请求参数</a></li>
+<li><a class="reference internal" href="#id35">返回示例</a></li>
 </ul>
 </li>
 </ul>
@@ -881,6 +895,75 @@
     <span class="p">},</span>
     <span class="s2">&quot;success&quot;</span><span class="o">:</span> <span class="kc">true</span>
 <span class="p">}</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="id32">
+<h2>分享赢35元现金提现<a class="headerlink" href="#id32" title="永久链接至标题">¶</a></h2>
+<div class="section" id="id33">
+<h3>接口说明<a class="headerlink" href="#id33" title="永久链接至标题">¶</a></h3>
+<ul class="simple">
+<li>API接口请求地址：<code class="docutils literal"><span class="pre">/win_cash/cash_money</span></code></li>
+<li>API接口请求方法：<code class="docutils literal"><span class="pre">POST</span></code></li>
+<li>API接口用户授权：<code class="docutils literal"><span class="pre">token</span></code></li>
+</ul>
+</div>
+<div class="section" id="id34">
+<h3>请求参数<a class="headerlink" href="#id34" title="永久链接至标题">¶</a></h3>
+<table border="1" class="docutils">
+<colgroup>
+<col width="27%" />
+<col width="13%" />
+<col width="11%" />
+<col width="13%" />
+<col width="37%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">名称</th>
+<th class="head">类型</th>
+<th class="head">是否必须</th>
+<th class="head">默认值</th>
+<th class="head">描述说明</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>cash_type</td>
+<td>String</td>
+<td>可选</td>
+<td>1</td>
+<td>提现到:1、微信 2、支付宝</td>
+</tr>
+<tr class="row-odd"><td>open_id</td>
+<td>String</td>
+<td>微信</td>
+<td>&#160;</td>
+<td>open_id</td>
+</tr>
+<tr class="row-even"><td>ali_account</td>
+<td>String</td>
+<td>支付宝</td>
+<td>&#160;</td>
+<td>支付宝登录号</td>
+</tr>
+<tr class="row-odd"><td>ali_name</td>
+<td>String</td>
+<td>支付宝</td>
+<td>&#160;</td>
+<td>真实姓名</td>
+</tr>
+<tr class="row-even"><td>amount</td>
+<td>Number</td>
+<td>必须</td>
+<td>&#160;</td>
+<td>提现金额</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="id35">
+<h3>返回示例<a class="headerlink" href="#id35" title="永久链接至标题">¶</a></h3>
+<div class="highlight-javascript"><div class="highlight"><pre><span></span>
 </pre></div>
 </div>
 </div>
