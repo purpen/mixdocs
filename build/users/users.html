@@ -512,6 +512,34 @@
 <li><a class="reference internal" href="#id199">返回示例</a></li>
 </ul>
 </li>
+<li><a class="reference internal" href="#id200">邀请好友-获取我的邀请好友数量汇总</a><ul>
+<li><a class="reference internal" href="#id201">接口说明</a></li>
+<li><a class="reference internal" href="#id202">返回示例</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#id203">邀请好友-获取我的邀请好友信息汇总</a><ul>
+<li><a class="reference internal" href="#id204">接口说明</a></li>
+<li><a class="reference internal" href="#id205">返回示例</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#id206">邀请好友-奖励列表</a><ul>
+<li><a class="reference internal" href="#id207">接口说明</a></li>
+<li><a class="reference internal" href="#id208">请求参数</a></li>
+<li><a class="reference internal" href="#id209">返回示例</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#id210">邀请好友-我的朋友</a><ul>
+<li><a class="reference internal" href="#id211">接口说明</a></li>
+<li><a class="reference internal" href="#id212">请求参数</a></li>
+<li><a class="reference internal" href="#id213">返回示例</a><ul>
+<li><a class="reference internal" href="#id214">邀请好友开通生活馆现金提现</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#id215">接口说明</a></li>
+<li><a class="reference internal" href="#id216">请求参数</a></li>
+<li><a class="reference internal" href="#id217">返回示例</a></li>
+</ul>
+</li>
 </ul>
 </li>
 </ul>
@@ -856,6 +884,34 @@
 <li><a class="reference internal" href="#id197">接口说明</a></li>
 <li><a class="reference internal" href="#id198">请求参数</a></li>
 <li><a class="reference internal" href="#id199">返回示例</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#id200">邀请好友-获取我的邀请好友数量汇总</a><ul>
+<li><a class="reference internal" href="#id201">接口说明</a></li>
+<li><a class="reference internal" href="#id202">返回示例</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#id203">邀请好友-获取我的邀请好友信息汇总</a><ul>
+<li><a class="reference internal" href="#id204">接口说明</a></li>
+<li><a class="reference internal" href="#id205">返回示例</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#id206">邀请好友-奖励列表</a><ul>
+<li><a class="reference internal" href="#id207">接口说明</a></li>
+<li><a class="reference internal" href="#id208">请求参数</a></li>
+<li><a class="reference internal" href="#id209">返回示例</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#id210">邀请好友-我的朋友</a><ul>
+<li><a class="reference internal" href="#id211">接口说明</a></li>
+<li><a class="reference internal" href="#id212">请求参数</a></li>
+<li><a class="reference internal" href="#id213">返回示例</a><ul>
+<li><a class="reference internal" href="#id214">邀请好友开通生活馆现金提现</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#id215">接口说明</a></li>
+<li><a class="reference internal" href="#id216">请求参数</a></li>
+<li><a class="reference internal" href="#id217">返回示例</a></li>
 </ul>
 </li>
 </ul>
@@ -5055,6 +5111,292 @@
         <span class="s2">&quot;message&quot;</span><span class="o">:</span> <span class="s2">&quot;该微信已绑定&quot;</span>
     <span class="p">},</span>
     <span class="s2">&quot;success&quot;</span><span class="o">:</span> <span class="kc">false</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="id200">
+<h2>邀请好友-获取我的邀请好友数量汇总<a class="headerlink" href="#id200" title="永久链接至标题">¶</a></h2>
+<p>邀请好友-获取我的邀请好友数量汇总</p>
+<div class="section" id="id201">
+<h3>接口说明<a class="headerlink" href="#id201" title="永久链接至标题">¶</a></h3>
+<ul class="simple">
+<li>API接口请求地址：<code class="docutils literal"><span class="pre">/invite_life_count</span></code></li>
+<li>API接口请求方法：<code class="docutils literal"><span class="pre">GET</span></code></li>
+<li>API接口用户授权：<code class="docutils literal"><span class="pre">token</span></code></li>
+</ul>
+</div>
+<div class="section" id="id202">
+<h3>返回示例<a class="headerlink" href="#id202" title="永久链接至标题">¶</a></h3>
+<p>JSON数据格式:</p>
+<div class="highlight-javascript"><div class="highlight"><pre><span></span><span class="p">{</span>
+    <span class="s2">&quot;data&quot;</span><span class="o">:</span> <span class="p">{</span>
+        <span class="s2">&quot;invite_count&quot;</span><span class="o">:</span> <span class="mi">1</span><span class="p">,</span>  <span class="c1">// 总人数</span>
+        <span class="s2">&quot;reward_price&quot;</span><span class="o">:</span> <span class="mi">0</span><span class="p">,</span>  <span class="c1">// 奖励金额</span>
+        <span class="s2">&quot;today_count&quot;</span><span class="o">:</span> <span class="mi">0</span>  <span class="c1">// 今日人数</span>
+    <span class="p">},</span>
+    <span class="s2">&quot;status&quot;</span><span class="o">:</span> <span class="p">{</span>
+        <span class="s2">&quot;code&quot;</span><span class="o">:</span> <span class="mi">200</span><span class="p">,</span>
+        <span class="s2">&quot;message&quot;</span><span class="o">:</span> <span class="s2">&quot;Ok all right.&quot;</span>
+    <span class="p">},</span>
+    <span class="s2">&quot;success&quot;</span><span class="o">:</span> <span class="kc">true</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="id203">
+<h2>邀请好友-获取我的邀请好友信息汇总<a class="headerlink" href="#id203" title="永久链接至标题">¶</a></h2>
+<p>邀请好友-获取我的邀请好友信息汇总</p>
+<div class="section" id="id204">
+<h3>接口说明<a class="headerlink" href="#id204" title="永久链接至标题">¶</a></h3>
+<ul class="simple">
+<li>API接口请求地址：<code class="docutils literal"><span class="pre">/invite_life_reward</span></code></li>
+<li>API接口请求方法：<code class="docutils literal"><span class="pre">GET</span></code></li>
+<li>API接口用户授权：<code class="docutils literal"><span class="pre">token</span></code></li>
+</ul>
+</div>
+<div class="section" id="id205">
+<h3>返回示例<a class="headerlink" href="#id205" title="永久链接至标题">¶</a></h3>
+<p>JSON数据格式:</p>
+<div class="highlight-javascript"><div class="highlight"><pre><span></span><span class="p">{</span>
+    <span class="s2">&quot;data&quot;</span><span class="o">:</span> <span class="p">{</span>
+        <span class="s2">&quot;cash_amount&quot;</span><span class="o">:</span> <span class="mi">0</span><span class="p">,</span>  <span class="c1">// 可提现金额</span>
+        <span class="s2">&quot;cumulative_cash_amount&quot;</span><span class="o">:</span> <span class="mi">0</span><span class="p">,</span>  <span class="c1">// 累计提现金额</span>
+        <span class="s2">&quot;pending_price&quot;</span><span class="o">:</span> <span class="mi">1</span><span class="p">,</span>  <span class="c1">// 待结算</span>
+        <span class="s2">&quot;reward_price&quot;</span><span class="o">:</span> <span class="mi">0</span>  <span class="c1">// 累计奖励</span>
+    <span class="p">},</span>
+    <span class="s2">&quot;status&quot;</span><span class="o">:</span> <span class="p">{</span>
+        <span class="s2">&quot;code&quot;</span><span class="o">:</span> <span class="mi">200</span><span class="p">,</span>
+        <span class="s2">&quot;message&quot;</span><span class="o">:</span> <span class="s2">&quot;Ok all right.&quot;</span>
+    <span class="p">},</span>
+    <span class="s2">&quot;success&quot;</span><span class="o">:</span> <span class="kc">true</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="id206">
+<h2>邀请好友-奖励列表<a class="headerlink" href="#id206" title="永久链接至标题">¶</a></h2>
+<p>邀请好友-奖励列表</p>
+<div class="section" id="id207">
+<h3>接口说明<a class="headerlink" href="#id207" title="永久链接至标题">¶</a></h3>
+<ul class="simple">
+<li>API接口请求地址：<code class="docutils literal"><span class="pre">/invite_life/rewards</span></code></li>
+<li>API接口请求方法：<code class="docutils literal"><span class="pre">GET</span></code></li>
+<li>API接口用户授权：<code class="docutils literal"><span class="pre">token</span></code></li>
+</ul>
+</div>
+<div class="section" id="id208">
+<h3>请求参数<a class="headerlink" href="#id208" title="永久链接至标题">¶</a></h3>
+<table border="1" class="docutils">
+<colgroup>
+<col width="15%" />
+<col width="11%" />
+<col width="13%" />
+<col width="11%" />
+<col width="50%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">名称</th>
+<th class="head">类型</th>
+<th class="head">是否必须</th>
+<th class="head">默认值</th>
+<th class="head">描述说明</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>page</td>
+<td>Number</td>
+<td>可选</td>
+<td>1</td>
+<td>当前页码</td>
+</tr>
+<tr class="row-odd"><td>per_page</td>
+<td>Number</td>
+<td>可选</td>
+<td>10</td>
+<td>每页数量</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="id209">
+<h3>返回示例<a class="headerlink" href="#id209" title="永久链接至标题">¶</a></h3>
+<p>JSON数据格式:</p>
+<div class="highlight-javascript"><div class="highlight"><pre><span></span><span class="p">{</span>
+    <span class="s2">&quot;data&quot;</span><span class="o">:</span> <span class="p">{</span>
+        <span class="s2">&quot;count&quot;</span><span class="o">:</span> <span class="mi">1</span><span class="p">,</span>
+        <span class="s2">&quot;next&quot;</span><span class="o">:</span> <span class="kc">false</span><span class="p">,</span>
+        <span class="s2">&quot;prev&quot;</span><span class="o">:</span> <span class="kc">false</span><span class="p">,</span>
+        <span class="s2">&quot;rewards&quot;</span><span class="o">:</span> <span class="p">[</span>
+            <span class="p">{</span>
+                <span class="s2">&quot;amount&quot;</span><span class="o">:</span> <span class="mi">11</span><span class="p">,</span>  <span class="c1">// 金额</span>
+                <span class="s2">&quot;created_at&quot;</span><span class="o">:</span> <span class="mi">1544500692</span><span class="p">,</span>
+                <span class="s2">&quot;status&quot;</span><span class="o">:</span> <span class="mi">1</span><span class="p">,</span>  <span class="c1">// 1、成功 2、待结算 3、退款</span>
+                <span class="s2">&quot;title&quot;</span><span class="o">:</span> <span class="s2">&quot;获得队友首单销售50%奖励&quot;</span><span class="p">,</span>  <span class="c1">// 标题</span>
+                <span class="s2">&quot;user_logo&quot;</span><span class="o">:</span> <span class="s2">&quot;https://static.moebeast.com/image/static/default_user.png&quot;</span><span class="p">,</span>
+                <span class="s2">&quot;user_name&quot;</span><span class="o">:</span> <span class="s2">&quot;测试&quot;</span><span class="p">,</span>
+                <span class="s2">&quot;user_sn&quot;</span><span class="o">:</span> <span class="s2">&quot;18913742065&quot;</span>
+            <span class="p">}</span>
+        <span class="p">]</span>
+    <span class="p">},</span>
+    <span class="s2">&quot;status&quot;</span><span class="o">:</span> <span class="p">{</span>
+        <span class="s2">&quot;code&quot;</span><span class="o">:</span> <span class="mi">200</span><span class="p">,</span>
+        <span class="s2">&quot;message&quot;</span><span class="o">:</span> <span class="s2">&quot;Ok all right.&quot;</span>
+    <span class="p">},</span>
+    <span class="s2">&quot;success&quot;</span><span class="o">:</span> <span class="kc">true</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="id210">
+<h2>邀请好友-我的朋友<a class="headerlink" href="#id210" title="永久链接至标题">¶</a></h2>
+<p>邀请好友-我的朋友</p>
+<div class="section" id="id211">
+<h3>接口说明<a class="headerlink" href="#id211" title="永久链接至标题">¶</a></h3>
+<ul class="simple">
+<li>API接口请求地址：<code class="docutils literal"><span class="pre">/invite_life/friends</span></code></li>
+<li>API接口请求方法：<code class="docutils literal"><span class="pre">GET</span></code></li>
+<li>API接口用户授权：<code class="docutils literal"><span class="pre">token</span></code></li>
+</ul>
+</div>
+<div class="section" id="id212">
+<h3>请求参数<a class="headerlink" href="#id212" title="永久链接至标题">¶</a></h3>
+<table border="1" class="docutils">
+<colgroup>
+<col width="15%" />
+<col width="11%" />
+<col width="13%" />
+<col width="11%" />
+<col width="50%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">名称</th>
+<th class="head">类型</th>
+<th class="head">是否必须</th>
+<th class="head">默认值</th>
+<th class="head">描述说明</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>page</td>
+<td>Number</td>
+<td>可选</td>
+<td>1</td>
+<td>当前页码</td>
+</tr>
+<tr class="row-odd"><td>per_page</td>
+<td>Number</td>
+<td>可选</td>
+<td>10</td>
+<td>每页数量</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="id213">
+<h3>返回示例<a class="headerlink" href="#id213" title="永久链接至标题">¶</a></h3>
+<p>JSON数据格式:</p>
+<div class="highlight-javascript"><div class="highlight"><pre><span></span><span class="p">{</span>
+    <span class="s2">&quot;data&quot;</span><span class="o">:</span> <span class="p">{</span>
+        <span class="s2">&quot;count&quot;</span><span class="o">:</span> <span class="mi">1</span><span class="p">,</span>
+        <span class="s2">&quot;friends&quot;</span><span class="o">:</span> <span class="p">[</span>
+            <span class="p">{</span>
+                <span class="s2">&quot;amount&quot;</span><span class="o">:</span> <span class="mi">0</span><span class="p">,</span>  <span class="c1">// 销售额</span>
+                <span class="s2">&quot;phases&quot;</span><span class="o">:</span> <span class="mi">1</span><span class="p">,</span>  <span class="c1">// 1、实习馆主  2、达人馆主</span>
+                <span class="s2">&quot;user_logo&quot;</span><span class="o">:</span> <span class="s2">&quot;https://s3.lexivip.com/avatar-8457984.png&quot;</span><span class="p">,</span>
+                <span class="s2">&quot;user_name&quot;</span><span class="o">:</span> <span class="s2">&quot;15935823397&quot;</span><span class="p">,</span>
+                <span class="s2">&quot;user_sn&quot;</span><span class="o">:</span> <span class="s2">&quot;15847260931&quot;</span>
+            <span class="p">}</span>
+        <span class="p">],</span>
+        <span class="s2">&quot;next&quot;</span><span class="o">:</span> <span class="kc">false</span><span class="p">,</span>
+        <span class="s2">&quot;prev&quot;</span><span class="o">:</span> <span class="kc">false</span>
+    <span class="p">},</span>
+    <span class="s2">&quot;status&quot;</span><span class="o">:</span> <span class="p">{</span>
+        <span class="s2">&quot;code&quot;</span><span class="o">:</span> <span class="mi">200</span><span class="p">,</span>
+        <span class="s2">&quot;message&quot;</span><span class="o">:</span> <span class="s2">&quot;Ok all right.&quot;</span>
+    <span class="p">},</span>
+    <span class="s2">&quot;success&quot;</span><span class="o">:</span> <span class="kc">true</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<div class="section" id="id214">
+<h4>邀请好友开通生活馆现金提现<a class="headerlink" href="#id214" title="永久链接至标题">¶</a></h4>
+</div>
+</div>
+<div class="section" id="id215">
+<h3>接口说明<a class="headerlink" href="#id215" title="永久链接至标题">¶</a></h3>
+<ul class="simple">
+<li>API接口请求地址：<code class="docutils literal"><span class="pre">/invite_life/cash_money</span></code></li>
+<li>API接口请求方法：<code class="docutils literal"><span class="pre">POST</span></code></li>
+<li>API接口用户授权：<code class="docutils literal"><span class="pre">token</span></code></li>
+</ul>
+</div>
+<div class="section" id="id216">
+<h3>请求参数<a class="headerlink" href="#id216" title="永久链接至标题">¶</a></h3>
+<table border="1" class="docutils">
+<colgroup>
+<col width="27%" />
+<col width="13%" />
+<col width="11%" />
+<col width="13%" />
+<col width="37%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">名称</th>
+<th class="head">类型</th>
+<th class="head">是否必须</th>
+<th class="head">默认值</th>
+<th class="head">描述说明</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>cash_type</td>
+<td>String</td>
+<td>可选</td>
+<td>1</td>
+<td>提现到:1、微信 2、支付宝</td>
+</tr>
+<tr class="row-odd"><td>open_id</td>
+<td>String</td>
+<td>微信</td>
+<td>&#160;</td>
+<td>open_id</td>
+</tr>
+<tr class="row-even"><td>ali_account</td>
+<td>String</td>
+<td>支付宝</td>
+<td>&#160;</td>
+<td>支付宝登录号</td>
+</tr>
+<tr class="row-odd"><td>ali_name</td>
+<td>String</td>
+<td>支付宝</td>
+<td>&#160;</td>
+<td>真实姓名</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="id217">
+<h3>返回示例<a class="headerlink" href="#id217" title="永久链接至标题">¶</a></h3>
+<div class="highlight-javascript"><div class="highlight"><pre><span></span><span class="p">{</span>
+    <span class="s2">&quot;data&quot;</span><span class="o">:</span> <span class="p">{</span>
+        <span class="s1">&#39;rid&#39;</span><span class="o">:</span> <span class="s2">&quot;W4567890098&quot;</span><span class="p">,</span>
+        <span class="s1">&#39;status&#39;</span><span class="o">:</span> <span class="mi">1</span><span class="p">,</span> <span class="c1">// 1、成功 2、失败 3、审核中</span>
+        <span class="s1">&#39;actual_amount&#39;</span><span class="o">:</span> <span class="mi">10</span><span class="p">,</span> <span class="c1">// 提现金额</span>
+        <span class="s1">&#39;receive_target&#39;</span><span class="o">:</span> <span class="mi">1</span><span class="p">,</span><span class="c1">// 1、微信零钱包 2、支付宝</span>
+        <span class="s1">&#39;user_account&#39;</span><span class="o">:</span><span class="mi">121321312</span><span class="p">,</span>
+        <span class="s1">&#39;created_at&#39;</span><span class="o">:</span> <span class="mi">2345678567</span><span class="p">,</span> <span class="c1">// 时间</span>
+    <span class="p">},</span>
+    <span class="s2">&quot;status&quot;</span><span class="o">:</span> <span class="p">{</span>
+        <span class="s2">&quot;code&quot;</span><span class="o">:</span> <span class="mi">200</span><span class="p">,</span>
+        <span class="s2">&quot;message&quot;</span><span class="o">:</span> <span class="s2">&quot;Ok all right.&quot;</span>
+    <span class="p">},</span>
+    <span class="s2">&quot;success&quot;</span><span class="o">:</span> <span class="kc">true</span>
 <span class="p">}</span>
 </pre></div>
 </div>

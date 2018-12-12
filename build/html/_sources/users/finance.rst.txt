@@ -442,6 +442,7 @@ amount                 Number      必须                     提现金额
             'status': 1, // 1、成功 2、失败 3、审核中
             'actual_amount': 10, // 提现金额
             'receive_target': 1,// 1、微信零钱包 2、支付宝
+            'user_account':121321312,
             'created_at': 2345678567, // 时间
         },
         "status": {
