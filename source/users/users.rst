@@ -163,6 +163,90 @@ JSON数据格式
         "success": true
     }
 
+获取唤醒好友列表
+--------------------------
+
+
+接口说明
+~~~~~~~~~~~~~~
+
+* API接口请求地址：``/win_cash/get_rouse_friends``
+* API接口请求方法：``GET``
+* API接口用户授权：``token``
+
+JSON数据格式
+
+请求 **正确** 返回结果：
+
+.. code-block:: javascript
+
+    {
+        "data": {
+            "count": 2,
+            "friends": [
+                {
+                    "avatar": "https://static.moebeast.com/image/static/default_user.png", // 头像
+                    "last_seen": 1544260825,  // 最后访问时间
+                    "uid": "18602453791",  // 用户编号
+                    "username": "15****00",  // 用户名
+                    "rouse_status": 0,  // 唤醒状态 0：未唤醒， 1：唤醒中
+                },
+                {
+                    "avatar": "https://static.moebeast.com/image/static/default_user.png",
+                    "last_seen": 1544260825,
+                    "uid": "10429378516",
+                    "username": "15****99",
+                    "rouse_status": 0,  // 唤醒状态 0：未唤醒， 1：唤醒中
+
+                }
+            ],
+            "next": false,
+            "prev": false
+        },
+        "status": {
+            "code": 200,
+            "message": "Ok all right."
+        },
+        "success": true
+    }
+
+
+唤醒好友
+--------------------------
+
+
+接口说明
+~~~~~~~~~~~~~~
+
+* API接口请求地址：``/win_cash/rouse_friends``
+* API接口请求方法：``POST``
+* API接口用户授权：``token``
+
+请求参数
+~~~~~~~~~~~~~~~
+
+=====================  ==========  =========  ==========  =============================
+名称                    类型        是否必须     默认值       描述说明
+=====================  ==========  =========  ==========  =============================
+uid                     String       是                     用户编号
+=====================  ==========  =========  ==========  =============================
+
+JSON数据格式
+
+请求 **正确** 返回结果：
+
+.. code-block:: javascript
+
+    {
+        "status": {
+            "code": 200,
+            "message": "Ok all right."
+        },
+        "success": true
+    }
+
+
+
 邀请好友赢35元现金
 --------------------------
 
@@ -182,6 +266,7 @@ JSON数据格式
 =====================  ==========  =========  ==========  =============================
 uid                     String       是                     用户编号
 mobile                  String       是                     手机号
+areacode                String       否          +86        区号
 =====================  ==========  =========  ==========  =============================
 
 JSON数据格式
@@ -1115,14 +1200,7 @@ JSON数据格式:
     {
         "data": {
             "about_me": "我是个好人",
-            "avatar": {
-                "created_at": null,
-                "filename": "a",
-                "filepath": "http://127.0.0.1:9000/_uploads/photos/222222/5d2812257b539aa.jpg",
-                "id": 1,
-                "type": null,
-                "view_url": "http://0.0.0.0:9000/_uploads/photos/http://127.0.0.1:9000/_uploads/photos/222222/5d2812257b539aa.jpg"  // 头像url
-            },
+            "avatar": "https://s3.lexivip.com/20181113/2213FjvLhFAih37XmkwC4Ag2A_aZThdd.jpg",
             "avatar_id": 1,  // 头像ID
             "city": "北京",
             "city_id": 1,
@@ -1141,7 +1219,12 @@ JSON数据格式:
             "province_id": 1,
             "uid": "19138405762",
             "username": "盖世火锅" // 用户名
-            "is_bind_wx": true   // 是否绑定过微信
+            "is_bind_wx": true ,  // 是否绑定过微信
+            "nick_name": "omway",  // 微信昵称
+            "wx_avatar": "https://s3.lexivip.com/wx_avatar/oDlWK5WNWtzaTDkrrsX9zqohUhM8", // 微信头像
+            "openid": "oDlWK5WNWtzaTDkrrsX9zqohUhM8",  // 移动端用到
+
+
         },
         "status": {
             "code": 200,
