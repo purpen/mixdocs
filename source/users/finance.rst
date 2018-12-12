@@ -436,6 +436,13 @@ amount                 Number      必须                     提现金额
 .. code-block:: javascript
 
 
+    {
+        "status": {
+            "code": 200,
+            "message": "Ok all right."
+        },
+        "success": true
+    }
 
 
 
