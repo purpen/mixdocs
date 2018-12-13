@@ -2234,6 +2234,10 @@ JSON数据格式
             "visit_times": 289,  // 访问次数
             "visitor_count": 77  // 访问人数
             "close_description": false,   // 关闭生活馆文案提示
+            "close_status": 0,
+            "has_product": true,
+
+
         },
         "status": {
             "code": 200,
