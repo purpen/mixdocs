@@ -3178,7 +3178,8 @@ JSON数据格式:
             "cash_amount": 0,  // 可提现金额
             "cumulative_cash_amount": 0,  // 累计提现金额
             "pending_price": 1,  // 待结算
-            "reward_price": 0  // 累计奖励
+            "reward_price": 0,  // 累计奖励
+            "pending_price": 0  // 待结算
         },
         "status": {
             "code": 200,
@@ -3335,6 +3336,7 @@ ali_name               String      支付宝                   真实姓名
             'receive_target': 1,// 1、微信零钱包 2、支付宝
             'user_account':121321312,
             'created_at': 2345678567, // 时间
+            'not_cash': false // 是否不可提 true 不可提 false 可提
         },
         "status": {
             "code": 200,

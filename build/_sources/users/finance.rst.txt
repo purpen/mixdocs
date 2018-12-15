@@ -444,6 +444,7 @@ amount                 Number      必须                     提现金额
             'receive_target': 1,// 1、微信零钱包 2、支付宝
             'user_account':121321312,
             'created_at': 2345678567, // 时间
+            'not_cash': false // 是否不可提 true 不可提 false 可提
         },
         "status": {
             "code": 200,
@@ -454,6 +455,37 @@ amount                 Number      必须                     提现金额
 
 
 
+今日已提现次数
+============================
+今日已提现次数
+
+接口说明
+~~~~~~~~~~~~~~
+
+* API接口请求地址：``/cash_money/count``
+* API接口请求方法：``GET``
+* API接口用户授权：``token``
+
+
+返回示例
+~~~~~~~~~~~~~~~~
+
+JSON数据格式:
+
+请求 **正确** 返回结果：
+
+.. code-block:: javascript
+
+    {
+        "data": {
+            "cash_count": 1  // 今日已提现次数
+        },
+        "status": {
+            "code": 200,
+            "message": "Ok all right."
+        },
+        "success": true
+    }
 
 
 

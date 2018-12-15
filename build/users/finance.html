@@ -253,6 +253,11 @@
 <li><a class="reference internal" href="#id35">返回示例</a></li>
 </ul>
 </li>
+<li><a class="reference internal" href="#id36">今日已提现次数</a><ul>
+<li><a class="reference internal" href="#id37">接口说明</a></li>
+<li><a class="reference internal" href="#id38">返回示例</a></li>
+</ul>
+</li>
 </ul>
 </li>
 </ul>
@@ -338,6 +343,11 @@
 <li><a class="reference internal" href="#id33">接口说明</a></li>
 <li><a class="reference internal" href="#id34">请求参数</a></li>
 <li><a class="reference internal" href="#id35">返回示例</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#id36">今日已提现次数</a><ul>
+<li><a class="reference internal" href="#id37">接口说明</a></li>
+<li><a class="reference internal" href="#id38">返回示例</a></li>
 </ul>
 </li>
 </ul>
@@ -971,6 +981,36 @@
         <span class="s1">&#39;receive_target&#39;</span><span class="o">:</span> <span class="mi">1</span><span class="p">,</span><span class="c1">// 1、微信零钱包 2、支付宝</span>
         <span class="s1">&#39;user_account&#39;</span><span class="o">:</span><span class="mi">121321312</span><span class="p">,</span>
         <span class="s1">&#39;created_at&#39;</span><span class="o">:</span> <span class="mi">2345678567</span><span class="p">,</span> <span class="c1">// 时间</span>
+        <span class="s1">&#39;not_cash&#39;</span><span class="o">:</span> <span class="kc">false</span> <span class="c1">// 是否不可提 true 不可提 false 可提</span>
+    <span class="p">},</span>
+    <span class="s2">&quot;status&quot;</span><span class="o">:</span> <span class="p">{</span>
+        <span class="s2">&quot;code&quot;</span><span class="o">:</span> <span class="mi">200</span><span class="p">,</span>
+        <span class="s2">&quot;message&quot;</span><span class="o">:</span> <span class="s2">&quot;Ok all right.&quot;</span>
+    <span class="p">},</span>
+    <span class="s2">&quot;success&quot;</span><span class="o">:</span> <span class="kc">true</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="id36">
+<h2>今日已提现次数<a class="headerlink" href="#id36" title="永久链接至标题">¶</a></h2>
+<p>今日已提现次数</p>
+<div class="section" id="id37">
+<h3>接口说明<a class="headerlink" href="#id37" title="永久链接至标题">¶</a></h3>
+<ul class="simple">
+<li>API接口请求地址：<code class="docutils literal"><span class="pre">/cash_money/count</span></code></li>
+<li>API接口请求方法：<code class="docutils literal"><span class="pre">GET</span></code></li>
+<li>API接口用户授权：<code class="docutils literal"><span class="pre">token</span></code></li>
+</ul>
+</div>
+<div class="section" id="id38">
+<h3>返回示例<a class="headerlink" href="#id38" title="永久链接至标题">¶</a></h3>
+<p>JSON数据格式:</p>
+<p>请求 <strong>正确</strong> 返回结果：</p>
+<div class="highlight-javascript"><div class="highlight"><pre><span></span><span class="p">{</span>
+    <span class="s2">&quot;data&quot;</span><span class="o">:</span> <span class="p">{</span>
+        <span class="s2">&quot;cash_count&quot;</span><span class="o">:</span> <span class="mi">1</span>  <span class="c1">// 今日已提现次数</span>
     <span class="p">},</span>
     <span class="s2">&quot;status&quot;</span><span class="o">:</span> <span class="p">{</span>
         <span class="s2">&quot;code&quot;</span><span class="o">:</span> <span class="mi">200</span><span class="p">,</span>
