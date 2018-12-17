@@ -37,7 +37,7 @@ JSON数据格式
             "prev": false,
             "record_list": [
                 {
-                    "actual_amount": 4,  // 体检金额
+                    "actual_amount": 4,  // 提现金额
                     "created_at": 1544701407,  // 提现时间
                     "rid": "2342345",  // 提现详情编号
                     "status": 1  // 提现状态
@@ -97,7 +97,7 @@ JSON数据格式
             "created_at": 1544701407,  // 提现时间
             "receive_target": 1,  // 提现方式
             "rid": "2342345",  // 提现详情编号
-            "status": 1,  // 提现状态
+            "status": 1,  // 提现状态  1、成功 2、失败 3、审核中
             "user_account": "omway"  // 用户账号
         },
         "status": {
@@ -219,9 +219,9 @@ JSON数据格式
 
     {
         "data": {
-            "amount": 0,  // 可提现金额
+            "amount": 0,  // 累计获得金额
             "friends_count": 0, // 邀请好友数量
-            "can_carry_amount": 0,  //
+            "can_carry_amount": 0,  //  可提现金额
         },
         "status": {
             "code": 200,
