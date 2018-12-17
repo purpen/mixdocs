@@ -2236,6 +2236,7 @@ JSON数据格式
             "close_description": false,   // 关闭生活馆文案提示
             "close_status": 0,
             "has_product": true,
+            "bgcover": "http://0.0.0.0:9000/_uploads/photos/static/img/default2-logo-180x180.png"  // 生活馆背景图
 
 
         },
