@@ -9,4 +9,4 @@
     column_products.rst
     life_records.rst
     shop_windows.rst
-    app_version.rst
+    app_versions.rst
