@@ -148,6 +148,7 @@
 <li class="toctree-l2"><a class="reference internal" href="../columns/column_products.html">栏目商品模块</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../columns/life_records.html">生活志模块</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../columns/shop_windows.html">橱窗模块</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../columns/app_versions.html">app版本管理模块</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="../common.html">公用接口模块</a><ul>
@@ -550,6 +551,12 @@
 <li><a class="reference internal" href="#id223">返回示例</a></li>
 </ul>
 </li>
+<li><a class="reference internal" href="#id224">提现实名认证</a><ul>
+<li><a class="reference internal" href="#id225">接口说明</a></li>
+<li><a class="reference internal" href="#id226">请求参数</a></li>
+<li><a class="reference internal" href="#id227">返回示例</a></li>
+</ul>
+</li>
 </ul>
 </li>
 </ul>
@@ -932,6 +939,12 @@
 <li><a class="reference internal" href="#id221">接口说明</a></li>
 <li><a class="reference internal" href="#id222">请求参数</a></li>
 <li><a class="reference internal" href="#id223">返回示例</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#id224">提现实名认证</a><ul>
+<li><a class="reference internal" href="#id225">接口说明</a></li>
+<li><a class="reference internal" href="#id226">请求参数</a></li>
+<li><a class="reference internal" href="#id227">返回示例</a></li>
 </ul>
 </li>
 </ul>
@@ -5555,6 +5568,75 @@
         <span class="s1">&#39;created_at&#39;</span><span class="o">:</span> <span class="mi">2345678567</span><span class="p">,</span> <span class="c1">// 时间</span>
         <span class="s1">&#39;not_cash&#39;</span><span class="o">:</span> <span class="kc">false</span> <span class="c1">// 是否不可提 true 不可提 false 可提</span>
     <span class="p">},</span>
+    <span class="s2">&quot;status&quot;</span><span class="o">:</span> <span class="p">{</span>
+        <span class="s2">&quot;code&quot;</span><span class="o">:</span> <span class="mi">200</span><span class="p">,</span>
+        <span class="s2">&quot;message&quot;</span><span class="o">:</span> <span class="s2">&quot;Ok all right.&quot;</span>
+    <span class="p">},</span>
+    <span class="s2">&quot;success&quot;</span><span class="o">:</span> <span class="kc">true</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="id224">
+<h2>提现实名认证<a class="headerlink" href="#id224" title="永久链接至标题">¶</a></h2>
+<div class="section" id="id225">
+<h3>接口说明<a class="headerlink" href="#id225" title="永久链接至标题">¶</a></h3>
+<ul class="simple">
+<li>API接口请求地址：<code class="docutils literal"><span class="pre">/users/cash_id_card</span></code></li>
+<li>API接口请求方法：<code class="docutils literal"><span class="pre">POST</span></code></li>
+<li>API接口用户授权：<code class="docutils literal"><span class="pre">token</span></code></li>
+</ul>
+</div>
+<div class="section" id="id226">
+<h3>请求参数<a class="headerlink" href="#id226" title="永久链接至标题">¶</a></h3>
+<table border="1" class="docutils">
+<colgroup>
+<col width="27%" />
+<col width="13%" />
+<col width="11%" />
+<col width="13%" />
+<col width="37%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">名称</th>
+<th class="head">类型</th>
+<th class="head">是否必须</th>
+<th class="head">默认值</th>
+<th class="head">描述说明</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>name</td>
+<td>String</td>
+<td>必须</td>
+<td>&#160;</td>
+<td>真实姓名</td>
+</tr>
+<tr class="row-odd"><td>id_card</td>
+<td>String</td>
+<td>必须</td>
+<td>&#160;</td>
+<td>身份证号</td>
+</tr>
+<tr class="row-even"><td>id_card_front</td>
+<td>Number</td>
+<td>必须</td>
+<td>&#160;</td>
+<td>身份证正面id</td>
+</tr>
+<tr class="row-odd"><td>id_card_back</td>
+<td>Number</td>
+<td>必须</td>
+<td>&#160;</td>
+<td>身份证背面id</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="id227">
+<h3>返回示例<a class="headerlink" href="#id227" title="永久链接至标题">¶</a></h3>
+<div class="highlight-javascript"><div class="highlight"><pre><span></span><span class="p">{</span>
     <span class="s2">&quot;status&quot;</span><span class="o">:</span> <span class="p">{</span>
         <span class="s2">&quot;code&quot;</span><span class="o">:</span> <span class="mi">200</span><span class="p">,</span>
         <span class="s2">&quot;message&quot;</span><span class="o">:</span> <span class="s2">&quot;Ok all right.&quot;</span>

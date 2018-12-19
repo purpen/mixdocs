@@ -148,6 +148,7 @@
 <li class="toctree-l2"><a class="reference internal" href="../columns/column_products.html">栏目商品模块</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../columns/life_records.html">生活志模块</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../columns/shop_windows.html">橱窗模块</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../columns/app_versions.html">app版本管理模块</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="../common.html">公用接口模块</a><ul>
@@ -253,7 +254,7 @@
 <li><a class="reference internal" href="#id35">返回示例</a></li>
 </ul>
 </li>
-<li><a class="reference internal" href="#id36">今日已提现次数</a><ul>
+<li><a class="reference internal" href="#id36">今日已提现次数、提现身份认证</a><ul>
 <li><a class="reference internal" href="#id37">接口说明</a></li>
 <li><a class="reference internal" href="#id38">返回示例</a></li>
 </ul>
@@ -345,7 +346,7 @@
 <li><a class="reference internal" href="#id35">返回示例</a></li>
 </ul>
 </li>
-<li><a class="reference internal" href="#id36">今日已提现次数</a><ul>
+<li><a class="reference internal" href="#id36">今日已提现次数、提现身份认证</a><ul>
 <li><a class="reference internal" href="#id37">接口说明</a></li>
 <li><a class="reference internal" href="#id38">返回示例</a></li>
 </ul>
@@ -994,8 +995,8 @@
 </div>
 </div>
 <div class="section" id="id36">
-<h2>今日已提现次数<a class="headerlink" href="#id36" title="永久链接至标题">¶</a></h2>
-<p>今日已提现次数</p>
+<h2>今日已提现次数、提现身份认证<a class="headerlink" href="#id36" title="永久链接至标题">¶</a></h2>
+<p>今日已提现次数、提现身份认证</p>
 <div class="section" id="id37">
 <h3>接口说明<a class="headerlink" href="#id37" title="永久链接至标题">¶</a></h3>
 <ul class="simple">
@@ -1010,7 +1011,20 @@
 <p>请求 <strong>正确</strong> 返回结果：</p>
 <div class="highlight-javascript"><div class="highlight"><pre><span></span><span class="p">{</span>
     <span class="s2">&quot;data&quot;</span><span class="o">:</span> <span class="p">{</span>
-        <span class="s2">&quot;cash_count&quot;</span><span class="o">:</span> <span class="mi">1</span>  <span class="c1">// 今日已提现次数</span>
+        <span class="s2">&quot;cash_count&quot;</span><span class="o">:</span> <span class="mi">1</span><span class="p">,</span>  <span class="c1">// 今日已提现次数</span>
+        <span class="s2">&quot;id_card&quot;</span><span class="o">:</span> <span class="p">{</span>
+            <span class="s2">&quot;code&quot;</span><span class="o">:</span> <span class="s2">&quot;ID9172683504&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;id_card&quot;</span><span class="o">:</span> <span class="s2">&quot;123124213123&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;id_card_back&quot;</span><span class="o">:</span> <span class="p">{</span>  <span class="c1">// 身份证背面</span>
+                <span class="s2">&quot;id&quot;</span><span class="o">:</span> <span class="mi">38801</span><span class="p">,</span>
+                <span class="s2">&quot;view_url&quot;</span><span class="o">:</span> <span class="s2">&quot;图片链接&quot;</span>
+            <span class="p">},</span>
+            <span class="s2">&quot;id_card_front&quot;</span><span class="o">:</span> <span class="p">{</span>  <span class="c1">// 身份证正面</span>
+                <span class="s2">&quot;id&quot;</span><span class="o">:</span> <span class="mi">38800</span><span class="p">,</span>
+                <span class="s2">&quot;view_url&quot;</span><span class="o">:</span> <span class="s2">&quot;图片链接&quot;</span>
+            <span class="p">},</span>
+            <span class="s2">&quot;user_name&quot;</span><span class="o">:</span> <span class="s2">&quot;哈哈&quot;</span>
+        <span class="p">}</span>
     <span class="p">},</span>
     <span class="s2">&quot;status&quot;</span><span class="o">:</span> <span class="p">{</span>
         <span class="s2">&quot;code&quot;</span><span class="o">:</span> <span class="mi">200</span><span class="p">,</span>
