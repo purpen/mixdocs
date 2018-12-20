@@ -427,6 +427,11 @@
 <li><a class="reference internal" href="#id147">返回示例</a></li>
 </ul>
 </li>
+<li><a class="reference internal" href="#id148">获取授权资料</a><ul>
+<li><a class="reference internal" href="#id149">接口说明</a></li>
+<li><a class="reference internal" href="#id150">返回示例</a></li>
+</ul>
+</li>
 </ul>
 </li>
 </ul>
@@ -685,6 +690,11 @@
 <li><a class="reference internal" href="#id145">接口说明</a></li>
 <li><a class="reference internal" href="#id146">请求参数</a></li>
 <li><a class="reference internal" href="#id147">返回示例</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#id148">获取授权资料</a><ul>
+<li><a class="reference internal" href="#id149">接口说明</a></li>
+<li><a class="reference internal" href="#id150">返回示例</a></li>
 </ul>
 </li>
 </ul>
@@ -3730,6 +3740,59 @@
     <span class="s2">&quot;status&quot;</span><span class="o">:</span> <span class="p">{</span>
         <span class="s2">&quot;code&quot;</span><span class="o">:</span> <span class="mi">201</span><span class="p">,</span>
         <span class="s2">&quot;message&quot;</span><span class="o">:</span> <span class="s2">&quot;All created.&quot;</span>
+    <span class="p">},</span>
+    <span class="s2">&quot;success&quot;</span><span class="o">:</span> <span class="kc">true</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="id148">
+<h2>获取授权资料<a class="headerlink" href="#id148" title="永久链接至标题">¶</a></h2>
+<div class="section" id="id149">
+<h3>接口说明<a class="headerlink" href="#id149" title="永久链接至标题">¶</a></h3>
+<ul class="simple">
+<li>API接口请求地址：<code class="docutils literal"><span class="pre">/store/authorization_file</span></code></li>
+<li>API接口请求方法：<code class="docutils literal"><span class="pre">GET</span></code></li>
+<li>API接口用户授权：<code class="docutils literal"><span class="pre">token</span></code></li>
+</ul>
+</div>
+<div class="section" id="id150">
+<h3>返回示例<a class="headerlink" href="#id150" title="永久链接至标题">¶</a></h3>
+<p>JSON数据格式</p>
+<p>请求 <strong>正确</strong> 返回结果：</p>
+<div class="highlight-javascript"><div class="highlight"><pre><span></span><span class="p">{</span>
+    <span class="s2">&quot;data&quot;</span><span class="o">:</span> <span class="p">{</span>
+        <span class="s2">&quot;authorization_file&quot;</span><span class="o">:</span> <span class="p">[</span>
+            <span class="p">{</span>
+                <span class="s2">&quot;created_at&quot;</span><span class="o">:</span> <span class="mi">1536164457</span><span class="p">,</span>
+                <span class="s2">&quot;filename&quot;</span><span class="o">:</span> <span class="s2">&quot;WechatIMG31.jpeg&quot;</span><span class="p">,</span>
+                <span class="s2">&quot;filepath&quot;</span><span class="o">:</span> <span class="s2">&quot;20180906/2056FrUvfqbyfnc-lnOdommJAqHw1Oh3.jpeg&quot;</span><span class="p">,</span>
+                <span class="s2">&quot;id&quot;</span><span class="o">:</span> <span class="mi">18</span><span class="p">,</span>
+                <span class="s2">&quot;type&quot;</span><span class="o">:</span> <span class="mi">1</span><span class="p">,</span>
+                <span class="s2">&quot;view_url&quot;</span><span class="o">:</span> <span class="s2">&quot;https://s3.lexivip.com/20180906/2056FrUvfqbyfnc-lnOdommJAqHw1Oh3.jpeg&quot;</span>
+            <span class="p">},</span>
+            <span class="p">{</span>
+                <span class="s2">&quot;created_at&quot;</span><span class="o">:</span> <span class="mi">1536164503</span><span class="p">,</span>
+                <span class="s2">&quot;filename&quot;</span><span class="o">:</span> <span class="s2">&quot;页面banner图1.jpg&quot;</span><span class="p">,</span>
+                <span class="s2">&quot;filepath&quot;</span><span class="o">:</span> <span class="s2">&quot;20180906/2142FmZvp8R2EQlEf0EaVey5INWpaZfP.jpg&quot;</span><span class="p">,</span>
+                <span class="s2">&quot;id&quot;</span><span class="o">:</span> <span class="mi">19</span><span class="p">,</span>
+                <span class="s2">&quot;type&quot;</span><span class="o">:</span> <span class="mi">1</span><span class="p">,</span>
+                <span class="s2">&quot;view_url&quot;</span><span class="o">:</span> <span class="s2">&quot;https://s3.lexivip.com/20180906/2142FmZvp8R2EQlEf0EaVey5INWpaZfP.jpg&quot;</span>
+            <span class="p">},</span>
+            <span class="p">{</span>
+                <span class="s2">&quot;created_at&quot;</span><span class="o">:</span> <span class="mi">1536205073</span><span class="p">,</span>
+                <span class="s2">&quot;filename&quot;</span><span class="o">:</span> <span class="s2">&quot;500x0 (6).jpg&quot;</span><span class="p">,</span>
+                <span class="s2">&quot;filepath&quot;</span><span class="o">:</span> <span class="s2">&quot;20180906/3752Fil_bUpwqm7v48D5VaFdzViHsOd5.jpg&quot;</span><span class="p">,</span>
+                <span class="s2">&quot;id&quot;</span><span class="o">:</span> <span class="mi">20</span><span class="p">,</span>
+                <span class="s2">&quot;type&quot;</span><span class="o">:</span> <span class="mi">1</span><span class="p">,</span>
+                <span class="s2">&quot;view_url&quot;</span><span class="o">:</span> <span class="s2">&quot;https://s3.lexivip.com/20180906/3752Fil_bUpwqm7v48D5VaFdzViHsOd5.jpg&quot;</span>
+            <span class="p">}</span>
+        <span class="p">]</span>
+    <span class="p">},</span>
+    <span class="s2">&quot;status&quot;</span><span class="o">:</span> <span class="p">{</span>
+        <span class="s2">&quot;code&quot;</span><span class="o">:</span> <span class="mi">200</span><span class="p">,</span>
+        <span class="s2">&quot;message&quot;</span><span class="o">:</span> <span class="s2">&quot;Ok all right.&quot;</span>
     <span class="p">},</span>
     <span class="s2">&quot;success&quot;</span><span class="o">:</span> <span class="kc">true</span>
 <span class="p">}</span>
