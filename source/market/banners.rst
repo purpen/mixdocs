@@ -443,8 +443,35 @@ JSON数据格式:
 
     {
         "data": {
-            "cover": "https://s3.lexivip.com/20180928/3253Fhf17x-FFYGRDMKTv55xJHwzcnun.jpg",   // 封面图
-            "title": "#旧城中环"                                                                // 标题
+            "image_url": "https://kg.erp.taihuoniao.com/20180314/Fk1vEAP_tIVwmPRfHRfl8jpn07CZ.png"
+        },
+        "status": {
+            "code": 200,
+            "message": "Ok all right."
+        },
+        "success": true
+    }
+
+
+获取邀请好友海报
+----------------------
+
+接口说明
+~~~~~~~~~~~~~~
+
+* API接口请求地址：``/market/invitation/user``
+* API接口请求方法：``POST``
+
+返回示例
+~~~~~~~~~~~~~~~~
+
+JSON数据格式:
+
+.. code-block:: javascript
+
+    {
+        "data": {
+            "image_url": "https://kg.erp.taihuoniao.com/20180314/Fk1vEAP_tIVwmPRfHRfl8jpn07CZ.png"
         },
         "status": {
             "code": 200,
