@@ -2430,3 +2430,60 @@ JSON数据格式
         },
         "success": true
     }
+
+获取授权资料
+---------------------
+
+
+接口说明
+~~~~~~~~~~~~~~
+
+* API接口请求地址：``/store/authorization_file``
+* API接口请求方法：``GET``
+* API接口用户授权：``token``
+
+返回示例
+~~~~~~~~~~~~~~~~
+
+JSON数据格式
+
+请求 **正确** 返回结果：
+
+.. code-block:: javascript
+
+    {
+        "data": {
+            "authorization_file": [
+                {
+                    "created_at": 1536164457,
+                    "filename": "WechatIMG31.jpeg",
+                    "filepath": "20180906/2056FrUvfqbyfnc-lnOdommJAqHw1Oh3.jpeg",
+                    "id": 18,
+                    "type": 1,
+                    "view_url": "https://s3.lexivip.com/20180906/2056FrUvfqbyfnc-lnOdommJAqHw1Oh3.jpeg"
+                },
+                {
+                    "created_at": 1536164503,
+                    "filename": "页面banner图1.jpg",
+                    "filepath": "20180906/2142FmZvp8R2EQlEf0EaVey5INWpaZfP.jpg",
+                    "id": 19,
+                    "type": 1,
+                    "view_url": "https://s3.lexivip.com/20180906/2142FmZvp8R2EQlEf0EaVey5INWpaZfP.jpg"
+                },
+                {
+                    "created_at": 1536205073,
+                    "filename": "500x0 (6).jpg",
+                    "filepath": "20180906/3752Fil_bUpwqm7v48D5VaFdzViHsOd5.jpg",
+                    "id": 20,
+                    "type": 1,
+                    "view_url": "https://s3.lexivip.com/20180906/3752Fil_bUpwqm7v48D5VaFdzViHsOd5.jpg"
+                }
+            ]
+        },
+        "status": {
+            "code": 200,
+            "message": "Ok all right."
+        },
+        "success": true
+    }
+
