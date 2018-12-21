@@ -67,3 +67,66 @@ JSON数据格式:
         "success": true
     }
 
+
+ios启动页图片
+----------------------
+
+接口说明
+~~~~~~~~~~~~~~
+
+* API接口请求地址：``/market/guide/ios``
+* API接口请求方法：``GET``
+
+返回示例
+~~~~~~~~~~~~~~~~
+
+JSON数据格式:
+
+.. code-block:: javascript
+
+    {
+        "data": {
+            // micro=640×1136，small=750×1334，middle=1242×2208， big=1125×2436，
+            "big": "http://kg.erp.taihuoniao.com/20180910/4607FlR2IbV390NUSHE6DXFKKWmghvB-.png",
+            "micro": "http://kg.erp.taihuoniao.com/20180910/4609FutzCIzakzbarEw14acvnD6Z-elf.png",
+            "middle": "http://kg.erp.taihuoniao.com/20180910/4609FgDkp-m8ibSFOMrP3Nj6qClgsavr.png",
+            "small": "http://kg.erp.taihuoniao.com/20180910/4609Fgtti95byW2Rbr_lbI9sW2w5Gspw.png"
+        },
+        "status": {
+            "code": 200,
+            "message": "Ok all right."
+        },
+        "success": true
+    }
+
+
+android启动页图片
+----------------------
+
+接口说明
+~~~~~~~~~~~~~~
+
+* API接口请求地址：``/market/guide/android``
+* API接口请求方法：``GET``
+
+返回示例
+~~~~~~~~~~~~~~~~
+
+JSON数据格式:
+
+.. code-block:: javascript
+
+    {
+        "data": {
+            // micro=640×1136，small=750×1334，middle=1242×2208， big=1125×2436，
+            "big": "http://kg.erp.taihuoniao.com/20180910/4607FlR2IbV390NUSHE6DXFKKWmghvB-.png",
+            "micro": "http://kg.erp.taihuoniao.com/20180910/4609FutzCIzakzbarEw14acvnD6Z-elf.png",
+            "middle": "http://kg.erp.taihuoniao.com/20180910/4609FgDkp-m8ibSFOMrP3Nj6qClgsavr.png",
+            "small": "http://kg.erp.taihuoniao.com/20180910/4609Fgtti95byW2Rbr_lbI9sW2w5Gspw.png"
+        },
+        "status": {
+            "code": 200,
+            "message": "Ok all right."
+        },
+        "success": true
+    }

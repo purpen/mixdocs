@@ -27,6 +27,8 @@
     <script type="text/javascript" src="../_static/bootstrap-sphinx.js"></script>
     <link rel="index" title="索引" href="../genindex.html" />
     <link rel="search" title="搜索" href="../search.html" />
+    <link rel="next" title="公用接口模块" href="../common.html" />
+    <link rel="prev" title="橱窗模块" href="shop_windows.html" />
 <meta charset='utf-8'>
 <meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'>
 <meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1'>
@@ -61,7 +63,7 @@
      href="../index.html">API文档 <b class="caret"></b></a>
   <ul class="dropdown-menu globaltoc"
       role="menu"
-      aria-labelledby="dLabelGlobalToc"><ul>
+      aria-labelledby="dLabelGlobalToc"><ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="../intro.html">开放平台文档说明</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="../intro.html#id2">开发入门</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../intro.html#id3">系统级请求参数</a></li>
@@ -142,10 +144,11 @@
 <li class="toctree-l2"><a class="reference internal" href="../qa/qa.html">问答模块</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="index.html">栏目API模块</a><ul>
+<li class="toctree-l1 current"><a class="reference internal" href="index.html">栏目API模块</a><ul class="current">
 <li class="toctree-l2"><a class="reference internal" href="column_products.html">栏目商品模块</a></li>
 <li class="toctree-l2"><a class="reference internal" href="life_records.html">生活志模块</a></li>
 <li class="toctree-l2"><a class="reference internal" href="shop_windows.html">橱窗模块</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">app版本管理模块</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="../common.html">公用接口模块</a><ul>
@@ -206,6 +209,16 @@
 <li><a class="reference internal" href="#id4">返回示例</a></li>
 </ul>
 </li>
+<li><a class="reference internal" href="#id5">ios启动页图片</a><ul>
+<li><a class="reference internal" href="#id6">接口说明</a></li>
+<li><a class="reference internal" href="#id7">返回示例</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#id8">android启动页图片</a><ul>
+<li><a class="reference internal" href="#id9">接口说明</a></li>
+<li><a class="reference internal" href="#id10">返回示例</a></li>
+</ul>
+</li>
 </ul>
 </li>
 </ul>
@@ -248,12 +261,30 @@
 <li><a class="reference internal" href="#id4">返回示例</a></li>
 </ul>
 </li>
+<li><a class="reference internal" href="#id5">ios启动页图片</a><ul>
+<li><a class="reference internal" href="#id6">接口说明</a></li>
+<li><a class="reference internal" href="#id7">返回示例</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#id8">android启动页图片</a><ul>
+<li><a class="reference internal" href="#id9">接口说明</a></li>
+<li><a class="reference internal" href="#id10">返回示例</a></li>
+</ul>
+</li>
 </ul>
 </li>
 </ul>
 
 
 <ul class="nav nav-list">
+  <li>
+    <a href="shop_windows.html" title="Previous Chapter: 橱窗模块"><span class="glyphicon glyphicon-chevron-left visible-sm"></span><span class="hidden-sm hidden-tablet">&raquo; 橱窗模块</span>
+    </a>
+  </li>
+  <li>
+    <a href="../common.html" title="Next Chapter: 公用接口模块"><span class="glyphicon glyphicon-chevron-right visible-sm"></span><span class="hidden-sm hidden-tablet">&raquo; 公用接口模块</span>
+    </a>
+  </li>
 </ul>
 <div id="sourcelink">
   <a href="../_sources/columns/app_versions.rst.txt"
@@ -323,6 +354,66 @@
             <span class="s2">&quot;3、功能完善。&quot;</span>
         <span class="p">],</span>
         <span class="s2">&quot;version&quot;</span><span class="o">:</span> <span class="s2">&quot;v1.0.1&quot;</span>
+    <span class="p">},</span>
+    <span class="s2">&quot;status&quot;</span><span class="o">:</span> <span class="p">{</span>
+        <span class="s2">&quot;code&quot;</span><span class="o">:</span> <span class="mi">200</span><span class="p">,</span>
+        <span class="s2">&quot;message&quot;</span><span class="o">:</span> <span class="s2">&quot;Ok all right.&quot;</span>
+    <span class="p">},</span>
+    <span class="s2">&quot;success&quot;</span><span class="o">:</span> <span class="kc">true</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="id5">
+<h2>ios启动页图片<a class="headerlink" href="#id5" title="永久链接至标题">¶</a></h2>
+<div class="section" id="id6">
+<h3>接口说明<a class="headerlink" href="#id6" title="永久链接至标题">¶</a></h3>
+<ul class="simple">
+<li>API接口请求地址：<code class="docutils literal"><span class="pre">/market/guide/ios</span></code></li>
+<li>API接口请求方法：<code class="docutils literal"><span class="pre">GET</span></code></li>
+</ul>
+</div>
+<div class="section" id="id7">
+<h3>返回示例<a class="headerlink" href="#id7" title="永久链接至标题">¶</a></h3>
+<p>JSON数据格式:</p>
+<div class="highlight-javascript"><div class="highlight"><pre><span></span><span class="p">{</span>
+    <span class="s2">&quot;data&quot;</span><span class="o">:</span> <span class="p">{</span>
+        <span class="c1">// micro=640×1136，small=750×1334，middle=1242×2208， big=1125×2436，</span>
+        <span class="s2">&quot;big&quot;</span><span class="o">:</span> <span class="s2">&quot;http://kg.erp.taihuoniao.com/20180910/4607FlR2IbV390NUSHE6DXFKKWmghvB-.png&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;micro&quot;</span><span class="o">:</span> <span class="s2">&quot;http://kg.erp.taihuoniao.com/20180910/4609FutzCIzakzbarEw14acvnD6Z-elf.png&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;middle&quot;</span><span class="o">:</span> <span class="s2">&quot;http://kg.erp.taihuoniao.com/20180910/4609FgDkp-m8ibSFOMrP3Nj6qClgsavr.png&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;small&quot;</span><span class="o">:</span> <span class="s2">&quot;http://kg.erp.taihuoniao.com/20180910/4609Fgtti95byW2Rbr_lbI9sW2w5Gspw.png&quot;</span>
+    <span class="p">},</span>
+    <span class="s2">&quot;status&quot;</span><span class="o">:</span> <span class="p">{</span>
+        <span class="s2">&quot;code&quot;</span><span class="o">:</span> <span class="mi">200</span><span class="p">,</span>
+        <span class="s2">&quot;message&quot;</span><span class="o">:</span> <span class="s2">&quot;Ok all right.&quot;</span>
+    <span class="p">},</span>
+    <span class="s2">&quot;success&quot;</span><span class="o">:</span> <span class="kc">true</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="id8">
+<h2>android启动页图片<a class="headerlink" href="#id8" title="永久链接至标题">¶</a></h2>
+<div class="section" id="id9">
+<h3>接口说明<a class="headerlink" href="#id9" title="永久链接至标题">¶</a></h3>
+<ul class="simple">
+<li>API接口请求地址：<code class="docutils literal"><span class="pre">/market/guide/android</span></code></li>
+<li>API接口请求方法：<code class="docutils literal"><span class="pre">GET</span></code></li>
+</ul>
+</div>
+<div class="section" id="id10">
+<h3>返回示例<a class="headerlink" href="#id10" title="永久链接至标题">¶</a></h3>
+<p>JSON数据格式:</p>
+<div class="highlight-javascript"><div class="highlight"><pre><span></span><span class="p">{</span>
+    <span class="s2">&quot;data&quot;</span><span class="o">:</span> <span class="p">{</span>
+        <span class="c1">// micro=640×1136，small=750×1334，middle=1242×2208， big=1125×2436，</span>
+        <span class="s2">&quot;big&quot;</span><span class="o">:</span> <span class="s2">&quot;http://kg.erp.taihuoniao.com/20180910/4607FlR2IbV390NUSHE6DXFKKWmghvB-.png&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;micro&quot;</span><span class="o">:</span> <span class="s2">&quot;http://kg.erp.taihuoniao.com/20180910/4609FutzCIzakzbarEw14acvnD6Z-elf.png&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;middle&quot;</span><span class="o">:</span> <span class="s2">&quot;http://kg.erp.taihuoniao.com/20180910/4609FgDkp-m8ibSFOMrP3Nj6qClgsavr.png&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;small&quot;</span><span class="o">:</span> <span class="s2">&quot;http://kg.erp.taihuoniao.com/20180910/4609Fgtti95byW2Rbr_lbI9sW2w5Gspw.png&quot;</span>
     <span class="p">},</span>
     <span class="s2">&quot;status&quot;</span><span class="o">:</span> <span class="p">{</span>
         <span class="s2">&quot;code&quot;</span><span class="o">:</span> <span class="mi">200</span><span class="p">,</span>
