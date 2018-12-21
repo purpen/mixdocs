@@ -124,44 +124,29 @@ JSON数据格式
 .. code-block:: javascript
 
     {
-        "data": [
-            {
-                "amount": 5,  // 获得红包金额
-                "username": "fIzzy"  // 用户名
-            },
-            {
-                "amount": 3,
-                "username": "哆啦"
-            },
-
-            {
-                "amount": 5,
-                "username": "改叫王小呆吧"
-            },
-            {
-                "amount": 5,
-                "username": "怪我"
-            },
-            {
-                "amount": 2,
-                "username": "James"
-            },
-            {
-                "amount": 10,
-                "username": "汤圆"
-            },
-            {
-                "amount": 10,
-                "username": "揪位姐妹"
-            }
-        ],
-        "status": {
-            "code": 200,
-            "message": "Ok all right."
+    "data": [
+        {
+            "amount": 25,  // 获得金额
+            "avatar": "https://s3.lexivip.com/avatar-4038997.png",  // 头像
+            "username": "噼里啪啦"  // 用户名
         },
-        "success": true
+        {
+            "amount": 2,
+            "avatar": "https://s3.lexivip.com/avatar-7447730.png",
+            "username": "手里拿个充电器"
+        },
+        {
+            "amount": 5,
+            "avatar": "https://s3.lexivip.com/avatar-12479260153.png",
+            "username": "风水大师"
+        },
+    ],
+    "status": {
+        "code": 200,
+        "message": "Ok all right."
+    },
+    "success": true
     }
-
 
 获取邀请人信息
 --------------------------
