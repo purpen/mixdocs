@@ -1948,7 +1948,7 @@ JSON数据格式:
 名称              类型        是否必须     默认值       描述说明
 ===============  ==========  =========  ==========  =============================
 rid              Number      必须                    生活志编号
-pid              Number      可选        0           上级评论编号
+reply_id         Number      可选        0           回复评论编号
 content          String      必须                    评论内容
 ===============  ==========  =========  ==========  =============================
 
@@ -1966,7 +1966,8 @@ JSON数据格式:
             "created_at": "评论时间",
             "is_praise": "是否点过赞: true=点过赞,false=未点过赞",
             "pid": "上级评论编号",
-            "praise_count": "评论点赞数"
+            "praise_count": "评论点赞数",
+            "reply_user_name": "回复的评论对应的用户名，如果为空代表是评论的是橱窗或者回复一级评论",
             "user_avatar": "评论用户头像",
             "user_name": "评论用户名"
         },
@@ -2124,6 +2125,7 @@ JSON数据格式:
                     "pid": 0,
                     "praise_count": 1,
                     "remain_count": 0,
+                    "reply_user_name": "",
                     "sub_comment_count": 4,
                     "sub_comments": [
                         {
@@ -2133,8 +2135,9 @@ JSON数据格式:
                             "is_praise": false,
                             "pid": 1,
                             "praise_count": 0,
+                            "reply_user_name": "用户A",
                             "user_avatar": "http://kg.erp.taihuoniao.com/static/img/default-logo.png",
-                            "user_name": "评论用户名"
+                            "user_name": "用户B"
                         },
                         {
                             "comment_id": 13,
@@ -2143,8 +2146,9 @@ JSON数据格式:
                             "is_praise": false,
                             "pid": 1,
                             "praise_count": 0,
+                            "reply_user_name": "",
                             "user_avatar": "http://kg.erp.taihuoniao.com/static/img/default-logo.png",
-                            "user_name": "商品棒棒棒(作者)"
+                            "user_name": "用户A"
                         }
                     ],
                     "user_avatar": "http://kg.erp.taihuoniao.com/static/img/default-logo.png",
@@ -2157,6 +2161,7 @@ JSON数据格式:
                     "is_praise": false,
                     "pid": 0,
                     "praise_count": 0,
+                    "reply_user_name": "",
                     "user_avatar": "http://kg.erp.taihuoniao.com/static/img/default-logo.png",
                     "user_name": "评论用户名"
                 }
@@ -2207,24 +2212,26 @@ JSON数据格式:
         "data": {
             "comments": [
                 {
-                    "comment_id": 7,
-                    "content": "评论",
-                    "created_at": 1533095600,
-                    "is_praise": false,
-                    "pid": 2,
-                    "praise_count": 0,
-                    "user_avatar": "http://kg.erp.taihuoniao.com/static/img/default-logo.png",
-                    "user_name": "评论用户名"
-                },
-                {
                     "comment_id": 8,
                     "content": "评论",
                     "created_at": 1533095600,
                     "is_praise": false,
                     "pid": 2,
                     "praise_count": 0,
+                    "reply_user_name": "蓝胖子",
                     "user_avatar": "http://kg.erp.taihuoniao.com/static/img/default-logo.png",
-                    "user_name": "评论用户名"
+                    "user_name": "用户B"
+                },
+                {
+                    "comment_id": 7,
+                    "content": "评论",
+                    "created_at": 1533095600,
+                    "is_praise": false,
+                    "pid": 2,
+                    "praise_count": 0,
+                    "reply_user_name": "",
+                    "user_avatar": "http://kg.erp.taihuoniao.com/static/img/default-logo.png",
+                    "user_name": "蓝胖子"
                 }
             ],
             "count": 4,
