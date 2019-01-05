@@ -39,6 +39,7 @@ JSON数据格式:
                     "comment_count": "评论数",
                     "description": "橱窗详情",
                     "is_follow": "是否关注过发布橱窗的用户",
+                    "followed_status": "是否关注过发布橱窗的用户",
                     "is_like": "是否喜欢过该橱窗",
                     "is_official": "是否官方橱窗",
                     "keywords": [
@@ -176,7 +177,7 @@ per_page         Number      可选         10         每页数量
 ** 同上推荐的橱窗返回示例 **
 
 
-关注人的橱窗
+包含指定标签的橱窗
 ----------------------
 
 接口说明
@@ -199,8 +200,60 @@ keyword          String      必须                    橱窗关键词
 返回示例
 ~~~~~~~~~~~~~~~~
 
-** 同上推荐的橱窗返回示例 **
+JSON数据格式:
 
+.. code-block:: javascript
+
+    {
+        "data": {
+            "count": 18,
+            "next": true,
+            "prev": false,
+            "shop_windows": [
+                {
+                    "comment_count": 3,
+                    "description": "往事随风，走路带风的女子，甚得我心",
+                    "is_expert": false,
+                    "is_official": false,
+                    "keywords": [
+                        "双十一锦鲤心愿单",
+                        "创意生活"
+                    ],
+                    "like_count": 6,
+                    "product_count": 3,
+                    "product_covers": [
+                        "https://s3.lexivip.com/lxServer/1530543749791.jpg",
+                        "https://s3.lexivip.com/lxServer/1530537896407.JPG",
+                        "https://s3.lexivip.com/lxServer/1531465277694.jpg"
+                    ],
+                    "products": [
+                        {
+                            "cover": "https://s3.lexivip.com/lxServer/1530543749791.jpg",
+                            "rid": "8857632104"
+                        },
+                        {
+                            "cover": "https://s3.lexivip.com/lxServer/1530537896407.JPG",
+                            "rid": "8269035174"
+                        },
+                        {
+                            "cover": "https://s3.lexivip.com/lxServer/1531465277694.jpg",
+                            "rid": "8840236957"
+                        }
+                    ],
+                    "rid": 196,
+                    "title": "与其等风来，不如自己先跑起来",
+                    "uid": "13145089726",
+                    "user_avatar": "https://s3.lexivip.com/20181103/2551FjR9wss5Zl8pwbUVghpBifjTxFQ-.jpg",
+                    "user_name": "糖小兔，"
+                }
+            ]
+        },
+        "status": {
+            "code": 200,
+            "message": "Ok all right."
+        },
+        "success": true
+    }
 
 橱窗的信息
 ----------------------

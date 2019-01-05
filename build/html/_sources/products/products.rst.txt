@@ -217,10 +217,11 @@ per_page                Number      可选         10        每页数量
 start_date              String      可选                   发布日期的开始日期
 end_date                String      可选                   发布日期的结束日期
 cid                     Number      可选                   分类Id
-status                  Number      可选         1         商品状态 0:仓库中; 1:出售中; 2:下架中; 3:已售罄
+status                  Number      可选         1         商品状态 0:仓库中; 1:出售中; 2:下架中; 3:已售罄; 4: 待审核
 is_distributed          Number      可选                   商品类别 0: 全部; 1：自营商品；2：分销商品
 qk                      String      可选                   搜索关键字
 out_of_stock            Number      可选         0         商品库存 0: 全部; 1: 数量不足
+audit_status            Number      可选         1         审核状态 1: 审核中 2: 审核拒绝
 =====================  ==========  =========  ==========  =============================
 
 返回示例
@@ -252,7 +253,7 @@ page                    Number      可选         1         当前页码
 per_page                Number      可选         10        每页数量
 sid                     String      必须                   店铺编号
 cid                     Number      可选                   分类Id
-status                  Number      可选         1         商品状态 -1: 所有 0:仓库中; 1:出售中; 2:下架中; 3:已售罄
+status                  Number      可选         1         商品状态 -1: 所有 0:仓库中; 1:出售中; 2:下架中; 3:已售罄; 4: 审核中
 is_distributed          Number      可选                   商品类别 0: 全部; 1：自营商品；2：分销商品
 qk                      String      可选                   搜索关键字
 min_price               Number      可选                   价格区间： 最小价格
@@ -507,7 +508,7 @@ JSON数据格式:
     }
 
 
-商品基本信息
+商品图片信息
 ----------------
 
 接口说明
@@ -1481,6 +1482,7 @@ is_custom_made         Bool        必填                     是否接单定制
 made_cycle             Number      可选                     制作周期
 is_made_holiday        Bool        可选                     制作周期是否包含节假日
 style_id               Number      可选                     商品风格
+video_id               Number      可选                     商品视频编号
 =====================  ==========  =========  ==========  =============================
 
 请求示例
@@ -1564,7 +1566,9 @@ JSON数据格式:
             "top_category_id": 1,
             "stock_count": null,
             "style_id": 1,
-            "style_name": "可爱"
+            "style_name": "可爱",
+            "video_id": 46024,
+            "video_url": "https://s3.lexivip.com/20181119/5011FkOzxcPR7aPWBrDwUYtpTcmKFpS8-320x240"
         },
         "status": {
             "code": 201,
@@ -2203,6 +2207,11 @@ JSON数据格式:
                 "count": 5,
                 "name": "已售罄",
                 "status": 3
+            },
+            {
+                "count": 2,
+                "name": "审核中",
+                "status": 4
             }
         ],
         "status": {

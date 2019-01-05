@@ -204,6 +204,208 @@ sid              String      可选                    店铺编号
 ** 同上保存文章到草稿箱 **
 
 
+短视频--发布
+----------------------
+
+接口说明
+~~~~~~~~~~~~~~
+
+* API接口请求地址：``/life_records/videos``
+* API接口请求方法：``POST``
+* API接口用户授权：``token``
+
+请求参数
+~~~~~~~~~~~~~~~
+
+===============  ==========  =========  ==========  =============================
+名称              类型        是否必须     默认值       描述说明
+===============  ==========  =========  ==========  =============================
+video_id         Number      必须                    视频编号
+channel_id       Number      必须                    频道编号
+title            String      必须                    标题
+description      String      可选                    摘要, 最多140个字符
+content          String      可选                    正文
+cover_id         Number      必须                    封面图编号
+label_id         Number      可选                    标签编号
+===============  ==========  =========  ==========  =============================
+
+返回示例
+~~~~~~~~~~~~~~~~
+
+JSON数据格式:
+
+.. code-block:: javascript
+
+    {
+        "data": {
+            "audit_status": "1: 待审核  2: 审核通过  3: 审核不通过",
+            "channel_id": 2,
+            "channel_name": "创作人专访",
+            "content": "正文...",
+            "cover": "http://127.0.0.1:9000/_uploads/photos/180707/77409c8ab9b0abf.jpg",
+            "cover_id": 2,
+            "created_at": "创建时间",
+            "description": "摘要...",
+            "rid": 4,
+            "refuse_reason": "审核不通过的原因",
+            "label_id": 2,
+            "label_name": "文化",
+            "published_at": "发布时间",
+            "status": "1: 草稿箱  2: 发布  3: 禁用",
+            "store": "如果有推荐店铺, 这里是店铺的基本信息...",
+            "store_name": "发布文章的品牌馆名",
+            "title": "她手绘出来的童话馆的小公主居然偷偷跑出来了",
+            "type": "1: 文章  2: 种草  3: 视频",
+            "user_avator": "用户头像",
+            "user_name": "用户名",
+            "browse_count": "浏览数",
+            "comment_count": "评论数",
+            "is_follow": "是否互相关注",
+            "is_follow_store": "是否关注推荐的店铺",
+            "like_count": "喜欢数",
+            "praise_count": "点赞数"
+        },
+        "status": {
+            "code": 201,
+            "message": "All created."
+        },
+        "success": true
+    }
+
+
+修改短视频--发布
+----------------------
+
+接口说明
+~~~~~~~~~~~~~~
+
+* API接口请求地址：``/life_records/videos``
+* API接口请求方法：``PUT``
+* API接口用户授权：``token``
+
+请求参数
+~~~~~~~~~~~~~~~
+
+===============  ==========  =========  ==========  =============================
+名称              类型        是否必须     默认值       描述说明
+===============  ==========  =========  ==========  =============================
+rid              Number      必须                    生活志短视频编号
+video_id         Number      必须                    短视频编号
+channel_id       Number      必须                    频道编号
+title            String      必须                    标题
+description      String      可选                    摘要, 最多140个字符
+content          String      可选                    正文
+cover_id         Number      必须                    封面图编号
+label_id         Number      可选                    标签编号
+===============  ==========  =========  ==========  =============================
+
+返回示例
+~~~~~~~~~~~~~~~~
+
+** 同上发布短视频 **
+
+
+短视频--存草稿箱
+----------------------
+
+接口说明
+~~~~~~~~~~~~~~
+
+* API接口请求地址：``/life_records/videos/draft``
+* API接口请求方法：``POST``
+* API接口用户授权：``token``
+
+请求参数
+~~~~~~~~~~~~~~~
+
+===============  ==========  =========  ==========  =============================
+名称              类型        是否必须     默认值       描述说明
+===============  ==========  =========  ==========  =============================
+video_id         Number      可选                    短视频编号
+channel_id       Number      可选                    频道编号
+title            String      可选                    标题
+description      String      可选                    摘要, 最多140个字符
+content          String      可选                    正文
+cover_id         Number      可选                    封面图编号
+label_id         Number      可选                    标签编号
+===============  ==========  =========  ==========  =============================
+
+返回示例
+~~~~~~~~~~~~~~~~
+
+JSON数据格式:
+
+.. code-block:: javascript
+
+    {
+        "data": {
+            "audit_status": "1: 待审核  2: 审核通过  3: 审核不通过",
+            "channel_id": 2,
+            "channel_name": "创作人专访",
+            "content": "正文...",
+            "cover": "http://127.0.0.1:9000/_uploads/photos/180707/77409c8ab9b0abf.jpg",
+            "cover_id": 2,
+            "created_at": "创建时间",
+            "description": "摘要...",
+            "rid": 4,
+            "refuse_reason": "审核不通过的原因",
+            "label_id": 2,
+            "label_name": "文化",
+            "published_at": "发布时间",
+            "status": "1: 草稿箱  2: 发布  3: 禁用",
+            "store": "如果有推荐店铺, 这里是店铺的基本信息...",
+            "store_name": "发布文章的品牌馆名",
+            "title": "她手绘出来的童话馆的小公主居然偷偷跑出来了",
+            "type": "1: 文章  2: 种草  3: 视频",
+            "user_avator": "用户头像",
+            "user_name": "用户名",
+            "browse_count": "浏览数",
+            "comment_count": "评论数",
+            "is_follow": "是否互相关注",
+            "is_follow_store": "是否关注店铺",
+            "like_count": "喜欢数",
+            "praise_count": "点赞数"
+        },
+        "status": {
+            "code": 201,
+            "message": "All created."
+        },
+        "success": true
+    }
+
+
+修改短视频--存草稿箱
+----------------------
+
+接口说明
+~~~~~~~~~~~~~~
+
+* API接口请求地址：``/life_records/videos/draft``
+* API接口请求方法：``PUT``
+* API接口用户授权：``token``
+
+请求参数
+~~~~~~~~~~~~~~~
+
+===============  ==========  =========  ==========  =============================
+名称              类型        是否必须     默认值       描述说明
+===============  ==========  =========  ==========  =============================
+rid              Number      必须                    文章编号
+video_id         Number      可选                    短视频编号
+channel_id       Number      可选                    频道编号
+title            String      可选                    标题
+description      String      可选                    摘要, 最多140个字符
+content          String      可选                    正文
+cover_id         Number      可选                    封面图编号
+label_id         Number      可选                    标签编号
+===============  ==========  =========  ==========  =============================
+
+返回示例
+~~~~~~~~~~~~~~~~
+
+** 同上保存短视频到草稿箱 **
+
+
 种草一下--发布
 ----------------------
 
@@ -1075,7 +1277,9 @@ JSON数据格式:
             "is_follow": "是否互相关注",
             "is_follow_store": "是否关注店铺",
             "like_count": "喜欢数",
-            "praise_count": "点赞数"
+            "praise_count": "点赞数",
+            "video_id": 46024,
+            "video_url": "https://kg.erp.taihuoniao.com/20181121/2603lqVb__1rdSw9yz71BqZxWu_vl6ec.mp4-320x240"
         },
         "status": {
             "code": 200,
@@ -1744,7 +1948,7 @@ JSON数据格式:
 名称              类型        是否必须     默认值       描述说明
 ===============  ==========  =========  ==========  =============================
 rid              Number      必须                    生活志编号
-pid              Number      可选        0           上级评论编号
+reply_id         Number      可选        0           回复评论编号
 content          String      必须                    评论内容
 ===============  ==========  =========  ==========  =============================
 
@@ -1762,7 +1966,8 @@ JSON数据格式:
             "created_at": "评论时间",
             "is_praise": "是否点过赞: true=点过赞,false=未点过赞",
             "pid": "上级评论编号",
-            "praise_count": "评论点赞数"
+            "praise_count": "评论点赞数",
+            "reply_user_name": "回复的评论对应的用户名，如果为空代表是评论的是橱窗或者回复一级评论",
             "user_avatar": "评论用户头像",
             "user_name": "评论用户名"
         },
@@ -1920,6 +2125,7 @@ JSON数据格式:
                     "pid": 0,
                     "praise_count": 1,
                     "remain_count": 0,
+                    "reply_user_name": "",
                     "sub_comment_count": 4,
                     "sub_comments": [
                         {
@@ -1929,8 +2135,9 @@ JSON数据格式:
                             "is_praise": false,
                             "pid": 1,
                             "praise_count": 0,
+                            "reply_user_name": "用户A",
                             "user_avatar": "http://kg.erp.taihuoniao.com/static/img/default-logo.png",
-                            "user_name": "评论用户名"
+                            "user_name": "用户B"
                         },
                         {
                             "comment_id": 13,
@@ -1939,8 +2146,9 @@ JSON数据格式:
                             "is_praise": false,
                             "pid": 1,
                             "praise_count": 0,
+                            "reply_user_name": "",
                             "user_avatar": "http://kg.erp.taihuoniao.com/static/img/default-logo.png",
-                            "user_name": "商品棒棒棒(作者)"
+                            "user_name": "用户A"
                         }
                     ],
                     "user_avatar": "http://kg.erp.taihuoniao.com/static/img/default-logo.png",
@@ -1953,6 +2161,7 @@ JSON数据格式:
                     "is_praise": false,
                     "pid": 0,
                     "praise_count": 0,
+                    "reply_user_name": "",
                     "user_avatar": "http://kg.erp.taihuoniao.com/static/img/default-logo.png",
                     "user_name": "评论用户名"
                 }
@@ -2003,24 +2212,26 @@ JSON数据格式:
         "data": {
             "comments": [
                 {
-                    "comment_id": 7,
-                    "content": "评论",
-                    "created_at": 1533095600,
-                    "is_praise": false,
-                    "pid": 2,
-                    "praise_count": 0,
-                    "user_avatar": "http://kg.erp.taihuoniao.com/static/img/default-logo.png",
-                    "user_name": "评论用户名"
-                },
-                {
                     "comment_id": 8,
                     "content": "评论",
                     "created_at": 1533095600,
                     "is_praise": false,
                     "pid": 2,
                     "praise_count": 0,
+                    "reply_user_name": "蓝胖子",
                     "user_avatar": "http://kg.erp.taihuoniao.com/static/img/default-logo.png",
-                    "user_name": "评论用户名"
+                    "user_name": "用户B"
+                },
+                {
+                    "comment_id": 7,
+                    "content": "评论",
+                    "created_at": 1533095600,
+                    "is_praise": false,
+                    "pid": 2,
+                    "praise_count": 0,
+                    "reply_user_name": "",
+                    "user_avatar": "http://kg.erp.taihuoniao.com/static/img/default-logo.png",
+                    "user_name": "蓝胖子"
                 }
             ],
             "count": 4,

@@ -9,3 +9,4 @@
     banners.rst
     coupons.rst
     bonus_question.rst
+    yiyuan.rst

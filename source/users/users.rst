@@ -2,6 +2,220 @@
 用户模块
 =========
 
+
+获取提现记录
+--------------------------
+
+
+接口说明
+~~~~~~~~~~~~~~
+
+* API接口请求地址：``/win_cash/withdrawal_record``
+* API接口请求方法：``GET``
+* API接口用户授权：``token``
+
+请求参数
+~~~~~~~~~~~~~~~
+
+===========  ========  =========  ========  ==============================================
+名称          类型      是否必须    默认值     描述说明
+===========  ========  =========  ========  ==============================================
+page         Number    可选         1        当前页码
+per_page     Number    可选         10       每页数量
+===========  ========  =========  ========  ==============================================
+
+JSON数据格式
+
+请求 **正确** 返回结果：
+
+.. code-block:: javascript
+
+    {
+        "data": {
+            "count": 3,
+            "next": false,
+            "prev": false,
+            "record_list": [
+                {
+                    "actual_amount": 4,  // 提现金额
+                    "created_at": 1544701407,  // 提现时间
+                    "rid": "2342345",  // 提现详情编号
+                    "status": 1  // 提现状态
+                },
+                {
+                    "actual_amount": 3,
+                    "created_at": 1544701100,
+                    "rid": "2342342",
+                    "status": 1
+                },
+                {
+                    "actual_amount": 5,
+                    "created_at": 1544700900,
+                    "rid": "5634542",
+                    "status": 1
+                }
+            ]
+        },
+        "status": {
+            "code": 200,
+            "message": "Ok all right."
+        },
+        "success": true
+    }
+
+提现详情
+--------------------------
+
+
+接口说明
+~~~~~~~~~~~~~~
+
+* API接口请求地址：``/win_cash/withdrawal_detail``
+* API接口请求方法：``GET``
+* API接口用户授权：``token``
+
+
+请求参数
+~~~~~~~~~~~~~~~
+
+===========  ========  =========  ========  ==============================================
+名称          类型      是否必须    默认值     描述说明
+===========  ========  =========  ========  ==============================================
+rid           String     必须                详情编号
+===========  ========  =========  ========  ==============================================
+
+JSON数据格式
+
+请求 **正确** 返回结果：
+
+.. code-block:: javascript
+
+    {
+        "data": {
+            "actual_amount": 4,  // 提现金额
+            "arrival_time": 1544780607,  // 预计到账时间
+            "created_at": 1544701407,  // 提现时间
+            "receive_target": 1,  // 提现方式
+            "rid": "2342345",  // 提现详情编号
+            "status": 1,  // 提现状态  1、成功 2、失败 3、审核中
+            "user_account": "omway"  // 用户账号
+        },
+        "status": {
+            "code": 200,
+            "message": "Ok all right."
+        },
+        "success": true
+    }
+
+获得红包用户列表
+--------------------------
+
+
+接口说明
+~~~~~~~~~~~~~~
+
+* API接口请求地址：``/win_cash/get_wallet_users``
+* API接口请求方法：``GET``
+
+JSON数据格式
+
+请求 **正确** 返回结果：
+
+.. code-block:: javascript
+
+    {
+    "data": [
+        {
+            "amount": 25,  // 获得金额
+            "avatar": "https://s3.lexivip.com/avatar-4038997.png",  // 头像
+            "username": "噼里啪啦"  // 用户名
+        },
+        {
+            "amount": 2,
+            "avatar": "https://s3.lexivip.com/avatar-7447730.png",
+            "username": "手里拿个充电器"
+        },
+        {
+            "amount": 5,
+            "avatar": "https://s3.lexivip.com/avatar-12479260153.png",
+            "username": "风水大师"
+        },
+    ],
+    "status": {
+        "code": 200,
+        "message": "Ok all right."
+    },
+    "success": true
+    }
+
+获取邀请人信息
+--------------------------
+
+
+接口说明
+~~~~~~~~~~~~~~
+
+* API接口请求地址：``/win_cash/get_share_user_info``
+* API接口请求方法：``GET``
+
+请求参数
+~~~~~~~~~~~~~~~
+
+=====================  ==========  =========  ==========  =============================
+名称                    类型        是否必须     默认值       描述说明
+=====================  ==========  =========  ==========  =============================
+uid                     String       是                     用户编号
+=====================  ==========  =========  ==========  =============================
+
+JSON数据格式
+
+请求 **正确** 返回结果：
+
+.. code-block:: javascript
+
+    {
+        "data": {
+            "avatar": "https://s3.lexivip.com/20181026/0529FjOQZvn5EbRuGU3NboM8q7AOyETQ.jpg",  // 头像
+            "username": "蘑菇蘑菇"  // 用户名
+        },
+        "status": {
+            "code": 200,
+            "message": "Ok all right."
+        },
+        "success": true
+    }
+
+获取已邀请好友数量
+--------------------------
+
+
+接口说明
+~~~~~~~~~~~~~~
+
+* API接口请求地址：``/win_cash/get_real_friends_count``
+* API接口请求方法：``GET``
+* API接口用户授权：``token``
+
+JSON数据格式
+
+请求 **正确** 返回结果：
+
+.. code-block:: javascript
+
+    {
+        "data": {
+            "amount": 0,  // 累计获得金额
+            "friends_count": 0, // 邀请好友数量
+            "can_carry_amount": 0,  //  可提现金额
+        },
+        "status": {
+            "code": 200,
+            "message": "Ok all right."
+        },
+        "success": true
+    }
+
+
 获取真实好友列表
 --------------------------
 
@@ -40,6 +254,90 @@ JSON数据格式
         "success": true
     }
 
+获取唤醒好友列表
+--------------------------
+
+
+接口说明
+~~~~~~~~~~~~~~
+
+* API接口请求地址：``/win_cash/get_rouse_friends``
+* API接口请求方法：``GET``
+* API接口用户授权：``token``
+
+JSON数据格式
+
+请求 **正确** 返回结果：
+
+.. code-block:: javascript
+
+    {
+        "data": {
+            "count": 2,
+            "friends": [
+                {
+                    "avatar": "https://static.moebeast.com/image/static/default_user.png", // 头像
+                    "last_seen": 1544260825,  // 最后访问时间
+                    "uid": "18602453791",  // 用户编号
+                    "username": "15****00",  // 用户名
+                    "rouse_status": 0,  // 唤醒状态 0：未唤醒， 1：唤醒中
+                },
+                {
+                    "avatar": "https://static.moebeast.com/image/static/default_user.png",
+                    "last_seen": 1544260825,
+                    "uid": "10429378516",
+                    "username": "15****99",
+                    "rouse_status": 0,  // 唤醒状态 0：未唤醒， 1：唤醒中
+
+                }
+            ],
+            "next": false,
+            "prev": false
+        },
+        "status": {
+            "code": 200,
+            "message": "Ok all right."
+        },
+        "success": true
+    }
+
+
+唤醒好友
+--------------------------
+
+
+接口说明
+~~~~~~~~~~~~~~
+
+* API接口请求地址：``/win_cash/rouse_friends``
+* API接口请求方法：``POST``
+* API接口用户授权：``token``
+
+请求参数
+~~~~~~~~~~~~~~~
+
+=====================  ==========  =========  ==========  =============================
+名称                    类型        是否必须     默认值       描述说明
+=====================  ==========  =========  ==========  =============================
+uid                     String       是                     用户编号
+=====================  ==========  =========  ==========  =============================
+
+JSON数据格式
+
+请求 **正确** 返回结果：
+
+.. code-block:: javascript
+
+    {
+        "status": {
+            "code": 200,
+            "message": "Ok all right."
+        },
+        "success": true
+    }
+
+
+
 邀请好友赢35元现金
 --------------------------
 
@@ -59,6 +357,7 @@ JSON数据格式
 =====================  ==========  =========  ==========  =============================
 uid                     String       是                     用户编号
 mobile                  String       是                     手机号
+areacode                String       否          +86        区号
 =====================  ==========  =========  ==========  =============================
 
 JSON数据格式
@@ -992,14 +1291,7 @@ JSON数据格式:
     {
         "data": {
             "about_me": "我是个好人",
-            "avatar": {
-                "created_at": null,
-                "filename": "a",
-                "filepath": "http://127.0.0.1:9000/_uploads/photos/222222/5d2812257b539aa.jpg",
-                "id": 1,
-                "type": null,
-                "view_url": "http://0.0.0.0:9000/_uploads/photos/http://127.0.0.1:9000/_uploads/photos/222222/5d2812257b539aa.jpg"  // 头像url
-            },
+            "avatar": "https://s3.lexivip.com/20181113/2213FjvLhFAih37XmkwC4Ag2A_aZThdd.jpg",
             "avatar_id": 1,  // 头像ID
             "city": "北京",
             "city_id": 1,
@@ -1018,6 +1310,12 @@ JSON数据格式:
             "province_id": 1,
             "uid": "19138405762",
             "username": "盖世火锅" // 用户名
+            "is_bind_wx": true ,  // 是否绑定过微信
+            "nick_name": "omway",  // 微信昵称
+            "wx_avatar": "https://s3.lexivip.com/wx_avatar/oDlWK5WNWtzaTDkrrsX9zqohUhM8", // 微信头像
+            "openid": "oDlWK5WNWtzaTDkrrsX9zqohUhM8",  // 移动端用到
+
+
         },
         "status": {
             "code": 200,
@@ -2787,3 +3085,392 @@ JSON数据格式:
 
 .. code-block:: javascript
 
+    {
+        "data": {
+            "is_paid": true,
+            "paid_status": 1,
+            "pay_amount": 699
+        },
+        "status": {
+            "code": 200,
+            "message": "Ok all right."
+        },
+        "success": true
+    }
+
+保存form_id
+--------------------------
+
+接口说明
+~~~~~~~~~~~~~~
+
+
+* API接口请求地址：``/users/save_form_ids``
+* API接口请求方法：``POST``
+* API接口用户授权：``token``
+
+请求参数
+~~~~~~~~~~~~~~~
+
+===============  ========  =========  ========  ====================================
+名称              类型      是否必须    默认值     描述说明
+===============  ========  =========  ========  ====================================
+app_id             String   是                   小程序id
+openid             String   是                   用户唯一标识
+form_ids           Array    否                   form_id数组
+order_rid          String   否                   订单编号
+prepay_id          String   否                   支付成功产生
+===============  ========  =========  ========  ====================================
+
+返回示例
+~~~~~~~~~~~~~~~~
+
+JSON数据格式:
+
+请求 **正确** 返回结果：
+
+.. code-block:: javascript
+
+    {
+        "status": {
+            "code": 200,
+            "message": "Ok all right."
+        },
+        "success": true
+    }
+
+app微信绑定
+--------------------------------
+
+接口说明
+~~~~~~~~~~~~~~
+
+* API接口请求地址：``/users/user_info_bind_wx``
+* API接口请求方法：``POST``
+* API接口用户授权：``token``
+
+
+
+请求参数
+~~~~~~~~~~~~~~~
+
+===========  ========  =========  ========  ====================================
+名称          类型      是否必须    默认值     描述说明
+===========  ========  =========  ========  ====================================
+openid        String     必须                   用户微信标识
+nick_name     String     可选                   用户名
+avatar_url    String     可选                   用户头像链接
+gender        String     可选                   性别
+unionid       String     可选                   用户唯一标识
+country       String     可选                   国家
+province      String     可选                   省
+city          String     可选                   市
+app_id        String     可选                   应用id
+===========  ========  =========  ========  ====================================
+
+返回示例
+~~~~~~~~~~~~~~~~
+
+JSON数据格式:
+
+请求 **正确** 返回结果：
+
+.. code-block:: javascript
+
+    {
+        "data": {
+            "avatar": "https://s3.lexivip.com/20181113/2213FjvLhFAih37XmkwC4Ag2A_aZThdd.jpg",
+            "created_at": 1544193284,
+            "expiration": 2592000,
+            "is_bind": true,
+            "mobile": "13001179400",
+            "openid": "juamckk",
+            "token": "eyJhbGciOiJIUzI1NiIsImlhdCI6MTU0NDE5MzI4NCwiZXhwIjoxNTQ2Nzg1Mjg0fQ.eyJpZCI6M30.-YdXlLvDJiBFEuiyP0zR7n_jTrz_r4DducOpf1WugTk",
+            "uid": "11278634905",
+            "username": "æ²¡å¤´è\\x84\\x91å\\x92\\x8cä¸\\x8dé«\\x98å\\x85´"
+        },
+        "status": {
+            "code": 200,
+            "message": "Ok all right."
+        },
+        "success": true
+    }
+
+请求 ``失败`` 返回结果：
+
+.. code-block:: javascript
+
+    {
+        "status": {
+            "code": 400,
+            "message": "该微信已绑定"
+        },
+        "success": false
+    }
+
+
+
+邀请好友-获取我的邀请好友数量汇总
+-----------------------------------
+邀请好友-获取我的邀请好友数量汇总
+
+接口说明
+~~~~~~~~~~~~~~
+
+* API接口请求地址：``/invite_life_count``
+* API接口请求方法：``GET``
+* API接口用户授权：``token``
+
+
+返回示例
+~~~~~~~~~~~~~~~~
+
+JSON数据格式:
+
+.. code-block:: javascript
+
+
+    {
+        "data": {
+            "invite_count": 1,  // 总人数
+            "reward_price": 0,  // 奖励金额
+            "today_count": 0  // 今日人数
+        },
+        "status": {
+            "code": 200,
+            "message": "Ok all right."
+        },
+        "success": true
+    }
+
+
+
+邀请好友-获取我的邀请好友信息汇总
+-------------------------------------
+邀请好友-获取我的邀请好友信息汇总
+
+接口说明
+~~~~~~~~~~~~~~
+
+* API接口请求地址：``/invite_life_reward``
+* API接口请求方法：``GET``
+* API接口用户授权：``token``
+
+
+返回示例
+~~~~~~~~~~~~~~~~
+
+JSON数据格式:
+
+.. code-block:: javascript
+
+    {
+        "data": {
+            "cash_amount": 0,  // 可提现金额
+            "cumulative_cash_amount": 0,  // 累计提现金额
+            "pending_price": 1,  // 待结算
+            "reward_price": 0,  // 累计奖励
+            "pending_price": 0  // 待结算
+        },
+        "status": {
+            "code": 200,
+            "message": "Ok all right."
+        },
+        "success": true
+    }
+
+
+
+邀请好友-奖励列表
+-----------------------------------
+邀请好友-奖励列表
+
+接口说明
+~~~~~~~~~~~~~~
+
+* API接口请求地址：``/invite_life/rewards``
+* API接口请求方法：``GET``
+* API接口用户授权：``token``
+
+请求参数
+~~~~~~~~~~~~~~~
+
+===========  ========  =========  ========  ====================================
+名称          类型      是否必须    默认值     描述说明
+===========  ========  =========  ========  ====================================
+page         Number    可选         1         当前页码
+per_page     Number    可选         10        每页数量
+===========  ========  =========  ========  ====================================
+
+返回示例
+~~~~~~~~~~~~~~~~
+
+JSON数据格式:
+
+.. code-block:: javascript
+
+
+    {
+        "data": {
+            "count": 1,
+            "next": false,
+            "prev": false,
+            "rewards": [
+                {
+                    "amount": 11,  // 金额
+                    "created_at": 1544500692,
+                    "status": 1,  // 1、成功 2、待结算 3、退款
+                    "title": "获得队友首单销售50%奖励",  // 标题
+                    "user_logo": "https://static.moebeast.com/image/static/default_user.png",
+                    "user_name": "测试",
+                    "user_sn": "18913742065"
+                }
+            ]
+        },
+        "status": {
+            "code": 200,
+            "message": "Ok all right."
+        },
+        "success": true
+    }
+
+
+
+邀请好友-我的朋友
+-----------------------------------
+邀请好友-我的朋友
+
+接口说明
+~~~~~~~~~~~~~~
+
+* API接口请求地址：``/invite_life/friends``
+* API接口请求方法：``GET``
+* API接口用户授权：``token``
+
+请求参数
+~~~~~~~~~~~~~~~
+
+===========  ========  =========  ========  ====================================
+名称          类型      是否必须    默认值     描述说明
+===========  ========  =========  ========  ====================================
+page         Number    可选         1         当前页码
+per_page     Number    可选         10        每页数量
+===========  ========  =========  ========  ====================================
+
+返回示例
+~~~~~~~~~~~~~~~~
+
+JSON数据格式:
+
+.. code-block:: javascript
+
+
+    {
+        "data": {
+            "count": 1,
+            "friends": [
+                {
+                    "amount": 0,  // 销售额
+                    "phases": 1,  // 1、实习馆主  2、达人馆主
+                    "user_logo": "https://s3.lexivip.com/avatar-8457984.png",
+                    "user_name": "15935823397",
+                    "user_sn": "15847260931"
+                }
+            ],
+            "next": false,
+            "prev": false
+        },
+        "status": {
+            "code": 200,
+            "message": "Ok all right."
+        },
+        "success": true
+    }
+
+
+
+邀请好友开通生活馆现金提现
+-----------------------------------
+
+接口说明
+~~~~~~~~~~~~~~
+
+* API接口请求地址：``/invite_life/cash_money``
+* API接口请求方法：``POST``
+* API接口用户授权：``token``
+
+
+请求参数
+~~~~~~~~~~~~~~~
+
+=====================  ==========  =========  ==========  =============================
+名称                    类型        是否必须     默认值       描述说明
+=====================  ==========  =========  ==========  =============================
+cash_type              String      可选             1      提现到:1、微信 2、支付宝
+open_id                String      微信                    open_id
+ali_account            String      支付宝                   支付宝登录号
+ali_name               String      支付宝                   真实姓名
+=====================  ==========  =========  ==========  =============================
+
+
+返回示例
+~~~~~~~~~~~~~~~~
+
+.. code-block:: javascript
+
+
+    {
+        "data": {
+            'rid': "W4567890098",
+            'status': 1, // 1、成功 2、失败 3、审核中
+            'actual_amount': 10, // 提现金额
+            'receive_target': 1,// 1、微信零钱包 2、支付宝
+            'user_account':121321312,
+            'created_at': 2345678567, // 时间
+            'not_cash': false // 是否不可提 true 不可提 false 可提
+        },
+        "status": {
+            "code": 200,
+            "message": "Ok all right."
+        },
+        "success": true
+    }
+
+
+提现实名认证
+-----------------------------------
+
+接口说明
+~~~~~~~~~~~~~~
+
+* API接口请求地址：``/users/cash_id_card``
+* API接口请求方法：``POST``
+* API接口用户授权：``token``
+
+
+请求参数
+~~~~~~~~~~~~~~~
+
+=====================  ==========  =========  ==========  =============================
+名称                    类型        是否必须     默认值       描述说明
+=====================  ==========  =========  ==========  =============================
+name                   String      必须                    真实姓名
+id_card                String      必须                    身份证号
+id_card_front          Number      必须                    身份证正面id
+id_card_back           Number      必须                    身份证背面id
+=====================  ==========  =========  ==========  =============================
+
+
+返回示例
+~~~~~~~~~~~~~~~~
+
+.. code-block:: javascript
+
+
+    {
+        "status": {
+            "code": 200,
+            "message": "Ok all right."
+        },
+        "success": true
+    }
