@@ -357,20 +357,32 @@ JSON数据格式:
         "data": {
             "articles": [
                 {
+                    "classify_id": 3,
+                    "classify_name": "男生",
                     "cover": "http://kg.erp.taihuoniao.com/static/img/default-logo.png",
                     "created_at": 1546684345,
+                    "description": null,
+                    "mark_count": 1,
                     "published_at": 0,
                     "rid": "AT9074135268",
-                    "title": null,
+                    "share_count": 0,
+                    "title": "大家好",
+                    "user_mark": false,
                     "wpp_link": "https://mp.weixin.qq.com/s/IRJHRdIsxdrK2s0PbXlS3Q"
                 },
                 {
+                    "classify_id": 4,
+                    "classify_name": "女生",
                     "cover": "http://kg.erp.taihuoniao.com/static/img/default-logo.png",
-                    "created_at": 1546684601,
-                    "published_at": 1546684601,
-                    "rid": "AT6935817240",
-                    "title": null,
-                    "wpp_link": "https://mp.weixin.qq.com/abcd"
+                    "created_at": 1546684345,
+                    "description": null,
+                    "mark_count": 1,
+                    "published_at": 0,
+                    "rid": "AT9074135268",
+                    "share_count": 0,
+                    "title": "大家好",
+                    "user_mark": false,
+                    "wpp_link": "https://mp.weixin.qq.com/s/IRJHRdIsxdrK2s0PbXlS3Q"
                 }
             ],
             "count": 2,
@@ -417,11 +429,17 @@ JSON数据格式:
         "data": {
             "articles": [
                 {
+                    "classify_id": 3,
+                    "classify_name": "男生",
                     "cover": "http://kg.erp.taihuoniao.com/static/img/default-logo.png",
                     "created_at": 1546684345,
+                    "description": null,
+                    "mark_count": 1,
                     "published_at": 0,
                     "rid": "AT9074135268",
-                    "title": null,
+                    "share_count": 0,
+                    "title": "大家好",
+                    "user_mark": false,
                     "wpp_link": "https://mp.weixin.qq.com/s/IRJHRdIsxdrK2s0PbXlS3Q"
                 }
             ],
@@ -547,4 +565,157 @@ JSON数据格式:
         "success": true
     }
 
+
+收藏文章
+----------------------
+
+接口说明
+~~~~~~~~~~~~~~
+
+* API接口请求地址：``/articles/mark``
+* API接口请求方法：``POST``
+* API接口用户授权：``token``
+
+请求参数
+~~~~~~~~~~~~~~~
+
+===============  ==========  =========  ==========  =============================
+名称              类型        是否必须     默认值       描述说明
+===============  ==========  =========  ==========  =============================
+rid              String      必须                    文章编号
+===============  ==========  =========  ==========  =============================
+
+返回示例
+~~~~~~~~~~~~~~~~
+
+JSON数据格式:
+
+.. code-block:: javascript
+
+    {
+        "status": {
+            "code": 201,
+            "message": "All created."
+        },
+        "success": true
+    }
+
+
+取消收藏文章
+----------------------
+
+接口说明
+~~~~~~~~~~~~~~
+
+* API接口请求地址：``/articles/mark``
+* API接口请求方法：``DELETE``
+* API接口用户授权：``token``
+
+请求参数
+~~~~~~~~~~~~~~~
+
+===============  ==========  =========  ==========  =============================
+名称              类型        是否必须     默认值       描述说明
+===============  ==========  =========  ==========  =============================
+rid              String      必须                    文章编号
+===============  ==========  =========  ==========  =============================
+
+返回示例
+~~~~~~~~~~~~~~~~
+
+JSON数据格式:
+
+.. code-block:: javascript
+
+    {
+        "status": {
+            "code": 204,
+            "message": "All deleted."
+        },
+        "success": true
+    }
+
+
+用户收藏文章列表
+----------------------
+
+接口说明
+~~~~~~~~~~~~~~
+
+* API接口请求地址：``/articles/marks``
+* API接口请求方法：``GET``
+
+请求参数
+~~~~~~~~~~~~~~~
+
+===============  ==========  =========  ==========  =============================
+名称              类型        是否必须     默认值       描述说明
+===============  ==========  =========  ==========  =============================
+page             Number      可选        1           页数
+per_page         Number      可选        10          每页数量
+===============  ==========  =========  ==========  =============================
+
+返回示例
+~~~~~~~~~~~~~~~~
+
+JSON数据格式:
+
+.. code-block:: javascript
+
+    {
+        "data": {
+            "articles": [
+                {
+                    "cover": "http://kg.erp.taihuoniao.com/static/img/default-logo.png",
+                    "mark_count": 1,
+                    "rid": "AT9074135268",
+                    "title": "大家好",
+                    "wpp_link": "https://mp.weixin.qq.com/s/IRJHRdIsxdrK2s0PbXlS3Q"
+                }
+            ],
+            "count": 1,
+            "next": false,
+            "prev": false
+        },
+        "status": {
+            "code": 200,
+            "message": "Ok all right."
+        },
+        "success": true
+    }
+
+
+分享文章
+----------------------
+
+接口说明
+~~~~~~~~~~~~~~
+
+* API接口请求地址：``/articles/share``
+* API接口请求方法：``POST``
+* API接口用户授权：``token``
+
+请求参数
+~~~~~~~~~~~~~~~
+
+===============  ==========  =========  ==========  =============================
+名称              类型        是否必须     默认值       描述说明
+===============  ==========  =========  ==========  =============================
+rid              String      必须                    文章编号
+===============  ==========  =========  ==========  =============================
+
+返回示例
+~~~~~~~~~~~~~~~~
+
+JSON数据格式:
+
+.. code-block:: javascript
+
+    {
+        "status": {
+            "code": 201,
+            "message": "All created."
+        },
+        "success": true
+    }
 
