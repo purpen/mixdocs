@@ -362,12 +362,26 @@ JSON数据格式:
                     "cover": "http://kg.erp.taihuoniao.com/static/img/default-logo.png",
                     "created_at": 1546684345,
                     "description": null,
-                    "mark_count": 1,
+                    "mark_count": 11,
                     "published_at": 0,
                     "rid": "AT9074135268",
                     "share_count": 0,
                     "title": "大家好",
-                    "user_mark": false,
+                    "users": [
+                        {
+                            "avatar": "https://s3.lexivip.com/lxServer/user/user_p_269.jpeg",
+                            "uid": "19085426173"
+                        },
+                        {
+                            "avatar": "https://static.moebeast.com/image/static/default_user.png",
+                            "uid": "17490156328"
+                        },
+                        {
+                            "avatar": "https://s3.lexivip.com/20181101/2251FgKdtFrFPWjJYew4aROzCOBB6IMP.jpg",
+                            "uid": "10296157834"
+                        }
+                    ]
+                    "is_mark": false,
                     "wpp_link": "https://mp.weixin.qq.com/s/IRJHRdIsxdrK2s0PbXlS3Q"
                 },
                 {
@@ -376,12 +390,13 @@ JSON数据格式:
                     "cover": "http://kg.erp.taihuoniao.com/static/img/default-logo.png",
                     "created_at": 1546684345,
                     "description": null,
-                    "mark_count": 1,
+                    "mark_count": 0,
                     "published_at": 0,
                     "rid": "AT9074135268",
                     "share_count": 0,
                     "title": "大家好",
-                    "user_mark": false,
+                    "users": [],
+                    "is_mark": false,
                     "wpp_link": "https://mp.weixin.qq.com/s/IRJHRdIsxdrK2s0PbXlS3Q"
                 }
             ],
@@ -439,7 +454,13 @@ JSON数据格式:
                     "rid": "AT9074135268",
                     "share_count": 0,
                     "title": "大家好",
-                    "user_mark": false,
+                    "users": [
+                        {
+                            "avatar": "https://s3.lexivip.com/20181101/2251FgKdtFrFPWjJYew4aROzCOBB6IMP.jpg",
+                            "uid": "10296157834"
+                        }
+                    ]
+                    "is_mark": false,
                     "wpp_link": "https://mp.weixin.qq.com/s/IRJHRdIsxdrK2s0PbXlS3Q"
                 }
             ],
