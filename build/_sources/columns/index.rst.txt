@@ -10,3 +10,4 @@
     life_records.rst
     shop_windows.rst
     app_versions.rst
+    articles.rst

@@ -149,6 +149,7 @@
 <li class="toctree-l2"><a class="reference internal" href="life_records.html">生活志模块</a></li>
 <li class="toctree-l2 current"><a class="current reference internal" href="#">橱窗模块</a></li>
 <li class="toctree-l2"><a class="reference internal" href="app_versions.html">app版本管理模块</a></li>
+<li class="toctree-l2"><a class="reference internal" href="articles.html">公众号文章模块</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="../common.html">公用接口模块</a><ul>
@@ -1765,11 +1766,11 @@
 <td>&#160;</td>
 <td>橱窗编号</td>
 </tr>
-<tr class="row-odd"><td>pid</td>
+<tr class="row-odd"><td>reply_id</td>
 <td>Number</td>
 <td>可选</td>
 <td>0</td>
-<td>上级评论编号</td>
+<td>回复评论编号</td>
 </tr>
 <tr class="row-even"><td>content</td>
 <td>String</td>
@@ -1790,7 +1791,8 @@
         <span class="s2">&quot;created_at&quot;</span><span class="o">:</span> <span class="s2">&quot;评论时间&quot;</span><span class="p">,</span>
         <span class="s2">&quot;is_praise&quot;</span><span class="o">:</span> <span class="s2">&quot;是否点过赞: true=点过赞,false=未点过赞&quot;</span><span class="p">,</span>
         <span class="s2">&quot;pid&quot;</span><span class="o">:</span> <span class="s2">&quot;上级评论编号&quot;</span><span class="p">,</span>
-        <span class="s2">&quot;praise_count&quot;</span><span class="o">:</span> <span class="s2">&quot;评论点赞数&quot;</span>
+        <span class="s2">&quot;praise_count&quot;</span><span class="o">:</span> <span class="s2">&quot;评论点赞数&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;reply_user_name&quot;</span><span class="o">:</span> <span class="s2">&quot;回复的评论对应的用户名，如果为空代表是评论的是橱窗或者回复一级评论&quot;</span><span class="p">,</span>
         <span class="s2">&quot;user_avatar&quot;</span><span class="o">:</span> <span class="s2">&quot;评论用户头像&quot;</span><span class="p">,</span>
         <span class="s2">&quot;user_name&quot;</span><span class="o">:</span> <span class="s2">&quot;评论用户名&quot;</span>
     <span class="p">},</span>
@@ -2034,6 +2036,7 @@
                 <span class="s2">&quot;is_praise&quot;</span><span class="o">:</span> <span class="kc">true</span><span class="p">,</span>
                 <span class="s2">&quot;pid&quot;</span><span class="o">:</span> <span class="mi">0</span><span class="p">,</span>
                 <span class="s2">&quot;praise_count&quot;</span><span class="o">:</span> <span class="mi">1</span><span class="p">,</span>
+                <span class="s2">&quot;reply_user_name&quot;</span><span class="o">:</span> <span class="s2">&quot;&quot;</span><span class="p">,</span>
                 <span class="s2">&quot;sub_comment_count&quot;</span><span class="o">:</span> <span class="mi">4</span><span class="p">,</span>
                 <span class="s2">&quot;sub_comments&quot;</span><span class="o">:</span> <span class="p">[</span>
                     <span class="p">{</span>
@@ -2043,6 +2046,7 @@
                         <span class="s2">&quot;is_praise&quot;</span><span class="o">:</span> <span class="kc">false</span><span class="p">,</span>
                         <span class="s2">&quot;pid&quot;</span><span class="o">:</span> <span class="mi">1</span><span class="p">,</span>
                         <span class="s2">&quot;praise_count&quot;</span><span class="o">:</span> <span class="mi">0</span><span class="p">,</span>
+                        <span class="s2">&quot;reply_user_name&quot;</span><span class="o">:</span> <span class="s2">&quot;回复的用户名&quot;</span><span class="p">,</span>
                         <span class="s2">&quot;user_avatar&quot;</span><span class="o">:</span> <span class="s2">&quot;http://kg.erp.taihuoniao.com/static/img/default-logo.png&quot;</span><span class="p">,</span>
                         <span class="s2">&quot;user_name&quot;</span><span class="o">:</span> <span class="s2">&quot;评论用户名&quot;</span>
                     <span class="p">},</span>
@@ -2053,6 +2057,7 @@
                         <span class="s2">&quot;is_praise&quot;</span><span class="o">:</span> <span class="kc">false</span><span class="p">,</span>
                         <span class="s2">&quot;pid&quot;</span><span class="o">:</span> <span class="mi">1</span><span class="p">,</span>
                         <span class="s2">&quot;praise_count&quot;</span><span class="o">:</span> <span class="mi">0</span><span class="p">,</span>
+                        <span class="s2">&quot;reply_user_name&quot;</span><span class="o">:</span> <span class="s2">&quot;&quot;</span><span class="p">,</span>
                         <span class="s2">&quot;user_avatar&quot;</span><span class="o">:</span> <span class="s2">&quot;http://kg.erp.taihuoniao.com/static/img/default-logo.png&quot;</span><span class="p">,</span>
                         <span class="s2">&quot;user_name&quot;</span><span class="o">:</span> <span class="s2">&quot;商品棒棒棒(作者)&quot;</span>
                     <span class="p">}</span>
@@ -2067,6 +2072,7 @@
                 <span class="s2">&quot;is_praise&quot;</span><span class="o">:</span> <span class="kc">false</span><span class="p">,</span>
                 <span class="s2">&quot;pid&quot;</span><span class="o">:</span> <span class="mi">0</span><span class="p">,</span>
                 <span class="s2">&quot;praise_count&quot;</span><span class="o">:</span> <span class="mi">0</span><span class="p">,</span>
+                <span class="s2">&quot;reply_user_name&quot;</span><span class="o">:</span> <span class="s2">&quot;回复的用户名&quot;</span><span class="p">,</span>
                 <span class="s2">&quot;user_avatar&quot;</span><span class="o">:</span> <span class="s2">&quot;http://kg.erp.taihuoniao.com/static/img/default-logo.png&quot;</span><span class="p">,</span>
                 <span class="s2">&quot;user_name&quot;</span><span class="o">:</span> <span class="s2">&quot;评论用户名&quot;</span>
             <span class="p">}</span>
@@ -2155,6 +2161,7 @@
                 <span class="s2">&quot;is_praise&quot;</span><span class="o">:</span> <span class="kc">false</span><span class="p">,</span>
                 <span class="s2">&quot;pid&quot;</span><span class="o">:</span> <span class="mi">2</span><span class="p">,</span>
                 <span class="s2">&quot;praise_count&quot;</span><span class="o">:</span> <span class="mi">0</span><span class="p">,</span>
+                <span class="s2">&quot;reply_user_name&quot;</span><span class="o">:</span> <span class="s2">&quot;回复的用户名&quot;</span><span class="p">,</span>
                 <span class="s2">&quot;user_avatar&quot;</span><span class="o">:</span> <span class="s2">&quot;http://kg.erp.taihuoniao.com/static/img/default-logo.png&quot;</span><span class="p">,</span>
                 <span class="s2">&quot;user_name&quot;</span><span class="o">:</span> <span class="s2">&quot;评论用户名&quot;</span>
             <span class="p">},</span>
@@ -2165,6 +2172,7 @@
                 <span class="s2">&quot;is_praise&quot;</span><span class="o">:</span> <span class="kc">false</span><span class="p">,</span>
                 <span class="s2">&quot;pid&quot;</span><span class="o">:</span> <span class="mi">2</span><span class="p">,</span>
                 <span class="s2">&quot;praise_count&quot;</span><span class="o">:</span> <span class="mi">0</span><span class="p">,</span>
+                <span class="s2">&quot;reply_user_name&quot;</span><span class="o">:</span> <span class="s2">&quot;回复的用户名&quot;</span><span class="p">,</span>
                 <span class="s2">&quot;user_avatar&quot;</span><span class="o">:</span> <span class="s2">&quot;http://kg.erp.taihuoniao.com/static/img/default-logo.png&quot;</span><span class="p">,</span>
                 <span class="s2">&quot;user_name&quot;</span><span class="o">:</span> <span class="s2">&quot;评论用户名&quot;</span>
             <span class="p">}</span>
